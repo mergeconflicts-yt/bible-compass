@@ -15,6 +15,7 @@ PRODUCT CONCEPT.pdf
 # Secrets - never commit (SECURITY.md)
 .env
 .env.*
+!.env.example
 *.pem
 *.key
 
@@ -24,3 +25,15 @@ node_modules/
 dist/
 build/
 .web/
+
+# Local-only design inputs - never commit (owner direction)
+# Source HEICs and converted monitor-photo PNGs stay on the local machine.
+# NOTE: do not blanket-ignore *.png - apps/mobile needs its Expo icons.
+/heic/
+*.heic
+*.HEIC
+/png_out/
+
+# Python bytecode
+__pycache__/
+*.pyc

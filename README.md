@@ -27,3 +27,8 @@ The files intentionally do not invent:
 
 Working method
 Give an Al agent these documents, but assign only one bounded task at a time. Each task must define scope, permitted files, acceptance criteria, validation commands and stop conditions. Do not ask an agent to build the entire MVP in one prompt
+
+## Mobile app
+`apps/mobile` holds the Expo (SDK 57) landing page — Home screen only, with
+prototype-labeled fixture text while Phase 0 rights decisions are OPEN. See
+`apps/mobile/README.md` for run instructions and checks.

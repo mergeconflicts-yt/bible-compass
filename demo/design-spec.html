@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ANCHOR — Design Spec Demo (Nehemiah 2)</title>
+<!--
+  NEW demo built from docs/DESIGN_SPEC.md + sample screenshots png_out/IMG_4190–4203.
+  Screen map (screenshot -> view/sheet in this file):
+    IMG_4190 Home (top)            -> #v-home
+    IMG_4191 Home (scrolled)       -> #v-home (Explore context card)
+    IMG_4192 Daily verse (top)     -> #v-daily
+    IMG_4193 Daily verse (moment)  -> #v-daily (The moment + surrounding passage)
+    IMG_4194 Verse card composer   -> #s-composer
+    IMG_4195 Passage reader        -> #v-reader
+    IMG_4196 Context: Essential    -> #s-context (tab Essential)
+    IMG_4197 Context: History      -> #s-context (tab History)
+    IMG_4198 Context: Connections  -> #s-context (tab Connections)
+    IMG_4199 Verse Companion       -> #s-companion
+    IMG_4200 Entity profile        -> #s-entity
+    IMG_4201 History (timeline/map)-> #s-context (tab History, action cards)
+    IMG_4202 Reading options       -> #s-options
+    IMG_4203 Settings              -> #s-settings
+  Bottom tabs are Home, Bible, Search, Saved, Settings per owner request (deviates from DESIGN_SPEC §2).
+  PROTOTYPE ONLY — dummy copy. Scripture excerpts are World English Bible
+  (Public Domain). Not the app implementation. demo/index.html is untouched.
+-->
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --canvas:#F7F4EE;--surface:#FFFCF7;--subtle:#EFE9DD;
+  --ink:#18242D;--muted:#59656E;--onbrand:#FFFFFF;
+  --brand:#285C58;--brand-pressed:#1E4845;--accent:#A86F28;--accent-soft:#F1E4CE;
+  --border:#DDD6CA;--focus:#1D67D7;--serif:Georgia,'Source Serif 4','Noto Serif',serif;
+  --sans:-apple-system,BlinkMacSystemFont,Inter,'Segoe UI',sans-serif;
+  --script-size:20px;
+}
+[data-theme="dark"]{
+  --canvas:#101614;--surface:#18201E;--subtle:#222C29;
+  --ink:#F3F0E8;--muted:#B9C1BC;--brand:#72AAA4;--brand-pressed:#8BBCB7;
+  --accent:#D6A65B;--accent-soft:#392F21;--border:#34403C;--focus:#77A7FF;
+}
+body{background:#232a30;font-family:var(--sans);color:var(--ink);display:flex;justify-content:center;align-items:flex-start;min-height:100vh}
+.phone{width:390px;max-width:390px;min-width:390px;height:844px;max-height:844px;background:var(--canvas);position:relative;overflow:hidden;border-radius:48px;border:10px solid #111;margin:20px 0;flex-shrink:0;display:flex;flex-direction:column}
+@media(max-width:430px){.phone{width:100vw;max-width:100vw;min-width:0;height:100dvh;max-height:100dvh;margin:0;border-radius:0;border:none}}
+.status{display:flex;justify-content:space-between;padding:16px 24px 4px;font-weight:700;font-size:15px;flex-shrink:0}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+/* Views + tab bar */
+.stage{flex:1;min-height:0;display:flex;flex-direction:column;position:relative}
+.view{display:none;padding:16px 20px 24px;overflow-y:auto;flex:1;min-height:0;scrollbar-width:none}
+.view::-webkit-scrollbar{display:none}
+.view.active{display:block}
+.tabbar{display:flex;min-height:64px;border-top:1px solid var(--border);background:var(--surface);padding:8px 0 calc(10px + env(safe-area-inset-bottom));flex-shrink:0}
+.tabbar button{flex:1;background:none;border:none;color:var(--muted);font-size:11px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:48px;justify-content:center;position:relative}
+.tabbar button svg{width:24px;height:24px}
+.tabbar button.on{color:var(--brand)}
+.tabbar button.on::before{content:"";position:absolute;top:-9px;width:28px;height:3px;border-radius:2px;background:var(--brand)}
+/* Type */
+.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--accent);text-transform:uppercase}
+.h-display{font-family:var(--serif);font-size:30px;line-height:1.27;font-weight:700;margin:6px 0 2px}
+.h1{font-family:var(--serif);font-size:30px;line-height:1.27;font-weight:700;margin:8px 0 4px}
+.h2{font-family:var(--serif);font-size:20px;line-height:1.35;font-weight:700;margin:18px 0 6px}
+.sub{color:var(--muted);font-size:16px;line-height:1.5}
+.small{font-size:13px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px}
+.chiprow{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.chip{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:12px 18px;font-weight:700;font-size:14px;min-height:48px}
+/* App header */
+.appheader{display:flex;align-items:center;justify-content:space-between;padding:6px 0 2px}
+.brand{font-family:var(--serif);font-size:20px;letter-spacing:.22em;font-weight:700}
+.hbtns{display:flex;gap:8px}
+.iconbtn{width:48px;height:48px;border-radius:14px;border:1px solid var(--border);background:var(--surface);color:var(--ink);display:inline-flex;align-items:center;justify-content:center}
+.iconbtn svg{width:22px;height:22px}
+/* Verse artwork */
+.art{background:linear-gradient(150deg,#24473f 0%,#2f5c50 55%,#7a744f 130%);color:#fff;border-radius:24px;padding:26px 24px;position:relative;overflow:hidden}
+.art::after{content:"";position:absolute;left:-40px;right:-40px;bottom:-90px;height:170px;background:rgba(255,255,255,.10);border-radius:50%}
+.art .kicker{color:#e8c97a;font-size:13px;letter-spacing:.12em;font-weight:800}
+.art .v{font-family:var(--serif);font-size:30px;line-height:1.33;font-weight:700;margin:12px 0 18px;position:relative;z-index:1}
+.art .ref{font-family:var(--serif);font-size:20px;font-weight:700;position:relative;z-index:1}
+.art .attr{font-size:12px;opacity:.8;position:relative;z-index:1}
+/* Buttons */
+.btn-primary{background:var(--brand);color:#fff;border:none;border-radius:14px;min-height:48px;padding:12px 14px;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;white-space:nowrap}
+.btn-primary:active{background:var(--brand-pressed)}
+.btn-secondary{background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:14px;min-height:48px;padding:12px;font-size:16px;font-weight:700}
+.actionrow{display:flex;gap:10px;margin-top:12px}
+.actionrow .btn-primary{flex:1.4}
+.actionrow .iconbtn{flex:1;min-height:48px;border-radius:14px}
+/* Continue / explore cards */
+.contcard{margin-top:16px;padding:18px;display:flex;gap:14px;align-items:center;width:100%;text-align:left;color:var(--ink)}
+.ring{width:52px;height:52px;border-radius:50%;border:6px solid var(--border);border-top-color:var(--brand);flex-shrink:0}
+.contcard b.t{font-family:var(--serif);font-size:20px;display:block}
+.storydot{width:40px;height:40px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.storydot i{width:22px;height:22px;border-radius:50%;background:var(--ink);display:block}
+.proto-note{text-align:center;font-size:13px;color:var(--muted);margin:14px 8px;line-height:1.5}
+/* Daily */
+.daily-head{text-align:center;padding:4px 0 12px}
+.daily-head h2{font-family:var(--serif);font-size:24px}
+.moment{margin:18px 0 6px}
+.moment .tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:800;border-radius:999px;padding:4px 12px}
+.passcard{background:var(--accent-soft);border-radius:20px;padding:22px;margin-top:16px}
+.passcard h3{font-family:var(--serif);font-size:24px;line-height:1.29}
+/* Reader */
+.reader-head{display:flex;align-items:center;justify-content:space-between;padding:4px 0}
+.reader-head .t{text-align:center}
+.reader-head .t b{font-family:var(--serif);font-size:22px}
+.era{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:8px 0;margin:8px -20px;padding-left:20px;padding-right:20px}
+.era .row1{display:flex;justify-content:space-between;font-size:13px;font-weight:700}
+.era .link{background:none;border:none;color:var(--ink);font-size:13px;font-weight:700}
+.era-rail{position:relative;height:26px;margin:6px 0 2px}
+.era-rail::before{content:"";position:absolute;left:0;right:0;top:10px;height:6px;border-radius:6px;background:var(--accent-soft)}
+.era-rail .now{position:absolute;left:44%;top:6px;width:16px;height:16px;border-radius:50%;background:var(--accent)}
+.era-lbls{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.era-lbls b{color:var(--accent)}
+.story{border-left:4px solid var(--accent);padding:4px 0 4px 12px;margin:10px 0}
+.story summary{list-style:none;display:flex;align-items:center;gap:8px;min-height:44px;color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.06em;cursor:pointer}
+.story summary::-webkit-details-marker{display:none}
+.story summary::after{content:"›";margin-left:auto;color:var(--muted);font-size:18px;transition:transform .15s}
+.story[open] summary::after{transform:rotate(90deg)}
+.story p{font-family:var(--serif);font-size:16px;line-height:1.5;margin-top:4px}
+.script{font-family:var(--serif);font-size:var(--script-size);line-height:1.7}
+.script .vn{font-size:.6em;color:var(--accent);font-weight:700;vertical-align:super;margin-right:4px;font-family:var(--sans)}
+.script a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px;background:linear-gradient(transparent 80%,var(--accent-soft) 80%);cursor:pointer}
+.fab{position:sticky;bottom:12px;display:flex;justify-content:center;margin-top:16px}
+.fab button{background:#1d3a32;color:#fff;border:none;border-radius:999px;padding:14px 22px;font-size:16px;font-weight:700;display:flex;gap:10px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+[data-theme="dark"] .fab button{background:var(--brand);color:#101614}
+/* Sheets */
+.sheet{position:absolute;inset:0;background:rgba(15,24,30,.52);display:none;z-index:20}
+.sheet.open{display:block}
+.sheet-inner{position:absolute;left:0;right:0;bottom:0;max-height:92%;background:var(--canvas);border-radius:26px 26px 0 0;padding:14px 22px 30px;overflow-y:auto}
+.sheet-inner.full{top:20px;max-height:calc(100% - 20px)}
+.grab{width:44px;height:5px;border-radius:3px;background:var(--border);margin:0 auto 10px}
+.sheet-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.sheet-head h2{font-family:var(--serif);font-size:24px;line-height:1.29}
+.x{background:none;border:none;font-size:26px;color:var(--ink);min-width:48px;min-height:48px}
+.seg{display:flex;background:var(--subtle);border-radius:16px;padding:4px;margin:14px 0}
+.seg button{flex:1;border:none;background:none;padding:12px 4px;border-radius:12px;font-weight:700;font-size:14px;color:var(--ink);min-height:48px}
+.seg button.on{background:var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.brief{background:var(--accent-soft);border-radius:16px;padding:14px;display:flex;gap:12px;align-items:center;margin:12px 0}
+.brief .n30{background:var(--accent);color:#fff;font-weight:800;border-radius:12px;min-width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.steps{list-style:none;margin:8px 0}
+.steps li{display:flex;gap:12px;margin:16px 0}
+.steps .num{width:40px;height:40px;border-radius:50%;border:2px solid var(--accent);color:var(--accent);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.steps li.hot .num{background:var(--accent);color:#fff}
+.steps .lbl{font-size:12px;letter-spacing:.1em;font-weight:800;color:var(--accent)}
+.steps p{font-family:var(--serif);font-size:16px;line-height:1.5;margin-top:2px}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.person{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px;text-align:left;color:var(--ink);min-height:48px}
+.person .mono{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);font-family:var(--serif);font-weight:700;font-size:24px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.person b{font-family:var(--serif);font-size:16px}
+.conn{width:100%;background:none;border:none;border-bottom:1px solid var(--border);padding:16px 4px;text-align:left;color:var(--ink);display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.conn b{font-family:var(--serif);font-size:20px}
+.reviewbox{background:var(--subtle);border-radius:14px;padding:14px;font-size:13px;line-height:1.55;margin-top:14px;color:var(--ink)}
+.reviewbox b{font-size:12px;letter-spacing:.08em}
+.scriptbox{border-left:4px solid var(--accent);background:var(--surface);border-radius:0 14px 14px 0;padding:16px;margin:14px 0}
+.scriptbox .tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:800;border-radius:8px;padding:3px 10px;letter-spacing:.08em}
+.scriptbox blockquote{font-family:var(--serif);font-size:24px;margin:10px 0 4px}
+.atmoment{background:var(--accent-soft);border-radius:18px;padding:20px;margin:14px 0}
+.atmoment h3{font-family:var(--serif);font-size:24px;line-height:1.29;margin:6px 0 8px}
+.atmoment p{font-family:var(--serif);font-size:16px;line-height:1.5}
+.ghostbtn{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:14px;min-height:48px;font-size:16px;font-weight:700;color:var(--ink);margin:10px 0}
+.textbtn{width:100%;background:none;border:none;font-size:16px;font-weight:700;color:var(--ink);min-height:48px}
+.optrow{display:flex;gap:14px;align-items:center;width:100%;background:none;border:none;border-bottom:1px solid var(--border);padding:16px 2px;text-align:left;color:var(--ink)}
+.optrow .oi{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.optrow .oi svg{width:24px;height:24px;stroke:var(--accent)}
+.optrow b{font-size:16px;display:block}
+.fmtrow{display:flex;gap:8px;margin:8px 0}
+.fmtrow button{border:1px solid var(--border);background:var(--surface);color:var(--ink);border-radius:14px;padding:12px 10px;font-weight:700;font-size:14px;min-height:48px;flex:1}
+.fmtrow button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.vc-mini{background:linear-gradient(150deg,#24473f,#7a744f);color:#fff;border-radius:18px;padding:26px 22px;max-width:250px;margin:6px auto}
+.vc-mini .vv{font-family:var(--serif);font-size:20px;line-height:1.4}
+.inpass{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:800;border-radius:999px;padding:4px 12px;margin:12px 0 4px}
+.srcbox{background:var(--subtle);border-radius:14px;padding:16px;margin-top:16px;font-size:14px;line-height:1.55}
+.srcbox b{font-size:12px;letter-spacing:.08em}
+.tl-legend{display:flex;gap:16px;font-size:13px;font-weight:700;margin:12px 0 6px}
+.tl{position:relative;margin:10px 0 10px 64px;padding-left:20px;border-left:2px solid var(--border)}
+.tl-item{position:relative;padding:12px 0}
+.tl-item .yr{position:absolute;left:-64px;top:14px;width:46px;text-align:right;font-weight:800;font-size:13px}
+.tl-item .nd{position:absolute;left:-27px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--border);border:2px solid var(--canvas)}
+.tl-item.active .nd{background:var(--accent);box-shadow:0 0 0 5px var(--accent-soft);width:16px;height:16px;left:-29px}
+.tl-item b.t{font-family:var(--serif);font-size:18px}
+.tl-item p{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.5}
+.tl-item.active{background:var(--accent-soft);border-radius:14px;padding:12px;margin-left:-12px;padding-left:12px}
+.tl-item.active b.t{color:var(--accent)}
+.flag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+.mapbox{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:10px;margin:12px 0;overflow:hidden}
+.mapbox svg{max-width:100%;height:auto;display:block}
+.callout{background:var(--subtle);border:1px solid var(--border);border-radius:14px;padding:14px;font-size:14px;line-height:1.55;margin:12px 0}
+.demo-note{background:#132b3f;color:#f2e8d1;font-size:11px;padding:8px 14px;text-align:center;flex-shrink:0}
+[data-theme="dark"] .demo-note{background:#000;color:#B9C1BC}
+.searchbox{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:14px;min-height:48px;padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);margin-top:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+  <div class="status"><span>9:41</span><span aria-hidden="true">● ◐ –</span></div>
+  <div class="stage">
+    <!-- HOME (IMG_4190/4191) -->
+    <section id="v-home" class="view active" aria-label="Home">
+      <h1 style="font-family:var(--serif);font-size:20px;line-height:1.35;font-weight:700">Good morning</h1>
+      <p class="sub">One story. Read slowly.</p>
+      <div style="height:10px"></div>
+      <div class="art" role="img" aria-label="Verse of the day artwork: Nehemiah 2 verse 4">
+        <div class="kicker">Verse of the day</div>
+        <p class="v">Then the king said to me, “What is your request?” So I prayed to the God of heaven.</p>
+        <div class="ref">Nehemiah 2:4</div>
+        <div class="attr">World English Bible · Public Domain</div>
+      </div>
+      <div class="actionrow">
+        <button class="btn-primary" onclick="show('daily')">ⓘ Read in context</button>
+        <button class="iconbtn" aria-label="Share verse" onclick="openSheet('s-composer')">⇪</button>
+        <button class="iconbtn" aria-label="Download verse image" onclick="alert('Demo: PNG export')">⇩</button>
+      </div>
+      <h2 class="h2">Continue reading</h2>
+      <button class="card contcard" onclick="show('reader')">
+        <span class="ring" aria-hidden="true"></span>
+        <span><b class="t">Nehemiah 2</b><span class="small">Verse 5 · Return from exile · WEB</span></span>
+        <span aria-hidden="true" style="margin-left:auto">▸</span>
+      </button>
+      <h2 class="h2">Explore context</h2>
+      <button class="card contcard" onclick="openSheet('s-context')">
+        <span class="storydot" aria-hidden="true"><i></i></span>
+        <span><b class="t" style="font-size:16px">Where are we in the story?</b><span class="small">445 BC · Persian period · Jerusalem</span></span>
+      </button>
+      <p class="proto-note">Prototype Scripture is WEB. Telugu and Tamil buttons preview interface layout only.</p>
+    </section>
+
+    <!-- DAILY VERSE (IMG_4192/4193) -->
+    <section id="v-daily" class="view" aria-label="Verse of the day">
+      <div class="appheader">
+        <button class="iconbtn" aria-label="Back" onclick="show('home')">‹</button>
+        <span style="text-align:center"><b style="font-family:var(--serif);font-size:20px">Verse of the day</b><br><span class="small">September 11</span></span>
+        <button class="iconbtn" aria-label="Share" onclick="openSheet('s-composer')">⇪</button>
+      </div>
+      <div style="height:10px"></div>
+      <div class="art">
+        <div class="kicker">Verse of the day</div>
+        <p class="v">Then the king said to me, “What is your request?” So I prayed to the God of heaven.</p>
+        <div class="ref">Nehemiah 2:4</div>
+        <div class="attr">World English Bible · Public Domain</div>
+      </div>
+      <div class="actionrow">
+        <button class="btn-primary" onclick="show('reader')">▤ Read in context</button>
+        <button class="iconbtn" aria-label="Share verse" onclick="openSheet('s-composer')">⇪</button>
+        <button class="iconbtn" aria-label="Download verse image" onclick="alert('Demo: PNG export')">⇩</button>
+      </div>
+      <div class="moment"><span class="tag">The moment</span></div>
+      <h2 class="h1">What is happening?</h2>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.6">Nehemiah is standing before the Persian king. The king has noticed his sadness, and Nehemiah has one opportunity to ask permission to rebuild Jerusalem.</p>
+      <div class="chiprow" role="group" aria-label="Context shortcuts">
+        <button class="chip" onclick="openSheet('s-context')">Who</button>
+        <button class="chip" onclick="openSheet('s-context')">Where</button>
+        <button class="chip" onclick="openSheet('s-context')">When</button>
+      </div>
+      <div class="passcard">
+        <h3>Read the surrounding passage</h3>
+        <p class="sub" style="margin:6px 0 14px">Nehemiah 2:1–8 · About 3 minutes</p>
+        <button class="btn-primary" onclick="show('reader')">Read Nehemiah 2 ＞</button>
+      </div>
+      <p class="proto-note">Preview recipient landing</p>
+    </section>
+
+    <!-- BIBLE (spec §6.2) -->
+    <section id="v-bible" class="view" aria-label="Bible">
+      <div class="appheader"><b style="font-family:var(--serif);font-size:22px">Bible</b>
+        <span class="hbtns"><button class="chip" style="min-height:48px" onclick="alert('Demo: WEB · translation info')">WEB</button></span>
+      </div>
+      <div class="seg" role="tablist" aria-label="Testament"><button class="on" role="tab" aria-selected="true">Old Testament</button><button role="tab" aria-selected="false" onclick="alert('Demo: same pattern')">New Testament</button></div>
+      <div class="card" style="padding:18px;margin-bottom:10px">
+        <div class="eyebrow">Context ready</div>
+        <h3 style="font-family:var(--serif);font-size:24px;margin:4px 0">Nehemiah 2</h3>
+        <p class="sub">Full orientation, profiles, map and timeline.</p>
+        <button class="textbtn" style="text-align:left;color:var(--accent)" onclick="show('reader')">Open chapter ›</button>
+      </div>
+      <button class="conn" onclick="show('reader')"><span><b>Nehemiah</b><br><span class="small">13 chapters · context-supported</span></span><span>›</span></button>
+      <button class="conn" onclick="alert('Demo: Scripture only, no context yet')"><span><b>Ezra</b><br><span class="small">10 chapters · Scripture only</span></span><span>›</span></button>
+      <button class="conn" onclick="alert('Demo: Scripture only, no context yet')"><span><b>Esther</b><br><span class="small">10 chapters · Scripture only</span></span><span>›</span></button>
+    </section>
+
+    <!-- SAVED (spec §6.11) -->
+    <section id="v-saved" class="view" aria-label="Saved">
+      <div class="appheader"><b style="font-family:var(--serif);font-size:22px">Saved</b></div>
+      <div class="seg" role="tablist" aria-label="Saved sections"><button class="on" role="tab" aria-selected="true">Bookmarks</button><button role="tab" aria-selected="false" onclick="alert('Demo: recents use same row pattern')">Recent</button></div>
+      <button class="conn" onclick="show('reader')"><span><b>Nehemiah 2:1–8</b><br><span class="small">WEB · saved today · available offline</span></span><span>›</span></button>
+      <button class="conn" onclick="show('daily')"><span><b>Nehemiah 2:4</b><br><span class="small">WEB · verse of the day · Sep 11</span></span><span>›</span></button>
+    </section>
+
+    <!-- SEARCH (spec §6.10: reference-first) -->
+    <section id="v-search" class="view" aria-label="Search">
+      <div class="appheader"><b style="font-family:var(--serif);font-size:22px">Search</b></div>
+      <input id="q" class="searchbox" type="search" aria-label="Search by reference or name" placeholder="Book, chapter or verse — e.g. Neh 2" oninput="doSearch(this.value)" autocomplete="off">
+      <div id="q-ref" hidden><button class="conn" onclick="show('reader')"><span><b>Nehemiah 2</b><br><span class="small">WEB · reference result</span></span><span>›</span></button></div>
+      <div id="q-recent">
+        <div class="eyebrow" style="margin-top:14px">Recent</div>
+        <button class="conn" onclick="show('reader')"><span><b>Nehemiah 2:1–8</b><br><span class="small">WEB · recent reference</span></span><span>›</span></button>
+        <button class="conn" onclick="show('reader')"><span><b>Ezra 4:23</b><br><span class="small">WEB · recent reference</span></span><span>›</span></button>
+      </div>
+      <div id="q-ent">
+        <div class="eyebrow" style="margin-top:14px">People and places</div>
+        <button class="conn" onclick="openSheet('s-entity')"><span><b>Artaxerxes I</b><br><span class="small">Person · Persian politics</span></span><span>›</span></button>
+      </div>
+      <p id="q-empty" class="proto-note" hidden>No matches — try a reference like “Neh 2”.</p>
+    </section>
+
+    <!-- READER (IMG_4195) -->
+    <section id="v-reader" class="view" aria-label="Passage reader">
+      <div class="reader-head">
+        <button class="iconbtn" aria-label="Back" onclick="show('home')">‹</button>
+        <span class="t" style="font-family:var(--serif);font-size:20px;font-weight:700;white-space:nowrap">Nehemiah 2 <span class="small">| WEB</span></span>
+        <button class="iconbtn" aria-label="Reading options" onclick="openSheet('s-options')">···</button>
+      </div>
+      <div class="era">
+        <div class="row1"><span>Persian period · around 445 BC</span><button class="link" style="background:none;border:none;color:var(--ink);font-weight:700" onclick="openSheet('s-timeline')">Open timeline ›</button></div>
+        <div class="era-rail" role="img" aria-label="Era rail: return, 445 BC Nehemiah 2 in the Persian period, 332 BC Alexander"><span class="now"></span></div>
+        <div class="era-lbls"><span>… return</span><span><b>445 BC · Nehemiah 2</b></span><span>332 BC · Alexander</span></div>
+      </div>
+      <details class="story"><summary>Story so far</summary><p>Nehemiah is a trusted Jewish court official. The temple has been rebuilt, but Jerusalem’s walls remain broken.</p></details>
+      <div class="script">
+        <p><span class="vn">1</span> In the month Nisan, in the twentieth year of <a onclick="openSheet('s-companion')">Artaxerxes the king</a>, when wine was before him, I picked up the wine, and gave it to the king. Now I had not been sad before in his presence.</p>
+        <p style="margin-top:12px"><span class="vn">2</span> The king said to me, “Why is your face sad, since you are not sick? This is nothing else but sorrow of heart.” Then I was very much afraid.</p>
+      </div>
+      <div class="fab"><button onclick="openSheet('s-context')">ⓘ Understand this passage</button></div>
+    </section>
+
+    <!-- tab bar -->
+    <nav class="tabbar" aria-label="Primary">
+      <button id="tab-home" class="on" onclick="show('home')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</button>
+      <button id="tab-bible" onclick="show('bible')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h12a2 2 0 0 1 2 2v16l-3-2-2 2-2-2-2 2-2-2-3 2V5a2 2 0 0 1 2-2z"/></svg>Bible</button>
+      <button id="tab-search" onclick="show('search')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search</button>
+      <button id="tab-saved" onclick="show('saved')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Saved</button>
+      <button id="tab-settings" onclick="openSettingsTab()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z"/></svg>Settings</button>
+    </nav>
+  </div>
+
+  <!-- COMPOSER (IMG_4194) -->
+  <div id="s-composer" class="sheet" role="dialog" aria-label="Verse card composer" onclick="if(event.target===this)closeSheet('s-composer')"><div class="sheet-inner">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Verse card</div><h2>Share today’s verse</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-composer')">×</button></div>
+    <div class="vc-mini"><p class="vv">Then the king said to me, “What is your request?” So I prayed to the God of heaven.</p><p style="margin-top:14px;font-family:var(--serif);font-weight:700">Nehemiah 2:4</p><p style="font-size:11px;opacity:.8">World English Bible · Public Domain<br>ANCHOR</p></div>
+    <div class="eyebrow" style="margin-top:14px">Format</div>
+    <div class="fmtrow" role="group" aria-label="Export format"><button>9:16 Status</button><button>1:1 Square</button><button class="on">4:5 Portrait</button></div>
+    <div class="eyebrow" style="margin-top:8px">Design</div>
+    <div class="fmtrow" role="group" aria-label="Theme"><button class="on">Daylight</button><button>Night</button><button>Parchment</button></div>
+    <div class="actionrow"><button class="btn-secondary" style="flex:1" onclick="alert('Demo: PNG export')">⇩ Download</button><button class="btn-primary" style="flex:1" onclick="alert('Demo: native share')">⇪ Share</button></div>
+  </div></div>
+
+  <!-- CONTEXT (IMG_4196/4197/4198/4201) -->
+  <div id="s-context" class="sheet" role="dialog" aria-label="Passage context" onclick="if(event.target===this)closeSheet('s-context')"><div class="sheet-inner full">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Passage context</div><h2>Understand Nehemiah 2</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-context')">×</button></div>
+    <p class="sub">Nehemiah 2:1–8 · About 3 minutes</p>
+    <div class="seg" role="tablist" aria-label="Context tabs">
+      <button id="ctx-e" class="on" role="tab" aria-selected="true" onclick="ctxTab('e')">Essential</button>
+      <button id="ctx-h" role="tab" aria-selected="false" onclick="ctxTab('h')">History</button>
+      <button id="ctx-c" role="tab" aria-selected="false" onclick="ctxTab('c')">Connections</button>
+    </div>
+    <div id="ctxp-e">
+      <div class="brief"><span class="n30">30</span><span><b>THE 30-SECOND BRIEF</b><br><span class="small">Three things to understand before reading</span></span></div>
+      <ol class="steps">
+        <li><span class="num">1</span><div><span class="lbl">BEFORE THIS</span><p>Babylon destroyed Jerusalem. Persia allowed the Jewish people to return, but the city’s walls were never rebuilt.</p></div></li>
+        <li class="hot"><span class="num">2</span><div><span class="lbl">RIGHT NOW</span><p>The king notices Nehemiah’s sadness. Nehemiah has one opportunity to ask permission and support to rebuild Jerusalem.</p></div></li>
+        <li><span class="num">3</span><div><span class="lbl">WHAT IS AT STAKE</span><p>He needs imperial permission, protected travel and materials. The request carries personal and political risk.</p></div></li>
+      </ol>
+      <div class="eyebrow">People in this passage</div>
+      <div class="people" style="margin-top:8px">
+        <button class="person" onclick="openSheet('s-entity')"><span class="mono">N</span><b>Nehemiah</b><br><span class="small">Cupbearer</span></button>
+        <button class="person" onclick="openSheet('s-entity')"><span class="mono">A</span><b>Artaxerxes I</b><br><span class="small">King of Persia</span></button>
+      </div>
+    </div>
+    <div id="ctxp-h" hidden>
+      <div class="eyebrow">When and where</div>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.55;margin:6px 0 12px">About 445 BC in the Persian royal court. Jerusalem, roughly 1,200 km away, is the destination of Nehemiah’s request.</p>
+      <div class="eyebrow">Persian rule</div>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.55;margin:6px 0 12px">Judah was governed within the Persian Empire. Nehemiah therefore needed royal authority, official letters and resources.</p>
+      <div class="eyebrow">Court culture</div>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.55;margin:6px 0 12px">As cupbearer, Nehemiah held a trusted position close to the king. Visible sadness in the royal presence made this moment especially dangerous.</p>
+      <div class="eyebrow">Why the walls mattered</div>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.55;margin:6px 0 12px">Without walls, a city was vulnerable, commercially weak and publicly disgraced. Gates also supported trade and civic administration.</p>
+      <button class="card contcard" onclick="closeSheet('s-context');openSheet('s-timeline')">
+        <span><b class="t" style="font-size:18px">Timeline</b><span class="small">See where this passage fits.</span></span>
+        <span aria-hidden="true" style="margin-left:auto">›</span>
+      </button>
+      <button class="card contcard" onclick="closeSheet('s-context');openSheet('s-map')">
+        <span><b class="t" style="font-size:18px">Historical map</b><span class="small">Explore Jerusalem and the journey.</span></span>
+        <span aria-hidden="true" style="margin-left:auto">›</span>
+      </button>
+      <div class="reviewbox"><b>CONTEXT · REVIEWED PROTOTYPE STRUCTURE</b><br>Production claims will include citations, reviewer status and visible uncertainty. Scripture and commentary remain separate.</div>
+    </div>
+    <div id="ctxp-c" hidden>
+      <button class="conn" onclick="alert('Demo: open Nehemiah 1')"><span><b>Nehemiah 1</b><br><span class="small">Nehemiah hears about Jerusalem, mourns, fasts and prays.</span></span><span>▸</span></button>
+      <button class="conn" onclick="alert('Demo: open Ezra 4:23')"><span><b>Ezra 4:23</b><br><span class="small">Officials previously stopped rebuilding work in Jerusalem by force.</span></span><span>▸</span></button>
+      <button class="conn" onclick="alert('Demo: open Nehemiah 2:11–20')"><span><b>Nehemiah 2:11–20</b><br><span class="small">Nehemiah inspects the walls at night and reveals his plan.</span></span><span>▸</span></button>
+      <button class="conn" onclick="alert('Demo: open Nehemiah 3')"><span><b>Nehemiah 3</b><br><span class="small">Families and groups take responsibility for different sections of the wall.</span></span><span>▸</span></button>
+      <div class="reviewbox"><b>CONTEXT · REVIEWED PROTOTYPE STRUCTURE</b><br>Production claims will include citations, reviewer status and visible uncertainty. Scripture and commentary remain separate.</div>
+    </div>
+  </div></div>
+
+  <!-- TIMELINE POPUP (ported from demo/index.html) -->
+  <div id="s-timeline" class="sheet" role="dialog" aria-label="Timeline" onclick="if(event.target===this)closeSheet('s-timeline')"><div class="sheet-inner full">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Timeline</div><h2>Nehemiah 2 · 445 BC</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-timeline')">×</button></div>
+    <div class="tl-legend"><span><i style="color:var(--accent);font-style:normal">●</i> Biblical events</span><span><i style="color:var(--muted);font-style:normal">●</i> World history</span></div>
+    <div class="tl">
+      <div class="tl-item"><span class="yr">449 BC</span><span class="nd"></span><b class="t">Peace of Callias</b><span class="flag">DISPUTED</span><p>A settlement between Persia and Athens. Its historicity is disputed.</p></div>
+      <div class="tl-item"><span class="yr">447 BC</span><span class="nd"></span><b class="t">Parthenon begun</b><p>Completed 432 BC. While Athens raises the Parthenon, Jerusalem is trying to close a gap in a wall.</p></div>
+      <div class="tl-item active"><span class="yr">445 BC</span><span class="nd"></span><b class="t">Nehemiah 2 — the request and the night ride</b><p>You are here.</p></div>
+      <div class="tl-item"><span class="yr">444 BC</span><span class="nd"></span><b class="t">The wall finished in 52 days</b><p>Nehemiah 6:15. The project in this chapter takes under two months to complete.</p></div>
+      <div class="tl-item"><span class="yr">433 BC</span><span class="nd"></span><b class="t">Nehemiah returns to the king</b><p>Nehemiah 13:6 — after twelve years as governor.</p></div>
+      <div class="tl-item"><span class="yr">431 BC</span><span class="nd"></span><b class="t">Peloponnesian War begins</b><p>Athens and Sparta turn on each other.</p></div>
+    </div>
+    <p class="small">Text alternative: the same event order and certainty above is the accessible equivalent.</p>
+    <div style="height:12px"></div>
+    <button class="btn-primary" onclick="closeSheet('s-timeline')">Back to reading</button>
+  </div></div>
+
+  <!-- MAP POPUP (ported from demo/index.html) -->
+  <div id="s-map" class="sheet" role="dialog" aria-label="Historical map" onclick="if(event.target===this)closeSheet('s-map')"><div class="sheet-inner full">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Historical map</div><h2>Susa to Jerusalem</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-map')">×</button></div>
+    <p class="sub">Beyond the River · Jerusalem, c. 445 BC</p>
+    <div class="seg" role="tablist" aria-label="Map view"><button class="on" id="m-c" role="tab" aria-selected="true" onclick="mapTab('c')">The city</button><button id="m-j" role="tab" aria-selected="false" onclick="mapTab('j')">The journey</button></div>
+    <div id="map-city">
+      <div class="mapbox">
+        <svg viewBox="0 0 340 240" width="100%" role="img" aria-label="Schematic map of Jerusalem showing the Valley Gate, Dung Gate, Temple, Gihon Spring and King's Pool"><rect x="90" y="10" width="160" height="90" fill="none" stroke="#8f5f49" stroke-dasharray="5 4"/><text x="100" y="25" font-size="9" fill="#6d746f">TODAY'S OLD CITY WALLS (1538 AD)</text><rect x="130" y="45" width="80" height="30" fill="#e8d5a3" stroke="#7a5c1e"/><text x="150" y="63" font-size="10">Temple</text><ellipse cx="170" cy="140" rx="60" ry="85" fill="#efe0bd" stroke="#7a5c1e" stroke-dasharray="5 4"/><path d="M120 130 Q110 180 160 205 Q200 190 195 130" fill="none" stroke="#7a5c1e" stroke-width="2" stroke-dasharray="4 3"/><text x="40" y="130" font-size="10">Valley Gate</text><text x="150" y="215" font-size="10">Dung Gate</text><text x="220" y="165" font-size="9">Gihon Spring</text><text x="220" y="182" font-size="9">King's Pool ●</text><text x="20" y="220" font-size="9">approx. 200 m</text></svg>
+        <div class="small">● Gates named in verses 13–15 &nbsp; ● Water sources</div>
+      </div>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.5">The dotted circuit is the route of verses 13–15: out by the Valley Gate, south to the Dung Gate, up to the King’s Pool, then on foot up the Kidron and back.</p>
+      <div class="callout"><b>Approximate.</b> Persian-period wall line reconstructed from excavation + Neh 3; scholars disagree. Pale rectangle = today’s Old City (1538 AD) — Nehemiah’s city lies mostly outside, on the City of David ridge.</div>
+    </div>
+    <div id="map-journey" hidden>
+      <div class="mapbox">
+        <svg viewBox="0 0 340 180" width="100%" role="img" aria-label="Schematic map of the journey from Susa to Jerusalem, about 1,500 km"><ellipse cx="60" cy="90" rx="55" ry="60" fill="#cfdde5"/><text x="25" y="85" font-size="9" fill="#294155">MEDITERRANEAN</text><path d="M290 60 Q220 80 120 120" stroke="#7a5c1e" stroke-width="2" stroke-dasharray="6 4" fill="none"/><circle cx="290" cy="58" r="6" fill="#7a5c1e"/><text x="285" y="45" font-size="10">Susa</text><circle cx="120" cy="120" r="6" fill="#7a5c1e"/><text x="80" y="140" font-size="10">Jerusalem</text><text x="150" y="110" font-size="9">Samaria · Damascus · Babylon</text><text x="170" y="150" font-size="10">≈ 1,500 km · months of travel</text></svg>
+        <div class="small">Schematic. Coastlines and routes simplified; not to scale.</div>
+      </div>
+      <p style="font-family:var(--serif);font-size:16px;line-height:1.5">Nehemiah asks for letters to the governors of Beyond the River — roughly 1,500 km from court to hill town.</p>
+      <div class="callout"><b>Schematic.</b> Route not recorded. Athens marked for scale: while this journey was made, the Parthenon was under construction there.</div>
+    </div>
+    <div style="height:12px"></div>
+    <button class="btn-primary" onclick="closeSheet('s-map')">Back to reading</button>
+  </div></div>
+
+  <!-- VERSE COMPANION (IMG_4199) -->
+  <div id="s-companion" class="sheet" role="dialog" aria-label="Verse companion" onclick="if(event.target===this)closeSheet('s-companion')"><div class="sheet-inner full">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Verse companion</div><h2>Nehemiah 2:1</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-companion')">×</button></div>
+    <div class="scriptbox"><span class="tag">SCRIPTURE</span><blockquote>“Artaxerxes the king”</blockquote><p class="small">World English Bible · Public Domain</p></div>
+    <div class="atmoment"><div class="eyebrow">Person · Persian politics</div><h3>The person who can authorize the mission</h3><p>Artaxerxes rules the empire governing Judah. Nehemiah needs more than permission to leave — he needs official protection and access to royal resources.</p></div>
+    <button class="ghostbtn" onclick="closeSheet('s-companion');openSheet('s-entity')">Who was Artaxerxes? ＞</button>
+    <button class="textbtn" onclick="closeSheet('s-companion');openSheet('s-context')">ⓘ Understand the whole passage</button>
+    <div class="srcbox"><b>WHY THIS APPEARS HERE</b><br>This explanation belongs to this exact reading moment. The reusable profile remains separate.</div>
+  </div></div>
+
+  <!-- ENTITY (IMG_4200) -->
+  <div id="s-entity" class="sheet" role="dialog" aria-label="Entity profile" onclick="if(event.target===this)closeSheet('s-entity')"><div class="sheet-inner full">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Person · Persian politics</div><h2>King Artaxerxes I</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-entity')">×</button></div>
+    <div style="display:flex;gap:12px;align-items:center;margin:12px 0"><span class="mono" style="width:64px;height:64px;border-radius:16px;background:var(--accent-soft);color:var(--accent);font-family:var(--serif);font-weight:700;font-size:30px;display:flex;align-items:center;justify-content:center">A</span><span><b style="font-family:var(--serif);font-size:26px">Artaxerxes I</b><br><span class="small">Persian king · Fifth century BC</span></span></div>
+    <span class="inpass">In this passage</span>
+    <h3 style="font-family:var(--serif);font-size:24px;line-height:1.29">He can authorize the entire mission</h3>
+    <p style="font-family:var(--serif);font-size:16px;line-height:1.55;margin-top:6px">Artaxerxes notices Nehemiah’s sadness and has the authority to approve his journey, provide official protection and release royal resources.</p>
+    <div class="eyebrow" style="margin-top:16px">Reusable profile</div>
+    <h3 style="font-family:var(--serif);font-size:24px;margin-top:4px">Who was Artaxerxes?</h3>
+    <p style="font-family:var(--serif);font-size:16px;line-height:1.55;margin-top:6px">A king of the Persian Empire who ruled during the fifth century BC. His empire governed Judah during Nehemiah’s time.</p>
+    <div class="srcbox"><b>SOURCES AND REVIEW</b><br>Prototype copy. Production content requires approved sources and named editorial review.</div>
+  </div></div>
+
+  <!-- READING OPTIONS (IMG_4202) -->
+  <div id="s-options" class="sheet" role="dialog" aria-label="Reading options" onclick="if(event.target===this)closeSheet('s-options')"><div class="sheet-inner">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Reader</div><h2>Reading options</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-options')">×</button></div>
+    <button class="optrow" onclick="alert('Demo: bookmark saved')"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg></span><span><b>Bookmark chapter</b><span class="small">Save for later</span></span></button>
+    <button class="optrow" onclick="toggleTheme()"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13A8 8 0 1 1 11 4a6 6 0 0 0 9 9z"/></svg></span><span><b>Theme</b><span class="small">Switch light or dark</span></span></button>
+    <button class="optrow" onclick="cycleText()"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><text x="4" y="17" font-size="14" fill="currentColor" stroke="none">Aa</text></svg></span><span><b>Text size and spacing</b><span class="small">Reader appearance (<span id="ts-label">default</span>)</span></span></button>
+    <button class="optrow" onclick="alert('Demo: offline package status')"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg></span><span><b>Available offline</b><span class="small">Downloaded successfully</span></span></button>
+  </div></div>
+
+  <!-- SETTINGS (IMG_4203) -->
+  <div id="s-settings" class="sheet" role="dialog" aria-label="Settings" onclick="if(event.target===this)closeSheet('s-settings')"><div class="sheet-inner full">
+    <div class="grab"></div>
+    <div class="sheet-head"><div><div class="eyebrow">Preferences</div><h2>Settings</h2></div><button class="x" aria-label="Close" onclick="closeSheet('s-settings')">×</button></div>
+    <button class="optrow" onclick="alert('Demo: app language')"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg></span><span><b>App language</b><span class="small">English</span></span></button>
+    <button class="optrow" onclick="alert('Demo: translation picker + rights')"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h12a2 2 0 0 1 2 2v16l-3-2-2 2-2-2-2 2-2-2-3 2V5a2 2 0 0 1 2-2z"/></svg></span><span><b>Bible translation</b><span class="small">World English Bible · WEB</span></span></button>
+    <button class="optrow" onclick="toggleTheme()"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13A8 8 0 1 1 11 4a6 6 0 0 0 9 9z"/></svg></span><span><b>Appearance</b><span class="small">Switch light or dark theme</span></span></button>
+    <button class="optrow" onclick="cycleText()"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><text x="4" y="17" font-size="14" fill="currentColor" stroke="none">Aa</text></svg></span><span><b>Reading text</b><span class="small">Size, line spacing and font</span></span></button>
+    <button class="optrow" onclick="alert('Demo: WEB · Nehemiah available offline')"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg></span><span><b>Downloads</b><span class="small">WEB · Nehemiah available offline</span></span></button>
+    <button class="optrow" onclick="alert('Demo: licences + attribution')"><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8v.1"/></svg></span><span><b>Translations and licences</b><span class="small">Sources, permissions and attribution</span></span></button>
+  </div></div>
+
+  <div class="demo-note">DEMO ONLY — prototype copy per new design spec. Not the app implementation. index.html untouched.</div>
+</div>
+<script>
+const tabs={home:'tab-home',bible:'tab-bible',saved:'tab-saved',search:'tab-search',daily:'tab-home',reader:'tab-home'};
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById('v-'+id).classList.add('active');['tab-home','tab-bible','tab-search','tab-saved','tab-settings'].forEach(t=>document.getElementById(t).classList.remove('on'));const t=tabs[id];if(t)document.getElementById(t).classList.add('on');document.querySelectorAll('.sheet.open').forEach(s=>s.classList.remove('open'));if(id==='search'){setTimeout(function(){var q=document.getElementById('q');if(q)q.focus();},60);}}
+function openSheet(id){document.getElementById(id).classList.add('open')}
+function closeSheet(id){document.getElementById(id).classList.remove('open');if(id==='s-settings'){document.getElementById('tab-settings').classList.remove('on');}}
+function openSettingsTab(){document.getElementById('tab-settings').classList.add('on');openSheet('s-settings');}
+function doSearch(v){var q=v.trim().toLowerCase();var ref=document.getElementById('q-ref');var rec=document.getElementById('q-recent');var ent=document.getElementById('q-ent');var none=document.getElementById('q-empty');if(q===''){ref.hidden=true;rec.hidden=false;ent.hidden=false;none.hidden=true;return;}var hit=/neh|^2\b|2\s*:/.test(q);var person=/artaxerxes/.test(q);ref.hidden=!hit;rec.hidden=true;ent.hidden=!person;none.hidden=hit||person;}
+function openSheet(id){document.getElementById(id).classList.add('open')}
+function closeSheet(id){document.getElementById(id).classList.remove('open')}
+function ctxTab(k){['e','h','c'].forEach(x=>{document.getElementById('ctx-'+x).classList.remove('on');document.getElementById('ctx-'+x).setAttribute('aria-selected','false');document.getElementById('ctxp-'+x).hidden=true;});document.getElementById('ctx-'+k).classList.add('on');document.getElementById('ctx-'+k).setAttribute('aria-selected','true');document.getElementById('ctxp-'+k).hidden=false;}
+function toggleTheme(){const p=document.getElementById('phone');const dark=p.getAttribute('data-theme')==='dark';if(dark)p.removeAttribute('data-theme');else p.setAttribute('data-theme','dark');}
+const sizes=[['default','20px'],['large','23px'],['largest','26px']];let si=0;
+function cycleText(){si=(si+1)%sizes.length;document.documentElement.style.setProperty('--script-size',sizes[si][1]);document.getElementById('ts-label').textContent=sizes[si][0];}
+document.querySelectorAll('.fmtrow').forEach(r=>r.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;r.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');}));
+function mapTab(t){var c=t==='c';document.getElementById('map-city').hidden=!c;document.getElementById('map-journey').hidden=c;document.getElementById('m-c').classList.toggle('on',c);document.getElementById('m-j').classList.toggle('on',!c);document.getElementById('m-c').setAttribute('aria-selected',c);document.getElementById('m-j').setAttribute('aria-selected',!c);}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.sheet.open').forEach(s=>s.classList.remove('open'));});
+</script>
+</body>
+</html>
