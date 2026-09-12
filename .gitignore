@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Large / rights-blocked Bible data - never commit (CONTENT_RIGHTS.md BLOCKED)
+bsb/
+*.zip
+
+# Draft assets excluded from initial docs-only commit (un-ignore when approved)
+# Remove a line when you intentionally add that asset.
+/screens/
+/copied images/
+PRODUCT CONCEPT.pdf
+
+# Secrets - never commit (SECURITY.md)
+.env
+.env.*
+*.pem
+*.key
+
+# Future Expo / Node / build outputs (Phase 1+)
+node_modules/
+.expo/
+dist/
+build/
+.web/

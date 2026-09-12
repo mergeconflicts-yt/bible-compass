@@ -1,0 +1,302 @@
+# First MVP Implementation Plan
+
+## Execution rule
+
+Execute phases in order. Give an AI agent one bounded task at a time. A phase is complete only when its exit gate passes. Do not implement later features to compensate for an unresolved earlier decision.
+
+## Phase summary
+
+| Phase | Deliverable | Exit gate |
+|---|---|---|
+| 0 | Rights and product decisions | Translation, identifiers, locale, domain and review model approved |
+| 1 | Repository foundation | Fresh clone, checks and both development builds pass |
+| 2 | Design system and navigation | Route shells and accessibility primitives work on iOS and Android |
+| 3 | Domain and content contracts | Valid fixture passes and malformed content fails clearly |
+| 4 | Supabase foundation | Migrations reproduce backend and RLS allow and deny tests pass |
+| 5 | Bible reader | Nehemiah 2 browse, read and resume pass |
+| 6 | Context, timeline and map | Context preserves reading position and identifies sources |
+| 7 | Daily verse and sharing | Three image ratios export safely and deep-link to context |
+| 8 | Offline, search and saved library | Airplane-mode journey and queued writes pass |
+| 9 | Optional authentication and sync | Two-device and cross-user security tests pass |
+| 10 | Notifications and shared-link landing | Opt-in timing and installed or absent app links work |
+| 11 | Hardening | Performance, accessibility, privacy and operations pass |
+| 12 | Beta and production | Signed release, monitoring and rollback are ready |
+
+## Phase 0 Resolve decisions and rights
+
+### Instructions
+
+1. Complete `PRODUCT_DECISIONS.md`.
+2. Select the launch translation.
+3. Complete `CONTENT_RIGHTS.md` with evidence for display, offline, search, image, sharing and web uses.
+4. Approve `CANONICAL_IDENTIFIERS.md` for the chosen canon and translation.
+5. Select the launch locale, countries, domain, bundle ID and application ID.
+6. Select the primary beta audience.
+7. Define the editorial lens and reviewer authority.
+8. Finalize the boundary of the Nehemiah 2 content package.
+
+### Do not
+
+- Write production code
+- Import Scripture
+- Generate final anchors
+- Purchase services without owner approval
+
+### Exit gate
+
+A reviewer can answer what text may be displayed, cached and shared, what attribution is required and which records are approved for beta.
+
+## Phase 1 Bootstrap the repository
+
+### Instructions
+
+1. Create a current stable Expo TypeScript project without disabling generated AI-agent guidance.
+2. Establish the repository structure in `ARCHITECTURE.md` without creating unused speculative packages.
+3. Pin Node, package manager and exact dependencies. Commit the lockfile.
+4. Enable strict TypeScript, typed routes, ESLint and deterministic formatting.
+5. Add scripts for start, typecheck, lint, format check, unit tests, E2E tests, Expo validation and complete verification.
+6. Add a typed configuration module and `.env.example` without real secrets.
+7. Create development, preview and production EAS profiles.
+8. Produce iOS and Android development builds.
+9. Add CI for clean install, formatting, lint, types, unit tests and Expo validation.
+10. Copy this documentation pack into the repository root and `docs` directory.
+
+### Exit gate
+
+A fresh clone follows README only, produces both development builds and passes the complete verification command without hidden warnings.
+
+## Phase 2 Design system and navigation
+
+### Instructions
+
+1. Define semantic color, typography, spacing, radius, elevation, motion and icon tokens.
+2. Build accessible primitives for Screen, Text, Button, IconButton, Card, Chip, Divider, Loading, Empty and Error states, and adaptive sheet or panel.
+3. Create typed route shells for every screen in the PRD.
+4. Implement safe areas, dark mode, reduced motion, font scaling and keyboard behavior centrally.
+5. Create an internal development component gallery excluded from production, unless an approved compatible component tool is selected.
+6. Test VoiceOver or TalkBack labels, focus order, contrast and touch targets.
+
+### Exit gate
+
+All routes navigate correctly and the primitive gallery passes visual and accessibility review on both platforms.
+
+## Phase 3 Domain and content contracts
+
+### Instructions
+
+1. Implement pure TypeScript models for canonical references, translations, verses, passages, entities, contexts, anchors, timeline events, maps, daily verses, bookmarks and progress.
+2. Implement canonical reference and date parsers with typed errors.
+3. Implement Zod schemas for content packages and API responses.
+4. Define repository interfaces and domain error categories.
+5. Create a clearly non-production Nehemiah fixture until licensed content is available.
+6. Validate attribution, feature rights, anchor matching, sources, review status, certainty and accessible map descriptions.
+7. Add positive fixtures and intentionally invalid fixtures.
+
+### Exit gate
+
+Approved fixtures pass one validation command. Each invalid fixture fails for the expected actionable reason.
+
+## Phase 4 Supabase foundation
+
+### Instructions
+
+1. Initialize local Supabase development.
+2. Create migrations for the data model, indexes, timestamps, publication views and RLS.
+3. Write anonymous publication and user-ownership policy tests.
+4. Create idempotent validated content import tooling.
+5. Generate database types and check changes in CI.
+6. Configure approved public asset and restricted import buckets.
+7. Seed local development with synthetic users and safe fixtures only.
+8. Document backup, restore and migration recovery.
+
+### Exit gate
+
+A clean backend is recreated from migrations and seeds, and every RLS allow and denial test passes.
+
+## Phase 5 Bible reader vertical slice
+
+### Instructions
+
+1. Implement repository interfaces using in-memory fixtures, then SQLite and Supabase adapters.
+2. Build Bible book and chapter browsing.
+3. Open Nehemiah 2 through a canonical typed route.
+4. Render continuous stable verse blocks with translation attribution.
+5. Add typography, themes and all required UI states.
+6. Track and persist visible verse position without excessive writes.
+7. Restore the verse vicinity without jumping during refresh.
+8. Add component tests and a browse, scroll, leave and resume E2E flow.
+
+### Exit gate
+
+Nehemiah 2 can be opened, read, customized and resumed on physical iOS and Android devices, online and after caching offline.
+
+## Phase 6 Context timeline and map
+
+### Instructions
+
+1. Render the passage's date, period or empire, and location anchor.
+2. Build Who, Where, When, What, Before and Stakes.
+3. Render only validated translation-specific inline anchors.
+4. Build entity profile plus In this passage presentation.
+5. Preserve scroll position and focus when context opens and closes.
+6. Build a passage-centered timeline with visible precision and certainty.
+7. Render the reviewed historical map, normalized hotspots, legend, attribution, uncertainty and accessible description.
+8. Test missing content, anchor mismatch, uncertain dates and screen-reader paths.
+
+### Exit gate
+
+The user moves from reader to entity, timeline or map and back without losing position, and important claims remain traceable to reviewed sources.
+
+## Phase 7 Daily verse and sharing
+
+### Instructions
+
+1. Implement daily selection by local date and locale with deterministic fallback.
+2. Build the Home card and full daily page.
+3. Make Read the surrounding passage a primary next action.
+4. Build one reusable VerseCard component.
+5. Define safe regions and text-fit bounds for 9:16, 1:1 and 4:5.
+6. Reject illegible export instead of shrinking indefinitely.
+7. Enforce translation image rights and attribution.
+8. Capture the production image and invoke native sharing.
+9. Save to media only after explicit Download.
+10. Add the canonical HTTPS passage link.
+11. Test output dimensions, long text, themes and both platform share flows.
+
+### Exit gate
+
+All formats export without clipping at intended dimensions and Share and Download work correctly on iOS and Android.
+
+## Phase 8 Offline search bookmarks and saved content
+
+### Instructions
+
+1. Implement versioned SQLite migrations.
+2. Install content transactionally with schema and checksum verification.
+3. Retain the last healthy version when installation fails.
+4. Add reference parsing and licensed local full-text search.
+5. Add entity and context title search.
+6. Add bookmarks, recents and local reading progress.
+7. Add a durable mutation outbox.
+8. Add download progress, storage use, retry and removal.
+9. Test airplane mode, interrupted download, corrupt data, upgrade, low storage and force close.
+
+### Exit gate
+
+The supported Nehemiah journey works after force closing in airplane mode, and no bookmark or progress action is lost.
+
+## Phase 9 Optional account and synchronization
+
+### Instructions
+
+1. Implement the approved minimal sign-in method.
+2. Keep anonymous Continue without account as the default.
+3. Store sessions through the SecureStore-backed adapter.
+4. Implement idempotent outbox push and cursored pull.
+5. Implement documented conflict policies.
+6. Add sign-out and account deletion.
+7. Define migration of local bookmarks when the user first signs in.
+8. Test two devices, concurrent progress, expired sessions, offline behavior and cross-user denial.
+
+### Exit gate
+
+Anonymous usage remains complete, cloud sync is predictable and User A cannot access User B data.
+
+## Phase 10 Notifications and acquisition flow
+
+### Instructions
+
+1. Configure iOS Universal Links and Android App Links for canonical HTTPS routes.
+2. Build a minimal web fallback respecting web excerpt rights.
+3. Ask for notification permission only after explicit user action.
+4. Store and rotate device tokens securely.
+5. Dispatch daily reminders by the user's timezone and selected time with idempotency.
+6. Remove invalid tokens and honor opt-out immediately.
+7. Test installed, absent, terminated, malformed, expired, locale and timezone cases.
+
+### Exit gate
+
+A recipient reaches the correct passage with or without the app, and reminders do not duplicate for the same local day.
+
+## Phase 11 Hardening
+
+### Instructions
+
+1. Add typed allow-listed product events.
+2. Add crash reporting with source maps and payload redaction.
+3. Profile startup, scroll, image export, database, sync and memory.
+4. Complete VoiceOver, TalkBack, font scaling, dark mode, reduced motion, contrast and target-size reviews.
+5. Add resilient timeouts, retry with jitter and safe error messages.
+6. Audit dependencies, secrets, permissions and privacy declarations.
+7. Test backup restore, migration recovery, content rollback and push failure.
+
+### Exit gate
+
+The release candidate meets agreed quality budgets and has no unresolved critical or high security, privacy or accessibility finding.
+
+## Phase 12 Beta and release
+
+### Instructions
+
+1. Produce signed preview builds.
+2. Run regression on a supported iPhone, Android phone and lower-performance Android device.
+3. Run a structured closed beta with five to ten representative users.
+4. Validate comprehension, continuation and sharing behavior.
+5. Complete store name, icon, screenshots, support URL, privacy policy, age rating, rights, attribution and data disclosures.
+6. Build production artifacts from a tagged clean commit.
+7. Stage rollout and monitor crash and critical journey health.
+8. Define halt and rollback thresholds.
+9. Use over-the-air updates only when runtime compatibility allows them.
+10. Review production evidence before expanding beyond Nehemiah 2.
+
+### Exit gate
+
+The controlled release is live, monitored and recoverable, with a named owner for rollback and user support.
+
+## Required test layers
+
+- Domain and schema tests
+- Component behavior and accessibility tests
+- SQLite and Supabase repository contract tests
+- Database and RLS tests
+- Maestro critical-journey tests
+- Physical-device sharing, permission and accessibility checks
+- Content, attribution, anchor, map and timeline QA
+
+## Initial task backlog
+
+1. Resolve Phase 0 decisions.
+2. Bootstrap repository and checks.
+3. Build accessible design primitives.
+4. Create typed route shells and canonical parser.
+5. Implement domain and content schemas.
+6. Create safe Nehemiah fixture and validator.
+7. Create content database migrations and RLS.
+8. Create user-library migrations and RLS.
+9. Build in-memory Home and Bible browser.
+10. Implement SQLite migrations and cache.
+11. Implement remote adapter and cache-first repository.
+12. Build reader and progress.
+13. Build context and entity anchors.
+14. Build timeline and historical map.
+15. Build daily verse.
+16. Build ratio-safe image export.
+17. Add share, download and deep link.
+18. Add search, bookmarks and outbox.
+19. Add optional auth and sync.
+20. Add notifications and fallback web route.
+21. Add telemetry and privacy inventory.
+22. Run hardening, beta and release gates.
+
+## Definition of done for every task
+
+- Scope and acceptance criteria are met.
+- Architecture and content boundaries remain intact.
+- Formatting, lint, strict types and affected tests pass.
+- Error, offline and negative cases are covered.
+- iOS and Android checks are completed when behavior is device dependent.
+- Accessibility is verified.
+- Migrations and RLS tests pass when data changes.
+- Documentation is updated.
+- No mock, debug code, unused dependency or unexplained TODO remains.
+- Handoff reports actual commands and results.
