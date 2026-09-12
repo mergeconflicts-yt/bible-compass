@@ -29,13 +29,17 @@ Required for `Neh.2.1-Neh.2.8`:
 
 | Field | Status | Reviewer need |
 |---|---|---|
-| Who | OPEN | Biblical and copy review |
-| Where | OPEN | Historical and geographic review |
-| When | OPEN | Chronology review and precision label |
-| What | OPEN | Biblical and copy review |
-| Before | OPEN | Canonical narrative review |
-| Stakes | OPEN | Historical and literary review |
-| The moment for Nehemiah 2:4 | OPEN | Biblical and copy review |
+| Who | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review |
+| Where | DRAFT (`content/nehemiah-2/context-draft.json`) | Historical and geographic review |
+| When | DRAFT (`content/nehemiah-2/context-draft.json`) | Chronology review and precision label |
+| What | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review |
+| Before | DRAFT (`content/nehemiah-2/context-draft.json`) | Canonical narrative review |
+| Stakes | DRAFT (`content/nehemiah-2/context-draft.json`) | Historical and literary review |
+| The moment for Nehemiah 2:4 | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review |
+
+Draft covers the full chapter (`Neh.2.1–Neh.2.20`); the implemented app
+context unit remains `Neh.2.1–Neh.2.8` until reviewers approve. AI-drafted,
+unapproved — see `CONTENT_GUIDELINES.md` (AI cannot approve or publish).
 
 Potential additional context unit for `Neh.2.11-Neh.2.16` is out of the first implementation task unless approved.
 
@@ -43,17 +47,17 @@ Potential additional context unit for `Neh.2.11-Neh.2.16` is out of the first im
 
 | Entity | Proposed slug | Type | Status |
 |---|---|---|---|
-| Nehemiah | `nehemiah-governor` | Person | OPEN |
-| Artaxerxes I | `artaxerxes-i` | Person | OPEN |
-| Jerusalem | `jerusalem` | Place | OPEN |
-| Susa | `susa` | Place | OPEN |
-| Persian Empire | `persian-empire` | Empire | OPEN |
-| Cupbearer | `cupbearer` | Role | OPEN |
-| Governors Beyond the River | `governors-beyond-the-river` | Political group or role | OPEN |
-| Asaph keeper of the royal park | `asaph-royal-park` | Person | OPEN |
-| Sanballat the Horonite | `sanballat-the-horonite` | Person | OPEN |
-| Valley Gate | `valley-gate` | Place or structure | OPEN |
-| King's Pool | `kings-pool` | Place | OPEN |
+| Nehemiah | `nehemiah-governor` | Person | DRAFT |
+| Artaxerxes I | `artaxerxes-i` | Person | DRAFT |
+| Jerusalem | `jerusalem` | Place | DRAFT |
+| Susa | `susa` | Place | DRAFT |
+| Persian Empire | `persian-empire` | Empire | DRAFT |
+| Cupbearer | `cupbearer` | Role | DRAFT |
+| Governors Beyond the River | `governors-beyond-the-river` | Political group or role | OPEN (covered as `beyond-the-river` place in draft; slug decision pending) |
+| Asaph keeper of the royal park | `asaph-royal-park` | Person | DRAFT |
+| Sanballat the Horonite | `sanballat-the-horonite` | Person | DRAFT |
+| Valley Gate | `valley-gate` | Place or structure | DRAFT |
+| King's Pool | `kings-pool` | Place | DRAFT |
 
 First milestone minimum:
 
@@ -78,19 +82,20 @@ All wording remains `OPEN` until sourced and reviewed.
 
 ## Interactive anchors
 
-Anchor locations are translation-specific and cannot be finalized before the translation is selected.
+Translation selected: BSB. 19 anchors implemented as DRAFT in
+`content/nehemiah-2/context-draft.json` (translation ID, verse ID, character
+offsets, matched text, target entity — all validated against the bundled
+BSB text by `tools/sync-context-draft.py` and `__tests__/draft.test.ts`):
 
-Candidate concepts:
+- King Artaxerxes (2:1), city where fathers are buried (2:3, 2:5), Judah (2:5),
+  governors west of the Euphrates (2:7, 2:9), Asaph (2:8),
+  Sanballat the Horonite (2:10, 2:19), Tobiah the Ammonite official (2:10, 2:19),
+  Jerusalem (2:11, 2:12, 2:17, 2:20), Valley Gate (2:13, 2:15),
+  King's Pool (2:14), Geshem the Arab (2:19)
 
-- King Artaxerxes
-- I was very much afraid
-- City where my ancestors are buried
-- Gates destroyed by fire
-- Letters to the governors
-- Asaph keeper of the royal park
-- Sanballat the Horonite
-- Valley Gate
-- King's Pool
+Still without an entity target (no anchor until one exists): "I was very much
+afraid" (2:2), "Gates destroyed by fire", "Letters to the governors" as a
+standalone concept, Dung Gate, Fountain Gate, the unnamed queen.
 
 Every anchor requires:
 
@@ -105,13 +110,20 @@ Every anchor requires:
 
 | Event | Status | Required fields |
 |---|---|---|
-| Babylonian destruction of Jerusalem | OPEN | Date range, precision, description, relevance and sources |
-| Persian conquest of Babylon | OPEN | Date range, description and sources |
+| Abraham | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
+| Exodus from Egypt | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
+| David king in Jerusalem | DRAFT (draft JSON) | Date range, precision, description, relevance and sources |
+| Babylonian destruction of Jerusalem | DRAFT (draft JSON) | Date range, precision, description, relevance and sources |
+| Persian conquest of Babylon | DRAFT (draft JSON) | Date range, description and sources |
 | Return from exile | OPEN | Clarify which return and avoid overgeneralization |
-| Ezra's earlier return or ministry | OPEN | Chronology and relevance |
-| Nehemiah before Artaxerxes | OPEN | Approximate date and precision |
-| Rebuilding Jerusalem's wall | OPEN | Date range and relation to passage |
-| Selected Athens parallel | OPTIONAL | Include only if it meaningfully orients the reader |
+| Ezra's earlier return or ministry | DRAFT (draft JSON, traditional dating flagged disputed) | Chronology and relevance |
+| Peace of Callias | DRAFT (draft JSON, disputed) | Date range, precision, description, relevance and sources |
+| Parthenon begun | DRAFT (draft JSON) | Date range, description and sources |
+| Nehemiah before Artaxerxes | DRAFT (draft JSON) | Approximate date and precision |
+| Rebuilding Jerusalem's wall | DRAFT (draft JSON, via Neh 6:15) | Date range and relation to passage |
+| Jesus born | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
+| Crucifixion and resurrection | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
+| Selected Athens parallel | Covered above (Callias, Parthenon) | Include only if it meaningfully orients the reader |
 
 ## Map inventory
 
@@ -157,7 +169,9 @@ For each theme:
 
 ## Sources
 
-`OPEN`
+`DRAFT` — 4 source records live in `content/nehemiah-2/context-draft.json`
+(BSB text + 3 reviewer-to-select references). Reviewer must confirm editions,
+pages, and every map claim before any status moves past DRAFT.
 
 Create source records for:
 

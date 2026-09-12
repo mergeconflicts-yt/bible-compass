@@ -1,10 +1,11 @@
 import { useFonts } from 'expo-font';
-import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
+import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/theme/useColorScheme';
+import { AppPreferencesProvider, usePreferences } from '@/theme/ThemeProvider';
+import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -42,12 +43,22 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  return (
+    <AppPreferencesProvider>
+      <ThemedNav />
+    </AppPreferencesProvider>
+  );
+}
+
+function ThemedNav() {
+  const { scheme } = usePreferences();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="daily/[date]" options={{ headerShown: false }} />
+        <Stack.Screen name="passage/[reference]" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );

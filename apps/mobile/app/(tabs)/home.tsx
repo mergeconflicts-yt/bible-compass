@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { HomeView } from '@/components/HomeView';
 import { continueReadingFixture, dailyVerseFixture } from '@/fixtures/home';
 import { greetingForHour } from '@/lib/greeting';
+import { todayKey } from '@/lib/daily';
 
 /** Thin route: wires the presentational HomeView to the router and Share sheet. */
 export default function HomeScreen() {
@@ -23,7 +24,9 @@ export default function HomeScreen() {
       greeting={greeting}
       daily={dailyVerseFixture}
       progress={continueReadingFixture}
-      onReadInContext={() => openPassage(dailyVerseFixture.passageKey)}
+      onReadInContext={() =>
+        router.push({ pathname: '/daily/[date]', params: { date: todayKey() } })
+      }
       onShare={shareVerse}
       onOpenPassage={openPassage}
     />

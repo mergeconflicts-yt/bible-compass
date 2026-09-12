@@ -28,11 +28,11 @@ describe('greetingForHour', () => {
 });
 
 describe('HomeView', () => {
-  it('shows the daily verse, reference and translation without ambiguity', () => {
+  it('shows the daily verse artwork, reference and attribution without ambiguity', () => {
     renderHome();
+    expect(screen.getByTestId('daily-artwork')).toBeTruthy();
     expect(screen.getByText(/What is your request/)).toBeTruthy();
     expect(screen.getByText('Nehemiah 2:4')).toBeTruthy();
-    expect(screen.getAllByText('WEB')).toHaveLength(2);
     expect(screen.getByText('Read in context')).toBeTruthy();
   });
 
@@ -42,9 +42,11 @@ describe('HomeView', () => {
     expect(props.onReadInContext).toHaveBeenCalledTimes(1);
   });
 
-  it('routes Share through its handler', () => {
+  it('opens the verse composer from Share and shares from inside it', () => {
     const props = renderHome();
     fireEvent.press(screen.getByTestId('share-verse'));
+    expect(screen.getByTestId('composer-sheet')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('composer-share'));
     expect(props.onShare).toHaveBeenCalledTimes(1);
   });
 
@@ -59,5 +61,12 @@ describe('HomeView', () => {
     const props = renderHome();
     fireEvent.press(screen.getByTestId('continue-reading-card'));
     expect(props.onOpenPassage).toHaveBeenCalledWith('Neh.2.1-Neh.2.8');
+  });
+
+  it('opens the context flow from the explore card', () => {
+    renderHome();
+    fireEvent.press(screen.getByTestId('explore-context-card'));
+    expect(screen.getByTestId('context-sheet')).toBeTruthy();
+    expect(screen.getByText('THE 30-SECOND BRIEF')).toBeTruthy();
   });
 });

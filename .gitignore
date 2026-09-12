@@ -2,8 +2,9 @@
 .DS_Store
 Thumbs.db
 
-# Large / rights-blocked Bible data - never commit (CONTENT_RIGHTS.md BLOCKED)
-bsb/
+# Large / rights-blocked Bible dataset - never commit (root only; the generated
+# per-book slice under apps/mobile/assets/scripture/bsb/ IS committed).
+/bsb/
 *.zip
 
 # Draft assets excluded from initial docs-only commit (un-ignore when approved)

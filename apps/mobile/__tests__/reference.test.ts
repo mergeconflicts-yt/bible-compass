@@ -10,10 +10,24 @@ describe('parseReference', () => {
     });
   });
 
+  it('parses a whole-chapter reference', () => {
+    expect(parseReference('Neh.2')).toEqual({
+      kind: 'chapter',
+      start: { book: 'Neh', chapter: 2, verse: 0 },
+      end: { book: 'Neh', chapter: 2, verse: 0 },
+      canonicalKey: 'Neh.2',
+    });
+  });
+
   it('parses a passage range', () => {
     const parsed = parseReference('Neh.2.1-Neh.2.8');
     expect(parsed.kind).toBe('range');
     expect(parsed.canonicalKey).toBe('Neh.2.1-Neh.2.8');
+  });
+
+  it('parses books across both testaments from the shared registry', () => {
+    expect(parseReference('Gen.1.1').start.book).toBe('Gen');
+    expect(parseReference('Rev.22.21').start.book).toBe('Rev');
   });
 
   it('rejects empty input with a typed error', () => {
@@ -41,9 +55,9 @@ describe('parseReference', () => {
     }
   });
 
-  it('rejects books outside the landing slice', () => {
+  it('rejects books outside the registry', () => {
     try {
-      parseReference('John.3.16');
+      parseReference('Xyz.1.1');
       throw new Error('should have thrown');
     } catch (error) {
       expect(error).toBeInstanceOf(ReferenceParseError);
@@ -59,5 +73,10 @@ describe('formatReference', () => {
 
   it('labels a same-chapter range', () => {
     expect(formatReference(parseReference('Neh.2.1-Neh.2.8'))).toBe('Nehemiah 2:1–8');
+  });
+
+  it('labels a whole chapter without verse numbers', () => {
+    expect(formatReference(parseReference('Neh.2'))).toBe('Nehemiah 2');
+    expect(formatReference(parseReference('Gen.1'))).toBe('Genesis 1');
   });
 });

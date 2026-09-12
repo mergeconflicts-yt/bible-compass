@@ -1,12 +1,13 @@
 /**
  * PROTOTYPE FIXTURE — not production content.
  *
- * The verse wording below is the World English Bible (Public Domain), used
- * here only so the landing page can render before licensed translations are
- * selected. CONTENT_RIGHTS.md is BLOCKED: nothing in this file is approved
- * Scripture text, and it must never be treated as licensed production content.
- * Every surface that shows this text labels it as prototype.
+ * Home content only: greeting-adjacent progress plus the daily verse pointer.
+ * Verse wording comes from the bundled translation loader (single source of
+ * truth), currently the Berean Standard Bible — see `src/content/bsb.ts` and
+ * `docs/CONTENT_RIGHTS.md`. Telugu and Tamil remain OPEN (ADR-001).
  */
+
+import { activeTranslation, getVerseText } from '@/content/bsb';
 
 export interface DailyVerseFixture {
   canonicalKey: string;
@@ -27,13 +28,16 @@ export interface ContinueReadingFixture {
   translationShort: string;
 }
 
+const dailyText =
+  getVerseText('Neh', 2, 4) ?? '“What is your request?” replied the king.';
+
 export const dailyVerseFixture: DailyVerseFixture = {
   canonicalKey: 'Neh.2.4',
   passageKey: 'Neh.2.1-Neh.2.8',
   referenceLabel: 'Nehemiah 2:4',
-  text: 'Then the king said to me, “What is your request?” So I prayed to the God of heaven.',
-  translationShort: 'WEB',
-  translationNote: 'World English Bible · Public Domain · Prototype text',
+  text: dailyText,
+  translationShort: activeTranslation.short,
+  translationNote: `${activeTranslation.name} · ${activeTranslation.short} · Rights basis: owner-confirmed berean.bible terms`,
   dateLabel: 'Verse of the day',
 };
 
@@ -43,5 +47,5 @@ export const continueReadingFixture: ContinueReadingFixture = {
   chapter: 2,
   lastVerseLabel: 'Verse 5',
   contextLabel: 'Return from exile',
-  translationShort: 'WEB',
+  translationShort: activeTranslation.short,
 };
