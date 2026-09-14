@@ -16,11 +16,11 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "test": "npm run test --workspaces --if-present",
-    "verify": "npm run typecheck --workspaces --if-present --ignore-scripts=false || true; npm run lint --workspaces --if-present --ignore-scripts=false || true; npm run format:check || true; npm run test --workspaces --if-present || true"
+    "verify": "npm run typecheck --workspaces --if-present && npm run lint --workspaces --if-present && npm run format:check && npm run test --workspaces --if-present"
   },
   "devDependencies": {
-    "typescript": "~6.0.3",
-    "prettier": "^3.9.6",
-    "eslint": "^9.39.5"
+    "typescript": "6.0.3",
+    "prettier": "3.9.6",
+    "eslint": "9.39.5"
   }
 }

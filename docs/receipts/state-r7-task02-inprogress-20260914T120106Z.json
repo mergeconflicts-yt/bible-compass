@@ -1,0 +1,43 @@
+{
+  "dispatch_receipt_id": "dispatch-02-20260914T120106Z",
+  "dispatch_receipt_sha256": "2e6516c30aee470b73c77e47fd750b7b1eb62bfc3c55fa68ed3e3fb2ec8178b5",
+  "envelope_record_id": "envelope-02-20260914T120106Z",
+  "envelope_sha256": "c31fb51e358e9a2905683149bf8ce555fd064fe367bf6d9126481d34c1eb7ed3",
+  "issued_at": "2026-09-14T12:01:06.397112Z",
+  "issuer": {
+    "authorization_receipt_id": "gate-A1-v1-20260914T115751Z",
+    "authorization_receipt_sha256": "4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435",
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "lease_id": "lease-02-attempt-1-20260914T120106Z",
+  "new_state": {
+    "active_attempt_id": "task:canonical-id:02:attempt-1",
+    "active_controller_lease_id": "lease-02-attempt-1-20260914T120106Z",
+    "active_dispatch_envelope_sha256": "c31fb51e358e9a2905683149bf8ce555fd064fe367bf6d9126481d34c1eb7ed3",
+    "active_task": "02",
+    "active_task_status": "IN_PROGRESS",
+    "last_completed_task": "01",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 7
+  },
+  "new_state_revision": 7,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r6-gatea1-passed-02ready-20260914T115751Z",
+  "prior_state_receipt_sha256": "1cd0a53947cfdcd54d333ccf4a3f3538f79159cfeb241aa7a5c7d1a90c05cb76",
+  "prior_state_revision": 6,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r7-task02-inprogress-20260914T120106Z",
+  "record_sha256": "b1d32cdcea051fded3ff1166e19960f392a5e3553f9cf9f7a31590c35447221b",
+  "repository_state_receipt_id": "repo-state-c65f0813-e13416ea",
+  "repository_state_receipt_sha256": "d26845055caa7568a342299bb51f9c84319c03a9642ed7a6bd3a8ac5e78d7d66",
+  "server_timestamp": "2026-09-14T12:01:06.397112Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "+8xSkZR4mM1vqRdjKmiE7HzzvzwIA//E87lZcJFl3yZtfpZfhdYdXU9UQRNjjELU4xWgF99OKzTkHU+AxDnSBg==",
+  "transition": "TASK_02_READY_TO_IN_PROGRESS"
+}

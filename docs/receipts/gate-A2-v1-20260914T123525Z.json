@@ -1,0 +1,66 @@
+{
+  "allowed_changes": [
+    "package.json (root) \u2014 add workspaces [apps/mobile, packages/domain, packages/content-schema]",
+    "packages/domain/package.json \u2014 name @bible-compass/domain private, typescript@~6.0.3 dev",
+    "packages/domain/tsconfig.json",
+    "packages/domain/src/index.ts, canon.ts, reference.ts, entity.ts, claim.ts",
+    "packages/content-schema/package.json \u2014 name @bible-compass/content-schema, zod@3.23.8 exact, typescript@~6.0.3 dev",
+    "packages/content-schema/tsconfig.json",
+    "packages/content-schema/src/schemas.ts, validators.ts",
+    "packages/content-schema/tests/** \u2014 fixture matrix",
+    "package-lock.json \u2014 lockfile after npm install (exact versions)",
+    "docs/DATA_MODEL.md \u2014 no further changes in Task 04 (already spec)"
+  ],
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Task 04 may not add unapproved dependency, loose version, any/@ts-ignore, network access, or infra import in domain"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-13T12:35:25.273182Z",
+  "gate_id": "A2",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "display_name": "theone",
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    }
+  ],
+  "issued_at": "2026-09-14T12:35:25.273182Z",
+  "permitted_next_tasks": [
+    "04"
+  ],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-A2-v1-20260914T123525Z",
+  "record_sha256": "26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e",
+  "revocation": {
+    "revoked_at": null,
+    "status": "active",
+    "superseded_by": null
+  },
+  "server_timestamp": "2026-09-14T12:35:25.273182Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "b5gpC2xAm/iQQSz6WsmhAYbUjrY61zaksYCYSju/uUNV8KPm2Lk0xScomQEht7ZRVMNVh3MEvTvsYeEQjg2mAQ==",
+  "subject_artifact_keys": [
+    "docs/DATA_MODEL.md",
+    "docs/DOMAIN_WORKSPACE_PROPOSAL.md"
+  ],
+  "subject_artifact_shas": [
+    "4153b51fa42a639d6ffa026b6a8f812191052f553cdd91c547526315eddea30e",
+    "7f5dbc4e34d5b58de1cdddee2040e00baa4631ab48510cb59a3211118424a72c"
+  ],
+  "subject_proposal_key": "docs/DOMAIN_WORKSPACE_PROPOSAL.md"
+}

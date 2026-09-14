@@ -1,0 +1,83 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Task 02 may edit only docs/CANONICAL_IDENTIFIERS.md",
+    "Neh.2.1-20 pilot approved",
+    "Telugu/Tamil fallback show English with banner"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "decisions_approved": [
+    "D-CANON",
+    "D-REFSYS",
+    "D-LOCALE",
+    "D-TRANS",
+    "D-EDITION",
+    "D-LENS",
+    "D-REVIEW",
+    "D-TERR",
+    "D-DOMAIN",
+    "D-AI-TIPNR",
+    "D-AI-QUARANTINE",
+    "D-WORKSPACE",
+    "D-PILOT-NEH2",
+    "D-EXTERNAL-AI-DENY-ALL"
+  ],
+  "decisions_status": "all 14 approved as recommended in packet 91555a0d",
+  "expires_at": "2026-12-13T11:57:51.069956Z",
+  "gate_id": "A1",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "display_name": "theone",
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    },
+    {
+      "display_name": "theone",
+      "principal_id": "owner:theone",
+      "role": "rights_reviewer"
+    },
+    {
+      "display_name": "theone",
+      "principal_id": "owner:theone",
+      "role": "editorial_reviewer"
+    }
+  ],
+  "issued_at": "2026-09-14T11:57:51.069956Z",
+  "permitted_next_tasks": [
+    "02"
+  ],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-A1-v1-20260914T115751Z",
+  "record_sha256": "4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435",
+  "revocation": {
+    "revoked_at": null,
+    "status": "active",
+    "superseded_by": null
+  },
+  "server_timestamp": "2026-09-14T11:57:51.069956Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "QaBUYKe4tchXIA4jmcVXW2AW5kwezqL30FbDpQc7aV6w53L6tV+MVfIYgVYWARjN5V8If6pucHXi1ebolutZDw==",
+  "subject_artifact_canon_shas": [
+    "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54"
+  ],
+  "subject_artifact_keys": [
+    "docs/OWNER_GATE_A1_PACKET.md"
+  ],
+  "subject_artifact_shas": [
+    "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54"
+  ]
+}

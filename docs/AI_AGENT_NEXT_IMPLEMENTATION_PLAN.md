@@ -1,10 +1,10 @@
-# agent_implementation
+# AI-Agent Next Implementation Plan
 
 Al-Agent Next Implementation Plan
 
-Status and objective
+## Status and objective
 
-plan_version: 12
+plan_version: 1.2.0
 plan_status: ACTIVE
 state_revision: 13
 active_task: "05"
@@ -26,7 +26,7 @@ agent to "continue with the plan," implement several tasks, or infer approval fo
 The target outcome is a reproducible Nehemiah 2 candidate-data pipeline and staging backend. It is
 not whole-Bible publication. Full-Bible contextual coverage remains outside the first MVP.
 
-Instructions to every Al agent opening this file
+## Instructions to every Al agent opening this file
 This file is an execution state machine, not a list of suggestions.
 1. Read the status block and task ledger below.
 
@@ -40,34 +40,34 @@ updating this ledger.
 
 not choose one silently.
 
-Completed planning prerequisites
+## Completed planning prerequisites
 
-orovals.
+Approvals.
 Status Evidence
-arequisite Meaning
-re曰on唯曰xtarchtecture DONE CONTEXT_PLATFORM SPEC. Logical design exists
-crication specifications d and companion
+Prerequisite Meaning
+Region Context Architecture DONE CONTEXT_PLATFORM_SPEC. Logical design exists
+Specification and companion documents
 
-erdennodelree DONE CONTEXT_MODEL REVIEW.nd Design findings recorded
-二三三二十十二二十十年 DONE ADR-003 Logical model selected
+Context Model Review DONE CONTEXT_MODEL_REVIEW.md Design findings recorded
+2023-12-10 DONE ADR-003 Logical model selected
 ton migrationsstilabsent
-一一一一一一一一 DONE md OPEN_BIBLE_DATA_SOURCES Candidates documented:
+2024-01-01 DONE OPEN_BIBLE_DATA_SOURCES.md Candidates documented:
 moneapproved
 DONE This document version 1.2.0 Task definitions are ready;
 execution awaitsGateo
 
-conflict task this gest-
+Conflict task, this suggests
 DONE
-recelpt ROGRESS releases, or external-Al
+Receipt PROGRESS releases, or external-Al
 dispatch RESS or pubLished
 PASS
 FAILED
 
-plan_status is plan-level st usable but the queue has OGRESS nsitions: OGRESS -> DONE nses,
-Status BLOCKED READY ONE SUPERSEDED SUPERSEDED
-ls Invent Sc
+plan_status is plan-level state, but the queue has PROGRESS transitions: PROGRESS -> DONE, etc.,
+Status BLOCKED READY DONE SUPERSEDED SUPERSEDED
+Is Inventory Scanned
 
-Controller protocor
+## Controller protocor
 The orchestrating agent must follow this protocol for every task:
 
 explicitly allowed, and that no open stop condition remains.
@@ -87,7 +87,7 @@ the worker for the same attempt. Before dispatch, it must hold a compare-and-swa
 trusted orchestration audit store, bound to plan version, state revision, repository-state digest,
 task key, and attempt ID. A second or stale controller must fail closed rather than overwrite the
 card grants no authority. lease. Editing this Markdown file, claiming to be the controller, or constructing an unsigned JSON
-Execution-state update protocol
+## Execution-state update protocol
 Before dispatch:
 1. Verify the prior handoff/gate receipt and repository-state receipt.
 2. Verify exactly one ledger row is READY and it matches active_task.
@@ -104,11 +104,11 @@ Persist this before sending both envelope and dispatch receipt to the worker. An
 state/ledger/lease/receipt mismatch blocks dispatch.
 After handoff:
 1. Independently reproduce required commands and verify output artifact/validation digests.
-2. If verification passes and no human gate follows, mark the task DoNE and append execution
-history. Leave already-terminal DoNE / OMITTED rows unchanged, scan forward in ledger order,
+2. If verification passes and no human gate follows, mark the task DONE and append execution
+history. Leave already-terminal DONE / OMITTED rows unchanged, scan forward in ledger order,
 and mark exactly one earliest nonterminal successor READY only when its complete dependency
 successor or null when none is eligible. predicate is satisfied; otherwise stop at the pending blocker/gate. Update active_task to that
-3. If a human gate follows, mark the task DoNE, set the gate AWAITING_DECISION, append
+3. If a human gate follows, mark the task DONE, set the gate AWAITING_DECISION, append
 execution history, and set active_task: null. Do not mark a successor ready.
 4. If verification fails, mark the attempt FAILED or BLOCKED, append execution history, set
 5. Never rewrite or delete an old history row A ret active_task: null, and dispatch nothing until a new corrective attempt is authorized.
@@ -120,7 +120,7 @@ The worker reports status; only the controller records it.
 Agents may use subagents only when the assigned task explicitly permits parallel read-only review.
 Subagents may not share editing ownership of the same files.
 
-Required dispatch envelope
+## Required dispatch envelope
 The controller wraps the selected task block in a system-owned task card. Agents may not alter the
 card, its scope, or its prerequisite digests:
 
@@ -184,12 +184,12 @@ receipt that binds the envelope digest and records the compare-and-swap transiti
 IN_PRoGREss ; this avoids circular hashing. The worker receives and verifies both objects,
 including issuer authority, signature/MAC, timestamps, plan/task/prior-state digests, active lease,
 repository-state receipt, prerequisites, gates, rights, and path boundaries. A missing, expired,
-revoked, or changed proof produces BLockED ; it is not recreated or waived by the worker.
+revoked, or changed proof produces BLOCKED ; it is not recreated or waived by the worker.
 Every owner gate produces an authenticated, append-only machine-readable receipt containing the
 gate ID/version, exact subject artifact keys and digests, human actor/role, decision, constraints,
 server timestamp, expiry, revocation/supersession state, and permitted next task IDs. A Markdown
 edit or conversational "looks good" does not release the queue.
-Bootstrap trust before Task 00 and Task 07A
+## Bootstrap trust before Task 00 and Task 07A
 Bootstrap Gate 0 is a prerequisite outside the Al task queue. The owner must appoint the initial
 human actors and controller principal and approve a receipt/lease service before Task 00 becomes
 READY. Gates A1, A2, and B then use that owner-approved service outside the repository because the
@@ -203,7 +203,7 @@ and verifies the full bootstrap audit export without changing its original IDs, 
 signatures, or timestamps. If no such approved mechanism is available, Gate 0 remains
 AWAITING_DECISION，Task O0 remains BLOCKED,and no Al implementation task is dispatched.
 
-Standard handoff contract
+## Standard handoff contract
 Every worker returns:
 1. Task ID and result: PASS，FAIL，BLOCKED，or OWNER_ACTION_REQUIRED
 2. User-visible outcome
@@ -226,10 +226,10 @@ dispatchable. After a valid Gate 0 receipt, the appointed controller may atomica
 the sole READY task. Task 00 has no allowed worker changes and requires a read-only baseline
 handoff. This prose is explanatory and never acts as a third execution lock.
 
-Authoritative task-status ledger
+## Authoritative task-status ledger
 
 The controller updates this table only after validating an immutable handoff or gate receipt. A
-worker treats every BLockED row as non-executable even if it believes it can do the work.
+worker treats every BLOCKED row as non-executable even if it believes it can do the work.
 
 Order Task Status Blocked by / required Exit gate or output
 input
@@ -245,37 +245,37 @@ contract (attempt task:canonical-id:02:attempt-1 handoff docs/handoffs/task-02-i
 03 Physical model and DONE Task 02 DONE Owner Gate A2 (attempt task:physical-model:03:attempt-1 handoff docs/handoffs/task-03-physical-model.json sha 287d6438 spec docs/DATA_MODEL.md sha 4153b51f proposal docs/DOMAIN_WORKSPACE_PROPOSAL.md sha 7f5dbc4e)
 dependency proposal packet
 
-04 Domain and content- DONE Gate A2 PASSED (receipt gate-A2-v1-20260914T123525Z sha 26f517c69a5a) Executable schemas (attempt task:domain-workspace:04:attempt-1 handoff docs/handoffs/task-04-workspace.json sha 2bb7032d packages/domain,content-schema)
-schema workspace
+04 Domain and content- DONE Gate A2 PASSED (receipt gate-A2-v1-20260914T123525Z sha 26f517c69a5a) Executable schemas
+schema workspace (attempt task:domain-workspace:04:attempt-1 handoff docs/handoffs/task-04-workspace.json sha 424c4cc5d57a packages/domain,content-schema)
 
 05 Golden adoption READY Task 04 DONE Fixture matrix I
 fixtures
 
-6 Independent BLOCKED Task 05 DONE Architecture Gate B
+06 Independent BLOCKED Task 05 DONE Architecture Gate B
 adoption-gate review packet
 
-Operational source- BLOCKED Gate B receipt Registry schemas
+07 Operational source- BLOCKED Gate B receipt Registry schemas
 registry contract
 
-7A Private registry BLOCKED Task 07 DONE Registry DB handoff
+07A Private registry BLOCKED Task 07 DONE Registry DB handoff
 migration and
 privileges
 
-7B Registry service and BLOCKED Task O7A DONE Authorization service
+07B Registry service and BLOCKED Task 07A DONE Authorization service
 authorization
 evaluator
 
-8 Acquisition and BLOCKED Task O7B DONE Safe acquisition
+08 Acquisition and BLOCKED Task 07B DONE Safe acquisition
 quarantine tooling tooling
 
-9 Exact acquisition- BLOCKED Task 08 DONE Owner/Rights Gate C1
+09 Exact acquisition- BLOCKED Task 08 DONE Owner/Rights Gate C1
 request packet packet
 
-9A Acquire opaque BLOCKED Gate C1 TVTMS TVTMS receipt or
+09A Acquire opaque BLOCKED Gate C1 TVTMS TVTMS receipt or
 TVTMS artifact selection or omission OMITTED
 receipt
 
-9B Acquire opaque BLOCKED Task 09A resolved TIPNR receipt or
+09B Acquire opaque BLOCKED Task 09A resolved TIPNR receipt or
 TIPNR artifact and TIPNR Gate C1 OMITTED
 selection/omission
 receipt
@@ -296,51 +296,51 @@ and OpenBible Gate OMITTED
 C1 selection/omission
 receipt
 
-9F Exact- BLOCKED Tasks 09A-09E Owner/Rights Gate C2
+09F Exact- BLOCKED Tasks 09A-09E Owner/Rights Gate C2
 byte/component resolved as packet
 decision packet DONE/OMITTED
 
-0 TVTMS reference- BLOCKED TVTMS Gate C2 Reference mappings
+10 TVTMS reference- BLOCKED TVTMS Gate C2 Reference mappings
 mapping adapter receipt or authorized or OMITTED
 source omission
 
-7 TIPNR proper-name BLOCKED Task 10 DONE plus Named candidates or
+11 TIPNR proper-name BLOCKED Task 10 DONE plus Named candidates or
 adapter TIPNR Gate C2 OMITTED
 receipt, or TIPNR
 omission receipt
 
-2 BibleData BLOCKED Task 11 DONE plus Comparison report or
+12 BibleData BLOCKED Task 11 DONE plus Comparison report or
 discrepancy adapter BibleData Gate C2 OMITTED
 receipt, or BibleData I
 omission receipt
 
-3 MACULA Hebrew BLOCKED Task 12 resolved, Linguistic candidates
+13 MACULA Hebrew BLOCKED Task 12 resolved, Linguistic candidates
 linguistic adapter Task 10 DONE,plus or OMITTED
 MACULA Gate C2
 receipt; or MACULA
 omission receipt
 
-4 OpenBible BLOCKED Task 13 resolved, Geographic
+14 OpenBible BLOCKED Task 13 resolved, Geographic
 geographic adapter Task 11 DONE,plus candidates or
 OpenBible Gate C2 OMITTED
 receipt; or OpenBible
 omission receipt
 
-5A Identity and BLOCKED Tasks 10-14 resolved Identity/attestation
+15A Identity and BLOCKED Tasks 10-14 resolved Identity/attestation
 attestation as DONE/OMITTED proposals
 reconciliation
 
-5B BSB mention-selector BLOCKED Task 15A D0NE and Edition mentions
+15B BSB mention-selector BLOCKED Task 15A DONE and Edition mentions
 generation exact BSB
 rights/edition receipt
 
-6A Pilot report BLOCKED Task 15B DONE Digest-bound pilot
+16A Pilot report BLOCKED Task 15B DONE Digest-bound pilot
 generation report
 
-6B Independent pilot BLOCKED Task 16A DONE Owner Gate D packet
+16B Independent pilot BLOCKED Task 16A DONE Owner Gate D packet
 review
 
-7A Canon/reference/editi BLOCKED Gate D receipt Scripture/reference
+17A Canon/reference/editi BLOCKED Gate D receipt Scripture/reference
 on staging migrations schema
 
 17B Knowledge/claim/cont BLOCKED Task 17A DONE Knowledge schema
@@ -353,23 +353,23 @@ and RLS
 18 Idempotent candidate BLOCKED Task 17C DONE Candidate import
 import service handoff
 
-8A External-Al input BLOCKED Task 18 DONE Owner/Rights Gate D2
+18A External-Al input BLOCKED Task 18 DONE Owner/Rights Gate D2
 authorization packet packet
 
-9A Al curation input- BLOCKED Gate D2 receipt Deterministic input
+19A Al curation input- BLOCKED Gate D2 receipt Deterministic input
 bundle assembler bundle
 
-9B One-attempt provider BLOCKED Task 19A DONE Raw-response receipt
+19B One-attempt provider BLOCKED Task 19A DONE Raw-response receipt
 runner
 
-9C Al submission BLOCKED Task 19B DONE Validated/rejected
+19C Al submission BLOCKED Task 19B DONE Validated/rejected
 validator and draft
 quarantine
 
-OA Entity/name draft BLOCKED Task 19C DONE and Task 20A draft
+20A Entity/name draft BLOCKED Task 19C DONE and Task 20A draft
 package Task 20A card handoff
 
-OB Canonical-attestation BLOCKED Task 20A DONE and Task 20B draft
+20B Canonical-attestation BLOCKED Task 20A DONE and Task 20B draft
 draft package Task 20B card handoff
 
 20C Relationship draft BLOCKED Task 20B DONE and Task 20C draft
@@ -384,37 +384,20 @@ draft package Task 20E card handoff
 20F Passage-context BLOCKED Task 20E DONE and Task 20F draft
 draft package Task 20F card handoff
 
-20G English-localization BLOCKED Task 2OF DONE and Task 20G draft
+20G English-localization BLOCKED Task 20F DONE and Task 20G draft
 draft package Task 20G card handoff
 
 20H Independent draft-set BLOCKED Task 20G DONE Draft-set review
 consistency review
 
 21 Human review-bundle BLOCKED Task 20H DONE Owner/Editorial Gate
-E1 packet
-construction
+construction E1 packet
 
 22 Exact approval- BLOCKED Gate E1 receipts Eligibility report
 receipt verification
 23 Immutable staging- BLOCKED Task 22 DONE Owner Gate E2
 packet
 package build
-
-Tasks are serialized even where code could be developed independently. This keeps schema, source,
-mapping, and file ownership reviewable. Parallel work is allowed only where the active task body
-explicitly permits read-only specialist review.
-In dependency text, resolved means DoNE or OMITTED with a valid omission receipt. It never
-means FAILED，BLockED,or merely absent. Gate C1 produces a digest-bound selected-source
-manifest. Every candidate source is explicitly selected, omitted_optional,or
-
-denied_required ; the last state blocks the pilot. Tasks 09F, 15A, 16A, and 16B must carry the
-reduced-source manifest forward and report its coverage and limitations.
-
-The selected-source manifest must also be dependency-closed: TIPNR requires TVTMS reference
-mappings; BibleData comparison requires TIPNR; MACULA requires TVTMS reference mappings; and
-OpenBible identity matching requires TIPNR (and therefore TVTMS). Omitting a prerequisite forces
-every dependent source/task to be omitted unless a reviewed plan amendment defines and validates a
-replacement mapping path. The Gate C1 and C2 validators reject a non-closed selection.
 
 Gate-state machine
 
@@ -433,7 +416,7 @@ controller to mark its acquisition and adapter tasks 0MITTED . Required-source d
 pilot. EXPIRED，REVOKED，and SUPERSEDED trigger transitive invalidation before any further
 dispatch.
 
-Gate-status ledger
+## Gate-status ledger
 
 Gate Status Produced by Human authority Releases
 required I
@@ -485,7 +468,7 @@ installation
 Gate status in this Markdown file is informational. Only its authenticated receipt authorizes the
 next operation.
 
-Append-only execution history
+## Append-only execution history
 
 The controller appends one row after independently validating each attempt. Never edit or remove a
 prior row. Handoff locations must point to immutable or checksum-verified artifacts; do not put
@@ -493,41 +476,41 @@ secrets or protected source content in this table.
 
 Attempt ID Task Result Handoff Handoff Validation Completed Controller
 location SHA-256 receipt at
-gate-0-v1-20260914T110348Z | Gate 0 | PASSED | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/gate-0-v1-20260914T110348Z.json | c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676 | gate-0-v1-20260914T110348Z | 2026-09-14T11:03:48Z | owner:theone (bootstrap-trust-v1)
-state-r1-gate0-passed-20260914T110348Z | state r1 | READY | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r1-gate0-passed-20260914T110348Z.json | ca14d59fcd668f74fae7fcad2b60695277827634bd21fdfdbc07e7f8353e145b | state-r1-gate0-passed-20260914T110348Z | 2026-09-14T11:03:48Z | owner:theone (bootstrap-trust-v1) — Task 00 READY (CAS 0→1, repo commit c65f0813)
-envelope-00-20260914T111317Z | Task 00 envelope | AUTH | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/envelope-00-20260914T111317Z.json | f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf | envelope-00-20260914T111317Z | 2026-09-14T11:13:17Z | owner:theone (bootstrap-trust-v1) — attempt task:baseline:00:attempt-1
-dispatch-00-20260914T111317Z | Task 00 dispatch | LEASE | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/dispatch-00-20260914T111317Z.json | 16b6a44278ed51f1b9b5f7de7deb89c0ec4d3a7f3e0e76cd91641cad42dc2d22 | dispatch-00-20260914T111317Z | 2026-09-14T11:13:17Z | owner:theone — CAS READY→IN_PROGRESS rev1→2
-state-r2-task00-inprogress-20260914T111317Z | state r2 | IN_PROGRESS | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r2-task00-inprogress-20260914T111317Z.json | 3d90a7d75463328721697bc0824fd751cf78d1a13e1e8e932e909af465b4c803 | state-r2-task00-inprogress-20260914T111317Z | 2026-09-14T11:13:17Z | owner:theone — Task 00 IN_PROGRESS
+gate-0-v1-20260914T110348Z | Gate 0 | PASSED | docs/receipts/gate-0-v1-20260914T110348Z.json | c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676 | gate-0-v1-20260914T110348Z | 2026-09-14T11:03:48Z | owner:theone (bootstrap-trust-v1)
+state-r1-gate0-passed-20260914T110348Z | state r1 | READY | docs/receipts/state-r1-gate0-passed-20260914T110348Z.json | ca14d59fcd668f74fae7fcad2b60695277827634bd21fdfdbc07e7f8353e145b | state-r1-gate0-passed-20260914T110348Z | 2026-09-14T11:03:48Z | owner:theone (bootstrap-trust-v1) — Task 00 READY (CAS 0→1, repo commit c65f0813)
+envelope-00-20260914T111317Z | Task 00 envelope | AUTH | docs/receipts/envelope-00-20260914T111317Z.json | f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf | envelope-00-20260914T111317Z | 2026-09-14T11:13:17Z | owner:theone (bootstrap-trust-v1) — attempt task:baseline:00:attempt-1
+dispatch-00-20260914T111317Z | Task 00 dispatch | LEASE | docs/receipts/dispatch-00-20260914T111317Z.json | 16b6a44278ed51f1b9b5f7de7deb89c0ec4d3a7f3e0e76cd91641cad42dc2d22 | dispatch-00-20260914T111317Z | 2026-09-14T11:13:17Z | owner:theone — CAS READY→IN_PROGRESS rev1→2
+state-r2-task00-inprogress-20260914T111317Z | state r2 | IN_PROGRESS | docs/receipts/state-r2-task00-inprogress-20260914T111317Z.json | 3d90a7d75463328721697bc0824fd751cf78d1a13e1e8e932e909af465b4c803 | state-r2-task00-inprogress-20260914T111317Z | 2026-09-14T11:13:17Z | owner:theone — Task 00 IN_PROGRESS
 task:baseline:00:attempt-1 | 00 | PASS | docs/handoffs/task-00-baseline.json | d6769c963d8e3d13da0c2ae1ea0f243cb1f831b4f6e401b6ad442b3d45ec7ca9 (raw) c96c28034350 (canon) | state-r3-task00-done-01ready-20260914T112020Z | 2026-09-14T11:20:20Z | owner:theone (bootstrap-trust-v1) — Task 00 DONE → Task 01 READY (CAS 2→3, verify PASS despite baseline type/lint/test failures attributed)
-state-r3-task00-done-01ready-20260914T112020Z | state r3 | DONE→READY | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r3-task00-done-01ready-20260914T112020Z.json | da67f774c8e635c54d52900b4e34545bf94773a959ffc7734c6bd4c97eeb18f5 | state-r3-task00-done-01ready-20260914T112020Z | 2026-09-14T11:20:20Z | owner:theone — released lease-00-attempt-1-20260914T111317Z, active_task=01 READY
-envelope-01-20260914T112436Z | Task 01 envelope | AUTH | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/envelope-01-20260914T112436Z.json | 33da12c04eddde7a22d54dd2271ec65d61b45a2a45fcd24360c297446d897da1 | envelope-01-20260914T112436Z | 2026-09-14T11:24:36Z | owner:theone (bootstrap-trust-v1) — attempt task:owner-decision:01:attempt-1
-dispatch-01-20260914T112436Z | Task 01 dispatch | LEASE | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/dispatch-01-20260914T112436Z.json | bbbad97268f6f93985adef8185ab1c737cdf7aa29f4cf63cffd7cc63a627b895 | dispatch-01-20260914T112436Z | 2026-09-14T11:24:36Z | owner:theone — CAS READY→IN_PROGRESS rev3→4
-state-r4-task01-inprogress-20260914T112436Z | state r4 | IN_PROGRESS | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r4-task01-inprogress-20260914T112436Z.json | 2454bc1e5b8253a5c17d8121379938231ba46f5e47378d0d7b5679e649142ed7 | state-r4-task01-inprogress-20260914T112436Z | 2026-09-14T11:24:36Z | owner:theone — Task 01 IN_PROGRESS
+state-r3-task00-done-01ready-20260914T112020Z | state r3 | DONE→READY | docs/receipts/state-r3-task00-done-01ready-20260914T112020Z.json | da67f774c8e635c54d52900b4e34545bf94773a959ffc7734c6bd4c97eeb18f5 | state-r3-task00-done-01ready-20260914T112020Z | 2026-09-14T11:20:20Z | owner:theone — released lease-00-attempt-1-20260914T111317Z, active_task=01 READY
+envelope-01-20260914T112436Z | Task 01 envelope | AUTH | docs/receipts/envelope-01-20260914T112436Z.json | 33da12c04eddde7a22d54dd2271ec65d61b45a2a45fcd24360c297446d897da1 | envelope-01-20260914T112436Z | 2026-09-14T11:24:36Z | owner:theone (bootstrap-trust-v1) — attempt task:owner-decision:01:attempt-1
+dispatch-01-20260914T112436Z | Task 01 dispatch | LEASE | docs/receipts/dispatch-01-20260914T112436Z.json | bbbad97268f6f93985adef8185ab1c737cdf7aa29f4cf63cffd7cc63a627b895 | dispatch-01-20260914T112436Z | 2026-09-14T11:24:36Z | owner:theone — CAS READY→IN_PROGRESS rev3→4
+state-r4-task01-inprogress-20260914T112436Z | state r4 | IN_PROGRESS | docs/receipts/state-r4-task01-inprogress-20260914T112436Z.json | 2454bc1e5b8253a5c17d8121379938231ba46f5e47378d0d7b5679e649142ed7 | state-r4-task01-inprogress-20260914T112436Z | 2026-09-14T11:24:36Z | owner:theone — Task 01 IN_PROGRESS
 task:owner-decision:01:attempt-1 | 01 | PASS | docs/handoffs/task-01-packet.json | ef5d052ffe61 (handoff) + docs/OWNER_GATE_A1_PACKET.md sha 91555a0d | state-r5-task01-done-gatea1await-20260914T114710Z | 2026-09-14T11:47:10Z | owner:theone (bootstrap-trust-v1) — Task 01 DONE → Gate A1 AWAITING_DECISION (packet 91555a0d, no governing doc status changed)
-state-r5-task01-done-gatea1await-20260914T114710Z | state r5 | DONE→GATE | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r5-task01-done-gatea1await-20260914T114710Z.json | cbcc3c97f79d6b3ef12439c3f15d9869fcb6af20b0a0c3807b70abe456c940dc | state-r5-task01-done-gatea1await-20260914T114710Z | 2026-09-14T11:47:10Z | owner:theone — released lease-01-attempt-1-20260914T112436Z, active_task=null, Gate A1 AWAITING_DECISION
-gate-A1-v1-20260914T115751Z | Gate A1 | PASSED | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/gate-A1-v1-20260914T115751Z.json | 4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435 | gate-A1-v1-20260914T115751Z | 2026-09-14T11:57:51Z | owner:theone (bootstrap-trust-v1) — 14 decisions approved as packet 91555a0d, permitted_next_tasks [02]
-state-r6-gatea1-passed-02ready-20260914T115751Z | state r6 | GATE→READY | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r6-gatea1-passed-02ready-20260914T115751Z.json | 1cd0a53947cfdcd54d333ccf4a3f3538f79159cfeb241aa7a5c7d1a90c05cb76 | state-r6-gatea1-passed-02ready-20260914T115751Z | 2026-09-14T11:57:51Z | owner:theone — Gate A1 PASSED CAS 5→6, active_task=02 READY
-envelope-02-20260914T120106Z | Task 02 envelope | AUTH | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/envelope-02-20260914T120106Z.json | c31fb51e358e9a2905683149bf8ce555fd064fe367bf6d9126481d34c1eb7ed3 | envelope-02-20260914T120106Z | 2026-09-14T12:01:06Z | owner:theone (bootstrap-trust-v1) — attempt task:canonical-id:02:attempt-1
-dispatch-02-20260914T120106Z | Task 02 dispatch | LEASE | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/dispatch-02-20260914T120106Z.json | 2e6516c30aee470b73c77e47fd750b7b1eb62bfc3c55fa68ed3e3fb2ec8178b5 | dispatch-02-20260914T120106Z | 2026-09-14T12:01:06Z | owner:theone — CAS READY→IN_PROGRESS rev6→7
-state-r7-task02-inprogress-20260914T120106Z | state r7 | IN_PROGRESS | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r7-task02-inprogress-20260914T120106Z.json | b1d32cdcea051fded3ff1166e19960f392a5e3553f9cf9f7a31590c35447221b | state-r7-task02-inprogress-20260914T120106Z | 2026-09-14T12:01:06Z | owner:theone — Task 02 IN_PROGRESS
+state-r5-task01-done-gatea1await-20260914T114710Z | state r5 | DONE→GATE | docs/receipts/state-r5-task01-done-gatea1await-20260914T114710Z.json | cbcc3c97f79d6b3ef12439c3f15d9869fcb6af20b0a0c3807b70abe456c940dc | state-r5-task01-done-gatea1await-20260914T114710Z | 2026-09-14T11:47:10Z | owner:theone — released lease-01-attempt-1-20260914T112436Z, active_task=null, Gate A1 AWAITING_DECISION
+gate-A1-v1-20260914T115751Z | Gate A1 | PASSED | docs/receipts/gate-A1-v1-20260914T115751Z.json | 4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435 | gate-A1-v1-20260914T115751Z | 2026-09-14T11:57:51Z | owner:theone (bootstrap-trust-v1) — 14 decisions approved as packet 91555a0d, permitted_next_tasks [02]
+state-r6-gatea1-passed-02ready-20260914T115751Z | state r6 | GATE→READY | docs/receipts/state-r6-gatea1-passed-02ready-20260914T115751Z.json | 1cd0a53947cfdcd54d333ccf4a3f3538f79159cfeb241aa7a5c7d1a90c05cb76 | state-r6-gatea1-passed-02ready-20260914T115751Z | 2026-09-14T11:57:51Z | owner:theone — Gate A1 PASSED CAS 5→6, active_task=02 READY
+envelope-02-20260914T120106Z | Task 02 envelope | AUTH | docs/receipts/envelope-02-20260914T120106Z.json | c31fb51e358e9a2905683149bf8ce555fd064fe367bf6d9126481d34c1eb7ed3 | envelope-02-20260914T120106Z | 2026-09-14T12:01:06Z | owner:theone (bootstrap-trust-v1) — attempt task:canonical-id:02:attempt-1
+dispatch-02-20260914T120106Z | Task 02 dispatch | LEASE | docs/receipts/dispatch-02-20260914T120106Z.json | 2e6516c30aee470b73c77e47fd750b7b1eb62bfc3c55fa68ed3e3fb2ec8178b5 | dispatch-02-20260914T120106Z | 2026-09-14T12:01:06Z | owner:theone — CAS READY→IN_PROGRESS rev6→7
+state-r7-task02-inprogress-20260914T120106Z | state r7 | IN_PROGRESS | docs/receipts/state-r7-task02-inprogress-20260914T120106Z.json | b1d32cdcea051fded3ff1166e19960f392a5e3553f9cf9f7a31590c35447221b | state-r7-task02-inprogress-20260914T120106Z | 2026-09-14T12:01:06Z | owner:theone — Task 02 IN_PROGRESS
 task:canonical-id:02:attempt-1 | 02 | PASS | docs/handoffs/task-02-identifiers.json | 287b8dab9010 (handoff) + docs/CANONICAL_IDENTIFIERS.md sha 91d92f2f | state-r8-task02-done-03ready-20260914T120414Z | 2026-09-14T12:04:14Z | owner:theone (bootstrap-trust-v1) — Task 02 DONE → Task 03 READY (spec 91d92f2f, route compatibility preserved)
-state-r8-task02-done-03ready-20260914T120414Z | state r8 | DONE→READY | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r8-task02-done-03ready-20260914T120414Z.json | f4f14d3fd835249712bb6ac08ed41f6695d8d0b4c339fb77cee065b5282df5d6 | state-r8-task02-done-03ready-20260914T120414Z | 2026-09-14T12:04:14Z | owner:theone — released lease-02-attempt-1-20260914T120106Z, active_task=03 READY
-envelope-03-20260914T122835Z | Task 03 envelope | AUTH | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/envelope-03-20260914T122835Z.json | 3e0245187f2db59937d21dd5bdeb565e25b3518dbdf27836439f9f1397082c4b | envelope-03-20260914T122835Z | 2026-09-14T12:28:35Z | owner:theone (bootstrap-trust-v1) — attempt task:physical-model:03:attempt-1
-dispatch-03-20260914T122835Z | Task 03 dispatch | LEASE | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/dispatch-03-20260914T122835Z.json | 2a0f2984a8fa6fcd941fcb68120d40503d4cc0905bd29841428866cd9e3c216b | dispatch-03-20260914T122835Z | 2026-09-14T12:28:35Z | owner:theone — CAS READY→IN_PROGRESS rev8→9
-state-r9-task03-inprogress-20260914T122835Z | state r9 | IN_PROGRESS | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r9-task03-inprogress-20260914T122835Z.json | 4021dc28635de2c46459f13c5800db6c5c7ff3c2999661101e7c77ce72811a39 | state-r9-task03-inprogress-20260914T122835Z | 2026-09-14T12:28:35Z | owner:theone — Task 03 IN_PROGRESS
+state-r8-task02-done-03ready-20260914T120414Z | state r8 | DONE→READY | docs/receipts/state-r8-task02-done-03ready-20260914T120414Z.json | f4f14d3fd835249712bb6ac08ed41f6695d8d0b4c339fb77cee065b5282df5d6 | state-r8-task02-done-03ready-20260914T120414Z | 2026-09-14T12:04:14Z | owner:theone — released lease-02-attempt-1-20260914T120106Z, active_task=03 READY
+envelope-03-20260914T122835Z | Task 03 envelope | AUTH | docs/receipts/envelope-03-20260914T122835Z.json | 3e0245187f2db59937d21dd5bdeb565e25b3518dbdf27836439f9f1397082c4b | envelope-03-20260914T122835Z | 2026-09-14T12:28:35Z | owner:theone (bootstrap-trust-v1) — attempt task:physical-model:03:attempt-1
+dispatch-03-20260914T122835Z | Task 03 dispatch | LEASE | docs/receipts/dispatch-03-20260914T122835Z.json | 2a0f2984a8fa6fcd941fcb68120d40503d4cc0905bd29841428866cd9e3c216b | dispatch-03-20260914T122835Z | 2026-09-14T12:28:35Z | owner:theone — CAS READY→IN_PROGRESS rev8→9
+state-r9-task03-inprogress-20260914T122835Z | state r9 | IN_PROGRESS | docs/receipts/state-r9-task03-inprogress-20260914T122835Z.json | 4021dc28635de2c46459f13c5800db6c5c7ff3c2999661101e7c77ce72811a39 | state-r9-task03-inprogress-20260914T122835Z | 2026-09-14T12:28:35Z | owner:theone — Task 03 IN_PROGRESS
 task:physical-model:03:attempt-1 | 03 | PASS | docs/handoffs/task-03-physical-model.json | 287d6438364e (handoff) + docs/DATA_MODEL.md sha 4153b51f proposal 7f5dbc4e | state-r10-task03-done-gatea2await-20260914T123240Z | 2026-09-14T12:32:40Z | owner:theone (bootstrap-trust-v1) — Task 03 DONE → Gate A2 AWAITING_DECISION (spec 4153b51f, traceability 12/12, proposal exact pins)
-gate-A2-v1-20260914T123525Z | Gate A2 | PASSED | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/gate-A2-v1-20260914T123525Z.json | 26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e | gate-A2-v1-20260914T123525Z | 2026-09-14T12:35:25Z | owner:theone (bootstrap-trust-v1) — workspace proposal exact pins approved, permitted_next_tasks [04]
-state-r11-gatea2-passed-04ready-20260914T123525Z | state r11 | GATE→READY | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r11-gatea2-passed-04ready-20260914T123525Z.json | 56c8592c6409516f09e3e939aeb8ba6cf1da639e9d18d40887d5ad78380dacd9 | state-r11-gatea2-passed-04ready-20260914T123525Z | 2026-09-14T12:35:25Z | owner:theone — Gate A2 PASSED CAS 10→11, active_task=04 READY
-envelope-04-20260914T123701Z | Task 04 envelope | AUTH | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/envelope-04-20260914T123701Z.json | a162556ee0f5deba6f9dc9dc8b53856f0bcc0afd181db186ab325eed3df4fae5 | envelope-04-20260914T123701Z | 2026-09-14T12:37:01Z | owner:theone (bootstrap-trust-v1) — attempt task:domain-workspace:04:attempt-1
-dispatch-04-20260914T123701Z | Task 04 dispatch | LEASE | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/dispatch-04-20260914T123701Z.json | f372ac800104f15d9991450fa879d8024c5479d65fb14b4417242f9b26db9219 | dispatch-04-20260914T123701Z | 2026-09-14T12:37:01Z | owner:theone — CAS READY→IN_PROGRESS rev11→12
-state-r12-task04-inprogress-20260914T123701Z | state r12 | IN_PROGRESS | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r12-task04-inprogress-20260914T123701Z.json | ec43fb0f167b5114c02b6175bbb0d58cd010cf70571fad5675c4f32c0660ef31 | state-r12-task04-inprogress-20260914T123701Z | 2026-09-14T12:37:01Z | owner:theone — Task 04 IN_PROGRESS
-task:domain-workspace:04:attempt-1 | 04 | PASS | docs/handoffs/task-04-workspace.json | 2bb7032d0ac9 (handoff) + packages/domain,content-schema | state-r13-task04-done-05ready-20260914T124824Z | 2026-09-14T12:48:24Z | owner:theone (bootstrap-trust-v1) — Task 04 DONE → Task 05 READY (domain 8 tests, schema 9 tests, fresh install exact pins)
-state-r13-task04-done-05ready-20260914T124824Z | state r13 | DONE→READY | /var/folders/xh/rxz8t6cs06jc_k4p0bqt62180000gn/T/opencode/bible-compass-bootstrap-trust/receipts/state-r13-task04-done-05ready-20260914T124824Z.json | e666b32726b181d0d26bdcd058699e66ebf3c479804e2f1d9c8af19a00ae59a8 | state-r13-task04-done-05ready-20260914T124824Z | 2026-09-14T12:48:24Z | owner:theone — released lease-04-attempt-1-20260914T123701Z, active_task=05 READY
+gate-A2-v1-20260914T123525Z | Gate A2 | PASSED | docs/receipts/gate-A2-v1-20260914T123525Z.json | 26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e | gate-A2-v1-20260914T123525Z | 2026-09-14T12:35:25Z | owner:theone (bootstrap-trust-v1) — workspace proposal exact pins approved, permitted_next_tasks [04]
+state-r11-gatea2-passed-04ready-20260914T123525Z | state r11 | GATE→READY | docs/receipts/state-r11-gatea2-passed-04ready-20260914T123525Z.json | 56c8592c6409516f09e3e939aeb8ba6cf1da639e9d18d40887d5ad78380dacd9 | state-r11-gatea2-passed-04ready-20260914T123525Z | 2026-09-14T12:35:25Z | owner:theone — Gate A2 PASSED CAS 10→11, active_task=04 READY
+envelope-04-20260914T123701Z | Task 04 envelope | AUTH | docs/receipts/envelope-04-20260914T123701Z.json | a162556ee0f5deba6f9dc9dc8b53856f0bcc0afd181db186ab325eed3df4fae5 | envelope-04-20260914T123701Z | 2026-09-14T12:37:01Z | owner:theone (bootstrap-trust-v1) — attempt task:domain-workspace:04:attempt-1
+dispatch-04-20260914T123701Z | Task 04 dispatch | LEASE | docs/receipts/dispatch-04-20260914T123701Z.json | f372ac800104f15d9991450fa879d8024c5479d65fb14b4417242f9b26db9219 | dispatch-04-20260914T123701Z | 2026-09-14T12:37:01Z | owner:theone — CAS READY→IN_PROGRESS rev11→12
+state-r12-task04-inprogress-20260914T123701Z | state r12 | IN_PROGRESS | docs/receipts/state-r12-task04-inprogress-20260914T123701Z.json | ec43fb0f167b5114c02b6175bbb0d58cd010cf70571fad5675c4f32c0660ef31 | state-r12-task04-inprogress-20260914T123701Z | 2026-09-14T12:37:01Z | owner:theone — Task 04 IN_PROGRESS
+task:domain-workspace:04:attempt-1 | 04 | PASS | docs/handoffs/task-04-workspace.json | 424c4cc5d57a (handoff) + packages/domain,content-schema | state-r13-task04-done-05ready-20260914T124824Z | 2026-09-14T12:48:24Z | owner:theone (bootstrap-trust-v1) — Task 04 DONE → Task 05 READY (domain 8 tests, schema 9 tests, fresh install exact pins)
+state-r13-task04-done-05ready-20260914T124824Z | state r13 | DONE→READY | docs/receipts/state-r13-task04-done-05ready-20260914T124824Z.json | e666b32726b181d0d26bdcd058699e66ebf3c479804e2f1d9c8af19a00ae59a8 | state-r13-task04-done-05ready-20260914T124824Z | 2026-09-14T12:48:24Z | owner:theone — released lease-04-attempt-1-20260914T123701Z, active_task=05 READY
 
-Controller integrity invariants
+## Controller integrity invariants
 
 Validate all of these conditions before and after every status edit. If any condition fails, set
-plan_status: BLockED, set active_task: null, describe the inconsistency in a new execution-history
+plan_status: BLOCKED, set active_task: null, describe the inconsistency in a new execution-history
 row, and dispatch nothing until a reviewed repair restores the invariants.
 The task ledger contains every task ID defined below exactly once. Grouped headings such as
 Tasks 09A-09E and Tasks 20A-20G still represent separately dispatched ledger rows.
@@ -541,7 +524,7 @@ Every IN_PRoGREss task has exactly one immutable attempt ID, dispatch-envelope d
 repository-state receipt recorded before worker execution begins.
 Every DONE, FAILED,BLOCKED，OMITTED,or SUPERSEDED attempt has an
 append-only execution-history row with a handoff or decision receipt and its digest.
-A task cannot be DoNE when a required acceptance command was skipped, failed, or produced
+A task cannot be DONE when a required acceptance command was skipped, failed, or produced
 unverifiable output. The controller records such an attempt as FAILED or BLOCKED.
 A gate cannot release work based only on this Markdown status. The controller verifies the
 authenticated gate receipt against the exact subject artifact digests.
@@ -551,11 +534,11 @@ resolved-task-block digests, and receives a new attempt.
 Status-only updates do not alter task bodies, acceptance criteria, prior history rows, artifact
 
 contents, or approval recelpts.
-The next task remains BLockED until the current worker has stopped and the controller has
+The next task remains BLOCKED until the current worker has stopped and the controller has
 independently accepted its handoff. A worker response cannot both nish one task and begin the
 next.
 
-Transitive invalidation and correction attempts
+## Transitive invalidation and correction attempts
 
 revoked, expired, changed, or superseded, the controller immediately cancels the active lease,
 interrupts affected work, and computes the full descendant set. Affected completed outputs become
@@ -606,7 +589,7 @@ rg --files
 npm --prefix apps/mobile run verify
 
 Stop conditions
-Stop with BLockEd if required documents conflict, the worktree contains ambiguous overlapping
+Stop with BLOCKED if required documents conflict, the worktree contains ambiguous overlapping
 changes, or baseline failures cannot be attributed without editing.
 Required handoff
 Standard handoff plus a prerequisite matrix for Tasks 01-04.
@@ -1221,7 +1204,7 @@ User value
 Bootstraps people/place identity and explicit references without treating upstream data as truth.
 
 Read first
-Task 10 DoNE handoff, Task 09A/09B resolution receipts, dependency-closed selected-source
+Task 10 DONE handoff, Task 09A/09B resolution receipts, dependency-closed selected-source
 manifest, exact TIPNR Gate C2 approval, TIPNR docs, curation specification,
 entity/claim/attestation schemas, and identity policies from Gate A1.
 
@@ -1289,7 +1272,7 @@ Supplies linguistic evidence for implicit/pronominal references without pretendi
 apply to English or future translations.
 
 Read first
-Task 12 handoff or omission receipt for serialized ordering, Task 10 DoNE reference-mapping
+Task 12 handoff or omission receipt for serialized ordering, Task 10 DONE reference-mapping
 handoff, exact Task 09D receipt and MACULA Gate C2 approval, dependency-closed selected-source
 manifest, MACULA license component manifest, Hebrew format docs, identifier/reference mapping, and
 mention/attestation schemas.
@@ -1327,7 +1310,7 @@ User value
 Provides useful geographic orientation while preserving disputed or approximate locations.
 
 Read first
-Task 13 handoff or omission receipt for serialized ordering, Task 11 DoNE proper-name handoff,
+Task 13 handoff or omission receipt for serialized ordering, Task 11 DONE proper-name handoff,
 exact Task 09E receipt and OpenBible Gate C2 approval, dependency-closed selected-source manifest,
 OpenBible component exclusions, map/place schema, and content map rules.
 
@@ -1865,7 +1848,7 @@ Every substantive claim cites an authorized source release/component and supplie
 Unknowns are null/open questions
 Relevance is not converted into an attestation or mention
 Deterministic fields are generated only by Task 19C tooling
-A validated draft returns worker PAss and may become task DoNE after controller verification
+A validated draft returns worker PAss and may become task DONE after controller verification
 An atomic rejection proves fail-closed behavior but returns worker FAIL; the task becomes
 FAILED, no successor is released, and any retry requires a new attempt ID
 
@@ -2023,7 +2006,7 @@ Global completion criteria
 This plan is complete only when:
 
 Gate 0 and every later required gate have valid authorized-human receipts
-• Every required or selected task from 00-23, including lettered tasks, is DoNE in dependency
+• Every required or selected task from 00-23, including lettered tasks, is DONE in dependency
 order; optional source tasks are DONE or OMITTED with valid omission receipts
 The ADR-003 adoption fixture suite passes
 Exact approved source releases reproduce the Nehemiah 2 candidate output

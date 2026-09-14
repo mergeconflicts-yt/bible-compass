@@ -1,0 +1,76 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "git diff --check",
+      "rg -n \"entity_appearances|free-text temporal|display_allowed boolean|global verse\" docs/DATA_MODEL.md"
+    ],
+    "allowed_paths": [
+      "docs/DATA_MODEL.md",
+      "docs/CONTEXT_DATA_ARCHITECTURE.md",
+      "docs/DOMAIN_WORKSPACE_PROPOSAL.md"
+    ],
+    "attempt_id": "task:physical-model:03:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-03-20260914T122835Z",
+      "record_sha256": "3e0245187f2db59937d21dd5bdeb565e25b3518dbdf27836439f9f1397082c4b"
+    },
+    "expected_artifacts": [
+      {
+        "key": "spec:physical-model",
+        "path": "docs/DATA_MODEL.md"
+      }
+    ],
+    "expires_at": "2026-09-15T12:28:35.497237Z",
+    "forbidden_paths": [
+      "apps/**",
+      "supabase/migrations/**",
+      "packages/**"
+    ],
+    "gate_receipts": [],
+    "issued_at": "2026-09-14T12:28:35.497237Z",
+    "issuer": {
+      "authorization_receipt_id": "gate-A1-v1-20260914T115751Z",
+      "authorization_receipt_sha256": "4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [
+      {
+        "artifact_key": "spec:canonical-identifiers",
+        "sha256": "91d92f2fed8bbf70a31bf6ffc2a6588fd5758e8c1b1509ce19a49c5d1831e9e5"
+      }
+    ],
+    "prior_ready_state_receipt_id": "state-r8-task02-done-03ready-20260914T120414Z",
+    "prior_ready_state_receipt_sha256": "f4f14d3fd835249712bb6ac08ed41f6695d8d0b4c339fb77cee065b5282df5d6",
+    "prior_ready_state_revision": 8,
+    "repository_state_receipt": {
+      "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+      "receipt_id": "repo-state-c65f0813-6e9922bf",
+      "sha256": "33988bff2913d8fa11b0332d132da8f231d0a0474382cbdf93e2f0ef2863ab8c",
+      "status": "M docs/CANONICAL_IDENTIFIERS.md\n M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": true,
+    "resolved_task_block": {
+      "content": "Task 03 - Nehemiah 2 physical data-model specification and dependency propos\n\nTask\nTranslate ADR-O03's logical architecture into a concrete, DDL-ready first slice for Nehemiah 2.\n\nUser value\nCreates one implementable relational graph without prematurely migrating the full future model.\nRead first\nTask O2 handoff, DATA_MODEL.md\uff0cCONTEXT_DATA_ARCHITECTURE.md,\nCONTEXT_MODEL_REVIEW.md\uff0cWHOLE_BIBLE_CURATION_SPEC.md\uff0cADR-OO3,SECURITY.md\uff0cand existing\ndatabase conventions if any.\nIn scope\nConcrete table/column types, primary/foreign/unique/check constraints, indexes, revision rules,\nand RLS intent for the Nehemiah 2 slice\nPrivate source registry, releases, artifacts, rights components, operation grants, raw records,\nimport runs, external mappings, assertion lineage, and findings\nCanon/reference systems, editions/text units, scopes, entities/names, claims/citations,\nattestations, edition mentions, relevance, events, places, context, review, and packages needed by\nthe adoption fixtures\nExplicit deferred-table inventory for later whole-Bible needs\nRead-only proposal for the exact root workspace changes, existing/new package versions, and test\ntools required by Task 04, with a no-new-dependency alternative where feasible\n\nOut of scope\nSQL migrations, source-specific fields in canonical tables, production credentials, or data import.\nAllowed changes\ndocs/DATA_MODEL.md and directly relevant model documentation.\nForbidden changes\n\nAcceptance criteria\n\u2022 Every ADR-003 adoption-gate scenario has a storage path\n\u2022 Attestation, edition mention, and passage relevance remain distinct\n\u2022 Claims have exact source-edition/release locators and immutable approval bindings\n\u2022 Share-alike/component obligations can propagate to package builds\n\u2022 Deletion/supersession and rollback are non-destructive\n\u2022 An independent relational and security review finds no P0 issue\n\u2022 Exact dependency/workspace proposal is ready for owner approval; nothing is installed\n\nTests\nStructured walkthrough of all twelve adoption-gate scenarios and sample constraint violations.\n\nCommands\n\ngit diff --check\nrg n \"entity_appearances/free-text temporal/display_allowed boolean/global verse\" docs/DAT\n\nStop conditions\nStop if the physical slice requires an unapproved service, schema-breaking migration, unresolved\nrights assumption, or contradicts ADR-003.\nRequired handoff\nStandard handoff plus table inventory, deferred inventory, constraint matrix, RLS matrix, and\nadoption-gate traceability matrix, plus exact dependency/workspace proposal.",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "4bcf6e2040af946e5ec69f414df9c969ee50faccbcf65efeb800fc4e873664d9",
+    "successor_task_keys": [
+      "04"
+    ],
+    "task_key": "03",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "3e0245187f2db59937d21dd5bdeb565e25b3518dbdf27836439f9f1397082c4b",
+  "record_id": "envelope-03-20260914T122835Z",
+  "record_sha256": "3e0245187f2db59937d21dd5bdeb565e25b3518dbdf27836439f9f1397082c4b",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "hl0gHu8GfRwz6gMTYLaduDGF08N0CdJJNeJld+qbhJKr+FzkyT0lmdwjGUDCAOZw+jm1l/mBlbN2VYV7osu3Dw=="
+}

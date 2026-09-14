@@ -1,0 +1,49 @@
+{
+  "completed_attempt_result": "PASS",
+  "completed_task": {
+    "attempt_id": "task:domain-workspace:04:attempt-1",
+    "handoff_path": "docs/handoffs/task-04-workspace.json",
+    "handoff_sha256": "9ea3c1286f0ed79bc8cbf211c4f3d76a719dfe120c20746d17988ac04e328978",
+    "result": "PASS",
+    "task_key": "04"
+  },
+  "handoff_receipt_id": "task-04-workspace.json",
+  "handoff_sha256": "9ea3c1286f0ed79bc8cbf211c4f3d76a719dfe120c20746d17988ac04e328978",
+  "issued_at": "2026-09-14T12:48:24.681089Z",
+  "issuer": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "new_state": {
+    "active_attempt_id": null,
+    "active_controller_lease_id": null,
+    "active_dispatch_envelope_sha256": null,
+    "active_task": "05",
+    "active_task_status": "READY",
+    "last_completed_task": "04",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 13
+  },
+  "new_state_revision": 13,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r12-task04-inprogress-20260914T123701Z",
+  "prior_state_receipt_sha256": "ec43fb0f167b5114c02b6175bbb0d58cd010cf70571fad5675c4f32c0660ef31",
+  "prior_state_revision": 12,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r13-task04-done-05ready-20260914T124824Z",
+  "record_sha256": "e666b32726b181d0d26bdcd058699e66ebf3c479804e2f1d9c8af19a00ae59a8",
+  "released_by": "Task 04 DONE",
+  "released_task": "05",
+  "released_task_status": "READY",
+  "repository_state_receipt_id": "repo-state-c65f0813-fa174f65",
+  "repository_state_receipt_sha256": "9421f3fe5ba731c66037163b1cf4373050f28090983960d825d0483673a41bcd",
+  "server_timestamp": "2026-09-14T12:48:24.681089Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "p/Lg5TV6DVStyiUdZOAZTE7aFiwPpKKe45FuKmOcRPKOqCrXtQPaK2rKehcQAVWg7KhMNX6b+/4+JV5j7kwhBQ==",
+  "transition": "TASK_04_DONE__TASK_05_READY"
+}

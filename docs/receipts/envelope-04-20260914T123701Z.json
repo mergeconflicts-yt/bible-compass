@@ -1,0 +1,95 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "npm install",
+      "npm ci",
+      "npm run typecheck",
+      "npm run lint",
+      "npm run format:check",
+      "npm run test",
+      "npm run verify",
+      "git diff --check"
+    ],
+    "allowed_paths": [
+      "package.json",
+      "package-lock.json",
+      "packages/domain/**",
+      "packages/content-schema/**",
+      "docs/DATA_MODEL.md",
+      "apps/mobile/package.json"
+    ],
+    "attempt_id": "task:domain-workspace:04:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-04-20260914T123701Z",
+      "record_sha256": "a162556ee0f5deba6f9dc9dc8b53856f0bcc0afd181db186ab325eed3df4fae5"
+    },
+    "expected_artifacts": [
+      {
+        "key": "workspace:domain",
+        "path": "packages/domain"
+      },
+      {
+        "key": "workspace:content-schema",
+        "path": "packages/content-schema"
+      }
+    ],
+    "expires_at": "2026-09-15T12:37:01.975505Z",
+    "forbidden_paths": [
+      "supabase/**",
+      "apps/mobile/src/**",
+      "docs/PRODUCT_DECISIONS.md"
+    ],
+    "gate_receipts": [
+      {
+        "gate_id": "A2",
+        "receipt_id": "gate-A2-v1-20260914T123525Z",
+        "sha256": "26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e"
+      }
+    ],
+    "issued_at": "2026-09-14T12:37:01.975505Z",
+    "issuer": {
+      "authorization_receipt_id": "gate-A2-v1-20260914T123525Z",
+      "authorization_receipt_sha256": "26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [
+      {
+        "artifact_key": "spec:physical-model",
+        "sha256": "4153b51fa42a639d6ffa026b6a8f812191052f553cdd91c547526315eddea30e"
+      }
+    ],
+    "prior_ready_state_receipt_id": "state-r11-gatea2-passed-04ready-20260914T123525Z",
+    "prior_ready_state_receipt_sha256": "56c8592c6409516f09e3e939aeb8ba6cf1da639e9d18d40887d5ad78380dacd9",
+    "prior_ready_state_revision": 11,
+    "repository_state_receipt": {
+      "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+      "receipt_id": "repo-state-c65f0813-21493fa3",
+      "sha256": "848155091bd3bf7895289c802b33f9c59caf1c0027e91770bb1c9714f54adaa1",
+      "status": "M docs/CANONICAL_IDENTIFIERS.md\n M docs/CONTENT_RIGHTS.md\n M docs/DATA_MODEL.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/DOMAIN_WORKSPACE_PROPOSAL.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": false,
+    "resolved_task_block": {
+      "content": "Task 04 - Domain and content-schema workspace\n\nTask\nCreate the smallest approved pure-TypeScript workspace that makes the adopted content contracts\nexecutable.\nUser value\n\nRead first\nTask O3 handoff, ARCHITECTURE md AI CuPATToN coNTRAcT md phuoioaL modeL cpecification\n\nscope\nApproved root workspace scaffolding\nIdentifier/parser implementation from Task 02's approved documentation contract\npackages/domain with framework-free types/errors\npackages/content-schema with strict Zod schemas and deterministic validation entry points\nRoot scripts for format, lint, typecheck, unit tests, and full verification\n\u2022 Positive and malformed synthetic fixtures only\n\nOut of scope\nSupabase, SQLite, network calls, real external data, mobile feature changes, and publication.\n\nAllowed changes\nApproved root workspace files, packages/domain\uff0cpackages/content-schema,tests, and lockfile.\n\nForbidden changes\nNo unapproved dependency, loose version, any\uff0c@ts-ignore, unchecked cast, skipped test, hidden\nnetwork access, or infrastructure import in domain code.\n\nAcceptance criteria\n\u2022 Fresh install resolves exact approved versions\nExternal and persisted inputs are strictly validated\nUnknown fields, invalid keys, duplicate record keys, dangling references, invalid states, and\nrights-unknown publication fail with actionable typed errors\nnpm run verify covers mobile plus new packages without regressing existing behavior\n\nTests\nUnit/property-style boundary cases using existing approved test tooling; malformed fixture tests\nmust prove each rejection category.\nCommands\n\nnpm install\nnpm ci\nnpm run typecheck\nnpm run lint\nnpm run format:check\nnpm run test\nnpm run verify\ngit diff-check\n\nStop conditions\nStop before editing if root workspace changes or exact dependency versions were not approved at\nGate A2. Stop on unrelated baseline failures rather than suppressing them.\nRequired handoff\n\nchange justification. Standard handoff plus public package APls, schema-version list, error taxonomy, and dependency",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "ec9bf8be22fd096f096c2545323f1121e74f8556a4244467c374b8eeb86c1567",
+    "successor_task_keys": [
+      "05"
+    ],
+    "task_key": "04",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "a162556ee0f5deba6f9dc9dc8b53856f0bcc0afd181db186ab325eed3df4fae5",
+  "record_id": "envelope-04-20260914T123701Z",
+  "record_sha256": "a162556ee0f5deba6f9dc9dc8b53856f0bcc0afd181db186ab325eed3df4fae5",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "pjBI8fRvCb7N/g06f4jegV2PeVys61vdKTL3fUWbDHOtJP6X573p9mFoRfMPHKHQ5iJzt5XQK0jjSfIIGLxrBA=="
+}

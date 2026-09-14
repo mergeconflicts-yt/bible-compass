@@ -1,0 +1,53 @@
+{
+  "completed_attempt_result": "PASS",
+  "completed_task": {
+    "attempt_id": "task:owner-decision:01:attempt-1",
+    "handoff_path": "docs/handoffs/task-01-packet.json",
+    "handoff_sha256": "8adcd6335119034ba17d43753cb3699669fc4e596a0ea77193c05c85f4bbd208",
+    "packet_path": "docs/OWNER_GATE_A1_PACKET.md",
+    "packet_sha256": "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54",
+    "result": "PASS",
+    "task_key": "01"
+  },
+  "gate_transition": {
+    "gate_id": "A1",
+    "new_status": "AWAITING_DECISION",
+    "prior_status": "NOT_STARTED"
+  },
+  "handoff_receipt_id": "task-01-packet.json",
+  "handoff_sha256": "8adcd6335119034ba17d43753cb3699669fc4e596a0ea77193c05c85f4bbd208",
+  "issued_at": "2026-09-14T11:47:10.602729Z",
+  "issuer": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "new_state": {
+    "active_attempt_id": null,
+    "active_controller_lease_id": null,
+    "active_dispatch_envelope_sha256": null,
+    "active_task": null,
+    "active_task_status": null,
+    "last_completed_task": "01",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 5
+  },
+  "new_state_revision": 5,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r4-task01-inprogress-20260914T112436Z",
+  "prior_state_receipt_sha256": "2454bc1e5b8253a5c17d8121379938231ba46f5e47378d0d7b5679e649142ed7",
+  "prior_state_revision": 4,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r5-task01-done-gatea1await-20260914T114710Z",
+  "record_sha256": "cbcc3c97f79d6b3ef12439c3f15d9869fcb6af20b0a0c3807b70abe456c940dc",
+  "repository_state_receipt_id": "repo-state-c65f0813-e13416ea",
+  "repository_state_receipt_sha256": "d26845055caa7568a342299bb51f9c84319c03a9642ed7a6bd3a8ac5e78d7d66",
+  "server_timestamp": "2026-09-14T11:47:10.602729Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "XOPL4T9JterwnAk5VugRAkAnkHFqM0zD2D2oKMkXOjX0CC2Rq02AsetlhxuaopogpGScrc5fZ3iEKntk6Re9Cg==",
+  "transition": "TASK_01_DONE__GATE_A1_AWAITING"
+}

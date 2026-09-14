@@ -1,0 +1,78 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "git diff --check",
+      "rg -n \"OPEN|OWNER ACTION|approved|allowed\" docs/PRODUCT_DECISIONS.md docs/CONTENT_RIGHTS.md docs/CONTEXT_PLATFORM_SPEC.md docs/OPEN_BIBLE_DATA_SOURCES.md"
+    ],
+    "allowed_paths": [
+      "docs/OWNER_GATE_A1_PACKET.md",
+      "docs/PRODUCT_DECISIONS.md",
+      "docs/CONTENT_RIGHTS.md",
+      "docs/CONTEXT_PLATFORM_SPEC.md"
+    ],
+    "attempt_id": "task:owner-decision:01:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-01-20260914T112436Z",
+      "record_sha256": "33da12c04eddde7a22d54dd2271ec65d61b45a2a45fcd24360c297446d897da1"
+    },
+    "expected_artifacts": [
+      {
+        "key": "packet:gate-a1",
+        "path": "docs/OWNER_GATE_A1_PACKET.md"
+      }
+    ],
+    "expires_at": "2026-09-15T11:24:36.614259Z",
+    "forbidden_paths": [
+      "apps/**",
+      "supabase/**",
+      "packages/**",
+      "src/**"
+    ],
+    "gate_receipts": [],
+    "issued_at": "2026-09-14T11:24:36.614259Z",
+    "issuer": {
+      "authorization_receipt_id": "gate-0-v1-20260914T110348Z",
+      "authorization_receipt_sha256": "c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [
+      {
+        "artifact_key": "handoff:task-00",
+        "sha256": "7a4b8811639aba103bacf74adb31f2882f1e92a82612c0736f320b8ce8d5756d"
+      }
+    ],
+    "prior_ready_state_receipt_id": "state-r3-task00-done-01ready-20260914T112020Z",
+    "prior_ready_state_receipt_sha256": "da67f774c8e635c54d52900b4e34545bf94773a959ffc7734c6bd4c97eeb18f5",
+    "prior_ready_state_revision": 3,
+    "repository_state_receipt": {
+      "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+      "receipt_id": "repo-state-c65f0813-b3b07a49",
+      "sha256": "74434603d94d3f406ce38c69549ecbd79c8a18ae065c558d5ce201723212058c",
+      "status": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": true,
+    "resolved_task_block": {
+      "content": "Task 01 - Owner decision packet\n\nTask\n\nsource evaluation work. Prepare one decision packet containing every owner answer required before executable schema and\n\nUser value\n\nthe responsible humans. Lets Al do all preparatory research while keeping legal, product, and editorial authority with\n\nRead first\n\nADR-OO3,and OPEN_BIBLE_DATA_SOURCES.md.\nIn scope\nDraft recommended choices and evidence fields for:\n\nEJitnriallons d\n\nExternal-Al processing, retention, training, and embedding permission per source component\nRaw-source retention and quarantine policy\n\u2022 Root workspace/package changes and exact new dependency versions, if needed\n\nOut of scope\nChoosing reviewers, granting rights, signing approvals, importing content, or changing product\nbehavior.\n\nAllowed changes\nDocumentation decision packet only. Update governing decision/rights documents only with exact\nowner-provided decisions, never inferred decisions.\n\nForbidden changes\nDo not change OPEN to DECIDED, allowed, or approved based on Al research alone.\n\nAcceptance criteria\nEvery decision has recommendation, alternatives, impact, required evidence, and named owner\nPilot reading and context ranges are explicit; neither defaults silently to Neh.2.1-Neh.2.8\nUnknowns remain visibly unknown and fail closed\nExact source components and intended operations are separated\nPacket ends with a sign-off table and no pre-filled human approval\n\nTests\nCheck internal links, decision-ID consistency, and absence of contradictory rights statements.\nCommands\n\ngit diff --check\nrg n \"OPEN|OWNER ACTIONlapprovedlallowed\" docs/PRODUCT_DECISIONS.md docs/CONTENT_RIGHTS.md\ndocs/CONTEXT_PLATFORM_SPEC.md docs/OPEN_BIBLE_DATA_SOURCES.md\n\nStop conditions\nReturn OWNER_ACTION_REQUIRED until the owner and required rights/editorial reviewers record the\ndecisions. Al cannot pass",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "066dc7aeca90c3d0bafa57df0bef3ad325b192b867c33e8a045b02934f2ab261",
+    "successor_task_keys": [
+      "02"
+    ],
+    "task_key": "01",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "33da12c04eddde7a22d54dd2271ec65d61b45a2a45fcd24360c297446d897da1",
+  "record_id": "envelope-01-20260914T112436Z",
+  "record_sha256": "33da12c04eddde7a22d54dd2271ec65d61b45a2a45fcd24360c297446d897da1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "9oHF8XH48DRfhgPkzDWlPFqPkYs9PW0hU5sbkMbE+KBb6DEqaGF4b0LUAlfdEEAQrg+jYnkGjnKXAfpljO0SAQ=="
+}

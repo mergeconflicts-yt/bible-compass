@@ -1,0 +1,72 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "git status --short",
+      "rg --files",
+      "npm --prefix apps/mobile run verify"
+    ],
+    "allowed_paths": [],
+    "attempt_id": "task:baseline:00:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-00-20260914T111317Z",
+      "record_sha256": "f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf"
+    },
+    "expected_artifacts": [
+      {
+        "key": "handoff:task-00",
+        "path": "docs/handoffs/task-00-baseline.json"
+      }
+    ],
+    "expires_at": "2026-09-15T11:13:17.889707Z",
+    "forbidden_paths": [
+      "**/*"
+    ],
+    "gate_receipts": [
+      {
+        "gate_id": "0",
+        "receipt_id": "0",
+        "sha256": "c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676"
+      }
+    ],
+    "issued_at": "2026-09-14T11:13:17.889707Z",
+    "issuer": {
+      "authorization_receipt_id": "gate-0-v1-20260914T110348Z",
+      "authorization_receipt_sha256": "c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [],
+    "prior_ready_state_receipt_id": "state-r1-gate0-passed-20260914T110348Z",
+    "prior_ready_state_receipt_sha256": "ca14d59fcd668f74fae7fcad2b60695277827634bd21fdfdbc07e7f8353e145b",
+    "prior_ready_state_revision": 1,
+    "repository_state_receipt": {
+      "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+      "receipt_id": "repo-state-c65f0813-6d77f131",
+      "sha256": "e8247b8f4196208a0300a843458c65f45fb5e41f95228c9fbb08af045cba20f6",
+      "status": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md"
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": false,
+    "resolved_task_block": {
+      "content": "Task O0 - Baseline and conflict audit\n\nTask\nEstablish the exact repository, documentation, test, dependency, and worktree baseline without\nchanging files.\nUser value\nPrevents an agent from overwriting current work or designing against stale contracts.\nRead first\nAGENTS. md,every document in its \"Read before editing\" list, ADR-001, ADR-003,\nCONTEXT_PLATFORM_SPEC.md\uff0cCONTEXT_MODEL_REVIEW.md\uff0cand relevant existing tests.\nIn scope\nInspect tracked/untracked changes and identify likely ownership overlap\nInventory packages, scripts, tests, Supabase state, and content fixtures\nRun the existing verification command\nCompare current implementation to ADR-003's next steps\n\nOut of scope\n\nAllowed changes\nNone.\nForbidden changes\nDo not format, stash, reset delete rename or \"fiv\" onud\n\nHandoff lists every changed/untracked path and flags overlapping ownership risk\nExisting test status is reported with exact failures\nMissing repository foundations are listed without implementing them\nActive architecture and open owner decisions are correctly identified\n\nTests\nRun the current mobile verification suite unchanged.\n\nCommands\n\ngit status --short\nrg --files\nnpm --prefix apps/mobile run verify\n\nStop conditions\nStop with BLockEd if required documents conflict, the worktree contains ambiguous overlapping\nchanges, or baseline failures cannot be attributed without editing.\nRequired handoff\nStandard handoff plus a prerequisite matrix for Tasks 01-04.",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "0076ba2306e113ca74e57b49f6b10c7bd7b8abc810bf659fbb1ce03074567aab",
+    "successor_task_keys": [
+      "01"
+    ],
+    "task_key": "00",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf",
+  "record_id": "envelope-00-20260914T111317Z",
+  "record_sha256": "f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "EeoRBeYgeCX2Rt2NwZ2tpP+MOXHcouwcBSBXkxSRO5jsDfhBZP9O58P0O2GbI9CRbQpytnZGBAy/hCLNvdgFBQ=="
+}

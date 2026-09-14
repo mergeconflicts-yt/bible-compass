@@ -1,0 +1,54 @@
+{
+  "completed_attempt_result": "PASS",
+  "completed_task": {
+    "attempt_id": "task:physical-model:03:attempt-1",
+    "handoff_path": "docs/handoffs/task-03-physical-model.json",
+    "handoff_sha256": "0b56ee902b47120482b8df17f4e590bf794d5b9aa4a170a9e7d39349f590485d",
+    "proposal_sha256": "7f5dbc4e34d5b58de1cdddee2040e00baa4631ab48510cb59a3211118424a72c",
+    "result": "PASS",
+    "spec_path": "docs/DATA_MODEL.md",
+    "spec_sha256": "4153b51fa42a639d6ffa026b6a8f812191052f553cdd91c547526315eddea30e",
+    "task_key": "03"
+  },
+  "gate_transition": {
+    "gate_id": "A2",
+    "new_status": "AWAITING_DECISION",
+    "prior_status": "NOT_STARTED"
+  },
+  "handoff_receipt_id": "task-03-physical-model.json",
+  "handoff_sha256": "0b56ee902b47120482b8df17f4e590bf794d5b9aa4a170a9e7d39349f590485d",
+  "issued_at": "2026-09-14T12:32:40.238861Z",
+  "issuer": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "new_state": {
+    "active_attempt_id": null,
+    "active_controller_lease_id": null,
+    "active_dispatch_envelope_sha256": null,
+    "active_task": null,
+    "active_task_status": null,
+    "last_completed_task": "03",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 10
+  },
+  "new_state_revision": 10,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r9-task03-inprogress-20260914T122835Z",
+  "prior_state_receipt_sha256": "4021dc28635de2c46459f13c5800db6c5c7ff3c2999661101e7c77ce72811a39",
+  "prior_state_revision": 9,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r10-task03-done-gatea2await-20260914T123240Z",
+  "record_sha256": "1730bde37b1afa00ef4c26c5f9865e57cb2d30c74be170427a95cb3db84602bf",
+  "repository_state_receipt_id": "repo-state-c65f0813-21493fa3",
+  "repository_state_receipt_sha256": "848155091bd3bf7895289c802b33f9c59caf1c0027e91770bb1c9714f54adaa1",
+  "server_timestamp": "2026-09-14T12:32:40.238861Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "i30JhlqgN3TpU8kGw3NC/5zD1Eqpvm0YICiReK96RC5nOs+A3U+KMT5yAu4CM0rsD1wHSIIay8GuLxUhRs+2AQ==",
+  "transition": "TASK_03_DONE__GATE_A2_AWAITING"
+}

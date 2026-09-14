@@ -1,0 +1,51 @@
+{
+  "completed_attempt_result": "PASS",
+  "completed_task": {
+    "attempt_id": "task:baseline:00:attempt-1",
+    "handoff_canon_sha256": "c96c28034350342f38d1086929e01b6529184e6eded07a6651a6ce90e409abc2",
+    "handoff_path": "docs/handoffs/task-00-baseline.json",
+    "handoff_sha256": "d6769c963d8e3d13da0c2ae1ea0f243cb1f831b4f6e401b6ad442b3d45ec7ca9",
+    "result": "PASS",
+    "stored_artifact_sha256": "7a4b8811639aba103bacf74adb31f2882f1e92a82612c0736f320b8ce8d5756d",
+    "task_key": "00"
+  },
+  "handoff_receipt_id": "task-00-baseline.json",
+  "handoff_sha256": "d6769c963d8e3d13da0c2ae1ea0f243cb1f831b4f6e401b6ad442b3d45ec7ca9",
+  "issued_at": "2026-09-14T11:20:20.015393Z",
+  "issuer": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "new_state": {
+    "active_attempt_id": null,
+    "active_controller_lease_id": null,
+    "active_dispatch_envelope_sha256": null,
+    "active_task": "01",
+    "active_task_status": "READY",
+    "last_completed_task": "00",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 3
+  },
+  "new_state_revision": 3,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r2-task00-inprogress-20260914T111317Z",
+  "prior_state_receipt_sha256": "3d90a7d75463328721697bc0824fd751cf78d1a13e1e8e932e909af465b4c803",
+  "prior_state_revision": 2,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r3-task00-done-01ready-20260914T112020Z",
+  "record_sha256": "da67f774c8e635c54d52900b4e34545bf94773a959ffc7734c6bd4c97eeb18f5",
+  "released_by": "Task 00 DONE",
+  "released_task": "01",
+  "released_task_status": "READY",
+  "repository_state_receipt_id": "repo-state-c65f0813-b3b07a49",
+  "repository_state_receipt_sha256": "74434603d94d3f406ce38c69549ecbd79c8a18ae065c558d5ce201723212058c",
+  "server_timestamp": "2026-09-14T11:20:20.015393Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "ETkNbjE6khVsry8eBOOmnjvbs3WleGYXNTuYHoruNrj0S1SZtJM6Dtjw0fHGK17Bh8zkezBot156yzzjBVnMBQ==",
+  "transition": "TASK_00_DONE__TASK_01_READY"
+}

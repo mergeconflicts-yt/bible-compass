@@ -1,0 +1,43 @@
+{
+  "dispatch_receipt_id": "dispatch-00-20260914T111317Z",
+  "dispatch_receipt_sha256": "16b6a44278ed51f1b9b5f7de7deb89c0ec4d3a7f3e0e76cd91641cad42dc2d22",
+  "envelope_record_id": "envelope-00-20260914T111317Z",
+  "envelope_sha256": "f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf",
+  "issued_at": "2026-09-14T11:13:17.889707Z",
+  "issuer": {
+    "authorization_receipt_id": "gate-0-v1-20260914T110348Z",
+    "authorization_receipt_sha256": "c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676",
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "lease_id": "lease-00-attempt-1-20260914T111317Z",
+  "new_state": {
+    "active_attempt_id": "task:baseline:00:attempt-1",
+    "active_controller_lease_id": "lease-00-attempt-1-20260914T111317Z",
+    "active_dispatch_envelope_sha256": "f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf",
+    "active_task": "00",
+    "active_task_status": "IN_PROGRESS",
+    "last_completed_task": null,
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 2
+  },
+  "new_state_revision": 2,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r1-gate0-passed-20260914T110348Z",
+  "prior_state_receipt_sha256": "ca14d59fcd668f74fae7fcad2b60695277827634bd21fdfdbc07e7f8353e145b",
+  "prior_state_revision": 1,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r2-task00-inprogress-20260914T111317Z",
+  "record_sha256": "3d90a7d75463328721697bc0824fd751cf78d1a13e1e8e932e909af465b4c803",
+  "repository_state_receipt_id": "repo-state-c65f0813-6d77f131",
+  "repository_state_receipt_sha256": "e8247b8f4196208a0300a843458c65f45fb5e41f95228c9fbb08af045cba20f6",
+  "server_timestamp": "2026-09-14T11:13:17.889707Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "PrBo379jbD3x9UIV5cDqvbPzJHwi/xfcNhtfwCf6TDKDObBLF9M2+rhBB0cnc3h1JVpXOfUAjz5IV9yDR+66BQ==",
+  "transition": "TASK_00_READY_TO_IN_PROGRESS"
+}

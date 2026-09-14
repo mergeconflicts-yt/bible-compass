@@ -1,0 +1,51 @@
+{
+  "completed_attempt_result": "PASS",
+  "completed_task": {
+    "attempt_id": "task:canonical-id:02:attempt-1",
+    "handoff_path": "docs/handoffs/task-02-identifiers.json",
+    "handoff_sha256": "d0383fc815f8a074e22764824d9e10714d43f7cbe450389db9d3227404208a14",
+    "result": "PASS",
+    "spec_path": "docs/CANONICAL_IDENTIFIERS.md",
+    "spec_sha256": "91d92f2fed8bbf70a31bf6ffc2a6588fd5758e8c1b1509ce19a49c5d1831e9e5",
+    "task_key": "02"
+  },
+  "handoff_receipt_id": "task-02-identifiers.json",
+  "handoff_sha256": "d0383fc815f8a074e22764824d9e10714d43f7cbe450389db9d3227404208a14",
+  "issued_at": "2026-09-14T12:04:14.708580Z",
+  "issuer": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "new_state": {
+    "active_attempt_id": null,
+    "active_controller_lease_id": null,
+    "active_dispatch_envelope_sha256": null,
+    "active_task": "03",
+    "active_task_status": "READY",
+    "last_completed_task": "02",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 8
+  },
+  "new_state_revision": 8,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r7-task02-inprogress-20260914T120106Z",
+  "prior_state_receipt_sha256": "b1d32cdcea051fded3ff1166e19960f392a5e3553f9cf9f7a31590c35447221b",
+  "prior_state_revision": 7,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r8-task02-done-03ready-20260914T120414Z",
+  "record_sha256": "f4f14d3fd835249712bb6ac08ed41f6695d8d0b4c339fb77cee065b5282df5d6",
+  "released_by": "Task 02 DONE",
+  "released_task": "03",
+  "released_task_status": "READY",
+  "repository_state_receipt_id": "repo-state-c65f0813-6e9922bf",
+  "repository_state_receipt_sha256": "33988bff2913d8fa11b0332d132da8f231d0a0474382cbdf93e2f0ef2863ab8c",
+  "server_timestamp": "2026-09-14T12:04:14.708580Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "qtfThMlMbIOfbtik50v4gmpq9hJtfjbIJW0HqHBgwmbcW3Z0ij8j54aABKb/r6rttTLYLfvmManDaepimAjbAg==",
+  "transition": "TASK_02_DONE__TASK_03_READY"
+}

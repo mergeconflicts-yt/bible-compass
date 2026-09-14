@@ -1,4 +1,4 @@
-# CONTEXT_DATA_ARCHUTECTURE
+# CONTEXT_DATA_ARCHITECTURE
 
 Future-Ready Context Data Architecture
 
