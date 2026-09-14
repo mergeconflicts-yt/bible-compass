@@ -4,12 +4,14 @@ import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { Sheet } from '@/components/Sheet';
 import { AppText } from '@/components/AppText';
+import { ReferenceText } from '@/components/ReferenceText';
 import { Button } from '@/components/Button';
 import { draftNotice, formatYear, getTimeline } from '@/content/neh2Draft';
 
 interface TimelineSheetProps {
   visible: boolean;
   onClose: () => void;
+  onOpenPassage?: (passageKey: string) => void;
 }
 
 /**
@@ -18,7 +20,7 @@ interface TimelineSheetProps {
  * disagreement labels come from the draft records and are never presented
  * as settled fact.
  */
-export function TimelineSheet({ visible, onClose }: TimelineSheetProps) {
+export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheetProps) {
   const { colors } = useTheme();
   const events = getTimeline();
   const scrollRef = useRef<ScrollView>(null);
@@ -100,9 +102,13 @@ export function TimelineSheet({ visible, onClose }: TimelineSheetProps) {
                   {event.title}
                   <AppText variant="caption" color="accent"> {precision}</AppText>
                 </AppText>
-                <AppText variant="metadata" color="textSecondary" style={styles.note}>
-                  {event.description} {event.relevance}
-                </AppText>
+                <ReferenceText
+                  text={`${event.description} ${event.relevance}`}
+                  onOpenPassage={onOpenPassage}
+                  variant="metadata"
+                  color="textSecondary"
+                  style={styles.note}
+                />
               </View>
             </View>
           );

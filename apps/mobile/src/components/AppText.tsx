@@ -1,7 +1,9 @@
 import { type ReactNode, type Ref } from 'react';
 import { Text, type TextProps } from 'react-native';
 import { fontFamily, typeScale, type ThemeColors, type TypeToken } from '@/theme/tokens';
+import { isIndicTranslation } from '@/content/bsb';
 import { useTheme } from '@/theme/useTheme';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 interface AppTextProps extends TextProps {
   variant?: TypeToken;
@@ -11,7 +13,7 @@ interface AppTextProps extends TextProps {
   children: ReactNode;
 }
 
-/** Token-driven text. Scripture uses the reading (serif) font. */
+/** Token-driven text. Scripture uses the reading font, Indic scale for ta/te. */
 export function AppText({
   variant = 'body',
   color = 'textPrimary',
@@ -22,7 +24,11 @@ export function AppText({
   ...rest
 }: AppTextProps) {
   const { colors } = useTheme();
-  const token = typeScale[variant];
+  const preferences = useOptionalPreferences();
+  const token =
+    scripture && preferences && isIndicTranslation(preferences.translationId)
+      ? typeScale.scriptureIndic
+      : typeScale[variant];
   return (
     <Text
       ref={ref}

@@ -37,6 +37,12 @@ describe('draft context wiring', () => {
     expect(entityBySlug('no-such-entity')).toBeNull();
   });
 
+  it('keeps BSB-only anchors off other translations until reviewed', () => {
+    expect(anchorsForVerse('Neh', 2, 1, 'tam_irv')).toEqual([]);
+    expect(anchorsForVerse('Neh', 2, 1, 'tel_irv')).toEqual([]);
+    expect(anchorsForVerse('Neh', 2, 1)).toHaveLength(1);
+  });
+
   it('keeps the companion anchor validated against the bundled verse text', () => {
     expect(getVerseText('Neh', 2, 1)).toContain(NEH2_ANCHOR_PHRASE);
   });

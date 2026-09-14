@@ -3,7 +3,8 @@ import { Screen } from '@/components/Screen';
 import { AppText } from '@/components/AppText';
 import { Segmented } from '@/components/Segmented';
 import { NavRow } from '@/components/NavRow';
-import { savedRows, searchRecents } from '@/fixtures/demo';
+import { savedRowsFor, searchRecentsFor } from '@/fixtures/demo';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 export interface SavedViewProps {
   onOpenPassage: (passageKey: string) => void;
@@ -13,6 +14,10 @@ export interface SavedViewProps {
 /** Saved library — demo #v-saved. Bookmarks and recents share one row pattern. */
 export function SavedView({ onOpenPassage, onOpenDaily }: SavedViewProps) {
   const [section, setSection] = useState(0);
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
+  const saved = savedRowsFor(translationId);
+  const recents = searchRecentsFor(translationId);
 
   return (
     <Screen testID="saved-screen">
@@ -29,14 +34,14 @@ export function SavedView({ onOpenPassage, onOpenDaily }: SavedViewProps) {
       {section === 0 ? (
         <>
           <NavRow
-            title={savedRows[0]?.title ?? 'Nehemiah 2:1–8'}
-            meta={savedRows[0]?.meta}
+            title={saved[0]?.title ?? 'Nehemiah 2:1–8'}
+            meta={saved[0]?.meta}
             onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
             testID="saved-bookmark-passage"
           />
           <NavRow
-            title={savedRows[1]?.title ?? 'Nehemiah 2:4'}
-            meta={savedRows[1]?.meta}
+            title={saved[1]?.title ?? 'Nehemiah 2:4'}
+            meta={saved[1]?.meta}
             onPress={onOpenDaily}
             testID="saved-bookmark-daily"
           />
@@ -44,14 +49,14 @@ export function SavedView({ onOpenPassage, onOpenDaily }: SavedViewProps) {
       ) : (
         <>
           <NavRow
-            title={searchRecents[0]?.title ?? 'Nehemiah 2:1–8'}
-            meta={searchRecents[0]?.meta}
+            title={recents[0]?.title ?? 'Nehemiah 2:1–8'}
+            meta={recents[0]?.meta}
             onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
             testID="saved-recent-passage"
           />
           <NavRow
-            title={searchRecents[1]?.title ?? 'Ezra 4:23'}
-            meta={searchRecents[1]?.meta}
+            title={recents[1]?.title ?? 'Ezra 4:23'}
+            meta={recents[1]?.meta}
             testID="saved-recent-ezra"
           />
         </>

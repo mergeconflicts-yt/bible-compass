@@ -1,12 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import { AppPreferencesProvider } from '@/theme/ThemeProvider';
+import { selectTranslationId } from '@/content/bsb';
 import { ReaderView } from '@/components/ReaderView';
 
-function renderReader(bookOsis = 'Neh', chapter = 2) {
+function renderReader(bookOsis = 'Neh', chapter = 2, initialVerse: number | null = null) {
   const onBack = jest.fn();
   render(
     <AppPreferencesProvider>
-      <ReaderView bookOsis={bookOsis} chapter={chapter} onBack={onBack} />
+      <ReaderView bookOsis={bookOsis} chapter={chapter} initialVerse={initialVerse} onBack={onBack} />
     </AppPreferencesProvider>,
   );
   return onBack;
@@ -47,6 +48,7 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getByText('Artaxerxes I')).toBeTruthy();
     fireEvent.press(screen.getByTestId('understand-passage'));
     expect(screen.getByTestId('context-sheet')).toBeTruthy();
+    expect(screen.getByLabelText('Open Neh 1')).toBeTruthy();
   });
 
   it('dismisses the peek on tap-outside without opening the full card', () => {
@@ -89,10 +91,43 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getByText('Judah')).toBeTruthy();
   });
 
+  it('lands on the referenced verse with a highlight instead of the chapter top', () => {
+    renderReader('Neh', 2, 10);
+    expect(screen.getByTestId('verse-10-target')).toBeTruthy();
+    expect(screen.getByTestId('verse-1')).toBeTruthy();
+  });
+
+  it('jumps in place for same-chapter verse links without navigating', () => {
+    const onOpenPassage = jest.fn();
+    render(
+      <AppPreferencesProvider>
+        <ReaderView bookOsis="Neh" chapter={2} onBack={jest.fn()} onOpenPassage={onOpenPassage} />
+      </AppPreferencesProvider>,
+    );
+    fireEvent.press(screen.getByText('Sanballat the Horonite'));
+    fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
+    fireEvent.press(screen.getByLabelText('Open v10'));
+    expect(screen.getByTestId('verse-10-target')).toBeTruthy();
+    expect(screen.getByTestId('entity-sheet')).toBeTruthy();
+    expect(onOpenPassage).not.toHaveBeenCalled();
+  });
+
   it('opens the timeline from the era rail link', () => {
     renderReader();
     fireEvent.press(screen.getByTestId('reader-open-timeline'));
     expect(screen.getByTestId('timeline-sheet')).toBeTruthy();
+  });
+
+  it('reads a Tamil chapter with a localized title and no unreviewed anchors', () => {
+    // Preset at module level: the provider mounts on BSB but the committed
+    // tree already read the Tamil selection, with no re-render after.
+    // English draft context still surrounds the passage; only anchors wait
+    // for per-translation review.
+    selectTranslationId('tam_irv');
+    renderReader();
+    expect(screen.getByText('நெகேமியா 2')).toBeTruthy();
+    expect(screen.queryByText('King Artaxerxes')).toBeNull();
+    selectTranslationId('BSB');
   });
 });
 

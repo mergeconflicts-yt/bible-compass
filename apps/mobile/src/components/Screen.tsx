@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, type RefObject } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import { useTheme } from '@/theme/useTheme';
 import { space } from '@/theme/tokens';
@@ -10,10 +10,12 @@ interface ScreenProps {
   header?: ReactNode;
   /** Pinned above everything (e.g. a floating action). Positions itself. */
   floatingAction?: ReactNode;
+  /** Lets the screen drive the scroll position (e.g. land on a verse). */
+  scrollRef?: RefObject<ScrollView | null>;
 }
 
 /** Base screen: safe area + single-column scroll content at 20dp page padding. */
-export function Screen({ children, testID, header, floatingAction }: ScreenProps) {
+export function Screen({ children, testID, header, floatingAction, scrollRef }: ScreenProps) {
   const { colors } = useTheme();
   return (
     <SafeAreaView style={[styles.safe, { backgroundColor: colors.canvas }]} testID={testID}>
@@ -23,6 +25,7 @@ export function Screen({ children, testID, header, floatingAction }: ScreenProps
         </View>
       ) : null}
       <ScrollView
+        ref={scrollRef}
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
         accessibilityRole="none"

@@ -2,6 +2,7 @@ import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Screen } from '@/components/Screen';
 import { StateView } from '@/components/StateView';
 import { ReaderView } from '@/components/ReaderView';
+import { usePreferences } from '@/theme/ThemeProvider';
 import { getChapter } from '@/content/bsb';
 import {
   formatReference,
@@ -19,6 +20,7 @@ import {
  */
 export default function PassageScreen() {
   const router = useRouter();
+  const preferences = usePreferences();
   const { reference } = useLocalSearchParams<{ reference: string }>();
   const raw = Array.isArray(reference) ? reference[0] : (reference ?? '');
 
@@ -67,7 +69,7 @@ export default function PassageScreen() {
     );
   }
 
-  const content = getChapter(parsed.start.book, parsed.start.chapter);
+  const content = getChapter(parsed.start.book, parsed.start.chapter, preferences.translationId);
   if (!content) {
     const label = formatReference(parsed);
     return (
@@ -96,12 +98,15 @@ export default function PassageScreen() {
   const openPassage = (passageKey: string) => {
     router.push({ pathname: '/passage/[reference]', params: { reference: passageKey } });
   };
+  // Verse and range links land on their first verse; chapters land on top.
+  const initialVerse = parsed.kind === 'chapter' ? null : parsed.start.verse;
   return (
     <>
       <Stack.Screen options={{ title: label }} />
       <ReaderView
         bookOsis={parsed.start.book}
         chapter={parsed.start.chapter}
+        initialVerse={initialVerse}
         onBack={() => router.back()}
         onOpenPassage={openPassage}
       />

@@ -3,8 +3,10 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 import { Sheet } from '@/components/Sheet';
 import { AppText } from '@/components/AppText';
+import { ReferenceText } from '@/components/ReferenceText';
 import { Button } from '@/components/Button';
 import { EntityChip } from '@/components/EntityChip';
 import {
@@ -49,11 +51,11 @@ function slugifyRef(ref: string): string {
 }
 
 /** "IN NEHEMIAH 2" from the draft passage key; honest fallback when unparseable. */
-function passageLabel(): string {
+function passageLabel(translationId: string): string {
   const [bookOsis, chapterRaw] = getDraft().passage.split('.');
   const chapter = Number.parseInt(chapterRaw ?? '', 10);
   if (!bookOsis || !Number.isInteger(chapter)) return 'IN THIS PASSAGE';
-  const content = getChapter(bookOsis, chapter);
+  const content = getChapter(bookOsis, chapter, translationId);
   if (!content) return 'IN THIS PASSAGE';
   return `IN ${content.bookName.toUpperCase()} ${chapter}`;
 }
@@ -109,6 +111,8 @@ export function EntitySheet({
   onOpenMap,
 }: EntitySheetProps) {
   const { colors } = useTheme();
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
   const entity = slug ? entityBySlug(slug) : null;
   const role = slug ? roleBySlug(slug) : null;
   const connected =
@@ -154,7 +158,7 @@ export function EntitySheet({
           entity={entity}
           event={event}
           inPassage={event ? event.relevance : (role?.role_in_passage ?? null)}
-          passageLabelText={passageLabel()}
+          passageLabelText={passageLabel(translationId)}
           sceneStart={sceneStart}
           connected={connected}
           onOpenEntity={onOpenEntity}
@@ -325,9 +329,13 @@ export function FullCard({
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
             {passageLabelText}
           </AppText>
-          <AppText variant="body" scripture style={styles.sectionBody}>
-            {inPassage}
-          </AppText>
+          <ReferenceText
+            text={inPassage}
+            onOpenPassage={onOpenPassage}
+            variant="body"
+            scripture
+            style={styles.sectionBody}
+          />
         </View>
       ) : null}
 
@@ -336,9 +344,7 @@ export function FullCard({
           <AppText variant="title3" style={styles.profileHead}>
             {profileHeading}
           </AppText>
-          <AppText variant="body" scripture>
-            {prose}
-          </AppText>
+          <ReferenceText text={prose} onOpenPassage={onOpenPassage} variant="body" scripture />
         </View>
       ) : null}
 

@@ -7,8 +7,9 @@ import { AppText } from '@/components/AppText';
 import { NavRow } from '@/components/NavRow';
 import { EntitySheet } from '@/components/sheets/EntitySheet';
 import { searchDemoVisibility } from '@/lib/search';
-import { searchEntities, searchRecents } from '@/fixtures/demo';
-import { activeTranslation } from '@/content/bsb';
+import { searchEntities, searchRecentsFor } from '@/fixtures/demo';
+import { bookNameFor } from '@/content/bsb';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 export interface SearchViewProps {
   onOpenPassage: (passageKey: string) => void;
@@ -23,6 +24,9 @@ export function SearchView({ onOpenPassage }: SearchViewProps) {
   const { colors } = useTheme();
   const [query, setQuery] = useState('');
   const [entitySlug, setEntitySlug] = useState<string | null>(null);
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
+  const recents = searchRecentsFor(translationId);
   const visibility = searchDemoVisibility(query);
 
   return (
@@ -51,8 +55,8 @@ export function SearchView({ onOpenPassage }: SearchViewProps) {
 
       {visibility.showReferenceHit ? (
         <NavRow
-          title="Nehemiah 2"
-          meta={`${activeTranslation.short} · reference result`}
+          title={`${bookNameFor('Neh', translationId)} 2`}
+          meta={`${preferences?.translation.short ?? 'BSB'} · reference result`}
           onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
           testID="search-ref-hit"
         />
@@ -64,14 +68,14 @@ export function SearchView({ onOpenPassage }: SearchViewProps) {
             RECENT
           </AppText>
           <NavRow
-            title={searchRecents[0]?.title ?? 'Nehemiah 2:1–8'}
-            meta={searchRecents[0]?.meta}
+            title={recents[0]?.title ?? 'Nehemiah 2:1–8'}
+            meta={recents[0]?.meta}
             onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
             testID="search-recent-passage"
           />
           <NavRow
-            title={searchRecents[1]?.title ?? 'Ezra 4:23'}
-            meta={searchRecents[1]?.meta}
+            title={recents[1]?.title ?? 'Ezra 4:23'}
+            meta={recents[1]?.meta}
             testID="search-recent-ezra"
           />
         </View>

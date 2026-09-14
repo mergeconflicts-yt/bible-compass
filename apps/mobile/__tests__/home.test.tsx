@@ -1,13 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import { HomeView } from '@/components/HomeView';
-import { continueReadingFixture, dailyVerseFixture } from '@/fixtures/home';
+import { buildContinueReadingFixture, buildDailyVerseFixture } from '@/fixtures/home';
 import { greetingForHour } from '@/lib/greeting';
 
 function renderHome(overrides: Partial<Parameters<typeof HomeView>[0]> = {}) {
   const props = {
     greeting: 'Good morning',
-    daily: dailyVerseFixture,
-    progress: continueReadingFixture,
+    daily: buildDailyVerseFixture('BSB'),
+    progress: buildContinueReadingFixture('BSB'),
     onReadInContext: jest.fn(),
     onShare: jest.fn(),
     onOpenPassage: jest.fn(),

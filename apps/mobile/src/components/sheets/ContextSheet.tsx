@@ -7,6 +7,7 @@ import { AppText } from '@/components/AppText';
 import { Button } from '@/components/Button';
 import { Segmented } from '@/components/Segmented';
 import { NavRow } from '@/components/NavRow';
+import { ReferenceText } from '@/components/ReferenceText';
 import { EntityChip, EventChip } from '@/components/EntityChip';
 import {
   draftBrief,
@@ -20,7 +21,8 @@ import {
   toBullets,
   type DraftEvent,
 } from '@/content/neh2Draft';
-import { surroundingPassageLabel } from '@/fixtures/demo';
+import { bookNameFor } from '@/content/bsb';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 interface ContextSheetProps {
   visible: boolean;
@@ -57,6 +59,8 @@ export function ContextSheet({
   onOpenEvent,
 }: ContextSheetProps) {
   const { colors } = useTheme();
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
   const [tab, setTab] = useState(0);
   const brief = draftBrief();
   const requestEvent = foregroundEvents()[0];
@@ -66,7 +70,7 @@ export function ContextSheet({
     <Sheet
       visible={visible}
       onClose={onClose}
-      title={`${surroundingPassageLabel.split(':')[0] ?? 'Nehemiah 2'} Context`}
+      title={`${bookNameFor('Neh', translationId)} 2 Context`}
       full
       testID="context-sheet"
     >
@@ -121,9 +125,13 @@ export function ContextSheet({
                 {toBullets(step.text).map((bullet) => (
                   <View key={bullet} style={styles.bulletRow}>
                     <View style={[styles.bulletDot, { backgroundColor: colors.accent }]} />
-                    <AppText variant="body" scripture style={styles.bulletText}>
-                      {bullet}
-                    </AppText>
+                    <ReferenceText
+                      text={bullet}
+                      onOpenPassage={onOpenPassage}
+                      variant="body"
+                      scripture
+                      style={styles.bulletText}
+                    />
                   </View>
                 ))}
               </View>

@@ -3,7 +3,8 @@ import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Screen } from '@/components/Screen';
 import { StateView } from '@/components/StateView';
 import { DailyView } from '@/components/DailyView';
-import { dailyVerseFixture } from '@/fixtures/home';
+import { buildDailyVerseFixture } from '@/fixtures/home';
+import { usePreferences } from '@/theme/ThemeProvider';
 import { formatDateLabel, isValidDateKey, todayKey } from '@/lib/daily';
 
 /**
@@ -12,11 +13,14 @@ import { formatDateLabel, isValidDateKey, todayKey } from '@/lib/daily';
  */
 export default function DailyScreen() {
   const router = useRouter();
+  const preferences = usePreferences();
   const { date } = useLocalSearchParams<{ date: string }>();
   const raw = Array.isArray(date) ? date[0] : (date ?? '');
 
   const shareVerse = () => {
-    const { text, referenceLabel, translationShort } = dailyVerseFixture;
+    const { text, referenceLabel, translationShort } = buildDailyVerseFixture(
+      preferences.translationId,
+    );
     void Share.share({ message: `${text} — ${referenceLabel} (${translationShort})` });
   };
 

@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import { Modal, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import { Modal, Pressable, StyleSheet, useWindowDimensions, View, type ScrollView } from 'react-native';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { scriptureSizes, usePreferences } from '@/theme/ThemeProvider';
@@ -19,15 +19,18 @@ import { TimelineSheet } from '@/components/sheets/TimelineSheet';
 import { TimelineRail } from '@/components/TimelineRail';
 import { eraRail } from '@/fixtures/demo';
 import { anchorsForVerse, getDraft, splitAnchored } from '@/content/neh2Draft';
+import { parseReference } from '@/lib/reference';
 import {
-  activeTranslation,
   getChapter,
+  isIndicTranslation,
   type ChapterBlock,
 } from '@/content/bsb';
 
 export interface ReaderViewProps {
   bookOsis: string;
   chapter: number;
+  /** Verse to land on with a highlight; null lands on the chapter top. */
+  initialVerse?: number | null;
   onBack: () => void;
   onOpenPassage?: (passageKey: string) => void;
 }
@@ -38,7 +41,7 @@ export interface ReaderViewProps {
  * (era rail, story, person cards, understand action). Other chapters
  * say so honestly instead of faking context. Sheets are local UI state.
  */
-export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderViewProps) {
+export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPassage }: ReaderViewProps) {
   const { colors } = useTheme();
   const preferences = usePreferences();
   const [storyOpen, setStoryOpen] = useState(true);
@@ -49,14 +52,21 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
   const [entitySlug, setEntitySlug] = useState<string | null>(null);
   const [timelineOpen, setTimelineOpen] = useState(false);
   const [mapOpen, setMapOpen] = useState(false);
+  const [highlightedVerse, setHighlightedVerse] = useState<number | null>(initialVerse ?? null);
+  const scrollRef = useRef<ScrollView | null>(null);
+  const verseOffsets = useRef(new Map<number, number>());
+  const blockOffset = useRef(0);
+  const pendingVerse = useRef<number | null>(initialVerse ?? null);
 
-  const content = getChapter(bookOsis, chapter);
+  const content = getChapter(bookOsis, chapter, preferences.translationId);
   const contextMode = bookOsis === 'Neh' && chapter === 2 && content !== null;
   const title = content ? `${content.bookName} ${chapter}` : `${bookOsis} ${chapter}`;
 
-  /* IMG_4195 measures: ~21sp serif with ~1.68 line-height. */
+  /* IMG_4195 measures: ~21sp serif with ~1.68 line-height (1.8 for Indic). */
   const scriptSize = scriptureSizes[preferences.scriptureSizeIndex] ?? scriptureSizes[0];
-  const scriptLine = Math.round(scriptSize * 1.68);
+  const scriptLine = Math.round(
+    scriptSize * (isIndicTranslation(preferences.translationId) ? 1.8 : 1.68),
+  );
 
   // Every validated anchor opens a lightweight peek first; most taps should
   // end there. Know more goes straight to the full card — no middle layer.
@@ -69,13 +79,61 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
     setEntitySlug(slug);
   };
 
+  /** Scrolls to a verse and flashes it; waits for layout when needed. */
+  const landOnVerse = (verse: number, animated: boolean) => {
+    setHighlightedVerse(verse);
+    const known = verseOffsets.current.get(verse);
+    if (known !== undefined) {
+      scrollRef.current?.scrollTo({ y: Math.max(0, blockOffset.current + known - 100), animated });
+    } else {
+      pendingVerse.current = verse;
+    }
+  };
+
+  const handleVerseLayout = (verse: number, y: number) => {
+    verseOffsets.current.set(verse, y);
+    if (pendingVerse.current === verse) {
+      pendingVerse.current = null;
+      scrollRef.current?.scrollTo({ y: Math.max(0, blockOffset.current + y - 100), animated: false });
+      setHighlightedVerse(verse);
+    }
+  };
+
+  useEffect(() => {
+    if (highlightedVerse === null) return;
+    const timer = setTimeout(() => setHighlightedVerse(null), 3000);
+    return () => clearTimeout(timer);
+  }, [highlightedVerse]);
+
+  /**
+   * Reference taps stay in place for verses of this chapter (scroll +
+   * highlight) and navigate otherwise. Malformed keys fall through to the
+   * route, which owns the honest error states.
+   */
+  const openReference = (passageKey: string) => {
+    try {
+      const parsed = parseReference(passageKey);
+      if (
+        parsed.start.book === bookOsis &&
+        parsed.start.chapter === chapter &&
+        parsed.start.verse > 0
+      ) {
+        landOnVerse(parsed.start.verse, true);
+        return;
+      }
+    } catch {
+      // Fall through to route navigation below.
+    }
+    onOpenPassage?.(passageKey);
+  };
+
   const placement = peek ? placementForAnchor(peek.rect, win.width, win.height) : null;
 
   if (!content) {
     return (
       <Screen
         testID="reader-screen"
-        header={<ReaderHeader title={title} onBack={onBack} onOptions={undefined} />}
+        header={<ReaderHeader title={title} translationShort={preferences.translation.short} onBack={onBack} onOptions={undefined} />}
       >
         <AppText variant="body" color="textSecondary">
           This chapter is not in the bundled build yet.
@@ -87,7 +145,8 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
   return (
     <Screen
       testID="reader-screen"
-      header={<ReaderHeader title={title} onBack={onBack} onOptions={() => setOptionsOpen(true)} />}
+      header={<ReaderHeader title={title} translationShort={preferences.translation.short} onBack={onBack} onOptions={() => setOptionsOpen(true)} />}
+      scrollRef={scrollRef}
       floatingAction={
         contextMode ? (
           <Pressable
@@ -160,7 +219,13 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
         </Pressable>
       ) : null}
 
-      <View testID="scripture-block" style={styles.scriptureBlock}>
+      <View
+        testID="scripture-block"
+        style={styles.scriptureBlock}
+        onLayout={(event) => {
+          blockOffset.current = event.nativeEvent.layout.y;
+        }}
+      >
         {content.blocks.map((block, index) => (
           <ChapterBlockView
             key={block.kind === 'verse' ? `v${block.number}` : `h${index}`}
@@ -168,9 +233,13 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
             scriptSize={scriptSize}
             scriptLine={scriptLine}
             anchors={
-              block.kind === 'verse' ? anchorsForVerse(bookOsis, chapter, block.number) : []
+              block.kind === 'verse'
+                ? anchorsForVerse(bookOsis, chapter, block.number, preferences.translationId)
+                : []
             }
             onAnchorPress={handleAnchorPress}
+            highlightedVerse={highlightedVerse}
+            onLayoutVerse={handleVerseLayout}
           />
         ))}
       </View>
@@ -220,7 +289,14 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
                       ]}
                     />
                   ) : null}
-                  <PeekCard slug={peek.slug} onFullCard={openFullCard} />
+                  <PeekCard
+                    slug={peek.slug}
+                    onFullCard={openFullCard}
+                    onOpenPassage={(key) => {
+                      setPeek(null);
+                      openReference(key);
+                    }}
+                  />
                   {placement.caret === 'bottom' ? (
                     <View
                       testID="peek-caret"
@@ -245,7 +321,7 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
             onOpenEntity={(slug) => setEntitySlug(slug)}
             onOpenPassage={(key) => {
               setEntitySlug(null);
-              onOpenPassage?.(key);
+              openReference(key);
             }}
             onOpenTimeline={() => {
               setEntitySlug(null);
@@ -256,10 +332,24 @@ export function ReaderView({ bookOsis, chapter, onBack, onOpenPassage }: ReaderV
               setMapOpen(true);
             }}
           />
-          <ContextFlow visible={contextOpen} onClose={() => setContextOpen(false)} />
+          <ContextFlow
+            visible={contextOpen}
+            onClose={() => setContextOpen(false)}
+            onOpenPassage={(key) => {
+              setContextOpen(false);
+              openReference(key);
+            }}
+          />
         </>
       ) : null}
-      <TimelineSheet visible={timelineOpen} onClose={() => setTimelineOpen(false)} />
+      <TimelineSheet
+        visible={timelineOpen}
+        onClose={() => setTimelineOpen(false)}
+        onOpenPassage={(key) => {
+          setTimelineOpen(false);
+          openReference(key);
+        }}
+      />
       <MapSheet visible={mapOpen} onClose={() => setMapOpen(false)} />
       <OptionsSheet visible={optionsOpen} onClose={() => setOptionsOpen(false)} />
     </Screen>
@@ -282,12 +372,16 @@ function ChapterBlockView({
   scriptLine,
   anchors,
   onAnchorPress,
+  highlightedVerse,
+  onLayoutVerse,
 }: {
   block: ChapterBlock;
   scriptSize: number;
   scriptLine: number;
   anchors: Array<{ phrase: string; slug: string }>;
   onAnchorPress: (slug: string, rect: AnchorRect | null) => void;
+  highlightedVerse: number | null;
+  onLayoutVerse: (verse: number, y: number) => void;
 }) {
   const { colors } = useTheme();
   const anchorNodes = useRef(new Map<string, MeasurableNode>());
@@ -309,8 +403,19 @@ function ChapterBlockView({
     }
   };
   const segments = splitAnchored(block.text, anchors);
+  const targeted = highlightedVerse === block.number;
   return (
-    <AppText scripture style={[styles.scripture, { fontSize: scriptSize, lineHeight: scriptLine }]}>
+    <AppText
+      scripture
+      testID={targeted ? `verse-${block.number}-target` : `verse-${block.number}`}
+      accessibilityLabel={targeted ? `Verse ${block.number}, referenced passage` : undefined}
+      onLayout={(event) => onLayoutVerse(block.number, event.nativeEvent.layout.y)}
+      style={[
+        styles.scripture,
+        { fontSize: scriptSize, lineHeight: scriptLine },
+        targeted && { backgroundColor: colors.accentSoft, borderRadius: 8 },
+      ]}
+    >
       <AppText variant="verseNumber" color="accent" style={[styles.verseNum, { lineHeight: scriptLine }]}>
         {block.number}{'\u00A0'}
       </AppText>
@@ -346,10 +451,12 @@ function ChapterBlockView({
 /** Compact sticky header: plain-text back and options glyphs, one-line title. */
 function ReaderHeader({
   title,
+  translationShort,
   onBack,
   onOptions,
 }: {
   title: string;
+  translationShort: string;
   onBack: () => void;
   onOptions: (() => void) | undefined;
 }) {
@@ -369,7 +476,7 @@ function ReaderHeader({
       <AppText variant="label" style={styles.headerTitle} numberOfLines={1}>
         {title}{' '}
         <AppText variant="caption" color="textSecondary">
-          {activeTranslation.short}
+          {translationShort}
         </AppText>
       </AppText>
       {onOptions ? (

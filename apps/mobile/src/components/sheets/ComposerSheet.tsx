@@ -9,10 +9,10 @@ import { Segmented } from '@/components/Segmented';
 import {
   composerFormats,
   composerThemes,
-  dailyVerseReference,
-  dailyVerseText,
-  translationAttribution,
+  dailyVerseReferenceFor,
+  dailyVerseTextFor,
 } from '@/fixtures/demo';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 interface ComposerSheetProps {
   visible: boolean;
@@ -30,6 +30,8 @@ export function ComposerSheet({ visible, onClose, onShare }: ComposerSheetProps)
   const { colors } = useTheme();
   const [format, setFormat] = useState(2);
   const [theme, setTheme] = useState(0);
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
 
   return (
     <Sheet
@@ -41,13 +43,13 @@ export function ComposerSheet({ visible, onClose, onShare }: ComposerSheetProps)
     >
       <View style={[styles.preview, { backgroundColor: colors.brand }]}>
         <AppText variant="body" scripture style={[styles.previewVerse, { color: colors.textOnBrand }]}>
-          {dailyVerseText}
+          {dailyVerseTextFor(translationId)}
         </AppText>
         <AppText variant="label" style={{ color: colors.textOnBrand }}>
-          {dailyVerseReference}
+          {dailyVerseReferenceFor(translationId)}
         </AppText>
         <AppText variant="caption" style={[styles.previewAttr, { color: colors.textOnBrand }]}>
-          {translationAttribution}
+          {preferences?.translation.attribution ?? 'Berean Standard Bible · BSB'}
         </AppText>
       </View>
 

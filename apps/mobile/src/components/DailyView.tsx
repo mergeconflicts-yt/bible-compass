@@ -9,12 +9,12 @@ import { ArtworkCard } from '@/components/ArtworkCard';
 import { ComposerSheet } from '@/components/sheets/ComposerSheet';
 import { ContextFlow } from '@/components/sheets/ContextFlow';
 import {
-  dailyVerseReference,
-  dailyVerseText,
-  surroundingPassageLabel,
-  surroundingPassageMeta,
-  translationAttribution,
+  dailyVerseReferenceFor,
+  dailyVerseTextFor,
+  surroundingPassageLabelFor,
+  surroundingPassageMetaFor,
 } from '@/fixtures/demo';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 import { getDraft } from '@/content/neh2Draft';
 
 export interface DailyViewProps {
@@ -32,6 +32,8 @@ export interface DailyViewProps {
 export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyViewProps) {
   const [composerOpen, setComposerOpen] = useState(false);
   const [contextOpen, setContextOpen] = useState(false);
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
 
   return (
     <Screen testID="daily-screen">
@@ -56,9 +58,9 @@ export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyVi
       <View style={styles.card}>
         <ArtworkCard
           kicker="Verse of the day"
-          verse={dailyVerseText}
-          reference={dailyVerseReference}
-          attribution={translationAttribution}
+          verse={dailyVerseTextFor(translationId)}
+          reference={dailyVerseReferenceFor(translationId)}
+          attribution={preferences?.translation.attribution ?? 'Berean Standard Bible · BSB'}
           testID="daily-artwork"
         />
       </View>
@@ -110,10 +112,10 @@ export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyVi
       <View style={styles.passCard}>
         <AppText variant="title2">Read the surrounding passage</AppText>
         <AppText variant="body" color="textSecondary" style={styles.passMeta}>
-          {surroundingPassageMeta} · Prototype text
+          {surroundingPassageMetaFor(translationId)} · Prototype text
         </AppText>
         <Button
-          title={`Read ${surroundingPassageLabel}`}
+          title={`Read ${surroundingPassageLabelFor(translationId)}`}
           onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
           testID="daily-read-passage"
         />
@@ -124,7 +126,14 @@ export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyVi
       </AppText>
 
       <ComposerSheet visible={composerOpen} onClose={() => setComposerOpen(false)} onShare={onShare} />
-      <ContextFlow visible={contextOpen} onClose={() => setContextOpen(false)} />
+      <ContextFlow
+        visible={contextOpen}
+        onClose={() => setContextOpen(false)}
+        onOpenPassage={(key) => {
+          setContextOpen(false);
+          onOpenPassage(key);
+        }}
+      />
     </Screen>
   );
 }

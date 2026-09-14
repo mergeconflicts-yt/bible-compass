@@ -11,8 +11,7 @@ import { ArtworkCard } from '@/components/ArtworkCard';
 import { ComposerSheet } from '@/components/sheets/ComposerSheet';
 import { ContextFlow } from '@/components/sheets/ContextFlow';
 import type { ContinueReadingFixture, DailyVerseFixture } from '@/fixtures/home';
-import { translationAttribution } from '@/fixtures/demo';
-import { activeTranslation } from '@/content/bsb';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 export interface HomeViewProps {
   greeting: string;
@@ -40,6 +39,7 @@ export function HomeView({
   const { colors } = useTheme();
   const [composerOpen, setComposerOpen] = useState(false);
   const [contextOpen, setContextOpen] = useState(false);
+  const preferences = useOptionalPreferences();
 
   return (
     <Screen testID="home-screen">
@@ -55,7 +55,7 @@ export function HomeView({
           kicker="Verse of the day"
           verse={daily.text}
           reference={daily.referenceLabel}
-          attribution={translationAttribution}
+          attribution={preferences?.translation.attribution ?? daily.translationNote}
           testID="daily-artwork"
         />
       </View>
@@ -135,11 +135,18 @@ export function HomeView({
       </Pressable>
 
       <AppText variant="caption" color="textSecondary" style={styles.protoNote}>
-        {`Prototype Scripture is ${activeTranslation.short}. Telugu and Tamil buttons preview interface layout only.`}
+        {`Scripture in ${preferences?.translation.name ?? 'Berean Standard Bible'} — change it in Settings.`}
       </AppText>
 
       <ComposerSheet visible={composerOpen} onClose={() => setComposerOpen(false)} onShare={onShare} />
-      <ContextFlow visible={contextOpen} onClose={() => setContextOpen(false)} />
+      <ContextFlow
+        visible={contextOpen}
+        onClose={() => setContextOpen(false)}
+        onOpenPassage={(key) => {
+          setContextOpen(false);
+          onOpenPassage(key);
+        }}
+      />
     </Screen>
   );
 }

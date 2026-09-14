@@ -88,6 +88,7 @@ export const draftNotice =
   'DRAFT — AI-prepared and unreviewed. Requires named editorial review before production.';
 
 export interface DraftAnchor {
+  translation_id: string;
   verse_id: string;
   matched_text: string;
   entity_id: string;
@@ -95,16 +96,25 @@ export interface DraftAnchor {
   end_offset: number;
 }
 
-/** Anchors for one verse: validated phrase + target entity slug. */
+/**
+ * Anchors for one verse in one translation. Only BSB has validated anchors;
+ * other translations read Scripture without the context layer until
+ * per-translation anchors are reviewed.
+ */
 export function anchorsForVerse(
   bookOsis: string,
   chapter: number,
   verse: number,
+  translationId = 'BSB',
 ): Array<{ phrase: string; slug: string }> {
   const draft = getDraft();
   const anchors = (draft as unknown as { anchors?: DraftAnchor[] }).anchors ?? [];
   return anchors
-    .filter((anchor) => anchor.verse_id === `${bookOsis}.${chapter}.${verse}`)
+    .filter(
+      (anchor) =>
+        anchor.translation_id === translationId &&
+        anchor.verse_id === `${bookOsis}.${chapter}.${verse}`,
+    )
     .map((anchor) => ({ phrase: anchor.matched_text, slug: anchor.entity_id }));
 }
 

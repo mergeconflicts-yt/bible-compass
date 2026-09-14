@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { AppText } from './AppText';
+import { ReferenceText } from './ReferenceText';
 import { entityBySlug, roleBySlug, toBullets } from '@/content/neh2Draft';
 
 const TYPE_LABELS: Record<string, string> = {
@@ -84,9 +85,11 @@ export function placementForAnchor(
 export function PeekCard({
   slug,
   onFullCard,
+  onOpenPassage,
 }: {
   slug: string;
   onFullCard: (slug: string) => void;
+  onOpenPassage?: (passageKey: string) => void;
 }) {
   const { colors } = useTheme();
   const entity = entityBySlug(slug);
@@ -117,7 +120,7 @@ export function PeekCard({
           <AppText variant="title2">{entity.canonical_name}</AppText>
         </View>
       </View>
-      <AppText variant="body">{sentence}</AppText>
+      <ReferenceText text={sentence} onOpenPassage={onOpenPassage} variant="body" />
       <View style={[styles.divider, { backgroundColor: colors.border }]} />
       <View style={styles.foot}>
         <Pressable

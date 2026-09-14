@@ -67,7 +67,15 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
           setMapOpen(true);
         }}
       />
-      <TimelineSheet visible={timelineOpen} onClose={() => setTimelineOpen(false)} />
+      <TimelineSheet
+        visible={timelineOpen}
+        onClose={() => setTimelineOpen(false)}
+        onOpenPassage={(key) => {
+          setTimelineOpen(false);
+          onClose();
+          onOpenPassage?.(key);
+        }}
+      />
       <MapSheet visible={mapOpen} onClose={() => setMapOpen(false)} />
     </>
   );

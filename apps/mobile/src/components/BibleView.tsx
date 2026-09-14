@@ -7,8 +7,9 @@ import { AppText } from '@/components/AppText';
 import { Button } from '@/components/Button';
 import { Segmented } from '@/components/Segmented';
 import { NavRow } from '@/components/NavRow';
-import { activeTranslation } from '@/content/bsb';
-import { booksByTestament, bookByOsis, type BookEntry } from '@/content/books';
+import { useOptionalPreferences } from '@/theme/ThemeProvider';
+import { bookNameFor, booksFor } from '@/content/bsb';
+import type { BookEntry } from '@/content/books';
 
 export interface BibleViewProps {
   onOpenPassage: (passageKey: string) => void;
@@ -26,9 +27,13 @@ export function BibleView({ onOpenPassage }: BibleViewProps) {
   const { colors } = useTheme();
   const [testament, setTestament] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
+  const preferences = useOptionalPreferences();
+  const translationId = preferences?.translationId ?? 'BSB';
+  const registry = booksFor(translationId);
+  const testaments = preferences?.translation.testaments ?? ['Old Testament', 'New Testament'];
 
-  const books = booksByTestament(testament === 0 ? 'OT' : 'NT');
-  const selectedBook = selected ? bookByOsis(selected) : null;
+  const books = registry.filter((book) => book.testament === (testament === 0 ? 'OT' : 'NT'));
+  const selectedBook = selected ? (registry.find((book) => book.osis === selected) ?? null) : null;
 
   const openChapter = (osis: string, chapter: number) => {
     onOpenPassage(`${osis}.${chapter}`);
@@ -63,13 +68,13 @@ export function BibleView({ onOpenPassage }: BibleViewProps) {
         </AppText>
         <View style={[styles.versionPill, { borderColor: colors.border }]}>
           <AppText variant="label" color="textSecondary">
-            {activeTranslation.short}
+            {preferences?.translation.short ?? 'BSB'}
           </AppText>
         </View>
       </View>
 
       <Segmented
-        options={['Old Testament', 'New Testament']}
+        options={testaments}
         selected={testament}
         onSelect={selectTestament}
         accessibilityLabel="Testament"
@@ -84,7 +89,7 @@ export function BibleView({ onOpenPassage }: BibleViewProps) {
             CONTEXT READY
           </AppText>
           <AppText variant="title2" style={styles.readyTitle}>
-            Nehemiah 2
+            {`${bookNameFor('Neh', translationId)} 2`}
           </AppText>
           <AppText variant="body" color="textSecondary" style={styles.readyMeta}>
             Full orientation, profiles, map and timeline.
@@ -121,13 +126,13 @@ function SelectedBookCard({ book }: { book: BookEntry }) {
       <AppText variant="caption" color="accent">
         {book.chapters} CHAPTERS
       </AppText>
-      <AppText variant="title2" style={styles.readyTitle}>
-        {book.name}
-      </AppText>
-      <AppText variant="body" color="textSecondary">
-        {book.osis === 'Neh'
-          ? 'Nehemiah 2 carries full orientation, profiles, map and timeline. Other chapters are Scripture only.'
-          : 'Scripture is available for every chapter. Contextual layers are being added book by book.'}
+          <AppText variant="title2" style={styles.readyTitle}>
+            {book.name}
+          </AppText>
+          <AppText variant="body" color="textSecondary">
+            {book.osis === 'Neh'
+              ? `${bookNameFor('Neh', translationId)} 2 carries full orientation, profiles, map and timeline. Other chapters are Scripture only.`
+              : 'Scripture is available for every chapter. Contextual layers are being added book by book.'}
       </AppText>
     </View>
   );

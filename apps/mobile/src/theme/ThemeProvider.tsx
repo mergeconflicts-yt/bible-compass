@@ -2,10 +2,13 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from 'react';
+import { getActiveTranslation, selectTranslationId, translationById } from '@/content/bsb';
+import type { TranslationRecord } from '@/content/bsb';
 import { useColorScheme as useSystemScheme } from './useColorScheme';
 import { colorsFor, type ColorScheme, type ThemeColors } from './tokens';
 
@@ -23,19 +26,25 @@ interface PreferencesValue {
   toggleAppearance: () => void;
   scriptureSizeIndex: number;
   cycleScriptureSize: () => void;
+  translationId: string;
+  setTranslationId: (id: string) => void;
+  /** Resolved record for translationId; reactive, never stale. */
+  translation: TranslationRecord;
 }
 
 const PreferencesContext = createContext<PreferencesValue | null>(null);
 
 /**
- * Ephemeral UI preferences (appearance override, reading text size).
- * No persistence yet — preferences sync lands with the saved/account slices.
- * Components must keep working when no provider is mounted (tests).
+ * Ephemeral UI preferences (appearance override, reading text size,
+ * translation). No persistence yet — preferences sync lands with the
+ * saved/account slices. Components must keep working when no provider is
+ * mounted (tests).
  */
 export function AppPreferencesProvider({ children }: { children: ReactNode }) {
   const system = useSystemScheme();
   const [appearanceOverride, setAppearanceOverride] = useState<AppearanceOverride>(null);
   const [scriptureSizeIndex, setScriptureSizeIndex] = useState(0);
+  const [translationId, setTranslationIdState] = useState('BSB');
 
   const scheme: ColorScheme =
     appearanceOverride ?? (system === 'dark' ? 'dark' : 'light');
@@ -51,6 +60,14 @@ export function AppPreferencesProvider({ children }: { children: ReactNode }) {
     setScriptureSizeIndex((index) => (index + 1) % scriptureSizes.length);
   }, []);
 
+  const setTranslationId = useCallback((id: string) => {
+    setTranslationIdState((current) => (translationById(id) ? id : current));
+  }, []);
+
+  useEffect(() => {
+    selectTranslationId(translationId);
+  }, [translationId]);
+
   const value = useMemo<PreferencesValue>(
     () => ({
       scheme,
@@ -60,8 +77,11 @@ export function AppPreferencesProvider({ children }: { children: ReactNode }) {
       toggleAppearance,
       scriptureSizeIndex,
       cycleScriptureSize,
+      translationId,
+      setTranslationId,
+      translation: translationById(translationId) ?? getActiveTranslation(),
     }),
-    [scheme, appearanceOverride, toggleAppearance, scriptureSizeIndex, cycleScriptureSize],
+    [scheme, appearanceOverride, toggleAppearance, scriptureSizeIndex, cycleScriptureSize, translationId, setTranslationId],
   );
 
   return <PreferencesContext.Provider value={value}>{children}</PreferencesContext.Provider>;

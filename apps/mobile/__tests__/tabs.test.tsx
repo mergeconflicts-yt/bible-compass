@@ -93,4 +93,23 @@ describe('Settings tab', () => {
     fireEvent.press(screen.getByTestId('settings-appearance'));
     fireEvent.press(screen.getByTestId('settings-text-size'));
   });
+
+  it('lists every bundled translation and switches on selection', () => {
+    renderWithPreferences(<SettingsView />);
+    expect(screen.getByTestId('settings-translation-BSB')).toBeTruthy();
+    expect(screen.getByTestId('settings-translation-tam_irv')).toBeTruthy();
+    expect(screen.getByTestId('settings-translation-tel_irv')).toBeTruthy();
+    expect(screen.getByTestId('settings-translation-BSB').props.accessibilityState).toMatchObject({
+      selected: true,
+    });
+    fireEvent.press(screen.getByTestId('settings-translation-tam_irv'));
+    expect(screen.getByTestId('settings-translation-tam_irv').props.accessibilityState).toMatchObject(
+      {
+        selected: true,
+      },
+    );
+    expect(screen.getByTestId('settings-translation-BSB').props.accessibilityState).toMatchObject({
+      selected: false,
+    });
+  });
 });
