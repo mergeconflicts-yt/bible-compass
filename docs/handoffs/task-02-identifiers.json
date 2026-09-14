@@ -1,0 +1,118 @@
+{
+  "acceptance_criteria": {
+    "public_route_unchanged": "\u00a710 compatibility table shows existing strings unchanged",
+    "scripture_identifier_with_refsys": "Every persisted reference is (refsys,local) per \u00a75, e.g. refsys:eng-v22:Neh.2.4",
+    "source_vs_release": "source:stepbible:tipnr vs release:stepbible:tipnr@commit:sha-xxx per \u00a78",
+    "translation_work_vs_edition": "trans:bsb distinct from edition:bsb@20260912:sha-b2898c per \u00a77",
+    "typed_errors_for_task04": "\u00a712 taxonomy defines 9 error codes (empty, format, reversed, unsupported-book, unsupported-reference-system, mismatched-refsys-edition, unmapped, ambiguous-scope, invalid-unicode) for Task 04"
+  },
+  "approval_receipts_consumed": [
+    {
+      "gate": "A1",
+      "receipt_id": "gate-A1-v1-20260914T115751Z",
+      "sha256": "4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435"
+    }
+  ],
+  "attempt_id": "task:canonical-id:02:attempt-1",
+  "automated_tests_added_or_changed": "None \u2014 executable tests for qualified parser will be added in Task 04 per plan; existing reference.test.ts still passes.",
+  "commands_executed": [
+    {
+      "command": "npm --prefix apps/mobile test reference.test.ts",
+      "exit_code": 0,
+      "output": "PASS 11 tests (verse, chapter, range, empty/format/reversed/unsupported-book, formatReference). Existing bare-parser tests still pass; qualified parser to be added in Task 04."
+    },
+    {
+      "command": "git diff",
+      "exit_code": 0,
+      "output": "diff docs/CANONICAL_IDENTIFIERS.md \u2014 updated \u00a71-13 with qualified keys and compatibility table"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-02-attempt-1-20260914T120106Z"
+  },
+  "database_migrations": "None \u2014 Task 03 will propose DDL, Task 17 will migrate",
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-02-20260914T120106Z",
+    "envelope_sha256": "c31fb51e358e9a2905683149bf8ce555fd064fe367bf6d9126481d34c1eb7ed3",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "files_changed": [
+    {
+      "path": "docs/CANONICAL_IDENTIFIERS.md",
+      "purpose": "Rewrote from PROPOSED to APPROVED contract per Gate A1: added canon/refsys/work/scope/translation-edition/source-release/candidate grammars, qualified envelopes, external namespaces, compatibility table, split/merge/reordered/ambiguous examples, error taxonomy",
+      "status": "M"
+    }
+  ],
+  "files_not_changed": [
+    "apps/mobile/src/lib/reference.ts (unchanged in this task, will implement Task 04)",
+    "apps/mobile/app/passage/[reference].tsx (routes preserved)"
+  ],
+  "follow_up": [
+    "Task 03 to use these grammars for concrete DDL (translation_works/translation_editions/reference_systems/reference_units/reference_mappings/scope)"
+  ],
+  "generated_at": "2026-09-14T12:03:58.705385Z",
+  "identifier_compatibility_table": "\u00a710 table preserves Neh.2, Neh.2.4, Neh.2.1-Neh.2.8, /passage/Neh.2.1-Neh.2.8, /daily/*",
+  "known_limitations": [
+    "Parser implementation still bare-verse (Task 04 will add qualified resolution); this task is doc-only as required"
+  ],
+  "manual_checks": {
+    "completed": [],
+    "not_run": [
+      "Task 04 will add property-style boundary tests"
+    ]
+  },
+  "no_content_approved_or_published_by_ai": true,
+  "output_artifacts": [
+    {
+      "canon_sha256": "91d92f2fed8bbf70a31bf6ffc2a6588fd5758e8c1b1509ce19a49c5d1831e9e5",
+      "data_kind": "synthetic (AI-prepared spec, no production data)",
+      "key": "spec:canonical-identifiers",
+      "path": "docs/CANONICAL_IDENTIFIERS.md",
+      "sha256": "91d92f2fed8bbf70a31bf6ffc2a6588fd5758e8c1b1509ce19a49c5d1831e9e5",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:A1",
+      "receipt_id": "gate-A1-v1-20260914T115751Z",
+      "sha256": "4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435"
+    }
+  ],
+  "repository_revision_after": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-6e9922bf",
+    "receipt_sha256": "33988bff2913d8fa11b0332d132da8f231d0a0474382cbdf93e2f0ef2863ab8c",
+    "status": "M docs/CANONICAL_IDENTIFIERS.md\n M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+  },
+  "repository_revision_before": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-6e9922bf",
+    "receipt_sha256": "33988bff2913d8fa11b0332d132da8f231d0a0474382cbdf93e2f0ef2863ab8c",
+    "status": "M docs/CANONICAL_IDENTIFIERS.md\n M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+  },
+  "result": "PASS",
+  "rls_permissions_config": "None",
+  "source_artifacts": {
+    "note": "No source acquisition; identifier contract is translation-independent"
+  },
+  "static_example_review": {
+    "all_key_grammars": "canon:prot-66, refsys:eng-v22/tel-v1/tam-v1, work:Neh:prot-66, local Neh.2.4/range, scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20, trans:bsb, edition:bsb@20260912:sha-b2898c, source:stepbible:tipnr, release:stepbible:tipnr@xxx:sha-yyy, candidate:person:refsys:eng-v22:artaxerxes-i \u2014 all exemplified in \u00a72-9",
+    "old_route_compatibility": "Compatibility table \u00a710 confirms /passage/Neh.2.1-Neh.2.8 and Neh.2/Neh.2.4 remain valid presentation identifiers",
+    "split_merge_examples": "Split: eng-v22:Neh.2.4 split\u2192 tel-v1:Neh.2.4a+b; Merge: eng-v22:Neh.2.3+2.4 merge\u2192 tam-v1:Neh.2.3; Reordered: Ps.10.5 renumbered; Ambiguous: Neh.2 chapter vs scope disambiguation \u2014 all in \u00a711",
+    "unicode_ascii": "ASCII-only for canon/refsys/slug per \u00a711 Unicode/ASCII \u2014 rejection of fullwidth dot and non-ASCII book codes specified"
+  },
+  "task_attempt": "task:canonical-id:02:attempt-1",
+  "task_id": "02",
+  "task_title": "Canonical identifier contract",
+  "user_visible_outcome": "Canonical identifier documentation contract approved: qualified (refsys,local) storage identity, work/edition and source/release distinct, public routes preserved, typed-error taxonomy for Task 04."
+}

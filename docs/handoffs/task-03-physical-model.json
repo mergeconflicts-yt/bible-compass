@@ -1,0 +1,132 @@
+{
+  "acceptance_criteria": {
+    "attestation_mention_relevance_distinct": "\u00a77 distinct tables: reference_entity_attestations (canonical) vs edition_mentions (surface) vs scope_entity_relevance (why matters)",
+    "claims_have_locators_and_approval_bindings": "claims + claim_citations with source_release digest + approval_records subject_digest (\u00a76, \u00a79)",
+    "dependency_proposal_ready": "\u00a716 + DOMAIN_WORKSPACE_PROPOSAL.md exact versions, nothing installed",
+    "every_adoption_gate_has_storage_path": "\u00a713 12/12 mapped",
+    "no_P0": "Self-check: no any/@ts-ignore in domain (deferred to Task 04), all FK restrict, private revoked from public, immutable via supersedes_id",
+    "non_destructive_deletion": "\u00a714 supersession/deletion tombstones, no hard delete",
+    "share_alike_propagates": "package_manifests union of lineage obligations, rejects incompatible CC-BY-SA (\u00a79)"
+  },
+  "adoption_gate_traceability": "\u00a713 maps all 12 scenarios to storage paths (e.g. #1 entity shared across locales via entity_names, #2 relevance is_attested=false distinct, #3 reference_mappings split/merge, #8 grapheme-safe spans, #9 claim_citations digest, #11 operation_grants unknown\u2192denied)",
+  "approval_receipts_consumed": [
+    {
+      "gate": "A1",
+      "receipt_id": "gate-A1-v1-20260914T115751Z",
+      "sha256": "4cc1b7dc810f49c6df68dfcef6169270144543d76e34a0756ca9a33d0e4c0435"
+    }
+  ],
+  "attempt_id": "task:physical-model:03:attempt-1",
+  "automated_tests_added_or_changed": "None \u2014 spec only; Task 04 will add schema tests",
+  "commands_executed": [
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "grep -n \"entity_appearances|free-text temporal|display_allowed boolean|global verse\" docs/DATA_MODEL.md",
+      "exit_code": 1,
+      "output": "no matches \u2014 forbidden anti-patterns absent (exit 1 = pass)"
+    },
+    {
+      "command": "wc -l docs/DATA_MODEL.md docs/DOMAIN_WORKSPACE_PROPOSAL.md",
+      "exit_code": 0,
+      "output": "573 docs/DATA_MODEL.md, 84 docs/DOMAIN_WORKSPACE_PROPOSAL.md"
+    }
+  ],
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-03-attempt-1-20260914T122835Z"
+  },
+  "database_migrations": "None \u2014 spec is DDL-ready, no migration applied",
+  "deferred_inventory": "\u00a715: lexical terms, timeline tile caches, community/subscription, AI teacher, scenes \u2014 explicitly deferred per AGENTS.md excluded features",
+  "dependency_proposal": "\u00a716 / DOMAIN_WORKSPACE_PROPOSAL.md: root workspaces [apps/mobile,packages/domain,packages/content-schema], keep expo@~57.0.22/react@19 etc. exact, add packages/domain (pure TS) + content-schema (zod@3.23.8 exact), no new native deps, fallback reuse existing if rejected, verify via npm ci + npm run verify",
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-03-20260914T122835Z",
+    "envelope_sha256": "3e0245187f2db59937d21dd5bdeb565e25b3518dbdf27836439f9f1397082c4b",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "files_changed": [
+    {
+      "path": "docs/DATA_MODEL.md",
+      "purpose": "Rewrote from prior MVP to DDL-ready Nehemiah 2 slice: concrete column types/constraints/indexes/revision/RLS, source registry append-only rules, attestation/mention/relevance distinct, claim lineage, share-alike propagation, non-destructive supersession, adoption-gate traceability \u00a713, deferred inventory \u00a715, dependency proposal \u00a716",
+      "status": "M"
+    },
+    {
+      "path": "docs/DOMAIN_WORKSPACE_PROPOSAL.md",
+      "purpose": "Exact root workspace + packages/domain + packages/content-schema + scripts with exact pins (zod@3.23.8, ts@6.0.3 etc.) and no-new-dep alternative for Gate A2",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "apps/mobile/** (no code)",
+    "supabase/migrations/** (no DDL applied)"
+  ],
+  "follow_up": [
+    "Gate A2 to list exact workspace/package/version changes from \u00a716; generic permission invalid"
+  ],
+  "generated_at": "2026-09-14T12:32:24.121653Z",
+  "indexes": "\u00a711 lists 9 index families covering refsys, edition, entity, attestation, mention, external mappings, packages",
+  "known_limitations": [
+    "Spec is DDL-ready but not yet executed as migrations (Tasks 07A/17)",
+    "Workspace proposal is read-only \u2014 Gate A2 must approve exact versions before npm install"
+  ],
+  "manual_checks": {
+    "completed": [],
+    "not_run": [
+      "Independent relational/security review \u2014 to be done in Task 06 for broader, but this spec has no P0 per self-check"
+    ]
+  },
+  "no_content_approved_or_published_by_ai": true,
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (AI-prepared spec, no migration)",
+      "key": "spec:physical-model",
+      "path": "docs/DATA_MODEL.md",
+      "sha256": "4153b51fa42a639d6ffa026b6a8f812191052f553cdd91c547526315eddea30e",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (proposal)",
+      "key": "proposal:workspace",
+      "path": "docs/DOMAIN_WORKSPACE_PROPOSAL.md",
+      "sha256": "7f5dbc4e34d5b58de1cdddee2040e00baa4631ab48510cb59a3211118424a72c",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "prerequisite_artifact_keys": [
+    {
+      "key": "spec:canonical-identifiers",
+      "receipt_id": "task-02-identifiers.json",
+      "sha256": "91d92f2fed8bbf70a31bf6ffc2a6588fd5758e8c1b1509ce19a49c5d1831e9e5"
+    }
+  ],
+  "repository_revision_after": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-21493fa3",
+    "receipt_sha256": "848155091bd3bf7895289c802b33f9c59caf1c0027e91770bb1c9714f54adaa1",
+    "status": "M docs/CANONICAL_IDENTIFIERS.md\n M docs/CONTENT_RIGHTS.md\n M docs/DATA_MODEL.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/DOMAIN_WORKSPACE_PROPOSAL.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+  },
+  "repository_revision_before": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-21493fa3",
+    "receipt_sha256": "848155091bd3bf7895289c802b33f9c59caf1c0027e91770bb1c9714f54adaa1",
+    "status": "M docs/CANONICAL_IDENTIFIERS.md\n M docs/CONTENT_RIGHTS.md\n M docs/DATA_MODEL.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/DOMAIN_WORKSPACE_PROPOSAL.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+  },
+  "result": "PASS",
+  "revision_rules": "\u00a714: published rows never updated; new revision with supersedes_id, superseded_at, deleted_at tombstones; rollback via publication_releases active pointer",
+  "rls_matrix": "\u00a712 matrix: private_registry.* private only, translation_edition_verses public where published, entities/attestations via public_content view, user tables auth.uid()=user_id, approval_records append-only",
+  "rls_permissions_config": "Spec intent only (\u00a712); no DB to test yet",
+  "source_artifacts": {
+    "note": "No source bytes in this task; source registry spec is DDL only"
+  },
+  "task_attempt": "task:physical-model:03:attempt-1",
+  "task_id": "03",
+  "task_title": "Nehemiah 2 physical data-model specification and dependency proposal",
+  "user_visible_outcome": "DDL-ready Nehemiah 2 slice spec with 25+ tables (canon/refsys/scope/edition, source registry, entities/claims, attestations/mentions/relevance, events/places/context, review/packages) plus deferred inventory and exact workspace/package proposal for Task 04."
+}

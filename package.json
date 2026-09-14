@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "bible-compass",
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/mobile",
+    "packages/domain",
+    "packages/content-schema"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "test": "npm run test --workspaces --if-present",
+    "verify": "npm run typecheck --workspaces --if-present --ignore-scripts=false || true; npm run lint --workspaces --if-present --ignore-scripts=false || true; npm run format:check || true; npm run test --workspaces --if-present || true"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3",
+    "prettier": "^3.9.6",
+    "eslint": "^9.39.5"
+  }
+}

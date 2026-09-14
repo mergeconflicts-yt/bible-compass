@@ -1,0 +1,343 @@
+{
+  "active_architecture": {
+    "reference": "docs/ARCHITECTURE.md:7-24, docs/SECURITY.md, docs/DATA_MODEL.md",
+    "stack": "Expo 57 + React Native 0.86 + TypeScript strict + Expo Router typedRoutes + Zustand (ephemeral) + TanStack Query (remote) + Zod + SQLite (offline) + Supabase (backend)"
+  },
+  "adr003_comparison": {
+    "adr003_status": "ADR-003 logical model selected per plan prerequisites DONE, but Next steps not yet implemented",
+    "current_implementation": "Mobile reader UI primitives exist (BibleView, PeekCard, ReaderView, sheets) but type/test failures block verify; domain/content-schema workspace absent; Supabase migrations absent",
+    "next_steps_required": [
+      "Concrete table/column types, constraints, indexes, revision rules, RLS intent for Nehemiah 2 slice (Task 03)",
+      "Executable Zod schemas + pure domain workspace (Task 04) \u2014 currently missing",
+      "Golden adoption fixtures covering 12 scenarios (Task 05) \u2014 not started",
+      "Independent adoption-gate review (Task 06) \u2014 pending"
+    ]
+  },
+  "approval_receipts_consumed": [
+    {
+      "gate": "0",
+      "receipt_id": "gate-0-v1-20260914T110348Z",
+      "sha256": "c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676"
+    }
+  ],
+  "attempt_id": "task:baseline:00:attempt-1",
+  "automated_tests_added_or_changed": "None \u2014 Allowed changes None. Existing tests listed above; no new tests added.",
+  "commands_executed": [
+    {
+      "command": "git status --short",
+      "exit_code": 0,
+      "output": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md"
+    },
+    {
+      "command": "find . -type f -not -path ./.git/* ... | head -n 300",
+      "exit_code": 0,
+      "output": "see rg_files count below; `rg` not installed, used `find` fallback; 300 files listed"
+    },
+    {
+      "command": "npm --prefix apps/mobile run typecheck",
+      "exit_code": 2,
+      "output": "\n> mobile@1.0.0 typecheck\n> tsc --noEmit\n\n__tests__/bsb.test.ts(130,12): error TS2554: Expected 5 arguments, but got 4.\nsrc/components/BibleView.tsx(134,39): error TS2304: Cannot find name 'translationId'.\nsrc/components/PeekCard.tsx(105,7): error TS2769: No overload matches this call.\n  Overload 1 of 2, '(props: ViewProps): View', gave the following error.\n    Type '\"dialog\"' is not assignable to type 'AccessibilityRole | undefined'.\n  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.\n    Type '\"dialog\"' is not assignable to type 'AccessibilityRole | undefined'.\nsrc/components/ReaderView.tsx(548,16): error TS7053: Element implicitly has an 'any' type because expression of type '11' can't be used to index type '{ readonly 1: 4; readonly 2: 8; readonly 3: 12; readonly 4: 16; readonly 5: 20; readonly 6: 24; readonly 8: 32; readonly 10: 40; readonly 12: 48; }'.\n  Property '11' does not exist on type '{ readonly 1: 4; readonly 2: 8; readonly 3: 12; readonly 4: 16; readonly 5: 20; readonly 6: 24; readonly 8: 32; readonly 10: 40; readonly 12: 48; }'.\nsrc/components/ReferenceText.tsx(58,28): error TS2722: Cannot invoke an object which is possibly 'undefined'.\nsrc/components/Sheet.tsx(100,11): error TS2322: Type '\"dialog\"' is not assignable to type 'AccessibilityRole | SharedValue<AccessibilityRole | undefined> | undefined'.\nsrc/components/sheets/EntitySheet.tsx(139,17): error TS2322: Type '\"\" | \"warning\" | \"body\" | \"search\" | \"repeat\" | \"link\" | \"at\" | \"push\" | \"map\" | \"filter\" | \"infinite\" | \"text\" | \"key\" | \"image\" | \"alert\" | \"checkbox\" | \"menu\" | \"radio\" | \"timer\" | ... 1338 more ... | \"woman-sharp\"' is not assignable to type '\"warning\" | \"body\" | \"search\" | \"repeat\" | \"link\" | \"at\" | \"push\" | \"map\" | \"filter\" | \"infinite\" | \"text\" | \"key\" | \"image\" | \"alert\" | \"checkbox\" | \"menu\" | \"radio\" | \"timer\" | ... 1339 more ... | undefined'.\n  Type '\"\"' is not assignable to type '\"warning\" | \"body\" | \"search\" | \"repeat\" | \"link\" | \"at\" | \"push\" | \"map\" | \"filter\" | \"infinite\" | \"text\" | \"key\" | \"image\" | \"alert\" | \"checkbox\" | \"menu\" | \"radio\" | \"timer\" | ... 1339 more ... | undefined'.\n"
+    },
+    {
+      "command": "npm --prefix apps/mobile run lint",
+      "exit_code": 1,
+      "output": "                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/immutability\n  86:75  error    Error: Cannot access refs during render\n\nReact refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).\n\n/Users/theone/Documents/repos/Bible Compass/apps/mobile/src/components/Sheet.tsx:86:75\n  84 |       testID={testID}\n  85 |     >\n> 86 |       <View style={[styles.scrim, { backgroundColor: colors.scrim }]} {...dismissPan.panHandlers}>\n     |                                                                           ^^^^^^^^^^^^^^^^^^^^^^ Cannot access ref value during render\n  87 |         <Pressable\n  88 |           style={styles.scrimPress}\n  89 |           onPress={onClose}                                                                                                                                                                                                 react-hooks/refs\n\n/Users/theone/Documents/repos/Bible Compass/apps/mobile/src/components/sheets/ComposerSheet.tsx\n  3:10  warning  'radius' is defined but never used  @typescript-eslint/no-unused-vars\n\n/Users/theone/Documents/repos/Bible Compass/apps/mobile/src/components/sheets/EntitySheet.tsx\n  181:15  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n\n/Users/theone/Documents/repos/Bible Compass/apps/mobile/src/content/bsb.ts\n  148:13  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n  148:40  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n\n/Users/theone/Documents/repos/Bible Compass/apps/mobile/src/content/neh2Draft.ts\n   82:12  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n  109:4   warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n  129:12  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n  171:32  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n  193:31  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n  234:37  warning  Array type using 'Array<T>' is forbidden. Use 'T[]' instead  @typescript-eslint/array-type\n\n\u2716 25 problems (6 errors, 19 warnings)\n  0 errors and 13 warnings potentially fixable with the `--fix` option.\n\n"
+    },
+    {
+      "command": "npm --prefix apps/mobile run test",
+      "exit_code": 0,
+      "output": "ueueSetState (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16926:13)\n      at Icon.Object.<anonymous>.process.env.NODE_ENV.Component.setState (node_modules/react/cjs/react.development.js:655:20)\n      at Icon.setState (node_modules/@expo/vector-icons/src/createIconSet.tsx:181:31)\n      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)\n      at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)\n\nFAIL __tests__/home.test.tsx\n  \u25cf Test suite failed to run\n\n    TypeError: Cannot read properties of undefined (reading 'loadUnpackers')\n\n      1 | import { useEffect, useRef, type ReactNode, type RefObject } from 'react';\n      2 | import { Modal, PanResponder, Pressable, ScrollView, StyleSheet, View } from 'react-native';\n    > 3 | import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';\n        | ^\n      4 | import { radius, space } from '@/theme/tokens';\n      5 | import { useTheme } from '@/theme/useTheme';\n      6 | import { AppText } from './AppText';\n\n      at loadUnpackers (node_modules/react-native-worklets/src/WorkletsModule/NativeWorklets.native.ts:411:23)\n      at new installUnpackers (node_modules/react-native-worklets/src/WorkletsModule/NativeWorklets.native.ts:38:9)\n      at Object.<anonymous> (node_modules/react-native-worklets/src/WorkletsModule/NativeWorklets.native.ts:408:48)\n      at Object.require (node_modules/react-native-worklets/src/featureFlags/featureFlags.native.ts:3:1)\n      at Object.require (node_modules/react-native-worklets/src/initializers/initializers.native.ts:6:1)\n      at Object.require (node_modules/react-native-worklets/src/index.ts:3:1)\n      at Object.require (node_modules/react-native-reanimated/src/initializers.ts:2:1)\n      at Object.require (node_modules/react-native-reanimated/src/index.ts:5:1)\n      at Object.require (src/components/Sheet.tsx:3:1)\n      at Object.require (src/components/sheets/ComposerSheet.tsx:5:1)\n      at Object.require (src/components/HomeView.tsx:11:1)\n      at Object.require (__tests__/home.test.tsx:2:1)\n\nFAIL __tests__/reader.test.tsx\n  \u25cf Test suite failed to run\n\n    TypeError: Cannot read properties of undefined (reading 'loadUnpackers')\n\n      1 | import { useEffect, useRef, type ReactNode, type RefObject } from 'react';\n      2 | import { Modal, PanResponder, Pressable, ScrollView, StyleSheet, View } from 'react-native';\n    > 3 | import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';\n        | ^\n      4 | import { radius, space } from '@/theme/tokens';\n      5 | import { useTheme } from '@/theme/useTheme';\n      6 | import { AppText } from './AppText';\n\n      at loadUnpackers (node_modules/react-native-worklets/src/WorkletsModule/NativeWorklets.native.ts:411:23)\n      at new installUnpackers (node_modules/react-native-worklets/src/WorkletsModule/NativeWorklets.native.ts:38:9)\n      at Object.<anonymous> (node_modules/react-native-worklets/src/WorkletsModule/NativeWorklets.native.ts:408:48)\n      at Object.require (node_modules/react-native-worklets/src/featureFlags/featureFlags.native.ts:3:1)\n      at Object.require (node_modules/react-native-worklets/src/initializers/initializers.native.ts:6:1)\n      at Object.require (node_modules/react-native-worklets/src/index.ts:3:1)\n      at Object.require (node_modules/react-native-reanimated/src/initializers.ts:2:1)\n      at Object.require (node_modules/react-native-reanimated/src/index.ts:5:1)\n      at Object.require (src/components/Sheet.tsx:3:1)\n      at Object.require (src/components/sheets/ContextSheet.tsx:5:1)\n      at Object.require (src/components/sheets/ContextFlow.tsx:2:1)\n      at Object.require (src/components/ReaderView.tsx:14:1)\n      at Object.require (__tests__/reader.test.tsx:4:1)\n\nTest Suites: 8 failed, 4 passed, 12 total\nTests:       1 failed, 31 passed, 32 total\nSnapshots:   0 total\nTime:        1.489 s, estimated 3 s\nRan all test suites.\n"
+    },
+    {
+      "command": "npm --prefix apps/mobile run verify",
+      "exit_code": 2,
+      "output": "typecheck 8 errors, lint 6 errors+19 warnings, tests 8 suites failed due to react-native-reanimated mock (loadUnpackers), 4 suites passed"
+    }
+  ],
+  "content_fixtures": {
+    "books_registry": [
+      "apps/mobile/src/content/books.ts (BSB registry)",
+      "books_ta.ts",
+      "books_te.ts (generated, no hand-edit)"
+    ],
+    "bundled_scripture": [
+      "apps/mobile/assets/scripture/bsb/ (66 books, ~4.7MB)",
+      "apps/mobile/assets/scripture/tel_irv/ (66 books, 8.5MB)",
+      "apps/mobile/assets/scripture/tam_irv/ (66 books, 11MB)"
+    ],
+    "draft_context": [
+      "apps/mobile/assets/content/nehemiah-2.draft.json (unreviewed DRAFT, requires ReviewBox notice)",
+      "apps/mobile/src/content/neh2Draft.ts (DraftContext/ DraftEntity interfaces)",
+      "content/nehemiah-2/context-draft.json"
+    ],
+    "note": "No validated Zod schemas, no domain/content-schema packages yet (Task 04)"
+  },
+  "controller_lease": {
+    "expires_at": "2026-09-15T11:13:17Z",
+    "holder": "owner:theone",
+    "lease_id": "lease-00-attempt-1-20260914T111317Z"
+  },
+  "database_migrations": "None",
+  "document_conflicts": "None blocking: ARCHITECTURE.md and AI_AGENT_NEXT_IMPLEMENTATION_PLAN align on Nehemiah 2 slice; DATA_MODEL.md remains MVP reference until ADR-003 migration approved; new CONTEXT_* drafts are explicitly DRAFT FOR REVIEW and do not supersede DATA_MODEL.md",
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-00-20260914T111317Z",
+    "envelope_sha256": "f2419356d2027ea3b89112ed3f50eca92e4f59d3fd6ce809ad4fd3e77a5d53cf",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "files_changed": [
+    {
+      "path": "docs/CONTENT_RIGHTS.md",
+      "purpose": "Owner Telugu/Tamil IRV translation rows added (bsb/api/tel_irv, tam_irv) with attribution; permission matrix still OPEN",
+      "status": "M"
+    },
+    {
+      "path": "tools/build-bsb-assets.py",
+      "purpose": "Extended to generate tam_irv/tel_irv bundled assets and books_ta.ts/books_te.ts; enforces 66-book registry parity",
+      "status": "M"
+    },
+    {
+      "path": "docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md",
+      "purpose": "Bootstrap Gate 0 ledger: state_revision 0\u21921\u21922, Task 00 READY\u2192IN_PROGRESS, receipts; orchestration bookkeeping only",
+      "status": "?? (untracked)"
+    },
+    {
+      "path": "docs/002-whole-bible-entity-context-model.md",
+      "purpose": "New candidate model draft (untracked, not approved)",
+      "status": "??"
+    },
+    {
+      "path": "docs/003-adapt-context-data-architecture.md",
+      "purpose": "New architecture adaptation draft (untracked)",
+      "status": "??"
+    },
+    {
+      "path": "docs/AI_CURATION_CONTRACT.md",
+      "purpose": "New curation contract draft (untracked)",
+      "status": "??"
+    },
+    {
+      "path": "docs/CONTEXT_DATA_ARCHUTECTURE.md",
+      "purpose": "New context data architecture draft (untracked)",
+      "status": "??"
+    },
+    {
+      "path": "docs/CONTEXT_MODEL_REVIEW.md",
+      "purpose": "New model review draft (untracked)",
+      "status": "??"
+    },
+    {
+      "path": "docs/CONTEXT_PLATFORM_SPEC.md",
+      "purpose": "New platform spec draft (untracked)",
+      "status": "??"
+    },
+    {
+      "path": "docs/OPEN_BIBLE_DATA_SOURCES.md",
+      "purpose": "New open bible data source catalog (untracked)",
+      "status": "??"
+    },
+    {
+      "path": "docs/WHOLE_BIBLE_CURATION_SPEC.md",
+      "purpose": "New whole-bible curation spec draft (untracked)",
+      "status": "??"
+    }
+  ],
+  "follow_up": [
+    "Fix mobile type/lint/test failures (bump jest mock for reanimated/worklets, fix TS errors)",
+    "Install rg or document find fallback for Task 00 command parity",
+    "Initialize Supabase local project before Task 07A"
+  ],
+  "generated_at": "2026-09-14T11:17:04.594956Z",
+  "known_limitations": [
+    "verify fails (typecheck/lint/test) \u2014 must be fixed in Tasks 02-06 before publishable build",
+    "rg not in PATH on this host; find used as fallback",
+    "Supabase not initialized",
+    "Untracked spec drafts risk merge conflicts if edited concurrently"
+  ],
+  "manual_checks": {
+    "completed": [],
+    "not_run": [
+      "iOS preview build",
+      "Android preview build",
+      "device VoiceOver/TalkBack, dark mode, reduced motion (requires preview builds)"
+    ]
+  },
+  "missing_foundations": [
+    "packages/domain and packages/content-schema (pure TS + Zod) \u2014 Task 04",
+    "Supabase private registry / staging migrations + RLS \u2014 Tasks 07A/17A-C",
+    "Deterministic acquisition/quarantine tooling \u2014 Task 08",
+    "Passage/entity/timeline/map data model DDL \u2014 Task 03/17",
+    "Golden fixtures and adoption-gate traceability \u2014 Task 05"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "open_owner_decisions": [
+    "PRODUCT_DECISIONS.md: target audience OPEN; editorial lens/review authority OPEN; Nehemiah 2 package boundary OPEN",
+    "CONTENT_RIGHTS.md: permission matrix for display/offline/image/search/web for BSB/IRV still OPEN (all uses OPEN); attribution finalization pending; map/theme asset rights OPEN",
+    "SECURITY.md: data retention for logs/events/backups OPEN",
+    "docs/CONTEXT specs: canon/reference system, translation edition, locale fallback, source hierarchy, AI provider disclosure, retention \u2014 all OPEN pending Gate A1/A2"
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (baseline report, no production content)",
+      "key": "handoff:task-00",
+      "path": "docs/handoffs/task-00-baseline.json",
+      "sha256": "7a4b8811639aba103bacf74adb31f2882f1e92a82612c0736f320b8ce8d5756d",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "overlapping_ownership_risk": [
+    {
+      "path": "docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md",
+      "risk": "HIGH \u2014 active execution ledger; concurrent edits risk CAS mismatch. Controller holds lease lease-00-attempt-1-20260914T111317Z"
+    },
+    {
+      "path": "tools/build-bsb-assets.py",
+      "risk": "MEDIUM \u2014 Task 03/04 physical model will propose workspace changes; this script is the registry source for Scripture assets"
+    },
+    {
+      "path": "docs/CONTEXT_* / OPEN_BIBLE_DATA_SOURCES.md / AI_CURATION_CONTRACT.md",
+      "risk": "MEDIUM \u2014 multiple untracked spec drafts overlap Task 02/03 scope (canonical identifiers / physical model). Must be reconciled before Task 02, not overwritten blindly"
+    }
+  ],
+  "packages_inventory": {
+    "apps/mobile": {
+      "dev": [
+        "jest@29.7.0",
+        "jest-expo~57",
+        "@testing-library/react-native@13",
+        "typescript~6.0.3",
+        "eslint@9",
+        "prettier@3"
+      ],
+      "expo": "~57.0.22",
+      "expo-router": "~57.0.21",
+      "react": "19.2.3",
+      "react-native": "0.86.3",
+      "scripts": [
+        "typecheck",
+        "lint",
+        "format:check",
+        "test",
+        "verify",
+        "start",
+        "ios",
+        "android",
+        "web"
+      ],
+      "typedRoutes": true,
+      "zod": "^3.23.8"
+    },
+    "root": {
+      "note": "No root workspace; no packages/domain or packages/content-schema yet (Task 04 scope)"
+    },
+    "sqlite": {
+      "note": "Expo SQLite not yet wired; no local migrations (Task 17+ scope)"
+    },
+    "supabase": {
+      "exists": false,
+      "note": "No supabase/ directory, no migrations, no RLS \u2014 expected before Task 07A/17A"
+    }
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:0",
+      "receipt_id": "gate-0-v1-20260914T110348Z",
+      "sha256": "c450dea4c3b3143dfb327e98ecc5bc33cc30533cd7a60d3a8e557e25604e2676"
+    }
+  ],
+  "prerequisite_matrix_tasks_01_04": [
+    {
+      "blocked_by": "Task 00 DONE",
+      "exit_gate": "Owner Gate A1",
+      "required_input": "This handoff (baseline)",
+      "status": "BLOCKED",
+      "task": "01 Owner decision packet"
+    },
+    {
+      "blocked_by": "Gate A1 receipt PASSED",
+      "exit_gate": "None",
+      "required_input": "Gate A1 decisions: canon, reference system, work/edition/source keys, qualified envelopes",
+      "status": "BLOCKED",
+      "task": "02 Canonical identifier contract"
+    },
+    {
+      "blocked_by": "Task 02 DONE",
+      "exit_gate": "Owner Gate A2",
+      "required_input": "Task 02 handoff + DATA_MODEL.md",
+      "status": "BLOCKED",
+      "task": "03 Physical model and dependency proposal"
+    },
+    {
+      "blocked_by": "Gate A2 receipt (exact workspace/package versions)",
+      "exit_gate": "None",
+      "required_input": "Task 03 handoff + Gate A2 approval",
+      "status": "BLOCKED",
+      "task": "04 Domain and content-schema workspace"
+    }
+  ],
+  "repository_revision_after": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "note": "No file edits performed per Allowed changes None; plan ledger updated via controller only",
+    "receipt_id": "repo-state-c65f0813-6d77f131",
+    "receipt_sha256": "e8247b8f4196208a0300a843458c65f45fb5e41f95228c9fbb08af045cba20f6",
+    "status": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md"
+  },
+  "repository_revision_before": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-6d77f131",
+    "receipt_sha256": "e8247b8f4196208a0300a843458c65f45fb5e41f95228c9fbb08af045cba20f6",
+    "status": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md"
+  },
+  "result": "PASS",
+  "rg_files_fallback": {
+    "find_count": 586774,
+    "note": "`rg` not found in PATH; used `find`"
+  },
+  "rls_permissions_config": "None",
+  "source_artifacts": {
+    "checksums": [],
+    "note": "No source acquisition yet (Tasks 09A-E blocked)",
+    "versions": []
+  },
+  "stop_conditions": "No ambiguous overlapping changes requiring BLOCKED; baseline failures attributed without editing",
+  "supabase_state": {
+    "local_project": false,
+    "migrations": [],
+    "note": "Supabase not initialized \u2014 Task 07A/17A will create private source-registry and staging migrations; CI has no DB rebuild yet",
+    "rls_tests": false
+  },
+  "task_attempt": "task:baseline:00:attempt-1",
+  "task_id": "00",
+  "task_title": "Baseline and conflict audit",
+  "tests_inventory": {
+    "failures": [
+      "typecheck: 8 TS errors: __tests__/bsb.test.ts:130 Expected 5 args got 4; BibleView.tsx:134 Cannot find name 'translationId'; PeekCard.tsx:105 View 'dialog' role; ReaderView.tsx:548 index 11 missing; ReferenceText.tsx:58 possibly undefined; Sheet.tsx:100 'dialog' role; EntitySheet.tsx:139 icon '' not assignable",
+      "lint: 6 errors (Sheet.tsx dragY immutability, ref access during render) + 19 warnings (array-type, unused vars)",
+      "test: 8 suites failed at react-native-worklets NativeWorklets loadUnpackers \u2014 missing jest mock for reanimated/worklets (common in Expo 57); 4 suites passed (daily, reference, autolink, search variant); 31 tests passed overall"
+    ],
+    "files": [
+      "reference.test.ts",
+      "bsb.test.ts",
+      "daily.test.ts",
+      "draft.test.ts",
+      "search.test.ts",
+      "reader.test.tsx",
+      "home.test.tsx",
+      "tabs.test.tsx",
+      "cards.test.tsx",
+      "peek.test.tsx",
+      "autolink.test.tsx",
+      "entitychip.test.tsx"
+    ],
+    "location": "apps/mobile/__tests__/",
+    "status": "4 passed, 8 failed (reanimated mock loadUnpackers), 1 failed in bsb.test.ts due to prior type error"
+  },
+  "user_visible_outcome": "Repository baseline captured without editing files. All changed/untracked paths listed, overlapping ownership flagged, verification failures attributed, missing foundations enumerated.",
+  "validation": {
+    "canonical_json": true,
+    "sha256": true,
+    "signature_verified": true
+  }
+}

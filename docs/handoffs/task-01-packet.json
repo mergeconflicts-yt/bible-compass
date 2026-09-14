@@ -1,0 +1,185 @@
+{
+  "approval_receipts_consumed": [],
+  "attempt_id": "task:owner-decision:01:attempt-1",
+  "automated_tests_added_or_changed": "None \u2014 doc packet only.",
+  "commands_executed": [
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "grep -rn \"OPEN|OWNER ACTION|approved|allowed\" docs/PRODUCT_DECISIONS.md docs/CONTENT_RIGHTS.md docs/CONTEXT_PLATFORM_SPEC.md docs/OPEN_BIBLE_DATA_SOURCES.md",
+      "exit_code": 0,
+      "output": "PD-008 to PD-020 remain OPEN; CONTENT_RIGHTS matrix OPEN; OPEN_BIBLE_DATA_SOURCES candidate_only confirmed \u2014 no contradictory allowed"
+    },
+    {
+      "command": "internal link check",
+      "exit_code": 0,
+      "output": "25 links, no missing canonical docs (regex dot artifact ignored)"
+    },
+    {
+      "command": "decision-ID consistency",
+      "exit_code": 0,
+      "output": "D-CANON, D-REFSYS, D-LOCALE, D-TRANS, D-EDITION, D-LENS, D-REVIEW, D-TERR, D-DOMAIN unique; sign-off table present with _[to be filled]_ no pre-filled approval"
+    }
+  ],
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-01-attempt-1-20260914T112436Z"
+  },
+  "database_migrations": "None",
+  "decision_table": {
+    "blocking": 14,
+    "decisions": [
+      {
+        "id": "D-CANON",
+        "owner": "Product owner",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-REFSYS",
+        "owner": "Product owner + biblical reviewer",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-LOCALE",
+        "owner": "Product owner",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-TRANS",
+        "owner": "Product owner + rights reviewer",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-EDITION",
+        "owner": "Product owner",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-LENS",
+        "owner": "Editorial reviewer",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-REVIEW",
+        "owner": "Product owner",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-TERR",
+        "owner": "Rights reviewer",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-DOMAIN",
+        "owner": "Product owner",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-AI-TIPNR",
+        "owner": "Rights reviewer",
+        "status": "OPEN (recommend DENY)"
+      },
+      {
+        "id": "D-AI-QUARANTINE",
+        "owner": "Security reviewer",
+        "status": "OPEN"
+      },
+      {
+        "id": "D-WORKSPACE",
+        "owner": "Product owner",
+        "status": "OPEN"
+      }
+    ],
+    "open": 14,
+    "resolved": 0,
+    "total_decisions": 14
+  },
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-01-20260914T112436Z",
+    "envelope_sha256": "33da12c04eddde7a22d54dd2271ec65d61b45a2a45fcd24360c297446d897da1",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "files_changed": [
+    {
+      "path": "docs/OWNER_GATE_A1_PACKET.md",
+      "purpose": "New decision packet: recommendations, alternatives, impact, evidence, named owner per Task 01 acceptance criteria",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "docs/PRODUCT_DECISIONS.md (still OPEN)",
+    "docs/CONTENT_RIGHTS.md (still OPEN)",
+    "docs/CONTEXT_PLATFORM_SPEC.md",
+    "docs/OPEN_BIBLE_DATA_SOURCES.md"
+  ],
+  "follow_up": [
+    "Owner to fill sign-off table and mint Gate A1 PASSED receipt with permitted_next_tasks [\"02\"]",
+    "Task 02 to refine reference-system qualified identifiers based on D-CANON/D-REFSYS decisions"
+  ],
+  "gate_receipts_required_next": [
+    {
+      "gate": "A1",
+      "status": "AWAITING_DECISION"
+    }
+  ],
+  "generated_at": "2026-09-14T11:27:15.181410Z",
+  "handoff_canon_sha256": "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54",
+  "handoff_sha256": "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54",
+  "known_limitations": [
+    "Packet is draft AI-prepared; requires human owner/rights/editorial sign-off via Gate A1 receipt before Task 02",
+    "Pilot range Neh 2:1-20 recommended but not yet approved; Task 02 must not assume",
+    "Territories still OPEN pending license terms confirmation"
+  ],
+  "manual_checks": {
+    "completed": [],
+    "not_run": [
+      "Owner human review of packet"
+    ]
+  },
+  "no_content_approved_or_published_by_ai": true,
+  "output_artifacts": [
+    {
+      "canon_sha256": "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54",
+      "data_kind": "synthetic (AI-prepared decision draft, no approval)",
+      "key": "packet:gate-a1",
+      "path": "docs/OWNER_GATE_A1_PACKET.md",
+      "sha256": "91555a0df2611823a4e71a1488d5e49d604f63e3cf6e96e232245da23e828f54",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-00",
+      "receipt_id": "task-00-baseline.json",
+      "sha256": "d6769c963d8e3d13da0c2ae1ea0f243cb1f831b4f6e401b6ad442b3d45ec7ca9"
+    }
+  ],
+  "prerequisite_matrix_tasks_01_04": "see packet \u00a710 sign-off; packet itself is prerequisite for Gate A1",
+  "repository_revision_after": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-e13416ea",
+    "receipt_sha256": "d26845055caa7568a342299bb51f9c84319c03a9642ed7a6bd3a8ac5e78d7d66",
+    "status": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+  },
+  "repository_revision_before": {
+    "commit": "c65f0813d7eac22101215b241fc1e2feaf181923",
+    "receipt_id": "repo-state-c65f0813-e13416ea",
+    "receipt_sha256": "d26845055caa7568a342299bb51f9c84319c03a9642ed7a6bd3a8ac5e78d7d66",
+    "status": "M docs/CONTENT_RIGHTS.md\n M tools/build-bsb-assets.py\n?? docs/002-whole-bible-entity-context-model.md\n?? docs/003-adapt-context-data-architecture.md\n?? docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/AI_CURATION_CONTRACT.md\n?? docs/CONTEXT_DATA_ARCHUTECTURE.md\n?? docs/CONTEXT_MODEL_REVIEW.md\n?? docs/CONTEXT_PLATFORM_SPEC.md\n?? docs/OPEN_BIBLE_DATA_SOURCES.md\n?? docs/OWNER_GATE_A1_PACKET.md\n?? docs/WHOLE_BIBLE_CURATION_SPEC.md\n?? docs/handoffs/"
+  },
+  "result": "PASS",
+  "rls_permissions_config": "None",
+  "source_artifacts": {
+    "note": "No source acquisition in this task; all sources remain candidate_only"
+  },
+  "task_attempt": "task:owner-decision:01:attempt-1",
+  "task_id": "01",
+  "task_title": "Owner decision packet",
+  "user_visible_outcome": "Owner Gate A1 decision packet drafted with 14 decisions (pilot ranges, canon/refsys/locale/translation/edition, lens/review/domain, AI deny-all per component, quarantine, workspace). No governing doc status changed; packet ends with empty sign-off table."
+}
