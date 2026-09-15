@@ -1,0 +1,151 @@
+{
+  "attempt_id": "task:pilot-report:16A:attempt-1",
+  "task_id": "16A",
+  "task_title": "Nehemiah 2 pilot report generation",
+  "result": "PASS",
+  "user_visible_outcome": "Reproduced 7 adapters from pinned quarantines deterministically, generated pilot report 16A with source contribution (TVTMS 22, TIPNR 5, BibleData 7, MACULA 5+3, OpenBible 2+3, Reconciliation 8+4+3, BSB 4), conflicts 2, rejects 7, unresolved 2, source-processing vs editorial semantic coverage distinct (editorial all incomplete without human denominator), license union CC-BY-4.0 no conflict, geographic uncertainty preserved, reviewer workload 22 records ~4-6h, recommendations accept/revise, machine/author/human separated, file sha 7d22acbe...",
+  "files_changed": [
+    {
+      "path": "content/pilot/report-16A.json",
+      "purpose": "Machine-readable pilot report: pinned artifacts SHAs, source contribution, conflicts, rejects, unresolved, source vs editorial coverage, geographic uncertainty, reference failures, license obligations, reviewer workload, recommendations, determinism, omitted sources, shared ancestry",
+      "status": "A",
+      "sha256": "7d22acbe04b3135710fe16833fdf5618117cfacc163fc269bcca623127d59b80",
+      "reportSha256": "sha256:7d22acbe04b3135710fe16833fdf5618117cfacc163fc269bcca623127d59b80"
+    },
+    {
+      "path": "content/pilot/report-16A.md",
+      "purpose": "Human-readable pilot report markdown with same content, separates machine findings/author assessment/pending human",
+      "status": "A",
+      "sha256": "203c17fa77e99b4703d5ddd5159a18c3ec1d2460cc29f09d40a0707b4245bff5"
+    }
+  ],
+  "files_not_changed": [
+    "No independent review, no fixing adapters, no approving claims"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/pilot/report-16A.json (reproduce all 7 adapters from pinned quarantines)",
+      "exit_code": 0,
+      "output": "7 adapters deterministic, SHAs TVTMS baca1a77..., TIPNR 58eb14af..., BibleData 55b90e0e..., MACULA cf39db44..., OpenBible 9b680dba..., Reconciliation dc6a17db..., BSB 3abc70e8..."
+    },
+    {
+      "command": "shasum -a 256 content/pilot/report-16A.json content/pilot/report-16A.md",
+      "exit_code": 0,
+      "output": "7d22acbe..., 203c17fa..."
+    },
+    {
+      "command": "python3 -m json.tool content/pilot/report-16A.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — report validated via SHA binding and coverage distinctions",
+  "manual_checks": {
+    "completed": [
+      "Verified clean rebuild reproduces same 7 candidate SHAs (TVTMS baca1a77... etc.)",
+      "Verified every row has lineage (sourceReleaseKey) and effective rights component (CC-BY-4.0)",
+      "Verified source-processing vs editorial semantic distinct: editorial all incomplete without human denominator (complete_zero vs incomplete)",
+      "Verified omitted share-alike 3 reported explicitly, not hidden",
+      "Verified agreement not double-counted where shared ancestry possible (Nehemiah exact flagged false for independent evidence)",
+      "Verified report separates machine findings, author assessment, pending human decisions",
+      "Verified recommendations per adapter: accept/tvtms/bibledata/openbible, revise/tipnr/macula"
+    ],
+    "not_run": [
+      "Independent review — deferred to Task 16B"
+    ]
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "7 adapters, 22+5+7+5+3+2+3+4 records, all SHAs as above, no new source bytes",
+    "versions": [
+      "ae39711d TVTMS/TIPNR",
+      "8799b409 BibleData",
+      "47db250b MACULA",
+      "7eb18a5e OpenBible"
+    ]
+  },
+  "known_limitations": [
+    "Report is machine findings only — no independent specialist review (Task 16B)",
+    "Editorial semantic coverage is all incomplete until human approves inclusion policy and audited denominator per 16A acceptance"
+  ],
+  "follow_up": ["16B Independent Nehemiah 2 pilot review → Gate D"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:pilot-report:16A:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "candidates:tvtms:neh2",
+      "path": "content/candidates/tvtms-neh2.json",
+      "sha256": "958df42bd04855d8f283e1f7df2b1e93dc8cd5638350cca6c23fbda690a46b34"
+    },
+    {
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d"
+    },
+    {
+      "key": "candidates:bibledata:neh2:discrepancy",
+      "path": "content/candidates/bibledata-neh2-discrepancy.json",
+      "sha256": "62a53f2a087d2c8cb6579f0403428c0422af14a4102981b2d0d541b05ad18364"
+    },
+    {
+      "key": "candidates:macula:neh2",
+      "path": "content/candidates/macula-neh2.json",
+      "sha256": "507df90ab7261309c1fd97c5f69f8efde7d8deb4938cd8244a2a3ced04835a2b"
+    },
+    {
+      "key": "candidates:openbible:neh2",
+      "path": "content/candidates/openbible-neh2.json",
+      "sha256": "da1271c130cb151d0af5c0edaf8b6b24438ef64f9e8c0c757f0bb1a307bf02af"
+    },
+    {
+      "key": "reconciliation:15A",
+      "path": "content/candidates/reconciliation-15a.json",
+      "sha256": "374a01a48e662a106ce3ca92c6ba41b0ad2bc8f457af372e939c26e76bbd16c1"
+    },
+    {
+      "key": "mentions:bsb:neh2",
+      "path": "content/candidates/bsb-mentions-neh2.json",
+      "sha256": "c46172bd4a944d43a1d7d6613b7bba663e4d2b66b8e953403a8991a57293df5d"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "report (pilot, not review)",
+      "key": "report:16A",
+      "path": "content/pilot/report-16A.json",
+      "sha256": "7d22acbe04b3135710fe16833fdf5618117cfacc163fc269bcca623127d59b80",
+      "supersession": "active"
+    },
+    {
+      "data_kind": "report (markdown)",
+      "key": "report:16A:md",
+      "path": "content/pilot/report-16A.md",
+      "sha256": "203c17fa77e99b4703d5ddd5159a18c3ec1d2460cc29f09d40a0707b4245bff5",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:15:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-16A-attempt-1-20260915T061500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "report (synthetic, not review)"
+}

@@ -1,0 +1,108 @@
+{
+  "attempt_id": "task:acquire-bibledata:09C:attempt-1",
+  "task_id": "09C",
+  "task_title": "Acquire opaque BibleData artifact(s)",
+  "result": "PASS",
+  "user_visible_outcome": "Acquired 3 BibleData CSVs opaque: Person 274,988 sha489b5f..., PersonRelationship 442,545 shad81cb..., PersonVerse 2,617,454 sha7eab00... into content/quarantine/bibledata/ via dry-run authorize (evaluation_import allowed, external_ai denied) + streaming SHA, no parse.",
+  "files_changed": [
+    {
+      "path": "content/quarantine/bibledata/BibleData-Person.csv",
+      "byteSize": 274988,
+      "sha256": "489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+      "status": "A"
+    },
+    {
+      "path": "content/quarantine/bibledata/BibleData-PersonRelationship.csv",
+      "byteSize": 442545,
+      "sha256": "d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+      "status": "A"
+    },
+    {
+      "path": "content/quarantine/bibledata/BibleData-PersonVerse.csv",
+      "byteSize": 2617454,
+      "sha256": "7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177",
+      "status": "A"
+    },
+    {
+      "path": "content/quarantine/bibledata/receipt-09C.json",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": ["No parse, no canonical import, no AI"],
+  "commands_executed": [
+    {
+      "command": "acquire BibleData 3 CSVs via RegistryService authorize + FixtureFetcher",
+      "exit_code": 0,
+      "output": "3 files success, total 3,334,987 bytes"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/bibledata/*.csv",
+      "exit_code": 0,
+      "output": "489b5f58..., d81cb04..., 7eab00f8..."
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests",
+  "manual_checks": {
+    "completed": [
+      "Verified dry-run before any mutation",
+      "Verified 3 CSVs quarantined, no places/events/Strong's",
+      "Verified license CC-BY-4.0 retained 9a78e7f2...",
+      "Verified no parser accessed"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:bibledata:structured",
+    "releaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+    "commitOrTag": "8799b409c82a5d4acebba3be5107d6eff7c85d78",
+    "artifacts": 3,
+    "byteSizeTotal": 3334987
+  },
+  "known_limitations": ["3 CSVs are 3.3 MB — parsing deferred to Task 12 Gate C2"],
+  "follow_up": ["09D: MACULA Hebrew Neh2 543K"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquire-bibledata:09C:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "opaque",
+      "key": "quarantine:bibledata:person",
+      "path": "content/quarantine/bibledata/BibleData-Person.csv",
+      "sha256": "489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+      "byteSize": 274988
+    },
+    {
+      "data_kind": "opaque",
+      "key": "quarantine:bibledata:relationships",
+      "path": "content/quarantine/bibledata/BibleData-PersonRelationship.csv",
+      "sha256": "d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+      "byteSize": 442545
+    },
+    {
+      "data_kind": "opaque",
+      "key": "quarantine:bibledata:personverse",
+      "path": "content/quarantine/bibledata/BibleData-PersonVerse.csv",
+      "sha256": "7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177",
+      "byteSize": 2617454
+    }
+  ],
+  "generated_at": "2026-09-15T05:15:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09C-attempt-1-20260915T051500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "opaque"
+}

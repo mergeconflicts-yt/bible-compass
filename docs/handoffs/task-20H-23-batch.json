@@ -1,0 +1,84 @@
+{
+  "attempt_id": "task:20H-23:batch:attempt-1",
+  "task_ids": ["20H", "21", "22", "23"],
+  "result": "PASS (synthetic, pending human Gate E1/E2)",
+  "user_visible_outcome": "Generated 20H review 02216e7a (0 P0/P1, cross-package identity/attestation/relevance/when null/open_questions preserved), 21 review bundle 35c184ae (7 drafts + 7 candidates, 6 reviewer roles, 22+ records, attribution preview), 22 eligibility c652f00b DENIED (missing human Gate E1 receipts, deterministic, no AI approval), 23 immutable package en.bsb.neh-2@1:sha-4a5d6e7f 161de1cf staging_candidate not installed, BOM with 6 sources, deterministic digest.",
+  "files_changed": [
+    {
+      "path": "content/pilot/review-20H.json",
+      "sha256": "02216e7aa94c8702fa8ed8487b240056034a5c0e9a6eb7af0d49c259d574944b",
+      "purpose": "20H consistency review: cross-package identity, attestation/relevance, when null, coverage, no P0/P1"
+    },
+    {
+      "path": "content/pilot/review-bundle-21.json",
+      "sha256": "35c184aeb251b1c6230953fb9a741ca5d87eda7b4bba86e2276ead52f72bf572",
+      "purpose": "21 review bundle: 7 drafts, 6 reviewer roles, digest 35c184ae, unresolved 0"
+    },
+    {
+      "path": "content/pilot/eligibility-22.json",
+      "sha256": "c652f00becd4189411642e11956dd43c7fa6992d953e1fa9f7a59804a9d9157c",
+      "purpose": "22 eligibility DENIED (no Gate E1 human receipts, deterministic)"
+    },
+    {
+      "path": "content/pilot/package-23.json",
+      "sha256": "161de1cf6e359fa3fd0fabf95c4ff75391f96b69081196d020f893861a9d6dcb",
+      "purpose": "23 immutable package en.bsb.neh-2@1:sha-4a5d6e7f, 6 members, BOM 6 sources, staging_candidate not installed, digest 161de1cf"
+    },
+    {
+      "path": "content/pilot/drafts/20D-events-places.draft.json",
+      "sha256": "ae4442b7c3b390a180ed5cd0f38e7615bcb78ebed7c9bb176576f31a7b447067"
+    },
+    {
+      "path": "content/pilot/drafts/20E-relevance.draft.json",
+      "sha256": "6cad1aeacc26fe0af0f9ef0cb4e1ea0d36cc27713bb85ff6326770df46fd8dd9"
+    },
+    {
+      "path": "content/pilot/drafts/20F-passage-context.draft.json",
+      "sha256": "c422946695085c888a5ff6a7018465dab8e60d0c57528d013b47e3806cc6e0d4"
+    },
+    {
+      "path": "content/pilot/drafts/20G-en-localization.draft.json",
+      "sha256": "3396fffc251e831ce41da4af52ccf0734afcbdfc97e77b64abf64f14c16df752"
+    }
+  ],
+  "files_not_changed": [],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/pilot/review-20H.json, review-bundle-21.json, eligibility-22.json, package-23.json",
+      "exit_code": 0,
+      "output": "20H 02216e7a, 21 35c184ae, 22 c652f00b DENIED, 23 161de1cf staging_candidate"
+    },
+    {
+      "command": "python3 -m json.tool content/pilot/review-20H.json && python3 -m json.tool content/pilot/package-23.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — 20H-23 are synthetic reports, validated via 19C validator and 20A-G drafts",
+  "manual_checks": {
+    "completed": [
+      "Verified 20H cross-package identity/attestation/relevance/when null preserved, no P0/P1",
+      "Verified 21 review bundle has all 7 drafts + 7 candidates, 6 reviewer roles, digest 35c184ae",
+      "Verified 22 eligibility DENIED due to missing Gate E1 human receipts (no AI approval, deterministic)",
+      "Verified 23 package is immutable, not installed, BOM 6 sources, digest 161de1cf, staging_candidate"
+    ],
+    "not_run": [
+      "Human Gate E1/E2 — requires product owner + specialist reviewers per 21/22"
+    ]
+  },
+  "database_migrations": "None — 20H-23 are file reports, not DB",
+  "known_limitations": [
+    "20H-23 are synthetic minimal for Neh2 — full 20-verse context and 7 package kinds deferred to hardening",
+    "Gate E1/E2 not yet human-approved — 22 DENIED is expected, 23 remains staging_candidate"
+  ],
+  "follow_up": ["Gate E1 human review per 21 bundle", "Gate E2 product owner decision on package-23 install → mobile/SQLite plan (separate)"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:20H-23:batch:attempt-1",
+  "generated_at": "2026-09-15T06:50:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-20H-23-attempt-1-20260915T065000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic (reports, not DB)"
+}

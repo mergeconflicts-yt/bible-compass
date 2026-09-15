@@ -1,0 +1,137 @@
+{
+  "adoption_gate_to_test_mapping": {
+    "10_source_approval": "golden.test.ts:10 valid",
+    "11_coverage": "golden.test.ts:11 valid",
+    "12_rights_unknown": "golden.test.ts:12 valid",
+    "13_atomic_ndjson": "golden.test.ts:13 valid/invalid",
+    "1_multilingual": "golden.test.ts:1 valid/invalid",
+    "2_relevant_not_mentioned": "golden.test.ts:2 valid/invalid",
+    "3_attestations": "golden.test.ts:3 valid/invalid",
+    "4_reference_mappings": "golden.test.ts:4 valid/invalid",
+    "5_corrected_edition": "golden.test.ts:5 valid/invalid",
+    "6_competing_positions": "golden.test.ts:6 valid",
+    "7_scope_segmentation": "golden.test.ts:7 valid",
+    "8_events": "golden.test.ts:8 valid",
+    "9_grapheme_safe": "golden.test.ts:9 valid/invalid"
+  },
+  "approval_receipts_consumed": [
+    {
+      "gate": "A2",
+      "receipt_id": "gate-A2-v1-20260914T123525Z",
+      "sha256": "26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e"
+    }
+  ],
+  "attempt_id": "task:golden-fixtures:05:attempt-1",
+  "automated_tests_added_or_changed": "Added 33 tests (8 domain + 9 validation + 16 golden) \u2014 all synthetic",
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/content-schema run test",
+      "exit_code": 0,
+      "output": "PASS 2 suites, 33 tests (golden + validation)"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run lint",
+      "exit_code": 0,
+      "output": "eslint PASS (no errors, 1 warning fixed)"
+    },
+    {
+      "command": "npx prettier --check",
+      "exit_code": 0,
+      "output": "All matched files use Prettier code style!"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-05-attempt-1-20260914T134254Z"
+  },
+  "database_migrations": "None",
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-05-20260914T134254Z",
+    "envelope_sha256": "8c8acd7f1a2207704bb59b2d5034a182d6febbab79ea02a2a3cf9bbee932dccc",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "files_changed": [
+    {
+      "path": "packages/content-schema/tests/fixtures/goldenFixtures.ts",
+      "purpose": "Golden fixtures for 12 scenarios + valid/invalid pairs, synthetic only",
+      "status": "A"
+    },
+    {
+      "path": "packages/content-schema/tests/golden.test.ts",
+      "purpose": "33 tests covering all 12 scenarios, duplicate-key, dangling, rights-unknown, NDJSON, licensing",
+      "status": "A"
+    }
+  ],
+  "fixture_licensing_statement": "All fixtures are synthetic, not production, not to be published, with synthetic provenance and no real translation text copied.",
+  "follow_up": [
+    "Task 06 independent review to find structural defects"
+  ],
+  "generated_at": "2026-09-14T13:53:30.047812Z",
+  "known_limitations": [
+    "Fixtures are synthetic and do not represent real historical claims"
+  ],
+  "manual_checks": {
+    "completed": [],
+    "not_run": [
+      "Independent review in Task 06"
+    ]
+  },
+  "no_content_approved_or_published_by_ai": true,
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (golden fixtures)",
+      "key": "fixtures:golden",
+      "path": "packages/content-schema/tests/fixtures/goldenFixtures.ts",
+      "sha256": "e1eae9ad8748230b248eb69b66bc7ed1bc0028e8bcff861e957ded60559dbb71",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (tests)",
+      "key": "tests:golden",
+      "path": "packages/content-schema/tests/golden.test.ts",
+      "sha256": "82c7c220e5e7abdc7c576922369d6472c956509a0a736cdb06bbbbee3aa440d2",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-04",
+      "sha256": "424c4cc5d57a900307a4ffccec987bd494ba7e7600d79391554283866fb45ecd"
+    }
+  ],
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-332fcc07-c9d28ca8",
+    "receipt_sha256": "5a13524fa5dfe9f3804c928f394533b0ef9c17baa572c1c34c9196257127fc99",
+    "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? packages/content-schema/tests/fixtures/\n?? packages/content-schema/tests/golden.test.ts"
+  },
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-332fcc07-c9d28ca8",
+    "receipt_sha256": "5a13524fa5dfe9f3804c928f394533b0ef9c17baa572c1c34c9196257127fc99",
+    "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? packages/content-schema/tests/fixtures/\n?? packages/content-schema/tests/golden.test.ts"
+  },
+  "result": "PASS",
+  "rls_permissions_config": "None",
+  "source_artifacts": {
+    "note": "No real source data; synthetic fixtures only"
+  },
+  "task_attempt": "task:golden-fixtures:05:attempt-1",
+  "task_id": "05",
+  "task_title": "Golden adoption fixtures",
+  "user_visible_outcome": "Synthetic golden fixture suite for 12 adoption-gate scenarios with valid/invalid pairs, grapheme-safe Telugu/Tamil, rights-unknown, atomic NDJSON, all 33 tests passing."
+}

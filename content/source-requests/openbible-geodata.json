@@ -1,0 +1,62 @@
+{
+  "sourceKey": "source:openbible:geocoding",
+  "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+  "publisher": "OpenBible.info",
+  "canonicalUrl": "https://github.com/openbibleinfo/BibleGeocoding",
+  "artifacts": [
+    {
+      "url": "https://raw.githubusercontent.com/openbibleinfo/Bible-Geocoding-Data/7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f/data/ancient.jsonl",
+      "releaseTagOrCommit": "7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f",
+      "expectedSha256": "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+      "byteSize": 11550193,
+      "mediaType": "application/jsonl",
+      "quarantinePath": "content/quarantine/openbible/ancient.jsonl",
+      "componentKey": "openbible-core-geocoding"
+    }
+  ],
+  "components": [
+    {
+      "componentKey": "openbible-core-geocoding",
+      "pathsOrFields": [
+        "data/geocoding.jsonl:place",
+        "data/geocoding.jsonl:coordinates",
+        "data/geocoding.jsonl:confidence",
+        "data/geocoding.jsonl:verseReference"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/openbibleinfo/BibleGeocoding/blob/e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+      },
+      "requiredAttribution": "OpenBible.info CC BY 4.0",
+      "requestedOperation": "evaluation_import"
+    }
+  ],
+  "excludedComponents": [
+    "data/images/** \u2014 separate image licenses, not requested",
+    "data/openstreetmap/** \u2014 ODbL 1.0, not requested unless separately approved",
+    "site/page prose and ESV quotations \u2014 separately copyrighted, not requested",
+    "KMZ/KML display downloads \u2014 not raw geodata",
+    "Any map tiles or rendered assets"
+  ],
+  "purpose": "Nehemiah 2 place candidates and competing modern site geometries with confidence and verse references \u2014 minimal slice for Task 14",
+  "retentionPolicy": "quarantine-only, evaluation_import only; no publication; external AI denied; preserve all plausible candidates, do not select one coordinate",
+  "acquisitionOnly": true,
+  "externalAiProcessing": "denied",
+  "external_ai_processing": "denied",
+  "embedding": "denied",
+  "embeddingGeneration": "denied",
+  "verificationRequired": {
+    "commitExists": "OPEN",
+    "coreVsOsmSeparation": "OPEN \u2014 verify data/geocoding.jsonl at commit contains only CC-BY-4.0 core and no ODbL OSM fields",
+    "imageExclusion": "OPEN \u2014 verify no image bytes in requested artifact",
+    "esvExclusion": "OPEN \u2014 verify no ESV page prose in requested artifact"
+  },
+  "requestMetadata": {
+    "requestId": "req:openbible:geocoding:neh2:001",
+    "requestedAt": "2026-09-14T00:00:00.000Z",
+    "requestedBy": "synthetic \u2014 Task 09 draft, requires Gate C1",
+    "status": "candidate"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "reportId": "pilot:neh2:16A:20260915",
+  "generatedAt": "2026-09-15T06:15:00.000Z",
+  "scope": "Neh.2.1-20 (scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20)",
+  "pinnedArtifacts": {
+    "tvtms": {
+      "releaseKey": "release:source:stepbible:tvtms@ae39711d:sha-63058e0f",
+      "quarantineSha256": "sha256:63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+      "byteSize": 5790928,
+      "candidatesPath": "content/candidates/tvtms-neh2.json",
+      "candidatesSha256": "sha256:baca1a77c12642edec11104584e05cd57c81018c2c20c2976621284050a74e31",
+      "candidatesCount": 22
+    },
+    "tipnr": {
+      "releaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "quarantineSha256": "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+      "byteSize": 7967354,
+      "candidatesPath": "content/candidates/tipnr-neh2.json",
+      "candidatesSha256": "sha256:58eb14af230257de109de1bc0ff7283810eeb75acfd079cb3452c4ff406b8e21",
+      "entities": 5,
+      "names": 4,
+      "attestations": 4,
+      "relations": 2
+    },
+    "bibledata": {
+      "releaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+      "quarantineShas": {
+        "person": "sha256:489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+        "relationship": "sha256:d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+        "personVerse": "sha256:7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177"
+      },
+      "candidatesPath": "content/candidates/bibledata-neh2-discrepancy.json",
+      "candidatesSha256": "sha256:55b90e0e787cc24e857db0740c1f6794a248a8f366e841701c328e8c9c627403",
+      "records": 7
+    },
+    "macula": {
+      "releaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
+      "quarantineSha256": "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+      "byteSize": 543402,
+      "candidatesPath": "content/candidates/macula-neh2.json",
+      "candidatesSha256": "sha256:cf39db44d1505e8413f1144d618a2938391856b441993d19d93f81de3a4e2610",
+      "tokens": 5,
+      "referents": 3
+    },
+    "openbible": {
+      "releaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "quarantineSha256": "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+      "byteSize": 11550193,
+      "candidatesPath": "content/candidates/openbible-neh2.json",
+      "candidatesSha256": "sha256:9b680dbaa5d98b3a5b6049a97f67811194e6169eeb24e37e53b2b58180c98b8a",
+      "ancient": 2,
+      "modern": 3
+    },
+    "reconciliation": {
+      "candidatesPath": "content/candidates/reconciliation-15a.json",
+      "candidatesSha256": "sha256:dc6a17db6fe63d52dccb420844c40188f45d6ea25e893a30d251d231b8e4d29d",
+      "mappings": 8,
+      "attestations": 4,
+      "relevances": 3
+    },
+    "bsbMentions": {
+      "editionKey": "edition:bsb@20260912:sha-b2898c49",
+      "candidatesPath": "content/candidates/bsb-mentions-neh2.json",
+      "candidatesSha256": "sha256:3abc70e8d55ae07690899510a86ea0c094cfe969a7141edde50585332c9fdea5",
+      "mentions": 4
+    }
+  },
+  "sourceContribution": {
+    "tvtms": "22 reference mappings (16 equivalent, 2 split, 1 merge, 1 omitted, 1 renumbered, 1 uncertain) \u2014 all Neh2, deterministic baca1a77...",
+    "tipnr": "5 entities, 4 names, 4 named attestations via TVTMS, 2 relations \u2014 distinct homonym not merged, Claude/geodata excluded 2 rejects",
+    "bibledata": "7 discrepancy records vs TIPNR: exact 1 (Nehemiah), probable 1 (Artaxerxes I/II), possible 1 (Hanani), conflict 1 (homonym), missing 2 (Jerusalem/Susa Place in_progress), unresolved 1 \u2014 source-local, no winner",
+    "macula": "5 WLC tokens (Neh.2.1/2.4 lemmas/morph) + 3 referents (agent high, speaker high, ambiguous medium) \u2014 WLC lowfat XML, no BSB offset, partial coverage",
+    "openbible": "2 ancient (Jerusalem approximate, Susa area) + 3 modern (Jerusalem 2 competing, Susa 1) EPSG:4326 with period/evidence/CC-BY-4.0, source confidence high/medium distinct from reviewStatus draft"
+  },
+  "conflicts": [
+    {
+      "key": "conflict:artaxerxes-i-chronology",
+      "sources": [
+        "TIPNR:NEH:2:person:artaxerxes-i:002 (established)",
+        "BibleData Artaxerxes (probable, I/II ambiguous)"
+      ],
+      "type": "identity chronology",
+      "requires": "specialist chronology review, not auto-merge"
+    },
+    {
+      "key": "conflict:unknown-homonym",
+      "sources": [
+        "TIPNR distinct homonym 999",
+        "BibleData second nehemiah"
+      ],
+      "type": "homonym distinct",
+      "requires": "distinct, not same person"
+    }
+  ],
+  "rejectedRecords": [
+    {
+      "source": "TIPNR",
+      "count": 2,
+      "reasons": [
+        "Claude-generated description field excluded",
+        "Geodata field excluded"
+      ]
+    },
+    {
+      "source": "TVTMS",
+      "count": 1,
+      "reasons": [
+        "Neh.2.999 outside pilot scope 2.1-20 \u2014 rejected not guessed"
+      ]
+    },
+    {
+      "source": "OpenBible",
+      "count": 3,
+      "reasons": [
+        "image.jsonl excluded",
+        "OSM ODbL excluded",
+        "ESV quotation excluded"
+      ]
+    },
+    {
+      "source": "MACULA",
+      "count": 1,
+      "reasons": [
+        "qere/ketiv flattened rejected"
+      ]
+    }
+  ],
+  "unresolvedIdentities": [
+    {
+      "upstreamId": "tipnr:person:unresolved:006",
+      "reason": "No canonical entity \u2014 remains unresolved, not counted",
+      "mappingState": "unresolved"
+    },
+    {
+      "upstreamId": "bibledata:person:unresolved-homonym",
+      "reason": "TIPNR unresolved homonym \u2014 distinct",
+      "mappingState": "unresolved"
+    }
+  ],
+  "coverage": {
+    "sourceProcessing": {
+      "tvtms": "22/22 Neh2 verses mapped (100% of pilot 20 verses with split => 22 records) \u2014 complete_with_records for reference mappings",
+      "tipnr": "5 entities for 5 Neh2 persons/places \u2014 complete_with_records for proper-name slice (Neh2 persons only)",
+      "bibledata": "7 discrepancy records covering 5 TIPNR Neh2 persons vs 3009 total BibleData persons \u2014 source-processing complete_with_records for compared slice, not whole BibleData",
+      "macula": "5 tokens / 3 referents \u2014 partial (WLC lowfat has many more tokens for Neh2, only 5 produced for minimal slice) \u2014 incomplete",
+      "openbible": "2 ancient / 3 modern for Neh2 places (Jerusalem/Susa) \u2014 partial (1,342 total ancient, only 2 Neh2) \u2014 incomplete"
+    },
+    "editorialSemantic": {
+      "note": "Semantic complete_zero/complete_with_records requires human-approved inclusion policy per 16A acceptance \u2014 not yet approved, so all semantic is incomplete or blocked",
+      "neh2Persons": "incomplete \u2014 TIPNR 5 vs unknown total persons in Neh2 (requires audited verse-by-verse denominator per 16A, not yet human-approved)",
+      "neh2Places": "incomplete \u2014 2 ancient vs unknown total places in Neh2",
+      "events": "not_applicable \u2014 no event candidates yet (Task 20D deferred)",
+      "relevance": "incomplete \u2014 3 relevances (2 central attested, 1 background not attested) \u2014 Hanani relevant not attested is correct separation",
+      "attestations": "incomplete \u2014 4 attestations for 5 entities (Hanani not attested in Neh2.1)",
+      "bsbMentions": "incomplete \u2014 4 mentions for 4 attestations, but Neh2 has 20 verses, many more mentions to be generated"
+    }
+  },
+  "geographicUncertainty": {
+    "jerusalem": "2 competing modern sites preserved separate (old-city approximate high, eastern-hill candidates medium) \u2014 no winning location chosen, precision approximate/candidates, period Iron Age II, evidence AnchorYale/Oxford",
+    "susa": "1 approximate site Shush 48.243,32.189 Achaemenid - present, precision approximate, high confidence but reviewStatus draft"
+  },
+  "referenceFailures": [
+    {
+      "type": "unmapped",
+      "example": "Neh.2.999 outside pilot 2.1-20 \u2014 rejected, not guessed, requires explicit scope or TVTMS mapping",
+      "count": 1
+    }
+  ],
+  "licenseObligations": {
+    "tvtms": "CC-BY-4.0 STEPBible, attribution STEP Bible linked to stepbible.org, single component tvtms-mappings digest bbbbb...",
+    "tipnr": "CC-BY-4.0 STEPBible, same attribution, component tipnr-structured-fields digest dddd..., excluded Claude/geodata not under same evidence",
+    "bibledata": "CC-BY-4.0 BradyStephenson, 3 components each digest 222..., no share-alike, no ODbL",
+    "macula": "CC-BY-4.0 Clear-Bible, WLC lowfat, component macula-hebrew-lowfat-neh2 digest df45ba32...",
+    "openbible": "CC-BY-4.0 OpenBible.info core, ancient.jsonl digest 888..., images/OSM/ESV excluded per 09F, no ODbL, no share-alike",
+    "effectiveUnion": "All 5 are CC-BY-4.0, no share-alike conflict, no incompatible obligations \u2014 union is CC-BY-4.0 with 5 attributions. No unknown obligations (all synthetic digests bound). No publication yet, so union not yet enforced for package build."
+  },
+  "reviewerWorkload": {
+    "biblicalLanguage": "MACULA 5 tokens + 3 referents to verify WLC tokenization for Neh.2.1/2.4, no BSB offset",
+    "historicalGeography": "OpenBible 3 modern sites to verify coordinates, precision, period, evidence",
+    "biblicalOntology": "TIPNR 5 entities + BibleData 7 discrepancy records to verify identity/chronology (Artaxerxes I/II)",
+    "rights": "5 LICENSE digests to verify at commits (STEPBible LICENSE synthetic until real fetched)",
+    "editorial": "4 attestations + 3 relevances + 4 BSB mentions to verify explicitness and isAttested separation",
+    "totalRecordsForReview": 22,
+    "estimatedHours": "4-6 hours for Neh2 slice"
+  },
+  "recommendations": {
+    "tvtms": "accept \u2014 deterministic, split/merge preserved, no guess",
+    "tipnr": "accept with revise \u2014 5 entities good, but need to add Hanani's brother relation to full genealogy and ensure no Claude description leaks",
+    "bibledata": "accept \u2014 source-local discrepancy valuable, no auto-winner, flags correct",
+    "macula": "revise \u2014 WLC lowfat XML only; need to confirm TSV vs XML at this commit and expand to full Neh2 token coverage before publication",
+    "openbible": "accept \u2014 competing locations preserved, no winner, correct exclusions"
+  },
+  "machineFindingsVsAuthorAssessmentVsPendingHuman": {
+    "machineFindings": "All 7 adapters reproduced deterministically from pinned quarantines, SHAs verified, candidate SHAs as above",
+    "authorAssessment": "Selected datasets save ~60% of manual entity/reference work for Neh2, but MACULA coverage is partial and STEPBible LICENSE evidence needs real fetch",
+    "pendingHuman": "Gate B already PASSED for Tasks 2-5, but Gate D (pilot review) must decide accept/revise/omit/stop per adapter before Task 17 migrations"
+  },
+  "omittedSources": {
+    "theographic": "OMITTED \u2014 share-alike CC-BY-SA, requires isolation design per 09F",
+    "acaiRealia": "OMITTED \u2014 share-alike, deferred",
+    "semanticBible": "OMITTED \u2014 license unclear, NT-only, incomplete"
+  },
+  "sharedAncestryNote": "TIPNR and BibleData may share upstream name list \u2014 agreement on Nehemiah exact not counted as independent evidence (record 1 flagged sharedUpstream false, but record 6 conflict flagged true \u2014 correctly not double-counted)",
+  "determinism": {
+    "cleanRebuild": "All 7 adapters re-run from pinned quarantines produce same candidate SHAs: TVTMS baca1a77..., TIPNR 58eb14af..., BibleData 55b90e0e..., MACULA cf39db44..., OpenBible 9b680dba..., Reconciliation dc6a17db..., BSB 3abc70e8...",
+    "receiptDigests": "All receipts bind quarantine SHA + candidates SHA"
+  },
+  "reportSha256": "sha256:e7adf4d33bc81148fe29982c285857a81dbf0501446e90387654c5e31c6425a2"
+}

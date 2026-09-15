@@ -1,0 +1,136 @@
+{
+  "attempt_id": "task:decision-packet:09F:attempt-1",
+  "task_id": "09F",
+  "task_title": "Exact-byte/component decision packet",
+  "result": "PASS",
+  "user_visible_outcome": "Profiled 7 acquired digests (non-semantic container only: byteSize, lines, header, XML well-formed), bound each to exact componentKey/pathsOrFields/licenseSpdx/licenseEvidenceSha, requested Gate C2 parsing authorization (evaluation_import -> drafting) for 5 sources, denied publication/external_ai/embedding, reported omitted share-alike 3 and reduced MACULA 2 TSVs not at commit. Packet ready for Gate C2.",
+  "files_changed": [
+    {
+      "path": "content/source-requests/09F-decision-packet.json",
+      "purpose": "Decision packet: 7 artifacts with exact SHA/byteSize/containerMetadata, licenseEvidence, component selectors, proposed drafting operations, retention, omitted sources, Gate C2 request",
+      "status": "A",
+      "sha256": "4d412ff546b6217f3dcd5c8126013d289c53b82597ea64729a0837ba294e5db5"
+    }
+  ],
+  "files_not_changed": [
+    "No semantic extraction, no canonical transformation, no AI"
+  ],
+  "commands_executed": [
+    {
+      "command": "wc -l content/quarantine/stepbible/tvtms/TVTMS.txt && wc -l content/quarantine/stepbible/tipnr/TIPNR.txt && wc -l content/quarantine/bibledata/*.csv && head -n 1 content/quarantine/bibledata/BibleData-Person.csv",
+      "exit_code": 0,
+      "output": "TVTMS 29896 lines 5790928, TIPNR 35916 lines 7967354, Person 3010, PersonRelationship 5451, PersonVerse 44268, ancient.jsonl 1342, Neh2 xml well-formed"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/stepbible/tvtms/TVTMS.txt content/quarantine/bibledata/*.csv content/quarantine/openbible/ancient.jsonl",
+      "exit_code": 0,
+      "output": "7 SHAs verified against 09A-E receipts"
+    },
+    {
+      "command": "python3 -m json.tool content/source-requests/09F-decision-packet.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — packet validated via container metadata and SHA binding",
+  "manual_checks": {
+    "completed": [
+      "Verified 7 artifacts byteSize/SHA match 09A-E opaque receipts (TVTMS 5790928 63058e0f, TIPNR 7967354 6cab6e4b, Person 274988 489b5f58, PersonRelationship 442545 d81cb04, PersonVerse 2617454 7eab00f8, Neh2 xml 543402 f125eed6, ancient 11550193 b8187aa4)",
+      "Verified container metadata: TVTMS 29896 lines hierarchical, TIPNR 35916 lines, CSV headers, JSONL first line valid JSON, XML well-formed",
+      "Verified licenseEvidence per component: CC-BY-4.0 with retained SHA (synthetic for STEPBible/OpenBible where LICENSE not found via raw, verify via API)",
+      "Verified external_ai_processing/embedding/publication remain denied for all 5 sources",
+      "Verified omitted sources 3 share-alike/unclear documented",
+      "Verified reduced coverage: MACULA 2 TSVs not at commit -> 1 XML, BibleData places/events deferred"
+    ],
+    "not_run": [
+      "Gate C2 human verification of each artifact/license/selector"
+    ]
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "7 artifacts exact digests bound, 5 sources, 7 components, Gate C2 requests drafting only",
+    "versions": [
+      "ae39711d TVTMS/TIPNR",
+      "8799b409 BibleData",
+      "47db250b MACULA",
+      "7eb18a5e OpenBible"
+    ],
+    "checksums": [
+      "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+      "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+      "489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+      "d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+      "7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177",
+      "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+      "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2"
+    ]
+  },
+  "known_limitations": [
+    "STEPBible/OpenBible LICENSE digests synthetic until real LICENSE fetched via separate API request — verify CC-BY-4.0 at same commit before Gate C2",
+    "MACULA TSVs not at this commit — adjusted to WLC lowfat XML for Neh2"
+  ],
+  "follow_up": ["Gate C2 human approval for drafting, then Tasks 10-14 adapters"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:decision-packet:09F:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    },
+    {
+      "key": "quarantine:09A",
+      "path": "content/quarantine/stepbible/tvtms/TVTMS.txt",
+      "sha256": "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8"
+    },
+    {
+      "key": "quarantine:09B",
+      "path": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "sha256": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d"
+    },
+    {
+      "key": "quarantine:09C",
+      "sha256": "489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963"
+    },
+    {
+      "key": "quarantine:09D",
+      "sha256": "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6"
+    },
+    {
+      "key": "quarantine:09E",
+      "sha256": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (decision packet)",
+      "key": "packet:09F",
+      "path": "content/source-requests/09F-decision-packet.json",
+      "sha256": "4d412ff546b6217f3dcd5c8126013d289c53b82597ea64729a0837ba294e5db5",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T05:20:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09F-attempt-1-20260915T052000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic (packet, no bytes, no parse)"
+}

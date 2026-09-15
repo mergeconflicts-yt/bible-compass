@@ -1,0 +1,222 @@
+{
+  "attempt_id": "task:acquisition-request:09:attempt-1",
+  "task_id": "09",
+  "task_title": "Exact acquisition-request packet",
+  "result": "PASS",
+  "user_visible_outcome": "Prepared 5 isolated candidate acquisition requests for Nehemiah 2 minimal slice (TVTMS, TIPNR structured, BibleData 3 CSVs, MACULA Hebrew 3 TSVs, OpenBible core geodata) with immutable commit/sha placeholders, exact pathsOrFields, CC-BY-4.0 license evidence, attribution, quarantine retention, evaluation_import only, external_ai_processing and embedding denied, explicit exclusions. All JSON valid, Theographic/ACA/SemanticBible excluded, Scripture text not included. Packet ready for owner/rights Gate C1.",
+  "files_changed": [
+    {
+      "path": "content/source-requests/stepbible-tvtms.json",
+      "purpose": "TVTMS versification mappings — Data/TVTMS/TVTMS.tsv, CC-BY-4.0, evaluation_import only, excludes TAHOT/TAGNT and embedded Scripture",
+      "status": "A",
+      "sha256": "04a597188fb7e18ac93778203a65a071aa92c8f2dcf00b341cf02147b9f5a50f"
+    },
+    {
+      "path": "content/source-requests/stepbible-tipnr.json",
+      "purpose": "TIPNR structured fields 6-field selectors, CC-BY-4.0, excludes Claude-3 descriptions and geodata, evaluation_import only",
+      "status": "A",
+      "sha256": "67cbc9a1c1c5d167d81cea73725acf587b4c05b3dab8fec767d2ae15f0cfa0a9"
+    },
+    {
+      "path": "content/source-requests/bibledata-people.json",
+      "purpose": "BibleData comparison: people.csv, person-verse.csv, relationships.csv — 3 components, CC-BY-4.0, excludes incomplete places/events/Strong's, evaluation_import only",
+      "status": "A",
+      "sha256": "9b1b7ffaa1a4955e29868544307def1ae877150f727c0db6f785c5731092702a"
+    },
+    {
+      "path": "content/source-requests/macula-hebrew-neh2.json",
+      "purpose": "MACULA Hebrew Neh2: Tanach.tsv tokens, Morphology.tsv lemma/morph, Participants.tsv referent/semantic_role — 3 components, CC-BY-4.0, WLC basis, excludes BSB offsets and unapproved glosses",
+      "status": "A",
+      "sha256": "000acb0b7fc8b104971343b35bb67beccee09529140e2f32e0f108bc4ca015e7"
+    },
+    {
+      "path": "content/source-requests/openbible-geodata.json",
+      "purpose": "OpenBible core geocoding.jsonl place/coordinates/confidence/verseReference, CC-BY-4.0 core only, excludes images/OSM/ESV/KMZ, evaluation_import only",
+      "status": "A",
+      "sha256": "068c6061f740d6099db63ebc3057903484b8483bef0aeafd66fd52fed1bbe5c2"
+    },
+    {
+      "path": "docs/ACQUISITION_REQUEST_PACKET.md",
+      "purpose": "Packet overview: 5 requests, isolation table, per-component details, Gate C1 checklist, next 09A",
+      "status": "A",
+      "sha256": "ce1e4d6abca939bea5157dc482d68ad9910e103de4d4174dda9b71f98ba05c11"
+    },
+    {
+      "path": ".gitignore",
+      "purpose": "Keep content/quarantine/ ignored but allow content/source-requests/ to be committed (comment clarified)",
+      "status": "M"
+    }
+  ],
+  "files_not_changed": [
+    "apps/** (out of scope)",
+    "supabase/** (no DB changes for 09)",
+    "Theographic/ACA/SemanticBible not requested (share-alike / unclear license per OPEN_BIBLE_DATA_SOURCES.md)",
+    "No Scripture text, no share-alike source, no download/parse/AI"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 -m json.tool content/source-requests/stepbible-tvtms.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "python3 -m json.tool content/source-requests/stepbible-tipnr.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "python3 -m json.tool content/source-requests/bibledata-people.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "python3 -m json.tool content/source-requests/macula-hebrew-neh2.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "python3 -m json.tool content/source-requests/openbible-geodata.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "grep -r external_ai_processing content/source-requests/",
+      "exit_code": 0,
+      "output": "5 files contain external_ai_processing denied"
+    },
+    {
+      "command": "grep -r Theographic content/source-requests/ || echo \"no Theographic\"",
+      "exit_code": 0,
+      "output": "no Theographic"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests for 09 (packet is documentation/JSON). Existing 83 tests still PASS (61 content-schema + 12 registry-service + 10 acquisition).",
+  "manual_checks": {
+    "completed": [
+      "Verified each JSON has sourceKey, sourceReleaseKey with immutable commitOrTag (no main/master/HEAD), artifact.url exact file at commit, expectedSha256 placeholder synthetic, byteSize 0 OPEN, quarantinePath content/quarantine/**",
+      "Verified each component has componentKey, pathsOrFields explicit, licenseSpdx CC-BY-4.0, licenseEvidence url+sha, requiredAttribution, requestedOperation evaluation_import only",
+      "Verified each file has acquisitionOnly true and external_ai_processing denied + embedding denied (both snake and camel for grep)",
+      "Verified excludedComponents lists cover share-alike, AI descriptions, geodata, embedded Scripture, incomplete files per OPEN_BIBLE_DATA_SOURCES.md",
+      "Verified Theographic, ACA Realia, SemanticBible NT Names not in any request (forbidden per Task 09)",
+      "Verified no Scripture text included — only paths/fields selectors"
+    ],
+    "not_run": [
+      "Upstream commit existence and LICENSE file digest verification — requires rights_reviewer with network to confirm each commit/file exists at URL (Gate C1)"
+    ]
+  },
+  "database_migrations": "None — Task 09 is candidate request JSON only, no DB writes. Private_registry grants remain deny until Gate C1.",
+  "rls_permissions_config": "N/A",
+  "dependencies": "None new",
+  "source_artifacts": {
+    "note": "5 candidate requests, all synthetic placeholders (sha256 a*64 etc., byteSize 0 OPEN) — no real bytes fetched. Real artifact SHA/byteSize to be recorded on Gate C1 authorized 09A-E acquisition via AcquisitionService (content/quarantine/**). License components per file are CC-BY-4.0 synthetic until real LICENSE retained.",
+    "versions": [
+      "source:stepbible:tvtms@a1b2c3d4e5:sha-9f3e7d6c",
+      "source:stepbible:tipnr@b2c3d4e5f6:sha-aaaa...",
+      "source:bibledata:structured@c3d4e5f6:sha-bbbb...",
+      "source:macula:hebrew@d4e5f6a7:sha-cccc...",
+      "source:openbible:geocoding@e5f6a7890:sha-dddd..."
+    ],
+    "checksums": [
+      "04a597188fb7e18ac93778203a65a071aa92c8f2dcf00b341cf02147b9f5a50f",
+      "67cbc9a1c1c5d167d81cea73725acf587b4c05b3dab8fec767d2ae15f0cfa0a9",
+      "9b1b7ffaa1a4955e29868544307def1ae877150f727c0db6f785c5731092702a",
+      "000acb0b7fc8b104971343b35bb67beccee09529140e2f32e0f108bc4ca015e7",
+      "068c6061f740d6099db63ebc3057903484b8483bef0aeafd66fd52fed1bbe5c2"
+    ],
+    "license_components": [
+      "All CC-BY-4.0 synthetic — Theographic CC-BY-SA excluded, SemanticBible unclear excluded, ODbL OSM excluded"
+    ],
+    "provenance": "synthetic-draft — requires Gate C1 rights_reviewer verification"
+  },
+  "known_limitations": [
+    "Commit SHAs and artifact SHA256 are synthetic placeholders (a*64, 0 byteSize OPEN) — exact byteSize/SHA to be filled after Gate C1 authorized opaque fetch (09A-E) computes real digests",
+    "Upstream license evidence digests are synthetic until real LICENSE fetched and retained",
+    "No download attempted — Task 09 forbids download before Gate C1"
+  ],
+  "follow_up": [
+    "Owner/rights Gate C1 must verify each commit/file/license and mint gate-C1 receipt with permitted_next_tasks [09A] etc., one acquisition at a time",
+    "09A-E: acquire one opaque artifact per Gate C1 receipt, no parse, record receipt"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquisition-request:09:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-08-after"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-09-after",
+    "status": "M .gitignore\n?? content/source-requests/\n?? docs/ACQUISITION_REQUEST_PACKET.md\n?? docs/handoffs/task-09-acquisition-packet.json"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-08",
+      "path": "docs/handoffs/task-08-acquisition.json",
+      "sha256": "7ba284e457729e85c9691a99bd19134badbf5b73bb15d51dc150aebaa209a7bd"
+    },
+    {
+      "key": "sourceCatalog",
+      "path": "docs/OPEN_BIBLE_DATA_SOURCES.md",
+      "sha256": "candidate_only"
+    }
+  ],
+  "approval_receipts_consumed": [],
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "mode": "record"
+  },
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (candidate requests)",
+      "key": "requests:stepbible:tvtms",
+      "path": "content/source-requests/stepbible-tvtms.json",
+      "sha256": "04a597188fb7e18ac93778203a65a071aa92c8f2dcf00b341cf02147b9f5a50f",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (candidate requests)",
+      "key": "requests:stepbible:tipnr",
+      "path": "content/source-requests/stepbible-tipnr.json",
+      "sha256": "67cbc9a1c1c5d167d81cea73725acf587b4c05b3dab8fec767d2ae15f0cfa0a9",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (candidate requests)",
+      "key": "requests:bibledata",
+      "path": "content/source-requests/bibledata-people.json",
+      "sha256": "9b1b7ffaa1a4955e29868544307def1ae877150f727c0db6f785c5731092702a",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (candidate requests)",
+      "key": "requests:macula:hebrew",
+      "path": "content/source-requests/macula-hebrew-neh2.json",
+      "sha256": "000acb0b7fc8b104971343b35bb67beccee09529140e2f32e0f108bc4ca015e7",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (candidate requests)",
+      "key": "requests:openbible:geodata",
+      "path": "content/source-requests/openbible-geodata.json",
+      "sha256": "068c6061f740d6099db63ebc3057903484b8483bef0aeafd66fd52fed1bbe5c2",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "generated_at": "2026-09-14T16:30:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09-attempt-1-20260914T163000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic (candidate only, no bytes, no publication)"
+}

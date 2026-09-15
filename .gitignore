@@ -34,6 +34,10 @@ build/
 *.heic
 *.HEIC
 
+# Private quarantine — Task 07/08: opaque source bytes stay out of Git and app bundles unless retention rights explicitly permit a reviewed fixture
+content/quarantine/
+# content/source-requests/ contains candidate acquisition requests — DO commit these (Gate C1)
+
 # Python bytecode
 __pycache__/
 *.pyc

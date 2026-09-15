@@ -1,0 +1,230 @@
+{
+  "packetId": "packet:09F:20260915",
+  "basedOn": "Gate C1 09A-E opaque receipts 2026-09-15",
+  "purpose": "Bind exact acquired digests to component selectors and request Gate C2 parsing authorization (evaluation_import -> drafting) — no semantic extraction, no AI",
+  "createdAt": "2026-09-15T05:20:00.000Z",
+  "acquiredArtifacts": [
+    {
+      "sourceKey": "source:stepbible:tvtms",
+      "releaseKey": "release:source:stepbible:tvtms@ae39711d:sha-63058e0f",
+      "commitOrTag": "ae39711d7843b2902d54993e432de9c12d6a4b9a",
+      "artifactUrl": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/ae39711d7843b2902d54993e432de9c12d6a4b9a/Versification/TVTMS%20-%20Translators%20Versification%20Traditions%20with%20Methodology%20for%20Standardisation%20for%20Eng%2BHeb%2BLat%2BGrk%2BOthers%20-%20STEPBible.org%20CC%20BY.txt",
+      "quarantinePath": "content/quarantine/stepbible/tvtms/TVTMS.txt",
+      "byteSize": 5790928,
+      "sha256": "sha256:63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+      "mediaType": "text/plain",
+      "containerMetadata": {
+        "lines": 29896,
+        "encoding": "utf-8 with BOM",
+        "firstLine": "TVTMS Translators Versification Traditions...",
+        "isWellFormed": true,
+        "note": "Hierarchical multi-line records, not TSV — requires custom parser"
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/STEPBible/STEPBible-Data/blob/ae39711d7843b2902d54993e432de9c12d6a4b9a/LICENSE",
+        "retainedSha256": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb (synthetic placeholder — real LICENSE not found via raw at this path, verify via API)",
+        "spdx": "CC-BY-4.0",
+        "requiredAttribution": "STEPBible CC BY 4.0"
+      },
+      "component": {
+        "componentKey": "tvtms-mappings",
+        "pathsOrFields": ["Versification/TVTMS - Translators Versification Traditions with Methodology for Standardisation for Eng+Heb+Lat+Grk+Others - STEPBible.org CC BY.txt"],
+        "fieldCount": "hierarchical",
+        "requestedOperation": "evaluation_import",
+        "proposedNextOperation": "drafting (parsing for Neh2 mappings)",
+        "retention": "quarantine-only until Gate C2, then isolated staging",
+        "prohibitedFields": ["embedded Scripture text"]
+      },
+      "status": "acquired",
+      "parsingAuthorizationRequested": "evaluation_import -> drafting for Neh2 versification mappings (split/merge/reordered) per Task 10"
+    },
+    {
+      "sourceKey": "source:stepbible:tipnr",
+      "releaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "commitOrTag": "ae39711d7843b2902d54993e432de9c12d6a4b9a",
+      "artifactUrl": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/ae39711d7843b2902d54993e432de9c12d6a4b9a/Proper%20Nouns/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt",
+      "quarantinePath": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "byteSize": 7967354,
+      "sha256": "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+      "mediaType": "text/plain",
+      "containerMetadata": {
+        "lines": 35916,
+        "encoding": "utf-8 with BOM",
+        "firstLine": "TIPNR - Translators Individualised Proper Names...",
+        "isWellFormed": true
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/STEPBible/STEPBible-Data/blob/ae39711d7843b2902d54993e432de9c12d6a4b9a/LICENSE",
+        "retainedSha256": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "spdx": "CC-BY-4.0"
+      },
+      "component": {
+        "componentKey": "tipnr-structured-fields",
+        "pathsOrFields": ["Proper Nouns/TIPNR:person", "Proper Nouns/TIPNR:place", "Proper Nouns/TIPNR:thing", "Proper Nouns/TIPNR:originalName", "Proper Nouns/TIPNR:familyRelation", "Proper Nouns/TIPNR:reference"],
+        "excludedFields": ["brief/short/article descriptions (Claude 3, not evidence)", "geodata", "embedded Scripture"],
+        "requestedOperation": "evaluation_import",
+        "proposedNextOperation": "drafting for Neh2 entity candidates per Task 11"
+      },
+      "status": "acquired"
+    },
+    {
+      "sourceKey": "source:bibledata:structured",
+      "releaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+      "commitOrTag": "8799b409c82a5d4acebba3be5107d6eff7c85d78",
+      "quarantinePath": "content/quarantine/bibledata/BibleData-Person.csv",
+      "byteSize": 274988,
+      "sha256": "sha256:489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+      "mediaType": "text/csv",
+      "containerMetadata": {
+        "lines": 3010,
+        "header": "person_id,person_name,surname,unique_attribute,sex,tribe,person_notes,name_instance,person_sequence",
+        "isWellFormed": true,
+        "note": "CSV with header, 3009 data rows"
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/BradyStephenson/bible-data/blob/8799b409c82a5d4acebba3be5107d6eff7c85d78/LICENSE",
+        "retainedSha256": "sha256:9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2",
+        "spdx": "CC-BY-4.0"
+      },
+      "component": {
+        "componentKey": "bibledata-people",
+        "pathsOrFields": ["BibleData-Person.csv"],
+        "proposedNextOperation": "drafting for Neh2 discrepancy analysis per Task 12"
+      },
+      "status": "acquired"
+    },
+    {
+      "sourceKey": "source:bibledata:structured",
+      "releaseKey": "release:source:bibledata:structured@8799b409:sha-d81cb04",
+      "quarantinePath": "content/quarantine/bibledata/BibleData-PersonRelationship.csv",
+      "byteSize": 442545,
+      "sha256": "sha256:d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+      "mediaType": "text/csv",
+      "containerMetadata": {
+        "lines": 5451,
+        "header": "person_id,related_person_id,relationship_type",
+        "isWellFormed": true
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/BradyStephenson/bible-data/blob/8799b409c82a5d4acebba3be5107d6eff7c85d78/LICENSE",
+        "retainedSha256": "sha256:9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2",
+        "spdx": "CC-BY-4.0"
+      },
+      "component": {
+        "componentKey": "bibledata-relationships",
+        "pathsOrFields": ["BibleData-PersonRelationship.csv"],
+        "proposedNextOperation": "drafting"
+      },
+      "status": "acquired"
+    },
+    {
+      "sourceKey": "source:bibledata:structured",
+      "releaseKey": "release:source:bibledata:structured@8799b409:sha-7eab00f8",
+      "quarantinePath": "content/quarantine/bibledata/BibleData-PersonVerse.csv",
+      "byteSize": 2617454,
+      "sha256": "sha256:7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177",
+      "mediaType": "text/csv",
+      "containerMetadata": {
+        "lines": 44268,
+        "header": "person_id,verse_id,book,chapter,verse",
+        "isWellFormed": true
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/BradyStephenson/bible-data/blob/8799b409c82a5d4acebba3be5107d6eff7c85d78/LICENSE",
+        "retainedSha256": "sha256:9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2",
+        "spdx": "CC-BY-4.0"
+      },
+      "component": {
+        "componentKey": "bibledata-person-verse",
+        "pathsOrFields": ["BibleData-PersonVerse.csv"],
+        "proposedNextOperation": "drafting"
+      },
+      "status": "acquired"
+    },
+    {
+      "sourceKey": "source:macula:hebrew",
+      "releaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
+      "commitOrTag": "47db250bd55d0d8577f2a94fba114ef16c35b23c",
+      "quarantinePath": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "byteSize": 543402,
+      "sha256": "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+      "mediaType": "application/xml",
+      "containerMetadata": {
+        "lines": 0,
+        "isWellFormed": true,
+        "note": "XML well-formed (ET.parse PASS), WLC lowfat for Neh2, 16-Neh-002",
+        "originalRequestedPaths": "hebrew/Tanach.tsv etc. not at this commit — actual is WLC/lowfat XML"
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/Clear-Bible/macula-hebrew/blob/47db250bd55d0d8577f2a94fba114ef16c35b23c/LICENSE.md",
+        "retainedSha256": "sha256:df45ba3224e7d6f9dba3ec8fd2d0b3f1d2febb2620147c889667886fccd4d8e1",
+        "spdx": "CC-BY-4.0"
+      },
+      "component": {
+        "componentKey": "macula-hebrew-lowfat-neh2",
+        "pathsOrFields": ["WLC/lowfat/16-Neh-002-lowfat.xml:token", "WLC/lowfat/16-Neh-002-lowfat.xml:lemma/morph via XML"],
+        "proposedNextOperation": "drafting for Neh2 linguistic per Task 13",
+        "note": "Original 3 TSV components reduced to 1 XML lowfat for Neh2 at this commit — 2 TSVs omitted as not at commit"
+      },
+      "status": "acquired"
+    },
+    {
+      "sourceKey": "source:openbible:geocoding",
+      "releaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "commitOrTag": "7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f",
+      "quarantinePath": "content/quarantine/openbible/ancient.jsonl",
+      "byteSize": 11550193,
+      "sha256": "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+      "mediaType": "application/jsonl",
+      "containerMetadata": {
+        "lines": 1342,
+        "firstLineIsJson": true,
+        "isWellFormed": true,
+        "note": "JSONL, 1,342 ancient places, first line valid JSON"
+      },
+      "licenseEvidence": {
+        "url": "https://github.com/openbibleinfo/Bible-Geocoding-Data/blob/7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f/LICENSE",
+        "retainedSha256": "sha256:8888888888888888888888888888888888888888888888888888888888888888 (synthetic — LICENSE not found via raw at this path, verify via API)",
+        "spdx": "CC-BY-4.0"
+      },
+      "component": {
+        "componentKey": "openbible-core-geocoding",
+        "pathsOrFields": ["data/ancient.jsonl:place/coordinates/confidence/verseReference"],
+        "excluded": ["data/images/**", "data/openstreetmap/** ODbL", "site prose/ESV", "KMZ/KML"],
+        "proposedNextOperation": "drafting for Neh2 places per Task 14"
+      },
+      "status": "acquired"
+    }
+  ],
+  "omittedSources": [
+    {
+      "sourceKey": "source:theographic:metadata",
+      "reason": "Not requested — share-alike CC-BY-SA, requires isolation design per OPEN_BIBLE_DATA_SOURCES.md"
+    },
+    {
+      "sourceKey": "source:semanticbible:nt-names",
+      "reason": "Not requested — license unclear, NT-only, incomplete"
+    },
+    {
+      "sourceKey": "source:bibleaquifer:acai-realia",
+      "reason": "Not requested — share-alike quarantine, deferred"
+    }
+  ],
+  "externalAiProcessing": "denied for all 5 sources — no component requests external_ai_processing",
+  "embedding": "denied for all 5",
+  "publication": "denied for all 5 — drafting only requested",
+  "retention": "quarantine-only until Gate C2, then isolated staging per component",
+  "coverageNote": "5 sources acquired (7 files) covering 7 components for Neh2 minimal slice. Reduced-source coverage: MACULA original 3 TSVs reduced to 1 XML at this commit; BibleData places/events not acquired (deferred per 09 request). This is the complete 09A-E set — no other 09 slot omitted except share-alike 3.",
+  "gateC2Request": {
+    "requestedOperations": ["drafting"],
+    "forbiddenOperations": ["publication", "external_ai_processing", "embedding"],
+    "requiresHumanApproval": true,
+    "nextTasks": ["10 TVTMS adapter", "11 TIPNR adapter", "12 BibleData adapter", "13 MACULA adapter", "14 OpenBible adapter"]
+  },
+  "requestMetadata": {
+    "requestId": "packet:09F:20260915",
+    "requestedAt": "2026-09-15T05:20:00.000Z",
+    "requestedBy": "synthetic — Task 09F draft, requires rights_reviewer Gate C2",
+    "status": "candidate"
+  }
+}

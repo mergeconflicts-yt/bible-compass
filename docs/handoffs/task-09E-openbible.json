@@ -1,0 +1,85 @@
+{
+  "attempt_id": "task:acquire-openbible:09E:attempt-1",
+  "task_id": "09E",
+  "task_title": "Acquire opaque OpenBible artifact",
+  "result": "PASS",
+  "user_visible_outcome": "Acquired OpenBible ancient.jsonl 11,550,193 sha b8187aa4... into content/quarantine/openbible/ancient.jsonl via dry-run authorize (evaluation_import allowed, core CC-BY-4.0, ODbL/OSM and images excluded) + streaming SHA, no parse.",
+  "files_changed": [
+    {
+      "path": "content/quarantine/openbible/ancient.jsonl",
+      "byteSize": 11550193,
+      "sha256": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+      "status": "A"
+    },
+    {
+      "path": "content/quarantine/openbible/receipt-09E.json",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": ["No images, no OSM, no ESV, no parse"],
+  "commands_executed": [
+    {
+      "command": "acquire OpenBible via RegistryService authorize + FixtureFetcher",
+      "exit_code": 0,
+      "output": "11,550,193 bytes sha b8187aa4... success"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/openbible/ancient.jsonl",
+      "exit_code": 0,
+      "output": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests",
+  "manual_checks": {
+    "completed": [
+      "Verified dry-run before mutation",
+      "Verified core geocoding only, 11.5M jsonl, no images/OSM/ESV/KMZ",
+      "Verified CC-BY-4.0 core, no ODbL",
+      "Verified quarantinePath content/quarantine/openbible/ancient.jsonl",
+      "Verified no parser accessed"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:openbible:geocoding",
+    "releaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+    "commitOrTag": "7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f",
+    "url": "https://raw.githubusercontent.com/openbibleinfo/Bible-Geocoding-Data/7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f/data/ancient.jsonl",
+    "byteSize": 11550193,
+    "sha256": "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+    "quarantinePath": "content/quarantine/openbible/ancient.jsonl"
+  },
+  "known_limitations": ["ancient.jsonl is 11.5M — parsing deferred to Task 14 Gate C2; geometry/modern/source not fetched (minimal slice)"],
+  "follow_up": ["09F: Exact-byte/component decision packet → Gate C2"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquire-openbible:09E:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "opaque",
+      "key": "quarantine:openbible:ancient",
+      "path": "content/quarantine/openbible/ancient.jsonl",
+      "sha256": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+      "byteSize": 11550193
+    }
+  ],
+  "generated_at": "2026-09-15T05:17:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09E-attempt-1-20260915T051700Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "opaque"
+}

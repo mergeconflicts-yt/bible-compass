@@ -1,0 +1,82 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "npm --prefix packages/content-schema run test",
+      "git diff --check"
+    ],
+    "allowed_paths": [
+      "packages/domain/**",
+      "packages/content-schema/**",
+      "docs/OPEN_BIBLE_DATA_SOURCES.md",
+      "docs/REVIEW_GATE_B_PACKET.md"
+    ],
+    "attempt_id": "task:registry-contract:07:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-07-20260914T140604Z",
+      "record_sha256": "972966739c65c509662c9a47614c72d3765229ab23b2f53e407f39ed24323b40"
+    },
+    "expected_artifacts": [
+      {
+        "key": "registry:contract",
+        "path": "packages/content-schema/src/registry.ts"
+      }
+    ],
+    "expires_at": "2026-09-15T14:06:04.180592Z",
+    "forbidden_paths": [
+      "apps/**",
+      "supabase/**"
+    ],
+    "gate_receipts": [
+      {
+        "gate_id": "B",
+        "receipt_id": "gate-B-v1-20260914T140402Z",
+        "sha256": "9595c4363f1f64d8f5bd27d107355a3d43028862a95a2de86e612c1a96072d43"
+      }
+    ],
+    "issued_at": "2026-09-14T14:06:04.180592Z",
+    "issuer": {
+      "authorization_receipt_id": "gate-B-v1-20260914T140402Z",
+      "authorization_receipt_sha256": "9595c4363f1f64d8f5bd27d107355a3d43028862a95a2de86e612c1a96072d43",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [
+      {
+        "artifact_key": "handoff:task-06",
+        "sha256": "a7fad908eecb7dfa03e21583b2c5f3a8c7c8a018f1351476ee92e408499b6dd1"
+      }
+    ],
+    "prior_ready_state_receipt_id": "state-r18-gateb-passed-07ready-20260914T140402Z",
+    "prior_ready_state_receipt_sha256": "447e143488094cab289194da545870ac9014197932ac0037fb4f6aef14016b7e",
+    "prior_ready_state_revision": 18,
+    "repository_state_receipt": {
+      "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+      "receipt_id": "repo-state-332fcc07-e575a2c7",
+      "sha256": "81b92b963266d6972b80dd6415b831eba5859e4c1182b6b79e8fee695695dc50",
+      "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/REVIEW_GATE_B_PACKET.md\n?? docs/handoffs/task-05-golden.json\n?? docs/handoffs/task-06-review.json\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/dispatch-06-20260914T135839Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/envelope-06-20260914T135839Z.json\n?? docs/receipts/gate-B-v1-20260914T140402Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? docs/receipts/state-r15-task05-done-06ready-20260914T135346Z.json\n?? docs/receipts/state-r16-task06-inprogress-20260914T135839Z.json\n?? docs/receipts/state-r17-task06-done-gatebawait-20260914T140047Z.json\n?? docs/receipts/state-r18-gateb-passed-07ready-20260914T140402Z.json\n?? packages/content-schema/tests/fixtures/\n?? packages/content-schema/tests/golden.test.ts"
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": false,
+    "resolved_task_block": {
+      "content": "Task 07 - Operational source-registry contract\n\nTask\nImplement the machine-readable, fail-closed source registry that authorizes exact\nsource-release/component/operation tuples.\n\nUser value\nPrevents a Markdown edit or generic \"open source\" label from authorizing data use.\n\nRead first\nGate B handoff, OPEN_BIBLE_DATA_SOURCES.md\uff0cAI_CURATION_CONTRACT.md\uff0cCONTENT_RIGHTS.md,\nSECURITY.md,and source-related physical model tables.\n\nIn scope\nCandidate acquisition requests\n\u2022 Immutable source releases/artifacts and SHA-256 manifests\n\u2022 Component/path/field selectors\nRetained license-evidence digests and attribution rules\nPer-operation grants, prohibitions, expiry/territory/language limits, and Al-provider policy\nAppend-only approval/revocation records bound to authenticated actor and exact digest\n\u2022 Schema, fixtures, evaluator, and audit receipt\n\nOut of scope\nDownloading sources, granting approval, database migrations, or reader-facing source content.\nAllowed changes\nDomain/content schemas, private registry fixtures, evaluator, tests, and registry documentation.\nForbidden changes\nMarkdown status cannot authorize use\nMissing/expired/ambiguous grants cannot default to allowed\nOne top-level license cannot govern mixed-license components\n\nAcceptance criteria\n\nLicense evidence and acquired bytes are digest-bound\nFixture approvals are clearly synthetic",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "764cf6b15650867fe17f19894cd1d31b086350dae9e1ddf70c2ff748a987c15a",
+    "successor_task_keys": [
+      "07A"
+    ],
+    "task_key": "07",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "972966739c65c509662c9a47614c72d3765229ab23b2f53e407f39ed24323b40",
+  "record_id": "envelope-07-20260914T140604Z",
+  "record_sha256": "972966739c65c509662c9a47614c72d3765229ab23b2f53e407f39ed24323b40",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "0CooMwDTP9cdSOGU/iJBG43gEq/KcBRoVYpTnFgLX3XMuFF8xuR8v+THkUFMtaNUNl/jGhJmVEtvCCZBiY+RAA=="
+}

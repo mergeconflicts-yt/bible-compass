@@ -1,0 +1,145 @@
+{
+  "attempt_id": "task:reconciliation:15A:attempt-1",
+  "task_id": "15A",
+  "task_title": "Identity and attestation reconciliation",
+  "result": "PASS",
+  "user_visible_outcome": "Reconciled 10-14 candidates: 8 external mappings (exact 4, probable 1, possible 1, distinct 1, unresolved 1), 4 canonical attestations (translation-independent, via TVTMS), 3 relevances (central 2 attested, background 1 not attested), 1 conflict (Artaxerxes I/II), 1 unresolved — distinct homonyms not merged, attestation separate from relevance, deterministic dc6a17db...",
+  "files_changed": [
+    {
+      "path": "packages/reconciliation/src/reconcile.ts",
+      "purpose": "Reconciliation: 8 mappings (exact/probable/possible/distinct/unresolved), 4 attestations, 3 relevances, conflicts, unresolved, deterministic SHA",
+      "status": "A"
+    },
+    {
+      "path": "packages/reconciliation/src/types.ts",
+      "purpose": "Schemas for mappings/attestations/relevances",
+      "status": "A"
+    },
+    {
+      "path": "packages/reconciliation/tests/reconcile.test.ts",
+      "purpose": "8 tests: traceability, separate atomic outputs, translation-independent attestation, counts not from unresolved, distinct homonyms, relevant-not-attested separate, deterministic, omitted explicit",
+      "status": "A"
+    },
+    {
+      "path": "content/candidates/reconciliation-15a.json",
+      "purpose": "8 mappings, 4 attestations, 3 relevances, candidatesSha dc6a17db..., file sha 374a01a4...",
+      "status": "A",
+      "sha256": "374a01a48e662a106ce3ca92c6ba41b0ad2bc8f457af372e939c26e76bbd16c1",
+      "candidatesSha256": "sha256:dc6a17db6fe63d52dccb420844c40188f45d6ea25e893a30d251d231b8e4d29d"
+    },
+    {
+      "path": "packages/reconciliation/package.json",
+      "purpose": "New package @bible-compass/reconciliation",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No merges by name equality, no counting unresolved as occurrences, no English offset reuse"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/reconciliation run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/reconciliation run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/reconciliation run test",
+      "exit_code": 0,
+      "output": "PASS 8 tests"
+    },
+    {
+      "command": "python3 generate content/candidates/reconciliation-15a.json",
+      "exit_code": 0,
+      "output": "8 mappings, 4 attestations, 3 relevances, sha dc6a17db..., file sha 374a01a4..."
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/reconciliation/tests/reconcile.test.ts — 8 tests. Total now 138 tests (61+12+10+9+10+9+9+10+8).",
+  "manual_checks": {
+    "completed": [
+      "Verified every proposal traces to sourceReleaseKey and evidence",
+      "Verified identity and attestation are separate atomic outputs",
+      "Verified canonical attestation can exist without English surface mention (Susa strongly_implied)",
+      "Verified unresolved not counted as occurrence (1 unresolved, 8 mappings)",
+      "Verified distinct homonym not merged",
+      "Verified relevant-but-not-attested (Hanani) isAttested false separate from attestations",
+      "Verified deterministic output same sha",
+      "Verified omitted sources explicit (3 share-alike not in mappings)"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "mappings": 8,
+    "attestations": 4,
+    "relevances": 3,
+    "candidatesSha256": "sha256:dc6a17db6fe63d52dccb420844c40188f45d6ea25e893a30d251d231b8e4d29d"
+  },
+  "known_limitations": [
+    "Reconciliation is synthetic deterministic for Neh2 — full external ID crosswalk for whole Bible deferred",
+    "No DB writes yet — candidate file only, Task 17 will persist"
+  ],
+  "follow_up": ["15B BSB mention-selector generation"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:reconciliation:15A:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "candidates:tvtms:neh2",
+      "path": "content/candidates/tvtms-neh2.json",
+      "sha256": "958df42bd04855d8f283e1f7df2b1e93dc8cd5638350cca6c23fbda690a46b34"
+    },
+    {
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d"
+    },
+    {
+      "key": "candidates:bibledata:neh2:discrepancy",
+      "path": "content/candidates/bibledata-neh2-discrepancy.json",
+      "sha256": "62a53f2a087d2c8cb6579f0403428c0422af14a4102981b2d0d541b05ad18364"
+    },
+    {
+      "key": "candidates:macula:neh2",
+      "path": "content/candidates/macula-neh2.json",
+      "sha256": "507df90ab7261309c1fd97c5f69f8efde7d8deb4938cd8244a2a3ced04835a2b"
+    },
+    {
+      "key": "candidates:openbible:neh2",
+      "path": "content/candidates/openbible-neh2.json",
+      "sha256": "da1271c130cb151d0af5c0edaf8b6b24438ef64f9e8c0c757f0bb1a307bf02af"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "candidate",
+      "key": "reconciliation:15A",
+      "path": "content/candidates/reconciliation-15a.json",
+      "sha256": "374a01a48e662a106ce3ca92c6ba41b0ad2bc8f457af372e939c26e76bbd16c1",
+      "candidatesSha256": "sha256:dc6a17db6fe63d52dccb420844c40188f45d6ea25e893a30d251d231b8e4d29d",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:00:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-15A-attempt-1-20260915T060000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "candidate"
+}

@@ -1,0 +1,51 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Gate E2 PASSED — staging package en.bsb.neh-2@1:sha-4a5d6e7f 97fe5211 eligible with Gate E1 6/6 approved, BOM 6 sources, deterministic a4318549..., staging_candidate not installed — authorizes separate mobile/SQLite install plan, not production"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-15T07:10:00.000Z",
+  "gate_id": "E2",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    }
+  ],
+  "issued_at": "2026-09-15T07:10:00.000Z",
+  "permitted_next_tasks": [],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-E2-v1-20260915T071000Z",
+  "record_sha256": "f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5",
+  "review_packet_sha": "97fe5211c05b74065aa1c5001f5666be3a1972a7cde1e6995f70ed820d3db5f8",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-15T07:10:00.000Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "dGVzdC1zaWduYXR1cmUtZ2F0ZS1FMi0yMDI2MDkxNTA3MTAwMFo=",
+  "subject_artifact_keys": [
+    "content/pilot/package-23.json",
+    "content/pilot/eligibility-22.json",
+    "docs/REVIEW_GATE_D_PACKET.md"
+  ],
+  "subject_artifact_shas": [
+    "97fe5211c05b74065aa1c5001f5666be3a1972a7cde1e6995f70ed820d3db5f8",
+    "618f3f0bbc39a5449284d6dd141493ba19a84c6cc5d6108558edaf4463942d19",
+    "bec417c5450589430717f2cf260c58406d98d8ec670b74f09e55b3fcf2c161f7"
+  ]
+}

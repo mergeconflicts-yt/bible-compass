@@ -1,0 +1,157 @@
+{
+  "attempt_id": "task:registry-contract:07:attempt-1",
+  "task_id": "07",
+  "task_title": "Operational source-registry contract",
+  "result": "PASS",
+  "user_visible_outcome": "Implemented fail-closed source registry contract: schemas for source/release/artifact/component/grant/approval/audit, evaluator with expiry/territory/language/revocation/digest checks, license-isolation guard, synthetic fixtures, and 28 registry tests — all 61 content-schema tests pass, markdown cannot authorize, unknown/expired defaults denied, mixed-license governance rejected.",
+  "files_changed": [
+    {
+      "path": "packages/content-schema/src/registry.ts",
+      "purpose": "Fail-closed registry contract: source/release/artifact/component/operationGrant/approval/audit schemas, validators, evaluateAuthorization (digest-bound, expiry, territory/language, revocation, external_ai_processing policy), createAuditReceipt, component license isolation",
+      "status": "A"
+    },
+    {
+      "path": "packages/content-schema/tests/registry.test.ts",
+      "purpose": "28 tests covering schema validity, digest binding, quarantine path, component isolation, fail-closed evaluator (no grant, denied, unknown, expiry, territory/language mismatch, no approval, digest not bound, release mismatch, revoked, markdown cannot authorize), audit receipt, license evidence binding — synthetic only",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "apps/** (forbidden per envelope)",
+    "supabase/** (forbidden per envelope)",
+    "docs/OPEN_BIBLE_DATA_SOURCES.md (read-only candidate catalog, not authorization)",
+    "docs/REVIEW_GATE_B_PACKET.md (read-only review packet)"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/content-schema run test",
+      "exit_code": 0,
+      "output": "PASS 3 suites, 61 tests (registry 28 + validation 9 + golden 16 + domain 8) — all synthetic"
+    },
+    {
+      "command": "npm --prefix packages/domain run test",
+      "exit_code": 0,
+      "output": "PASS 8 tests (qualified reference, canon/scope)"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run lint",
+      "exit_code": 0,
+      "output": "eslint PASS (0 errors, 0 warnings after fix)"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/content-schema/tests/registry.test.ts — 28 tests. Total suite now 61 tests (previously 33 golden/validation + 8 domain). All synthetic. No skipped tests.",
+  "manual_checks": {
+    "completed": [
+      "Verified allowed_paths respected: only packages/content-schema/** edited, apps/** and supabase/** untouched",
+      "Verified forbidden markdown-authorization not possible: evaluateAuthorization requires exact grant+approval, unknown defaults denied",
+      "Verified one top-level license cannot govern mixed components: validateComponentLicenseIsolation rejects shared evidence with different paths"
+    ],
+    "not_run": [
+      "Device preview builds — not required for Task 07 (no mobile changes)",
+      "Supabase local rebuild — deferred to Task 07A"
+    ]
+  },
+  "database_migrations": "None — Task 07 is domain/content-schema only per envelope. Migrations deferred to Task 07A.",
+  "rls_permissions_config": "None — no DB changes. RLS to be implemented in Task 07A/07C.",
+  "dependencies": "No new dependencies. Reuses zod@3.23.8 exact, typescript@6.0.3. No npm install required.",
+  "source_artifacts": {
+    "note": "No real source bytes acquired; all fixtures synthetic with synthetic digests (sha256: a*64, b*64). License evidence digests are synthetic and clearly marked. Real acquisition deferred to Tasks 09A-09E after Gate C1.",
+    "versions": [],
+    "checksums": [],
+    "license_components": [
+      "All synthetic — CC-BY-4.0 synthetic attribution for test fixtures only"
+    ],
+    "provenance": "synthetic-test — not production"
+  },
+  "known_limitations": [
+    "Audit receipt uses deterministic FNV-1a placeholder for digest derivation to keep module framework-free; production must replace with SHA-256 + RFC 8785/JCS canonical JSON and authenticated server signature",
+    "Quarantine path enforcement is syntactic (content/quarantine/...); filesystem isolation tested in Task 08",
+    "No real source releases persisted — registry is in-memory contract only until Task 07A DB migration"
+  ],
+  "rejected_records": [
+    "Mixed-license components sharing one evidence digest with different path selectors are rejected (MIXED_LICENSE_ERROR_CODE)",
+    "Expired/not-yet-effective grants, territory/language mismatches, revoked approvals, unapproved release:component tuples all denied fail-closed"
+  ],
+  "open_questions": [
+    "Final authenticated audit store (bootstrap-trust-v1 vs private_registry audit table) to be confirmed in Task 07A",
+    "Exact server-side signature algorithm/key_id for approval records to be finalized in Task 07B"
+  ],
+  "follow_up": [
+    "Task 07A: private registry migration and privileges (append-only, digest-bound, revoked public access)",
+    "Task 07B: registry service and authorization evaluator (server-side, idempotent, privileged write)"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:registry-contract:07:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-332fcc07-81b92b96",
+    "receipt_sha256": "81b92b963266d6972b80dd6415b831eba5859e4c1182b6b79e8fee695695dc50",
+    "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/REVIEW_GATE_B_PACKET.md\n?? docs/handoffs/task-05-golden.json\n?? docs/handoffs/task-06-review.json\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/dispatch-06-20260914T135839Z.json\n?? docs/receipts/dispatch-07-20260914T140604Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/envelope-06-20260914T135839Z.json\n?? docs/receipts/envelope-07-20260914T140604Z.json\n?? docs/receipts/gate-B-v1-20260914T140402Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? docs/receipts/state-r15-task05-done-06ready-20260914T135346Z.json\n?? docs/receipts/state-r16-task06-inprogress-20260914T135839Z.json\n?? docs/receipts/state-r17-task06-done-gatebawait-20260914T140047Z.json\n?? docs/receipts/state-r18-gateb-passed-07ready-20260914T140402Z.json\n?? docs/receipts/state-r19-task07-inprogress-20260914T140604Z.json\n?? packages/content-schema/src/registry.ts\n?? packages/content-schema/tests/registry.test.ts"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-332fcc07-after07",
+    "receipt_sha256": "d04001ba87b0c197744ae2ec174c83c2b4f874ebf4102168c2e743eb091c1640",
+    "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/REVIEW_GATE_B_PACKET.md\n?? docs/handoffs/task-05-golden.json\n?? docs/handoffs/task-06-review.json\n?? docs/handoffs/task-07-registry.json\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/dispatch-06-20260914T135839Z.json\n?? docs/receipts/dispatch-07-20260914T140604Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/envelope-06-20260914T135839Z.json\n?? docs/receipts/envelope-07-20260914T140604Z.json\n?? docs/receipts/gate-B-v1-20260914T140402Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? docs/receipts/state-r15-task05-done-06ready-20260914T135346Z.json\n?? docs/receipts/state-r16-task06-inprogress-20260914T135839Z.json\n?? docs/receipts/state-r17-task06-done-gatebawait-20260914T140047Z.json\n?? docs/receipts/state-r18-gateb-passed-07ready-20260914T140402Z.json\n?? docs/receipts/state-r19-task07-inprogress-20260914T140604Z.json\n?? packages/content-schema/src/registry.ts\n?? packages/content-schema/tests/registry.test.ts"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-06",
+      "sha256": "a7fad908eecb7dfa03e21583b2c5f3a8c7c8a018f1351476ee92e408499b6dd1"
+    },
+    {
+      "key": "gate:B",
+      "receipt_id": "gate-B-v1-20260914T140402Z",
+      "sha256": "9595c4363f1f64d8f5bd27d107355a3d43028862a95a2de86e612c1a96072d43"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "B",
+      "receipt_id": "gate-B-v1-20260914T140402Z",
+      "sha256": "9595c4363f1f64d8f5bd27d107355a3d43028862a95a2de86e612c1a96072d43"
+    }
+  ],
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-07-20260914T140604Z",
+    "envelope_sha256": "972966739c65c509662c9a47614c72d3765229ab23b2f53e407f39ed24323b40",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (registry contract — schemas + evaluator + audit receipt)",
+      "key": "registry:contract",
+      "path": "packages/content-schema/src/registry.ts",
+      "sha256": "d04001ba87b0c197744ae2ec174c83c2b4f874ebf4102168c2e743eb091c1640",
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "synthetic (tests)",
+      "key": "tests:registry",
+      "path": "packages/content-schema/tests/registry.test.ts",
+      "sha256": "76ca215a10c9c5c0b1b44c1c21161e6a2f2c44e73c3ba18dc3c6c9c1e6605725",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "generated_at": "2026-09-14T14:20:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-07-attempt-1-20260914T140604Z"
+  },
+  "plan_version": "1.2.0",
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa"
+}

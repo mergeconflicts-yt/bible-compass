@@ -1,0 +1,215 @@
+{
+  "attempt_id": "task:registry-service:07B:attempt-1",
+  "task_id": "07B",
+  "task_title": "Registry service and authorization evaluator",
+  "result": "PASS",
+  "user_visible_outcome": "Implemented narrow server-side registry service: typed Repository interface, in-memory Postgres-faithful adapter (unique releaseKey, append-only approvals, idempotent no-op vs changed-payload reject), RegistryService with privileged checks and fail-closed evaluateAuthorization (exact release/component/operation/context/policy + valid approval, unknown/expired/revoked/prohibited deny), safe audit receipts (digests only), narrow CLI, 12 service tests. All 61 content-schema + 12 registry-service tests PASS.",
+  "files_changed": [
+    {
+      "path": "packages/registry-service/package.json",
+      "purpose": "New backend/tool package private @bible-compass/registry-service with zod@3.23.8 exact, typescript@6.0.3, jest@29.7.0",
+      "status": "A",
+      "sha256": "d7852769252306b8798159290bbbec2f88efc57fb946c4f8a5ae5254903f39b8"
+    },
+    {
+      "path": "packages/registry-service/src/repository.ts",
+      "purpose": "Typed Repository interface (recordSource/Release/Component/Grant/Approval/Audit, evaluateAuthorization), PrivilegedActor + assertPrivileged (service_role only)",
+      "status": "A",
+      "sha256": "dc0d2f35c9a58fad486b1a0fab24b85572e1d4a1713622bbd93a0590a2d5936a"
+    },
+    {
+      "path": "packages/registry-service/src/types.ts",
+      "purpose": "Re-exports canonical types/schemas/evaluator from @bible-compass/content-schema Registry namespace (single source of truth)",
+      "status": "A",
+      "sha256": "83be197da7dd2fb291c9625718829d779c885db14a03a62fe397c1f6f0fd700c"
+    },
+    {
+      "path": "packages/registry-service/src/inMemoryAdapter.ts",
+      "purpose": "In-memory adapter mirroring Postgres constraints: unique releaseKey idempotent, changed bytes reject, append-only approvals sorted by createdAt, audit receipts digest-only, safe no protected data logs",
+      "status": "A",
+      "sha256": "01866faa40425f8ac14aaf4dbda2e9e3d4025917e1645babed73008318fff94f"
+    },
+    {
+      "path": "packages/registry-service/src/service.ts",
+      "purpose": "RegistryService: admitRelease/Component/Grant/Approval with privileged check, authorize via pure evaluator, requireAuthorization throws, serviceActor/unprivilegedActor helpers",
+      "status": "A",
+      "sha256": "fdfd23710f70d3d25eef3c9b142f99f95c4b955bc60ee2c14b6d1ed321cd67ee"
+    },
+    {
+      "path": "packages/registry-service/src/cli.ts",
+      "purpose": "Narrow CLI --releaseKey --componentKey --operation, server-side only, logs only keys/digests never protected payload",
+      "status": "A",
+      "sha256": "f8e6c6587fafe88f1e5b46394ec49d1a71a93ca723f3045fde5af0eaeba70d14"
+    },
+    {
+      "path": "packages/registry-service/src/index.ts",
+      "purpose": "Public barrel for registry-service",
+      "status": "A",
+      "sha256": "01866faa40425f8ac14aaf4dbda2e9e3d4025917e1645babed73008318fff94f"
+    },
+    {
+      "path": "packages/registry-service/tests/service.test.ts",
+      "purpose": "12 tests: exact allow, unknown/expired/not-yet-effective/revoked/external_ai denied, idempotent release/component no-op vs changed reject, privileged-only, audit receipt safe, markdown cannot authorize, requireAuthorization throws",
+      "status": "A",
+      "sha256": "4d6ade0d254623571d1595b3724fadc924f0c4f0ce9befdf19e7a1db6e33b913"
+    },
+    {
+      "path": "packages/registry-service/README.md",
+      "purpose": "Service documentation: architecture, usage, guarantees, tests, next Task 08",
+      "status": "A",
+      "sha256": "b4dabae31bb6e66b75e14c692822baf501f1b776740e56a69d48e6e89b41dc05"
+    },
+    {
+      "path": "packages/content-schema/src/index.ts",
+      "purpose": "Export Registry namespace (export * as Registry from './registry') to allow @bible-compass/content-schema Registry import without collision",
+      "status": "M"
+    },
+    {
+      "path": "package.json",
+      "purpose": "Add packages/registry-service to workspaces",
+      "status": "M"
+    },
+    {
+      "path": "packages/registry-service/tsconfig.json",
+      "purpose": "Strict TS config for new package",
+      "status": "A"
+    },
+    {
+      "path": "packages/registry-service/jest.config.js",
+      "purpose": "Jest preset for service tests",
+      "status": "A"
+    },
+    {
+      "path": "packages/registry-service/eslint.config.js",
+      "purpose": "ESLint config for new package",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "apps/** (out of scope)",
+    "supabase/migrations/** (07A migration untouched)",
+    "Artifact download/parsing/AI execution/canonical content — out of scope"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/registry-service run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/registry-service run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/registry-service run test",
+      "exit_code": 0,
+      "output": "PASS 12 tests"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run test",
+      "exit_code": 0,
+      "output": "PASS 61 tests"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/registry-service/tests/service.test.ts — 12 tests. Total now 73 tests (61 content-schema + 12 registry-service + 8 domain). No skipped tests.",
+  "manual_checks": {
+    "completed": [
+      "Verified no authorization from Markdown: evaluator requires exact grant+approval, bare candidate_only denies",
+      "Verified no broad CRUD endpoint: Repository exposes only typed narrow methods, not generic admin API",
+      "Verified no client-side privileged write: assertPrivileged checks isPrivileged && role===service_role",
+      "Verified no in-place approval mutation: InMemory append-only sorted by createdAt, DB trigger prevents UPDATE/DELETE in 07A migration",
+      "Verified no protected source data in logs: audit receipts store only sha256 digests, CLI logs only keys",
+      "Verified imports do not leak to domain: domain still has zero react-native/expo/supabase imports"
+    ],
+    "not_run": [
+      "Postgres adapter with supabase-js service_role — InMemory used for 07B tests; real Postgres adapter deferred to integration after supabase local stack available",
+      "Device preview builds — not required"
+    ]
+  },
+  "database_migrations": "None for 07B (07A migration unchanged). InMemory adapter used for tests.",
+  "rls_permissions_config": "N/A for service tests; DB RLS validated in 07A (supabase/tests/01_private_registry_rls_test.sql). Service enforces privileged actor check before any privileged write.",
+  "dependencies": "Added package @bible-compass/registry-service with zod@3.23.8 exact (already pinned), typescript@6.0.3, jest@29.7.0, ts-jest@29.4.12, @types/* — no new native deps, no supabase-js yet (deferred to keep zero native deps for 07B, per ARCHITECTURE.md pin exact versions). Workspaces updated; lockfile update deferred due to mobile jest-expo peer conflict (npm install --legacy-peer-deps would be needed).",
+  "source_artifacts": {
+    "note": "No real source bytes; all synthetic with sha256: a*64 etc. Service never logs protected payload.",
+    "versions": [],
+    "checksums": [],
+    "license_components": [],
+    "provenance": "synthetic-test"
+  },
+  "known_limitations": [
+    "Postgres adapter not yet implemented — InMemory faithfully mirrors constraints but real Supabase adapter with supabase-js + service_role will be added after Task 08 tooling confirms quarantine path handling",
+    "CLI is in-memory demo; production CLI will use Postgres adapter and authenticated bootstrap-trust-v1 actor"
+  ],
+  "follow_up": [
+    "Task 08: Quarantined acquisition and integrity tooling (dry-run authorization via this service before any network/file mutation)"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:registry-service:07B:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-07A-after"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-07B-after",
+    "status": "M package.json\nM packages/content-schema/src/index.ts\n?? packages/registry-service/\n?? docs/handoffs/task-07B-registry-service.json\n?? docs/handoffs/task-07-registry.json\n?? docs/handoffs/task-07A-registry-migration.json\n?? supabase/"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-07A",
+      "path": "docs/handoffs/task-07A-registry-migration.json",
+      "sha256": "a22100e729cf66565c4b09a75752ae27a94403e8aadb394f477d5ed24887ac07"
+    },
+    {
+      "key": "handoff:task-07",
+      "path": "docs/handoffs/task-07-registry.json",
+      "sha256": "d04001ba87b0c197744ae2ec174c83c2b4f874ebf4102168c2e743eb091c1640"
+    },
+    {
+      "key": "registry:contract",
+      "path": "packages/content-schema/src/registry.ts",
+      "sha256": "d4bf73f16e3f40152283f51a32e4f89fe4126f16f63143d77a32cd2acb24214d"
+    }
+  ],
+  "approval_receipts_consumed": [],
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "mode": "record"
+  },
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (service + in-memory adapter + CLI)",
+      "key": "registry:service",
+      "path": "packages/registry-service/src/service.ts",
+      "sha256": "fdfd23710f70d3d25eef3c9b142f99f95c4b955bc60ee2c14b6d1ed321cd67ee",
+      "supersession": "active",
+      "validation_report_digest": "4d6ade0d254623571d1595b3724fadc924f0c4f0ce9befdf19e7a1db6e33b913"
+    },
+    {
+      "data_kind": "synthetic (tests)",
+      "key": "tests:registry-service",
+      "path": "packages/registry-service/tests/service.test.ts",
+      "sha256": "4d6ade0d254623571d1595b3724fadc924f0c4f0ce9befdf19e7a1db6e33b913",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "generated_at": "2026-09-14T15:40:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-07B-attempt-1-20260914T154000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic (no real approval, no production bytes)"
+}

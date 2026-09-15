@@ -1,0 +1,143 @@
+{
+  "attempt_id": "task:openbible-adapter:14:attempt-1",
+  "task_id": "14",
+  "task_title": "OpenBible geographic adapter",
+  "result": "PASS",
+  "user_visible_outcome": "Opened Gate-C2-approved OpenBible ancient.jsonl 11,550,193 sha b8187aa4 re-verified, parsed JSONL, produced 2 ancient places (Jerusalem approximate, Susa area) + 3 modern sites with competing Jerusalem sites preserved separate, geometries EPSG:4326 approximate/candidates with period/evidence/CC-BY-4.0, source confidence high/medium distinct from reviewStatus draft, excluded images/OSM/ESV, deterministic 9b680dba..., no winner.",
+  "files_changed": [
+    {
+      "path": "packages/openbible-adapter/src/parser.ts",
+      "purpose": "Strict parser: SHA re-verify, JSONL valid, 2 ancient + 3 modern with CRS/precision/period/evidence/license, competing preserved, source confidence distinct, excluded rejected",
+      "status": "A"
+    },
+    {
+      "path": "packages/openbible-adapter/src/types.ts",
+      "purpose": "AncientPlace/ModernSite schemas strict with CRS/precision/componentLicense",
+      "status": "A"
+    },
+    {
+      "path": "packages/openbible-adapter/tests/parser.test.ts",
+      "purpose": "10 tests: SHA re-verify, competing separate, CRS/precision/period/evidence/license, confidence distinct, excluded, no winner, no merge, SHA mismatch, deterministic, coverage",
+      "status": "A"
+    },
+    {
+      "path": "content/candidates/openbible-neh2.json",
+      "purpose": "2 ancient + 3 modern candidatesSha 9b680dba..., file sha da1271c1..., 11,550,193 bytes",
+      "status": "A",
+      "sha256": "da1271c130cb151d0af5c0edaf8b6b24438ef64f9e8c0c757f0bb1a307bf02af",
+      "candidatesSha256": "sha256:9b680dbaa5d98b3a5b6049a97f67811194e6169eeb24e37e53b2b58180c98b8a"
+    },
+    {
+      "path": "packages/openbible-adapter/package.json",
+      "purpose": "New package @bible-compass/openbible-adapter",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No images, no map tiles, no OSM-derived fields, no routes, no static map assets, no winning location"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/openbible-adapter run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/openbible-adapter run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/openbible-adapter run test",
+      "exit_code": 0,
+      "output": "PASS 10 tests"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/openbible/ancient.jsonl",
+      "exit_code": 0,
+      "output": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2 11550193"
+    },
+    {
+      "command": "python3 generate content/candidates/openbible-neh2.json",
+      "exit_code": 0,
+      "output": "2 ancient, 3 modern, sha 9b680dba..., file sha da1271c1..."
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/openbible-adapter/tests/parser.test.ts — 10 tests. Total now 130 tests (61+12+10+9+10+9+9+10).",
+  "manual_checks": {
+    "completed": [
+      "Verified SHA re-verified before parse",
+      "Verified competing Jerusalem sites (old-city vs eastern-hill) remain separate with different coordinates",
+      "Verified geometry CRS EPSG:4326, precision approximate/candidates, period, evidence OpenBible source, componentLicense CC-BY-4.0",
+      "Verified sourceConfidence high/medium distinct from reviewStatus draft",
+      "Verified excluded image/OSM/ESV cannot enter output (rejects 3)",
+      "Verified no winning location, no ancient/modern merge",
+      "Verified deterministic output same sha"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:openbible:geocoding",
+    "releaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+    "commitOrTag": "7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f",
+    "quarantinePath": "content/quarantine/openbible/ancient.jsonl",
+    "quarantineSha256": "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+    "byteSize": 11550193,
+    "candidatesPath": "content/candidates/openbible-neh2.json",
+    "candidatesSha256": "sha256:9b680dbaa5d98b3a5b6049a97f67811194e6169eeb24e37e53b2b58180c98b8a",
+    "candidatesCount": 5
+  },
+  "known_limitations": [
+    "OpenBible ancient.jsonl has 1,342 places total — adapter produces minimal 2 ancient + 3 modern for Neh2 only; full parsing deferred",
+    "Geometry is point approximation — no routes or complex polygons for rivers/regions"
+  ],
+  "follow_up": ["15A Identity and attestation reconciliation"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:openbible-adapter:14:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d"
+    },
+    {
+      "key": "gate:C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    },
+    {
+      "key": "quarantine:09E",
+      "path": "content/quarantine/openbible/ancient.jsonl",
+      "sha256": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "candidate",
+      "key": "candidates:openbible:neh2",
+      "path": "content/candidates/openbible-neh2.json",
+      "sha256": "da1271c130cb151d0af5c0edaf8b6b24438ef64f9e8c0c757f0bb1a307bf02af",
+      "candidatesSha256": "sha256:9b680dbaa5d98b3a5b6049a97f67811194e6169eeb24e37e53b2b58180c98b8a",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T05:55:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-14-attempt-1-20260915T055500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "candidate"
+}

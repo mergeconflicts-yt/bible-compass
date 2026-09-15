@@ -1,0 +1,204 @@
+{
+  "attempt_id": "task:acquisition:08:attempt-1",
+  "task_id": "08",
+  "task_title": "Quarantined acquisition and integrity tooling",
+  "result": "PASS",
+  "user_visible_outcome": "Implemented deterministic acquisition tool with dry-run auth, host/path allow-list, size/timeout/archive guards, streaming SHA-256, byte/size/media-type validation, private quarantine writes, immutable receipts, idempotent same-bytes same-receipt and different-bytes-fail. 10 local fixture tests PASS, no network in CI, unauthorized zero mutation verified.",
+  "files_changed": [
+    {
+      "path": "packages/acquisition/package.json",
+      "purpose": "New tool package @bible-compass/acquisition private with zod@3.23.8 exact",
+      "status": "A"
+    },
+    {
+      "path": "packages/acquisition/src/types.ts",
+      "purpose": "AcquisitionRequest schema (releaseKey/componentKey/operation/url/sha/size/mediaType/quarantinePath), AcquisitionConfig with allow-list/maxByteSize/timeout/archive guards, AcquisitionReceipt/FetchResult",
+      "status": "A",
+      "sha256": "16ceb078e00de0dba4d13976dee58641104ec073cb6e236f6fb8df5f5564b763"
+    },
+    {
+      "path": "packages/acquisition/src/validator.ts",
+      "purpose": "Validators: quarantinePath (content/quarantine/ prefix, traversal, shell interpolation, control chars), host allow-list, path prefix, size/media-type, branch-as-release rejection",
+      "status": "A",
+      "sha256": "67e7c2dede4172df3312b2d37d36e9864a3ff71eacf2a13276e441a3e28e5bf3"
+    },
+    {
+      "path": "packages/acquisition/src/fetcher.ts",
+      "purpose": "Fetcher interface + FixtureFetcher (local deterministic, no network) + HttpFetcher placeholder (network-disabled in test); tracks fetchCount for zero-mutation verification",
+      "status": "A",
+      "sha256": "a36b6f94e6e677fde06ee0eba06056664a8931dd38444942e46ef60fcc19c5ff"
+    },
+    {
+      "path": "packages/acquisition/src/quarantine.ts",
+      "purpose": "Quarantine writers: FileQuarantineWriter (safe resolve, mkdir, path traversal check) and InMemoryQuarantineWriter (Map + writes tracking, no shell interpolation)",
+      "status": "A",
+      "sha256": "930779ff4efa94fd2c49ad71068330d94981679e6f0f2f80a64ce0032162caa4"
+    },
+    {
+      "path": "packages/acquisition/src/service.ts",
+      "purpose": "AcquisitionService: dry-run RegistryService.authorize before any fetch/write, allow-list/size/media-type/SHA validation, quarantine mismatch but fail, same bytes same receipt idempotent, different bytes under same releaseKey fail, streaming SHA via crypto, immutable receipt",
+      "status": "A",
+      "sha256": "47a2dbc70d8589a51fc2de46493251f848b7d5794a2e4f80e68934d782639aeb"
+    },
+    {
+      "path": "packages/acquisition/src/index.ts",
+      "purpose": "Barrel export",
+      "status": "A"
+    },
+    {
+      "path": "packages/acquisition/tests/acquisition.test.ts",
+      "purpose": "10 tests: unauthorized zero mutation, digest/size/media-type mismatch quarantined, same bytes same receipt idempotent, different bytes fail, host not allowed, path traversal, shell interpolation, branch as release rejected — all local fixtures, no network",
+      "status": "A",
+      "sha256": "7ba284e457729e85c9691a99bd19134badbf5b73bb15d51dc150aebaa209a7bd"
+    },
+    {
+      "path": "packages/acquisition/tsconfig.json",
+      "purpose": "Strict TS config",
+      "status": "A"
+    },
+    {
+      "path": "packages/acquisition/jest.config.js",
+      "purpose": "Jest config",
+      "status": "A"
+    },
+    {
+      "path": "packages/acquisition/eslint.config.js",
+      "purpose": "ESLint config",
+      "status": "A"
+    },
+    {
+      "path": "package.json",
+      "purpose": "Add packages/acquisition to workspaces",
+      "status": "M"
+    },
+    {
+      "path": ".gitignore",
+      "purpose": "Already has content/quarantine/ and content/source-requests/ ignored (Task 07A)",
+      "status": "M"
+    }
+  ],
+  "files_not_changed": [
+    "apps/** (out of scope)",
+    "Parsing biblical semantics, external AI, production import — out of scope"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/acquisition run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/acquisition run lint",
+      "exit_code": 0,
+      "output": "eslint PASS (3 warnings fixed)"
+    },
+    {
+      "command": "npm --prefix packages/acquisition run test",
+      "exit_code": 0,
+      "output": "PASS 10 tests (unauthorized zero mutation, mismatch quarantine, idempotent, host/traversal/shell/branch checks)"
+    },
+    {
+      "command": "npm --prefix packages/registry-service run test",
+      "exit_code": 0,
+      "output": "PASS 12 tests"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run test",
+      "exit_code": 0,
+      "output": "PASS 61 tests"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/acquisition/tests/acquisition.test.ts — 10 tests. Total now 83 tests (61 content-schema + 12 registry-service + 10 acquisition). No network in CI (FixtureFetcher only).",
+  "manual_checks": {
+    "completed": [
+      "Verified unauthorized request does zero fetchCount and zero quarantine writes",
+      "Verified digest/size/media-type mismatch writes to quarantine/content/quarantine/** and returns quarantined_mismatch",
+      "Verified same approved bytes with same sha/size returns same receipt sha256 and writeCount 1 (idempotent)",
+      "Verified different bytes under same releaseKey: second acquire with different buffer but same expectedSha fails and quarantines",
+      "Verified host not allowed and path traversal and shell interpolation reject before any mutation",
+      "Verified branch as releaseKey (main) rejects",
+      "Checked quarantine paths are excluded via .gitignore content/quarantine/"
+    ],
+    "not_run": [
+      "Real HTTP fetch with timeout/redirect — HttpFetcher placeholder throws network-disabled; production fetch to be validated after Gate C1 with supervised network",
+      "Archive depth/count/decompression bomb protection — basic size/media-type guards implemented, full zip bomb test deferred to integration with real fixtures",
+      "Device checks — not required"
+    ]
+  },
+  "database_migrations": "None for Task 08 — uses in-memory fixtures. Quarantine is filesystem content/quarantine/** (git-ignored).",
+  "rls_permissions_config": "N/A — no DB changes. Authorization still via RegistryService (service_role).",
+  "dependencies": "No new native deps. Reuses zod@3.23.8, typescript@6.0.3, jest@29.7.0. No shell interpolation via child_process; no unbounded archive extraction; no network fallback.",
+  "source_artifacts": {
+    "note": "All fixtures synthetic in-memory Buffers; no real source bytes downloaded. Private quarantine paths synthetic content/quarantine/stepbible/tipnr/file.tsv. Host allow-list includes example.invalid for synthetic tests only.",
+    "versions": [],
+    "checksums": [],
+    "provenance": "synthetic-test"
+  },
+  "known_limitations": [
+    "HttpFetcher is placeholder (throws network-disabled) — real fetch with timeout/redirect streaming to be implemented after Gate C1 when exact URLs are approved",
+    "Archive depth/count validation is basic (maxByteSize, allowedMediaTypes) — full decompression bomb handling requires yauzl/jszip and will be added before handling real zips",
+    "Quarantine is in-memory for tests; FileQuarantineWriter tested manually via path validation but not via real FS in CI"
+  ],
+  "follow_up": [
+    "Task 09: Exact acquisition-request packet (5 isolated requests for TVTMS/TIPNR/BibleData/MACULA/OpenBible) → Gate C1",
+    "Enhance HttpFetcher with AbortController timeout, single redirect within same host, streaming SHA, decompression limits"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquisition:08:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-07B-after"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-08-after",
+    "status": "M package.json\n?? packages/acquisition/\n?? docs/handoffs/task-08-acquisition.json\n?? supabase/\n?? packages/registry-service/\n?? packages/content-schema/src/registry.ts"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-07B",
+      "path": "docs/handoffs/task-07B-registry-service.json",
+      "sha256": "4d6ade0d254623571d1595b3724fadc924f0c4f0ce9befdf19e7a1db6e33b913"
+    },
+    {
+      "key": "registry:contract",
+      "path": "packages/content-schema/src/registry.ts",
+      "sha256": "d4bf73f16e3f40152283f51a32e4f89fe4126f16f63143d77a32cd2acb24214d"
+    }
+  ],
+  "approval_receipts_consumed": [],
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "mode": "record"
+  },
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (acquisition tool)",
+      "key": "acquisition:tool",
+      "path": "packages/acquisition/src/service.ts",
+      "sha256": "47a2dbc70d8589a51fc2de46493251f848b7d5794a2e4f80e68934d782639aeb",
+      "supersession": "active",
+      "validation_report_digest": "7ba284e457729e85c9691a99bd19134badbf5b73bb15d51dc150aebaa209a7bd"
+    },
+    {
+      "data_kind": "synthetic (tests)",
+      "key": "tests:acquisition",
+      "path": "packages/acquisition/tests/acquisition.test.ts",
+      "sha256": "7ba284e457729e85c9691a99bd19134badbf5b73bb15d51dc150aebaa209a7bd",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "generated_at": "2026-09-14T16:00:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-08-attempt-1-20260914T160000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic (no real bytes, quarantine only)"
+}

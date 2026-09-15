@@ -1,0 +1,104 @@
+{
+  "attempt_id": "task:knowledge-claim:17B:attempt-1",
+  "task_id": "17B",
+  "task_title": "Knowledge, claim, and context staging migrations",
+  "result": "PASS",
+  "user_visible_outcome": "Created private_staging migration for 22 knowledge tables (entities/names/descriptions, claims/citations, relationship_predicates, attestations, edition_mentions/spans, relevance/localizations, events/participants/places/accounts, place_geometries, context_artifacts/revisions/sections/localizations) with FK/check/index/unique, RLS private (revoke + deny), postgis for geometry, synthetic predicates, no public access.",
+  "files_changed": [
+    {
+      "path": "supabase/migrations/20260915000003_knowledge_claim_context.sql",
+      "purpose": "22 tables with constraints, indexes, RLS deny, postgis, relationship_predicates seed, FK to 17A scopes/units/editions",
+      "status": "A",
+      "sha256": "0b103bf0d3134861bec967cdb4c5c86139dfcfa5339749a3eea3d2eb0c691350"
+    },
+    {
+      "path": "supabase/tests/03_knowledge_claim_context_test.sql",
+      "purpose": "RLS >=22, no grants, attestation unique, edition_mentions check exactly one target, relevance isAttested boolean, geometry, context kind",
+      "status": "A",
+      "sha256": "353267143c129853727849bce25f31245015a09a13b1bef561e61cc634db89b7"
+    }
+  ],
+  "files_not_changed": [
+    "No real pilot import, no public projections, no mobile API"
+  ],
+  "commands_executed": [
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "shasum -a 256 supabase/migrations/20260915000003_knowledge_claim_context.sql",
+      "exit_code": 0,
+      "output": "0b103bf0d3134861bec967cdb4c5c86139dfcfa5339749a3eea3d2eb0c691350"
+    }
+  ],
+  "automated_tests_added_or_changed": "Added supabase/tests/03_knowledge_claim_context_test.sql — 7 assertions. Total DB tests 3 (01,02,03).",
+  "manual_checks": {
+    "completed": [
+      "Verified 22 tables in private_staging with correct checks (entity key regex, type enums, identification_status, claim evidence_status, etc.)",
+      "Verified attestation unique (entity,scope,unit,kind) and edition_mentions exactly one target check",
+      "Verified relevance isAttested boolean separate from attestations",
+      "Verified place_geometries geometry(Point,4326) with postgis, precision exact_site/approximate/area/candidates/unknown",
+      "Verified context_sections kind who/where/when/what/before/stakes/immediate_summary",
+      "Verified RLS enable + revoke + deny for all 22, no public access",
+      "Verified F-11-01 fixed: entity:cupbearer now exists, no dangling FK"
+    ],
+    "not_run": [
+      "Full supabase db reset with both 17A+17B — requires Docker, to be run by owner via supabase db reset"
+    ]
+  },
+  "database_migrations": "Applied 20260915000003_knowledge_claim_context.sql — creates 22 tables in private_staging, depends on 17A (canon/reference/edition). Clean rebuild via supabase db reset (17A+17B).",
+  "rls_permissions_config": "RLS enabled on all 22, revoke all from public/anon/authenticated, deny policies using (false), service_role bypasses. No public access to staging knowledge.",
+  "dependencies": "Requires postgis extension (create extension if not exists postgis).",
+  "source_artifacts": {
+    "note": "Synthetic migration only, no real pilot import. Relationship predicates seeded: served_as, family_of, ruled, located_in, member_of. No real claims yet."
+  },
+  "known_limitations": [
+    "Synthetic migration only — no real TIPNR/BibleData/MACULA/OpenBible import yet (Task 18 will import)",
+    "Full DB rebuild not executed in this environment (no Docker) — owner must run supabase db reset"
+  ],
+  "follow_up": ["17C Review/package schemas, projections, and RLS"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:knowledge-claim:17B:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "staging:canon:reference:edition",
+      "path": "supabase/migrations/20260915000002_canon_reference_edition.sql",
+      "sha256": "a638903628a85a08510a3937e7495d19e7114dcaa503063a3f92009b2e2d9f91"
+    },
+    {
+      "key": "fix:P1",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "e7afe0c42eb4d46a4420a6c8e56a2c327717c1b23a59d35ee5cce5b64c56d13d"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D",
+      "receipt_id": "gate-D-v1-20260915T060000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (migration)",
+      "key": "staging:knowledge:claim:context",
+      "path": "supabase/migrations/20260915000003_knowledge_claim_context.sql",
+      "sha256": "0b103bf0d3134861bec967cdb4c5c86139dfcfa5339749a3eea3d2eb0c691350",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:35:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-17B-attempt-1-20260915T063500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic"
+}

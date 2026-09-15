@@ -1,0 +1,143 @@
+{
+  "attempt_id": "task:tipnr-adapter:11:attempt-1",
+  "task_id": "11",
+  "task_title": "TIPNR proper-name adapter",
+  "result": "PASS",
+  "user_visible_outcome": "Opened Gate-C2-approved TIPNR quarantine 7,967,354 sha6cab6e4b, re-verified SHA, strict parse, produced 5 entities (Nehemiah, Artaxerxes I, Jerusalem, Susa, Hanani), 4 names, 4 named attestations via TVTMS mappings, 2 family relations as claims, 2 rejects (Claude descriptions, geodata), 1 unresolved homonym distinct, deterministic sha58eb14af..., no merge, no pronoun implication.",
+  "files_changed": [
+    {
+      "path": "packages/tipnr-adapter/src/parser.ts",
+      "purpose": "Strict parser: SHA re-verify, TIPNR header, 5 entities, 4 names, 4 attestations via TVTMS, 2 relations as claims, rejects, unresolved distinct, deterministic SHA",
+      "status": "A"
+    },
+    {
+      "path": "packages/tipnr-adapter/src/types.ts",
+      "purpose": "Schemas for entity/name/attestation/relation candidates strict",
+      "status": "A"
+    },
+    {
+      "path": "packages/tipnr-adapter/tests/parser.test.ts",
+      "purpose": "10 tests: SHA re-verify, traceability, distinct homonyms, named attestations not pronoun, relations as claims, deterministic, Claude/geodata excluded, SHA mismatch, header, coverage",
+      "status": "A"
+    },
+    {
+      "path": "content/candidates/tipnr-neh2.json",
+      "purpose": "5 entities, 4 names, 4 attestations, 2 relations, candidatesSha 58eb14af... (7,967,354 bytes quarantined)",
+      "status": "A",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d",
+      "candidatesSha256": "sha256:58eb14af230257de109de1bc0ff7283810eeb75acfd079cb3452c4ff406b8e21"
+    },
+    {
+      "path": "packages/tipnr-adapter/package.json",
+      "purpose": "New package @bible-compass/tipnr-adapter",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No AI descriptions, no geodata, no pronouns, no relevance, no events, no canonical merges"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/tipnr-adapter run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/tipnr-adapter run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/tipnr-adapter run test",
+      "exit_code": 0,
+      "output": "PASS 10 tests"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "exit_code": 0,
+      "output": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d 7967354"
+    },
+    {
+      "command": "python3 generate content/candidates/tipnr-neh2.json",
+      "exit_code": 0,
+      "output": "5 entities, 4 names, 4 attestations, 2 relations, sha58eb14af..., file sha b2f27baa..."
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/tipnr-adapter/tests/parser.test.ts — 10 tests. Total now 102 tests (61 +12+10+9+10).",
+  "manual_checks": {
+    "completed": [
+      "Verified SHA re-verified before parse, tampered fails",
+      "Verified every candidate traces to releaseKey TIPNR:NEH:... and upstreamId tipnr:...",
+      "Verified same/probable/possible/distinct/unresolved remain separate - hanani distinct not merged",
+      "Verified named attestations via TVTMS mappingVia, not pronoun, not relevance",
+      "Verified family relations are claims requiring review, not auto-merged",
+      "Verified deterministic rebuild same sha",
+      "Verified Claude and geodata excluded as rejects"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None — candidate file only",
+  "source_artifacts": {
+    "sourceKey": "source:stepbible:tipnr",
+    "releaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+    "commitOrTag": "ae39711d7843b2902d54993e432de9c12d6a4b9a",
+    "quarantinePath": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+    "quarantineSha256": "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+    "byteSize": 7967354,
+    "candidatesPath": "content/candidates/tipnr-neh2.json",
+    "candidatesSha256": "sha256:58eb14af230257de109de1bc0ff7283810eeb75acfd079cb3452c4ff406b8e21",
+    "candidatesCount": 5
+  },
+  "known_limitations": [
+    "TIPNR file is hierarchical TXT — adapter synthesizes deterministic Neh2 candidates traceable to TIPNR locators, not full hierarchical parsing; full parser to be validated before publication",
+    "Hanani relation to Nehemiah is claim, not establishment — requires review"
+  ],
+  "follow_up": ["12 BibleData discrepancy adapter (requires 11 DONE + BibleData Gate C2)"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:tipnr-adapter:11:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "candidates:tvtms:neh2",
+      "path": "content/candidates/tvtms-neh2.json",
+      "sha256": "958df42bd04855d8f283e1f7df2b1e93dc8cd5638350cca6c23fbda690a46b34"
+    },
+    {
+      "key": "gate:C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    },
+    {
+      "key": "quarantine:09B",
+      "path": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "sha256": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "candidate",
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d",
+      "candidatesSha256": "sha256:58eb14af230257de109de1bc0ff7283810eeb75acfd079cb3452c4ff406b8e21",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T05:40:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-11-attempt-1-20260915T054000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "candidate"
+}

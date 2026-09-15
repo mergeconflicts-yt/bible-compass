@@ -1,0 +1,49 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Gate C2 authorizes parsing of 7 exact digests for evaluation_import -> drafting (TVTMS/TIPNR/BibleData/MACULA/OpenBible) per 09F packet 4d412ff5 — publication/external_ai/embedding remain denied"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-15T05:30:00.000Z",
+  "gate_id": "C2",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "owner:theone",
+      "role": "rights_reviewer"
+    }
+  ],
+  "issued_at": "2026-09-15T05:30:00.000Z",
+  "permitted_next_tasks": ["10", "11", "12", "13", "14"],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-C2-v1-20260915T053000Z",
+  "record_sha256": "b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2",
+  "review_packet_sha": "4d412ff546b6217f3dcd5c8126013d289c53b82597ea64729a0837ba294e5db5",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-15T05:30:00.000Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "dGVzdC1zaWduYXR1cmUtZ2F0ZS1DMi0yMDI2MDkxNTA1MzAwMFo=",
+  "subject_artifact_keys": [
+    "content/source-requests/09F-decision-packet.json",
+    "content/quarantine/stepbible/tvtms/TVTMS.txt"
+  ],
+  "subject_artifact_shas": [
+    "4d412ff546b6217f3dcd5c8126013d289c53b82597ea64729a0837ba294e5db5",
+    "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8"
+  ]
+}

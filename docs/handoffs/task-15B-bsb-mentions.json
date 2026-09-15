@@ -1,0 +1,117 @@
+{
+  "attempt_id": "task:bsb-mention:15B:attempt-1",
+  "task_id": "15B",
+  "task_title": "BSB mention-selector generation",
+  "result": "PASS",
+  "user_visible_outcome": "Generated 4 BSB edition mention selectors for Neh.2.1/2.3 with exact_quote, occurrenceOrdinal, prefix/suffix, pipelineTextSha256, grapheme/UTF-16 spans, context card separate, no cross-edition reuse, deterministic 3abc70e8...",
+  "files_changed": [
+    {
+      "path": "content/candidates/bsb-mentions-neh2.json",
+      "purpose": "4 BSB mentions (Artaxerxes explicit_name Neh.2.1, Nehemiah pronoun I, Jerusalem indirect, Susa indirect) + 1 context selector, edition bsb@20260912, candidatesSha 3abc70e8..., file sha c46172bd...",
+      "status": "A",
+      "sha256": "c46172bd4a944d43a1d7d6613b7bba663e4d2b66b8e953403a8991a57293df5d",
+      "candidatesSha256": "sha256:3abc70e8d55ae07690899510a86ea0c094cfe969a7141edde50585332c9fdea5"
+    }
+  ],
+  "files_not_changed": [
+    "No Hebrew offsets reused, no English mention text mutated, no canonical identity changes"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/candidates/bsb-mentions-neh2.json",
+      "exit_code": 0,
+      "output": "4 mentions, 1 context, sha 3abc70e8..., file sha c46172bd..."
+    },
+    {
+      "command": "python3 -m json.tool content/candidates/bsb-mentions-neh2.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests for 15B yet — manual validation: exact_quote in BSB text, prefix/suffix disambiguation, pipelineTextSha256 matches verse text, grapheme/UTF-16 same for ASCII, occurrenceOrdinal 1",
+  "manual_checks": {
+    "completed": [
+      "Verified each selector exact_quote copied from BSB Neh.2.1/2.3 text at apps/mobile/assets/scripture/bsb/Neh.json",
+      "Verified occurrenceOrdinal 1 for single occurrence, prefix/suffix 10-30 chars for disambiguation",
+      "Verified pipelineTextSha256 is sha256 of verse text, not invented",
+      "Verified start_grapheme/end_grapheme == start_utf16/end_utf16 for ASCII (grapheme-safe), non-overlapping",
+      "Verified Nehemiah pronoun I is form pronoun not explicit_name, Susa indirect, Jerusalem indirect explicit",
+      "Verified context card selector separate from entity mentions (contextCardId not entityKey)",
+      "Verified no cross-edition reuse, no BSB text mutation, no new canonical keys"
+    ],
+    "not_run": [
+      "Full BSB mention generation for all 20 Neh2 verses — 15B is 4 mentions for pilot attestations only, full set deferred"
+    ]
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "editionKey": "edition:bsb@20260912:sha-b2898c49",
+    "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+    "attestationKeys": [
+      "attestation:nehemiah:nehemiah:neh2.1",
+      "attestation:artaxerxes:neh2.1",
+      "attestation:jerusalem:neh2.3",
+      "attestation:susa:neh2.1"
+    ],
+    "candidatesPath": "content/candidates/bsb-mentions-neh2.json",
+    "candidatesSha256": "sha256:3abc70e8d55ae07690899510a86ea0c094cfe969a7141edde50585332c9fdea5"
+  },
+  "known_limitations": [
+    "Only 4 mentions for pilot attestations — full 20-verse BSB mentions deferred to later tasks",
+    "BSB mention generation package not yet formalized — candidate JSON is draft, not yet validated via Zod editionMentionSchema strict + grapheme tests (to be added in hardening)"
+  ],
+  "follow_up": ["16A Pilot report generation"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:bsb-mention:15B:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "reconciliation:15A",
+      "path": "content/candidates/reconciliation-15a.json",
+      "sha256": "374a01a48e662a106ce3ca92c6ba41b0ad2bc8f457af372e939c26e76bbd16c1"
+    },
+    {
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d"
+    },
+    {
+      "key": "edition:bsb",
+      "path": "apps/mobile/assets/scripture/bsb/Neh.json",
+      "sha256": "bsb@20260912:sha-b2898c49"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "candidate (draft mention)",
+      "key": "mentions:bsb:neh2",
+      "path": "content/candidates/bsb-mentions-neh2.json",
+      "sha256": "c46172bd4a944d43a1d7d6613b7bba663e4d2b66b8e953403a8991a57293df5d",
+      "candidatesSha256": "sha256:3abc70e8d55ae07690899510a86ea0c094cfe969a7141edde50585332c9fdea5",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:10:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-15B-attempt-1-20260915T061000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "candidate"
+}

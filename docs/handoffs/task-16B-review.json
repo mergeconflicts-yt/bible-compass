@@ -1,0 +1,121 @@
+{
+  "attempt_id": "task:pilot-review:16B:attempt-1",
+  "task_id": "16B",
+  "task_title": "Independent Nehemiah 2 pilot review",
+  "result": "PASS",
+  "user_visible_outcome": "Independent review of 16A report + 7 candidates + 7 quarantines by 4 specialist subagents: data-engineering PASS, biblical-ontology PASS with 1 P1 (cupbearer-role dangling), license/security PASS, multilingual PASS, no P0, deterministic rebuild verified, coverage distinct, omitted explicit, recommendations accept 3/revise 2, Gate D packet ready.",
+  "files_changed": [
+    {
+      "path": "content/pilot/review-16B.md",
+      "purpose": "Independent review 16B: 4 specialist read-only reviews, severity-ranked findings (1 P1, 2 P2), no P0, recommendations per adapter",
+      "status": "A",
+      "sha256": "22d58f46d3b1f5db9cd90f116320d3da53d3f910806fac367234708e62a72327"
+    },
+    {
+      "path": "docs/REVIEW_GATE_D_PACKET.md",
+      "purpose": "Gate D packet 1.0.0 with SHAs of all 7 candidates + report 7d22acbe, findings, recommendations, sign-off",
+      "status": "A",
+      "sha256": "bec417c5450589430717f2cf260c58406d98d8ec670b74f09e55b3fcf2c161f7"
+    }
+  ],
+  "files_not_changed": [
+    "No candidate mutation, no fixing adapters, no approving rights/content, no widening"
+  ],
+  "commands_executed": [
+    {
+      "command": "re-run 7 adapters from pinned quarantines and compare SHAs",
+      "exit_code": 0,
+      "output": "All 7 deterministic: TVTMS baca1a77..., TIPNR 58eb14af..., BibleData 55b90e0e..., MACULA cf39db44..., OpenBible 9b680dba..., Reconciliation dc6a17db..., BSB 3abc70e8..."
+    },
+    {
+      "command": "deliberate mutation: tamper TVTMS.txt +1 byte -> SHA mismatch",
+      "exit_code": 0,
+      "output": "PASS fail-closed"
+    },
+    {
+      "command": "shasum -a 256 content/pilot/report-16A.json content/pilot/review-16B.md docs/REVIEW_GATE_D_PACKET.md",
+      "exit_code": 0,
+      "output": "7d22acbe..., 22d58f46..., bec417c5..."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — read-only review, verified existing 9+10+9+9+10+8 tests still PASS and deterministic",
+  "manual_checks": {
+    "completed": [
+      "Verified reviewed inputs match handoff digests (7 candidates + 7 quarantines + report 7d22acbe)",
+      "Verified clean rebuild deterministic and tamper detected",
+      "Verified source-processing vs editorial semantic distinct",
+      "Verified omitted 3 share-alike explicit and not negative evidence",
+      "Verified findings distinguish technical defects (P1 dangling), evidence gaps, responsible disagreement, human decisions"
+    ],
+    "not_run": [
+      "Human rights/editorial/biblical specialist approval — requires Gate D human"
+    ]
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "All SHAs as in report 7d22acbe, no new bytes"
+  },
+  "known_limitations": [
+    "1 P1 F-11-01 cupbearer-role dangling must be fixed before Task 17A (DB FK) — not blocking Gate D but blocks migration"
+  ],
+  "follow_up": ["Gate D human decision (accept/revise/omit/stop per adapter) → 17A"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:pilot-review:16B:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "report:16A",
+      "path": "content/pilot/report-16A.json",
+      "sha256": "7d22acbe04b3135710fe16833fdf5618117cfacc163fc269bcca623127d59b80"
+    },
+    {
+      "key": "candidates:tvtms:neh2",
+      "path": "content/candidates/tvtms-neh2.json",
+      "sha256": "958df42bd04855d8f283e1f7df2b1e93dc8cd5638350cca6c23fbda690a46b34"
+    },
+    {
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "review (independent, read-only)",
+      "key": "review:16B",
+      "path": "content/pilot/review-16B.md",
+      "sha256": "22d58f46d3b1f5db9cd90f116320d3da53d3f910806fac367234708e62a72327",
+      "supersession": "active"
+    },
+    {
+      "data_kind": "packet (Gate D)",
+      "key": "packet:gate-D",
+      "path": "docs/REVIEW_GATE_D_PACKET.md",
+      "sha256": "bec417c5450589430717f2cf260c58406d98d8ec670b74f09e55b3fcf2c161f7",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:20:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-16B-attempt-1-20260915T062000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "review (synthetic, not approval)"
+}

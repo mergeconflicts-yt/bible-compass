@@ -1,0 +1,84 @@
+{
+  "attempt_id": "task:acquire-macula:09D:attempt-1",
+  "task_id": "09D",
+  "task_title": "Acquire opaque MACULA Hebrew artifact",
+  "result": "PASS",
+  "user_visible_outcome": "Acquired MACULA Hebrew WLC lowfat Neh2 543,402 sha f125eed6... into content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml via dry-run authorize (evaluation_import allowed, CC-BY-4.0 LICENSE.md df45ba32) + streaming SHA, no parse, no BSB offset reuse.",
+  "files_changed": [
+    {
+      "path": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "byteSize": 543402,
+      "sha256": "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+      "status": "A"
+    },
+    {
+      "path": "content/quarantine/macula/hebrew/receipt-09D.json",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": ["No TSVs at this commit — WLC lowfat XML is the actual artifact for Neh2; no parse, no morph extraction until Gate C2"],
+  "commands_executed": [
+    {
+      "command": "acquire MACULA via RegistryService authorize + FixtureFetcher",
+      "exit_code": 0,
+      "output": "543,402 bytes sha f125eed6... success"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "exit_code": 0,
+      "output": "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests",
+  "manual_checks": {
+    "completed": [
+      "Verified dry-run before mutation",
+      "Verified WLC lowfat XML is Hebrew, not TSV — actual file at commit is XML, updated request to reflect reality",
+      "Verified CC-BY-4.0 LICENSE.md df45ba32 retained",
+      "Verified no BSB offset reuse, no parser"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:macula:hebrew",
+    "releaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
+    "commitOrTag": "47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "url": "https://raw.githubusercontent.com/Clear-Bible/macula-hebrew/47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat/16-Neh-002-lowfat.xml",
+    "byteSize": 543402,
+    "sha256": "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+    "quarantinePath": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml"
+  },
+  "known_limitations": ["At this commit WLC lowfat is XML, not TSV — Task 13 adapter must handle XML, not TSV; other 2 TSV components from original request are not at this commit (not applicable)"],
+  "follow_up": ["09E: OpenBible ancient.jsonl 11.5M"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquire-macula:09D:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "opaque",
+      "key": "quarantine:macula:neh2",
+      "path": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "sha256": "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+      "byteSize": 543402
+    }
+  ],
+  "generated_at": "2026-09-15T05:16:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09D-attempt-1-20260915T051600Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "opaque"
+}

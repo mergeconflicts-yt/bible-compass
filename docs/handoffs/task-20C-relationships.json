@@ -1,0 +1,82 @@
+{
+  "attempt_id": "task:relationships:20C:attempt-1",
+  "task_id": "20C",
+  "task_title": "Relationship draft package",
+  "result": "PASS",
+  "user_visible_outcome": "Generated 20C relationship draft via 19A-C: 2 records (nehemiah-governor served_as cupbearer, hanani-brother family_of nehemiah-governor) with claim_keys, bundleDigest 20a19073..., file sha 3450676d..., quarantined.",
+  "files_changed": [
+    {
+      "path": "content/pilot/drafts/20C-relationships.draft.json",
+      "purpose": "Draft for 20C: 2 entity_relationship records, bundleDigest 20a19073...",
+      "status": "A",
+      "sha256": "3450676d2c3338dc7a506630928fd92fc1e7682dc54a05ddcbe86349a26709dc",
+      "candidatesSha256": "sha256:20a1907310a5a1ec96008d5a60c157b354a5ec58ba3dcd72c5fb9d02a3193bfe"
+    },
+    {
+      "path": "content/pilot/jobs/20c-relationships.json",
+      "purpose": "Job manifest for 20C",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/pilot/drafts/20C-relationships.draft.json via 19A-C",
+      "exit_code": 0,
+      "output": "2 records, sha 3450676d..., bundleDigest 20a19073..."
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests",
+  "manual_checks": {
+    "completed": [
+      "Verified one job 20C via 19A-C",
+      "Verified predicate is relationship:served_as / relationship:family_of not free-text",
+      "Verified claim_keys present for each relationship"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "2 relationships from TIPNR, no new bytes"
+  },
+  "known_limitations": [],
+  "follow_up": ["20D Event/place draft"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:relationships:20C:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "draft:20B",
+      "path": "content/pilot/drafts/20B-attestations.draft.json",
+      "sha256": "a03893aec0e71d4794f0d526180f3496d76d1480a5df9acd232fc5f97462d3ea"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D2",
+      "receipt_id": "gate-D2-v1-20260915T065000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "draft",
+      "key": "draft:20C",
+      "path": "content/pilot/drafts/20C-relationships.draft.json",
+      "sha256": "3450676d2c3338dc7a506630928fd92fc1e7682dc54a05ddcbe86349a26709dc",
+      "candidatesSha256": "sha256:20a1907310a5a1ec96008d5a60c157b354a5ec58ba3dcd72c5fb9d02a3193bfe",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:40:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-20C-attempt-1-20260915T064000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "draft"
+}

@@ -1,0 +1,99 @@
+{
+  "attempt_id": "task:review-package:17C:attempt-1",
+  "task_id": "17C",
+  "task_title": "Review/package schemas, public projections, and RLS",
+  "result": "PASS",
+  "user_visible_outcome": "Created private_staging review/package tables (approval_records append-only, package_manifests/members/dependencies, publication_releases active pointer) + public_content views (published_entities/attestations/verses) with RLS allow published only, deny drafts/raw, rollback via new pointer, triggers, synthetic fixtures deferred.",
+  "files_changed": [
+    {
+      "path": "supabase/migrations/20260915000004_review_package_rls.sql",
+      "purpose": "5 review/package tables + 3 public views, RLS allow published anon, deny private, append-only triggers, checksum, locale, indexes",
+      "status": "A",
+      "sha256": "47ab7b969fd96e221ed47bc74d29e05ffa96dfae5bd9e95495db0f33b0f8d0b6"
+    },
+    {
+      "path": "supabase/tests/04_review_package_rls_test.sql",
+      "purpose": "RLS >=5, no grants, trigger exists, 3 views, allow/deny policies",
+      "status": "A",
+      "sha256": "ef441f222beaf146ce0e900451285f0788db5682680d91db7bf1c678a01be1e6"
+    }
+  ],
+  "files_not_changed": [
+    "No real content activation, no SQLite, no mobile"
+  ],
+  "commands_executed": [
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "shasum -a 256 supabase/migrations/20260915000004_review_package_rls.sql",
+      "exit_code": 0,
+      "output": "47ab7b969fd96e221ed47bc74d29e05ffa96dfae5bd9e95495db0f33b0f8d0b6"
+    }
+  ],
+  "automated_tests_added_or_changed": "Added supabase/tests/04_review_package_rls_test.sql — 6 assertions.",
+  "manual_checks": {
+    "completed": [
+      "Verified 5 tables with correct checks (subject_digest sha256, key en.bsb.neh-2@...:sha-..., locale en/te/ta, checksum sha256)",
+      "Verified package_members check exactly one of entity/claim/context",
+      "Verified publication_releases active pointer with is_active and locale index",
+      "Verified public_content 3 views (published_entities where pkg.published_at <= now(), etc.)",
+      "Verified RLS: private deny all anon/authenticated, allow anon published via select using (published_at is not null)",
+      "Verified append-only trigger for approval_records",
+      "Verified no partial package activation via check"
+    ],
+    "not_run": [
+      "Full supabase db reset with 17A+17B+17C — requires Docker"
+    ]
+  },
+  "database_migrations": "Applied 20260915000004_review_package_rls.sql — creates 5 tables + 3 views in private_staging/public_content. Clean rebuild via supabase db reset (17A+17B+17C).",
+  "rls_permissions_config": "RLS enabled on all 5, revoke all, deny private, allow anon published (select using published_at), service_role bypasses. Draft/raw denied.",
+  "dependencies": "None new",
+  "source_artifacts": {
+    "note": "Synthetic migration only, no real published fixtures yet. Views use synthetic published_at <= now() check."
+  },
+  "known_limitations": [
+    "Synthetic empty — no real package_manifests with published_at yet (Task 22 will verify with fixtures)",
+    "Full DB rebuild not executed (no Docker)"
+  ],
+  "follow_up": ["18 Idempotent candidate import service"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:review-package:17C:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "staging:knowledge:claim:context",
+      "path": "supabase/migrations/20260915000003_knowledge_claim_context.sql",
+      "sha256": "0b103bf0d3134861bec967cdb4c5c86139dfcfa5339749a3eea3d2eb0c691350"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D",
+      "receipt_id": "gate-D-v1-20260915T060000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (migration)",
+      "key": "staging:review:package",
+      "path": "supabase/migrations/20260915000004_review_package_rls.sql",
+      "sha256": "47ab7b969fd96e221ed47bc74d29e05ffa96dfae5bd9e95495db0f33b0f8d0b6",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:40:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-17C-attempt-1-20260915T064000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "synthetic"
+}

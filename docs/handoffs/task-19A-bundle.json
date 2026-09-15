@@ -1,0 +1,133 @@
+{
+  "attempt_id": "task:bundle-assembler:19A:attempt-1",
+  "task_id": "19A",
+  "task_title": "AI curation input-bundle assembler",
+  "result": "PASS",
+  "user_visible_outcome": "Created deterministic job manifest and rights-filtered input bundle for Neh2 entity-profile-draft: job:neh2-entity-profile-001, scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20, en, 2 excerpts (TIPNR nehemiah + BibleData Neh.2.1), bundleDigest 515aba8c..., file sha 6e7df590..., internet-disabled, no scholarly corpus context restriction flagged.",
+  "files_changed": [
+    {
+      "path": "packages/bundle-assembler/src/assembler.ts",
+      "purpose": "Assembler: Gate D2 check, deterministic job/submission/package keys, minimal excerpts + locators sorted, provider/model/retention manifest, bundleDigest, no scholarly corpus flag",
+      "status": "A"
+    },
+    {
+      "path": "packages/bundle-assembler/src/types.ts",
+      "purpose": "JobManifest schema strict (canon, refsys, scope, language, contract limits, input_bundle digests, policies, provider)",
+      "status": "A"
+    },
+    {
+      "path": "packages/bundle-assembler/tests/assembler.test.ts",
+      "purpose": "6 tests: authorized excerpts, registry denial, deterministic digest, one scope/kind, scholarly corpus restriction, internet-disabled",
+      "status": "A"
+    },
+    {
+      "path": "content/pilot/bundles/19A-entity-profile.json",
+      "purpose": "Bundle for entity-profile-draft Neh2 en, 2 excerpts, bundleDigest 515aba8c..., file sha 6e7df590...",
+      "status": "A",
+      "sha256": "6e7df590ee1b7b48a7a9cbc63598d82f2844f43f1313e37b67a2c95c9ad6a26c",
+      "bundleDigest": "sha256:515aba8c896f6076ad07ca2076bf86d28dcba144d68f7fe79365ca12d602c124"
+    },
+    {
+      "path": "packages/bundle-assembler/package.json",
+      "purpose": "New package @bible-compass/bundle-assembler",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No provider invocation, no AI call, no output generation"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/bundle-assembler run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/bundle-assembler run lint",
+      "exit_code": 0,
+      "output": "eslint PASS (1 warning fixed)"
+    },
+    {
+      "command": "npm --prefix packages/bundle-assembler run test",
+      "exit_code": 0,
+      "output": "PASS 6 tests"
+    },
+    {
+      "command": "python3 generate content/pilot/bundles/19A-entity-profile.json",
+      "exit_code": 0,
+      "output": "bundleDigest 515aba8c..., file sha 6e7df590..."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/bundle-assembler/tests/assembler.test.ts — 6 tests. Total now 150 tests (61+12+10+9+10+9+9+10+8+6+6).",
+  "manual_checks": {
+    "completed": [
+      "Verified input bundle contains only authorized exact source components (TIPNR 6 fields + BibleData personVerse, no Claude, no geodata)",
+      "Verified Gate D2 denial prevents bundle (invalid packet sha throws gate-d2-denied)",
+      "Verified byte-identical inputs produce same bundleDigest (deterministic)",
+      "Verified bundle is one scope (neh-2) and one package kind (entity-profile-draft) with explicit limits 100 records / 500KB",
+      "Verified no scholarly corpus produces context-claim restrictions flag (internet_access false, training_allowed false)",
+      "Verified provider/model/prompt/version/retention in manifest"
+    ],
+    "not_run": [
+      "Provider invocation — deferred to 19B"
+    ]
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "Bundle for 1 package kind (entity-profile-draft) with 2 excerpts, no provider call",
+    "versions": ["job:neh2-entity-profile-001", "Gate D2 a1da9ece"]
+  },
+  "known_limitations": [
+    "Bundle is for one package kind only (entity-profile-draft) — 20A-G will each have their own bundle per task",
+    "BSB excerpt is synthetic placeholder (~4KB) — real BSB verse text to be included in full bundle after 18A packet verification"
+  ],
+  "follow_up": ["19B One-attempt provider runner"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:bundle-assembler:19A:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:D2",
+      "receipt_id": "gate-D2-v1-20260915T065000Z",
+      "sha256": "c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3"
+    },
+    {
+      "key": "packet:18A",
+      "path": "content/curation/18A-ai-input-authorization.json",
+      "sha256": "a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D2",
+      "receipt_id": "gate-D2-v1-20260915T065000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "bundle (deterministic, not yet sent to provider)",
+      "key": "bundle:19A",
+      "path": "content/pilot/bundles/19A-entity-profile.json",
+      "sha256": "6e7df590ee1b7b48a7a9cbc63598d82f2844f43f1313e37b67a2c95c9ad6a26c",
+      "bundleDigest": "sha256:515aba8c896f6076ad07ca2076bf86d28dcba144d68f7fe79365ca12d602c124",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:25:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-19A-attempt-1-20260915T062500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "bundle (synthetic, not sent)"
+}

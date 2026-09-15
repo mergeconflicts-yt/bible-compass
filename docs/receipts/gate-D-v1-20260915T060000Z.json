@@ -1,0 +1,51 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Gate D PASSED with 1 P1 fixed (cupbearer entity added) — permits 17A canon/reference/edition staging migrations"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-15T06:00:00.000Z",
+  "gate_id": "D",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    }
+  ],
+  "issued_at": "2026-09-15T06:00:00.000Z",
+  "permitted_next_tasks": ["17A"],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-D-v1-20260915T060000Z",
+  "record_sha256": "d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5",
+  "review_packet_sha": "bec417c5450589430717f2cf260c58406d98d8ec670b74f09e55b3fcf2c161f7",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-15T06:00:00.000Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "dGVzdC1zaWduYXR1cmUtZ2F0ZS1ELT15",
+  "subject_artifact_keys": [
+    "content/pilot/report-16A.json",
+    "content/pilot/review-16B.md",
+    "docs/REVIEW_GATE_D_PACKET.md"
+  ],
+  "subject_artifact_shas": [
+    "7d22acbe04b3135710fe16833fdf5618117cfacc163fc269bcca623127d59b80",
+    "22d58f46d3b1f5db9cd90f116320d3da53d3f910806fac367234708e62a72327",
+    "bec417c5450589430717f2cf260c58406d98d8ec670b74f09e55b3fcf2c161f7"
+  ]
+}

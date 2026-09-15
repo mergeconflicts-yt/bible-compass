@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "package_kind": "entity-relationship-draft",
+  "records": [
+    {
+      "record_key": "relationship-001",
+      "record_kind": "entity_relationship",
+      "subject_entity_key": "entity:nehemiah-governor",
+      "predicate_key": "relationship:served_as",
+      "object_entity_key": "entity:cupbearer",
+      "claim_keys": [
+        "claim:nehemiah-was-cupbearer"
+      ],
+      "sourceLocator": "TIPNR:NEH:2:familyRelation:nehemiah:cupbearer",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b"
+    },
+    {
+      "record_key": "relationship-002",
+      "record_kind": "entity_relationship",
+      "subject_entity_key": "entity:hanani-brother",
+      "predicate_key": "relationship:family_of",
+      "object_entity_key": "entity:nehemiah-governor",
+      "claim_keys": [
+        "claim:hanani-brother-of-nehemiah"
+      ],
+      "sourceLocator": "TIPNR:NEH:1.2:familyRelation:hanani:brother",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b"
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [],
+  "bundleDigest": "sha256:20a1907310a5a1ec96008d5a60c157b354a5ec58ba3dcd72c5fb9d02a3193bfe",
+  "jobId": "job:20C-relationships",
+  "draft_revision": 1
+}

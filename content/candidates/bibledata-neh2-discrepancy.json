@@ -1,0 +1,96 @@
+{
+  "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+  "bibleDataReleaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+  "tipnrCandidatesSha": "sha256:58eb14af230257de109de1bc0ff7283810eeb75acfd079cb3452c4ff406b8e21",
+  "bibleDataShas": {
+    "person": "sha256:489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+    "relationship": "sha256:d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+    "personVerse": "sha256:7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177"
+  },
+  "records": [
+    {
+      "personKey": "nehemiah-governor",
+      "tipnrLocator": "TIPNR:NEH:2:person:nehemiah-governor:001",
+      "bibleDataLocator": "BibleData-Person.csv:person_id=neh_governor | BibleData-PersonVerse.csv:Neh.2.1",
+      "status": "exact",
+      "details": "Both TIPNR and BibleData list Nehemiah as named person at Neh.2.1; explicit attestation in both.",
+      "sharedUpstream": false,
+      "requiresReview": false
+    },
+    {
+      "personKey": "artaxerxes-i",
+      "tipnrLocator": "TIPNR:NEH:2:person:artaxerxes-i:002",
+      "bibleDataLocator": "BibleData-Person.csv:person_id=artaxerxes | BibleData-PersonVerse.csv:Neh.2.1",
+      "status": "probable",
+      "details": "TIPNR Artaxerxes I (established) vs BibleData Artaxerxes (possible \u2014 BibleData does not disambiguate Artaxerxes I vs II at Neh.2.1). Probable but requires chronology review.",
+      "sharedUpstream": false,
+      "requiresReview": true
+    },
+    {
+      "personKey": "jerusalem",
+      "tipnrLocator": "TIPNR:NEH:2:place:jerusalem:003",
+      "bibleDataLocator": null,
+      "status": "missing_in_bibledata",
+      "details": "TIPNR has Jerusalem as place; BibleData Place is in-progress per source catalog \u2014 missing_in_bibledata is expected, not negative evidence.",
+      "sharedUpstream": false,
+      "requiresReview": false
+    },
+    {
+      "personKey": "susa-citadel",
+      "tipnrLocator": "TIPNR:NEH:2:place:susa:004",
+      "bibleDataLocator": null,
+      "status": "missing_in_bibledata",
+      "details": "Susa citadel in TIPNR; BibleData Place in_progress \u2014 missing expected.",
+      "sharedUpstream": false,
+      "requiresReview": false
+    },
+    {
+      "personKey": "hanani-brother",
+      "tipnrLocator": "TIPNR:NEH:2:person:hanani:005",
+      "bibleDataLocator": "BibleData-Person.csv:person_id=hanani | BibleData-PersonVerse.csv:Neh.1.2 (not Neh.2.1)",
+      "status": "possible",
+      "details": "TIPNR Hanani at Neh.2 (proposed) vs BibleData Hanani at Neh.1.2 only \u2014 possible, not exact for Neh.2.1 scope.",
+      "sharedUpstream": false,
+      "requiresReview": true
+    },
+    {
+      "personKey": "unknown-homonym",
+      "tipnrLocator": "TIPNR:NEH:2:person:unknown-homonym:999",
+      "bibleDataLocator": "BibleData-Person.csv:person_id=nehemiah:02 (second nehemiah)",
+      "status": "conflict",
+      "details": "TIPNR distinct homonym vs BibleData second Nehemiah entry \u2014 conflict requires specialist identity review; not same person.",
+      "sharedUpstream": true,
+      "requiresReview": true
+    },
+    {
+      "personKey": "unresolved-tipnr-only",
+      "tipnrLocator": "TIPNR:NEH:2:person:unresolved:006",
+      "bibleDataLocator": null,
+      "status": "unresolved",
+      "details": "TIPNR unresolved homonym \u2014 no BibleData counterpart, distinct remains unresolved.",
+      "sharedUpstream": false,
+      "requiresReview": true
+    }
+  ],
+  "coverage": {
+    "totalBibleDataPersons": 3009,
+    "neh2Persons": 5,
+    "exact": 1,
+    "probable": 1,
+    "conflict": 1,
+    "missing": 2,
+    "unresolved": 1
+  },
+  "flags": {
+    "consequentialClassifications": [
+      "BibleData treats 'Nehemiah' as person \u2014 verify not collective/polity per catalog caution; no divine/angelic in Neh2 slice to flag"
+    ],
+    "sharedAncestry": [
+      "TIPNR and BibleData may share upstream name list for common persons \u2014 agreement not counted as independent evidence (record 6 flagged sharedUpstream=true)"
+    ]
+  },
+  "receipt": {
+    "parsedAt": "2026-09-15T05:45:00.000Z",
+    "reportSha256": "sha256:55b90e0e787cc24e857db0740c1f6794a248a8f366e841701c328e8c9c627403"
+  }
+}

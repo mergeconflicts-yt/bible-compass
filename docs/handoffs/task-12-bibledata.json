@@ -1,0 +1,143 @@
+{
+  "attempt_id": "task:bibledata-adapter:12:attempt-1",
+  "task_id": "12",
+  "task_title": "BibleData discrepancy adapter",
+  "result": "PASS",
+  "user_visible_outcome": "Opened 3 Gate-C2-approved BibleData CSVs (Person 274,988 489b5f58, PersonRelationship 442,545 d81cb04, PersonVerse 2,617,454 7eab00f8), re-verified SHAs, source-local normalization, produced 7 discrepancy records (exact 1, probable 1, possible 1, conflict 1, missing 2, unresolved 1) with both raw locators, flagged shared upstream and consequential collective, no auto-winner, deterministic reportSha 55b90e0e...",
+  "files_changed": [
+    {
+      "path": "packages/bibledata-adapter/src/parser.ts",
+      "purpose": "Strict parser: re-verify 3 SHAs, read CSVs, filter Neh2, compare TIPNR vs BibleData source-local, flag shared upstream, no canonical merge",
+      "status": "A"
+    },
+    {
+      "path": "packages/bibledata-adapter/src/types.ts",
+      "purpose": "DiscrepancyRecord schema and ComparisonReport",
+      "status": "A"
+    },
+    {
+      "path": "packages/bibledata-adapter/tests/parser.test.ts",
+      "purpose": "9 tests: 3 SHAs re-verify, source-local reversible, both locators, shared upstream, consequential flags, no winner, coverage, deterministic",
+      "status": "A"
+    },
+    {
+      "path": "content/candidates/bibledata-neh2-discrepancy.json",
+      "purpose": "7 records + coverage + flags, reportSha 55b90e0e..., file sha 62a53f2a...",
+      "status": "A",
+      "sha256": "62a53f2a087d2c8cb6579f0403428c0422af14a4102981b2d0d541b05ad18364",
+      "reportSha256": "sha256:55b90e0e787cc24e857db0740c1f6794a248a8f366e841701c328e8c9c627403"
+    },
+    {
+      "path": "packages/bibledata-adapter/package.json",
+      "purpose": "New package @bible-compass/bibledata-adapter",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No canonical entity creation, no chronology, no places/events, no Strong's, no auto corroboration"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/bibledata-adapter run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/bibledata-adapter run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/bibledata-adapter run test",
+      "exit_code": 0,
+      "output": "PASS 9 tests"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/bibledata/*.csv",
+      "exit_code": 0,
+      "output": "489b5f58..., d81cb04..., 7eab00f8..."
+    },
+    {
+      "command": "python3 generate content/candidates/bibledata-neh2-discrepancy.json",
+      "exit_code": 0,
+      "output": "7 records, reportSha 55b90e0e..., file sha 62a53f2a..."
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/bibledata-adapter/tests/parser.test.ts — 9 tests. Total now 111 tests (61+12+10+9+10+9).",
+  "manual_checks": {
+    "completed": [
+      "Verified 3 CSV SHAs re-verified before parse",
+      "Verified comparison is source-local reversible with both locators for exact/probable/conflict",
+      "Verified shared upstream flagged where known (record 6)",
+      "Verified consequential collective flag",
+      "Verified no winner, no ontology inheritance, no canonical write",
+      "Verified missing_in_bibledata vs unresolved distinction"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:bibledata:structured",
+    "releaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+    "commitOrTag": "8799b409c82a5d4acebba3be5107d6eff7c85d78",
+    "quarantinePaths": [
+      "content/quarantine/bibledata/BibleData-Person.csv 274988 489b5f58",
+      "content/quarantine/bibledata/BibleData-PersonRelationship.csv 442545 d81cb04",
+      "content/quarantine/bibledata/BibleData-PersonVerse.csv 2617454 7eab00f8"
+    ],
+    "candidatesPath": "content/candidates/bibledata-neh2-discrepancy.json",
+    "candidatesSha256": "sha256:55b90e0e787cc24e857db0740c1f6794a248a8f366e841701c328e8c9c627403",
+    "records": 7
+  },
+  "known_limitations": [
+    "BibleData Place/Event not compared — per 09 request only Person/Relationship/PersonVerse for Neh2",
+    "TIPNR candidatesSha synthetic 58eb14af... — not yet canonical DB"
+  ],
+  "follow_up": ["13 MACULA Hebrew linguistic adapter (requires 12 DONE + MACULA Gate C2)"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:bibledata-adapter:12:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "candidates:tipnr:neh2",
+      "path": "content/candidates/tipnr-neh2.json",
+      "sha256": "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d"
+    },
+    {
+      "key": "gate:C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    },
+    {
+      "key": "quarantine:09C",
+      "sha256": "489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "candidate (discrepancy report)",
+      "key": "candidates:bibledata:neh2:discrepancy",
+      "path": "content/candidates/bibledata-neh2-discrepancy.json",
+      "sha256": "62a53f2a087d2c8cb6579f0403428c0422af14a4102981b2d0d541b05ad18364",
+      "reportSha256": "sha256:55b90e0e787cc24e857db0740c1f6794a248a8f366e841701c328e8c9c627403",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T05:45:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-12-attempt-1-20260915T054500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "candidate"
+}

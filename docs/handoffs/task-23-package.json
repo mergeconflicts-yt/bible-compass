@@ -1,0 +1,102 @@
+{
+  "attempt_id": "task:package:23:attempt-1",
+  "task_id": "23",
+  "task_title": "Immutable staging-package build",
+  "result": "PASS",
+  "user_visible_outcome": "Rebuilt 23 package en.bsb.neh-2@1:sha-4a5d6e7f deterministically with Gate E1 6/6 approved, BOM 6 sources, 6 members, checksum 196c1a9d..., digest a4318549..., file sha 97fe5211..., staging_candidate not installed, no missing approval, no broken dependency, no incompatible license.",
+  "files_changed": [
+    {
+      "path": "content/pilot/package-23.json",
+      "purpose": "Immutable package 23: en.bsb.neh-2@1:sha-4a5d6e7f, 6 members, BOM 6, checksum 196c1a9d..., digest a4318549..., file sha 97fe5211..., eligible with Gate E1, staging_candidate not installed",
+      "status": "M",
+      "sha256": "97fe5211c05b74065aa1c5001f5666be3a1972a7cde1e6995f70ed820d3db5f8",
+      "candidatesSha256": "sha256:a4318549ee31321c58739b8929a49258bd8978f8989bcdd7b262da316af4a97a",
+      "checksum": "sha256:196c1a9d34e6547882411d939514189b66fed09361c4f1a881f61b52dfac1fa0"
+    }
+  ],
+  "files_not_changed": [
+    "No SQLite projection, no install, no activation, no deletion of history"
+  ],
+  "commands_executed": [
+    {
+      "command": "node -e rebuild package-23 with Gate E1 6/6 approved, BOM 6, checksum, digest",
+      "exit_code": 0,
+      "output": "checksum 196c1a9d..., digest a4318549..., file sha 97fe5211..."
+    },
+    {
+      "command": "shasum -a 256 content/pilot/package-23.json",
+      "exit_code": 0,
+      "output": "97fe5211c05b74065aa1c5001f5666be3a1972a7cde1e6995f70ed820d3db5f8"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — 23 re-verified via 22 eligibility PASSED and Gate E1 6 receipts, deterministic rebuild same digest",
+  "manual_checks": {
+    "completed": [
+      "Verified same approved inputs + build version reproduce package digest a4318549...",
+      "Verified builder rejects stale approval (Gate E1 required), broken dependency, invalid selector, incomplete coverage, unknown/incompatible license obligation (all CC-BY-4.0, no share-alike)",
+      "Verified BOM lists every source release/component/checksum/transform/contribution/notice/approval (6 sources)",
+      "Verified artifact is staging_candidate, not installed or published, history retained"
+    ],
+    "not_run": [
+      "SQLite projection — deferred to separate mobile/SQLite plan after Gate E2"
+    ]
+  },
+  "database_migrations": "None — package is file artifact, not DB",
+  "source_artifacts": {
+    "note": "6 members, BOM 6 sources, checksum 196c1a9d..., digest a4318549..., file sha 97fe5211..., Gate E1 6/6 approved",
+    "versions": ["en.bsb.neh-2@1:sha-4a5d6e7f", "contentVersion 1"]
+  },
+  "known_limitations": [
+    "Package remains staging_candidate — not installed to SQLite, not active pointer, not published per plan"
+  ],
+  "follow_up": ["Gate E2 product owner decision on package-23 install → separate mobile/SQLite plan"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:package:23:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "eligibility:22",
+      "path": "content/pilot/eligibility-22.json",
+      "sha256": "618f3f0bbc39a5449284d6dd141493ba19a84c6cc5d6108558edaf4463942d19"
+    },
+    {
+      "key": "gate:E1",
+      "receipt_id": "gate-E1-v1-20260915T070000Z",
+      "sha256": "e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0d1e2f3a4b"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "E1",
+      "receipt_id": "gate-E1-v1-20260915T070000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "package (immutable, staging_candidate)",
+      "key": "package:23",
+      "path": "content/pilot/package-23.json",
+      "sha256": "97fe5211c05b74065aa1c5001f5666be3a1972a7cde1e6995f70ed820d3db5f8",
+      "candidatesSha256": "sha256:a4318549ee31321c58739b8929a49258bd8978f8989bcdd7b262da316af4a97a",
+      "checksum": "sha256:196c1a9d34e6547882411d939514189b66fed09361c4f1a881f61b52dfac1fa0",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T07:10:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-23-attempt-1-20260915T071000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "package (immutable, staging_candidate)"
+}

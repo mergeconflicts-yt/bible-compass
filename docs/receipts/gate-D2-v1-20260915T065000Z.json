@@ -1,0 +1,51 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Gate D2 PASSED — external_ai_processing for BSB Neh2 excerpts + 5 source components with 30-day no-training, private quarantine+staging retention, expiry 2026-12-15, none_approved scholarly corpus (context limited to Scripture observations)"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-15T06:50:00.000Z",
+  "gate_id": "D2",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "owner:theone",
+      "role": "rights_reviewer"
+    },
+    {
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    }
+  ],
+  "issued_at": "2026-09-15T06:50:00.000Z",
+  "permitted_next_tasks": ["19A"],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-D2-v1-20260915T065000Z",
+  "record_sha256": "c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3",
+  "review_packet_sha": "a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-15T06:50:00.000Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "dGVzdC1zaWduYXR1cmUtZ2F0ZS1EMi0yMDI2MDkxNTA2NTAwMFo=",
+  "subject_artifact_keys": [
+    "content/curation/18A-ai-input-authorization.json"
+  ],
+  "subject_artifact_shas": [
+    "a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "npm --prefix packages/content-schema run test",
+      "npm --prefix packages/domain run test"
+    ],
+    "allowed_paths": [],
+    "attempt_id": "task:review:06:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-06-20260914T135839Z",
+      "record_sha256": "95dac789c060d85b49fc892e4c0ab08f0e35d1e6dcbc694965efb54e6f7a71ca"
+    },
+    "expected_artifacts": [
+      {
+        "key": "review:gate-b",
+        "path": "docs/handoffs/task-06-review.json"
+      }
+    ],
+    "expires_at": "2026-09-15T13:58:39.240216Z",
+    "forbidden_paths": [
+      "**/*"
+    ],
+    "gate_receipts": [],
+    "issued_at": "2026-09-14T13:58:39.240216Z",
+    "issuer": {
+      "authorization_receipt_id": "state-r15-task05-done-06ready-20260914T135346Z",
+      "authorization_receipt_sha256": "c33f318f722556ca6408af5d4de353eff1c82452198dcd1901183d7e67f18dda",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [
+      {
+        "artifact_key": "handoff:task-05",
+        "sha256": "20f529fd4657c5d400a6edab30bd86f897b0373fc0725e4a798eba36d13c323c"
+      }
+    ],
+    "prior_ready_state_receipt_id": "state-r15-task05-done-06ready-20260914T135346Z",
+    "prior_ready_state_receipt_sha256": "c33f318f722556ca6408af5d4de353eff1c82452198dcd1901183d7e67f18dda",
+    "prior_ready_state_revision": 15,
+    "repository_state_receipt": {
+      "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+      "receipt_id": "repo-state-332fcc07-24351b1b",
+      "sha256": "f12f62aec38a20e0c799a64c5ea839128d0ebd0219faa6496c883f59d0920b8b",
+      "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/handoffs/task-05-golden.json\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? docs/receipts/state-r15-task05-done-06ready-20260914T135346Z.json\n?? packages/content-schema/tests/fixtures/\n?? packages/content-schema/tests/golden.test.ts"
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": true,
+    "resolved_task_block": {
+      "content": "Task 06 - Independent adoption-gate review\n\nTask\nPerform read-only architecture, biblical-ontology, Al-security, multilingual, and rights reviews of\nTasks 02-05.\nUser value\nFinds structural defects before source adapters and database migrations depend on them.\nRead first\n\nCONTENT_GUIDELINES.md\nIn scope\nIndependent review and reproduction of the full verification suite. Parallel read-only specialist\nsubagents are permitted.\nOut of scope\nEditing, approving content/licenses, or accepting failures based on intent.\nAllowed changes\nNone; findings are returned in the handoff.\nForbidden changes\nThe authoring agent may not review its own task as the sole reviewer.\nAcceptance criteria\nAll required tests reproduce\nNo unresolved Po/P1 architecture, rights, provenance, multilingual, or content-trust finding\nEvery adoption-gate scenario is executable, not documentation-only",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "124eb1beccd3482dceedada49d7735872389508db54feaca64a33025e60cf095",
+    "successor_task_keys": [
+      "07"
+    ],
+    "task_key": "06",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "95dac789c060d85b49fc892e4c0ab08f0e35d1e6dcbc694965efb54e6f7a71ca",
+  "record_id": "envelope-06-20260914T135839Z",
+  "record_sha256": "95dac789c060d85b49fc892e4c0ab08f0e35d1e6dcbc694965efb54e6f7a71ca",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "e1wX7dXQ/78UYDilQe3xgu9IN+boIC7VtL1qposxJ93rh0wU/xLrjZ/A6PPwikqXPG/rXA2lq4pN5PJ6u6irDA=="
+}

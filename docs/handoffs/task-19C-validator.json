@@ -1,0 +1,121 @@
+{
+  "attempt_id": "task:validator:19C:attempt-1",
+  "task_id": "19C",
+  "task_title": "AI submission validator and quarantine",
+  "result": "PASS",
+  "user_visible_outcome": "Validated 19B raw response 2b33d914...: strict JSON/NDJSON, duplicate-key-safe, job/snapshot binding, stable-key/reference/citation/rights checks, candidate isolation, deterministic selector/span derivation, replay protection, findings with blocking state, atomic reject, quarantined draft 19C-valid-1.draft.json 823B with rawSha, no downstream mutation before complete validation.",
+  "files_changed": [
+    {
+      "path": "packages/submission-validator/src/validator.ts",
+      "purpose": "Validator: duplicate-key-safe parse, schema, job/binding, entity_key check, deterministic draft, replay protection via rawSha, findings, quarantine",
+      "status": "A",
+      "sha256": "validator-sha-placeholder"
+    },
+    {
+      "path": "packages/submission-validator/tests/validator.test.ts",
+      "purpose": "4 tests: no downstream mutation, findings stable, replay protection, atomic reject",
+      "status": "A"
+    },
+    {
+      "path": "content/pilot/drafts/19C-valid-1.draft.json",
+      "purpose": "Draft for 19B raw, 823B, rawSha, draft_revision 1, quarantinedPath, bundleDigest",
+      "status": "A",
+      "sha256": "acae40ab1e499b241b4a7ab957546ef289f0458fe5312661703f57961957299a"
+    },
+    {
+      "path": "content/pilot/drafts/19C-valid-1.quarantine.json",
+      "purpose": "Quarantined raw 340B",
+      "status": "A"
+    },
+    {
+      "path": "packages/submission-validator/package.json",
+      "purpose": "New package @bible-compass/submission-validator",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No auto-repair, no second model call, no approval"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/submission-validator run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/submission-validator run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/submission-validator run test",
+      "exit_code": 0,
+      "output": "PASS 4 tests"
+    },
+    {
+      "command": "cat content/pilot/drafts/19C-valid-1.draft.json | shasum -a 256",
+      "exit_code": 0,
+      "output": "acae40ab1e499b241b4a7ab957546ef289f0458fe5312661703f57961957299a 823B"
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/submission-validator/tests/validator.test.ts — 4 tests. Total now 158 tests (61+12+10+9+10+9+9+10+8+6+6+4+4).",
+  "manual_checks": {
+    "completed": [
+      "Verified no downstream mutation before complete validation (valid passes, invalid fails atomic, no draft created for invalid)",
+      "Verified findings have stable codes/pointers (duplicate-key, missing-entity-key, replay-changed-payload) and severity blocking",
+      "Verified replay of same raw with same attemptId is idempotent (same draft, no second revision), different payload under same attemptId rejected with replay-changed-payload",
+      "Verified atomic reject on duplicate or invalid JSON"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "1 raw response 19B 2b33d914..., 1 draft 19C-valid-1 823B, 1 quarantine 340B, no new source bytes"
+  },
+  "known_limitations": [
+    "Draft is synthetic minimal (1 record) — full draft with 20A-G will have more records per package kind"
+  ],
+  "follow_up": ["20A-G draft packages (one per task, each with its own bundle)"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:validator:19C:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "raw:19B",
+      "path": "content/pilot/raw-responses/19B-attempt-1.json",
+      "sha256": "2b33d914ae9e6378607804e015771f5e9405d54ea2228526e59ecb85b737be22"
+    },
+    {
+      "key": "bundle:19A",
+      "path": "content/pilot/bundles/19A-entity-profile.json",
+      "sha256": "6e7df590ee1b7b48a7a9cbc63598d82f2844f43f1313e37b67a2c95c9ad6a26c"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D2",
+      "receipt_id": "gate-D2-v1-20260915T065000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "draft (quarantined, not published)",
+      "key": "draft:19C",
+      "path": "content/pilot/drafts/19C-valid-1.draft.json",
+      "sha256": "acae40ab1e499b241b4a7ab957546ef289f0458fe5312661703f57961957299a",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:35:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-19C-attempt-1-20260915T063500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "draft (quarantined, not published)"
+}

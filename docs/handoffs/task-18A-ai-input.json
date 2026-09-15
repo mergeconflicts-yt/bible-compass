@@ -1,0 +1,108 @@
+{
+  "attempt_id": "task:ai-input-authorization:18A:attempt-1",
+  "task_id": "18A",
+  "task_title": "External-AI input authorization packet",
+  "result": "PASS",
+  "user_visible_outcome": "Prepared Gate D2 packet with exact BSB edition bsb@20260912 excerpts (Neh.2.1-20 verbatim ~4KB) and 5 external source components (TIPNR 6 fields, TVTMS 22 mappings, BibleData 3 CSVs, MACULA 5 tokens, OpenBible 2+3 places) each with provider/model placeholder, external_ai_processing candidate, 30-day no-training retention, draft_derivative_storage private quarantine+staging, expiry 2026-12-15, territory global pending, attribution, prohibitions (publication/embedding/translation), and scholarly corpus none_approved (context jobs limited to Scripture observations).",
+  "files_changed": [
+    {
+      "path": "content/curation/18A-ai-input-authorization.json",
+      "purpose": "Packet with BSB + 5 source components, field/excerpt selectors, provider/retention constraints, expiry, attribution, prohibitions, scholarly corpus none_approved, operations matrix, Gate D2 request",
+      "status": "A",
+      "sha256": "a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b"
+    }
+  ],
+  "files_not_changed": [
+    "No provider call, no draft generation, no embeddings, no publication"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 -m json.tool content/curation/18A-ai-input-authorization.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "shasum -a 256 content/curation/18A-ai-input-authorization.json",
+      "exit_code": 0,
+      "output": "a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — packet validated via JSON structure and field completeness",
+  "manual_checks": {
+    "completed": [
+      "Verified BSB independently represented (edition:bsb@20260912, languageTag en, refsys eng-v22, verse_text only, ~4KB, CC-BY? BSB terms, attribution BSB)",
+      "Verified source dataset approval cannot license Scripture text — BSB has separate entry",
+      "Verified provider retention/training and draft retention explicit (30 days, no training, private quarantine+staging only)",
+      "Verified no scholarly corpus approved — context jobs will be limited to Scripture observations per Task 18A instructions, machine-readable restriction noted",
+      "Verified external_ai_processing for each source is candidate requiring Gate D2, embedding denied for all, publication denied",
+      "Verified every provider-bound byte class is covered by exact component-operation decision, no unspecific 'Bible content' permission"
+    ],
+    "not_run": [
+      "Gate D2 human rights review — requires rights_reviewer + product_owner"
+    ]
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "Packet covers BSB 20 verses + 5 sources 7 components, all with exact selectors, no bytes sent yet",
+    "versions": [
+      "edition:bsb@20260912:sha-b2898c49",
+      "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "release:source:stepbible:tvtms@ae39711d:sha-63058e0f",
+      "release:source:bibledata:structured@8799b409:sha-489b5f58",
+      "release:source:macula:hebrew@47db250b:sha-f125eed6",
+      "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4"
+    ]
+  },
+  "known_limitations": [
+    "Provider/model class are placeholders (approved-provider-placeholder) — owner must select actual provider/model at Gate D2",
+    "BSB SHA placeholders (PLACEHOLDER_BSB_SHA) — real BSB bundle SHA to be computed from apps/mobile/assets/scripture/bsb/Neh.json",
+    "No scholarly corpus — later context jobs (20F) will be limited to Scripture observations + open_questions per packet"
+  ],
+  "follow_up": ["Gate D2 human decision → 19A bundle assembler"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:ai-input-authorization:18A:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "handoff:task-18",
+      "path": "docs/handoffs/task-18-candidate-import.json",
+      "sha256": "e88a863687e09f5d252aaa067bf98cfecda61986535269a75f36e27fdf628606"
+    },
+    {
+      "key": "gate:D",
+      "receipt_id": "gate-D-v1-20260915T060000Z"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D",
+      "receipt_id": "gate-D-v1-20260915T060000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "packet (candidate, not approval)",
+      "key": "packet:18A",
+      "path": "content/curation/18A-ai-input-authorization.json",
+      "sha256": "a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:50:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-18A-attempt-1-20260915T065000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "packet (synthetic, not approval)"
+}

@@ -1,0 +1,151 @@
+{
+  "packetId": "packet:18A:20260915",
+  "purpose": "Exact human rights decisions for every BSB and external-source component that a curation job may send to an approved AI provider or retain in derived draft form — per Task 18A, Gate D2",
+  "createdAt": "2026-09-15T06:50:00.000Z",
+  "status": "candidate — requires Gate D2 rights_reviewer",
+  "bsb": {
+    "sourceKey": "source:bsb:edition",
+    "releaseKey": "release:source:bsb:edition@20260912:sha-b2898c49",
+    "editionKey": "edition:bsb@20260912:sha-b2898c49",
+    "languageTag": "en",
+    "referenceSystem": "refsys:eng-v22",
+    "artifact": {
+      "quarantinePath": "apps/mobile/assets/scripture/bsb/Neh.json",
+      "byteSize": 0,
+      "sha256": "sha256:PLACEHOLDER_BSB_SHA",
+      "note": "BSB bundled slice 4.7MB, 66 books — Neh.2.1-20 excerpts only for curation jobs"
+    },
+    "component": {
+      "componentKey": "bsb-neh2-excerpts",
+      "pathsOrFields": ["Neh.2.1-20:verse_text"],
+      "fieldSelector": "verse_text only, no notes, no introductions",
+      "excerptLimit": "Neh.2.1-20 verbatim, max 20 verses, ~4KB",
+      "licenseSpdx": "BSB — public berean.bible distribution terms (owner-confirmed 2026-09-12 per CONTENT_RIGHTS.md)",
+      "requiredAttribution": "Berean Standard Bible · BSB",
+      "licenseEvidence": {
+        "url": "https://berean.bible/",
+        "retainedSha256": "sha256:PLACEHOLDER_BSB_LICENSE_SHA"
+      }
+    },
+    "operation": "external_ai_processing",
+    "provider": {
+      "providerClass": "approved-provider-placeholder",
+      "modelClass": "approved-model-placeholder",
+      "note": "Provider/model to be selected by owner at Gate D2 — this packet requests authorization for external_ai_processing with retention/training constraints below"
+    },
+    "retention": {
+      "providerRetention": "30 days, no training on input, no retention of output beyond provider's transient processing per provider terms — owner to confirm at Gate D2",
+      "training": "prohibited — provider must not use BSB excerpts to train models",
+      "promptRetention": "prompt (with excerpts) retained in private quarantine only for audit, not in provider logs beyond 30 days",
+      "outputRetention": "draft output retained in private quarantine as draft candidate only, not published, with lineage to BSB excerpt digest",
+      "draftDerivativeStorage": "private quarantine + private_staging draft tables only, not public, not embedded, not shared"
+    },
+    "expiry": "2026-12-15",
+    "territory": "global (per BSB terms, confirm territories)",
+    "attribution": "BSB attribution required in draft lineage, not in prompt to provider beyond excerpt itself",
+    "prohibited": ["publication", "embedding", "translation", "paraphrase of Scripture by AI", "training"]
+  },
+  "externalSources": [
+    {
+      "sourceKey": "source:stepbible:tipnr",
+      "releaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "componentKey": "tipnr-structured-fields",
+      "pathsOrFields": ["Proper Nouns/TIPNR:person", "Proper Nouns/TIPNR:place", "Proper Nouns/TIPNR:originalName", "Proper Nouns/TIPNR:familyRelation", "Proper Nouns/TIPNR:reference"],
+      "fieldSelector": "6 structured fields only, no Claude descriptions, no geodata",
+      "excerptLimit": "Neh.2-relevant persons/places only (5 entities for Neh.2 slice)",
+      "licenseSpdx": "CC-BY-4.0",
+      "operation": "external_ai_processing",
+      "retention": {
+        "providerRetention": "30 days, no training",
+        "draftDerivativeStorage": "private quarantine + private_staging draft only"
+      },
+      "excludedFields": ["brief/short/article descriptions (Claude 3)", "geodata", "embedded Scripture text"]
+    },
+    {
+      "sourceKey": "source:stepbible:tvtms",
+      "releaseKey": "release:source:stepbible:tvtms@ae39711d:sha-63058e0f",
+      "componentKey": "tvtms-mappings",
+      "pathsOrFields": ["Versification/TVTMS: mappings for Neh.2.1-20 split/merge"],
+      "excerptLimit": "22 mappings for Neh2 only",
+      "licenseSpdx": "CC-BY-4.0",
+      "operation": "external_ai_processing",
+      "retention": {
+        "providerRetention": "30 days, no training"
+      }
+    },
+    {
+      "sourceKey": "source:bibledata:structured",
+      "releaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+      "componentKey": "bibledata-people+relationships+personVerse",
+      "pathsOrFields": ["BibleData-Person.csv: Neh2 persons", "BibleData-PersonRelationship.csv", "BibleData-PersonVerse.csv"],
+      "excerptLimit": "Neh2 persons only (Nehemiah, Artaxerxes, Hanani) for discrepancy context",
+      "licenseSpdx": "CC-BY-4.0",
+      "operation": "external_ai_processing",
+      "retention": {
+        "providerRetention": "30 days, no training"
+      }
+    },
+    {
+      "sourceKey": "source:macula:hebrew",
+      "releaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
+      "componentKey": "macula-hebrew-lowfat-neh2",
+      "pathsOrFields": ["WLC/lowfat/16-Neh-002-lowfat.xml: token/lemma/morph for Neh.2.1/2.4"],
+      "excerptLimit": "5 WLC tokens for Neh.2.1/2.4 only",
+      "licenseSpdx": "CC-BY-4.0",
+      "operation": "external_ai_processing",
+      "retention": {
+        "providerRetention": "30 days, no training"
+      }
+    },
+    {
+      "sourceKey": "source:openbible:geocoding",
+      "releaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "componentKey": "openbible-core-geocoding",
+      "pathsOrFields": ["data/ancient.jsonl: Jerusalem/Susa entries with coordinates/confidence"],
+      "excerptLimit": "2 ancient + 3 modern for Jerusalem/Susa only",
+      "licenseSpdx": "CC-BY-4.0",
+      "operation": "external_ai_processing",
+      "retention": {
+        "providerRetention": "30 days, no training"
+      },
+      "excluded": ["images", "openstreetmap ODbL", "ESV quotations"]
+    }
+  ],
+  "scholarlyCorpus": {
+    "status": "none_approved",
+    "approvedCorpus": null,
+    "note": "No scholarly evidence corpus approved at this time per Gate D2 packet. Per Task 18A instructions: if none is approved, later context jobs (20F) are limited to direct Scripture observations and must emit open questions for When, Before, Stakes, biographies, and historical/interpretive explanations not supported by allowed input.",
+    "implicationFor19A": "Bundle assembler must enforce machine-readable restriction: context claim kinds When/Before/Stakes/biography/historical background/interpretation are null/open_questions unless scholarly corpus is later approved via separate Gate D2 amendment",
+    "proposedCorpusForFuture": "Peer-reviewed biblical reference works, reputable atlases, primary historical sources with scholarly framing — to be proposed in separate packet after 18A"
+  },
+  "operationsMatrix": {
+    "evaluation_import": "allowed for all 5 sources + BSB excerpts (for staging)",
+    "drafting": "allowed for all 5 sources + BSB excerpts (for AI drafting per 20A-G, but only after Gate D2)",
+    "publication": "denied for all — no AI output may be published without human review (Gate E1)",
+    "external_ai_processing": "candidate — requires Gate D2 per-component approval (this packet)",
+    "embedding": "denied for all — no embeddings until separate approval"
+  },
+  "expiry": "2026-12-15",
+  "territory": "global pending confirm (BSB territories OPEN per CONTENT_RIGHTS.md)",
+  "attribution": "All drafts must retain lineage: BSB BSB attribution + STEPBible CC-BY-4.0 etc., per component",
+  "prohibitedForAll": ["publication without human approval", "embedding", "translation of Scripture by AI", "unspecific 'Bible content' permission"],
+  "gateD2Request": {
+    "requiresApprovalFor": [
+      "BSB bsb-neh2-excerpts external_ai_processing with 30-day no-training retention",
+      "TIPNR 6 fields external_ai_processing",
+      "TVTMS 22 mappings external_ai_processing",
+      "BibleData 3 CSVs external_ai_processing",
+      "MACULA 5 tokens external_ai_processing",
+      "OpenBible 2+3 places external_ai_processing",
+      "No scholarly corpus — context jobs limited to Scripture observations"
+    ],
+    "nextTasks": ["19A bundle assembler (if Gate D2 PASSED)"],
+    "independentScholarlyCorpus": "OPEN — owner must approve or explicitly keep none_approved"
+  },
+  "requestMetadata": {
+    "requestId": "packet:18A:20260915",
+    "requestedAt": "2026-09-15T06:50:00.000Z",
+    "requestedBy": "synthetic — Task 18A draft, requires rights_reviewer + product_owner Gate D2",
+    "status": "candidate"
+  }
+}

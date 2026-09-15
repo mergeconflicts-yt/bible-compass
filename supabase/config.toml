@@ -1,0 +1,30 @@
+# Supabase local development config — minimal for Task 07A
+# Docs: https://supabase.com/docs/guides/local-development/cli/getting-started
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "private_registry"]
+extra_search_path = ["public", "private_registry"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:54323"]
+jwt_expiry = 3600
+enable_signup = true
+enable_confirmations = false
+enable_manual_linking = true
+
+# Storage buckets for later tasks (not used in 07A)
+[storage]
+enabled = false

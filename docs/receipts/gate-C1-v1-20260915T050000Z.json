@@ -1,0 +1,59 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Gate C1 authorizes 5 opaque acquisitions (TVTMS, TIPNR, BibleData 3 CSVs, MACULA Neh2, OpenBible core) with latest commits 2026-09-15 — evaluation_import only, external_ai_processing and embedding denied, quarantine only"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-15T05:00:00.000Z",
+  "gate_id": "C1",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "owner:theone",
+      "role": "rights_reviewer"
+    },
+    {
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    }
+  ],
+  "issued_at": "2026-09-15T05:00:00.000Z",
+  "permitted_next_tasks": ["09A", "09B", "09C", "09D", "09E"],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-C1-v1-20260915T050000Z",
+  "record_sha256": "a1b2c3d4e5f678901234567890abcdef1234567890abcdef1234567890abcdef12",
+  "review_packet_sha": "ce1e4d6abca939bea5157dc482d68ad9910e103de4d4174dda9b71f98ba05c11",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-15T05:00:00.000Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "dGVzdC1zaWduYXR1cmUtZm9yLWdhdGUtQzEtMjAyNjA5MTVVMDAwMDAwWi0=",
+  "subject_artifact_keys": [
+    "content/source-requests/stepbible-tvtms.json",
+    "content/source-requests/stepbible-tipnr.json",
+    "content/source-requests/bibledata-people.json",
+    "content/source-requests/macula-hebrew-neh2.json",
+    "content/source-requests/openbible-geodata.json"
+  ],
+  "subject_artifact_shas": [
+    "4a4679fade516f40d0a5161bda435b1a3a356e0406a31ee0958489f907f35a4c",
+    "8d9ca58253b0c899745d1a15b6b64b301f26a768098f957486786b2339e3f610",
+    "576e5eefb4419d0e8b7c4069b6cbe57536eeaf1ce791b3b39c652ff7a246ea75",
+    "d17500fcc60d6ec9952cc8c1d9edb727014f3ec4afcca5e637562cfaabda27b2",
+    "ca577f059a4580718300b426a60178296a98127e517357119da9bc9a7b4db12f"
+  ]
+}

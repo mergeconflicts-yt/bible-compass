@@ -1,0 +1,119 @@
+{
+  "approval_receipts_consumed": [],
+  "attempt_id": "task:review:06:attempt-1",
+  "automated_tests_added_or_changed": "None \u2014 read-only review",
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/domain run test",
+      "exit_code": 0,
+      "output": "PASS 8 tests"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run test",
+      "exit_code": 0,
+      "output": "PASS 33 tests (9 validation + 16 golden + 8 domain)"
+    },
+    {
+      "command": "npm --prefix apps/mobile run test reference.test.ts",
+      "exit_code": 0,
+      "output": "PASS 11 tests"
+    },
+    {
+      "command": "npm --prefix packages/domain run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/content-schema run typecheck",
+      "exit_code": 0,
+      "output": "PASS"
+    }
+  ],
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-06-attempt-1-20260914T135839Z"
+  },
+  "database_migrations": "None",
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "envelope_id": "envelope-06-20260914T135839Z",
+    "envelope_sha256": "95dac789c060d85b49fc892e4c0ab08f0e35d1e6dcbc694965efb54e6f7a71ca",
+    "key_id": "bootstrap-ed25519-01",
+    "mode": "record"
+  },
+  "files_changed": [],
+  "files_not_changed": [
+    "All \u2014 read-only, no edits"
+  ],
+  "findings": {
+    "details": "F-001 P2 mobile pre-existing type errors (not blocking), F-002 P2 receipts durable \u2014 no P0/P1",
+    "p0_p1_count": 0,
+    "p2_count": 2
+  },
+  "follow_up": [
+    "Owner to accept Gate B and mint PASSED receipt to release Task 07"
+  ],
+  "gate_b_packet": {
+    "path": "docs/REVIEW_GATE_B_PACKET.md",
+    "recommendation": "PASS, permitted_next_tasks [07]",
+    "sha256": "15e802834eab4d02238e0c0c0b345b152d9aae7350124f7463def7b69f4f2607"
+  },
+  "generated_at": "2026-09-14T14:00:29.304252Z",
+  "known_limitations": [
+    "Mobile pre-existing 8 type errors should be fixed before Task 07 migrations (P2)"
+  ],
+  "manual_checks": {
+    "completed": [
+      "Reproduced verification suite for Tasks 02-05"
+    ],
+    "not_run": [
+      "Device preview builds \u2014 not required for Task 06"
+    ]
+  },
+  "no_content_approved_or_published_by_ai": true,
+  "output_artifacts": [
+    {
+      "data_kind": "synthetic (review packet)",
+      "key": "review:gate-b",
+      "path": "docs/REVIEW_GATE_B_PACKET.md",
+      "sha256": "15e802834eab4d02238e0c0c0b345b152d9aae7350124f7463def7b69f4f2607",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "prerequisite_artifact_keys": [
+    {
+      "key": "spec:canonical-identifiers",
+      "sha256": "91d92f2fed8bbf70a31bf6ffc2a6588fd5758e8c1b1509ce19a49c5d1831e9e5"
+    },
+    {
+      "key": "spec:physical-model",
+      "sha256": "4153b51fa42a639d6ffa026b6a8f812191052f553cdd91c547526315eddea30e"
+    },
+    {
+      "key": "handoff:task-05",
+      "sha256": "20f529fd4657c5d400a6edab30bd86f897b0373fc0725e4a798eba36d13c323c"
+    }
+  ],
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-332fcc07-6c118fba",
+    "receipt_sha256": "a0ad2787d241170355d7d8fde0fe5ce2d2439f0d2e76706104f1d4bb86b685bb",
+    "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/REVIEW_GATE_B_PACKET.md\n?? docs/handoffs/task-05-golden.json\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/dispatch-06-20260914T135839Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/envelope-06-20260914T135839Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? docs/receipts/state-r15-task05-done-06ready-20260914T135346Z.json\n?? docs/receipts/state-r16-task06-inprogress-20260914T135839Z.json\n?? packages/content-schema/tests/fixtures/\n?? packages/content-schema/tests/golden.test.ts"
+  },
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-332fcc07-6c118fba",
+    "receipt_sha256": "a0ad2787d241170355d7d8fde0fe5ce2d2439f0d2e76706104f1d4bb86b685bb",
+    "status": "M docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md\n?? docs/REVIEW_GATE_B_PACKET.md\n?? docs/handoffs/task-05-golden.json\n?? docs/receipts/dispatch-05-20260914T134254Z.json\n?? docs/receipts/dispatch-06-20260914T135839Z.json\n?? docs/receipts/envelope-05-20260914T134254Z.json\n?? docs/receipts/envelope-06-20260914T135839Z.json\n?? docs/receipts/receipts.jsonl\n?? docs/receipts/state-r14-task05-inprogress-20260914T134254Z.json\n?? docs/receipts/state-r15-task05-done-06ready-20260914T135346Z.json\n?? docs/receipts/state-r16-task06-inprogress-20260914T135839Z.json\n?? packages/content-schema/tests/fixtures/\n?? packages/content-schema/tests/golden.test.ts"
+  },
+  "result": "PASS",
+  "rls_permissions_config": "None",
+  "source_artifacts": {
+    "note": "No source acquisition in review"
+  },
+  "task_attempt": "task:review:06:attempt-1",
+  "task_id": "06",
+  "task_title": "Independent adoption-gate review",
+  "user_visible_outcome": "Independent review of Tasks 02-05: 5 specialist subagents, all tests reproduce, no P0/P1, 12 gates executable, Gate B packet ready for owner acceptance."
+}

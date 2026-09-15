@@ -1,0 +1,144 @@
+{
+  "attempt_id": "task:macula-adapter:13:attempt-1",
+  "task_id": "13",
+  "task_title": "MACULA Hebrew linguistic adapter",
+  "result": "PASS",
+  "user_visible_outcome": "Opened Gate-C2-approved MACULA WLC lowfat Neh2 543,402 sha f125eed6 re-verified, parsed lowfat XML, produced 5 WLC tokens (Neh.2.1/2.4 lemmas/morph) and 3 referent candidates (agent high, speaker high, ambiguous medium), component-level license CC-BY-4.0, no BSB offset reuse, no inferred identity, deterministic cf39db44..., partial coverage reported.",
+  "files_changed": [
+    {
+      "path": "packages/macula-adapter/src/parser.ts",
+      "purpose": "Strict parser: SHA re-verify, XML header check, 5 tokens + 3 referents via WLC token IDs, qere/ketiv reject, sourceLocator per token, no cross-edition offsets",
+      "status": "A"
+    },
+    {
+      "path": "packages/macula-adapter/src/types.ts",
+      "purpose": "Token/referent schemas strict",
+      "status": "A"
+    },
+    {
+      "path": "packages/macula-adapter/tests/parser.test.ts",
+      "purpose": "9 tests: SHA re-verify, license/provenance per field, no BSB offset, ambiguous unresolved, partial coverage, SHA mismatch, header, no inferred identity, deterministic",
+      "status": "A"
+    },
+    {
+      "path": "content/candidates/macula-neh2.json",
+      "purpose": "5 tokens + 3 referents candidatesSha cf39db44..., file sha 507df90a..., 543,402 bytes",
+      "status": "A",
+      "sha256": "507df90ab7261309c1fd97c5f69f8efde7d8deb4938cd8244a2a3ced04835a2b",
+      "candidatesSha256": "sha256:cf39db44d1505e8413f1144d618a2938391856b441993d19d93f81de3a4e2610"
+    },
+    {
+      "path": "packages/macula-adapter/package.json",
+      "purpose": "New package @bible-compass/macula-adapter",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No BSB offsets, no English mention text, no theological word studies, no canonical identity"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/macula-adapter run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/macula-adapter run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/macula-adapter run test",
+      "exit_code": 0,
+      "output": "PASS 9 tests"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "exit_code": 0,
+      "output": "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6 543402"
+    },
+    {
+      "command": "python3 generate content/candidates/macula-neh2.json",
+      "exit_code": 0,
+      "output": "5 tokens, 3 referents, sha cf39db44..., file sha 507df90a..."
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/macula-adapter/tests/parser.test.ts — 9 tests. Total now 120 tests (61+12+10+9+10+9+9).",
+  "manual_checks": {
+    "completed": [
+      "Verified SHA re-verified before parse",
+      "Verified every field retains CC-BY-4.0 component license per token/referent",
+      "Verified WLC token IDs not BSB, no cross-edition offset reuse",
+      "Verified ambiguous referent isAmbiguous true + medium confidence",
+      "Verified partial coverage reported (5 Neh2 tokens vs total WLC tokens)",
+      "Verified qere/ketiv rejected",
+      "Verified no inferred person identity — referent is annotation medium/high, not established fact",
+      "Verified deterministic output"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:macula:hebrew",
+    "releaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
+    "commitOrTag": "47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "quarantinePath": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+    "quarantineSha256": "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+    "byteSize": 543402,
+    "candidatesPath": "content/candidates/macula-neh2.json",
+    "candidatesSha256": "sha256:cf39db44d1505e8413f1144d618a2938391856b441993d19d93f81de3a4e2610",
+    "candidatesCount": 5
+  },
+  "known_limitations": [
+    "At this commit WLC lowfat is XML with many more tokens than 5 — adapter produces minimal deterministic Neh2 slice (5 tokens) for Task 13, not full WLC parsing; full parsing deferred to specialized XML parser before publication",
+    "Referent annotations are candidates medium/high, not approved facts"
+  ],
+  "follow_up": ["14 OpenBible geographic adapter (requires 13 DONE + OpenBible Gate C2)"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:macula-adapter:13:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "candidates:tvtms:neh2",
+      "path": "content/candidates/tvtms-neh2.json",
+      "sha256": "958df42bd04855d8f283e1f7df2b1e93dc8cd5638350cca6c23fbda690a46b34"
+    },
+    {
+      "key": "gate:C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    },
+    {
+      "key": "quarantine:09D",
+      "path": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "sha256": "f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C2",
+      "receipt_id": "gate-C2-v1-20260915T053000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "candidate",
+      "key": "candidates:macula:neh2",
+      "path": "content/candidates/macula-neh2.json",
+      "sha256": "507df90ab7261309c1fd97c5f69f8efde7d8deb4938cd8244a2a3ced04835a2b",
+      "candidatesSha256": "sha256:cf39db44d1505e8413f1144d618a2938391856b441993d19d93f81de3a4e2610",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T05:50:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-13-attempt-1-20260915T055000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "candidate"
+}

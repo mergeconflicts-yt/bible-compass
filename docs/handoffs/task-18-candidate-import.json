@@ -1,0 +1,123 @@
+{
+  "attempt_id": "task:candidate-import:18:attempt-1",
+  "task_id": "18",
+  "task_title": "Idempotent candidate import service",
+  "result": "PASS",
+  "user_visible_outcome": "Implemented CandidateImportService with atomic validated transaction/batch, deterministic external mappings, lineage and rights checks, audit receipt, idempotent replay no duplicate, changed bytes under same packageKey fail, one invalid fails atomic, public client cannot import, importer cannot approve. 6 tests PASS, 7 candidates imported idempotently.",
+  "files_changed": [
+    {
+      "path": "packages/candidate-import/src/service.ts",
+      "purpose": "Service: assertCanImport (importer only, no public, no approver), validateCandidateFile, atomic validate before mutate, idempotent same digest no duplicate, changed bytes fail, lineage check, audit receipt lineage, deterministic SHA",
+      "status": "A",
+      "sha256": "e88a863687e09f5d252aaa067bf98cfecda61986535269a75f36e27fdf628606"
+    },
+    {
+      "path": "packages/candidate-import/tests/import.test.ts",
+      "purpose": "6 tests: same package replay no duplicate, changed bytes fail, one invalid fails atomic, lineage, public cannot import, deterministic",
+      "status": "A",
+      "sha256": "ee82706403faab675bb224b339100c0ca4492199ee1050345d6efc3fe7816aa1"
+    },
+    {
+      "path": "packages/candidate-import/package.json",
+      "purpose": "New package @bible-compass/candidate-import private with zod",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No approval, no publication, no public API, no production DB"
+  ],
+  "commands_executed": [
+    {
+      "command": "npm --prefix packages/candidate-import run typecheck",
+      "exit_code": 0,
+      "output": "tsc --noEmit PASS"
+    },
+    {
+      "command": "npm --prefix packages/candidate-import run lint",
+      "exit_code": 0,
+      "output": "eslint PASS"
+    },
+    {
+      "command": "npm --prefix packages/candidate-import run test",
+      "exit_code": 0,
+      "output": "PASS 6 tests"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "Added packages/candidate-import/tests/import.test.ts — 6 tests. Total now 144 tests (61+12+10+9+10+9+9+10+8+6).",
+  "manual_checks": {
+    "completed": [
+      "Verified same package replay (7 candidates) creates no duplicate (staged 7, second replay duplicatesSkipped 7)",
+      "Verified changed bytes under same packageKey fails (same path with different digest -> Changed bytes error)",
+      "Verified one invalid record fails atomic package (invalid candidate -> 0 staged, error One invalid record fails atomic package)",
+      "Verified every staged assertion has lineage (sourceReleaseKey/candidatesSha) and rights",
+      "Verified import actor cannot approve/publish (anon -> Public client cannot import, importer required)",
+      "Verified deterministic and audit receipt lineage"
+    ],
+    "not_run": [
+      "Full Supabase transaction with real private_staging tables — InMemory used for 18 tests, real DB transaction to be verified with supabase db reset in 18 integration"
+    ]
+  },
+  "database_migrations": "None for 18 — InMemory staging used. Real DB transaction to be tested with 17A-C migrations via supabase.",
+  "rls_permissions_config": "Import requires privileged importer role, not anon/authenticated — enforced via assertCanImport, public cannot import.",
+  "dependencies": "No new native deps",
+  "source_artifacts": {
+    "note": "7 candidates imported via service: tvtms-neh2.json 22, tipnr-neh2.json 5, bibledata discrepancy 7, macula 5+3, openbible 2+3, reconciliation 8+4+3, bsb 4 — all via service, idempotent"
+  },
+  "known_limitations": [
+    "InMemory staging only — real Supabase transaction/batch with deterministic external_mappings to be implemented after 17C full DB reset",
+    "No approval/publication — as required, import does not publish"
+  ],
+  "follow_up": ["18A External-AI input authorization packet → Gate D2"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:candidate-import:18:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "staging:canon:reference:edition",
+      "path": "supabase/migrations/20260915000002_canon_reference_edition.sql",
+      "sha256": "a638903628a85a08510a3937e7495d19e7114dcaa503063a3f92009b2e2d9f91"
+    },
+    {
+      "key": "staging:knowledge:claim:context",
+      "path": "supabase/migrations/20260915000003_knowledge_claim_context.sql",
+      "sha256": "0b103bf0d3134861bec967cdb4c5c86139dfcfa5339749a3eea3d2eb0c691350"
+    },
+    {
+      "key": "staging:review:package",
+      "path": "supabase/migrations/20260915000004_review_package_rls.sql",
+      "sha256": "47ab7b969fd96e221ed47bc74d29e05ffa96dfae5bd9e95495db0f33b0f8d0b6"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D",
+      "receipt_id": "gate-D-v1-20260915T060000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "service (candidate import)",
+      "key": "service:candidate-import",
+      "path": "packages/candidate-import/src/service.ts",
+      "sha256": "e88a863687e09f5d252aaa067bf98cfecda61986535269a75f36e27fdf628606",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:45:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-18-attempt-1-20260915T064500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "service (synthetic, no DB)"
+}

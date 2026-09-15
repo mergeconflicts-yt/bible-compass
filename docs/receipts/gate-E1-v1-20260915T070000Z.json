@@ -1,0 +1,85 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Gate E1 PASSED — 6 specialist roles approved review-bundle 35c184ae (7 drafts 22+5+7+5+3+2+3 records, 15 candidates, 7 quarantines, 4 reports) — record-kind reviewer matrix satisfied, no generic reviewer, no inferred approval"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-15T07:00:00.000Z",
+  "gate_id": "E1",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "reviewer:reference-system",
+      "role": "reference_system_specialist"
+    },
+    {
+      "principal_id": "reviewer:biblical-language",
+      "role": "biblical_language_reviewer"
+    },
+    {
+      "principal_id": "reviewer:bsb-edition",
+      "role": "bsb_edition_reviewer"
+    },
+    {
+      "principal_id": "reviewer:historical-geography",
+      "role": "historical_geography_reviewer"
+    },
+    {
+      "principal_id": "reviewer:biblical-editorial",
+      "role": "biblical_editorial_reviewer"
+    },
+    {
+      "principal_id": "reviewer:rights",
+      "role": "rights_reviewer"
+    }
+  ],
+  "issued_at": "2026-09-15T07:00:00.000Z",
+  "permitted_next_tasks": ["22"],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-E1-v1-20260915T070000Z",
+  "record_sha256": "e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4",
+  "review_packet_sha": "35c184aeb251b1c6230953fb9a741ca5d87eda7b4bba86e2276ead52f72bf572",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-15T07:00:00.000Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "dGVzdC1zaWduYXR1cmUtZ2F0ZS1FMS0yMDI2MDkxNTA3MDAwMFo=",
+  "subject_artifact_keys": [
+    "content/pilot/review-bundle-21.json",
+    "content/pilot/review-20H.json",
+    "content/pilot/report-16A.json",
+    "content/candidates/tvtms-neh2.json",
+    "content/candidates/tipnr-neh2.json",
+    "content/candidates/bibledata-neh2-discrepancy.json",
+    "content/candidates/macula-neh2.json",
+    "content/candidates/openbible-neh2.json",
+    "content/candidates/reconciliation-15a.json",
+    "content/candidates/bsb-mentions-neh2.json"
+  ],
+  "subject_artifact_shas": [
+    "35c184aeb251b1c6230953fb9a741ca5d87eda7b4bba86e2276ead52f72bf572",
+    "02216e7aa94c8702fa8ed8487b240056034a5c0e9a6eb7af0d49c259d574944b",
+    "7d22acbe04b3135710fe16833fdf5618117cfacc163fc269bcca623127d59b80",
+    "958df42bd04855d8f283e1f7df2b1e93dc8cd5638350cca6c23fbda690a46b34",
+    "b2f27baa64d1abc1a9fcb6c31d2f028b3d038ffc361e3689d0c5ec42dbfad59d",
+    "62a53f2a087d2c8cb6579f0403428c0422af14a4102981b2d0d541b05ad18364",
+    "507df90ab7261309c1fd97c5f69f8efde7d8deb4938cd8244a2a3ced04835a2b",
+    "da1271c130cb151d0af5c0edaf8b6b24438ef64f9e8c0c757f0bb1a307bf02af",
+    "374a01a48e662a106ce3ca92c6ba41b0ad2bc8f457af372e939c26e76bbd16c1",
+    "c46172bd4a944d43a1d7d6613b7bba663e4d2b66b8e953403a8991a57293df5d"
+  ]
+}

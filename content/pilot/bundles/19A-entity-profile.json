@@ -1,0 +1,72 @@
+{
+  "manifest": {
+    "schema_version": "1.0.0",
+    "job_id": "job:neh2-entity-profile-001",
+    "job_kind": "entity-profile-draft",
+    "target": {
+      "canon_key": "canon:prot-66",
+      "reference_system_key": "refsys:eng-v22",
+      "scope_key": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "language_tag": "en",
+      "translation_edition_key": null
+    },
+    "contract": {
+      "expected_submission_id": "submission:job:neh2-entity-profile-001:attempt-1",
+      "expected_package_key": "draft:scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20:en:entity-profile:001",
+      "expected_draft_revision": 1,
+      "expected_attempt": 1,
+      "output_schema_version": "1.0.0",
+      "vocabulary_version": "1.0.0",
+      "allowed_package_kinds": [
+        "entity-profile-draft"
+      ],
+      "maximum_records": 100,
+      "maximum_output_bytes": 500000
+    },
+    "input_bundle": {
+      "bundle_key": "bundle:job:neh2-entity-profile-001:001",
+      "bundle_sha256": "sha256:515aba8c896f6076ad07ca2076bf86d28dcba144d68f7fe79365ca12d602c124",
+      "scripture_snapshot_sha256": "sha256:10030f53c55e85e3185eaf764d82ae8544f8e454f14fc49d06d45405c99ee6f5",
+      "entity_catalog_sha256": "sha256:f947a70f2c947733971dfffe40e9d5c7a28f25b6569a05a9cb70b1c3b1d95255",
+      "source_catalog_sha256": "sha256:9cbb8dbe6247528311c6a6b0b50c9d57fd5909ad07b2c9995b4f14ef776e0928"
+    },
+    "policies": {
+      "allowed_source_keys": [
+        "source:stepbible:tipnr",
+        "source:stepbible:tvtms",
+        "source:bibledata:structured",
+        "source:macula:hebrew",
+        "source:openbible:geocoding"
+      ],
+      "allow_new_entity_candidates": true,
+      "allow_new_source_candidates": false,
+      "internet_access": false,
+      "required_claim_citations": true,
+      "ai_may_approve": false
+    },
+    "provider": {
+      "provider_class": "approved-provider-placeholder",
+      "model_class": "approved-model-placeholder",
+      "prompt_version": "1.0.0",
+      "retention_days": 30,
+      "training_allowed": false
+    }
+  },
+  "excerpts": [
+    {
+      "sourceKey": "source:bibledata:structured",
+      "componentKey": "bibledata-personVerse",
+      "locator": "BibleData-PersonVerse.csv:Neh.2.1",
+      "text": "Nehemiah \u2014 Neh.2.1",
+      "sha256": "sha256:a027a32c9f14746f1c7162bdd7de18977645981593abeb31b9ecf18159fbc314"
+    },
+    {
+      "sourceKey": "source:stepbible:tipnr",
+      "componentKey": "tipnr-structured-fields",
+      "locator": "TIPNR:NEH:2:person:nehemiah-governor:001",
+      "text": "Nehemiah \u2014 cupbearer to Artaxerxes",
+      "sha256": "sha256:c850abb1ba0e1146b745fc52224463d0b55955f988fdc4e37f278c9c3cbb6fff"
+    }
+  ],
+  "bundleDigest": "sha256:515aba8c896f6076ad07ca2076bf86d28dcba144d68f7fe79365ca12d602c124"
+}

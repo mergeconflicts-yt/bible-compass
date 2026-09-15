@@ -1,0 +1,99 @@
+{
+  "attempt_id": "task:acquire-tipnr:09B:attempt-1",
+  "task_id": "09B",
+  "task_title": "Acquire opaque TIPNR artifact",
+  "result": "PASS",
+  "user_visible_outcome": "Acquired TIPNR opaque bytes 7,967,354 sha256:6cab6e4b... into content/quarantine/stepbible/tipnr/TIPNR.txt via dry-run authorize (evaluation_import allowed, Claude descriptions excluded) + streaming SHA, no parse.",
+  "files_changed": [
+    {
+      "path": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "purpose": "Opaque TIPNR 7,967,354 sha256:6cab6e4b... at ae39711d",
+      "status": "A",
+      "sha256": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+      "byteSize": 7967354
+    },
+    {
+      "path": "content/quarantine/stepbible/tipnr/receipt-09B.json",
+      "purpose": "Acquisition receipt bind URL/commit/bytes, no parser",
+      "status": "A",
+      "sha256": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d"
+    }
+  ],
+  "files_not_changed": ["No parse, no extraction, no AI descriptions imported"],
+  "commands_executed": [
+    {
+      "command": "acquire TIPNR via RegistryService authorize + FixtureFetcher",
+      "exit_code": 0,
+      "output": "7,967,354 bytes sha256:6cab6e4b... success"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "exit_code": 0,
+      "output": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — acquisition verified via existing 10 PASS + shasum",
+  "manual_checks": {
+    "completed": [
+      "Verified dry-run before any file mutation",
+      "Verified host allow-list and quarantinePath content/quarantine/stepbible/tipnr/TIPNR.txt safe",
+      "Verified excluded AI descriptions not in requested fields (only 6 structured fields)",
+      "Verified no parser accessed"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "sourceKey": "source:stepbible:tipnr",
+    "releaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+    "commitOrTag": "ae39711d7843b2902d54993e432de9c12d6a4b9a",
+    "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/ae39711d7843b2902d54993e432de9c12d6a4b9a/Proper%20Nouns/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt",
+    "byteSize": 7967354,
+    "sha256": "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+    "quarantinePath": "content/quarantine/stepbible/tipnr/TIPNR.txt"
+  },
+  "known_limitations": ["TIPNR is 7.9 MB hierarchical text — parsing deferred to Task 11 Gate C2"],
+  "follow_up": ["09C: BibleData 3 CSVs"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquire-tipnr:09B:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    },
+    {
+      "key": "request:stepbible:tipnr",
+      "path": "content/source-requests/stepbible-tipnr.json",
+      "sha256": "8d9ca58253b0c899745d1a15b6b64b301f26a768098f957486786b2339e3f610"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "opaque",
+      "key": "quarantine:tipnr",
+      "path": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+      "sha256": "6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+      "byteSize": 7967354,
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T05:12:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09B-attempt-1-20260915T051200Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "opaque"
+}

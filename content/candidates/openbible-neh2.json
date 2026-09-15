@@ -1,0 +1,91 @@
+{
+  "ancientPlaces": [
+    {
+      "ancientPlaceId": "openbible:ancient:jerusalem",
+      "name": "Jerusalem",
+      "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "sourceLocator": "openbible:ancient:jerusalem:ancient.jsonl:1342",
+      "confidence": "approximate",
+      "reviewStatus": "draft"
+    },
+    {
+      "ancientPlaceId": "openbible:ancient:susa",
+      "name": "Susa / Shushan",
+      "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "sourceLocator": "openbible:ancient:susa:ancient.jsonl:1201",
+      "confidence": "area",
+      "reviewStatus": "draft"
+    }
+  ],
+  "modernSites": [
+    {
+      "ancientPlaceId": "openbible:ancient:jerusalem",
+      "modernSiteId": "openbible:modern:jerusalem:old-city",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.235,
+          31.778
+        ],
+        "crs": "EPSG:4326",
+        "precision": "approximate",
+        "period": "Iron Age II - present",
+        "evidence": "OpenBible source: ancient.jsonl:jerusalem:modern:1:source:AnchorYale",
+        "componentLicense": "CC-BY-4.0"
+      },
+      "sourceLocator": "openbible:ancient:jerusalem:modern:1:ancient.jsonl",
+      "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "sourceConfidence": "high",
+      "externalId": "wd:Q1218",
+      "verseReference": "Neh.2.3"
+    },
+    {
+      "ancientPlaceId": "openbible:ancient:jerusalem",
+      "modernSiteId": "openbible:modern:jerusalem:eastern-hill",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.236,
+          31.775
+        ],
+        "crs": "EPSG:4326",
+        "precision": "candidates",
+        "period": "Iron Age II",
+        "evidence": "OpenBible source: ancient.jsonl:jerusalem:modern:2:source:Oxford",
+        "componentLicense": "CC-BY-4.0"
+      },
+      "sourceLocator": "openbible:ancient:jerusalem:modern:2:ancient.jsonl",
+      "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "sourceConfidence": "medium",
+      "externalId": "wd:Q1218",
+      "verseReference": "Neh.2.3"
+    },
+    {
+      "ancientPlaceId": "openbible:ancient:susa",
+      "modernSiteId": "openbible:modern:susa:shush",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.243,
+          32.189
+        ],
+        "crs": "EPSG:4326",
+        "precision": "approximate",
+        "period": "Achaemenid - present",
+        "evidence": "OpenBible source: ancient.jsonl:susa:modern:1:source:Reallexikon",
+        "componentLicense": "CC-BY-4.0"
+      },
+      "sourceLocator": "openbible:ancient:susa:modern:1:ancient.jsonl",
+      "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      "sourceConfidence": "high",
+      "externalId": "wd:Q129989",
+      "verseReference": "Neh.2.1"
+    }
+  ],
+  "candidatesSha256": "sha256:9b680dbaa5d98b3a5b6049a97f67811194e6169eeb24e37e53b2b58180c98b8a",
+  "sourceReleaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+  "quarantinePath": "content/quarantine/openbible/ancient.jsonl",
+  "quarantineSha256": "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2",
+  "byteSize": 11550193,
+  "parsedAt": "2026-09-15T05:55:00.000Z"
+}

@@ -1,0 +1,33 @@
+{
+  "reviewId": "review:20H:20260915",
+  "reviewedDrafts": [
+    "content/pilot/drafts/20A-entity-names.draft.json:32507b56",
+    "content/pilot/drafts/20B-attestations.draft.json:a03893ae",
+    "content/pilot/drafts/20C-relationships.draft.json:3450676d",
+    "content/pilot/drafts/20D-events-places.draft.json:ae4442b7",
+    "content/pilot/drafts/20E-relevance.draft.json:6cad1aea",
+    "content/pilot/drafts/20F-passage-context.draft.json:c4229466",
+    "content/pilot/drafts/20G-en-localization.draft.json:3396fffc"
+  ],
+  "findings": [
+    {
+      "code": "cross-package-identity",
+      "severity": "info",
+      "status": "PASS",
+      "details": "All 8 mappings resolve to canonical entities, no dangling FK after P1 fix"
+    },
+    {
+      "code": "attestation-relevance-separation",
+      "severity": "info",
+      "status": "PASS",
+      "details": "Hanani relevance isAttested false separate from attestations \u2014 correct"
+    },
+    {
+      "code": "open-questions-preserved",
+      "severity": "info",
+      "status": "PASS",
+      "details": "20F when/before/stakes are null with open_question_key per none_approved corpus"
+    }
+  ],
+  "overall": "PASS with 0 P0/P1 \u2014 No P0/P1 inconsistency before Task 21"
+}

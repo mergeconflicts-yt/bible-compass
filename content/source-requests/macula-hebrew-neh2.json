@@ -1,0 +1,108 @@
+{
+  "sourceKey": "source:macula:hebrew",
+  "sourceReleaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
+  "publisher": "Clear Bible / MACULA Hebrew",
+  "canonicalUrl": "https://github.com/Clear-Bible/macula-hebrew",
+  "artifacts": [
+    {
+      "url": "https://raw.githubusercontent.com/Clear-Bible/macula-hebrew/47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat/16-Neh-002-lowfat.xml",
+      "releaseTagOrCommit": "47db250bd55d0d8577f2a94fba114ef16c35b23c",
+      "expectedSha256": "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6",
+      "byteSize": 543402,
+      "mediaType": "text/tab-separated-values",
+      "quarantinePath": "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml",
+      "componentKey": "macula-hebrew-tokens"
+    },
+    {
+      "url": "https://github.com/Clear-Bible/macula-hebrew/raw/d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/hebrew/Morphology.tsv",
+      "releaseTagOrCommit": "d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1",
+      "expectedSha256": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+      "byteSize": 0,
+      "mediaType": "text/tab-separated-values",
+      "quarantinePath": "content/quarantine/macula/hebrew/Morphology.tsv",
+      "componentKey": "macula-hebrew-morphology"
+    },
+    {
+      "url": "https://github.com/Clear-Bible/macula-hebrew/raw/d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/hebrew/Participants.tsv",
+      "releaseTagOrCommit": "d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1",
+      "expectedSha256": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+      "byteSize": 0,
+      "mediaType": "text/tab-separated-values",
+      "quarantinePath": "content/quarantine/macula/hebrew/Participants.tsv",
+      "componentKey": "macula-hebrew-participants"
+    }
+  ],
+  "components": [
+    {
+      "componentKey": "macula-hebrew-tokens",
+      "pathsOrFields": [
+        "hebrew/Tanach.tsv:token",
+        "hebrew/Tanach.tsv:WLC_token_id"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/Clear-Bible/macula-hebrew/blob/d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:df45ba3224e7d6f9dba3ec8fd2d0b3f1d2febb2620147c889667886fccd4d8e1"
+      },
+      "requiredAttribution": "MACULA Hebrew CC BY 4.0 \u2014 Clear Bible",
+      "requestedOperation": "evaluation_import"
+    },
+    {
+      "componentKey": "macula-hebrew-morphology",
+      "pathsOrFields": [
+        "hebrew/Morphology.tsv:lemma",
+        "hebrew/Morphology.tsv:morph"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/Clear-Bible/macula-hebrew/blob/d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:6666666666666666666666666666666666666666666666666666666666666666"
+      },
+      "requiredAttribution": "MACULA Hebrew CC BY 4.0",
+      "requestedOperation": "evaluation_import"
+    },
+    {
+      "componentKey": "macula-hebrew-participants",
+      "pathsOrFields": [
+        "hebrew/Participants.tsv:referent",
+        "hebrew/Participants.tsv:semantic_role"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/Clear-Bible/macula-hebrew/blob/d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:6666666666666666666666666666666666666666666666666666666666666666"
+      },
+      "requiredAttribution": "MACULA Hebrew CC BY 4.0",
+      "requestedOperation": "evaluation_import"
+    }
+  ],
+  "excludedComponents": [
+    "BSB offsets / English mention text \u2014 never reuse Hebrew offsets for English edition",
+    "Unapproved gloss/sense syntactic fields beyond lemma/morph/semantic_role/participants",
+    "Theological word studies, canonical identity approval \u2014 out of scope for this linguistic adapter",
+    "Qere/Ketiv flattened without preservation"
+  ],
+  "purpose": "Nehemiah 2 WLC token/morphology/participant-referent candidates for implicit/pronominal resolution \u2014 requires Gate C2 before parsing; needed for Task 13",
+  "retentionPolicy": "quarantine-only, evaluation_import only; no publication; external AI denied; embeddings denied; Hebrew referent coverage reported as partial",
+  "acquisitionOnly": true,
+  "externalAiProcessing": "denied",
+  "external_ai_processing": "denied",
+  "embedding": "denied",
+  "embeddingGeneration": "denied",
+  "textualBasis": "WLC (Westminster Leningrad Codex) as documented in MACULA Hebrew repo at commit",
+  "referenceSystem": "upstream:macula-wlc",
+  "verificationRequired": {
+    "commitExists": "OPEN",
+    "componentLicenses": "OPEN \u2014 verify each file's license header matches CC-BY-4.0 and no ODbL/CC-BY-SA mixed files at this commit",
+    "wlcAlignment": "OPEN \u2014 verify WLC tokenization for Neh.2.1-20 before Task 13"
+  },
+  "requestMetadata": {
+    "requestId": "req:macula:hebrew:neh2:001",
+    "requestedAt": "2026-09-14T00:00:00.000Z",
+    "requestedBy": "synthetic \u2014 Task 09 draft, requires Gate C1",
+    "status": "candidate"
+  }
+}

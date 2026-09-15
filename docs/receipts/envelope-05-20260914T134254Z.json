@@ -1,0 +1,76 @@
+{
+  "envelope": {
+    "acceptance_commands": [
+      "npm --prefix packages/content-schema run test",
+      "npm run format:check",
+      "git diff --check"
+    ],
+    "allowed_paths": [
+      "packages/content-schema/tests/**",
+      "packages/content-schema/src/**",
+      "docs/handoffs/**"
+    ],
+    "attempt_id": "task:golden-fixtures:05:attempt-1",
+    "envelope_authentication": {
+      "algorithm": "Ed25519",
+      "key_id": "bootstrap-ed25519-01",
+      "mode": "record",
+      "record_id": "envelope-05-20260914T134254Z",
+      "record_sha256": "8c8acd7f1a2207704bb59b2d5034a182d6febbab79ea02a2a3cf9bbee932dccc"
+    },
+    "expected_artifacts": [
+      {
+        "key": "fixtures:golden",
+        "path": "packages/content-schema/tests/fixtures"
+      }
+    ],
+    "expires_at": "2026-09-15T13:42:54.503346Z",
+    "forbidden_paths": [
+      "apps/**",
+      "supabase/**"
+    ],
+    "gate_receipts": [],
+    "issued_at": "2026-09-14T13:42:54.503346Z",
+    "issuer": {
+      "authorization_receipt_id": "gate-A2-v1-20260914T123525Z",
+      "authorization_receipt_sha256": "26f517c69a5ac6d2811f7f329683e61eb4e80b1fb86a04d2745bd07851fdd95e",
+      "principal_id": "owner:theone",
+      "role": "CONTROLLER"
+    },
+    "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+    "plan_version": "1.2.0",
+    "prerequisites": [
+      {
+        "artifact_key": "handoff:task-04",
+        "sha256": "424c4cc5d57a900307a4ffccec987bd494ba7e7600d79391554283866fb45ecd"
+      }
+    ],
+    "prior_ready_state_receipt_id": "state-r13-task04-done-05ready-20260914T124824Z",
+    "prior_ready_state_receipt_sha256": "e666b32726b181d0d26bdcd058699e66ebf3c479804e2f1d9c8af19a00ae59a8",
+    "prior_ready_state_revision": 13,
+    "repository_state_receipt": {
+      "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+      "receipt_id": "repo-state-332fcc07-e3b0c442",
+      "sha256": "9545d1f2c48431e3932630c19f1e25fc47cc032152e1a268481b2a0bcbf750d5",
+      "status": ""
+    },
+    "required_rights_operations": [],
+    "requires_owner_gate": false,
+    "resolved_task_block": {
+      "content": "Task 05 - Golden adoption fixtures\n\nTask\nImplement the complete synthetic golden-fixture suite required by ADR-003 before migrations.\n\nUser value\nProves the model handles multilingual, multi-edition, disputed, and offline realities before the\ndatabase shape becomes expensive to change.\n\nRead first\nTask O4 handoff, CONTEXT_MODEL_REVIEW.md\uff0cAI_CURATION_CONTRACT.md,ADR-OO3, and schema tests\n\nIn scope\nSynthetic fixtures for:\n\u2022 One entity shared across English, Telugu, and Tamil names/descriptions\nRelevant-but-not-mentioned entity\nNamed, pronoun, indirect, collective, repeated-name, and genealogy attestations\nSplit/merged/reordered/omitted reference mapping\n\u2022 Corrected immutable edition preserving old selectors/spans\nCompeting identity and chronology positions\nCross-chapter, overlapping, alternate, and non-contiguous scope segmentation\nEvent participants, places, and multiple Scripture accounts\n\u2022 Grapheme-safe Telugu/Tamil selectors and generated UTF-16 projections\nExact source locator plus checksum-bound human approval fixture\n\u2022 Complete-zero, complete-with-records, incomplete, blocked, and not-applicable coverage\nRights-unknown failures for every operation\nAtomic NDJSON failure and release rollback\n\nOut of scope\nReal Scripture, real historical claims, production sources, and reviewer approvals.\nAllowed changes\nContent-schema test fixtures, fixture builders, validators, and tests.\nForbidden changes\nDo not label synthetic fixtures as production or copy real unapproved translation text.\nAcceptance criteria\nEvery adoption-gate row has one valid fixture and at least one targeted invalid fixture; every\ninvalid fixture fails for the expected error code.\nTests\nGolden snapshot/semantic assertions, Unicode grapheme tests, rights matrix tests, atomic-package\n\nStop conditions\n\nRequired handoff\nStandard handoff plus adoption-gate-to-test mapping and fixture licensing statement.",
+      "encoding": "UTF-8",
+      "media_type": "text/markdown"
+    },
+    "resolved_task_block_sha256": "1d35432bab7b411aae7f79a935e8f34eec0e7d8bc0dc31d29eb130d2663fc2ad",
+    "successor_task_keys": [
+      "06"
+    ],
+    "task_key": "05",
+    "task_schema_version": "1.0.0"
+  },
+  "envelope_sha256": "8c8acd7f1a2207704bb59b2d5034a182d6febbab79ea02a2a3cf9bbee932dccc",
+  "record_id": "envelope-05-20260914T134254Z",
+  "record_sha256": "8c8acd7f1a2207704bb59b2d5034a182d6febbab79ea02a2a3cf9bbee932dccc",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "rP5Wfix5Qds3WlE0HlAcY0qh+CiqAXSETreZGeSqtkd6EKSBJN71G6FqQi/8/A3ExElfWt8lER9lwdkKEGxoAg=="
+}

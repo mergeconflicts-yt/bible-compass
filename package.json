@@ -3,9 +3,20 @@
   "name": "bible-compass",
   "version": "1.0.0",
   "workspaces": [
-    "apps/mobile",
     "packages/domain",
-    "packages/content-schema"
+    "packages/content-schema",
+    "packages/registry-service",
+    "packages/acquisition",
+    "packages/tvtms-adapter",
+    "packages/tipnr-adapter",
+    "packages/bibledata-adapter",
+    "packages/macula-adapter",
+    "packages/openbible-adapter",
+    "packages/reconciliation",
+    "packages/candidate-import",
+    "packages/bundle-assembler",
+    "packages/provider-runner",
+    "packages/submission-validator"
   ],
   "engines": {
     "node": ">=22.13"

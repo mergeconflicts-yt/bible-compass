@@ -1,0 +1,105 @@
+{
+  "sourceKey": "source:bibledata:structured",
+  "sourceReleaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
+  "publisher": "BibleData (Brady Stephenson)",
+  "canonicalUrl": "https://github.com/bibledata/bibledata",
+  "artifacts": [
+    {
+      "url": "https://raw.githubusercontent.com/BradyStephenson/bible-data/8799b409c82a5d4acebba3be5107d6eff7c85d78/BibleData-Person.csv",
+      "releaseTagOrCommit": "8799b409c82a5d4acebba3be5107d6eff7c85d78",
+      "expectedSha256": "sha256:489b5f588a03df71a51bcb973467e3e2cd9ebc2ad96df46a964d8459cc532963",
+      "byteSize": 274988,
+      "mediaType": "text/csv",
+      "quarantinePath": "content/quarantine/bibledata/people.csv",
+      "componentKey": "bibledata-people"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BradyStephenson/bible-data/8799b409c82a5d4acebba3be5107d6eff7c85d78/BibleData-PersonVerse.csv",
+      "releaseTagOrCommit": "8799b409c82a5d4acebba3be5107d6eff7c85d78",
+      "expectedSha256": "sha256:7eab00f8f6d7f5a769febe65d5ce69671464e03a393f5015b160d17f508e9177",
+      "byteSize": 2617454,
+      "mediaType": "text/csv",
+      "quarantinePath": "content/quarantine/bibledata/person-verse.csv",
+      "componentKey": "bibledata-person-verse"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BradyStephenson/bible-data/8799b409c82a5d4acebba3be5107d6eff7c85d78/BibleData-PersonRelationship.csv",
+      "releaseTagOrCommit": "8799b409c82a5d4acebba3be5107d6eff7c85d78",
+      "expectedSha256": "sha256:d81cb0492a5d1e1220a3cb233383d9de5a16bb92034ff98123f9e3805590d627",
+      "byteSize": 442545,
+      "mediaType": "text/csv",
+      "quarantinePath": "content/quarantine/bibledata/relationships.csv",
+      "componentKey": "bibledata-relationships"
+    }
+  ],
+  "components": [
+    {
+      "componentKey": "bibledata-people",
+      "pathsOrFields": [
+        "data/people.csv"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/bibledata/bibledata/blob/c3d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2"
+      },
+      "requiredAttribution": "BibleData CC BY 4.0",
+      "requestedOperation": "evaluation_import"
+    },
+    {
+      "componentKey": "bibledata-person-verse",
+      "pathsOrFields": [
+        "data/person-verse.csv"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/bibledata/bibledata/blob/c3d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2"
+      },
+      "requiredAttribution": "BibleData CC BY 4.0",
+      "requestedOperation": "evaluation_import"
+    },
+    {
+      "componentKey": "bibledata-relationships",
+      "pathsOrFields": [
+        "data/relationships.csv"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/bibledata/bibledata/blob/c3d4e5f6a7890b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2"
+      },
+      "requiredAttribution": "BibleData CC BY 4.0",
+      "requestedOperation": "evaluation_import"
+    }
+  ],
+  "excludedComponents": [
+    "data/books.csv \u2014 incomplete per source",
+    "data/places.csv, place-labels, place-verse \u2014 marked in progress, deferred until quality reviewed",
+    "data/events.csv, epochs, significant things \u2014 planned/incomplete, not for Neh2 discrepancy analysis",
+    "Strong's/dictionary/polyglot/chronology (Ussher) files \u2014 distinct editorial quality and rights, separate component review required",
+    "Any share-alike or ambiguous-license embedded files"
+  ],
+  "purpose": "Comparison source for Nehemiah 2 people, labels, relationships, person-verse coverage vs TIPNR \u2014 to measure gaps and disagreements before reviewers rely on one compilation (Task 12)",
+  "retentionPolicy": "quarantine-only, discrepancy analysis only; no canonical entity creation; no automatic corroboration; no publication; external AI denied",
+  "acquisitionOnly": true,
+  "externalAiProcessing": "denied",
+  "external_ai_processing": "denied",
+  "embedding": "denied",
+  "embeddingGeneration": "denied",
+  "verificationRequired": {
+    "commitExists": "OPEN",
+    "fileCompletion": "OPEN \u2014 verify people/people-verse/relationships files are marked complete vs in-progress per repo README at commit",
+    "licenseEvidence": "OPEN"
+  },
+  "requestMetadata": {
+    "requestId": "req:bibledata:neh2:001",
+    "requestedAt": "2026-09-14T00:00:00.000Z",
+    "requestedBy": "synthetic \u2014 Task 09 draft, requires Gate C1",
+    "status": "candidate",
+    "commit": "8799b409c82a5d4acebba3be5107d6eff7c85d78"
+  }
+}

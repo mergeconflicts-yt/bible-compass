@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "package_kind": "canonical-attestation-draft",
+  "records": [
+    {
+      "record_key": "attestation-001",
+      "record_kind": "canonical_attestation",
+      "reference_system_key": "refsys:eng-v22",
+      "reference_key": "verse:Neh.2.1",
+      "entity_key": "entity:nehemiah-governor",
+      "attestation_kind": "primary_subject",
+      "textual_basis": "explicit",
+      "identification_status": "established",
+      "claim_keys": [
+        "claim:nehemiah-was-cupbearer"
+      ]
+    },
+    {
+      "record_key": "attestation-002",
+      "record_kind": "canonical_attestation",
+      "reference_system_key": "refsys:eng-v22",
+      "reference_key": "verse:Neh.2.1",
+      "entity_key": "entity:artaxerxes-i",
+      "attestation_kind": "participant",
+      "textual_basis": "explicit",
+      "identification_status": "established",
+      "claim_keys": [
+        "claim:artaxerxes-was-king"
+      ]
+    },
+    {
+      "record_key": "attestation-003",
+      "record_kind": "canonical_attestation",
+      "reference_system_key": "refsys:eng-v22",
+      "reference_key": "verse:Neh.2.3",
+      "entity_key": "entity:jerusalem",
+      "attestation_kind": "location",
+      "textual_basis": "explicit",
+      "identification_status": "established",
+      "claim_keys": [
+        "claim:jerusalem-location"
+      ]
+    },
+    {
+      "record_key": "attestation-004",
+      "record_kind": "canonical_attestation",
+      "reference_system_key": "refsys:eng-v22",
+      "reference_key": "verse:Neh.2.1",
+      "entity_key": "entity:susa-citadel",
+      "attestation_kind": "location",
+      "textual_basis": "strongly_implied",
+      "identification_status": "proposed",
+      "claim_keys": [
+        "claim:susa-location"
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [],
+  "bundleDigest": "sha256:c021dd379a995ad7dc84d7e7ff3bdc212fa5d552f6d0b310dad561f5159bc7a2",
+  "jobId": "job:20B-attestations",
+  "draft_revision": 1
+}

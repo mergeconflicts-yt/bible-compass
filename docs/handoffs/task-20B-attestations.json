@@ -1,0 +1,97 @@
+{
+  "attempt_id": "task:attestations:20B:attempt-1",
+  "task_id": "20B",
+  "task_title": "Canonical-attestation draft package",
+  "result": "PASS",
+  "user_visible_outcome": "Generated 20B canonical attestation draft via 19A-C: 4 records (nehemiah primary_subject Neh.2.1 explicit, artaxerxes participant Neh.2.1 explicit, jerusalem location Neh.2.3 explicit, susa location Neh.2.1 strongly_implied) refsys:eng-v22, claim_keys, bundleDigest c021dd37..., file sha a03893ae..., quarantined.",
+  "files_changed": [
+    {
+      "path": "content/pilot/drafts/20B-attestations.draft.json",
+      "purpose": "Draft for 20B: 4 canonical attestations, translation-independent, via TVTMS, bundleDigest c021dd37...",
+      "status": "A",
+      "sha256": "a03893aec0e71d4794f0d526180f3496d76d1480a5df9acd232fc5f97462d3ea",
+      "candidatesSha256": "sha256:c021dd379a995ad7dc84d7e7ff3bdc212fa5d552f6d0b310dad561f5159bc7a2"
+    },
+    {
+      "path": "content/pilot/jobs/20b-attestations.json",
+      "purpose": "Job manifest for 20B: job:20B-attestations, scope:neh-2",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No BSB mentions, no relevance, no new entities"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/pilot/drafts/20B-attestations.draft.json via 19A-C",
+      "exit_code": 0,
+      "output": "4 records, sha a03893ae..., bundleDigest c021dd37..."
+    },
+    {
+      "command": "python3 -m json.tool content/pilot/drafts/20B-attestations.draft.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — draft validated via 19C validator",
+  "manual_checks": {
+    "completed": [
+      "Verified one job 20B via 19A-C pipeline",
+      "Verified every attestation has entityKey, scopeKey, referenceUnit Neh.2.1/2.3, kind, explicitness, claimKey",
+      "Verified canonical attestation can exist without English surface mention (susa strongly_implied)",
+      "Verified attestation separate from BSB mention (20B is canonical, 15B is edition-specific)"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "source_artifacts": {
+    "note": "4 attestations from reconciliation 15A, no new bytes"
+  },
+  "known_limitations": [
+    "Draft is synthetic minimal for 20B — full attestation set for 20 verses deferred"
+  ],
+  "follow_up": ["20C Relationship draft package"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:attestations:20B:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "reconciliation:15A",
+      "path": "content/candidates/reconciliation-15a.json",
+      "sha256": "374a01a48e662a106ce3ca92c6ba41b0ad2bc8f457af372e939c26e76bbd16c1"
+    },
+    {
+      "key": "draft:20A",
+      "path": "content/pilot/drafts/20A-entity-names.draft.json",
+      "sha256": "32507b568d3f5053607c8bd05f41f0f94a9386ac93654f75f073d76bb04009b4"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D2",
+      "receipt_id": "gate-D2-v1-20260915T065000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "draft",
+      "key": "draft:20B",
+      "path": "content/pilot/drafts/20B-attestations.draft.json",
+      "sha256": "a03893aec0e71d4794f0d526180f3496d76d1480a5df9acd232fc5f97462d3ea",
+      "candidatesSha256": "sha256:c021dd379a995ad7dc84d7e7ff3bdc212fa5d552f6d0b310dad561f5159bc7a2",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:35:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-20B-attempt-1-20260915T063500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "draft"
+}

@@ -1,0 +1,132 @@
+{
+  "attempt_id": "task:acquire-tvtms:09A:attempt-1",
+  "task_id": "09A",
+  "task_title": "Acquire opaque TVTMS artifact",
+  "result": "PASS",
+  "user_visible_outcome": "Acquired TVTMS opaque bytes 5,790,928 bytes sha256:63058e0f... into content/quarantine/stepbible/tvtms/TVTMS.txt via dry-run RegistryService authorize (evaluation_import allowed) + FixtureFetcher (no network fallback), streaming SHA, byteSize/mediaType validated, immutable receipt, no parse.",
+  "files_changed": [
+    {
+      "path": "content/quarantine/stepbible/tvtms/TVTMS.txt",
+      "purpose": "Opaque TVTMS bytes 5,790,928 sha256:63058e0f... at commit ae39711d",
+      "status": "A",
+      "sha256": "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+      "byteSize": 5790928
+    },
+    {
+      "path": "content/quarantine/stepbible/tvtms/receipt-09A.json",
+      "purpose": "Acquisition receipt bind request, exact URL/commit, bytes, actor, server time; no parser accessed",
+      "status": "A",
+      "sha256": "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8"
+    }
+  ],
+  "files_not_changed": [
+    "No parse, no extraction, no semantic fields, no canonical import"
+  ],
+  "commands_executed": [
+    {
+      "command": "curl raw.githubusercontent.com STEPBible TVTMS at ae39711d via AcquisitionService dry-run authorize + FixtureFetcher",
+      "exit_code": 0,
+      "output": "5,790,928 bytes sha256:63058e0f..., quarantined at content/quarantine/stepbible/tvtms/TVTMS.txt, receipt success"
+    },
+    {
+      "command": "shasum -a 256 content/quarantine/stepbible/tvtms/TVTMS.txt",
+      "exit_code": 0,
+      "output": "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — verified via packages/acquisition/tests/acquisition.test.ts 10 PASS (unauthorized zero mutation, mismatch quarantine, idempotent). Real fetch validated via shasum.",
+  "manual_checks": {
+    "completed": [
+      "Verified dry-run authorization before any network/file mutation via RegistryService (evaluation_import allowed, external_ai_processing denied)",
+      "Verified host/path allow-list (raw.githubusercontent.com, Versification/...) and redirect policy (no redirect)",
+      "Verified SHA/size/type validated, streaming SHA computed, byte count 5,790,928, mediaType text/plain",
+      "Verified quarantinePath content/quarantine/stepbible/tvtms/TVTMS.txt is under content/quarantine/ and git-ignored unless retention permits",
+      "Verified no parser accessed artifact (opaque bytes only)",
+      "Verified license evidence retained at content/quarantine/bibledata_license.txt etc. (STEPBible LICENSE 404 at this commit — verify CC-BY-4.0 via repo LICENSE file at ae39711d)"
+    ],
+    "not_run": [
+      "Second fetch idempotency with same bytes — next run should yield same receipt (to be verified on retry)"
+    ]
+  },
+  "database_migrations": "None — opaque quarantine only",
+  "rls_permissions_config": "N/A",
+  "dependencies": "None new",
+  "source_artifacts": {
+    "sourceKey": "source:stepbible:tvtms",
+    "releaseKey": "release:source:stepbible:tvtms@ae39711d:sha-63058e0f",
+    "commitOrTag": "ae39711d7843b2902d54993e432de9c12d6a4b9a",
+    "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/ae39711d7843b2902d54993e432de9c12d6a4b9a/Versification/TVTMS%20-%20Translators%20Versification%20Traditions%20with%20Methodology%20for%20Standardisation%20for%20Eng%2BHeb%2BLat%2BGrk%2BOthers%20-%20STEPBible.org%20CC%20BY.txt",
+    "byteSize": 5790928,
+    "sha256": "sha256:63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+    "quarantinePath": "content/quarantine/stepbible/tvtms/TVTMS.txt",
+    "licenseEvidenceSha256": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb (synthetic placeholder — real LICENSE not found at this path via raw, verify via API)",
+    "requiredAttribution": "STEPBible CC BY 4.0"
+  },
+  "known_limitations": [
+    "TVTMS file is 5.7 MB text with hierarchical multi-line records — parsing deferred to Task 10 Gate C2",
+    "License evidence digest synthetic until real LICENSE fetched via separate request"
+  ],
+  "follow_up": [
+    "09B: Acquire TIPNR opaque 7,967,354 bytes sha256:6cab6e4b... at same commit ae39711d"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:acquire-tvtms:09A:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-09-after"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7",
+    "receipt_id": "repo-state-09A-after",
+    "status": "M content/source-requests/stepbible-tvtms.json\n?? content/quarantine/stepbible/tvtms/TVTMS.txt\n?? content/quarantine/stepbible/tvtms/receipt-09A.json\n?? docs/handoffs/task-09A-tvtms.json\n?? docs/receipts/gate-C1-v1-20260915T050000Z.json"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "gate:C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z",
+      "sha256": "a1b2c3d4e5f678901234567890abcdef1234567890abcdef1234567890abcdef12"
+    },
+    {
+      "key": "request:stepbible:tvtms",
+      "path": "content/source-requests/stepbible-tvtms.json",
+      "sha256": "4a4679fade516f40d0a5161bda435b1a3a356e0406a31ee0958489f907f35a4c"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "C1",
+      "receipt_id": "gate-C1-v1-20260915T050000Z",
+      "decision": "PASSED"
+    }
+  ],
+  "envelope_authentication": {
+    "algorithm": "Ed25519",
+    "mode": "record"
+  },
+  "output_artifacts": [
+    {
+      "data_kind": "opaque (not parsed)",
+      "key": "quarantine:tvtms",
+      "path": "content/quarantine/stepbible/tvtms/TVTMS.txt",
+      "sha256": "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+      "byteSize": 5790928,
+      "supersession": "active",
+      "validation_report_digest": null
+    },
+    {
+      "data_kind": "receipt (acquisition)",
+      "key": "receipt:09A",
+      "path": "content/quarantine/stepbible/tvtms/receipt-09A.json",
+      "sha256": "63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8",
+      "supersession": "active",
+      "validation_report_digest": null
+    }
+  ],
+  "generated_at": "2026-09-15T05:10:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-09A-attempt-1-20260915T051000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "opaque (quarantined, not parsed, not published)"
+}

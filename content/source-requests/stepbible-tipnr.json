@@ -1,0 +1,69 @@
+{
+  "sourceKey": "source:stepbible:tipnr",
+  "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+  "publisher": "STEPBible",
+  "canonicalUrl": "https://github.com/STEPBible/STEPBible-Data",
+  "artifact": {
+    "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/ae39711d7843b2902d54993e432de9c12d6a4b9a/Proper%20Nouns/TIPNR%20-%20Translators%20Individualised%20Proper%20Names%20with%20all%20References%20-%20STEPBible.org%20CC%20BY.txt",
+    "releaseTagOrCommit": "ae39711d7843b2902d54993e432de9c12d6a4b9a",
+    "expectedSha256": "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+    "byteSize": 7967354,
+    "mediaType": "text/tab-separated-values",
+    "quarantinePath": "content/quarantine/stepbible/tipnr/TIPNR.txt"
+  },
+  "components": [
+    {
+      "componentKey": "tipnr-structured-fields",
+      "pathsOrFields": [
+        "Data/TIPNR/TIPNR.tsv:person",
+        "Data/TIPNR/TIPNR.tsv:place",
+        "Data/TIPNR/TIPNR.tsv:thing",
+        "Data/TIPNR/TIPNR.tsv:originalName",
+        "Data/TIPNR/TIPNR.tsv:familyRelation",
+        "Data/TIPNR/TIPNR.tsv:reference"
+      ],
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseEvidence": {
+        "url": "https://github.com/STEPBible/STEPBible-Data/blob/b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c/LICENSE",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "retainedArtifactSha256": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      },
+      "requiredAttribution": "STEPBible Data CC BY 4.0 \u2014 credit \"STEP Bible\" linked to stepbible.org",
+      "approvedOperations": [],
+      "prohibitedOperations": [
+        "publication",
+        "external_ai_processing",
+        "embedding"
+      ],
+      "requestedOperation": "evaluation_import"
+    }
+  ],
+  "excludedComponents": [
+    "TIPNR brief/short/article descriptions \u2014 identified by repo as Claude 3 generated, not evidence, never imported as approved (per OPEN_BIBLE_DATA_SOURCES.md:141)",
+    "TIPNR geodata fields (place coordinates) \u2014 separate component requires distinct review and is excluded here",
+    "Any embedded Scripture text or lexicon prose \u2014 separate rights",
+    "TAHOT/TAGNT and any share-alike components"
+  ],
+  "purpose": "Nehemiah 2 proper-name entity candidates, original-language forms, named attestations, family relations \u2014 minimal slice for Task 11 adapter",
+  "retentionPolicy": "opaque-quarantine-only until Gate C2; no AI disclosure; no publication; retained artifact and license evidence digests bound",
+  "referenceSystem": "upstream:stepbible-tipnr",
+  "textualBasis": "STEPBible proper-noun inventory (not edition-specific text)",
+  "acquisitionOnly": true,
+  "externalAiProcessing": "denied",
+  "external_ai_processing": "denied",
+  "embedding": "denied",
+  "embeddingGeneration": "denied",
+  "byteSizeNote": "REAL \u2014 computed from latest opaque fetch 2026-09-15",
+  "checksumNote": "REAL \u2014 sha256 computed from latest opaque bytes",
+  "verificationRequired": {
+    "commitExists": "OPEN",
+    "fieldSelectors": "OPEN \u2014 verify Data/TIPNR/TIPNR.tsv has hierarchical multi-line records per spec; validate field selectors before Gate C2",
+    "licenseEvidence": "OPEN \u2014 verify CC-BY-4.0 at same commit"
+  },
+  "requestMetadata": {
+    "requestId": "req:stepbible:tipnr:neh2:001",
+    "requestedAt": "2026-09-14T00:00:00.000Z",
+    "requestedBy": "synthetic \u2014 Task 09 draft, requires Gate C1",
+    "status": "candidate"
+  }
+}

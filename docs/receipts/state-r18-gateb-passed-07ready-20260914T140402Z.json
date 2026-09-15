@@ -1,0 +1,39 @@
+{
+  "gate_receipt_id": "gate-B-v1-20260914T140402Z",
+  "gate_receipt_sha256": "9595c4363f1f64d8f5bd27d107355a3d43028862a95a2de86e612c1a96072d43",
+  "issued_at": "2026-09-14T14:04:02.182244Z",
+  "issuer": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "new_state": {
+    "active_attempt_id": null,
+    "active_controller_lease_id": null,
+    "active_dispatch_envelope_sha256": null,
+    "active_task": "07",
+    "active_task_status": "READY",
+    "last_completed_task": "06",
+    "plan_status": "ACTIVE",
+    "plan_version": 12,
+    "state_receipt_id": null,
+    "state_receipt_sha256": null,
+    "state_revision": 18
+  },
+  "new_state_revision": 18,
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "prior_state_receipt_id": "state-r17-task06-done-gatebawait-20260914T140047Z",
+  "prior_state_receipt_sha256": "6fd7b2615325394549a468e5b1066fc4d1c62517284971a1e094a9693fab0095",
+  "prior_state_revision": 17,
+  "receipt_kind": "state_transition",
+  "record_id": "state-r18-gateb-passed-07ready-20260914T140402Z",
+  "record_sha256": "447e143488094cab289194da545870ac9014197932ac0037fb4f6aef14016b7e",
+  "released_by": "Gate B PASSED",
+  "released_task": "07",
+  "released_task_status": "READY",
+  "server_timestamp": "2026-09-14T14:04:02.182244Z",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "sWDiv+aKuNOjVxvqI2x+QnxtRryJPlcuZ6j+tOwXv13iymEsuIZvWtc0GqWhUEHeNeoZd0YI8zVQEzszNIOnBw==",
+  "transition": "GATE_B_PASSED__TASK_07_READY"
+}

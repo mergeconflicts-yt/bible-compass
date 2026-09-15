@@ -1,0 +1,49 @@
+{
+  "authorization": {
+    "algorithm": "Ed25519",
+    "key_id": "bootstrap-ed25519-01"
+  },
+  "constraints": [
+    "Task 07 may edit only domain/content schemas, fixtures, evaluator, tests, registry docs"
+  ],
+  "controller_principal": {
+    "principal_id": "owner:theone",
+    "role": "CONTROLLER"
+  },
+  "decision": "PASSED",
+  "expires_at": "2026-12-13T14:04:02.182244Z",
+  "gate_id": "B",
+  "gate_status": "PASSED",
+  "gate_version": 1,
+  "human_actors": [
+    {
+      "principal_id": "owner:theone",
+      "role": "product_owner"
+    }
+  ],
+  "issued_at": "2026-09-14T14:04:02.182244Z",
+  "permitted_next_tasks": [
+    "07"
+  ],
+  "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
+  "plan_header_version": 12,
+  "plan_version": "1.2.0",
+  "receipt_kind": "owner_gate",
+  "record_id": "gate-B-v1-20260914T140402Z",
+  "record_sha256": "9595c4363f1f64d8f5bd27d107355a3d43028862a95a2de86e612c1a96072d43",
+  "review_packet_sha": "15e802834eab4d02238e0c0c0b345b152d9aae7350124f7463def7b69f4f2607",
+  "revocation": {
+    "status": "active"
+  },
+  "server_timestamp": "2026-09-14T14:04:02.182244Z",
+  "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
+  "service_id": "bootstrap-trust-v1",
+  "signature_algorithm": "Ed25519",
+  "signature_b64": "YnB+RtA25pbL5LsbfCSHZjR6WzlWpXoGXtP+/fcdTCVcLwsumiPorrtdpasR8ZCZPrhcvQs/ux/uATGhwQHsDw==",
+  "subject_artifact_keys": [
+    "docs/REVIEW_GATE_B_PACKET.md"
+  ],
+  "subject_artifact_shas": [
+    "15e802834eab4d02238e0c0c0b345b152d9aae7350124f7463def7b69f4f2607"
+  ]
+}

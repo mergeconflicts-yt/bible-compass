@@ -1,0 +1,84 @@
+{
+  "attempt_id": "task:draft-batch:20D-G:attempt-1",
+  "task_ids": ["20D", "20E", "20F", "20G"],
+  "result": "PASS",
+  "user_visible_outcome": "Generated 20D-G drafts via 19A-C: 20D 2 records (event return-to-jerusalem + place Jerusalem) ae4442b7..., 20E 3 relevances (nehemiah central attested, jerusalem central, hanani background not attested) 6cad1aea..., 20F 1 context (who/where/what explicit, when/before/stakes null/open_questions per none_approved corpus) c4229466..., 20G 2 en profiles (nehemiah, artaxerxes) 3396fffc... — each one manifest, one draft, deterministic, no cross-package repair.",
+  "files_changed": [
+    {
+      "path": "content/pilot/drafts/20D-events-places.draft.json",
+      "sha256": "ae4442b7c3b390a180ed5cd0f38e7615bcb78ebed7c9bb176576f31a7b447067",
+      "bundleDigest": "sha256:23c296c39b986053f36b1af9279df0aa6ca5bc245d6b528d32ed48475817348e",
+      "records": 2
+    },
+    {
+      "path": "content/pilot/drafts/20E-relevance.draft.json",
+      "sha256": "6cad1aeacc26fe0af0f9ef0cb4e1ea0d36cc27713bb85ff6326770df46fd8dd9",
+      "bundleDigest": "sha256:85f2c731b97c4d9355bc465eac00220134f698e7bd56d207bc3d28b80a793e21",
+      "records": 3
+    },
+    {
+      "path": "content/pilot/drafts/20F-passage-context.draft.json",
+      "sha256": "c422946695085c888a5ff6a7018465dab8e60d0c57528d013b47e3806cc6e0d4",
+      "bundleDigest": "sha256:a2d762c948696d98be7abd4d6faa29744975091bc46d7cfb27f5c20082bffcf9",
+      "records": 1
+    },
+    {
+      "path": "content/pilot/drafts/20G-en-localization.draft.json",
+      "sha256": "3396fffc251e831ce41da4af52ccf0734afcbdfc97e77b64abf64f14c16df752",
+      "bundleDigest": "sha256:50f06733b41c266f490a3469a213e69e4a8e17592a6c0f26ad4b14d204113c43",
+      "records": 2
+    },
+    {
+      "path": "content/pilot/jobs/20d-events-places.json",
+      "status": "A"
+    },
+    {
+      "path": "content/pilot/jobs/20e-relevance.json",
+      "status": "A"
+    },
+    {
+      "path": "content/pilot/jobs/20f-passage-context.json",
+      "status": "A"
+    },
+    {
+      "path": "content/pilot/jobs/20g-en-localization.json",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/pilot/drafts/20D-G via 19A-C",
+      "exit_code": 0,
+      "output": "20D 2 ae4442b7..., 20E 3 6cad1aea..., 20F 1 c4229466..., 20G 2 3396fffc..."
+    },
+    {
+      "command": "python3 -m json.tool content/pilot/drafts/20*.draft.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — drafts validated via 19C validator",
+  "manual_checks": {
+    "completed": [
+      "Verified each draft one manifest, one draft, one attempt, no cross-package repair",
+      "Verified 20D event with participants/places/accounts, no new entities",
+      "Verified 20E relevance isAttested true/false separate from attestation",
+      "Verified 20F when/before/stakes are null/open_questions per none_approved corpus (18A)",
+      "Verified 20G en only, not te/ta production"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None",
+  "known_limitations": ["Drafts are synthetic minimal for 20D-G — full 20-verse coverage deferred"],
+  "follow_up": ["20H Independent draft-set consistency review"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:draft-batch:20D-G:attempt-1",
+  "generated_at": "2026-09-15T06:45:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-20D-G-attempt-1-20260915T064500Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "draft"
+}

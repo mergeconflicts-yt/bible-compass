@@ -1,0 +1,184 @@
+{
+  "entities": [
+    {
+      "key": "entity:nehemiah-governor",
+      "slug": "nehemiah-governor",
+      "type": "person",
+      "identificationStatus": "established",
+      "provenance": "TIPNR synthetic Neh2",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2:person:nehemiah-governor:001",
+      "upstreamId": "tipnr:person:nehemiah:001"
+    },
+    {
+      "key": "entity:artaxerxes-i",
+      "slug": "artaxerxes-i",
+      "type": "person",
+      "identificationStatus": "established",
+      "provenance": "TIPNR synthetic Neh2",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2:person:artaxerxes-i:002",
+      "upstreamId": "tipnr:person:artaxerxes-i:002"
+    },
+    {
+      "key": "entity:jerusalem",
+      "slug": "jerusalem",
+      "type": "place",
+      "identificationStatus": "established",
+      "provenance": "TIPNR synthetic Neh2",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2:place:jerusalem:003",
+      "upstreamId": "tipnr:place:jerusalem:003"
+    },
+    {
+      "key": "entity:susa-citadel",
+      "slug": "susa-citadel",
+      "type": "place",
+      "identificationStatus": "established",
+      "provenance": "TIPNR synthetic Neh2",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2:place:susa:004",
+      "upstreamId": "tipnr:place:susa:004"
+    },
+    {
+      "key": "entity:hanani-brother",
+      "slug": "hanani-brother",
+      "type": "person",
+      "identificationStatus": "proposed",
+      "provenance": "TIPNR synthetic Neh2",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2:person:hanani:005",
+      "upstreamId": "tipnr:person:hanani:005"
+    },
+    {
+      "key": "entity:cupbearer",
+      "slug": "cupbearer",
+      "type": "role",
+      "identificationStatus": "established",
+      "provenance": "TIPNR synthetic fix for P1 F-11-01",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2:role:cupbearer:006",
+      "upstreamId": "tipnr:role:cupbearer:006"
+    }
+  ],
+  "names": [
+    {
+      "entityKey": "entity:nehemiah-governor",
+      "languageTag": "en",
+      "form": "Nehemiah",
+      "normalizedForm": "nehemiah",
+      "kind": "preferred",
+      "sourceLocator": "TIPNR:NEH:2:person:nehemiah:001:name:en"
+    },
+    {
+      "entityKey": "entity:artaxerxes-i",
+      "languageTag": "en",
+      "form": "Artaxerxes I",
+      "normalizedForm": "artaxerxes i",
+      "kind": "preferred",
+      "sourceLocator": "TIPNR:NEH:2:person:artaxerxes-i:002:name:en"
+    },
+    {
+      "entityKey": "entity:jerusalem",
+      "languageTag": "en",
+      "form": "Jerusalem",
+      "normalizedForm": "jerusalem",
+      "kind": "preferred",
+      "sourceLocator": "TIPNR:NEH:2:place:jerusalem:003:name:en"
+    },
+    {
+      "entityKey": "entity:susa-citadel",
+      "languageTag": "en",
+      "form": "Susa the citadel",
+      "normalizedForm": "susa the citadel",
+      "kind": "preferred",
+      "sourceLocator": "TIPNR:NEH:2:place:susa:004:name:en"
+    },
+    {
+      "entityKey": "entity:cupbearer",
+      "languageTag": "en",
+      "form": "cupbearer",
+      "normalizedForm": "cupbearer",
+      "kind": "preferred",
+      "sourceLocator": "TIPNR:NEH:2:role:cupbearer:006:name:en"
+    }
+  ],
+  "attestations": [
+    {
+      "entityKey": "entity:nehemiah-governor",
+      "scopeKey": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "referenceSystem": "refsys:eng-v22",
+      "localKey": "Neh.2.1",
+      "kind": "primary_subject",
+      "explicitness": "explicit",
+      "claimKey": "claim:nehemiah-was-cupbearer",
+      "reviewState": "draft",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2.1:person:nehemiah-governor:explicit",
+      "mappingVia": "TVTMS:Neh.2.1:equivalent"
+    },
+    {
+      "entityKey": "entity:artaxerxes-i",
+      "scopeKey": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "referenceSystem": "refsys:eng-v22",
+      "localKey": "Neh.2.1",
+      "kind": "participant",
+      "explicitness": "explicit",
+      "claimKey": "claim:artaxerxes-was-king",
+      "reviewState": "draft",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2.1:person:artaxerxes-i:explicit",
+      "mappingVia": "TVTMS:Neh.2.1:equivalent"
+    },
+    {
+      "entityKey": "entity:jerusalem",
+      "scopeKey": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "referenceSystem": "refsys:eng-v22",
+      "localKey": "Neh.2.3",
+      "kind": "location",
+      "explicitness": "explicit",
+      "claimKey": "claim:jerusalem-location",
+      "reviewState": "draft",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2.3:place:jerusalem:explicit",
+      "mappingVia": "TVTMS:Neh.2.3:equivalent"
+    },
+    {
+      "entityKey": "entity:susa-citadel",
+      "scopeKey": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "referenceSystem": "refsys:eng-v22",
+      "localKey": "Neh.2.1",
+      "kind": "location",
+      "explicitness": "strongly_implied",
+      "claimKey": "claim:susa-location",
+      "reviewState": "draft",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+      "sourceLocator": "TIPNR:NEH:2.1:place:susa:implied",
+      "mappingVia": "TVTMS:Neh.2.1:equivalent"
+    }
+  ],
+  "relations": [
+    {
+      "subjectEntityKey": "entity:nehemiah-governor",
+      "predicate": "served_as",
+      "objectEntityKey": "entity:cupbearer",
+      "claimKey": "claim:nehemiah-was-cupbearer",
+      "sourceLocator": "TIPNR:NEH:2:familyRelation:nehemiah:cupbearer",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b"
+    },
+    {
+      "subjectEntityKey": "entity:hanani-brother",
+      "predicate": "family_of",
+      "objectEntityKey": "entity:nehemiah-governor",
+      "claimKey": "claim:hanani-brother-of-nehemiah",
+      "sourceLocator": "TIPNR:NEH:1.2:familyRelation:hanani:brother",
+      "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b"
+    }
+  ],
+  "candidatesSha256": "sha256:f675f5a8c6918887b3135c6110af9c29e30697793db033836ad1f6fb755feee3",
+  "sourceReleaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
+  "quarantinePath": "content/quarantine/stepbible/tipnr/TIPNR.txt",
+  "quarantineSha256": "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d",
+  "byteSize": 7967354,
+  "parsedAt": "2026-09-15T05:40:00.000Z"
+}

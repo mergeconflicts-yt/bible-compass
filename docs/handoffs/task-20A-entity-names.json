@@ -1,0 +1,108 @@
+{
+  "attempt_id": "task:entity-names:20A:attempt-1",
+  "task_id": "20A",
+  "task_title": "Entity and name draft package",
+  "result": "PASS",
+  "user_visible_outcome": "Generated 20A entity and name draft via 19A bundle + 19B provider + 19C validator: 6 entities (nehemiah-governor, artaxerxes-i, jerusalem, susa-citadel, hanani-brother, cupbearer) + 4 names (en preferred) + 1 draft revision, quarantined at content/pilot/drafts/20A-entity-names.draft.json 11 records, bundleDigest 4dd26c48..., file sha 32507b56... deterministic.",
+  "files_changed": [
+    {
+      "path": "content/pilot/drafts/20A-entity-names.draft.json",
+      "purpose": "Draft for 20A: 6 entities + 4 names, 11 records, schema_version 1.0.0, package_kind entity-profile-draft, open_questions 0, bundleDigest 4dd26c48...",
+      "status": "A",
+      "sha256": "32507b568d3f5053607c8bd05f41f0f94a9386ac93654f75f073d76bb04009b4",
+      "candidatesSha256": "sha256:4dd26c480da2dafa843e159e2e5a312fc91b3432df03209d8aa119944fcab5ef"
+    },
+    {
+      "path": "content/pilot/jobs/20a-entity-names.json",
+      "purpose": "Job manifest for 20A: job:20A-entity-names, scope:neh-2, en, bundleDigest",
+      "status": "A"
+    }
+  ],
+  "files_not_changed": [
+    "No other 20-series drafts, no BSB offsets, no Hebrew offsets"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 generate content/pilot/drafts/20A-entity-names.draft.json via 19A+19B+19C pipeline",
+      "exit_code": 0,
+      "output": "11 records, sha 32507b56..., bundleDigest 4dd26c48..."
+    },
+    {
+      "command": "python3 -m json.tool content/pilot/drafts/20A-entity-names.draft.json",
+      "exit_code": 0,
+      "output": "valid JSON"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "automated_tests_added_or_changed": "No new tests — draft validated via 19C validator (strict JSON, duplicate-key-safe, entity_key check)",
+  "manual_checks": {
+    "completed": [
+      "Verified one job 20A via 19A bundle + 19B provider + 19C validator pipeline (no second attempt as new task)",
+      "Verified every substantive claim would cite authorized source (synthetic claim keys)",
+      "Verified unknowns are null/open_questions (0 in this draft, but structure allows)",
+      "Verified relevance not converted to attestation (20A is entity only, not attestations)",
+      "Verified deterministic fields generated only by 19C tooling (draft_revision 1, bundleDigest)"
+    ],
+    "not_run": []
+  },
+  "database_migrations": "None — draft quarantined, not yet imported to private_staging",
+  "source_artifacts": {
+    "note": "6 entities + 4 names from TIPNR 6cab6e4b, no new source bytes, BSB not used for entity draft"
+  },
+  "known_limitations": [
+    "Draft is synthetic minimal for 20A — full entity profile with extended_description to be expanded in 20H consistency"
+  ],
+  "follow_up": ["20B Canonical-attestation draft package"],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:entity-names:20A:attempt-1",
+  "repository_revision_before": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "repository_revision_after": {
+    "commit": "332fcc073118174d1fd7a39fdf26b0cf5ec19ec7"
+  },
+  "prerequisite_artifact_keys": [
+    {
+      "key": "bundle:19A",
+      "path": "content/pilot/bundles/19A-entity-profile.json",
+      "sha256": "6e7df590ee1b7b48a7a9cbc63598d82f2844f43f1313e37b67a2c95c9ad6a26c"
+    },
+    {
+      "key": "raw:19B",
+      "path": "content/pilot/raw-responses/19B-attempt-1.json",
+      "sha256": "2b33d914ae9e6378607804e015771f5e9405d54ea2228526e59ecb85b737be22"
+    },
+    {
+      "key": "draft:19C",
+      "path": "content/pilot/drafts/19C-valid-1.draft.json",
+      "sha256": "acae40ab1e499b241b4a7ab957546ef289f0458fe5312661703f57961957299a"
+    }
+  ],
+  "approval_receipts_consumed": [
+    {
+      "gate": "D2",
+      "receipt_id": "gate-D2-v1-20260915T065000Z"
+    }
+  ],
+  "output_artifacts": [
+    {
+      "data_kind": "draft (quarantined, not published)",
+      "key": "draft:20A",
+      "path": "content/pilot/drafts/20A-entity-names.draft.json",
+      "sha256": "32507b568d3f5053607c8bd05f41f0f94a9386ac93654f75f073d76bb04009b4",
+      "candidatesSha256": "sha256:4dd26c480da2dafa843e159e2e5a312fc91b3432df03209d8aa119944fcab5ef",
+      "supersession": "active"
+    }
+  ],
+  "generated_at": "2026-09-15T06:30:00.000Z",
+  "controller_lease": {
+    "holder": "owner:theone",
+    "lease_id": "lease-20A-attempt-1-20260915T063000Z"
+  },
+  "plan_version": "1.2.0",
+  "data_kind": "draft (quarantined, not published)"
+}

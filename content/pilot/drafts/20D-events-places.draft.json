@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "package_kind": "event-place-draft",
+  "records": [
+    {
+      "record_key": "event-return",
+      "record_kind": "event",
+      "entity_key": "entity:return-to-jerusalem",
+      "event_kind": "return",
+      "participants": [
+        "entity:nehemiah-governor",
+        "entity:artaxerxes-i"
+      ],
+      "places": [
+        "entity:jerusalem"
+      ],
+      "scope": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "relation": "reports"
+    },
+    {
+      "record_key": "place-jerusalem",
+      "record_kind": "place",
+      "entity_key": "entity:jerusalem",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.235,
+          31.778
+        ],
+        "crs": "EPSG:4326",
+        "precision": "approximate"
+      }
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [],
+  "bundleDigest": "sha256:23c296c39b986053f36b1af9279df0aa6ca5bc245d6b528d32ed48475817348e",
+  "jobId": "job:event-place-draft",
+  "draft_revision": 1
+}
