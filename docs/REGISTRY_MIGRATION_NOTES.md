@@ -74,7 +74,7 @@ New migrations (additive only):
   no FK to `auth.users` (RLS is the boundary per `SECURITY.md`);
   account-deletion cleanup is follow-up work.
 - `20260915000007_bookmark_identity.sql` (M07b) — `UNIQUE
-  (user_id, refsys, local_key)` on `bookmarks` so concurrent two-device
+(user_id, refsys, local_key)` on `bookmarks` so concurrent two-device
   pushes converge instead of duplicating. Additive only; verified by
   `supabase/tests/06_bookmark_identity_test.sql` where runtimes exist.
 - Correction to `20260915000004_review_package_rls.sql`: the draft

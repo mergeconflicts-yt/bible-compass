@@ -5,6 +5,12 @@ Reads bsb/api/<dataset> (never committed, see .gitignore) and writes:
   apps/mobile/assets/scripture/<asset dir>/<OSIS>.json  one compact file per book
   apps/mobile/src/content/books.ts                      book registry (names, chapters)
 
+Atomic output (finding-1 follow-up): every translation builds into a
+staging directory first; the staged trees are validated (canon parity,
+no blank verses/headings) and only then swapped into the committed
+asset directories with atomic renames. A failed build exits with the
+committed output exactly as it was — never partially replaced.
+
 Only verse/heading text is kept; footnote markers and line breaks collapse
 to a single space. English (BSB) is the registry source; every other
 translation must carry the same 66 books and chapter counts. Run from the
@@ -16,6 +22,8 @@ generator emits overlong lines that prettier expands).
 import json
 import os
 import re
+import shutil
+import tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATASETS = os.path.join(ROOT, "bsb", "api")
@@ -68,9 +76,13 @@ def plain_text(items):
     return re.sub(r"\s+", " ", "".join(parts)).strip()
 
 
-def build_translation(dataset_id, asset_dir):
+def build_translation(dataset_id, asset_dir, out_root):
+    """Build one translation's per-book files under out_root/asset_dir.
+    out_root is a staging directory during the build; nothing under the
+    committed asset tree is touched until validation passes and main()
+    swaps the staged tree into place (finding-1 follow-up)."""
     src = os.path.join(DATASETS, dataset_id)
-    assets = os.path.join(SCRIPTURE, asset_dir)
+    assets = os.path.join(out_root, asset_dir)
     with open(os.path.join(src, "books.json"), encoding="utf-8") as fh:
         catalog = json.load(fh)
     os.makedirs(assets, exist_ok=True)
@@ -108,12 +120,12 @@ def build_translation(dataset_id, asset_dir):
     return registry, total_bytes
 
 
-def text_gaps(dataset_id):
-    """Bundled blocks with no surviving text (verses and headings). Any hit
+def text_gaps(dataset_id, out_root):
+    """Staged blocks with no surviving text (verses and headings). Any hit
     means the extractor dropped structured content again — fail the build
     instead of shipping silent gaps (finding 1). Returns labels."""
     asset_dir = dict(TRANSLATIONS)[dataset_id]
-    assets = os.path.join(SCRIPTURE, asset_dir)
+    assets = os.path.join(out_root, asset_dir)
     gaps = []
     for name in sorted(os.listdir(assets)):
         if not name.endswith(".json"):
@@ -129,28 +141,77 @@ def text_gaps(dataset_id):
     return gaps
 
 
+def write_text_atomic(path, content):
+    """Write a generated file atomically: readers never see a torn file."""
+    tmp = f"{path}.tmp-{os.getpid()}"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write(content)
+    os.replace(tmp, path)
+
+
+def clear_stale_workdirs():
+    """Remove staging leftovers from a killed run. Never touches .prev
+    backups here — a missing final tree is recovered from its backup in
+    swap_in before anything else runs."""
+    for name in os.listdir(SCRIPTURE):
+        if name.startswith(".staging-"):
+            shutil.rmtree(os.path.join(SCRIPTURE, name), ignore_errors=True)
+
+
+def recover_interrupted_swap(final_dir):
+    """Restore the last good tree when a previous run died between the two
+    swap renames (live tree parked at .prev, final missing). Runs before
+    anything else touches the committed tree."""
+    prev_dir = final_dir + ".prev"
+    if not os.path.isdir(final_dir) and os.path.isdir(prev_dir):
+        print(f"recovered {final_dir} from an interrupted swap")
+        os.replace(prev_dir, final_dir)
+
+
+def swap_in(staging_dir, final_dir):
+    """Atomically replace the committed final_dir with staging_dir (same
+    filesystem, so both renames are atomic). Committed files are therefore
+    ever only the old tree or the fully validated new tree — never a mix
+    of files from both, and never unvalidated output."""
+    prev_dir = final_dir + ".prev"
+    shutil.rmtree(prev_dir, ignore_errors=True)
+    if os.path.isdir(final_dir):
+        os.replace(final_dir, prev_dir)
+    os.replace(staging_dir, final_dir)
+    shutil.rmtree(prev_dir, ignore_errors=True)
+
+
 def main():
     reference = None
     books_registry = []
     registries = {}
     failures = []
-    for dataset_id, asset_dir in TRANSLATIONS:
-        registry, total_bytes = build_translation(dataset_id, asset_dir)
-        print(f"{dataset_id}: books: {len(registry)}, asset bytes: {total_bytes}")
-        registries[dataset_id] = registry
-        if reference is None:
-            reference = [(item["osis"], item["chapters"]) for item in registry]
-            books_registry = registry
-        else:
-            assert [(item["osis"], item["chapters"]) for item in registry] == reference, (
-                f"{dataset_id} canon differs from BSB"
-            )
-        failures.extend(text_gaps(dataset_id))
-    if failures:
-        for item in failures[:20]:
-            print(f"TEXT GAP: {item}")
-        raise SystemExit(f"refusing output with {len(failures)} text gaps (finding 1)")
-    print("text check: no empty verses or headings in any bundled translation")
+    clear_stale_workdirs()
+    for _, asset_dir in TRANSLATIONS:
+        recover_interrupted_swap(os.path.join(SCRIPTURE, asset_dir))
+    staging = tempfile.mkdtemp(prefix=".staging-", dir=SCRIPTURE)
+    try:
+        for dataset_id, asset_dir in TRANSLATIONS:
+            registry, total_bytes = build_translation(dataset_id, asset_dir, staging)
+            print(f"{dataset_id}: books: {len(registry)}, asset bytes: {total_bytes}")
+            registries[dataset_id] = registry
+            if reference is None:
+                reference = [(item["osis"], item["chapters"]) for item in registry]
+                books_registry = registry
+            else:
+                assert [(item["osis"], item["chapters"]) for item in registry] == reference, (
+                    f"{dataset_id} canon differs from BSB"
+                )
+            failures.extend(text_gaps(dataset_id, staging))
+        if failures:
+            for item in failures[:20]:
+                print(f"TEXT GAP: {item}")
+            raise SystemExit(f"refusing output with {len(failures)} text gaps (finding 1)")
+        print("text check: no empty verses or headings in any staged translation")
+        for _, asset_dir in TRANSLATIONS:
+            swap_in(os.path.join(staging, asset_dir), os.path.join(SCRIPTURE, asset_dir))
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
     registry = books_registry
     lines = [
         "/** Generated by tools/build-bsb-assets.py — do not hand-edit. */",
@@ -185,8 +246,7 @@ def main():
         "",
     ]
     os.makedirs(os.path.dirname(BOOKS_TS), exist_ok=True)
-    with open(BOOKS_TS, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines))
+    write_text_atomic(BOOKS_TS, "\n".join(lines))
     print(f"books: {len(registry)}, asset bytes: {total_bytes}")
     for dataset_id, const_name, filename in (
         ("tam_irv", "BOOKS_TA", "books_ta.ts"),
@@ -206,8 +266,7 @@ def main():
                 f"testament: '{item['testament']}' }},"
             )
         localized += ["];", ""]
-        with open(os.path.join(os.path.dirname(BOOKS_TS), filename), "w", encoding="utf-8") as fh:
-            fh.write("\n".join(localized))
+        write_text_atomic(os.path.join(os.path.dirname(BOOKS_TS), filename), "\n".join(localized))
         print(f"{filename}: {len(registries[dataset_id])} books")
 
 
