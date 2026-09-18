@@ -1,0 +1,70 @@
+{
+  "attempt_id": "task:critical-finding-01:attempt-1",
+  "task_id": "finding-01",
+  "task_title": "Fix bundled verse text loss (finding 1)",
+  "result": "PASS",
+  "user_visible_outcome": "Poetry and structured passages now read in full: 21,000+ verses across English, Tamil, and Telugu that previously rendered blank now show their text (e.g. Psalms, 1 Chronicles 16, Song of Songs). No other text changed.",
+  "verification": {
+    "before": {
+      "bsb_empty": 7503,
+      "tam_irv_empty": 6218,
+      "tel_irv_empty": 7406
+    },
+    "after": { "bsb_empty": 0, "tam_irv_empty": 0, "tel_irv_empty": 0 },
+    "root_cause": "tools/build-bsb-assets.py plain_text replaced every non-string content item with a space; source verses carry poetry lines as {text, poem} objects (24,509 in BSB alone)",
+    "source_shapes": {
+      "str": 31174,
+      "poem_text": 24509,
+      "noteId": 4846,
+      "lineBreak": 3637,
+      "descriptive_text": 1
+    }
+  },
+  "files_changed": [
+    "tools/build-bsb-assets.py (plain_text extracts dict text with span-boundary spacing, drops footnote markers; empty_verses gate fails the build on any blank verse; docstring notes prettier normalization)",
+    "apps/mobile/assets/scripture/*/*.json (125 book files rebuilt with recovered text; registries byte-identical)",
+    "apps/mobile/__tests__/scripture-assets.test.ts (new: 66-book count, zero-empty-verse full scan over 93k verses in 0.6s, poetry spot checks)"
+  ],
+  "files_not_changed": [
+    "apps/mobile/src/content/books.ts, books_ta.ts, books_te.ts (rebuild output byte-identical after prettier normalization)",
+    "No app behavior or copy change beyond restored verse text",
+    "Findings 2-6 untouched (separate tasks)"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 tools/build-bsb-assets.py",
+      "exit_code": 0,
+      "output": "66 books x3; verse check: no empty verses in any bundled translation"
+    },
+    {
+      "command": "negative gate proof (temporarily blanked Neh 2:1, restored after)",
+      "exit_code": 0,
+      "output": "empty_verses reported exactly ['BSB Neh 2:1']; post-restore scan clean; Neh.json verified intact"
+    },
+    {
+      "command": "jest __tests__/scripture-assets.test.ts",
+      "exit_code": 0,
+      "output": "3 passed (full 93k-verse scan in ~0.2s of 0.6s suite)"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 0,
+      "output": "27 passed / 27 suites; 234 passed / 234 tests — zero regressions from the asset rebuild"
+    },
+    {
+      "command": "tsc --noEmit + expo lint (new test) + prettier --check (mobile)",
+      "exit_code": 0,
+      "output": "0 errors; 0 warnings on the new test; clean"
+    }
+  ],
+  "bugs_found_by_tests": [
+    "First rebuild joined adjacent poem spans without a separator (name;make known) — fixed with span-boundary spacing before finalizing"
+  ],
+  "needs_from_owner": [
+    "Pick the next finding to fix (2 rights gates, 3 sync identity, 4 CI DB gate, 5 runner evidence paths, 6 governance docs)"
+  ],
+  "scope_guard": "Finding 1 only. Verse text restored from the committed local dataset; no translation, rights, or behavior change.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:critical-finding-01:attempt-1",
+  "data_kind": "tool fix + rebuilt generated assets + tests; source dataset (git-ignored) only read, never modified"
+}
