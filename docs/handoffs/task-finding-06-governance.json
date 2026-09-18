@@ -1,0 +1,68 @@
+{
+  "attempt_id": "task:governance-reconcile:06:attempt-1",
+  "task_id": "finding-06",
+  "task_title": "Reconcile governance inconsistencies (finding 6)",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. The decision register now reflects the sign-in and notification decisions the owner already made, and the plan-state confusion is documented with a reading guide instead of rewritten history.",
+  "claim_disposition": [
+    {
+      "claim": "Plan says ACTIVE with no active task and only partial R1 completion",
+      "verdict": "accurate but not inconsistent",
+      "resolution": "ACTIVE + active_task null is the protocol's idle-between-tasks state, and R1 PARTIAL is recorded with its pending items. Documented as such below; no status values changed."
+    },
+    {
+      "claim": "Many later mobile tasks claim PASS",
+      "verdict": "different ledger, not a contradiction",
+      "resolution": "PASS claims live in docs/MOBILE_INSTALL_PLAN.md, which declares itself separate from plan 1.2.0 and defines DONE as code-plus-headless-tests with device gates pending. The AI-agent ledger rows 07-23 remain DONE-as-file-outputs-only with void gates per the repair notice. Neither ledger grants publication authority (all publication gates VOID). No rows altered."
+    },
+    {
+      "claim": "Plan still contains corrupted/non-normative sections",
+      "verdict": "accurate, deliberately untouched",
+      "resolution": "The repair notice already flags the garbled regions as NOT normative until reviewed, and rewriting them without review would repeat the violation it records. Left exactly as is; authoritative state remains the status block, repaired ledgers, receipts, and void registry."
+    },
+    {
+      "claim": "Sign-in providers implemented while PD-018 remains open",
+      "verdict": "accurate register debt, now fixed by transcription",
+      "resolution": "The owner decided Apple + Google OAuth on 2026-09-15 (docs/DECISION_M07_SYNC.md D1) and M07a implemented under that authority, but PRODUCT_DECISIONS.md was never updated. PD-018 transcribed OPEN to DECIDED with evidence pointer (not backdated: implemented under packet authority 2026-09-15, register updated 2026-09-18). PD-020 likewise transcribed PARTIAL to DECIDED (copy + 08:00 + local-only decided 2026-09-15, expo-notifications approved 2026-09-18, implemented as M07c). PD-019 and all other OPENs untouched — no decision invented."
+    }
+  ],
+  "status_reading_guide": "Plan 1.2.0: ACTIVE means the controller may dispatch exactly one READY task; null active_task with no READY row means idle awaiting an owner-gated input (R1 owner items, runtime, or amendment) — not stalled work. Mobile plan: DONE means code plus headless tests with the exit gate's device/runtime leg recorded as pending in each handoff. Publication authority comes only from gate receipts; every publication gate is VOID, so nothing in either plan is approved, published, or installed.",
+  "files_changed": [
+    "docs/PRODUCT_DECISIONS.md (PD-018 OPEN to DECIDED and PD-020 PARTIAL to DECIDED, each with decision date, evidence pointer, and transcription date; no other row touched)"
+  ],
+  "files_not_changed": [
+    "docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md ledger, status block, gates, and history (controller bookkeeping — not worker-editable per the plan protocol)",
+    "Garbled prose regions (NOT normative per the repair notice; rewriting them unreviewed would repeat the recorded violation)",
+    "Gate receipts, eligibility, package files (void stays void, denied stays denied)",
+    "PD-019 and every other OPEN decision (no evidence, no change)",
+    "Findings 2-5 (done)"
+  ],
+  "commands_executed": [
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": "clean"
+    },
+    {
+      "command": "decision-ID consistency sweep (PD-018/PD-020 references across docs)",
+      "exit_code": 0,
+      "output": "PRODUCT_DECISIONS rows DECIDED; DECISION_M07_SYNC sign-off rows unchanged and consistent; no contradictory OPEN claim remains for the two items"
+    },
+    {
+      "command": "prettier --check (touched docs)",
+      "exit_code": 0,
+      "output": "clean"
+    }
+  ],
+  "still_open_owner_actions": [
+    "R1 owner items: rule any remaining triage follow-ups (done 2026-09-18), run the Supabase runtime leg, commit strategy for the uncommitted tree",
+    "M07/M08 exit-gate runtime: Supabase project, OAuth credentials, iOS + Android devices, expired-session and cross-user test accounts",
+    "CONTENT_RIGHTS matrix signature (display/offline/search/image/sharing/web per translation) — the only path to relax the finding-2 enforcement flags",
+    "PD-019 analytics provider, region, and retention (still OPEN)",
+    "Plan prose repair for the garbled controller sections (reviewed diff only, never silent)"
+  ],
+  "scope_guard": "Reconciliation only: transcriptions cite existing written owner decisions; nothing decided, approved, published, or reworded on the owner's behalf.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:governance-reconcile:06:attempt-1",
+  "data_kind": "docs only (two register cells + this handoff); no code, content, or credentials touched"
+}

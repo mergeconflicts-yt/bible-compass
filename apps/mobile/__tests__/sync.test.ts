@@ -19,10 +19,16 @@ import {
   toServerLocation,
   type BookmarkRemoteSource,
   type RemoteBookmark,
+  type RemoteTombstone,
   type SyncCursorStore,
   type SyncResult,
 } from '../src/content/syncEngine';
-import type { Bookmark, BookmarkRepository, OutboxOp } from '../src/content/bookmarkStore';
+import type {
+  Bookmark,
+  BookmarkRepository,
+  OutboxOp,
+  RemoteTombstoneLocal,
+} from '../src/content/bookmarkStore';
 import type { PassageDbHandle } from '../src/content/passageStore';
 import { SqliteBookmarks } from '../src/infrastructure/sqlite/bookmarks';
 import { SqliteSyncState } from '../src/infrastructure/sqlite/syncState';
@@ -110,6 +116,19 @@ class FakeBookmarks implements BookmarkRepository {
     }
     return { inserted };
   }
+
+  async applyRemoteTombstones(rows: RemoteTombstoneLocal[]): Promise<{ removed: number }> {
+    let removed = 0;
+    for (const row of rows) {
+      const key = this.locationKey(row.translationId, row.bookOsis, row.chapter);
+      const existing = this.marks.get(key);
+      if (existing && existing.createdAt <= row.deletedAt) {
+        this.marks.delete(key);
+        removed += 1;
+      }
+    }
+    return { removed };
+  }
 }
 
 class FakeCursors implements SyncCursorStore {
@@ -125,34 +144,65 @@ class FakeCursors implements SyncCursorStore {
 }
 
 class FakeRemote implements BookmarkRemoteSource {
-  /** Server rows keyed by client id. */
+  /** Server rows keyed by LOCATION (finding 3: identity is the location). */
   rows = new Map<string, RemoteBookmark>();
+  tombs = new Map<string, RemoteTombstone>();
   calls: string[] = [];
+  pushCalls = 0;
   failPushAt = -1;
   failPull = false;
   authFailure = false;
 
-  async pushAdd(row: RemoteBookmark): Promise<void> {
-    this.calls.push(`add:${row.id}`);
-    if (this.authFailure) throw new SyncError('auth', 'session expired');
-    if (this.calls.length === this.failPushAt) throw new SyncError('network', 'offline');
-    this.rows.set(row.id, row);
+  private keyOf(refsys: string, localKey: string): string {
+    return `${refsys}:${localKey}`;
   }
 
-  async pushRemove(refsys: string, localKey: string): Promise<void> {
-    this.calls.push(`remove:${refsys}:${localKey}`);
+  private checkPushFailure(): void {
     if (this.authFailure) throw new SyncError('auth', 'session expired');
-    if (this.calls.length === this.failPushAt) throw new SyncError('network', 'offline');
-    for (const [id, row] of this.rows) {
-      if (row.refsys === refsys && row.localKey === localKey) this.rows.delete(id);
+    this.pushCalls += 1;
+    if (this.pushCalls === this.failPushAt) throw new SyncError('network', 'offline');
+  }
+
+  async pushAdd(row: RemoteBookmark): Promise<void> {
+    this.calls.push(`add:${row.refsys}:${row.localKey}`);
+    this.checkPushFailure();
+    // Location upsert, first row wins (mirrors ignoreDuplicates): no id
+    // collision is possible because ids are never addressed.
+    if (!this.rows.has(this.keyOf(row.refsys, row.localKey))) {
+      this.rows.set(this.keyOf(row.refsys, row.localKey), row);
     }
   }
 
-  async pull(): Promise<RemoteBookmark[]> {
+  async pushRemove(
+    refsys: string,
+    localKey: string,
+    deletedAt: string,
+    opId: string,
+  ): Promise<void> {
+    this.calls.push(`remove:${refsys}:${localKey}`);
+    this.checkPushFailure();
+    void opId;
+    this.tombs.set(this.keyOf(refsys, localKey), { refsys, localKey, deletedAt });
+    this.rows.delete(this.keyOf(refsys, localKey));
+  }
+
+  async findTombstone(refsys: string, localKey: string): Promise<RemoteTombstone | null> {
+    this.calls.push(`find-tomb:${refsys}:${localKey}`);
+    if (this.authFailure) throw new SyncError('auth', 'session expired');
+    return this.tombs.get(this.keyOf(refsys, localKey)) ?? null;
+  }
+
+  async clearTombstone(refsys: string, localKey: string): Promise<void> {
+    this.calls.push(`clear-tomb:${refsys}:${localKey}`);
+    if (this.authFailure) throw new SyncError('auth', 'session expired');
+    this.tombs.delete(this.keyOf(refsys, localKey));
+  }
+
+  async pull(): Promise<{ bookmarks: RemoteBookmark[]; tombstones: RemoteTombstone[] }> {
     this.calls.push('pull');
     if (this.authFailure) throw new SyncError('auth', 'session expired');
     if (this.failPull) throw new SyncError('network', 'offline');
-    return [...this.rows.values()];
+    return { bookmarks: [...this.rows.values()], tombstones: [...this.tombs.values()] };
   }
 }
 
@@ -226,8 +276,14 @@ describe('sync engine', () => {
     const result: SyncResult = await syncNow();
 
     expect(result.pushed).toBe(2);
-    expect(remote.calls).toEqual(['add:client-1', 'remove:refsys:eng-v22:Neh.2', 'pull']);
+    expect(remote.calls).toEqual([
+      'find-tomb:refsys:eng-v22:Neh.2',
+      'add:refsys:eng-v22:Neh.2',
+      'remove:refsys:eng-v22:Neh.2',
+      'pull',
+    ]);
     expect(remote.rows.size).toBe(0);
+    expect(remote.tombs.has('refsys:eng-v22:Neh.2')).toBe(true);
     expect(bookmarks.listPendingOps()).toEqual([]);
     expect(cursors.getCursor(BOOKMARKS_CURSOR_KEY)).toBe(NOW);
   });
@@ -247,8 +303,8 @@ describe('sync engine', () => {
 
     expect(result.pushed).toBe(1);
     expect(result.skippedNonBsb).toBe(1);
-    expect(remote.rows.has('client-bsb')).toBe(true);
-    expect(remote.rows.has('client-te')).toBe(false);
+    expect(remote.rows.has('refsys:eng-v22:Ezra.4')).toBe(true);
+    expect(remote.rows.has('refsys:eng-v22:Neh.2')).toBe(false);
     expect(bookmarks.listPendingOps().map((op) => op.entityId)).toEqual(['client-te']);
   });
 
@@ -277,9 +333,9 @@ describe('sync engine', () => {
 
     await expect(syncNow()).rejects.toMatchObject({ code: 'network' });
     expect(bookmarks.listPendingOps().map((op) => op.entityId)).toEqual(['client-2']);
-    expect(remote.rows.has('client-1')).toBe(true);
+    expect(remote.rows.has('refsys:eng-v22:Neh.2')).toBe(true);
 
-    // Retry replays only the remainder (idempotent by client id).
+    // Retry replays only the remainder (idempotent by location).
     remote.failPushAt = -1;
     const result = await syncNow();
     expect(result.pushed).toBe(1);
@@ -303,7 +359,7 @@ describe('sync engine', () => {
     const remote = new FakeRemote();
     const cursors = new FakeCursors();
     initEngine(bookmarks, remote, cursors);
-    remote.rows.set('server-1', {
+    remote.rows.set('refsys:eng-v22:Neh.2', {
       id: 'server-1',
       refsys: 'refsys:eng-v22',
       localKey: 'Neh.2',
@@ -331,19 +387,19 @@ describe('sync engine', () => {
       chapter: 2,
       createdAt: '2026-09-15T08:00:00.000Z',
     });
-    remote.rows.set('server-older', {
+    remote.rows.set('refsys:eng-v22:Neh.2', {
       id: 'server-older',
       refsys: 'refsys:eng-v22',
       localKey: 'Neh.2',
       createdAt: '2026-09-14T08:00:00.000Z',
     });
-    remote.rows.set('server-other-refsys', {
+    remote.rows.set('refsys:tel-v1:Neh.2', {
       id: 'server-other',
       refsys: 'refsys:tel-v1',
       localKey: 'Neh.2',
       createdAt: '2026-09-14T08:00:00.000Z',
     });
-    remote.rows.set('server-bad-key', {
+    remote.rows.set('refsys:eng-v22:???', {
       id: 'server-bad',
       refsys: 'refsys:eng-v22',
       localKey: '???',
@@ -367,6 +423,150 @@ describe('sync engine', () => {
 
     await expect(syncNow()).rejects.toMatchObject({ code: 'network' });
     expect(cursors.getCursor(BOOKMARKS_CURSOR_KEY)).toBeNull();
+  });
+
+  it('converges cross-device adds on location identity without errors', async () => {
+    // Finding 3: another device saved Neh.2 first under its own client id.
+    // This device's add must upsert the same location, not collide.
+    const bookmarks = new FakeBookmarks();
+    const remote = new FakeRemote();
+    initEngine(bookmarks, remote, new FakeCursors());
+    remote.rows.set('refsys:eng-v22:Neh.2', {
+      id: 'other-device-id',
+      refsys: 'refsys:eng-v22',
+      localKey: 'Neh.2',
+      createdAt: '2026-09-14T08:00:00.000Z',
+    });
+    bookmarks.enqueue('bookmark.add', 'client-1', bsbPayload('Neh', 2));
+
+    const result = await syncNow();
+
+    expect(result.pushed).toBe(1);
+    expect(result.suppressed).toBe(0);
+    expect(remote.rows.size).toBe(1);
+    expect(bookmarks.listPendingOps()).toEqual([]);
+
+    // Replay converges: nothing left to push, nothing duplicated.
+    const replay = await syncNow();
+    expect(replay.pushed).toBe(0);
+    expect(remote.rows.size).toBe(1);
+    expect(bookmarks.isBookmarked('BSB', 'Neh', 2)).toBe(true);
+  });
+
+  it('suppresses a stale add when a newer tombstone already won', async () => {
+    const bookmarks = new FakeBookmarks();
+    const remote = new FakeRemote();
+    initEngine(bookmarks, remote, new FakeCursors());
+    remote.tombs.set('refsys:eng-v22:Neh.2', {
+      refsys: 'refsys:eng-v22',
+      localKey: 'Neh.2',
+      deletedAt: '2026-09-15T08:30:00.000Z',
+    });
+    bookmarks.enqueue('bookmark.add', 'client-1', bsbPayload('Neh', 2));
+
+    const result = await syncNow();
+
+    expect(result.pushed).toBe(0);
+    expect(result.suppressed).toBe(1);
+    expect(remote.rows.size).toBe(0);
+    expect(bookmarks.listPendingOps()).toEqual([]);
+  });
+
+  it('lets a newer add clear the older tombstone, ties going to the delete', async () => {
+    const newer = new FakeBookmarks();
+    const newerRemote = new FakeRemote();
+    initEngine(newer, newerRemote, new FakeCursors());
+    newerRemote.tombs.set('refsys:eng-v22:Neh.2', {
+      refsys: 'refsys:eng-v22',
+      localKey: 'Neh.2',
+      deletedAt: '2026-09-15T08:00:00.000Z',
+    });
+    newer.enqueue('bookmark.add', 'client-1', bsbPayload('Neh', 2), '2026-09-15T09:00:00.000Z');
+
+    const won = await syncNow();
+    expect(won.pushed).toBe(1);
+    expect(newerRemote.rows.size).toBe(1);
+    expect(newerRemote.tombs.size).toBe(0);
+
+    resetSyncEngine();
+    const tied = new FakeBookmarks();
+    const tiedRemote = new FakeRemote();
+    initEngine(tied, tiedRemote, new FakeCursors());
+    tiedRemote.tombs.set('refsys:eng-v22:Neh.2', {
+      refsys: 'refsys:eng-v22',
+      localKey: 'Neh.2',
+      deletedAt: '2026-09-15T08:00:00.000Z',
+    });
+    tied.enqueue('bookmark.add', 'client-1', bsbPayload('Neh', 2), '2026-09-15T08:00:00.000Z');
+
+    const lost = await syncNow();
+    expect(lost.pushed).toBe(0);
+    expect(lost.suppressed).toBe(1);
+    expect(tiedRemote.rows.size).toBe(0);
+  });
+
+  it('records a tombstone when removing, and keeps unparseable ops pending', async () => {
+    const bookmarks = new FakeBookmarks();
+    const remote = new FakeRemote();
+    initEngine(bookmarks, remote, new FakeCursors());
+    remote.rows.set('refsys:eng-v22:Neh.2', {
+      id: 'server-1',
+      refsys: 'refsys:eng-v22',
+      localKey: 'Neh.2',
+      createdAt: '2026-09-14T08:00:00.000Z',
+    });
+    bookmarks.enqueue('bookmark.remove', 'client-1', bsbPayload('Neh', 2));
+    bookmarks.enqueue('bookmark.add', 'client-2', bsbPayload('Ezra', 4), 'not-a-date');
+
+    const result = await syncNow();
+
+    expect(result.pushed).toBe(1);
+    expect(result.skippedInvalid).toBe(1);
+    expect(remote.rows.size).toBe(0);
+    expect(remote.tombs.get('refsys:eng-v22:Neh.2')).toMatchObject({
+      deletedAt: '2026-09-15T08:00:00.000Z',
+    });
+    expect(bookmarks.listPendingOps()).toHaveLength(1);
+  });
+
+  it('applies pulled tombstones locally without outbox echo', async () => {
+    const bookmarks = new FakeBookmarks();
+    const remote = new FakeRemote();
+    const cursors = new FakeCursors();
+    initEngine(bookmarks, remote, cursors);
+    bookmarks.seedBookmark({
+      id: 'local-1',
+      translationId: 'BSB',
+      bookOsis: 'Neh',
+      chapter: 2,
+      createdAt: '2026-09-15T08:00:00.000Z',
+    });
+    bookmarks.seedBookmark({
+      id: 'local-2',
+      translationId: 'BSB',
+      bookOsis: 'Ezra',
+      chapter: 4,
+      createdAt: '2026-09-15T09:00:00.000Z',
+    });
+    remote.tombs.set('refsys:eng-v22:Neh.2', {
+      refsys: 'refsys:eng-v22',
+      localKey: 'Neh.2',
+      deletedAt: '2026-09-15T08:30:00.000Z',
+    });
+    remote.tombs.set('refsys:eng-v22:Ezra.4', {
+      refsys: 'refsys:eng-v22',
+      localKey: 'Ezra.4',
+      deletedAt: '2026-09-15T08:00:00.000Z',
+    });
+
+    const result = await syncNow();
+
+    expect(result.pulledTombstones).toBe(2);
+    expect(result.removed).toBe(1);
+    expect(bookmarks.isBookmarked('BSB', 'Neh', 2)).toBe(false);
+    expect(bookmarks.isBookmarked('BSB', 'Ezra', 4)).toBe(true);
+    expect(bookmarks.listPendingOps()).toEqual([]);
+    expect(cursors.getCursor(BOOKMARKS_CURSOR_KEY)).toBe(NOW);
   });
 });
 
@@ -507,6 +707,65 @@ function openFileHandle(file: string): { handle: PassageDbHandle; close: () => v
       expect(cursors.getCursor(BOOKMARKS_CURSOR_KEY)).toBeNull();
       await cursors.setCursor(BOOKMARKS_CURSOR_KEY, NOW);
       expect(cursors.getCursor(BOOKMARKS_CURSOR_KEY)).toBe(NOW);
+      opened.close();
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  it('applies tombstones by timestamp without outbox echo', async () => {
+    if (!nodeSqlite) throw new Error('unreachable: suite skips without node:sqlite');
+    const dir = mkdtempSync(join(tmpdir(), 'finding3-tombs-'));
+    const file = join(dir, 'sync.db');
+    try {
+      const opened = openFileHandle(file);
+      await opened.handle.execAsync(LEDGER_SQL);
+      for (const migration of MIGRATIONS) {
+        await opened.handle.execAsync(migration.sql);
+      }
+      const repo = new SqliteBookmarks(opened.handle);
+      await repo.toggleBookmark({
+        id: 'local-1',
+        translationId: 'BSB',
+        bookOsis: 'Neh',
+        chapter: 2,
+        createdAt: '2026-09-15T08:00:00.000Z',
+      });
+      await repo.toggleBookmark({
+        id: 'local-2',
+        translationId: 'BSB',
+        bookOsis: 'Ezra',
+        chapter: 4,
+        createdAt: '2026-09-15T09:00:00.000Z',
+      });
+      await repo.ackOps(repo.listPendingOps().map((op) => op.seq));
+
+      // Newer tombstone removes; older tombstone keeps; ties delete.
+      const removed = await repo.applyRemoteTombstones([
+        {
+          translationId: 'BSB',
+          bookOsis: 'Neh',
+          chapter: 2,
+          deletedAt: '2026-09-15T08:30:00.000Z',
+        },
+        {
+          translationId: 'BSB',
+          bookOsis: 'Ezra',
+          chapter: 4,
+          deletedAt: '2026-09-15T08:00:00.000Z',
+        },
+        {
+          translationId: 'BSB',
+          bookOsis: 'Nope',
+          chapter: 1,
+          deletedAt: '2026-09-15T08:00:00.000Z',
+        },
+        { translationId: '', bookOsis: 'Neh', chapter: 3, deletedAt: '2026-09-15T08:00:00.000Z' },
+      ]);
+      expect(removed).toEqual({ removed: 1 });
+      expect(repo.isBookmarked('BSB', 'Neh', 2)).toBe(false);
+      expect(repo.isBookmarked('BSB', 'Ezra', 4)).toBe(true);
+      expect(repo.listPendingOps()).toEqual([]);
       opened.close();
     } finally {
       rmSync(dir, { recursive: true, force: true });

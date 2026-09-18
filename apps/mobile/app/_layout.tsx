@@ -143,8 +143,12 @@ function RootLayoutNav() {
           cursors: new SqliteSyncState(handle),
           remote: {
             pushAdd: (row: RemoteBookmark) => remoteForCurrentUser().pushAdd(row),
-            pushRemove: (refsys: string, localKey: string) =>
-              remoteForCurrentUser().pushRemove(refsys, localKey),
+            pushRemove: (refsys: string, localKey: string, deletedAt: string, opId: string) =>
+              remoteForCurrentUser().pushRemove(refsys, localKey, deletedAt, opId),
+            findTombstone: (refsys: string, localKey: string) =>
+              remoteForCurrentUser().findTombstone(refsys, localKey),
+            clearTombstone: (refsys: string, localKey: string) =>
+              remoteForCurrentUser().clearTombstone(refsys, localKey),
             pull: () => remoteForCurrentUser().pull(),
           },
           getUserId: () => getAuthSnapshot().userId,

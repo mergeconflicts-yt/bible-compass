@@ -72,6 +72,11 @@ Record explicit permission and evidence for every use.
 
 ## Enforcement requirements
 
+Machine-enforced in `apps/mobile/src/content/translationRights.ts`
+(one reviewed table, fail-closed deny on unknown translations or uses;
+flag values encode the owner-gated posture with per-flag evidence —
+matrix signature remains the only path to relax a flag).
+
 The translation record must expose machine-readable flags:
 
 ```

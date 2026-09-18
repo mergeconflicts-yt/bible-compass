@@ -13,6 +13,7 @@ import {
   dailyVerseTextFor,
 } from '@/fixtures/demo';
 import { useOptionalPreferences } from '@/theme/ThemeProvider';
+import { canShare } from '@/content/translationRights';
 
 interface ComposerSheetProps {
   visible: boolean;
@@ -24,7 +25,7 @@ interface ComposerSheetProps {
  * Verse card composer — demo #s-composer. Format and theme selectors are
  * visual state; the mini preview mirrors the artwork card. Download stays
  * disabled until translation image rights are confirmed (fail closed);
- * Share uses the native sheet.
+ * Share uses the native sheet and follows the same rights table.
  */
 export function ComposerSheet({ visible, onClose, onShare }: ComposerSheetProps) {
   const { colors } = useTheme();
@@ -32,6 +33,7 @@ export function ComposerSheet({ visible, onClose, onShare }: ComposerSheetProps)
   const [theme, setTheme] = useState(0);
   const preferences = useOptionalPreferences();
   const translationId = preferences?.translationId ?? 'BSB';
+  const shareAllowed = canShare(translationId);
 
   return (
     <Sheet
@@ -91,6 +93,10 @@ export function ComposerSheet({ visible, onClose, onShare }: ComposerSheetProps)
         <View style={styles.action}>
           <Button
             title="Share"
+            disabled={!shareAllowed}
+            accessibilityHint={
+              shareAllowed ? undefined : 'Sharing unlocks once translation rights are confirmed'
+            }
             onPress={() => {
               onClose();
               onShare();

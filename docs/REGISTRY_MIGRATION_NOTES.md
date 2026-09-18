@@ -77,6 +77,10 @@ New migrations (additive only):
 (user_id, refsys, local_key)` on `bookmarks` so concurrent two-device
   pushes converge instead of duplicating. Additive only; verified by
   `supabase/tests/06_bookmark_identity_test.sql` where runtimes exist.
+- `20260915000008_bookmark_tombstones.sql` (finding 3) — location-PK
+  `bookmark_tombstones` with owner RLS, backing tombstone-wins removes.
+  Additive only; verified by
+  `supabase/tests/07_bookmark_tombstones_test.sql` where runtimes exist.
 - Correction to `20260915000004_review_package_rls.sql`: the draft
   contained an expression primary key on `package_members`, which
   Postgres rejects, so no clean rebuild could ever pass it. That
@@ -88,10 +92,22 @@ Rebuild and test gate (run where the Supabase CLI and docker exist):
 ```sh
 supabase start
 supabase db reset
-for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql; do
+for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql supabase/tests/07_*.sql; do
   psql "postgresql://postgres:postgres@localhost:54322/postgres" -v ON_ERROR_STOP=1 -f "$f"
 done
 ```
+
+CI gate (finding 4 — RLS tests run for real, never skip): the `verify`
+job provisions `postgis/postgis:16-3.4`, applies
+`tools/supabase-ci-bootstrap.sql` (roles plus an `auth.uid()` stub with
+Supabase-compatible JWT-claim semantics — the only non-vanilla
+primitives the migrations and tests assume), then every migration in
+order, then the same `verify:all` command developers run. The job sets
+`REQUIRE_SUPABASE_TESTS=1`, which turns a database skip into a build
+failure; local runs without a database keep the loud skip notice.
+`tools/verify-supabase.sh` honors `DATABASE_URL` (defaulting to the
+local Supabase stack) and probes with `psql` itself instead of
+requiring `pg_isready`.
 
 Every test file is one transaction ending in `rollback` (no state
 changes). Any violation raises `EXCEPTION` (non-zero exit); string

@@ -8,8 +8,36 @@ on: [push, pull_request]
 jobs:
   verify:
     runs-on: ubuntu-latest
+    # Finding 4: RLS tests run for real in CI instead of skipping. Stock
+    # Postgres plus the checked-in bootstrap provides every primitive the
+    # migrations and tests assume (roles, auth.uid(), pgcrypto, postgis);
+    # security_invoker views need PG15+, hence PG16.
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U postgres"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      REQUIRE_SUPABASE_TESTS: "1"
     steps:
       - uses: actions/checkout@v4
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+      - name: Prepare database (bootstrap, then migrations in order)
+        run: |
+          psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f tools/supabase-ci-bootstrap.sql
+          for f in supabase/migrations/*.sql; do
+            echo "MIGRATE $f"
+            psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f "$f"
+          done
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

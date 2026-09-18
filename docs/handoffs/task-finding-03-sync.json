@@ -1,0 +1,56 @@
+{
+  "attempt_id": "task:sync-tombstones:03:attempt-1",
+  "task_id": "finding-03",
+  "task_title": "Bookmark sync location identity + tombstones (finding 3)",
+  "result": "PASS",
+  "user_visible_outcome": "No visible change. Bookmark sync can no longer fail when two devices save the same chapter, and a deleted bookmark can no longer come back: removes win over older adds on every device, newer adds still work.",
+  "design": "Server identity is the location (user, refsys, local_key), never the client id. pushAdd upserts on the 07 uniqueness constraint with ignore-duplicates. pushRemove writes a tombstone row first, then deletes the bookmark row. An add loses (acked, counted as suppressed) to a tombstone with a newer-or-equal timestamp and clears one it outranks. Pull applies tombstones to local rows they outrank with no outbox echo. Timestamp ties go to the delete; unparseable stamps stay pending. Implements the already-decided D3 tombstone-wins policy; cross-device clock skew near-simultaneous pairs is documented, not solved.",
+  "files_changed": [
+    "supabase/migrations/20260915000008_bookmark_tombstones.sql (new: bookmark_tombstones with PK on location, owner RLS + grants; additive only)",
+    "supabase/tests/07_bookmark_tombstones_test.sql (new: 11 real-assertion checks mirroring the 05 style — RLS, anon denial, impersonation, owner CRUD, upsert idempotency, forged insert, cross-user denial, per-user isolation, owned delete)",
+    "tools/verify-supabase.sh (glob extended to 06 + 07 so the identity and tombstone tests actually run; the skip-vs-fail policy question stays with finding 4)",
+    "apps/mobile/src/content/syncEngine.ts (tombstone-aware push/pull, canonical timestamp compare, suppressed/removed/pulledTombstones result fields)",
+    "apps/mobile/src/content/bookmarkStore.ts (RemoteTombstoneLocal port type + applyRemoteTombstones contract)",
+    "apps/mobile/src/infrastructure/sqlite/bookmarks.ts (transactional applyRemoteTombstones: delete where created_at <= deletedAt, no outbox writes)",
+    "apps/mobile/src/infrastructure/supabase/bookmarksSync.ts (location upserts, tombstone-first removes, find/clear, pull returns bookmarks + tombstones)",
+    "apps/mobile/app/_layout.tsx (remote forwarding for the new port shape)",
+    "apps/mobile/__tests__/sync.test.ts (location-identity fakes + 8 tombstone tests + real-engine tombstone test)",
+    "apps/mobile/__tests__/hygiene.test.ts + tabs.test.tsx (fakes/stubs extended for the new port methods)"
+  ],
+  "files_not_changed": [
+    "Migration 07 untouched (uniqueness constraint it adds is now load-bearing for the upsert target)",
+    "No Edge Function, no new dependency, permission, or native module",
+    "Findings 2 (done), 4 (except the one-line glob), 5, 6 untouched"
+  ],
+  "commands_executed": [
+    {
+      "command": "jest __tests__/sync.test.ts + hygiene + tabs",
+      "exit_code": 0,
+      "output": "47 passed, including cross-device collision convergence, stale-add suppression, newer-add-wins, tie-to-delete, remove-tombstone, pull-apply without echo, replay idempotency, real-engine timestamp deletes"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 0,
+      "output": "28 passed / 28 suites; 251 passed / 251 tests"
+    },
+    {
+      "command": "tsc --noEmit + expo lint (touched files) + prettier --check (mobile)",
+      "exit_code": 0,
+      "output": "0 errors; 0 warnings (named RemoteTombstoneLocal interface instead of inline Array types); clean"
+    },
+    {
+      "command": "SQL static review (no docker/psql here)",
+      "exit_code": 0,
+      "output": "18/18 balanced DO blocks, single transaction + rollback; migration has table + RLS + policy + grants + PK. Runtime run NOT done — same pending status as the 05/06 tests"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "needs_from_owner": [
+    "Supabase runtime leg: supabase start && supabase db reset && per-file psql runs incl. new 07 (documents/REGISTRY_MIGRATION_NOTES.md); also still owed for 01-06",
+    "Pick the next finding: 4 CI DB gate + test 06 policy, 5 runner evidence paths, 6 governance docs"
+  ],
+  "scope_guard": "Sync convergence only. No product behavior, content, or collection change; tombstone payloads carry locations, never verse text.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:sync-tombstones:03:attempt-1",
+  "data_kind": "code+tests+SQL migration only; synthetic fakes; no user data or credentials touched"
+}

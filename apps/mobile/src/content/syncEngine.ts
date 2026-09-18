@@ -9,9 +9,13 @@
  *   `refsys:eng-v22`, `local_key = {book}.{chapter}`); first sign-in is a
  *   union merge (all local ops upload, then the pull dedupes by location
  *   keeping the earliest `created_at`).
- * - Tombstone-wins: removes delete by LOCATION server-side, so a remove
- *   converges even when the row was created on another device with a
- *   different client id.
+ * - Tombstone-wins: server identity is the LOCATION, never the client
+ *   id, so concurrent devices converge instead of colliding (finding 3).
+ *   Removes record server tombstones; a later add loses to a newer
+ *   tombstone instead of resurrecting the row, and a newer add clears the
+ *   tombstone it outranks. Timestamp ties go to the delete; unparseable
+ *   stamps stay pending (fail-closed). Cross-device clock skew can
+ *   misorder near-simultaneous add/remove pairs — documented, not solved.
  *
  * Fail-closed rules: unconfigured builds and anonymous sessions never touch
  * the network (`unconfigured` / `anonymous`); non-BSB ops stay pending
@@ -30,7 +34,7 @@
 import { z } from 'zod';
 
 import { BSB_REFSYS, BSB_TRANSLATION_ID } from './passageStore';
-import type { Bookmark, BookmarkRepository, OutboxOp } from './bookmarkStore';
+import type { Bookmark, BookmarkRepository, OutboxOp, RemoteTombstoneLocal } from './bookmarkStore';
 
 /** Local key grammar: `{book}.{chapter}`, e.g. `Neh.2`. */
 const LOCAL_KEY_PATTERN = /^([A-Za-z1-9]+)\.([1-9][0-9]*)$/;
@@ -48,6 +52,12 @@ const remoteRowSchema = z.object({
   created_at: z.string().min(1),
 });
 
+const remoteTombstoneSchema = z.object({
+  refsys: z.string().min(1),
+  local_key: z.string().min(1),
+  deleted_at: z.string().min(1),
+});
+
 export interface RemoteBookmark {
   id: string;
   refsys: string;
@@ -55,15 +65,28 @@ export interface RemoteBookmark {
   createdAt: string;
 }
 
+export interface RemoteTombstone {
+  refsys: string;
+  localKey: string;
+  deletedAt: string;
+}
+
 /**
  * Feature-boundary contract for the server side; the Supabase adapter is
- * the only implementation. Adds are idempotent by client id (upsert);
- * removes delete by location (tombstone-wins across devices).
+ * the only implementation. Identity is the LOCATION (user, refsys,
+ * local_key) — never the client id — so concurrent devices converge
+ * instead of colliding (finding 3). Removes are tombstone-wins per the
+ * decided D3 policy: a remove records a tombstone and deletes the row; a
+ * later add loses to a newer tombstone instead of resurrecting the row.
  */
 export interface BookmarkRemoteSource {
+  /** Location-identity upsert: converges, never conflicts across devices. */
   pushAdd(row: RemoteBookmark): Promise<void>;
-  pushRemove(refsys: string, localKey: string): Promise<void>;
-  pull(): Promise<RemoteBookmark[]>;
+  /** Records the tombstone, then deletes the row (in that order). */
+  pushRemove(refsys: string, localKey: string, deletedAt: string, opId: string): Promise<void>;
+  findTombstone(refsys: string, localKey: string): Promise<RemoteTombstone | null>;
+  clearTombstone(refsys: string, localKey: string): Promise<void>;
+  pull(): Promise<{ bookmarks: RemoteBookmark[]; tombstones: RemoteTombstone[] }>;
 }
 
 /** Feature-boundary contract for the pull cursor; SQLite implements it. */
@@ -108,6 +131,24 @@ export interface SyncResult {
   skippedInvalid: number;
   /** Remote rows ignored (wrong refsys or unparseable key). */
   skippedRemote: number;
+  /** Remote tombstones pulled (before filtering). */
+  pulledTombstones: number;
+  /** Pushes acked without applying: a newer tombstone already won. */
+  suppressed: number;
+  /** Local rows deleted by pulled tombstones (no outbox echo). */
+  removed: number;
+}
+
+/** Milliseconds since epoch, or null when the stamp is unparseable. */
+function parseStamp(value: string): number | null {
+  const parsed = Date.parse(value);
+  return Number.isInteger(parsed) ? parsed : null;
+}
+
+/** Canonical UTC form so ISO strings compare lexicographically anywhere. */
+function canonicalStamp(value: string): string | null {
+  const parsed = parseStamp(value);
+  return parsed === null ? null : new Date(parsed).toISOString();
 }
 
 /** Local (translation, book, chapter) → server identity, or null for non-BSB. */
@@ -164,6 +205,9 @@ export async function syncNow(): Promise<SyncResult> {
     skippedNonBsb: 0,
     skippedInvalid: 0,
     skippedRemote: 0,
+    pulledTombstones: 0,
+    suppressed: 0,
+    removed: 0,
   };
 
   const acked: number[] = [];
@@ -188,14 +232,36 @@ export async function syncNow(): Promise<SyncResult> {
     }
     try {
       if (op.op === 'bookmark.add') {
-        await remote.pushAdd({
-          id: op.entityId,
-          refsys: location.refsys,
-          localKey: location.localKey,
-          createdAt: op.createdAt,
-        });
+        // Tombstone-wins: a newer remove already decided this location.
+        // Ack the stale add without resurrecting the row. A newer add
+        // outranks the tombstone and clears it. Ties go to the delete.
+        // Unparseable stamps stay pending (fail-closed, operator-visible).
+        const opTime = parseStamp(op.createdAt);
+        if (opTime === null) {
+          result.skippedInvalid += 1;
+          continue;
+        }
+        const tomb = await remote.findTombstone(location.refsys, location.localKey);
+        const tombTime = tomb ? parseStamp(tomb.deletedAt) : null;
+        if (tomb && tombTime === null) {
+          result.skippedInvalid += 1;
+          continue;
+        }
+        if (tomb && tombTime !== null && tombTime >= opTime) {
+          result.suppressed += 1;
+        } else {
+          await remote.pushAdd({
+            id: op.entityId,
+            refsys: location.refsys,
+            localKey: location.localKey,
+            createdAt: op.createdAt,
+          });
+          if (tomb) await remote.clearTombstone(location.refsys, location.localKey);
+          result.pushed += 1;
+        }
       } else {
-        await remote.pushRemove(location.refsys, location.localKey);
+        await remote.pushRemove(location.refsys, location.localKey, op.createdAt, op.entityId);
+        result.pushed += 1;
       }
     } catch (error) {
       // Keep what converged: ack successes before surfacing the failure.
@@ -204,18 +270,21 @@ export async function syncNow(): Promise<SyncResult> {
       throw new SyncError('network', 'Sync did not finish. Try again when online.');
     }
     acked.push(op.seq);
-    result.pushed += 1;
   }
   await bookmarks.ackOps(acked);
 
   let remoteRows: RemoteBookmark[];
+  let remoteTombs: RemoteTombstone[];
   try {
-    remoteRows = await remote.pull();
+    const pulled = await remote.pull();
+    remoteRows = pulled.bookmarks;
+    remoteTombs = pulled.tombstones;
   } catch (error) {
     if (error instanceof SyncError) throw error;
     throw new SyncError('network', 'Sync did not finish. Try again when online.');
   }
   result.pulled = remoteRows.length;
+  result.pulledTombstones = remoteTombs.length;
 
   const missing: Bookmark[] = [];
   for (const row of remoteRows) {
@@ -252,6 +321,41 @@ export async function syncNow(): Promise<SyncResult> {
   }
   const applied = await bookmarks.applyRemoteBookmarks(missing);
   result.inserted = applied.inserted;
+
+  // A pulled tombstone deletes the local row it outranks (same
+  // tombstone-wins rule as push), with no outbox echo: the delete is
+  // already recorded server-side. Unparseable stamps stay local and
+  // counted rather than deleting user data on doubt.
+  const stale: RemoteTombstoneLocal[] = [];
+  for (const tomb of remoteTombs) {
+    const parsed = remoteTombstoneSchema.safeParse({
+      refsys: tomb.refsys,
+      local_key: tomb.localKey,
+      deleted_at: tomb.deletedAt,
+    });
+    if (!parsed.success) {
+      result.skippedInvalid += 1;
+      continue;
+    }
+    if (parsed.data.refsys !== BSB_REFSYS) {
+      result.skippedRemote += 1;
+      continue;
+    }
+    const coords = fromServerLocation(parsed.data.local_key);
+    const canonical = canonicalStamp(parsed.data.deleted_at);
+    if (!coords || !canonical) {
+      result.skippedInvalid += 1;
+      continue;
+    }
+    stale.push({
+      translationId: BSB_TRANSLATION_ID,
+      bookOsis: coords.bookOsis,
+      chapter: coords.chapter,
+      deletedAt: canonical,
+    });
+  }
+  const cleared = await bookmarks.applyRemoteTombstones(stale);
+  result.removed = cleared.removed;
 
   try {
     await cursors.setCursor(BOOKMARKS_CURSOR_KEY, nowIso());

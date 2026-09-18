@@ -15,6 +15,7 @@
 import { BOOKS, bookByOsis, type BookEntry } from './books';
 import { BOOKS_TA } from './books_ta';
 import { BOOKS_TE } from './books_te';
+import { canDisplay } from './translationRights';
 
 // Metro provides require() at runtime for bundled JSON assets.
 declare const require: (path: string) => unknown;
@@ -85,9 +86,10 @@ export function translationById(id: string): TranslationRecord | null {
   return TRANSLATIONS[id] ?? null;
 }
 
-/** Select a bundled translation; unknown ids fail closed on BSB. */
+/** Select a bundled translation; unknown or display-denied ids fail closed on BSB. */
 export function selectTranslationId(id: string): boolean {
   if (!TRANSLATIONS[id]) return false;
+  if (!canDisplay(id)) return false;
   selectedId = id;
   return true;
 }

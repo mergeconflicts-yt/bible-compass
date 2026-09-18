@@ -1,0 +1,78 @@
+{
+  "attempt_id": "task:rights-enforcement:02:attempt-1",
+  "task_id": "finding-02",
+  "task_title": "Machine-enforced translation rights (finding 2)",
+  "result": "PASS",
+  "user_visible_outcome": "No visible change. Licensed uses are now machine-enforced instead of descriptive: display, offline storage, search, image sharing, and native sharing each check one reviewed rights table that denies unknown translations and unknown uses by default.",
+  "flag_table_for_owner_signoff": {
+    "BSB": {
+      "display": true,
+      "offline": true,
+      "search": true,
+      "image": false,
+      "share": true
+    },
+    "tam_irv": {
+      "display": true,
+      "offline": false,
+      "search": true,
+      "image": false,
+      "share": true
+    },
+    "tel_irv": {
+      "display": true,
+      "offline": false,
+      "search": true,
+      "image": false,
+      "share": true
+    },
+    "unknown": {
+      "display": false,
+      "offline": false,
+      "search": false,
+      "image": false,
+      "share": false
+    }
+  },
+  "flag_evidence_summary": "Display allowed on owner-confirmed basis (BSB 2026-09-12, IRV same-basis 2026-09-13). BSB offline/search allowed as built and gate-passed (M02/M06b); IRV offline denied (never built, JSON-only by construction); IRV search allowed over already-displayed bundled text with no separate index (M06b precedent). Image denied everywhere per explicit fail-closed direction. Share allowed as user-initiated text share with no generated artifact. Matrix signature remains the only path to relax any flag.",
+  "files_changed": [
+    "apps/mobile/src/content/translationRights.ts (new: reviewed rights table with per-flag evidence, fail-closed deny-all default, one predicate per use)",
+    "apps/mobile/src/content/bsb.ts (selectTranslationId refuses display-denied translations)",
+    "apps/mobile/src/content/passageStore.ts (initializePassageContent honors canStoreOffline instead of a hardcoded BSB check; searchVerseText honors canSearch)",
+    "apps/mobile/src/components/sheets/ComposerSheet.tsx (Share button follows canShare with rights hint; Download stays disabled)",
+    "apps/mobile/__tests__/translation-rights.test.tsx (new: 7 tests — exact table values, unknown-denies-all, per-use predicates, selection refusal, search empty, offline gate without touching the database, composer download-disabled/share-enabled)",
+    "docs/CONTENT_RIGHTS.md (one-line pointer from the enforcement section to the code)"
+  ],
+  "files_not_changed": [
+    "No flag value changes any current behavior (all gates match built, gate-passed posture)",
+    "Daily/home text-share paths untouched (covered by display authorization per evidence note)",
+    "No web-excerpt flag (no code path exists; added with the web-fallback task)",
+    "Findings 3-6 untouched"
+  ],
+  "commands_executed": [
+    {
+      "command": "jest __tests__/translation-rights.test.tsx",
+      "exit_code": 0,
+      "output": "7 passed"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 0,
+      "output": "28 passed / 28 suites; 245 passed / 245 tests"
+    },
+    {
+      "command": "tsc --noEmit + expo lint (touched files) + prettier --check (mobile and root)",
+      "exit_code": 0,
+      "output": "0 errors; 0 new warnings (3 pre-existing in touched files); clean"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "needs_from_owner": [
+    "Sign off the flag table above (or adjust values; any relaxation needs the CONTENT_RIGHTS matrix signature first)",
+    "Pick the next finding: 3 sync identity/tombstones, 4 CI DB gate + test 06, 5 runner evidence paths, 6 governance docs"
+  ],
+  "scope_guard": "Enforcement mechanism encoding the existing owner-gated posture. No license asserted beyond built, gate-passed behavior; no content approved.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:rights-enforcement:02:attempt-1",
+  "data_kind": "code+tests+one docs pointer; no Scripture, user data, or credentials touched"
+}

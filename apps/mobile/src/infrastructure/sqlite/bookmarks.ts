@@ -8,7 +8,12 @@
  */
 
 import type { PassageDbHandle } from '@/content/passageStore';
-import type { Bookmark, BookmarkRepository, OutboxOp } from '@/content/bookmarkStore';
+import type {
+  Bookmark,
+  BookmarkRepository,
+  OutboxOp,
+  RemoteTombstoneLocal,
+} from '@/content/bookmarkStore';
 
 interface BookmarkRow {
   id: string;
@@ -159,5 +164,24 @@ export class SqliteBookmarks implements BookmarkRepository {
       }
     });
     return { inserted };
+  }
+
+  async applyRemoteTombstones(rows: RemoteTombstoneLocal[]): Promise<{ removed: number }> {
+    let removed = 0;
+    if (rows.length === 0) return { removed };
+    await this.db.withTransactionAsync(async () => {
+      for (const row of rows) {
+        if (!row.translationId || !row.bookOsis || !Number.isInteger(row.chapter)) continue;
+        if (row.chapter < 1 || !row.deletedAt) continue;
+        // Canonical ISO strings compare lexicographically; the engine
+        // normalizes before calling. Newer local rows survive the delete.
+        const result = await this.db.runAsync(
+          'DELETE FROM bookmarks WHERE translation_id = ? AND book = ? AND chapter = ? AND created_at <= ?',
+          [row.translationId, row.bookOsis, row.chapter, row.deletedAt],
+        );
+        removed += result.changes;
+      }
+    });
+    return { removed };
   }
 }

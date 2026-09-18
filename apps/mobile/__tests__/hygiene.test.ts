@@ -204,7 +204,13 @@ class FakeRemote implements BookmarkRemoteSource {
 
   async pushRemove(): Promise<void> {}
 
-  async pull(): Promise<never[]> {
+  async findTombstone(): Promise<null> {
+    return null;
+  }
+
+  async clearTombstone(): Promise<void> {}
+
+  async pull(): Promise<{ bookmarks: never[]; tombstones: never[] }> {
     throw new Error('offline');
   }
 }
@@ -282,6 +288,7 @@ describe('user-facing error copy', () => {
         toggleBookmark: async () => ({ bookmarked: true }),
         ackOps: async () => {},
         applyRemoteBookmarks: async () => ({ inserted: 0 }),
+        applyRemoteTombstones: async () => ({ removed: 0 }),
       },
       cursors: fakeCursors,
       remote: new FakeRemote(),
@@ -299,6 +306,7 @@ describe('user-facing error copy', () => {
         toggleBookmark: async () => ({ bookmarked: true }),
         ackOps: async () => {},
         applyRemoteBookmarks: async () => ({ inserted: 0 }),
+        applyRemoteTombstones: async () => ({ removed: 0 }),
       },
       cursors: fakeCursors,
       remote: new FakeRemote(),

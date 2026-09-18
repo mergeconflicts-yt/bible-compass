@@ -26,6 +26,15 @@ export interface Bookmark {
 
 export type OutboxOpKind = 'bookmark.add' | 'bookmark.remove';
 
+/** A pulled server tombstone mapped to local coordinates (finding 3). */
+export interface RemoteTombstoneLocal {
+  translationId: string;
+  bookOsis: string;
+  chapter: number;
+  /** Canonical ISO string; rows newer than this survive. */
+  deletedAt: string;
+}
+
 export interface OutboxOp {
   seq: number;
   op: OutboxOpKind;
@@ -67,6 +76,13 @@ export interface BookmarkRepository {
    * (M07b pull merge). Dedupe is by location; earliest created_at wins.
    */
   applyRemoteBookmarks(rows: Bookmark[]): Promise<{ inserted: number }>;
+  /**
+   * Deletes local bookmarks outranked by pulled server tombstones WITHOUT
+   * creating outbox ops (finding 3). Only rows whose stored created_at is
+   * at or before the tombstone's deletedAt are removed; newer local rows
+   * survive. Timestamps must already be canonical ISO strings.
+   */
+  applyRemoteTombstones(rows: RemoteTombstoneLocal[]): Promise<{ removed: number }>;
 }
 
 export interface BookmarkInitDeps {

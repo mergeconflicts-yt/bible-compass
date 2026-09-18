@@ -58,6 +58,13 @@ export function validateSubmission(options: {
   bundleDigest: string;
   jobId: string;
   attemptId: string;
+  /**
+   * Output directory for quarantined and draft files. Defaults to the
+   * pipeline drafts dir (finding 5: tests MUST pass an isolated tmpdir —
+   * never the tracked path — so committed evidence files cannot be
+   * overwritten by a test run).
+   */
+  draftDir?: string;
 }): ValidationResult {
   const rawPath = resolveRaw(options.rawResponsePath);
   const rawBuf = fs.readFileSync(rawPath);
@@ -173,7 +180,10 @@ export function validateSubmission(options: {
   // Here we just compute report sha
 
   // Replay protection: check if draft already exists for this attempt
-  const draftDir = path.resolve(__dirname, "../../../content/pilot/drafts");
+  // (caller-chosen directory; pipeline default is the tracked drafts dir).
+  const draftDir =
+    options.draftDir ??
+    path.resolve(__dirname, "../../../content/pilot/drafts");
   const draftPath = path.join(draftDir, `${options.attemptId}.draft.json`);
   if (fs.existsSync(draftPath)) {
     try {

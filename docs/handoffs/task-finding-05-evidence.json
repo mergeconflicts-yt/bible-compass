@@ -1,0 +1,42 @@
+{
+  "attempt_id": "task:evidence-isolation:05:attempt-1",
+  "task_id": "finding-05",
+  "task_title": "Isolate test outputs from committed evidence (finding 5)",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. Test runs can no longer modify committed evidence files: both pipeline modules take explicit output directories, and every test writes to isolated tmpdirs.",
+  "scope_note": "The finding named runner.ts; inspection proved submission-validator.ts had the identical defect (hard-coded tracked drafts dir, tests writing colliding attemptIds), so both were fixed under the same pattern. All other suites already used /tmp isolation (verified by sweep).",
+  "files_changed": [
+    "packages/provider-runner/src/runner.ts (runOneAttempt gains optional rawDir, defaulting to the pipeline quarantine dir; receipt rawResponsePath derived from the actual location)",
+    "packages/provider-runner/tests/runner.test.ts (mkdtemp scratch dirs per test with afterAll cleanup; same attemptIds on purpose to prove isolation; asserts outputs land outside content/ and receipt files exist)",
+    "packages/submission-validator/src/validator.ts (validateSubmission gains optional draftDir, defaulting to the pipeline drafts dir; replay protection reads the same dir)",
+    "packages/submission-validator/tests/validator.test.ts (mkdtemp draft dirs per test with afterAll cleanup; new self-contained valid-submission test needing no committed fixture; committed raw stays a read-only fixture)"
+  ],
+  "files_not_changed": [
+    "No pipeline semantics change (synthetic fixture flow, digests, quarantine-then-draft ordering, replay protection all identical)",
+    "No other package touched (sweep proved all other suites already tmpdir-isolated)",
+    "Findings 2-4 (done), 6 untouched"
+  ],
+  "commands_executed": [
+    {
+      "command": "snapshot 15 tracked evidence files (sha256), full backend test run (14 suites), re-hash + git status",
+      "exit_code": 0,
+      "output": "all backend suites green, zero failures; evidence files byte-identical; git status clean under content/"
+    },
+    {
+      "command": "typecheck + lint across all workspaces",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "prettier --check . (repo root)",
+      "exit_code": 0,
+      "output": "fully clean after normalizing the 4 touched files"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "needs_from_owner": ["Only finding 6 (governance docs) remains open"],
+  "scope_guard": "Test isolation only. No pipeline behavior, content approval, or collection change.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:evidence-isolation:05:attempt-1",
+  "data_kind": "code+tests only; committed evidence files read, never written"
+}

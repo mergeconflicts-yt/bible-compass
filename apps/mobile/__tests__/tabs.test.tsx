@@ -33,6 +33,7 @@ function seedBookmarks(marks: Bookmark[]): void {
     toggleBookmark: async () => ({ bookmarked: true }),
     ackOps: async () => {},
     applyRemoteBookmarks: async () => ({ inserted: 0 }),
+    applyRemoteTombstones: async () => ({ removed: 0 }),
   };
   initializeBookmarkStore({
     createRepository: () => stub,

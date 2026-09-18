@@ -1,0 +1,53 @@
+{
+  "attempt_id": "task:ci-db-gate:04:attempt-1",
+  "task_id": "finding-04",
+  "task_title": "Enforce RLS tests in CI (finding 4)",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. The database security tests can no longer pass CI without executing: CI provisions a real database and runs every RLS test for real, failing the build if the database is unreachable.",
+  "design": "CI job gains a postgis/postgis:16-3.4 service (PG15+ required for security_invoker views; PostGIS required by migration 03 geometry). A checked-in bootstrap creates only the primitives vanilla Postgres lacks (anon/authenticated roles, auth.uid() reading request.jwt.claims with Supabase-compatible null-when-absent semantics), refuses to run against a real Supabase stack, and is idempotent. Migrations apply in filename order, then the unchanged verify:all path runs tests 01-07. REQUIRE_SUPABASE_TESTS=1 turns any skip into a build failure in CI; local runs without a database keep the loud skip notice. verify-supabase.sh honors DATABASE_URL and probes with psql itself instead of requiring pg_isready.",
+  "files_changed": [
+    ".github/workflows/ci.yml (postgres service, DATABASE_URL + REQUIRE_SUPABASE_TESTS=1 env, psql client install, bootstrap + ordered-migration prepare step)",
+    "tools/supabase-ci-bootstrap.sql (new: roles, auth.uid() stub, anti-Supabase-stack guard; no product objects, no privilege grants)",
+    "tools/verify-supabase.sh (DATABASE_URL support, psql self-probe, REQUIRE flag turning skip into failure)",
+    "docs/REGISTRY_MIGRATION_NOTES.md (migration 08 entry, manual loop extended to 07, CI gate section)"
+  ],
+  "files_not_changed": [
+    "No migration edits (vanilla sweep found only comments plus pgcrypto/postgis/security_invoker, all satisfiable)",
+    "No app code (mobile suite unaffected by construction)",
+    "Local no-database behavior unchanged except robustness (still loud skip, exit 0)",
+    "Findings 2 (done), 3 (done), 5, 6 untouched"
+  ],
+  "commands_executed": [
+    {
+      "command": "sh -n tools/verify-supabase.sh + both skip paths executed (no DB in this environment)",
+      "exit_code": 0,
+      "output": "syntax OK; default SKIP exit 0 with explicit notice; REQUIRE_SUPABASE_TESTS=1 SKIP exit 1 with FAIL line"
+    },
+    {
+      "command": "ruby -ryaml YAML.load_file ci.yml (pyyaml absent)",
+      "exit_code": 0,
+      "output": "YAML_OK, re-validated after prettier reflow"
+    },
+    {
+      "command": "SQL static review: bootstrap + migration/test compatibility sweep",
+      "exit_code": 0,
+      "output": "only vanilla-satisfiable dependencies (roles, auth.uid, pgcrypto, postgis, PG15+ views); no triggers/publications/cron/ALTER SYSTEM; bootstrap idempotent with anti-real-stack guard"
+    },
+    {
+      "command": "prettier --check . (repo root)",
+      "exit_code": 0,
+      "output": "fully clean"
+    }
+  ],
+  "not_executed_here": [
+    "The provisioned-database run itself (no docker/psql/supabase CLI in this environment). First CI run on push is the execution proof: expect MIGRATE lines for 8 migrations then RUN lines for tests 01-07 ending SUPABASE-TESTS-PASS. If the bootstrap or any migration misbehaves on vanilla PG, that run will show exactly where."
+  ],
+  "needs_from_owner": [
+    "Watch the first CI run after merge for the DB leg going green for real",
+    "Pick the next finding: 5 runner evidence paths, 6 governance docs"
+  ],
+  "scope_guard": "CI enforcement only. No product behavior, content, migration, or collection change.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:ci-db-gate:04:attempt-1",
+  "data_kind": "CI config + shell + SQL + docs only; no user data or credentials touched"
+}

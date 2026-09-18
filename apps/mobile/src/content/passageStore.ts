@@ -21,6 +21,7 @@ import {
   type ChapterContent,
 } from './bsb';
 import { JsonPassageRepository } from './jsonPassageRepository';
+import { canSearch, canStoreOffline } from './translationRights';
 import type { PassageRepository, VerseHit } from './passageRepository';
 import type {
   ChapterInput,
@@ -146,7 +147,8 @@ export function resolveDailyVerseText(translationId: string): string | null {
 
 /**
  * Verse-text hits for search, SQLite-first with bundled-JSON fallback.
- * Never throws: an unusable store reads as no hits.
+ * Never throws: an unusable store reads as no hits. Search-denied
+ * translations read as no hits (rights fail-closed, finding 2).
  */
 export function searchVerseText(
   query: string,
@@ -155,6 +157,7 @@ export function searchVerseText(
 ): VerseHit[] {
   const cap = Math.min(Math.max(Math.floor(limit), 1), VERSE_SEARCH_MAX);
   if (!query.trim()) return [];
+  if (!canSearch(translationId)) return [];
   if (backend === 'sqlite') {
     try {
       const hits = current.searchVerses(query, translationId, cap);
@@ -195,14 +198,14 @@ export function toChapterInput(blocks: ChapterBlock[]): MappedChapterInput {
 /**
  * Opens the database, projects Nehemiah (the pilot slice) for the default
  * translation, and activates the SQLite repository. Never throws: any
- * failure keeps bundled JSON. Non-default translations skip SQLite
- * entirely (no edition keys defined — fail-closed).
+ * failure keeps bundled JSON. Translations without offline rights or
+ * edition keys skip SQLite entirely (fail-closed).
  */
 export async function initializePassageContent(
   deps: PassageInitDeps,
   translationId: string = BSB_TRANSLATION_ID,
 ): Promise<'ready' | 'bundled-json'> {
-  if (translationId !== BSB_TRANSLATION_ID) return 'bundled-json';
+  if (!canStoreOffline(translationId)) return 'bundled-json';
   try {
     const db = await deps.openDatabase();
     const book = booksFor(BSB_TRANSLATION_ID).find((entry) => entry.osis === 'Neh');

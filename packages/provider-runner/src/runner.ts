@@ -37,6 +37,13 @@ export async function runOneAttempt(options: {
   attemptId: string;
   provider: string;
   model: string;
+  /**
+   * Output directory for the quarantined raw response and its receipt.
+   * Defaults to the pipeline quarantine dir (finding 5: tests MUST pass
+   * an isolated tmpdir — never the tracked path — so committed evidence
+   * files cannot be overwritten by a test run).
+   */
+  rawDir?: string;
 }): Promise<GenerationReceipt> {
   if (concurrent >= CONCURRENCY_LIMIT) {
     throw Object.assign(new Error("Concurrency limit exceeded"), {
@@ -96,11 +103,11 @@ export async function runOneAttempt(options: {
       });
     }
 
-    // Write raw response quarantine — always to repo root content/pilot/raw-responses
-    const rawDir = path.resolve(
-      __dirname,
-      "../../../content/pilot/raw-responses",
-    );
+    // Write raw response quarantine — caller-chosen directory (pipeline
+    // default: repo quarantine; tests: isolated tmpdir, finding 5).
+    const rawDir =
+      options.rawDir ??
+      path.resolve(__dirname, "../../../content/pilot/raw-responses");
     fs.mkdirSync(rawDir, { recursive: true });
     const rawPath = path.join(rawDir, `${options.attemptId}.json`);
     fs.writeFileSync(rawPath, syntheticRaw);
@@ -117,9 +124,9 @@ export async function runOneAttempt(options: {
       completedAt,
       status: "success",
       costCents,
-      rawResponsePath: path.join(
-        "content/pilot/raw-responses",
-        `${options.attemptId}.json`,
+      rawResponsePath: path.relative(
+        path.resolve(__dirname, "../../../"),
+        rawPath,
       ),
     };
     // Write receipt
