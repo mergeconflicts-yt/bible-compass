@@ -1,7 +1,7 @@
 {
   "attempt_id": "task:critical-finding-01:attempt-1",
   "task_id": "finding-01",
-  "task_title": "Fix bundled verse text loss (finding 1)",
+  "task_title": "Repair Scripture asset generator + whole-corpus integrity gate (finding 1)",
   "result": "PASS",
   "user_visible_outcome": "Poetry and structured passages now read in full: 21,000+ verses across English, Tamil, and Telugu that previously rendered blank now show their text (e.g. Psalms, 1 Chronicles 16, Song of Songs). No other text changed.",
   "verification": {
@@ -21,9 +21,9 @@
     }
   },
   "files_changed": [
-    "tools/build-bsb-assets.py (plain_text extracts dict text with span-boundary spacing, drops footnote markers; empty_verses gate fails the build on any blank verse; docstring notes prettier normalization)",
+    "tools/build-bsb-assets.py (plain_text extracts dict text with span-boundary spacing, drops footnote markers; text_gaps gate fails the build on any blank verse OR heading; docstring notes prettier normalization)",
     "apps/mobile/assets/scripture/*/*.json (125 book files rebuilt with recovered text; registries byte-identical)",
-    "apps/mobile/__tests__/scripture-assets.test.ts (new: 66-book count, zero-empty-verse full scan over 93k verses in 0.6s, poetry spot checks)"
+    "apps/mobile/__tests__/scripture-assets.test.ts (new: 6 tests — 66-book count, zero-empty-verse full scan over 93k verses, zero-empty-headings, contiguous chapters/unique-ordered-verses/non-empty chapters/known block kinds, registry book+chapter parity across translations, poetry spot checks; full scan ~0.3s)"
   ],
   "files_not_changed": [
     "apps/mobile/src/content/books.ts, books_ta.ts, books_te.ts (rebuild output byte-identical after prettier normalization)",
@@ -44,12 +44,12 @@
     {
       "command": "jest __tests__/scripture-assets.test.ts",
       "exit_code": 0,
-      "output": "3 passed (full 93k-verse scan in ~0.2s of 0.6s suite)"
+      "output": "6 passed (structure, parity, and content scans in ~0.8s total)"
     },
     {
       "command": "jest (mobile full suite)",
       "exit_code": 0,
-      "output": "27 passed / 27 suites; 234 passed / 234 tests — zero regressions from the asset rebuild"
+      "output": "27 passed / 27 suites; 237 passed / 237 tests — zero regressions from the asset rebuild"
     },
     {
       "command": "tsc --noEmit + expo lint (new test) + prettier --check (mobile)",
