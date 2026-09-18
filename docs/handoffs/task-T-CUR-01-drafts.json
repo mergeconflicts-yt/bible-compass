@@ -1,0 +1,50 @@
+{
+  "attempt_id": "task:curation-tcur01:attempt-1",
+  "task_id": "T-CUR-01",
+  "task_title": "Executable draft-package schemas + cross-record validation (curation steps 3-4)",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. The curation track can now judge draft packages mechanically: every pilot record shape has an executable schema, and dangling references fail loudly instead of passing silently.",
+  "program_status": "Steps 1-2 acknowledged: feature freeze in effect for this work (no app/feature changes made); plan-status repair still needs owner enactment per below. Steps 5-10 remain gated (C1/C2/D/D2/E1/E2 NOT_STARTED) — nothing generated, imported, approved, or published.",
+  "files_changed": [
+    "packages/content-schema/src/drafts.ts (new: 11 draft record schemas mirroring the 20A-G pilot shapes, honest-partial-coverage null-text rule, PACKAGE_RECORD_KINDS gating map, DraftPackage type; translation-mention-draft deliberately absent pending the G3 span work)",
+    "packages/content-schema/src/validators.ts (validateDraftPackage: shell, per-record dispatch with pointers, kind gating, reference resolution; checkDraftReferences with duplicate-key and collect-all dangling reporting)",
+    "packages/content-schema/src/index.ts (export drafts)",
+    "packages/content-schema/tests/fixtures/draftFixtures.ts (new: synthetic positive entity/context/event packages)",
+    "packages/content-schema/tests/drafts.test.ts (new: 18 tests — positives, per-reason invalid fixtures, golden-coverage compat, collect-all reporting)"
+  ],
+  "files_not_changed": [
+    "No pilot draft, candidate, bundle, receipt, gate, eligibility, or package file touched (real 20A/20F judged read-only in a deleted scratch proof)",
+    "No migration, no DB writes, no AI generation, no approval or publication action",
+    "Contract doc left as-is (G6 conformance amendment is a separate docs task)"
+  ],
+  "commands_executed": [
+    {
+      "command": "jest (content-schema)",
+      "exit_code": 0,
+      "output": "79 passed (61 prior + 18 new)"
+    },
+    {
+      "command": "deleted scratch proof against real pilot drafts",
+      "exit_code": 0,
+      "output": "20A fails invalid-format (uppercase candidate_key vs lowercase grammar); 20F fails dangling-reference naming claim:nehemiah-was-cupbearer and question-when-001"
+    },
+    {
+      "command": "tsc + eslint (package) + prettier --check . (root)",
+      "exit_code": 0,
+      "output": "0 errors; 0 warnings; fully clean"
+    }
+  ],
+  "judgment_calls": [
+    "Draft claims reuse the ratified claimSchema (same shape lands in staging minus generated ids) instead of the contract's richer claim sketch — one claim shape end to end.",
+    "Event entity_keys declare new identities (resolved at import); every other entity_key must resolve now. Matches the pilot's own 20D shape.",
+    "Lowercase-only candidate keys enforced (all ratified grammars are lowercase); pilot uppercase keys fail loudly and regenerate under authorized jobs.",
+    "Null section text requires a question (one direction only); text alongside a question stays allowed as partial knowledge."
+  ],
+  "step2_enactment_requirements": [
+    "Plan ledger, status block, gates, and history are controller bookkeeping this role must not hand-edit (finding-6 rule + plan protocol). To repair dispatch state the owner (or appointed controller) must: (1) annotate the status block that curation-track tasks dispatch under this 10-step order with features frozen; (2) insert exactly one READY row for the next task (suggested: mention-draft schema + span derivation, G3) keeping all later rows BLOCKED; (3) bump plan_version with a reviewed diff; (4) mint a fresh envelope/lease for the attempt. Silence is not approval — no successor work should start until that receipt exists."
+  ],
+  "scope_guard": "Schemas, validation, fixtures, tests only. G3 span derivation, G4 app checks, G5 review_queue, G6 contract amendment, and G7 aliases decision are explicit follow-ups.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:curation-tcur01:attempt-1",
+  "data_kind": "code+tests only; synthetic fixtures, SYNTHETIC-markable; no production data"
+}
