@@ -21,10 +21,11 @@
     }
   },
   "files_changed": [
-    "tools/build-bsb-assets.py (plain_text extracts dict text with span-boundary spacing, drops footnote markers; text_gaps gate fails the build on any blank verse OR heading; stage-then-swap atomic output with interrupted-swap recovery and stale-workdir cleanup; temp-then-replace registry writes; docstring notes prettier normalization)",
+    "tools/build-bsb-assets.py (plain_text extracts dict text with span-boundary spacing, drops footnote markers; text_gaps gate fails the build on any blank verse OR heading; single-package staging with content-derived manifest version; one parent-directory swap with interrupted-swap recovery and stale-workdir cleanup; compare-skip temp-then-replace registry writes; prettier-stable registry rows by construction)",
+    "apps/mobile/assets/scripture/manifest.json (new: package version sha256:4bc6426a…, per-book digests/counts, registry digests)",
     "apps/mobile/assets/scripture/*/*.json (125 book files rebuilt with recovered text; registries byte-identical)",
-    "apps/mobile/__tests__/scripture-assets.test.ts (new: 6 tests — 66-book count, zero-empty-verse full scan over 93k verses, zero-empty-headings, contiguous chapters/unique-ordered-verses/non-empty chapters/known block kinds, registry book+chapter parity across translations, poetry spot checks; full scan ~0.3s)",
-    "docs/DECISION_M07_SYNC.md, docs/MOBILE_INSTALL_PLAN.md, docs/REGISTRY_MIGRATION_NOTES.md (prettier table/list padding only — zero content change; root format check now fully clean)"
+    "apps/mobile/__tests__/scripture-assets.test.ts (7 tests: 66-book count, zero-empty verses/headings, numbering/structure, registry parity, poetry spots, manifest enforcement incl. version recompute; ~0.9s)",
+    "docs/DECISION_M07_SYNC.md, docs/MOBILE_INSTALL_PLAN.md, docs/REGISTRY_MIGRATION_NOTES.md (prettier padding only — zero content change; root format check fully clean)"
   ],
   "files_not_changed": [
     "apps/mobile/src/content/books.ts, books_ta.ts, books_te.ts (rebuild output byte-identical after prettier normalization)",
@@ -46,6 +47,16 @@
       "command": "interrupted-swap recovery proof (final dir missing, .prev present)",
       "exit_code": 0,
       "output": "recovered tel_irv from interrupted swap; full build green; no leftovers"
+    },
+    {
+      "command": "determinism proof (two consecutive rebuilds)",
+      "exit_code": 0,
+      "output": "identical package version sha256:4bc6426a… twice; zero working-tree churn on unchanged rebuild"
+    },
+    {
+      "command": "manifest tamper proof (one verse altered, then restored)",
+      "exit_code": 1,
+      "output": "manifest test fails pinpointing Jude.json hash mismatch; restored file verified clean"
     },
     {
       "command": "prettier --check . (repo root)",

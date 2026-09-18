@@ -18,9 +18,33 @@ declare const require: (path: string) => unknown;
 
 const { readdirSync, readFileSync } = require('fs') as {
   readdirSync: (path: string) => string[];
-  readFileSync: (path: string, encoding: string) => string;
+  readFileSync: {
+    (path: string, encoding: 'utf-8'): string;
+    (path: string): { length: number; toString: (encoding: string) => string };
+  };
 };
 const { join } = require('path') as { join: (...parts: string[]) => string };
+const { createHash } = require('crypto') as {
+  createHash: (algorithm: string) => {
+    update: (data: string, encoding: string) => { digest: (encoding: string) => string };
+  };
+};
+
+function sha256Text(text: string): string {
+  return `sha256:${createHash('sha256').update(text, 'utf-8').digest('hex')}`;
+}
+
+/** Canonical JSON matching the builder (sort_keys + compact separators). */
+function canonicalize(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(canonicalize).join(',')}]`;
+  if (value !== null && typeof value === 'object') {
+    const entries = Object.entries(value as Record<string, unknown>)
+      .sort(([left], [right]) => (left < right ? -1 : left > right ? 1 : 0))
+      .map(([key, entry]) => `${JSON.stringify(key)}:${canonicalize(entry)}`);
+    return `{${entries.join(',')}}`;
+  }
+  return JSON.stringify(value) as string;
+}
 
 interface AssetBlock {
   t?: string;
@@ -55,8 +79,10 @@ function loadBook(asset: string, file: string): AssetBook {
 }
 
 function bookFiles(asset: string): string[] {
+  // The package manifest lives beside the books; it is verified by its
+  // own test below, never counted as a book.
   return readdirSync(assetDir(asset))
-    .filter((file) => file.endsWith('.json'))
+    .filter((file) => file.endsWith('.json') && file !== 'manifest.json')
     .sort();
 }
 
@@ -174,5 +200,69 @@ describe('bundled scripture assets', () => {
     expect(verseText('bsb', '1Chr', 16, 8)).toContain('make known His deeds');
     expect(verseText('bsb', 'Ps', 119, 1)).toContain('blameless');
     expect(verseText('tam_irv', 'Neh', 2, 4)).toContain('ராஜா');
+  });
+
+  it('ships a manifest that exactly describes the committed package', () => {
+    interface ManifestFile {
+      manifest_version: number;
+      package: string;
+      version: string;
+      registries: Record<string, string>;
+      translations: Record<
+        string,
+        { books: number; bytes: number; files: Record<string, string>; verses: number }
+      >;
+    }
+    const manifest = JSON.parse(
+      readFileSync(join('assets', 'scripture', 'manifest.json'), 'utf-8'),
+    ) as ManifestFile;
+    expect(manifest.manifest_version).toBe(1);
+    expect(manifest.package).toBe('scripture-assets');
+
+    const seenTranslations: Record<string, unknown> = {};
+    for (const asset of ASSETS) {
+      const entry = manifest.translations[asset];
+      expect(entry).toBeDefined();
+      const files: Record<string, string> = {};
+      let verses = 0;
+      let bytes = 0;
+      for (const file of bookFiles(asset)) {
+        const raw = readFileSync(join(assetDir(asset), file));
+        const text = raw.toString('utf-8');
+        files[file] = sha256Text(text);
+        bytes += raw.length;
+        const book = JSON.parse(text) as AssetBook;
+        for (const chapter of book.chapters ?? []) {
+          verses += (chapter.blocks ?? []).filter((block) => block.t === 'v').length;
+        }
+      }
+      expect(entry?.files).toEqual(files);
+      expect(entry?.books).toBe(Object.keys(files).length);
+      expect(entry?.verses).toBe(verses);
+      expect(entry?.bytes).toBe(bytes);
+      seenTranslations[asset] = {
+        books: Object.keys(files).length,
+        bytes,
+        files,
+        verses,
+      };
+    }
+
+    const seenRegistries: Record<string, string> = {};
+    for (const [manifestKey, manifestPath] of [
+      ['books.ts', join('src', 'content', 'books.ts')],
+      ['books_ta.ts', join('src', 'content', 'books_ta.ts')],
+      ['books_te.ts', join('src', 'content', 'books_te.ts')],
+    ]) {
+      seenRegistries[manifestKey as string] = sha256Text(
+        readFileSync(manifestPath as string, 'utf-8'),
+      );
+    }
+    expect(manifest.registries).toEqual(seenRegistries);
+
+    // The package version IS the digest of this core: any tampering with
+    // a book file, a count, or a registry changes the version.
+    const core = { registries: seenRegistries, translations: seenTranslations };
+    expect(manifest.version).toBe(sha256Text(canonicalize(core)));
   });
 });

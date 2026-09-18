@@ -16,9 +16,10 @@ to a single space. English (BSB) is the registry source; every other
 translation must carry the same 66 books and chapter counts. Run from the
 repo root:
   python3 tools/build-bsb-assets.py
-Normalize the generated books*.ts with prettier before committing (the
-generator emits overlong lines that prettier expands).
+Registry rows render prettier-stable by construction, so byte-identical
+rebuilds stay byte-identical with no normalize step.
 """
+import hashlib
 import json
 import os
 import re
@@ -150,35 +151,193 @@ def write_text_atomic(path, content):
 
 
 def clear_stale_workdirs():
-    """Remove staging leftovers from a killed run. Never touches .prev
-    backups here — a missing final tree is recovered from its backup in
-    swap_in before anything else runs."""
+    """Remove staging leftovers from a killed run. Never touches a .prev
+    backup — recovery decides its fate before anything else runs."""
+    if not os.path.isdir(SCRIPTURE):
+        return
     for name in os.listdir(SCRIPTURE):
         if name.startswith(".staging-"):
             shutil.rmtree(os.path.join(SCRIPTURE, name), ignore_errors=True)
 
 
-def recover_interrupted_swap(final_dir):
-    """Restore the last good tree when a previous run died between the two
-    swap renames (live tree parked at .prev, final missing). Runs before
-    anything else touches the committed tree."""
-    prev_dir = final_dir + ".prev"
-    if not os.path.isdir(final_dir) and os.path.isdir(prev_dir):
-        print(f"recovered {final_dir} from an interrupted swap")
-        os.replace(prev_dir, final_dir)
+def recover_package():
+    """Restore the last good asset tree when a previous run died mid-swap
+    (live tree parked at scripture.prev, live path missing), and drop a
+    stale backup when the live tree is healthy. Runs before anything else
+    touches the committed tree."""
+    prev = SCRIPTURE + ".prev"
+    if not os.path.isdir(SCRIPTURE) and os.path.isdir(prev):
+        print("recovered scripture tree from an interrupted swap")
+        os.replace(prev, SCRIPTURE)
+    elif os.path.isdir(SCRIPTURE):
+        shutil.rmtree(prev, ignore_errors=True)
+    clear_stale_workdirs()
 
 
-def swap_in(staging_dir, final_dir):
-    """Atomically replace the committed final_dir with staging_dir (same
-    filesystem, so both renames are atomic). Committed files are therefore
-    ever only the old tree or the fully validated new tree — never a mix
-    of files from both, and never unvalidated output."""
-    prev_dir = final_dir + ".prev"
-    shutil.rmtree(prev_dir, ignore_errors=True)
-    if os.path.isdir(final_dir):
-        os.replace(final_dir, prev_dir)
-    os.replace(staging_dir, final_dir)
-    shutil.rmtree(prev_dir, ignore_errors=True)
+def swap_package(staging):
+    """Activate the staged package with one parent-directory exchange: the
+    live scripture tree is parked at .prev, then the staged tree (all
+    three translations plus the manifest) takes its place. Both renames
+    are atomic on the same filesystem; a crash between them is repaired
+    by recover_package on the next run. No validation or fallible work
+    happens between the renames."""
+    prev = SCRIPTURE + ".prev"
+    name = os.path.basename(staging)
+    if not os.path.isdir(SCRIPTURE):
+        raise SystemExit("scripture tree missing and no backup — refusing to publish")
+    shutil.rmtree(prev, ignore_errors=True)
+    os.replace(SCRIPTURE, prev)
+    try:
+        os.replace(os.path.join(prev, name), SCRIPTURE)
+    except Exception:
+        os.replace(prev, SCRIPTURE)
+        raise
+    shutil.rmtree(prev, ignore_errors=True)
+
+
+def sha256_bytes(data):
+    return "sha256:" + hashlib.sha256(data).hexdigest()
+
+
+def sha256_file(path):
+    with open(path, "rb") as fh:
+        return sha256_bytes(fh.read())
+
+
+def build_manifest(staging, registry_texts):
+    """Content-derived manifest for the staged package: per-book digests,
+    counts, registry digests, and a version that IS the digest of that
+    core — identical rebuilds yield identical versions, so the release is
+    idempotent and the committed tree is verifiable without trust."""
+    translations = {}
+    for _, asset_dir in TRANSLATIONS:
+        files = {}
+        verses = 0
+        total_bytes = 0
+        for name in sorted(os.listdir(os.path.join(staging, asset_dir))):
+            if not name.endswith(".json"):
+                continue
+            path = os.path.join(staging, asset_dir, name)
+            with open(path, encoding="utf-8") as fh:
+                book = json.load(fh)
+            for chapter in book["chapters"]:
+                verses += sum(1 for block in chapter["blocks"] if block.get("t") == "v")
+            files[name] = sha256_file(path)
+            total_bytes += os.path.getsize(path)
+        translations[asset_dir] = {
+            "books": len(files),
+            "bytes": total_bytes,
+            "files": files,
+            "verses": verses,
+        }
+    core = {
+        "registries": {
+            name: sha256_bytes(content.encode("utf-8")) for name, content in registry_texts.items()
+        },
+        "translations": translations,
+    }
+    version = sha256_bytes(
+        json.dumps(core, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    )
+    return {
+        "built_by": "tools/build-bsb-assets.py",
+        "manifest_version": 1,
+        "package": "scripture-assets",
+        "registries": core["registries"],
+        "translations": core["translations"],
+        "version": version,
+    }
+
+
+def render_entry(osis, bsb, name, chapters, testament):
+    """One registry row in prettier-stable form: single line up to the
+    print width (100, see apps/mobile/.prettierrc), otherwise the exact
+    multi-line expansion prettier produces — so generated output is
+    already formatted and byte-identical rebuilds stay byte-identical
+    (no normalize step)."""
+    single = (
+        f"  {{ osis: '{osis}', bsb: '{bsb}', "
+        f"name: '{name}', chapters: {chapters}, "
+        f"testament: '{testament}' }},"
+    )
+    if len(single) <= 100:
+        return single
+    return "\n".join(
+        [
+            "  {",
+            f"    osis: '{osis}',",
+            f"    bsb: '{bsb}',",
+            f"    name: '{name}',",
+            f"    chapters: {chapters},",
+            f"    testament: '{testament}',",
+            "  },",
+        ]
+    )
+
+
+def render_books_ts(registry):
+    lines = [
+        "/** Generated by tools/build-bsb-assets.py — do not hand-edit. */",
+        "export interface BookEntry {",
+        "  osis: string;",
+        "  bsb: string;",
+        "  name: string;",
+        "  chapters: number;",
+        "  testament: 'OT' | 'NT';",
+        "}",
+        "",
+        "export const BOOKS: BookEntry[] = [",
+    ]
+    for item in registry:
+        lines.append(
+            render_entry(item["osis"], item["bsb"], item["name"], item["chapters"], item["testament"])
+        )
+    lines += [
+        "];",
+        "",
+        "const byOsis = new Map(BOOKS.map((book) => [book.osis, book]));",
+        "",
+        "export function bookByOsis(osis: string): BookEntry | null {",
+        "  return byOsis.get(osis) ?? null;",
+        "}",
+        "",
+        "export function booksByTestament(testament: 'OT' | 'NT'): BookEntry[] {",
+        "  return BOOKS.filter((book) => book.testament === testament);",
+        "}",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def render_localized_ts(const_name, items):
+    localized = [
+        "/** Generated by tools/build-bsb-assets.py — do not hand-edit. */",
+        "import type { BookEntry } from './books';",
+        "",
+        f"export const {const_name}: BookEntry[] = [",
+    ]
+    for item in items:
+        name = item["name"].replace("'", "\\'")
+        localized.append(
+            render_entry(item["osis"], item["bsb"], name, item["chapters"], item["testament"])
+        )
+    localized += ["];", ""]
+    return "\n".join(localized)
+
+
+def write_registry(path, content):
+    """Write a generated registry only when its bytes actually changed.
+    Unchanged registries keep their committed bytes, so routine rebuilds
+    narrow the release to the single parent-directory swap."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            if fh.read() == content:
+                print(f"unchanged: {os.path.basename(path)}")
+                return
+    except FileNotFoundError:
+        pass
+    write_text_atomic(path, content)
+    print(f"updated: {os.path.basename(path)}")
 
 
 def main():
@@ -186,9 +345,7 @@ def main():
     books_registry = []
     registries = {}
     failures = []
-    clear_stale_workdirs()
-    for _, asset_dir in TRANSLATIONS:
-        recover_interrupted_swap(os.path.join(SCRIPTURE, asset_dir))
+    recover_package()
     staging = tempfile.mkdtemp(prefix=".staging-", dir=SCRIPTURE)
     try:
         for dataset_id, asset_dir in TRANSLATIONS:
@@ -208,66 +365,23 @@ def main():
                 print(f"TEXT GAP: {item}")
             raise SystemExit(f"refusing output with {len(failures)} text gaps (finding 1)")
         print("text check: no empty verses or headings in any staged translation")
-        for _, asset_dir in TRANSLATIONS:
-            swap_in(os.path.join(staging, asset_dir), os.path.join(SCRIPTURE, asset_dir))
+        registry_texts = {
+            "books.ts": render_books_ts(books_registry),
+            "books_ta.ts": render_localized_ts("BOOKS_TA", registries["tam_irv"]),
+            "books_te.ts": render_localized_ts("BOOKS_TE", registries["tel_irv"]),
+        }
+        os.makedirs(os.path.dirname(BOOKS_TS), exist_ok=True)
+        for filename, content in registry_texts.items():
+            write_registry(os.path.join(os.path.dirname(BOOKS_TS), filename), content)
+        manifest = build_manifest(staging, registry_texts)
+        with open(os.path.join(staging, "manifest.json"), "w", encoding="utf-8") as fh:
+            json.dump(manifest, fh, ensure_ascii=False, indent=2, sort_keys=True)
+            fh.write("\n")
+        print(f"package {manifest['version']}: 3 translations, 3 registries, manifest")
+        swap_package(staging)
     finally:
         shutil.rmtree(staging, ignore_errors=True)
-    registry = books_registry
-    lines = [
-        "/** Generated by tools/build-bsb-assets.py — do not hand-edit. */",
-        "export interface BookEntry {",
-        "  osis: string;",
-        "  bsb: string;",
-        "  name: string;",
-        "  chapters: number;",
-        "  testament: 'OT' | 'NT';",
-        "}",
-        "",
-        "export const BOOKS: BookEntry[] = [",
-    ]
-    for item in registry:
-        lines.append(
-            f"  {{ osis: '{item['osis']}', bsb: '{item['bsb']}', "
-            f"name: '{item['name']}', chapters: {item['chapters']}, "
-            f"testament: '{item['testament']}' }},"
-        )
-    lines += [
-        "];",
-        "",
-        "const byOsis = new Map(BOOKS.map((book) => [book.osis, book]));",
-        "",
-        "export function bookByOsis(osis: string): BookEntry | null {",
-        "  return byOsis.get(osis) ?? null;",
-        "}",
-        "",
-        "export function booksByTestament(testament: 'OT' | 'NT'): BookEntry[] {",
-        "  return BOOKS.filter((book) => book.testament === testament);",
-        "}",
-        "",
-    ]
-    os.makedirs(os.path.dirname(BOOKS_TS), exist_ok=True)
-    write_text_atomic(BOOKS_TS, "\n".join(lines))
-    print(f"books: {len(registry)}, asset bytes: {total_bytes}")
-    for dataset_id, const_name, filename in (
-        ("tam_irv", "BOOKS_TA", "books_ta.ts"),
-        ("tel_irv", "BOOKS_TE", "books_te.ts"),
-    ):
-        localized = [
-            "/** Generated by tools/build-bsb-assets.py — do not hand-edit. */",
-            "import type { BookEntry } from './books';",
-            "",
-            f"export const {const_name}: BookEntry[] = [",
-        ]
-        for item in registries[dataset_id]:
-            name = item["name"].replace("'", "\\'")
-            localized.append(
-                f"  {{ osis: '{item['osis']}', bsb: '{item['bsb']}', "
-                f"name: '{name}', chapters: {item['chapters']}, "
-                f"testament: '{item['testament']}' }},"
-            )
-        localized += ["];", ""]
-        write_text_atomic(os.path.join(os.path.dirname(BOOKS_TS), filename), "\n".join(localized))
-        print(f"{filename}: {len(registries[dataset_id])} books")
+    print(f"books: {len(books_registry)}")
 
 
 if __name__ == "__main__":
