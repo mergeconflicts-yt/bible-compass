@@ -1,0 +1,47 @@
+{
+  "attempt_id": "task:mobile-projection:02:attempt-1",
+  "task_id": "M02",
+  "task_title": "SQLite projection of bundled BSB chapters",
+  "result": "PASS",
+  "user_visible_outcome": "No visible change yet (reader still on JSON; wiring is M03). The app can now install Nehemiah 2 into versioned SQLite transactionally, offline, with checksum-verified idempotency.",
+  "files_changed": [
+    "apps/mobile/src/infrastructure/sqlite/projection.ts (new: projectChapter, key/ordinal helpers, fail-closed validation, keep-last-healthy transaction)",
+    "apps/mobile/src/infrastructure/sqlite/types.ts (added invalid-input code; getAllAsync optional params)",
+    "apps/mobile/src/infrastructure/sqlite/runner.ts (exported SHA256_PATTERN)",
+    "apps/mobile/src/infrastructure/sqlite/database.ts (executor adaptation for reads with params)",
+    "apps/mobile/src/infrastructure/sqlite/index.ts (projection barrel exports)",
+    "apps/mobile/__tests__/sqlite-projection.test.ts (new: 7 unit + 2 node:sqlite integration tests)",
+    "apps/mobile/package.json (test script runs with --experimental-sqlite)",
+    "docs/MOBILE_INSTALL_PLAN.md (new: separate plan M01-M08 with scope guard)"
+  ],
+  "files_not_changed": [
+    "No UI, routes, or bundled-asset code touched",
+    "No knowledge/entity tables (blocked on human-approved content)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "jest sqlite-projection (NODE_OPTIONS=--experimental-sqlite)",
+      "exit_code": 0,
+      "output": "9 passed: 7 unit (ordering, idempotency, reinstall, rollback, validation, hasher, keys) + 2 integration (real Neh.2 20 verses end to end, orphan rejection)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint + prettier --check (mobile)",
+      "exit_code": 0,
+      "output": "0 errors; new files clean"
+    }
+  ],
+  "bugs_found_by_tests": [
+    "projectChapter leaked raw driver errors instead of typed MigrationError on install failure — fixed with try/catch (migration-failed), covered by the rollback test"
+  ],
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-projection:02:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M02 DONE)",
+  "data_kind": "code+tests only; licensed BSB text used as test input, never redistributed"
+}

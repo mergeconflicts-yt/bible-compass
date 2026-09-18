@@ -246,6 +246,7 @@ Generate these from approved atomic attestations, mentions, claims, and relation
 records retain source-release, algorithm, validator, and build-checksum lineage.
 
 Expansion order
+
 1. Canon/reference skeleton, edition text, and rights
 2. Work/chapter/passage structure
 3. Major people, places, collectives, events, and roles

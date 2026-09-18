@@ -10,13 +10,13 @@ Five isolated requests, one per `content/source-requests/*.json`. Each identifie
 
 ## Requests
 
-| # | File | Source | Component | Paths/Fields | License | Op |
-|---|---|---|---|---|---|---|
-| 1 | `content/source-requests/stepbible-tvtms.json` | `source:stepbible:tvtms` | `tvtms-mappings` | `Data/TVTMS/TVTMS.tsv` | CC-BY-4.0 | `evaluation_import` |
-| 2 | `content/source-requests/stepbible-tipnr.json` | `source:stepbible:tipnr` | `tipnr-structured-fields` | `Data/TIPNR/TIPNR.tsv:person,place,thing,originalName,familyRelation,reference` (6 fields) | CC-BY-4.0 | `evaluation_import` |
-| 3 | `content/source-requests/bibledata-people.json` | `source:bibledata:structured` | `bibledata-people`, `bibledata-person-verse`, `bibledata-relationships` | `data/people.csv`, `data/person-verse.csv`, `data/relationships.csv` | CC-BY-4.0 | `evaluation_import` |
-| 4 | `content/source-requests/macula-hebrew-neh2.json` | `source:macula:hebrew` | `macula-hebrew-{tokens,morphology,participants}` | `hebrew/Tanach.tsv:token`, `Morphology.tsv:lemma/morph`, `Participants.tsv:referent/semantic_role` | CC-BY-4.0 | `evaluation_import` |
-| 5 | `content/source-requests/openbible-geodata.json` | `source:openbible:geocoding` | `openbible-core-geocoding` | `data/geocoding.jsonl:place/coordinates/confidence/verseReference` | CC-BY-4.0 (core only) | `evaluation_import` |
+| #   | File                                              | Source                        | Component                                                               | Paths/Fields                                                                                       | License               | Op                  |
+| --- | ------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | --------------------- | ------------------- |
+| 1   | `content/source-requests/stepbible-tvtms.json`    | `source:stepbible:tvtms`      | `tvtms-mappings`                                                        | `Data/TVTMS/TVTMS.tsv`                                                                             | CC-BY-4.0             | `evaluation_import` |
+| 2   | `content/source-requests/stepbible-tipnr.json`    | `source:stepbible:tipnr`      | `tipnr-structured-fields`                                               | `Data/TIPNR/TIPNR.tsv:person,place,thing,originalName,familyRelation,reference` (6 fields)         | CC-BY-4.0             | `evaluation_import` |
+| 3   | `content/source-requests/bibledata-people.json`   | `source:bibledata:structured` | `bibledata-people`, `bibledata-person-verse`, `bibledata-relationships` | `data/people.csv`, `data/person-verse.csv`, `data/relationships.csv`                               | CC-BY-4.0             | `evaluation_import` |
+| 4   | `content/source-requests/macula-hebrew-neh2.json` | `source:macula:hebrew`        | `macula-hebrew-{tokens,morphology,participants}`                        | `hebrew/Tanach.tsv:token`, `Morphology.tsv:lemma/morph`, `Participants.tsv:referent/semantic_role` | CC-BY-4.0             | `evaluation_import` |
+| 5   | `content/source-requests/openbible-geodata.json`  | `source:openbible:geocoding`  | `openbible-core-geocoding`                                              | `data/geocoding.jsonl:place/coordinates/confidence/verseReference`                                 | CC-BY-4.0 (core only) | `evaluation_import` |
 
 ## Exact isolation per source
 

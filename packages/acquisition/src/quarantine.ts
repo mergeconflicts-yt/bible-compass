@@ -20,9 +20,14 @@ export class FileQuarantineWriter implements QuarantineWriter {
     validateQuarantinePath(quarantinePath);
     const full = path.join(this.baseDir, quarantinePath);
     const normalized = path.normalize(full);
-    const baseNormalized = path.normalize(path.join(this.baseDir, "content/quarantine"));
+    const baseNormalized = path.normalize(
+      path.join(this.baseDir, "content/quarantine"),
+    );
     if (!normalized.startsWith(baseNormalized)) {
-      throw Object.assign(new Error(`Quarantine path escapes base: ${quarantinePath}`), { code: "path-traversal" });
+      throw Object.assign(
+        new Error(`Quarantine path escapes base: ${quarantinePath}`),
+        { code: "path-traversal" },
+      );
     }
     return normalized;
   }

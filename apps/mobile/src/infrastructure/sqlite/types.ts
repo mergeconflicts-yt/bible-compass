@@ -34,7 +34,7 @@ export interface SqliteExecutor {
     source: string,
     params?: (string | number)[],
   ): Promise<{ lastInsertRowId: number; changes: number }>;
-  getAllAsync<T>(source: string): Promise<T[]>;
+  getAllAsync<T>(source: string, params?: (string | number)[]): Promise<T[]>;
   withTransactionAsync(task: () => Promise<void>): Promise<void>;
 }
 
@@ -52,6 +52,7 @@ export type MigrationErrorCode =
   | 'invalid-version'
   | 'invalid-name'
   | 'invalid-hash'
+  | 'invalid-input'
   | 'ledger-invalid'
   | 'ledger-drift'
   | 'migration-failed';

@@ -1,6 +1,15 @@
 import { InMemoryRegistryRepository } from "../src/inMemoryAdapter";
-import { RegistryService, serviceActor, unprivilegedActor } from "../src/service";
-import type { SourceRelease, RightsComponent, OperationGrant, ApprovalRecord } from "../src/types";
+import {
+  RegistryService,
+  serviceActor,
+  unprivilegedActor,
+} from "../src/service";
+import type {
+  SourceRelease,
+  RightsComponent,
+  OperationGrant,
+  ApprovalRecord,
+} from "../src/types";
 
 const SYNTH_SHA = "sha256:" + "a".repeat(64);
 const SYNTH_SHA_B = "sha256:" + "b".repeat(64);
@@ -21,7 +30,9 @@ function makeRelease(overrides: Partial<SourceRelease> = {}): SourceRelease {
   };
 }
 
-function makeComponent(overrides: Partial<RightsComponent> = {}): RightsComponent {
+function makeComponent(
+  overrides: Partial<RightsComponent> = {},
+): RightsComponent {
   return {
     componentKey: "tipnr-structured-fields",
     releaseKey: "release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c",
@@ -32,7 +43,9 @@ function makeComponent(overrides: Partial<RightsComponent> = {}): RightsComponen
   };
 }
 
-function makeGrant(overrides: Partial<OperationGrant> & { componentKey?: string } = {}): OperationGrant & { componentKey: string } {
+function makeGrant(
+  overrides: Partial<OperationGrant> & { componentKey?: string } = {},
+): OperationGrant & { componentKey: string } {
   return {
     componentKey: "tipnr-structured-fields",
     operation: "evaluation_import",
@@ -44,7 +57,8 @@ function makeGrant(overrides: Partial<OperationGrant> & { componentKey?: string 
 
 function makeApproval(overrides: Partial<ApprovalRecord> = {}): ApprovalRecord {
   return {
-    subjectKey: "release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c:tipnr-structured-fields",
+    subjectKey:
+      "release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c:tipnr-structured-fields",
     subjectDigest: SYNTH_SHA,
     reviewerId: "synthetic-rights-reviewer-001",
     reviewerRole: "rights_reviewer",
@@ -64,7 +78,10 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "STEPBible synthetic" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "STEPBible synthetic",
+    });
     const release = makeRelease();
     await service.admitRelease(release, actor);
     const comp = makeComponent();
@@ -101,11 +118,17 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "s" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "s",
+    });
     const release = makeRelease();
     await service.admitRelease(release, actor);
     await service.admitComponent(makeComponent(), actor);
-    await service.grantOperation(makeGrant({ effectiveTo: "2025-01-01" }), actor);
+    await service.grantOperation(
+      makeGrant({ effectiveTo: "2025-01-01" }),
+      actor,
+    );
     await service.recordApproval(makeApproval(), actor);
     const result = await service.authorize({
       releaseKey: release.releaseKey,
@@ -121,11 +144,17 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "s" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "s",
+    });
     const release = makeRelease();
     await service.admitRelease(release, actor);
     await service.admitComponent(makeComponent(), actor);
-    await service.grantOperation(makeGrant({ effectiveFrom: "2027-01-01" }), actor);
+    await service.grantOperation(
+      makeGrant({ effectiveFrom: "2027-01-01" }),
+      actor,
+    );
     await service.recordApproval(makeApproval(), actor);
     const result = await service.authorize({
       releaseKey: release.releaseKey,
@@ -140,7 +169,11 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const { service, release } = await setupAllowed();
     const actor = serviceActor();
     await service.recordApproval(
-      makeApproval({ decision: "rejected", createdAt: "2026-09-15T00:00:00.000Z", subjectDigest: SYNTH_SHA_C }),
+      makeApproval({
+        decision: "rejected",
+        createdAt: "2026-09-15T00:00:00.000Z",
+        subjectDigest: SYNTH_SHA_C,
+      }),
       actor,
     );
     const result = await service.authorize({
@@ -156,11 +189,17 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "s" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "s",
+    });
     const release = makeRelease();
     await service.admitRelease(release, actor);
     await service.admitComponent(makeComponent(), actor);
-    await service.grantOperation(makeGrant({ operation: "external_ai_processing", state: "denied" }), actor);
+    await service.grantOperation(
+      makeGrant({ operation: "external_ai_processing", state: "denied" }),
+      actor,
+    );
     await service.recordApproval(makeApproval(), actor);
     const result = await service.authorize({
       releaseKey: release.releaseKey,
@@ -174,29 +213,40 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "s" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "s",
+    });
     const release = makeRelease();
     const r1 = await service.admitRelease(release, actor);
     expect(r1.created).toBe(true);
     const r2 = await service.admitRelease(release, actor);
     expect(r2.created).toBe(false);
-    await expect(service.admitRelease(makeRelease({ artifactSha256: SYNTH_SHA_C }), actor)).rejects.toThrow(/Changed bytes/);
+    await expect(
+      service.admitRelease(makeRelease({ artifactSha256: SYNTH_SHA_C }), actor),
+    ).rejects.toThrow(/Changed bytes/);
   });
 
   it("idempotent component: same is no-op, changed rejects", async () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "s" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "s",
+    });
     await service.admitRelease(makeRelease(), actor);
     const comp = makeComponent();
     const c1 = await service.admitComponent(comp, actor);
     expect(c1.created).toBe(true);
     const c2 = await service.admitComponent(comp, actor);
     expect(c2.created).toBe(false);
-    await expect(service.admitComponent(makeComponent({ licenseSpdx: "CC-BY-SA-4.0" }), actor)).rejects.toThrow(
-      /Changed component/,
-    );
+    await expect(
+      service.admitComponent(
+        makeComponent({ licenseSpdx: "CC-BY-SA-4.0" }),
+        actor,
+      ),
+    ).rejects.toThrow(/Changed component/);
   });
 
   it("only privileged server identity can record decisions", async () => {
@@ -204,8 +254,12 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const service = new RegistryService(repo);
     const unpriv = unprivilegedActor();
     const approval = makeApproval();
-    await expect(service.recordApproval(approval, unpriv)).rejects.toThrow(/Only privileged/);
-    await expect(service.admitRelease(makeRelease(), unpriv)).rejects.toThrow(/Only service_role/);
+    await expect(service.recordApproval(approval, unpriv)).rejects.toThrow(
+      /Only privileged/,
+    );
+    await expect(service.admitRelease(makeRelease(), unpriv)).rejects.toThrow(
+      /Only service_role/,
+    );
   });
 
   it("audit receipt is recorded and does not log protected source data", async () => {
@@ -230,7 +284,10 @@ describe("Task 07B — Registry service and authorization evaluator", () => {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "s" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "s",
+    });
     await service.admitRelease(makeRelease(), actor);
     // No grant, no approval
     const result = await service.authorize({

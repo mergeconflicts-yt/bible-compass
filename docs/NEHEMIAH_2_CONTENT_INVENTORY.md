@@ -14,12 +14,12 @@ Define the smallest complete, reviewed corpus required to prove the MVP architec
 
 ## Scripture
 
-| Item | Canonical key | Status | Requirement |
-|---|---|---|---|
-| Complete chapter | `Neh.2.1-Neh.2.20` | BLOCKED RIGHTS | Licensed text, hashes and attribution |
-| Daily verse candidate | `Neh.2.4` | BLOCKED RIGHTS | Confirm selected translation wording and sharing rights |
-| Surrounding passage | `Neh.2.1-Neh.2.8` | BLOCKED RIGHTS | Reader and context entry |
-| Inspection passage | `Neh.2.11-Neh.2.16` | BLOCKED RIGHTS | Map and later chapter context |
+| Item                  | Canonical key       | Status         | Requirement                                             |
+| --------------------- | ------------------- | -------------- | ------------------------------------------------------- |
+| Complete chapter      | `Neh.2.1-Neh.2.20`  | BLOCKED RIGHTS | Licensed text, hashes and attribution                   |
+| Daily verse candidate | `Neh.2.4`           | BLOCKED RIGHTS | Confirm selected translation wording and sharing rights |
+| Surrounding passage   | `Neh.2.1-Neh.2.8`   | BLOCKED RIGHTS | Reader and context entry                                |
+| Inspection passage    | `Neh.2.11-Neh.2.16` | BLOCKED RIGHTS | Map and later chapter context                           |
 
 The owner must decide whether the beta context model covers the full chapter or begins with `Neh.2.1-Neh.2.8` while still allowing continuous chapter reading.
 
@@ -27,15 +27,15 @@ The owner must decide whether the beta context model covers the full chapter or 
 
 Required for `Neh.2.1-Neh.2.8`:
 
-| Field | Status | Reviewer need |
-|---|---|---|
-| Who | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review |
-| Where | DRAFT (`content/nehemiah-2/context-draft.json`) | Historical and geographic review |
-| When | DRAFT (`content/nehemiah-2/context-draft.json`) | Chronology review and precision label |
-| What | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review |
-| Before | DRAFT (`content/nehemiah-2/context-draft.json`) | Canonical narrative review |
-| Stakes | DRAFT (`content/nehemiah-2/context-draft.json`) | Historical and literary review |
-| The moment for Nehemiah 2:4 | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review |
+| Field                       | Status                                          | Reviewer need                         |
+| --------------------------- | ----------------------------------------------- | ------------------------------------- |
+| Who                         | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review              |
+| Where                       | DRAFT (`content/nehemiah-2/context-draft.json`) | Historical and geographic review      |
+| When                        | DRAFT (`content/nehemiah-2/context-draft.json`) | Chronology review and precision label |
+| What                        | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review              |
+| Before                      | DRAFT (`content/nehemiah-2/context-draft.json`) | Canonical narrative review            |
+| Stakes                      | DRAFT (`content/nehemiah-2/context-draft.json`) | Historical and literary review        |
+| The moment for Nehemiah 2:4 | DRAFT (`content/nehemiah-2/context-draft.json`) | Biblical and copy review              |
 
 Draft covers the full chapter (`Neh.2.1–Neh.2.20`); the implemented app
 context unit remains `Neh.2.1–Neh.2.8` until reviewers approve. AI-drafted,
@@ -45,19 +45,19 @@ Potential additional context unit for `Neh.2.11-Neh.2.16` is out of the first im
 
 ## Reusable entities
 
-| Entity | Proposed slug | Type | Status |
-|---|---|---|---|
-| Nehemiah | `nehemiah-governor` | Person | DRAFT |
-| Artaxerxes I | `artaxerxes-i` | Person | DRAFT |
-| Jerusalem | `jerusalem` | Place | DRAFT |
-| Susa | `susa` | Place | DRAFT |
-| Persian Empire | `persian-empire` | Empire | DRAFT |
-| Cupbearer | `cupbearer` | Role | DRAFT |
-| Governors Beyond the River | `governors-beyond-the-river` | Political group or role | OPEN (covered as `beyond-the-river` place in draft; slug decision pending) |
-| Asaph keeper of the royal park | `asaph-royal-park` | Person | DRAFT |
-| Sanballat the Horonite | `sanballat-the-horonite` | Person | DRAFT |
-| Valley Gate | `valley-gate` | Place or structure | DRAFT |
-| King's Pool | `kings-pool` | Place | DRAFT |
+| Entity                         | Proposed slug                | Type                    | Status                                                                     |
+| ------------------------------ | ---------------------------- | ----------------------- | -------------------------------------------------------------------------- |
+| Nehemiah                       | `nehemiah-governor`          | Person                  | DRAFT                                                                      |
+| Artaxerxes I                   | `artaxerxes-i`               | Person                  | DRAFT                                                                      |
+| Jerusalem                      | `jerusalem`                  | Place                   | DRAFT                                                                      |
+| Susa                           | `susa`                       | Place                   | DRAFT                                                                      |
+| Persian Empire                 | `persian-empire`             | Empire                  | DRAFT                                                                      |
+| Cupbearer                      | `cupbearer`                  | Role                    | DRAFT                                                                      |
+| Governors Beyond the River     | `governors-beyond-the-river` | Political group or role | OPEN (covered as `beyond-the-river` place in draft; slug decision pending) |
+| Asaph keeper of the royal park | `asaph-royal-park`           | Person                  | DRAFT                                                                      |
+| Sanballat the Horonite         | `sanballat-the-horonite`     | Person                  | DRAFT                                                                      |
+| Valley Gate                    | `valley-gate`                | Place or structure      | DRAFT                                                                      |
+| King's Pool                    | `kings-pool`                 | Place                   | DRAFT                                                                      |
 
 First milestone minimum:
 
@@ -108,22 +108,22 @@ Every anchor requires:
 
 ## Timeline inventory
 
-| Event | Status | Required fields |
-|---|---|---|
-| Abraham | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
-| Exodus from Egypt | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
-| David king in Jerusalem | DRAFT (draft JSON) | Date range, precision, description, relevance and sources |
-| Babylonian destruction of Jerusalem | DRAFT (draft JSON) | Date range, precision, description, relevance and sources |
-| Persian conquest of Babylon | DRAFT (draft JSON) | Date range, description and sources |
-| Return from exile | OPEN | Clarify which return and avoid overgeneralization |
-| Ezra's earlier return or ministry | DRAFT (draft JSON, traditional dating flagged disputed) | Chronology and relevance |
-| Peace of Callias | DRAFT (draft JSON, disputed) | Date range, precision, description, relevance and sources |
-| Parthenon begun | DRAFT (draft JSON) | Date range, description and sources |
-| Nehemiah before Artaxerxes | DRAFT (draft JSON) | Approximate date and precision |
-| Rebuilding Jerusalem's wall | DRAFT (draft JSON, via Neh 6:15) | Date range and relation to passage |
-| Jesus born | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
-| Crucifixion and resurrection | DRAFT (draft JSON, traditional dating) | Date range, precision, description, relevance and sources |
-| Selected Athens parallel | Covered above (Callias, Parthenon) | Include only if it meaningfully orients the reader |
+| Event                               | Status                                                  | Required fields                                           |
+| ----------------------------------- | ------------------------------------------------------- | --------------------------------------------------------- |
+| Abraham                             | DRAFT (draft JSON, traditional dating)                  | Date range, precision, description, relevance and sources |
+| Exodus from Egypt                   | DRAFT (draft JSON, traditional dating)                  | Date range, precision, description, relevance and sources |
+| David king in Jerusalem             | DRAFT (draft JSON)                                      | Date range, precision, description, relevance and sources |
+| Babylonian destruction of Jerusalem | DRAFT (draft JSON)                                      | Date range, precision, description, relevance and sources |
+| Persian conquest of Babylon         | DRAFT (draft JSON)                                      | Date range, description and sources                       |
+| Return from exile                   | OPEN                                                    | Clarify which return and avoid overgeneralization         |
+| Ezra's earlier return or ministry   | DRAFT (draft JSON, traditional dating flagged disputed) | Chronology and relevance                                  |
+| Peace of Callias                    | DRAFT (draft JSON, disputed)                            | Date range, precision, description, relevance and sources |
+| Parthenon begun                     | DRAFT (draft JSON)                                      | Date range, description and sources                       |
+| Nehemiah before Artaxerxes          | DRAFT (draft JSON)                                      | Approximate date and precision                            |
+| Rebuilding Jerusalem's wall         | DRAFT (draft JSON, via Neh 6:15)                        | Date range and relation to passage                        |
+| Jesus born                          | DRAFT (draft JSON, traditional dating)                  | Date range, precision, description, relevance and sources |
+| Crucifixion and resurrection        | DRAFT (draft JSON, traditional dating)                  | Date range, precision, description, relevance and sources |
+| Selected Athens parallel            | Covered above (Callias, Parthenon)                      | Include only if it meaningfully orients the reader        |
 
 ## Map inventory
 

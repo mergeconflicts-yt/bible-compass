@@ -1,8 +1,17 @@
 import * as crypto from "crypto";
 import type { RegistryService } from "@bible-compass/registry-service";
-import type { AcquisitionRequest, AcquisitionConfig, AcquisitionReceipt, AcquisitionResult } from "./types";
+import type {
+  AcquisitionRequest,
+  AcquisitionConfig,
+  AcquisitionReceipt,
+  AcquisitionResult,
+} from "./types";
 import { acquisitionRequestSchema, DEFAULT_ACQUISITION_CONFIG } from "./types";
-import { validateRequest, validateMediaType, validateByteSize } from "./validator";
+import {
+  validateRequest,
+  validateMediaType,
+  validateByteSize,
+} from "./validator";
 import type { Fetcher } from "./fetcher";
 import type { QuarantineWriter } from "./quarantine";
 
@@ -37,13 +46,21 @@ export class AcquisitionService {
     return `${request.releaseKey}:${request.quarantinePath}`;
   }
 
-  async acquire(request: AcquisitionRequest, attemptId: string): Promise<AcquisitionResult> {
+  async acquire(
+    request: AcquisitionRequest,
+    attemptId: string,
+  ): Promise<AcquisitionResult> {
     // 0. Validate request shape (no shell interpolation, path traversal, branch-as-release)
     const parsed = acquisitionRequestSchema.safeParse(request);
     if (!parsed.success) {
-      throw Object.assign(new Error(`Invalid acquisition request: ${parsed.error.issues[0]?.message}`), {
-        code: "invalid-request",
-      });
+      throw Object.assign(
+        new Error(
+          `Invalid acquisition request: ${parsed.error.issues[0]?.message}`,
+        ),
+        {
+          code: "invalid-request",
+        },
+      );
     }
     validateRequest(request, this.config);
 
@@ -72,7 +89,12 @@ export class AcquisitionService {
         reason: `authorization denied: ${authResult.reason}`,
         attemptId,
       };
-      return { success: false, receipt, quarantined: false, reason: receipt.reason };
+      return {
+        success: false,
+        receipt,
+        quarantined: false,
+        reason: receipt.reason,
+      };
     }
 
     // 2. Check idempotency cache: same releaseKey:quarantinePath with same bytes => same receipt (no re-fetch)
@@ -102,13 +124,26 @@ export class AcquisitionService {
         reason: `fetch failed: ${message}`,
         attemptId,
       };
-      return { success: false, receipt, quarantined: false, reason: receipt.reason };
+      return {
+        success: false,
+        receipt,
+        quarantined: false,
+        reason: receipt.reason,
+      };
     }
 
     // 4. Validate mediaType, byteSize
     try {
-      validateMediaType(fetchResult.mediaType, request.expectedMediaType, this.config.allowedMediaTypes);
-      validateByteSize(fetchResult.byteSize, request.expectedByteSize, this.config.maxByteSize);
+      validateMediaType(
+        fetchResult.mediaType,
+        request.expectedMediaType,
+        this.config.allowedMediaTypes,
+      );
+      validateByteSize(
+        fetchResult.byteSize,
+        request.expectedByteSize,
+        this.config.maxByteSize,
+      );
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       // Quarantine the mismatched artifact but mark as failed
@@ -158,7 +193,12 @@ export class AcquisitionService {
         receipt.reason = `different bytes under same releaseKey ${request.releaseKey} — expected ${cached.sha256} got ${actualSha256}`;
       }
       this.receiptCache.set(cacheKey, receipt);
-      return { success: false, receipt, quarantined: true, reason: receipt.reason };
+      return {
+        success: false,
+        receipt,
+        quarantined: true,
+        reason: receipt.reason,
+      };
     }
 
     // 6. Check cached different-bytes-fail: if we have cached receipt with same key but different sha, fail
@@ -179,17 +219,31 @@ export class AcquisitionService {
         attemptId,
       };
       await this.quarantine.write(request.quarantinePath, fetchResult.buffer);
-      return { success: false, receipt, quarantined: true, reason: receipt.reason };
+      return {
+        success: false,
+        receipt,
+        quarantined: true,
+        reason: receipt.reason,
+      };
     }
 
     // 7. Same bytes same receipt: if cached and same sha/size, return cached receipt (deterministic)
-    if (cached && cached.sha256 === actualSha256 && cached.byteSize === fetchResult.byteSize) {
+    if (
+      cached &&
+      cached.sha256 === actualSha256 &&
+      cached.byteSize === fetchResult.byteSize
+    ) {
       // Ensure quarantine still has the file (idempotent no-op, but file should exist)
       const exists = await this.quarantine.exists(request.quarantinePath);
       if (!exists) {
         await this.quarantine.write(request.quarantinePath, fetchResult.buffer);
       }
-      return { success: true, receipt: cached, quarantined: false, reason: "idempotent same bytes same receipt" };
+      return {
+        success: true,
+        receipt: cached,
+        quarantined: false,
+        reason: "idempotent same bytes same receipt",
+      };
     }
 
     // 8. Success: write to quarantine and record receipt

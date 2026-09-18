@@ -3,7 +3,10 @@ import { Screen } from '@/components/Screen';
 import { AppText } from '@/components/AppText';
 import { Segmented } from '@/components/Segmented';
 import { NavRow } from '@/components/NavRow';
-import { savedRowsFor, searchRecentsFor } from '@/fixtures/demo';
+import { translationById } from '@/content/bsb';
+import { listBookmarks } from '@/content/bookmarkStore';
+import { listRecents } from '@/content/recentStore';
+import { chapterLabel } from '@/lib/reference';
 import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 export interface SavedViewProps {
@@ -11,13 +14,14 @@ export interface SavedViewProps {
   onOpenDaily: () => void;
 }
 
-/** Saved library — demo #v-saved. Bookmarks and recents share one row pattern. */
+/** Saved library — demo #v-saved. Bookmarks and recents persist on-device. */
 export function SavedView({ onOpenPassage, onOpenDaily }: SavedViewProps) {
   const [section, setSection] = useState(0);
   const preferences = useOptionalPreferences();
   const translationId = preferences?.translationId ?? 'BSB';
-  const saved = savedRowsFor(translationId);
-  const recents = searchRecentsFor(translationId);
+  const marks = listBookmarks(translationId);
+  const short = translationById(translationId)?.short ?? 'BSB';
+  const recents = listRecents(translationId);
 
   return (
     <Screen testID="saved-screen">
@@ -34,32 +38,43 @@ export function SavedView({ onOpenPassage, onOpenDaily }: SavedViewProps) {
       {section === 0 ? (
         <>
           <NavRow
-            title={saved[0]?.title ?? 'Nehemiah 2:1–8'}
-            meta={saved[0]?.meta}
-            onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
-            testID="saved-bookmark-passage"
-          />
-          <NavRow
-            title={saved[1]?.title ?? 'Nehemiah 2:4'}
-            meta={saved[1]?.meta}
+            title="Verse of the day"
+            meta={`${short} · verse of the day`}
             onPress={onOpenDaily}
             testID="saved-bookmark-daily"
           />
+          {marks.length > 0 ? (
+            marks.map((mark, index) => (
+              <NavRow
+                key={mark.id}
+                title={chapterLabel(mark.bookOsis, mark.chapter)}
+                meta={`${short} · saved on this device`}
+                onPress={() => onOpenPassage(`${mark.bookOsis}.${mark.chapter}`)}
+                testID={`saved-bookmark-${index}`}
+              />
+            ))
+          ) : (
+            <AppText variant="body" color="textSecondary" testID="saved-bookmarks-empty">
+              No chapter bookmarks yet — open a chapter and choose Bookmark to save it here.
+            </AppText>
+          )}
+        </>
+      ) : recents.length > 0 ? (
+        <>
+          {recents.map((recent, index) => (
+            <NavRow
+              key={`${recent.bookOsis}.${recent.chapter}`}
+              title={chapterLabel(recent.bookOsis, recent.chapter)}
+              meta={`${short} · recent`}
+              onPress={() => onOpenPassage(`${recent.bookOsis}.${recent.chapter}`)}
+              testID={`saved-recent-${index}`}
+            />
+          ))}
         </>
       ) : (
-        <>
-          <NavRow
-            title={recents[0]?.title ?? 'Nehemiah 2:1–8'}
-            meta={recents[0]?.meta}
-            onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
-            testID="saved-recent-passage"
-          />
-          <NavRow
-            title={recents[1]?.title ?? 'Ezra 4:23'}
-            meta={recents[1]?.meta}
-            testID="saved-recent-ezra"
-          />
-        </>
+        <AppText variant="body" color="textSecondary" testID="saved-recents-empty">
+          No recent chapters yet — chapters you open appear here.
+        </AppText>
       )}
     </Screen>
   );

@@ -1,0 +1,79 @@
+{
+  "attempt_id": "task:mobile-reminder:07c:attempt-1",
+  "task_id": "M07c",
+  "task_title": "Local daily reminder (opt-in, 08:00, approved copy)",
+  "result": "PASS",
+  "user_visible_outcome": "Settings gains a Daily reminder switch: turning it on (one explicit tap, one OS permission prompt) schedules one daily 08:00 verse notification with the approved copy; tapping the notification opens today's daily verse. It stays off until the user opts in, and turning it off cancels the schedule.",
+  "files_changed": [
+    "apps/mobile/package.json + package-lock.json (expo-notifications 57.0.20 exact; owner-approved 2026-09-18; installed via npx expo install)",
+    "apps/mobile/app.json (expo-notifications config plugin, no options: local-only needs no icon/sound/background modes)",
+    "apps/mobile/src/content/reminderStore.ts (new: opt-in state machine, ReminderPrefsRepository + ReminderScheduler ports, approved PD-020 copy + 08:00 constants, boot restore, typed ReminderError, fail-closed reads)",
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (appended 007_reminder: single-row table with strict CHECKs)",
+    "apps/mobile/src/infrastructure/sqlite/reminders.ts (new: SqliteReminders, upsert writes, sanitize-on-read)",
+    "apps/mobile/src/infrastructure/notifications/reminder.ts (new: sole expo-notifications owner; handler + Android channel, cancel-then-schedule daily, permission mapping that never re-prompts after denial, tap subscription)",
+    "apps/mobile/app/_layout.tsx (initializes the store on the shared handle, installs presentation defensively, restores the schedule fire-and-forget, routes reminder taps to /daily/[today])",
+    "apps/mobile/src/components/SettingsView.tsx (new REMINDERS section: not-ready/enabling/on/off/error-retry row with switch semantics)",
+    "apps/mobile/__tests__/reminder.test.ts (new: 10 fake-based store tests + 1 real-engine adapter test)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (tripwire to versions 1-7)",
+    "docs/MOBILE_INSTALL_PLAN.md (M07c DONE code/tests, device-gate exit pending)",
+    "docs/DECISION_M07_SYNC.md (expo-notifications + notification permission APPROVED 2026-09-18)"
+  ],
+  "files_not_changed": [
+    "No push dispatch, tokens, or credentials (local-only; full push deferred post-MVP)",
+    "No time-picker UI (policy fixes 08:00; schema carries hour/minute for later without a new migration)",
+    "No badge/sound (handler shows banner+list only, per restrained-notification posture)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "npx expo install expo-notifications + pin 57.0.20 exact",
+      "exit_code": 0,
+      "output": "expo-notifications 57.0.20 exact in package.json, resolved 57.0.20 in lockfile (npm ls)"
+    },
+    {
+      "command": "sqlite3 CLI on 007_reminder SQL",
+      "exit_code": 0,
+      "output": "happy-path insert lands; duplicate id, id=2, enabled=2 correctly rejected (hour/minute rejection covered by the jest real-engine test)"
+    },
+    {
+      "command": "jest reminder + sqlite-migrations + tabs + airplane-journey",
+      "exit_code": 0,
+      "output": "42 passed, including file-backed 007 round-trip"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "21 passed / 3 failed suites; 210 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint (M07c files)",
+      "exit_code": 0,
+      "output": "0 errors; 0 warnings on new/edited app files (3 pre-existing Array-type warnings in sqlite-migrations.test.ts untouched)"
+    },
+    {
+      "command": "prettier --check (mobile) + targeted root files",
+      "exit_code": 0,
+      "output": "mobile clean; M07c app files clean (MOBILE_INSTALL_PLAN.md keeps its pre-existing hand-aligned table)"
+    }
+  ],
+  "bugs_found_by_tests": [
+    "Opt-in test modeled permission as pre-granted, hiding the request call — fixed the fake to flip undetermined->granted on request, proving exactly one prompt",
+    "Clamp test tried to write hour=99 through the CHECK — replaced with constraint-rejection proof (schema is the enforcement; adapter sanitize is defense-in-depth)"
+  ],
+  "needs_from_owner": [
+    "iOS + Android devices: verify the reminder fires once per local day at 08:00 (incl. reboot persistence via RECEIVE_BOOT_COMPLETED), tap opens today's verse, cold-start tap routes correctly",
+    "Denied-permission path on-device (settings guidance copy)",
+    "M07 exit-gate runtime still OPEN (Supabase project, OAuth creds, test accounts)",
+    "Edge Function for cloud account deletion (unchanged)"
+  ],
+  "scope_guard": "Scripture only. Notification payloads carry the approved copy + a kind marker, never verse text beyond the approved 'Nehemiah 2:4' reference. Candidate identity data stays out until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-reminder:07c:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M07a/M07b/M07c DONE code/tests; M04 BLOCKED on approved content; M08 BLOCKED on M01-M07)",
+  "data_kind": "code+tests only; no Scripture text added or redistributed; no credentials committed"
+}

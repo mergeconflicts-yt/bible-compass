@@ -27,7 +27,9 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "test": "npm run test --workspaces --if-present",
-    "verify": "npm run typecheck --workspaces --if-present && npm run lint --workspaces --if-present && npm run format:check && npm run test --workspaces --if-present"
+    "verify": "npm run typecheck --workspaces --if-present && npm run lint --workspaces --if-present && npm run format:check && npm run test --workspaces --if-present",
+    "verify:supabase": "sh tools/verify-supabase.sh",
+    "verify:all": "npm run typecheck --workspaces --if-present && npm run lint --workspaces --if-present && npm run test --workspaces --if-present && npm run format:check && npm --prefix apps/mobile run typecheck && npm --prefix apps/mobile run lint && npm --prefix apps/mobile run format:check && npm --prefix apps/mobile run test && sh tools/verify-hygiene.sh && npm run verify:supabase"
   },
   "devDependencies": {
     "typescript": "6.0.3",

@@ -23,7 +23,7 @@ export const LEDGER_SQL = `CREATE TABLE IF NOT EXISTS schema_migrations (
   applied_at TEXT NOT NULL
 );`;
 
-const SHA256_PATTERN = /^sha256:[0-9a-f]{64}$/;
+export const SHA256_PATTERN = /^sha256:[0-9a-f]{64}$/;
 const NAME_PATTERN = /^[a-z0-9_]+$/;
 
 const ledgerRowSchema = z.object({

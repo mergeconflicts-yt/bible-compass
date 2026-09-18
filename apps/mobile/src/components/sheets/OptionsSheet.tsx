@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { radius, space } from '@/theme/tokens';
@@ -7,23 +6,42 @@ import { scriptureSizeLabels, usePreferences } from '@/theme/ThemeProvider';
 import { Sheet } from '@/components/Sheet';
 import { AppText } from '@/components/AppText';
 
+export type BookmarkRowStatus = 'ready' | 'saving' | 'error';
+
 interface OptionsSheetProps {
   visible: boolean;
   onClose: () => void;
+  bookmarked: boolean;
+  bookmarkStatus: BookmarkRowStatus;
+  onToggleBookmark: () => void;
 }
 
-/** Reading options — demo #s-options. Bookmark is local state; theme and text size are functional. */
-export function OptionsSheet({ visible, onClose }: OptionsSheetProps) {
+/** Reading options — demo #s-options. Bookmark persists on-device (SQLite + outbox); theme and text size are functional. */
+export function OptionsSheet({
+  visible,
+  onClose,
+  bookmarked,
+  bookmarkStatus,
+  onToggleBookmark,
+}: OptionsSheetProps) {
   const { colors } = useTheme();
   const preferences = usePreferences();
-  const [bookmarked, setBookmarked] = useState(false);
+
+  const bookmarkMeta =
+    bookmarkStatus === 'saving'
+      ? 'Saving…'
+      : bookmarkStatus === 'error'
+        ? "Couldn't save — tap to retry"
+        : bookmarked
+          ? 'Saved on this device'
+          : 'Save for later';
 
   const rows = [
     {
-      icon: 'bookmark-outline' as const,
+      icon: (bookmarked ? 'bookmark' : 'bookmark-outline') as 'bookmark' | 'bookmark-outline',
       title: bookmarked ? 'Bookmarked' : 'Bookmark chapter',
-      meta: bookmarked ? 'Saved on this device' : 'Save for later',
-      onPress: () => setBookmarked((saved) => !saved),
+      meta: bookmarkMeta,
+      onPress: onToggleBookmark,
       testID: 'options-bookmark',
     },
     {
@@ -43,7 +61,13 @@ export function OptionsSheet({ visible, onClose }: OptionsSheetProps) {
   ];
 
   return (
-    <Sheet visible={visible} onClose={onClose} eyebrow="Reader" title="Reading options" testID="options-sheet">
+    <Sheet
+      visible={visible}
+      onClose={onClose}
+      eyebrow="Reader"
+      title="Reading options"
+      testID="options-sheet"
+    >
       {rows.map((row) => (
         <Pressable
           key={row.testID}

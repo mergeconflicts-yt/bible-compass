@@ -6,21 +6,21 @@ Build one Expo and React Native TypeScript client, one Supabase modular backend 
 
 ## Selected stack
 
-| Area | Choice | Rule |
-|---|---|---|
-| Client | Current stable Expo SDK and React Native | Pin exact versions and commit the lockfile |
-| Language | TypeScript strict mode | Avoid unsafe type escapes |
-| Navigation | Expo Router with typed routes | Every shareable destination has a canonical route |
-| Remote state | TanStack Query | Repositories own query keys and mapping |
-| UI state | Zustand | Ephemeral cross-screen UI only |
-| Validation | Zod | Validate imports, APIs, persistence and deep links |
-| Backend | Supabase Postgres, Auth, Storage and Edge Functions | Use migrations and RLS |
-| Offline | Expo SQLite | Versioned migrations, transactions and outbox |
-| Session secrets | Expo SecureStore | Never log session material |
-| Maps | Reviewed static SVG or raster assets with hotspots | Do not request device location |
-| Verse images | View capture, native sharing and explicit media save | Enforce rights and safe regions |
-| Tests | Jest, React Native Testing Library, database policy tests and Maestro | Test contracts and critical journeys |
-| Delivery | EAS Build, Update and Submit with CI | Development, preview and production profiles |
+| Area            | Choice                                                                | Rule                                               |
+| --------------- | --------------------------------------------------------------------- | -------------------------------------------------- |
+| Client          | Current stable Expo SDK and React Native                              | Pin exact versions and commit the lockfile         |
+| Language        | TypeScript strict mode                                                | Avoid unsafe type escapes                          |
+| Navigation      | Expo Router with typed routes                                         | Every shareable destination has a canonical route  |
+| Remote state    | TanStack Query                                                        | Repositories own query keys and mapping            |
+| UI state        | Zustand                                                               | Ephemeral cross-screen UI only                     |
+| Validation      | Zod                                                                   | Validate imports, APIs, persistence and deep links |
+| Backend         | Supabase Postgres, Auth, Storage and Edge Functions                   | Use migrations and RLS                             |
+| Offline         | Expo SQLite                                                           | Versioned migrations, transactions and outbox      |
+| Session secrets | Expo SecureStore                                                      | Never log session material                         |
+| Maps            | Reviewed static SVG or raster assets with hotspots                    | Do not request device location                     |
+| Verse images    | View capture, native sharing and explicit media save                  | Enforce rights and safe regions                    |
+| Tests           | Jest, React Native Testing Library, database policy tests and Maestro | Test contracts and critical journeys               |
+| Delivery        | EAS Build, Update and Submit with CI                                  | Development, preview and production profiles       |
 
 Use the versions compatible with the Expo SDK selected when the repository is initialized. Do not hard-code a future SDK version in this document.
 
@@ -115,19 +115,19 @@ Rules:
 
 ## Route map
 
-| Route | Purpose |
-|---|---|
-| `/(tabs)/home` | Daily verse and Continue reading |
-| `/(tabs)/bible` | Book and chapter browser |
-| `/passage/[reference]` | Continuous reader |
-| `/daily/[date]` | Full daily verse experience |
-| `/share/[date]` | Verse card composer |
-| `/entity/[slug]` | Reusable profile plus passage role |
-| `/timeline/[passageId]` | Passage-centered timeline |
-| `/map/[assetId]` | Reviewed historical map |
-| `/search` | Reference and downloaded content search |
-| `/(tabs)/saved` | Bookmarks and recents |
-| `/settings` | User preferences, downloads, privacy and account |
+| Route                   | Purpose                                          |
+| ----------------------- | ------------------------------------------------ |
+| `/(tabs)/home`          | Daily verse and Continue reading                 |
+| `/(tabs)/bible`         | Book and chapter browser                         |
+| `/passage/[reference]`  | Continuous reader                                |
+| `/daily/[date]`         | Full daily verse experience                      |
+| `/share/[date]`         | Verse card composer                              |
+| `/entity/[slug]`        | Reusable profile plus passage role               |
+| `/timeline/[passageId]` | Passage-centered timeline                        |
+| `/map/[assetId]`        | Reviewed historical map                          |
+| `/search`               | Reference and downloaded content search          |
+| `/(tabs)/saved`         | Bookmarks and recents                            |
+| `/settings`             | User preferences, downloads, privacy and account |
 
 ## Feature module layout
 
@@ -149,15 +149,15 @@ feature/
 
 ## State ownership
 
-| State | Owner | Persistence |
-|---|---|---|
-| Published content | Query cache and content repository | SQLite by content version |
-| Reading progress | Reading progress service | SQLite immediately; server if signed in |
-| Bookmarks | Bookmark service and outbox | SQLite immediately; server if signed in |
-| Auth session | Auth adapter | SecureStore |
-| Typography | Preferences store | Local, optionally synchronized |
-| Open context drawer | Local component or Zustand | Not persistent |
-| Connectivity | Infrastructure service | Derived state |
+| State               | Owner                              | Persistence                             |
+| ------------------- | ---------------------------------- | --------------------------------------- |
+| Published content   | Query cache and content repository | SQLite by content version               |
+| Reading progress    | Reading progress service           | SQLite immediately; server if signed in |
+| Bookmarks           | Bookmark service and outbox        | SQLite immediately; server if signed in |
+| Auth session        | Auth adapter                       | SecureStore                             |
+| Typography          | Preferences store                  | Local, optionally synchronized          |
+| Open context drawer | Local component or Zustand         | Not persistent                          |
+| Connectivity        | Infrastructure service             | Derived state                           |
 
 ## Reader architecture
 

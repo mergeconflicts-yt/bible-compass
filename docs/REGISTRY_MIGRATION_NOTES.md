@@ -59,3 +59,45 @@ No `service_role` key, signing secret, or push credential is in the repo. Local 
 ## Next
 
 Task 07B will add the narrow server-side repository/service that uses `service_role` to evaluate `evaluateAuthorization()` against these tables and emit `audit_receipts` with stable digests. Task 08 will use quarantine paths `content/quarantine/**` (git-ignored unless retention rights explicitly permit a fixture).
+
+## R1-B addendum 2026-09-15: enforceable RLS tests and rebuild gate
+
+New migrations (additive only):
+
+- `20260915000005_rls_grants_invoker.sql` — least-privilege `SELECT`
+  grants on the six published-read tables, authenticated mirrors of the
+  published-only allow policies, and `security_invoker = true` on the
+  three public views (Postgres 15+). Grants alone expose nothing: every
+  table stays RLS-enabled.
+- `20260915000006_user_library.sql` — minimal `profiles` + `bookmarks`
+  with `auth.uid() = user_id` ownership on all operations. Deliberately
+  no FK to `auth.users` (RLS is the boundary per `SECURITY.md`);
+  account-deletion cleanup is follow-up work.
+- `20260915000007_bookmark_identity.sql` (M07b) — `UNIQUE
+  (user_id, refsys, local_key)` on `bookmarks` so concurrent two-device
+  pushes converge instead of duplicating. Additive only; verified by
+  `supabase/tests/06_bookmark_identity_test.sql` where runtimes exist.
+- Correction to `20260915000004_review_package_rls.sql`: the draft
+  contained an expression primary key on `package_members`, which
+  Postgres rejects, so no clean rebuild could ever pass it. That
+  statement never executed on any database, hence the in-place correction
+  (surrogate id + exactly-one check) instead of a repair migration.
+
+Rebuild and test gate (run where the Supabase CLI and docker exist):
+
+```sh
+supabase start
+supabase db reset
+for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql; do
+  psql "postgresql://postgres:postgres@localhost:54322/postgres" -v ON_ERROR_STOP=1 -f "$f"
+done
+```
+
+Every test file is one transaction ending in `rollback` (no state
+changes). Any violation raises `EXCEPTION` (non-zero exit); string
+PASS/FAIL selects are banned. Where no stack exists, tooling prints an
+explicit `SUPABASE_TESTS_SKIPPED` notice with a pointer here — never
+silent. Cross-user tests impersonate via `request.jwt.claims` +
+`SET ROLE authenticated` after asserting `auth.uid()` returns the
+expected UUID, so a broken harness fails loudly instead of passing
+vacuously.

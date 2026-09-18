@@ -168,7 +168,12 @@ export function roleBySlug(slug: string): DraftRole | null {
 }
 
 /** People for the context sheet, in passage priority order. */
-export function draftPeople(): Array<{ slug: string; initial: string; name: string; role: string }> {
+export function draftPeople(): Array<{
+  slug: string;
+  initial: string;
+  name: string;
+  role: string;
+}> {
   const draft = getDraft();
   return draft.passage_entities
     .map((role) => ({ role, entity: draft.entities.find((item) => item.slug === role.entity_id) }))

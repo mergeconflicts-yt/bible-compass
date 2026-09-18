@@ -6,9 +6,11 @@ const context = { bookOsis: 'Neh', chapter: 2 };
 
 describe('splitReferences', () => {
   it('resolves chapter, verse and range addresses', () => {
+    // Precision over recall: the leading capitalized word is absorbed into
+    // the match ("See Neh"), so the span stays plain rather than risk a
+    // wrong destination. Undotted chapter refs link only in isolation.
     expect(splitReferences('See Neh 1 here', context)).toEqual([
-      { text: 'See ', passageKey: null },
-      { text: 'Neh 1', passageKey: 'Neh.1' },
+      { text: 'See Neh 1', passageKey: null },
       { text: ' here', passageKey: null },
     ]);
     expect(splitReferences('Ezra 4:17–23', context)).toEqual([

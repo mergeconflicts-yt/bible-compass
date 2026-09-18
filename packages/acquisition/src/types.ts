@@ -2,9 +2,17 @@ import { z } from "zod";
 
 export const acquisitionRequestSchema = z
   .object({
-    releaseKey: z.string().regex(/^release:source:[a-z0-9:.-]+@[a-z0-9._-]+:sha-[0-9a-f]{8,64}$/),
+    releaseKey: z
+      .string()
+      .regex(/^release:source:[a-z0-9:.-]+@[a-z0-9._-]+:sha-[0-9a-f]{8,64}$/),
     componentKey: z.string().min(1),
-    operation: z.enum(["evaluation_import", "drafting", "publication", "external_ai_processing", "embedding"]),
+    operation: z.enum([
+      "evaluation_import",
+      "drafting",
+      "publication",
+      "external_ai_processing",
+      "embedding",
+    ]),
     url: z.string().url(),
     expectedSha256: z.string().regex(/^sha256:[0-9a-f]{64}$/),
     expectedByteSize: z.number().int().positive().optional(),
@@ -27,7 +35,12 @@ export interface AcquisitionConfig {
 }
 
 export const DEFAULT_ACQUISITION_CONFIG: AcquisitionConfig = {
-  allowedHosts: ["example.invalid", "github.com", "raw.githubusercontent.com", "stepbible.github.io"],
+  allowedHosts: [
+    "example.invalid",
+    "github.com",
+    "raw.githubusercontent.com",
+    "stepbible.github.io",
+  ],
   allowedPathPrefixes: ["/", "/STEPBible/"],
   maxByteSize: 50 * 1024 * 1024, // 50MB
   timeoutMs: 30000,

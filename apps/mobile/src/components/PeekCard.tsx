@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View, type AccessibilityRole } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
@@ -102,7 +102,8 @@ export function PeekCard({
     <View
       style={[styles.bubble, { backgroundColor: colors.surface, borderColor: colors.border }]}
       testID={`peek-card-${slug}`}
-      accessibilityRole="dialog"
+      // RN 0.86 types omit the dialog role; assertion preserves screen-reader semantics. Revisit on SDK upgrade.
+      accessibilityRole={'dialog' as unknown as AccessibilityRole}
       accessibilityLabel={`${typeLabel}: ${entity.canonical_name}`}
     >
       <View style={styles.head}>
@@ -131,7 +132,9 @@ export function PeekCard({
           hitSlop={8}
           style={styles.knowMore}
         >
-          <AppText variant="label" color="accent">Know more ›</AppText>
+          <AppText variant="label" color="accent">
+            Know more ›
+          </AppText>
         </Pressable>
       </View>
     </View>

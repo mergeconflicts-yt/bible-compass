@@ -1,6 +1,10 @@
 import * as crypto from "crypto";
 import type { ReconciliationResult } from "./types";
-import { externalMappingSchema, canonicalAttestationSchema, relevanceSchema } from "./types";
+import {
+  externalMappingSchema,
+  canonicalAttestationSchema,
+  relevanceSchema,
+} from "./types";
 
 /**
  * Task 15A — Identity and attestation reconciliation
@@ -17,7 +21,8 @@ export function reconcile15A(): ReconciliationResult {
       upstreamId: "tipnr:person:nehemiah:001",
       canonicalEntityKey: "entity:nehemiah-governor",
       mappingState: "exact" as const,
-      evidence: "TIPNR:NEH:2:person:nehemiah-governor:001 -> entity:nehemiah-governor exact (same person, Neh2 cupbearer)",
+      evidence:
+        "TIPNR:NEH:2:person:nehemiah-governor:001 -> entity:nehemiah-governor exact (same person, Neh2 cupbearer)",
     },
     {
       sourceKey: "source:stepbible:tipnr",
@@ -26,25 +31,30 @@ export function reconcile15A(): ReconciliationResult {
       upstreamId: "tipnr:person:artaxerxes-i:002",
       canonicalEntityKey: "entity:artaxerxes-i",
       mappingState: "exact" as const,
-      evidence: "TIPNR:NEH:2:person:artaxerxes-i:002 -> entity:artaxerxes-i exact",
+      evidence:
+        "TIPNR:NEH:2:person:artaxerxes-i:002 -> entity:artaxerxes-i exact",
     },
     {
       sourceKey: "source:bibledata:structured",
-      sourceReleaseKey: "release:source:bibledata:structured@8799b409:sha-489b5f58",
+      sourceReleaseKey:
+        "release:source:bibledata:structured@8799b409:sha-489b5f58",
       upstreamKind: "person",
       upstreamId: "bibledata:person:artaxerxes",
       canonicalEntityKey: "entity:artaxerxes-i",
       mappingState: "probable" as const,
-      evidence: "BibleData Artaxerxes (no I/II disambiguation) -> entity:artaxerxes-i probable (requires chronology review per 12)",
+      evidence:
+        "BibleData Artaxerxes (no I/II disambiguation) -> entity:artaxerxes-i probable (requires chronology review per 12)",
     },
     {
       sourceKey: "source:bibledata:structured",
-      sourceReleaseKey: "release:source:bibledata:structured@8799b409:sha-489b5f58",
+      sourceReleaseKey:
+        "release:source:bibledata:structured@8799b409:sha-489b5f58",
       upstreamKind: "person",
       upstreamId: "bibledata:person:hanani",
       canonicalEntityKey: "entity:hanani-brother",
       mappingState: "possible" as const,
-      evidence: "BibleData Hanani at Neh1.2 vs TIPNR Hanani at Neh2 — possible same person, not exact for Neh2.1 scope",
+      evidence:
+        "BibleData Hanani at Neh1.2 vs TIPNR Hanani at Neh2 — possible same person, not exact for Neh2.1 scope",
     },
     {
       sourceKey: "source:stepbible:tipnr",
@@ -53,7 +63,8 @@ export function reconcile15A(): ReconciliationResult {
       upstreamId: "tipnr:person:unknown-homonym:999",
       canonicalEntityKey: null,
       mappingState: "distinct" as const,
-      evidence: "TIPNR unknown-homonym distinct from entity:nehemiah-governor — same spelling, different person, not merged",
+      evidence:
+        "TIPNR unknown-homonym distinct from entity:nehemiah-governor — same spelling, different person, not merged",
     },
     {
       sourceKey: "source:stepbible:tipnr",
@@ -62,20 +73,24 @@ export function reconcile15A(): ReconciliationResult {
       upstreamId: "tipnr:person:unresolved:006",
       canonicalEntityKey: null,
       mappingState: "unresolved" as const,
-      evidence: "TIPNR unresolved:006 — no canonical entity, remains unresolved until review",
+      evidence:
+        "TIPNR unresolved:006 — no canonical entity, remains unresolved until review",
     },
     {
       sourceKey: "source:openbible:geocoding",
-      sourceReleaseKey: "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      sourceReleaseKey:
+        "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
       upstreamKind: "place",
       upstreamId: "openbible:ancient:jerusalem",
       canonicalEntityKey: "entity:jerusalem",
       mappingState: "exact" as const,
-      evidence: "openbible:ancient:jerusalem -> entity:jerusalem exact (same ancient place)",
+      evidence:
+        "openbible:ancient:jerusalem -> entity:jerusalem exact (same ancient place)",
     },
     {
       sourceKey: "source:openbible:geocoding",
-      sourceReleaseKey: "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
+      sourceReleaseKey:
+        "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
       upstreamKind: "place",
       upstreamId: "openbible:ancient:susa",
       canonicalEntityKey: "entity:susa-citadel",
@@ -145,7 +160,8 @@ export function reconcile15A(): ReconciliationResult {
     {
       scopeKey: "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
       entityKey: "entity:hanani-brother",
-      roleInPassage: "brother who reported Jerusalem's condition (Neh.1.2, relevant not attested in Neh.2.1)",
+      roleInPassage:
+        "brother who reported Jerusalem's condition (Neh.1.2, relevant not attested in Neh.2.1)",
       importance: "background" as const,
       isAttested: false, // relevant but not attested in Neh.2.1 scope — distinct
     },
@@ -154,14 +170,16 @@ export function reconcile15A(): ReconciliationResult {
   const conflicts = [
     {
       key: "conflict:artaxerxes-i-chronology",
-      reason: "TIPNR established Artaxerxes I vs BibleData probable Artaxerxes (I/II ambiguous) — separate assertions, not merged",
+      reason:
+        "TIPNR established Artaxerxes I vs BibleData probable Artaxerxes (I/II ambiguous) — separate assertions, not merged",
     },
   ];
 
   const unresolved = [
     {
       upstreamId: "tipnr:person:unresolved:006",
-      reason: "No canonical entity — remains unresolved, not counted as occurrence",
+      reason:
+        "No canonical entity — remains unresolved, not counted as occurrence",
     },
   ];
 

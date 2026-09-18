@@ -16,16 +16,17 @@ every person, place, event, object, role, group and term in the whole Bible shou
 cross-referenced entity — with a visible answer to "where else does this appear" and "what is its
 history" — and every book, chapter and passage should be able to carry its own context, not just
 the hand-picked passage units. The existing model has three gaps:
+
 1. timeline_events is a table parallel to entities, not a kind of entity. Events cannot be
-localized, aliased, related to people/places, or looked up the way l person or place can.
+   localized, aliased, related to people/places, or looked up the way l person or place can.
 2. There is no translation-independent index of "every verse or passage this entity appears in."
-verse_anchors (one exact text span, one translation) and passage_entities (role within one
-curated passage) are both narrow, curated, and optional — neither is required to exist for a
-mention to be real, and neither answers a whole-Bible "everywhere Nehemiah appears" query
-cheaply.
+   verse_anchors (one exact text span, one translation) and passage_entities (role within one
+   curated passage) are both narrow, curated, and optional — neither is required to exist for a
+   mention to be real, and neither answers a whole-Bible "everywhere Nehemiah appears" query
+   cheaply.
 3. passages only models custom ranges. There is no addressable "context for this chapter" or
-"context for this book," and no parent/child link from a small passage unit up to its
-containing chapter and book.
+   "context for this book," and no parent/child link from a small passage unit up to its
+   containing chapter and book.
 
 Decision
 

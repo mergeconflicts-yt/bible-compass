@@ -10,7 +10,8 @@ import { jobManifestSchema, type JobManifest, type Bundle } from "./types";
  * - No scholarly corpus → context claims restricted (machine-readable)
  */
 
-const BSB_EXCERPT = "Now in the month of Nisan, in the twentieth year of King Artaxerxes... (Neh.2.1-20 excerpt, 20 verses, ~4KB)";
+const BSB_EXCERPT =
+  "Now in the month of Nisan, in the twentieth year of King Artaxerxes... (Neh.2.1-20 excerpt, 20 verses, ~4KB)";
 
 export function createBundle(options: {
   jobId: string;
@@ -24,9 +25,14 @@ export function createBundle(options: {
   if (!options.gateD2PacketSha.match(/^sha256:[0-9a-f]{64}$/)) {
     // Allow placeholder for synthetic test
     if (!options.gateD2PacketSha.startsWith("sha256:")) {
-      throw Object.assign(new Error("Gate D2 packet SHA required — registry denial prevents bundle creation"), {
-        code: "gate-d2-denied",
-      });
+      throw Object.assign(
+        new Error(
+          "Gate D2 packet SHA required — registry denial prevents bundle creation",
+        ),
+        {
+          code: "gate-d2-denied",
+        },
+      );
     }
   }
 
@@ -47,7 +53,8 @@ export function createBundle(options: {
     target: {
       canon_key: "canon:prot-66",
       reference_system_key: "refsys:eng-v22",
-      scope_key: options.scopeKey as "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      scope_key:
+        options.scopeKey as "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
       language_tag: options.languageTag,
       translation_edition_key: null,
     },
@@ -112,7 +119,11 @@ export function createBundle(options: {
 
   // Internet-disabled prompt template (no URLs, no tool access)
   // Deterministic ordering: sort excerpts by sourceKey/componentKey/locator
-  excerpts.sort((a, b) => `${a.sourceKey}:${a.componentKey}:${a.locator}`.localeCompare(`${b.sourceKey}:${b.componentKey}:${b.locator}`));
+  excerpts.sort((a, b) =>
+    `${a.sourceKey}:${a.componentKey}:${a.locator}`.localeCompare(
+      `${b.sourceKey}:${b.componentKey}:${b.locator}`,
+    ),
+  );
 
   const bundleJson = JSON.stringify({ manifest, excerpts }, null, 0);
   const bundleDigest = `sha256:${crypto.createHash("sha256").update(bundleJson).digest("hex")}`;
@@ -142,7 +153,8 @@ export function createBundle(options: {
 
 export function validateBundle(bundle: Bundle): void {
   const parsed = jobManifestSchema.safeParse(bundle.manifest);
-  if (!parsed.success) throw new Error(`Invalid bundle manifest: ${parsed.error.message}`);
+  if (!parsed.success)
+    throw new Error(`Invalid bundle manifest: ${parsed.error.message}`);
   if (bundle.bundleDigest !== bundle.manifest.input_bundle.bundle_sha256) {
     throw new Error("Bundle digest mismatch");
   }

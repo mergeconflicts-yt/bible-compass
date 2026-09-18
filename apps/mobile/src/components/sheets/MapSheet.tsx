@@ -53,7 +53,9 @@ export function MapSheet({ visible, onClose }: MapSheetProps) {
           >
             <View style={[styles.circuit, { borderColor: colors.accent }]} />
             <View style={[styles.marker, styles.temple, { backgroundColor: colors.accentSoft }]}>
-              <AppText variant="caption" color="accent">Temple</AppText>
+              <AppText variant="caption" color="accent">
+                Temple
+              </AppText>
             </View>
             <View style={styles.leftCol}>
               <MapChip label="Valley Gate" />
@@ -70,7 +72,12 @@ export function MapSheet({ visible, onClose }: MapSheetProps) {
           <AppText variant="body" scripture style={styles.body}>
             {mapCity.description}
           </AppText>
-          <View style={[styles.callout, { backgroundColor: colors.surfaceSubtle, borderColor: colors.border }]}>
+          <View
+            style={[
+              styles.callout,
+              { backgroundColor: colors.surfaceSubtle, borderColor: colors.border },
+            ]}
+          >
             <AppText variant="body">
               <AppText variant="label">Approximate. </AppText>
               {mapCity.uncertainty}
@@ -102,7 +109,12 @@ export function MapSheet({ visible, onClose }: MapSheetProps) {
           <AppText variant="body" scripture style={styles.body}>
             {mapJourney.description}
           </AppText>
-          <View style={[styles.callout, { backgroundColor: colors.surfaceSubtle, borderColor: colors.border }]}>
+          <View
+            style={[
+              styles.callout,
+              { backgroundColor: colors.surfaceSubtle, borderColor: colors.border },
+            ]}
+          >
             <AppText variant="body">
               <AppText variant="label">Schematic. </AppText>
               {mapJourney.uncertainty}

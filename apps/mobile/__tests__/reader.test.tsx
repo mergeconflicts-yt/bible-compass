@@ -1,13 +1,47 @@
-import { fireEvent, render, screen } from '@testing-library/react-native';
-import { AppPreferencesProvider } from '@/theme/ThemeProvider';
-import { selectTranslationId } from '@/content/bsb';
+import { fireEvent, render, screen, within } from '@testing-library/react-native';
+import { act } from 'react';
+import { AppPreferencesProvider, usePreferences } from '@/theme/ThemeProvider';
 import { ReaderView } from '@/components/ReaderView';
+
+/**
+ * Headless Modal double for this file only: react-native's Modal is a
+ * native portal that renders nothing under the test renderer, so the peek
+ * overlay flow would be unprovable without it. The double renders children
+ * inline exactly when `visible`, proving open/dismiss wiring and every
+ * nested flow; portal animation, placement measurement, and focus trapping
+ * remain device-gated by nature (verified on iOS/Android preview builds).
+ */
+jest.mock('react-native', () => {
+  // NB: no object spread here — spreading the module invokes lazy native
+  // getters that crash the test renderer. Replace Modal in place instead;
+  // the module registry is per test file, so other suites are unaffected.
+  const actual = jest.requireActual('react-native') as Record<string, unknown>;
+  const React = jest.requireActual('react') as typeof import('react');
+  function PassthroughModal(props: {
+    visible?: boolean;
+    children?: React.ReactNode;
+    testID?: string;
+  }): React.ReactNode {
+    if (!props.visible) return null;
+    // Preserve the overlay testID on a host View: the real Modal forwards
+    // it to the native container, which has no test-renderer equivalent.
+    const View = actual.View as typeof import('react-native').View;
+    return React.createElement(View, { testID: props.testID }, props.children);
+  }
+  actual.Modal = PassthroughModal;
+  return actual;
+});
 
 function renderReader(bookOsis = 'Neh', chapter = 2, initialVerse: number | null = null) {
   const onBack = jest.fn();
   render(
     <AppPreferencesProvider>
-      <ReaderView bookOsis={bookOsis} chapter={chapter} initialVerse={initialVerse} onBack={onBack} />
+      <ReaderView
+        bookOsis={bookOsis}
+        chapter={chapter}
+        initialVerse={initialVerse}
+        onBack={onBack}
+      />
     </AppPreferencesProvider>,
   );
   return onBack;
@@ -32,17 +66,20 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getByTestId('timeline-sheet')).toBeTruthy();
   });
 
-  it('shows the draft story summary expanded, collapsible on demand', () => {    renderReader();
+  it('shows the draft story summary expanded, collapsible on demand', () => {
+    renderReader();
     expect(screen.getByText(/Jewish cupbearer to the Persian king/)).toBeTruthy();
     fireEvent.press(screen.getByTestId('story-toggle'));
     expect(screen.queryByText(/Jewish cupbearer to the Persian king/)).toBeNull();
   });
 
-  it('opens a peek from the verse-1 anchor, then the full card onward', () => {
+  it('opens a peek from the verse-1 anchor, then the full card onward', async () => {
     renderReader();
     fireEvent.press(screen.getByText('King Artaxerxes'));
-    expect(screen.getByTestId('peek-overlay')).toBeTruthy();
-    expect(screen.getByTestId('peek-card-artaxerxes-i')).toBeTruthy();
+    // The open waits on the measure-timeout fallback headless (measurement
+    // resolves first on device); findBy polls until it lands.
+    expect(await screen.findByTestId('peek-overlay')).toBeTruthy();
+    expect(await screen.findByTestId('peek-card-artaxerxes-i')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-artaxerxes-i-know-more'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
     expect(screen.getByText('Artaxerxes I')).toBeTruthy();
@@ -51,28 +88,31 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getByLabelText('Open Neh 1')).toBeTruthy();
   });
 
-  it('dismisses the peek on tap-outside without opening the full card', () => {
+  it('dismisses the peek on tap-outside without opening the full card', async () => {
     renderReader();
     fireEvent.press(screen.getByText('King Artaxerxes'));
-    expect(screen.getByTestId('peek-card-artaxerxes-i')).toBeTruthy();
+    expect(await screen.findByTestId('peek-card-artaxerxes-i')).toBeTruthy();
     expect(screen.queryByTestId('peek-caret')).toBeNull();
     fireEvent.press(screen.getByTestId('peek-dismiss'));
     expect(screen.queryByTestId('peek-card-artaxerxes-i')).toBeNull();
     expect(screen.queryByTestId('entity-sheet')).toBeNull();
   });
 
-  it('opens the peek from other anchors, then the full card directly', () => {
+  it('opens the peek from other anchors, then the full card directly', async () => {
     renderReader();
-    fireEvent.press(screen.getByText('Sanballat the Horonite'));
-    expect(screen.getByTestId('peek-card-sanballat-the-horonite')).toBeTruthy();
+    // 'Sanballat the Horonite' anchors verses 10 and 19: scope the press
+    // to the verse-10 anchor instead of an ambiguous document query.
+    fireEvent.press(within(screen.getByTestId('verse-10')).getByText('Sanballat the Horonite'));
+    expect(await screen.findByTestId('peek-card-sanballat-the-horonite')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
     expect(screen.getByText(/Grieved by Nehemiah/)).toBeTruthy();
   });
 
-  it('shows the full hierarchy with passage context, profile and a way back', () => {
+  it('shows the full hierarchy with passage context, profile and a way back', async () => {
     renderReader();
-    fireEvent.press(screen.getByText('Sanballat the Horonite'));
+    fireEvent.press(within(screen.getByTestId('verse-10')).getByText('Sanballat the Horonite'));
+    expect(await screen.findByTestId('peek-card-sanballat-the-horonite-know-more')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
     expect(screen.getByText('Sanballat')).toBeTruthy();
@@ -97,18 +137,20 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getByTestId('verse-1')).toBeTruthy();
   });
 
-  it('jumps in place for same-chapter verse links without navigating', () => {
+  it('jumps in place for same-chapter verse links without navigating', async () => {
     const onOpenPassage = jest.fn();
     render(
       <AppPreferencesProvider>
         <ReaderView bookOsis="Neh" chapter={2} onBack={jest.fn()} onOpenPassage={onOpenPassage} />
       </AppPreferencesProvider>,
     );
-    fireEvent.press(screen.getByText('Sanballat the Horonite'));
+    fireEvent.press(within(screen.getByTestId('verse-10')).getByText('Sanballat the Horonite'));
+    expect(await screen.findByTestId('peek-card-sanballat-the-horonite-know-more')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
     fireEvent.press(screen.getByLabelText('Open v10'));
     expect(screen.getByTestId('verse-10-target')).toBeTruthy();
-    expect(screen.getByTestId('entity-sheet')).toBeTruthy();
+    // Link taps dismiss layers and navigate: the sheet closes on the jump.
+    expect(screen.queryByTestId('entity-sheet')).toBeNull();
     expect(onOpenPassage).not.toHaveBeenCalled();
   });
 
@@ -119,22 +161,36 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
   });
 
   it('reads a Tamil chapter with a localized title and no unreviewed anchors', () => {
-    // Preset at module level: the provider mounts on BSB but the committed
-    // tree already read the Tamil selection, with no re-render after.
-    // English draft context still surrounds the passage; only anchors wait
-    // for per-translation review.
-    selectTranslationId('tam_irv');
-    renderReader();
-    expect(screen.getByText('நெகேமியா 2')).toBeTruthy();
+    // Switch through the real preferences path: the provider owns the
+    // translation state, so a module preset alone never reaches the reader.
+    let switchTranslation: ((id: string) => void) | null = null;
+    function Capture() {
+      switchTranslation = usePreferences().setTranslationId;
+      return null;
+    }
+    render(
+      <AppPreferencesProvider>
+        <Capture />
+        <ReaderView bookOsis="Neh" chapter={2} onBack={jest.fn()} />
+      </AppPreferencesProvider>,
+    );
+    void act(() => {
+      switchTranslation?.('tam_irv');
+    });
+    // The header splits title and translation badge across nodes, so the
+    // full title only matches as a substring — content provably present.
+    expect(screen.getByText('நெகேமியா 2', { exact: false })).toBeTruthy();
+    // Tamil has no reviewed anchors: English draft context surrounds the
+    // passage, but no anchor opens the context layer.
     expect(screen.queryByText('King Artaxerxes')).toBeNull();
-    selectTranslationId('BSB');
   });
 });
 
 describe('ReaderView (plain Scripture mode)', () => {
   it('reads any bundled chapter honestly without faked context', () => {
     renderReader('Gen', 1);
-    expect(screen.getByText('Genesis 1')).toBeTruthy();
+    // Same split-node header as above: badge rides alongside the title.
+    expect(screen.getByText('Genesis 1', { exact: false })).toBeTruthy();
     expect(screen.queryByTestId('understand-passage')).toBeNull();
     expect(screen.queryByTestId('story-toggle')).toBeNull();
     expect(screen.getByText(/reviewed context is not ready/)).toBeTruthy();

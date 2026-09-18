@@ -6,8 +6,19 @@ export const externalMappingSchema = z
     sourceReleaseKey: z.string().regex(/^release:source:/),
     upstreamKind: z.string().min(1),
     upstreamId: z.string().min(1),
-    canonicalEntityKey: z.string().regex(/^entity:[a-z0-9-]+$/).nullable(),
-    mappingState: z.enum(["exact", "probable", "possible", "distinct", "unresolved", "composite", "split"]),
+    canonicalEntityKey: z
+      .string()
+      .regex(/^entity:[a-z0-9-]+$/)
+      .nullable(),
+    mappingState: z.enum([
+      "exact",
+      "probable",
+      "possible",
+      "distinct",
+      "unresolved",
+      "composite",
+      "split",
+    ]),
     evidence: z.string().min(1),
   })
   .strict();
@@ -17,8 +28,21 @@ export const canonicalAttestationSchema = z
     entityKey: z.string().regex(/^entity:[a-z0-9-]+$/),
     scopeKey: z.string().regex(/^scope:/),
     referenceUnit: z.string().min(1),
-    kind: z.enum(["primary_subject", "participant", "location", "topic", "genealogical_member", "implied_referent", "disputed_referent"]),
-    explicitness: z.enum(["explicit", "strongly_implied", "inferred", "disputed"]),
+    kind: z.enum([
+      "primary_subject",
+      "participant",
+      "location",
+      "topic",
+      "genealogical_member",
+      "implied_referent",
+      "disputed_referent",
+    ]),
+    explicitness: z.enum([
+      "explicit",
+      "strongly_implied",
+      "inferred",
+      "disputed",
+    ]),
     claimKey: z.string().regex(/^claim:[a-z0-9-]+$/),
     sourceReleaseKey: z.string().min(1),
     sourceLocator: z.string().min(1),

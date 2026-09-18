@@ -419,6 +419,7 @@ application, tombstones, cursored pull, and documented conflict rules. Never syn
 queries, selected Scripture text, share recipients, or anonymous history without explicit consent.
 
 Required implementation sequence
+
 1. Resolve canon, edition, rights, locale, reviewer, and fallback decisions.
 2. Adopt a replacement ADR for this logical model.
 3. Implement versioned content schemas and golden fixtures.

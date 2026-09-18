@@ -99,20 +99,20 @@ The complete reader works without an account. An account is offered only for cro
 
 ## Required screens
 
-| Screen | Required outcome |
-|---|---|
-| Home | Daily verse, Continue reading and supported-content entry |
-| Bible browser | Select book and chapter |
-| Passage reader | Continuous Scripture, context anchor and inline anchors |
-| Daily verse | Verse, The moment and surrounding passage action |
-| Verse card composer | Theme, ratio, preview, Share and Download |
-| Context drawer | Who, Where, When, What, Before and Stakes |
-| Entity profile | Reusable profile and In this passage |
-| Timeline | Passage-centered historical orientation |
-| Historical map | Reviewed asset, hotspots, legend and uncertainty |
-| Search | Reference-first plus downloaded content search |
-| Saved | Bookmarks and recent reading |
-| Settings | Translation, typography, offline, notification, privacy and account |
+| Screen              | Required outcome                                                    |
+| ------------------- | ------------------------------------------------------------------- |
+| Home                | Daily verse, Continue reading and supported-content entry           |
+| Bible browser       | Select book and chapter                                             |
+| Passage reader      | Continuous Scripture, context anchor and inline anchors             |
+| Daily verse         | Verse, The moment and surrounding passage action                    |
+| Verse card composer | Theme, ratio, preview, Share and Download                           |
+| Context drawer      | Who, Where, When, What, Before and Stakes                           |
+| Entity profile      | Reusable profile and In this passage                                |
+| Timeline            | Passage-centered historical orientation                             |
+| Historical map      | Reviewed asset, hotspots, legend and uncertainty                    |
+| Search              | Reference-first plus downloaded content search                      |
+| Saved               | Bookmarks and recent reading                                        |
+| Settings            | Translation, typography, offline, notification, privacy and account |
 
 ## Functional requirements
 
@@ -139,15 +139,15 @@ The complete reader works without an account. An account is offered only for cro
 
 ## Non-functional requirements
 
-| Area | Starting MVP target |
-|---|---|
-| Cold start | Cached Home or Reader usable within 2.5 seconds at p75 on defined mid-range test devices |
-| Cached passage open | Content visible within 500 ms at p75 |
-| Reader scrolling | No sustained visible jank for the supported chapter at default and maximum text sizes |
-| Image export | Successful within 4 seconds at p75 with recoverable failure |
-| Offline startup | Cached content does not wait for a network timeout |
-| Sync | Retried mutations do not duplicate bookmarks or lose progress |
-| Reliability | At least 99.5 percent crash-free sessions during beta before wider rollout |
+| Area                | Starting MVP target                                                                      |
+| ------------------- | ---------------------------------------------------------------------------------------- |
+| Cold start          | Cached Home or Reader usable within 2.5 seconds at p75 on defined mid-range test devices |
+| Cached passage open | Content visible within 500 ms at p75                                                     |
+| Reader scrolling    | No sustained visible jank for the supported chapter at default and maximum text sizes    |
+| Image export        | Successful within 4 seconds at p75 with recoverable failure                              |
+| Offline startup     | Cached content does not wait for a network timeout                                       |
+| Sync                | Retried mutations do not duplicate bookmarks or lose progress                            |
+| Reliability         | At least 99.5 percent crash-free sessions during beta before wider rollout               |
 
 ## Success measures
 

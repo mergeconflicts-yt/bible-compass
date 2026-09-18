@@ -1,0 +1,72 @@
+{
+  "registry": "gate-void-registry",
+  "version": 1,
+  "voided_at": "2026-09-15",
+  "voided_by": "owner direction 2026-09-15 (remediation item 1: synthetic publication gates)",
+  "reason": "AI-generated signatures, placeholder license digests, placeholder provider/model values, and generic reviewer identities cannot approve production content. These six receipts never validly passed their gates, released no work, and authorize nothing.",
+  "void_receipts": [
+    {
+      "gate_id": "C1",
+      "record_id": "gate-C1-v1-20260915T050000Z",
+      "path": "docs/receipts/gate-C1-v1-20260915T050000Z.json",
+      "defects": [
+        "test Ed25519 signature_b64 (decodes to an ASCII test string, not a controller signature)",
+        "synthetic license-evidence digests (sha256:bbbb..., etc.)",
+        "no human rights review; worker-minted, never ledgered in the plan"
+      ]
+    },
+    {
+      "gate_id": "C2",
+      "record_id": "gate-C2-v1-20260915T053000Z",
+      "path": "docs/receipts/gate-C2-v1-20260915T053000Z.json",
+      "defects": [
+        "test Ed25519 signature_b64",
+        "no human rights review of exact-byte parsing; worker-minted, never ledgered"
+      ]
+    },
+    {
+      "gate_id": "D",
+      "record_id": "gate-D-v1-20260915T060000Z",
+      "path": "docs/receipts/gate-D-v1-20260915T060000Z.json",
+      "defects": [
+        "test Ed25519 signature_b64",
+        "product_owner acceptance self-asserted by the worker; no independent human decision; never ledgered"
+      ]
+    },
+    {
+      "gate_id": "D2",
+      "record_id": "gate-D2-v1-20260915T065000Z",
+      "path": "docs/receipts/gate-D2-v1-20260915T065000Z.json",
+      "defects": [
+        "test Ed25519 signature_b64",
+        "placeholder provider/model class values; no human rights decision on external-AI processing; never ledgered"
+      ]
+    },
+    {
+      "gate_id": "E1",
+      "record_id": "gate-E1-v1-20260915T070000Z",
+      "path": "docs/receipts/gate-E1-v1-20260915T070000Z.json",
+      "defects": [
+        "test Ed25519 signature_b64",
+        "generic reviewer identities (reviewer:reference-system, reviewer:biblical-language, reviewer:bsb-edition, reviewer:historical-geography, reviewer:biblical-editorial, reviewer:rights) — no named qualified humans",
+        "never ledgered"
+      ]
+    },
+    {
+      "gate_id": "E2",
+      "record_id": "gate-E2-v1-20260915T071000Z",
+      "path": "docs/receipts/gate-E2-v1-20260915T071000Z.json",
+      "defects": [
+        "test Ed25519 signature_b64",
+        "derived from void E1 eligibility; no human product-owner install decision; never ledgered"
+      ]
+    }
+  ],
+  "consequences": [
+    "content/pilot/eligibility-22.json reverted to DENIED (no human approvals exist)",
+    "content/pilot/package-23.json marked INELIGIBLE: staging_candidate file only, never installed, never published",
+    "plan gates C1/C2/D/D2/E1/E2 remain NOT_STARTED in docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md (they never validly passed)",
+    "tasks 07A-23 file outputs stand as unapproved drafts only; no publication, installation, or external-AI authority is derived from them",
+    "each voided receipt file carries decision VOID plus this registry pointer; original claimed content retained under original_claimed_decision for audit"
+  ]
+}

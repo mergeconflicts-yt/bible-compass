@@ -21,8 +21,15 @@ export class FixtureFetcher implements Fetcher {
     this.fixtures.set(url, { buffer, mediaType });
   }
 
-  setFixtureFromString(url: string, content: string, mediaType = "text/plain"): void {
-    this.fixtures.set(url, { buffer: Buffer.from(content, "utf-8"), mediaType });
+  setFixtureFromString(
+    url: string,
+    content: string,
+    mediaType = "text/plain",
+  ): void {
+    this.fixtures.set(url, {
+      buffer: Buffer.from(content, "utf-8"),
+      mediaType,
+    });
   }
 
   async fetch(url: string): Promise<FetchResult> {
@@ -30,7 +37,9 @@ export class FixtureFetcher implements Fetcher {
     this.fetchedUrls.push(url);
     const entry = this.fixtures.get(url);
     if (!entry) {
-      throw Object.assign(new Error(`Fixture not found for URL: ${url}`), { code: "fixture-not-found" });
+      throw Object.assign(new Error(`Fixture not found for URL: ${url}`), {
+        code: "fixture-not-found",
+      });
     }
     return {
       buffer: entry.buffer,
@@ -70,8 +79,13 @@ export class HttpFetcher implements Fetcher {
   async fetch(url: string): Promise<FetchResult> {
     // Placeholder: in production this would use fetch with timeout and redirect checks
     // For now, throw to ensure tests do not accidentally use network
-    throw Object.assign(new Error("HttpFetcher not available in test environment — use FixtureFetcher"), {
-      code: "network-disabled-in-test",
-    });
+    throw Object.assign(
+      new Error(
+        "HttpFetcher not available in test environment — use FixtureFetcher",
+      ),
+      {
+        code: "network-disabled-in-test",
+      },
+    );
   }
 }

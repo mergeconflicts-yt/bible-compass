@@ -6,21 +6,21 @@ Execute phases in order. Give an AI agent one bounded task at a time. A phase is
 
 ## Phase summary
 
-| Phase | Deliverable | Exit gate |
-|---|---|---|
-| 0 | Rights and product decisions | Translation, identifiers, locale, domain and review model approved |
-| 1 | Repository foundation | Fresh clone, checks and both development builds pass |
-| 2 | Design system and navigation | Route shells and accessibility primitives work on iOS and Android |
-| 3 | Domain and content contracts | Valid fixture passes and malformed content fails clearly |
-| 4 | Supabase foundation | Migrations reproduce backend and RLS allow and deny tests pass |
-| 5 | Bible reader | Nehemiah 2 browse, read and resume pass |
-| 6 | Context, timeline and map | Context preserves reading position and identifies sources |
-| 7 | Daily verse and sharing | Three image ratios export safely and deep-link to context |
-| 8 | Offline, search and saved library | Airplane-mode journey and queued writes pass |
-| 9 | Optional authentication and sync | Two-device and cross-user security tests pass |
-| 10 | Notifications and shared-link landing | Opt-in timing and installed or absent app links work |
-| 11 | Hardening | Performance, accessibility, privacy and operations pass |
-| 12 | Beta and production | Signed release, monitoring and rollback are ready |
+| Phase | Deliverable                           | Exit gate                                                          |
+| ----- | ------------------------------------- | ------------------------------------------------------------------ |
+| 0     | Rights and product decisions          | Translation, identifiers, locale, domain and review model approved |
+| 1     | Repository foundation                 | Fresh clone, checks and both development builds pass               |
+| 2     | Design system and navigation          | Route shells and accessibility primitives work on iOS and Android  |
+| 3     | Domain and content contracts          | Valid fixture passes and malformed content fails clearly           |
+| 4     | Supabase foundation                   | Migrations reproduce backend and RLS allow and deny tests pass     |
+| 5     | Bible reader                          | Nehemiah 2 browse, read and resume pass                            |
+| 6     | Context, timeline and map             | Context preserves reading position and identifies sources          |
+| 7     | Daily verse and sharing               | Three image ratios export safely and deep-link to context          |
+| 8     | Offline, search and saved library     | Airplane-mode journey and queued writes pass                       |
+| 9     | Optional authentication and sync      | Two-device and cross-user security tests pass                      |
+| 10    | Notifications and shared-link landing | Opt-in timing and installed or absent app links work               |
+| 11    | Hardening                             | Performance, accessibility, privacy and operations pass            |
+| 12    | Beta and production                   | Signed release, monitoring and rollback are ready                  |
 
 ## Phase 0 Resolve decisions and rights
 

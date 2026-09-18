@@ -43,14 +43,26 @@
     "expiry": "2026-12-15",
     "territory": "global (per BSB terms, confirm territories)",
     "attribution": "BSB attribution required in draft lineage, not in prompt to provider beyond excerpt itself",
-    "prohibited": ["publication", "embedding", "translation", "paraphrase of Scripture by AI", "training"]
+    "prohibited": [
+      "publication",
+      "embedding",
+      "translation",
+      "paraphrase of Scripture by AI",
+      "training"
+    ]
   },
   "externalSources": [
     {
       "sourceKey": "source:stepbible:tipnr",
       "releaseKey": "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b",
       "componentKey": "tipnr-structured-fields",
-      "pathsOrFields": ["Proper Nouns/TIPNR:person", "Proper Nouns/TIPNR:place", "Proper Nouns/TIPNR:originalName", "Proper Nouns/TIPNR:familyRelation", "Proper Nouns/TIPNR:reference"],
+      "pathsOrFields": [
+        "Proper Nouns/TIPNR:person",
+        "Proper Nouns/TIPNR:place",
+        "Proper Nouns/TIPNR:originalName",
+        "Proper Nouns/TIPNR:familyRelation",
+        "Proper Nouns/TIPNR:reference"
+      ],
       "fieldSelector": "6 structured fields only, no Claude descriptions, no geodata",
       "excerptLimit": "Neh.2-relevant persons/places only (5 entities for Neh.2 slice)",
       "licenseSpdx": "CC-BY-4.0",
@@ -59,13 +71,19 @@
         "providerRetention": "30 days, no training",
         "draftDerivativeStorage": "private quarantine + private_staging draft only"
       },
-      "excludedFields": ["brief/short/article descriptions (Claude 3)", "geodata", "embedded Scripture text"]
+      "excludedFields": [
+        "brief/short/article descriptions (Claude 3)",
+        "geodata",
+        "embedded Scripture text"
+      ]
     },
     {
       "sourceKey": "source:stepbible:tvtms",
       "releaseKey": "release:source:stepbible:tvtms@ae39711d:sha-63058e0f",
       "componentKey": "tvtms-mappings",
-      "pathsOrFields": ["Versification/TVTMS: mappings for Neh.2.1-20 split/merge"],
+      "pathsOrFields": [
+        "Versification/TVTMS: mappings for Neh.2.1-20 split/merge"
+      ],
       "excerptLimit": "22 mappings for Neh2 only",
       "licenseSpdx": "CC-BY-4.0",
       "operation": "external_ai_processing",
@@ -77,7 +95,11 @@
       "sourceKey": "source:bibledata:structured",
       "releaseKey": "release:source:bibledata:structured@8799b409:sha-489b5f58",
       "componentKey": "bibledata-people+relationships+personVerse",
-      "pathsOrFields": ["BibleData-Person.csv: Neh2 persons", "BibleData-PersonRelationship.csv", "BibleData-PersonVerse.csv"],
+      "pathsOrFields": [
+        "BibleData-Person.csv: Neh2 persons",
+        "BibleData-PersonRelationship.csv",
+        "BibleData-PersonVerse.csv"
+      ],
       "excerptLimit": "Neh2 persons only (Nehemiah, Artaxerxes, Hanani) for discrepancy context",
       "licenseSpdx": "CC-BY-4.0",
       "operation": "external_ai_processing",
@@ -89,7 +111,9 @@
       "sourceKey": "source:macula:hebrew",
       "releaseKey": "release:source:macula:hebrew@47db250b:sha-f125eed6",
       "componentKey": "macula-hebrew-lowfat-neh2",
-      "pathsOrFields": ["WLC/lowfat/16-Neh-002-lowfat.xml: token/lemma/morph for Neh.2.1/2.4"],
+      "pathsOrFields": [
+        "WLC/lowfat/16-Neh-002-lowfat.xml: token/lemma/morph for Neh.2.1/2.4"
+      ],
       "excerptLimit": "5 WLC tokens for Neh.2.1/2.4 only",
       "licenseSpdx": "CC-BY-4.0",
       "operation": "external_ai_processing",
@@ -101,7 +125,9 @@
       "sourceKey": "source:openbible:geocoding",
       "releaseKey": "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4",
       "componentKey": "openbible-core-geocoding",
-      "pathsOrFields": ["data/ancient.jsonl: Jerusalem/Susa entries with coordinates/confidence"],
+      "pathsOrFields": [
+        "data/ancient.jsonl: Jerusalem/Susa entries with coordinates/confidence"
+      ],
       "excerptLimit": "2 ancient + 3 modern for Jerusalem/Susa only",
       "licenseSpdx": "CC-BY-4.0",
       "operation": "external_ai_processing",
@@ -128,7 +154,12 @@
   "expiry": "2026-12-15",
   "territory": "global pending confirm (BSB territories OPEN per CONTENT_RIGHTS.md)",
   "attribution": "All drafts must retain lineage: BSB BSB attribution + STEPBible CC-BY-4.0 etc., per component",
-  "prohibitedForAll": ["publication without human approval", "embedding", "translation of Scripture by AI", "unspecific 'Bible content' permission"],
+  "prohibitedForAll": [
+    "publication without human approval",
+    "embedding",
+    "translation of Scripture by AI",
+    "unspecific 'Bible content' permission"
+  ],
   "gateD2Request": {
     "requiresApprovalFor": [
       "BSB bsb-neh2-excerpts external_ai_processing with 30-day no-training retention",

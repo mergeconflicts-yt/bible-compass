@@ -24,7 +24,13 @@ const draftPackageSchema = z
 
 export interface ValidationResult {
   valid: boolean;
-  findings: { code: string; severity: "blocking" | "warning" | "info"; recordKey: string; pointer: string; message: string }[];
+  findings: {
+    code: string;
+    severity: "blocking" | "warning" | "info";
+    recordKey: string;
+    pointer: string;
+    message: string;
+  }[];
   quarantinedPath: string | null;
   draftPath: string | null;
   reportSha256: string;
@@ -69,7 +75,15 @@ export function validateSubmission(options: {
       if (seen.has(r.record_key)) {
         return {
           valid: false,
-          findings: [{ code: "duplicate-key", severity: "blocking", recordKey: r.record_key, pointer: "/records", message: `Duplicate record_key ${r.record_key}` }],
+          findings: [
+            {
+              code: "duplicate-key",
+              severity: "blocking",
+              recordKey: r.record_key,
+              pointer: "/records",
+              message: `Duplicate record_key ${r.record_key}`,
+            },
+          ],
           quarantinedPath: null,
           draftPath: null,
           reportSha256: `sha256:${crypto.createHash("sha256").update(rawText).digest("hex")}`,
@@ -81,7 +95,15 @@ export function validateSubmission(options: {
     const msg = e instanceof Error ? e.message : String(e);
     return {
       valid: false,
-      findings: [{ code: "invalid-json", severity: "blocking", recordKey: "", pointer: "/", message: msg }],
+      findings: [
+        {
+          code: "invalid-json",
+          severity: "blocking",
+          recordKey: "",
+          pointer: "/",
+          message: msg,
+        },
+      ],
       quarantinedPath: null,
       draftPath: null,
       reportSha256: `sha256:${crypto.createHash("sha256").update(rawText).digest("hex")}`,
@@ -110,7 +132,15 @@ export function validateSubmission(options: {
   if (data.package_kind !== "entity-profile-draft") {
     return {
       valid: false,
-      findings: [{ code: "package-kind-mismatch", severity: "blocking", recordKey: "", pointer: "/package_kind", message: `Expected entity-profile-draft got ${data.package_kind}` }],
+      findings: [
+        {
+          code: "package-kind-mismatch",
+          severity: "blocking",
+          recordKey: "",
+          pointer: "/package_kind",
+          message: `Expected entity-profile-draft got ${data.package_kind}`,
+        },
+      ],
       quarantinedPath: null,
       draftPath: null,
       reportSha256: `sha256:${crypto.createHash("sha256").update(rawText).digest("hex")}`,
@@ -118,13 +148,21 @@ export function validateSubmission(options: {
   }
 
   // Stable-key/reference/citation/rights checks — synthetic: ensure record has entity_key and language_tag en
-  const first = (data.records[0] as Record<string, unknown>);
+  const first = data.records[0] as Record<string, unknown>;
   const entityKey = first["entity_key"] as string | undefined;
   const langTag = first["language_tag"] as string | undefined;
   if (!entityKey || langTag !== "en") {
     return {
       valid: false,
-      findings: [{ code: "missing-entity-key", severity: "blocking", recordKey: String(first["record_key"] ?? ""), pointer: "/records/0", message: `Missing entity_key (${String(entityKey)}) or language_tag (${String(langTag)})` }],
+      findings: [
+        {
+          code: "missing-entity-key",
+          severity: "blocking",
+          recordKey: String(first["record_key"] ?? ""),
+          pointer: "/records/0",
+          message: `Missing entity_key (${String(entityKey)}) or language_tag (${String(langTag)})`,
+        },
+      ],
       quarantinedPath: null,
       draftPath: null,
       reportSha256: `sha256:${crypto.createHash("sha256").update(rawText).digest("hex")}`,
@@ -139,12 +177,23 @@ export function validateSubmission(options: {
   const draftPath = path.join(draftDir, `${options.attemptId}.draft.json`);
   if (fs.existsSync(draftPath)) {
     try {
-      const existingDraft = JSON.parse(fs.readFileSync(draftPath, "utf-8")) as { rawSha?: string };
+      const existingDraft = JSON.parse(fs.readFileSync(draftPath, "utf-8")) as {
+        rawSha?: string;
+      };
       const existingRawSha = existingDraft.rawSha as string | undefined;
       if (existingRawSha && existingRawSha !== rawSha) {
         return {
           valid: false,
-          findings: [{ code: "replay-changed-payload", severity: "blocking", recordKey: "", pointer: "/", message: "Replay with different payload under same attemptId rejected" }],
+          findings: [
+            {
+              code: "replay-changed-payload",
+              severity: "blocking",
+              recordKey: "",
+              pointer: "/",
+              message:
+                "Replay with different payload under same attemptId rejected",
+            },
+          ],
           quarantinedPath: null,
           draftPath: null,
           reportSha256: rawSha,
@@ -170,7 +219,10 @@ export function validateSubmission(options: {
 
   // Quarantine as draft (not yet published)
   fs.mkdirSync(draftDir, { recursive: true });
-  const quarantinedPath = path.join(draftDir, `${options.attemptId}.quarantine.json`);
+  const quarantinedPath = path.join(
+    draftDir,
+    `${options.attemptId}.quarantine.json`,
+  );
   // Copy raw to quarantine
   fs.writeFileSync(quarantinedPath, rawText);
   // Derive draft with deterministic fields (add draft_revision, etc.)

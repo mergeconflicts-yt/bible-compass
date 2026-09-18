@@ -76,7 +76,8 @@ export function splitReferences(text: string, context?: PassageContext): RefSpan
     } else if (relativeRaw !== undefined) {
       const verses = relativeRaw.split(',').map((part) => Number(part.trim()));
       const first = verses[0];
-      const last = relativeEndRaw !== undefined ? Number(relativeEndRaw) : verses[verses.length - 1];
+      const last =
+        relativeEndRaw !== undefined ? Number(relativeEndRaw) : verses[verses.length - 1];
       if (first !== undefined && last !== undefined && Number.isInteger(first)) {
         key =
           last === first

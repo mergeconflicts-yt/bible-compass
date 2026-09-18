@@ -35,15 +35,26 @@ export const sourceReleaseSchema = z
     commitOrTag: z
       .string()
       .min(1, "commitOrTag required")
-      .refine((v) => !v.includes("/") && v !== "main" && v !== "master" && v !== "HEAD", {
-        message: "commitOrTag must be immutable tag/commit, not branch",
-      }),
+      .refine(
+        (v) =>
+          !v.includes("/") && v !== "main" && v !== "master" && v !== "HEAD",
+        {
+          message: "commitOrTag must be immutable tag/commit, not branch",
+        },
+      ),
     artifactSha256: z.string().regex(sha256Pattern, "Invalid artifactSha256"),
     byteSize: z.number().int().positive("byteSize must be >0"),
-    licenseEvidenceSha256: z.string().regex(sha256Pattern, "Invalid licenseEvidenceSha256"),
+    licenseEvidenceSha256: z
+      .string()
+      .regex(sha256Pattern, "Invalid licenseEvidenceSha256"),
     requiredAttribution: z.string().min(1, "requiredAttribution required"),
     retrievedAt: z.string().min(1, "retrievedAt required"),
-    status: z.enum(["candidate", "approved_for_evaluation", "rejected", "superseded"]),
+    status: z.enum([
+      "candidate",
+      "approved_for_evaluation",
+      "rejected",
+      "superseded",
+    ]),
   })
   .strict()
   .superRefine((data, ctx) => {
@@ -66,7 +77,10 @@ export const sourceArtifactSchema = z
     sha256: z.string().regex(sha256Pattern),
     quarantinePath: z
       .string()
-      .regex(quarantinePathPattern, "quarantinePath must be content/quarantine/..."),
+      .regex(
+        quarantinePathPattern,
+        "quarantinePath must be content/quarantine/...",
+      ),
   })
   .strict();
 
@@ -74,10 +88,19 @@ export const rightsComponentSchema = z
   .object({
     componentKey: z.string().regex(componentKeyPattern, "Invalid componentKey"),
     releaseKey: z.string().regex(releaseKeyPattern),
-    pathsOrFields: z.array(z.string().min(1)).min(1, "pathsOrFields must have ≥1 entry"),
-    licenseSpdx: z.string().min(1, "licenseSpdx required — one top-level license cannot govern mixed components"),
+    pathsOrFields: z
+      .array(z.string().min(1))
+      .min(1, "pathsOrFields must have ≥1 entry"),
+    licenseSpdx: z
+      .string()
+      .min(
+        1,
+        "licenseSpdx required — one top-level license cannot govern mixed components",
+      ),
     licenseEvidenceUrl: z.string().url().optional(),
-    licenseEvidenceSha256: z.string().regex(sha256Pattern, "Invalid licenseEvidenceSha256"),
+    licenseEvidenceSha256: z
+      .string()
+      .regex(sha256Pattern, "Invalid licenseEvidenceSha256"),
     requiredAttribution: z.string().min(1).optional(),
   })
   .strict();
@@ -110,7 +133,8 @@ export const operationGrantSchema = z
     if (data.state === "unknown") {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "unknown state must be treated as denied — publication must fail",
+        message:
+          "unknown state must be treated as denied — publication must fail",
         path: ["state"],
       });
     }
@@ -118,11 +142,19 @@ export const operationGrantSchema = z
 
 export const approvalRecordSchema = z
   .object({
-    subjectKey: z.string().min(1, "subjectKey required — format release:component"),
-    subjectDigest: z.string().regex(sha256Pattern, "subjectDigest must be sha256:…"),
+    subjectKey: z
+      .string()
+      .min(1, "subjectKey required — format release:component"),
+    subjectDigest: z
+      .string()
+      .regex(sha256Pattern, "subjectDigest must be sha256:…"),
     subjectRevision: z.number().int().positive().optional(),
     reviewerId: z.string().min(1),
-    reviewerRole: z.enum(["product_owner", "rights_reviewer", "editorial_reviewer"]),
+    reviewerRole: z.enum([
+      "product_owner",
+      "rights_reviewer",
+      "editorial_reviewer",
+    ]),
     decision: z.enum(["approved", "rejected"]),
     createdAt: z.string().min(1),
     // Synthetic marker — fixtures must be clearly synthetic, not mistaken for production approval.
@@ -219,7 +251,9 @@ function findLatestApproval(
   // Append-only: latest record by createdAt lexicographically (ISO) wins.
   const filtered = approvals.filter((a) => a.subjectKey === subjectKey);
   if (filtered.length === 0) return undefined;
-  const sorted = [...filtered].sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+  const sorted = [...filtered].sort((a, b) =>
+    a.createdAt.localeCompare(b.createdAt),
+  );
   return sorted[sorted.length - 1];
 }
 
@@ -244,8 +278,12 @@ export function validateOperationGrant(data: unknown): OperationGrant {
       i.message.includes("unknown state must be treated as denied"),
     );
     // Throw with a code-like message so callers can distinguish.
-    const err = new Error(result.error.issues[0]?.message ?? "Grant validation failed");
-    (err as Error & { code?: string }).code = isRightsUnknown ? "rights-unknown" : "invalid-state";
+    const err = new Error(
+      result.error.issues[0]?.message ?? "Grant validation failed",
+    );
+    (err as Error & { code?: string }).code = isRightsUnknown
+      ? "rights-unknown"
+      : "invalid-state";
     throw err;
   }
   if (result.data.state === "unknown") {
@@ -261,7 +299,9 @@ export function validateApprovalRecord(data: unknown): ApprovalRecord {
 
 // Ensures one top-level license cannot govern mixed-license components:
 // Each component must have its own licenseEvidenceSha256 and explicit pathsOrFields.
-export function validateComponentLicenseIsolation(components: RightsComponent[]): void {
+export function validateComponentLicenseIsolation(
+  components: RightsComponent[],
+): void {
   if (components.length === 0) return;
   const byRelease = new Map<string, RightsComponent[]>();
   for (const c of components) {
@@ -286,7 +326,9 @@ export function validateComponentLicenseIsolation(components: RightsComponent[])
     }
     for (const c of comps) {
       if (c.pathsOrFields.length === 0) {
-        throw new Error(`Component ${c.componentKey} must declare explicit pathsOrFields`);
+        throw new Error(
+          `Component ${c.componentKey} must declare explicit pathsOrFields`,
+        );
       }
     }
   }
@@ -300,7 +342,8 @@ export function evaluateAuthorization(
   approvals: ApprovalRecord[],
   release: SourceRelease,
 ): AuthorizationResult {
-  const evaluationDate = request.evaluationDate ?? new Date().toISOString().slice(0, 10);
+  const evaluationDate =
+    request.evaluationDate ?? new Date().toISOString().slice(0, 10);
 
   // 1. Release must be structurally valid and digest-bound
   const releaseParse = sourceReleaseSchema.safeParse(release);
@@ -312,18 +355,35 @@ export function evaluateAuthorization(
     };
   }
   if (release.releaseKey !== request.releaseKey) {
-    return { allowed: false, reason: "release key mismatch", deniedCode: "release-key-mismatch" };
+    return {
+      allowed: false,
+      reason: "release key mismatch",
+      deniedCode: "release-key-mismatch",
+    };
   }
-  if (!sha256Pattern.test(release.artifactSha256) || !sha256Pattern.test(release.licenseEvidenceSha256)) {
-    return { allowed: false, reason: "release digests not bound (fail-closed)", deniedCode: "digest-not-bound" };
+  if (
+    !sha256Pattern.test(release.artifactSha256) ||
+    !sha256Pattern.test(release.licenseEvidenceSha256)
+  ) {
+    return {
+      allowed: false,
+      reason: "release digests not bound (fail-closed)",
+      deniedCode: "digest-not-bound",
+    };
   }
 
   // 2. Exact grant for component+operation must exist and be allowed
   const grant = grants.find(
-    (g) => g.componentKey === request.componentKey && g.operation === request.operation,
+    (g) =>
+      g.componentKey === request.componentKey &&
+      g.operation === request.operation,
   );
   if (!grant) {
-    return { allowed: false, reason: "no grant for component/operation", deniedCode: "no-grant" };
+    return {
+      allowed: false,
+      reason: "no grant for component/operation",
+      deniedCode: "no-grant",
+    };
   }
   if (grant.state !== "allowed") {
     return {
@@ -336,13 +396,36 @@ export function evaluateAuthorization(
 
   // 3. Expiry / territory / language limits
   if (isExpired(grant, evaluationDate)) {
-    return { allowed: false, reason: "grant expired or not yet effective", deniedCode: "grant-expired", grant };
+    return {
+      allowed: false,
+      reason: "grant expired or not yet effective",
+      deniedCode: "grant-expired",
+      grant,
+    };
   }
-  if (grant.territory && request.territory && grant.territory !== request.territory) {
-    return { allowed: false, reason: "territory not allowed", deniedCode: "territory-mismatch", grant };
+  if (
+    grant.territory &&
+    request.territory &&
+    grant.territory !== request.territory
+  ) {
+    return {
+      allowed: false,
+      reason: "territory not allowed",
+      deniedCode: "territory-mismatch",
+      grant,
+    };
   }
-  if (grant.languageTag && request.languageTag && grant.languageTag !== request.languageTag) {
-    return { allowed: false, reason: "language not allowed", deniedCode: "language-mismatch", grant };
+  if (
+    grant.languageTag &&
+    request.languageTag &&
+    grant.languageTag !== request.languageTag
+  ) {
+    return {
+      allowed: false,
+      reason: "language not allowed",
+      deniedCode: "language-mismatch",
+      grant,
+    };
   }
   // If grant has territory/language restriction but request omits it, deny when restriction is explicit
   // (fail-closed: ambiguous context cannot default to allowed).
@@ -351,10 +434,21 @@ export function evaluateAuthorization(
   const subjectKey = `${request.releaseKey}:${request.componentKey}`;
   const approval = findLatestApproval(approvals, subjectKey);
   if (!approval || approval.decision !== "approved") {
-    return { allowed: false, reason: "no approved approval record for release:component", deniedCode: "no-approval", grant };
+    return {
+      allowed: false,
+      reason: "no approved approval record for release:component",
+      deniedCode: "no-approval",
+      grant,
+    };
   }
   if (!sha256Pattern.test(approval.subjectDigest)) {
-    return { allowed: false, reason: "approval digest not bound", deniedCode: "digest-not-bound", grant, approval };
+    return {
+      allowed: false,
+      reason: "approval digest not bound",
+      deniedCode: "digest-not-bound",
+      grant,
+      approval,
+    };
   }
   // Digest must bind the acquired bytes or license evidence — synthetic fixtures use synthetic digests
   // but production must match the release artifact. Here we only enforce syntactic binding.
@@ -363,10 +457,18 @@ export function evaluateAuthorization(
   // If any later rejected exists, latest would be rejected and we already returned no-approval.
 
   // 5. External AI policy — explicit deny unless explicitly allowed
-  if (request.operation === "external_ai_processing" || request.operation === "embedding") {
+  if (
+    request.operation === "external_ai_processing" ||
+    request.operation === "embedding"
+  ) {
     // Already requires grant.state === 'allowed'; this block documents the policy.
     if (grant.state !== "allowed") {
-      return { allowed: false, reason: "external AI operation not explicitly allowed", deniedCode: "grant-denied", grant };
+      return {
+        allowed: false,
+        reason: "external AI operation not explicitly allowed",
+        deniedCode: "grant-denied",
+        grant,
+      };
     }
   }
 

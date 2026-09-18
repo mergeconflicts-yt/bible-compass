@@ -128,6 +128,18 @@ export function parseReference(input: string): ParsedReference {
   return { kind: 'range', start, end, canonicalKey };
 }
 
+/**
+ * Display label for a whole chapter, e.g. `Nehemiah 2`. Falls back to the
+ * raw coordinates for locations the registry does not know.
+ */
+export function chapterLabel(bookOsis: string, chapter: number): string {
+  try {
+    return formatReference(parseReference(`${bookOsis}.${chapter}`));
+  } catch {
+    return `${bookOsis} ${chapter}`;
+  }
+}
+
 /** Human-readable label, e.g. `Nehemiah 2:1–8` or `Nehemiah 2`. Display only — never a key. */
 export function formatReference(ref: ParsedReference): string {
   const entry = bookByOsis(ref.start.book);

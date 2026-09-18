@@ -1,0 +1,72 @@
+{
+  "attempt_id": "task:mobile-sync:07b:attempt-1",
+  "task_id": "M07b",
+  "task_title": "Sync engine: idempotent push + cursored pull, BSB-only, union merge",
+  "result": "PASS",
+  "user_visible_outcome": "Signed-in readers now sync chapter bookmarks across devices: local bookmark actions upload in order when online, and bookmarks saved on another device appear in the Saved library after sign-in or relaunch. Anonymous readers see no change; non-BSB translations stay on-device only.",
+  "files_changed": [
+    "apps/mobile/src/content/syncEngine.ts (new: pure push-then-pull engine, Zod-validated payloads/remote rows, BSB-only identity refsys:eng-v22 + {book}.{chapter}, op-log replay, tombstone-wins removes by location, union-merge pull with earliest-created_at, cursor write, typed SyncError)",
+    "apps/mobile/src/content/bookmarkStore.ts (BookmarkRepository gains ackOps + applyRemoteBookmarks; no behavior change to existing reads/toggles)",
+    "apps/mobile/src/infrastructure/sqlite/bookmarks.ts (transactional ackOps delete + applyRemoteBookmarks insert-missing/earliest-wins, local id kept stable, no outbox echo)",
+    "apps/mobile/src/infrastructure/sqlite/syncState.ts (new: SqliteSyncState on sync_state_006, fail-closed null reads)",
+    "apps/mobile/src/infrastructure/supabase/bookmarksSync.ts (new: sole supabase-js owner for sync; upsert-by-id adds, delete-by-location removes, ordered pull; RLS is the boundary, anon key only)",
+    "apps/mobile/app/_layout.tsx (initializes the engine on the shared handle when a sync project is configured; post-restore sync is fire-and-forget so offline startup never waits)",
+    "apps/mobile/src/components/SettingsView.tsx (fires a silent sync after successful sign-in for first-sign-in union merge without a restart)",
+    "apps/mobile/__tests__/sync.test.ts (new: 12 fake-based engine tests + 1 real-engine adapter test)",
+    "apps/mobile/__tests__/tabs.test.tsx (bookmark stub gains the two new repository methods)",
+    "docs/MOBILE_INSTALL_PLAN.md (M07b DONE code/tests, exit gate pending runtime)"
+  ],
+  "files_not_changed": [
+    "No reminder work (M07c; expo-notifications approval still open)",
+    "No Edge Function for cloud account deletion (deleteAccount still reports cloud pending)",
+    "No server migration (reuses 20260915000006_user_library as-is; no unique constraint added)",
+    "No new dependency, permission, or native module (supabase-js 2.116.0 already approved)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint (M07b files)",
+      "exit_code": 0,
+      "output": "0 errors, 0 warnings on all 10 touched app/test files"
+    },
+    {
+      "command": "jest __tests__/sync.test.ts",
+      "exit_code": 0,
+      "output": "13 passed (12 engine + 1 real-engine adapter)"
+    },
+    {
+      "command": "jest sync + bookmarks + auth + tabs",
+      "exit_code": 0,
+      "output": "48 passed"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "20 passed / 3 failed suites; 199 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md: reader 8, cards 1, autolink 1)"
+    },
+    {
+      "command": "prettier --check (M07b files)",
+      "exit_code": 0,
+      "output": "clean"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "needs_from_owner": [
+    "Supabase project + applied 20260915000006_user_library migration + Apple/Google OAuth credentials (M07 exit gate)",
+    "iOS + Android devices and expired-session + cross-user test accounts for two-device + denial runs",
+    "expo-notifications written approval (M07c reminder)",
+    "Edge Function for cloud account deletion (M07a/M07b prerequisite, proposed as separate decision)",
+    "Follow-up decision: server-side dedupe unique index on (user_id, refsys, local_key) — v1 tolerates cross-device duplicate rows at the same location (client merges by location, earliest wins)",
+    "Device verification: supabase-js schema() query + upsert on Hermes, OAuth redirect on both platforms"
+  ],
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID). Sync payloads carry locations (translation, book, chapter), never verse text.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-sync:07b:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M07b DONE code/tests; M07c BLOCKED on notifications dep; M08 BLOCKED on M01-M07)",
+  "data_kind": "code+tests only; no Scripture text added or redistributed; no credentials committed"
+}

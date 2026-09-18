@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { Screen } from '@/components/Screen';
 import { StateView } from '@/components/StateView';
 import { ReaderView } from '@/components/ReaderView';
 import { usePreferences } from '@/theme/ThemeProvider';
-import { getChapter } from '@/content/bsb';
+import { getPassageContent } from '@/content/passageStore';
+import { recordRecent } from '@/content/recentStore';
 import {
   formatReference,
   parseReference,
@@ -23,6 +25,20 @@ export default function PassageScreen() {
   const preferences = usePreferences();
   const { reference } = useLocalSearchParams<{ reference: string }>();
   const raw = Array.isArray(reference) ? reference[0] : (reference ?? '');
+  const translationId = preferences.translationId;
+
+  // On-device recents: single-chapter opens are recorded best-effort and
+  // never block the reader (recordRecent never rejects).
+  useEffect(() => {
+    try {
+      const ref = parseReference(raw);
+      if (ref.kind !== 'range' || ref.start.chapter === ref.end.chapter) {
+        void recordRecent(translationId, ref.start.book, ref.start.chapter);
+      }
+    } catch {
+      // Malformed deep link: nothing to record, the error state below handles it.
+    }
+  }, [raw, translationId]);
 
   let parsed: ParsedReference | null = null;
   let parseError: string | null = null;
@@ -69,7 +85,11 @@ export default function PassageScreen() {
     );
   }
 
-  const content = getChapter(parsed.start.book, parsed.start.chapter, preferences.translationId);
+  const content = getPassageContent(
+    parsed.start.book,
+    parsed.start.chapter,
+    preferences.translationId,
+  );
   if (!content) {
     const label = formatReference(parsed);
     return (

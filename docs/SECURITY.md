@@ -11,13 +11,13 @@
 
 ## Trust boundaries
 
-| Boundary | Trusted capabilities | Prohibited capabilities |
-|---|---|---|
-| Mobile app | Render, validate, cache and queue user actions | Publish content or hold admin credentials |
-| Postgres and RLS | Enforce publication and ownership | Trust client-side button visibility |
-| Edge Functions | Use server secrets and enforce idempotency | Act as an untyped proxy for every table |
-| Import process | Validate and create approved content versions | Automatically approve AI output |
-| CI and EAS | Build signed artifacts with scoped secrets | Print secrets or upload them into artifacts |
+| Boundary         | Trusted capabilities                           | Prohibited capabilities                     |
+| ---------------- | ---------------------------------------------- | ------------------------------------------- |
+| Mobile app       | Render, validate, cache and queue user actions | Publish content or hold admin credentials   |
+| Postgres and RLS | Enforce publication and ownership              | Trust client-side button visibility         |
+| Edge Functions   | Use server secrets and enforce idempotency     | Act as an untyped proxy for every table     |
+| Import process   | Validate and create approved content versions  | Automatically approve AI output             |
+| CI and EAS       | Build signed artifacts with scoped secrets     | Print secrets or upload them into artifacts |
 
 ## Authentication
 
@@ -65,14 +65,14 @@ Apply ownership checks to select, insert, update and delete. Validate inserted o
 
 ## Secrets
 
-| Credential | Allowed location |
-|---|---|
-| Supabase URL and public client key | Typed public application configuration |
-| Supabase service role | Server or CI secret store only |
-| Push credentials | EAS or server secret store only |
-| Sentry upload token | CI secret store only |
-| Store signing credentials | EAS or platform-managed credential store |
-| Licensed source credentials | Restricted import environment only |
+| Credential                         | Allowed location                         |
+| ---------------------------------- | ---------------------------------------- |
+| Supabase URL and public client key | Typed public application configuration   |
+| Supabase service role              | Server or CI secret store only           |
+| Push credentials                   | EAS or server secret store only          |
+| Sentry upload token                | CI secret store only                     |
+| Store signing credentials          | EAS or platform-managed credential store |
+| Licensed source credentials        | Restricted import environment only       |
 
 The public Supabase client key is not an authorization mechanism. RLS is the authorization mechanism.
 

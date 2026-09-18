@@ -205,8 +205,18 @@ export function ContextSheet({
             ))}
           </View>
           <View style={styles.historyActions}>
-            <Button title="Timeline ›" variant="secondary" onPress={onOpenTimeline} testID="context-open-timeline" />
-            <Button title="Historical map ›" variant="secondary" onPress={onOpenMap} testID="context-open-map" />
+            <Button
+              title="Timeline ›"
+              variant="secondary"
+              onPress={onOpenTimeline}
+              testID="context-open-timeline"
+            />
+            <Button
+              title="Historical map ›"
+              variant="secondary"
+              onPress={onOpenMap}
+              testID="context-open-map"
+            />
           </View>
           <ReviewBox />
         </View>

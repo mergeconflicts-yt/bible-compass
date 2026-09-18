@@ -8,7 +8,9 @@ export const jobManifestSchema = z
     target: z.object({
       canon_key: z.string().regex(/^canon:prot-66$/),
       reference_system_key: z.string().regex(/^refsys:eng-v22$/),
-      scope_key: z.string().regex(/^scope:neh-2:refsys:eng-v22:Neh\.2\.1-Neh\.2\.20$/),
+      scope_key: z
+        .string()
+        .regex(/^scope:neh-2:refsys:eng-v22:Neh\.2\.1-Neh\.2\.20$/),
       language_tag: z.enum(["en", "te", "ta"]),
       translation_edition_key: z.string().nullable(),
     }),

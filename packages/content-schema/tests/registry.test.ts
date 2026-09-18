@@ -45,7 +45,8 @@ function makeGrant(overrides: Partial<OperationGrant> = {}): OperationGrant {
 
 function makeApproval(overrides: Partial<ApprovalRecord> = {}): ApprovalRecord {
   return {
-    subjectKey: "release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c:tipnr-structured-fields",
+    subjectKey:
+      "release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c:tipnr-structured-fields",
     subjectDigest: SYNTH_SHA,
     reviewerId: "synthetic-rights-reviewer-001",
     reviewerRole: "rights_reviewer",
@@ -62,10 +63,16 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
       expect(validateSourceRelease(makeRelease())).toBeTruthy();
     });
     it("rejects release with branch as commit", () => {
-      expect(() => validateSourceRelease(makeRelease({ commitOrTag: "main" }))).toThrow();
+      expect(() =>
+        validateSourceRelease(makeRelease({ commitOrTag: "main" })),
+      ).toThrow();
     });
     it("rejects release with invalid sha", () => {
-      expect(() => validateSourceRelease(makeRelease({ artifactSha256: "bad" as unknown as string }))).toThrow();
+      expect(() =>
+        validateSourceRelease(
+          makeRelease({ artifactSha256: "bad" as unknown as string }),
+        ),
+      ).toThrow();
     });
     it("rejects release where releaseKey does not embed sourceKey", () => {
       expect(() =>
@@ -184,7 +191,9 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
           licenseEvidenceSha256: SYNTH_SHA, // same evidence, different paths => violation
         },
       ];
-      expect(() => validateComponentLicenseIsolation(comps)).toThrow(/One top-level license/);
+      expect(() => validateComponentLicenseIsolation(comps)).toThrow(
+        /One top-level license/,
+      );
     });
   });
 
@@ -211,7 +220,11 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
 
     it("denies when no grant for component/operation", () => {
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: "missing", operation: "evaluation_import" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: "missing",
+          operation: "evaluation_import",
+        },
         [grant],
         [approval],
         release,
@@ -223,7 +236,11 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     it("denies when grant state is denied", () => {
       const deniedGrant = makeGrant({ state: "denied" });
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: deniedGrant.componentKey, operation: "evaluation_import" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: deniedGrant.componentKey,
+          operation: "evaluation_import",
+        },
         [deniedGrant],
         [approval],
         release,
@@ -236,7 +253,11 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
       // Bypass schema validation to test evaluator directly with unknown
       const unknownGrant = { ...grant, state: "unknown" as const };
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: unknownGrant.componentKey, operation: "evaluation_import" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: unknownGrant.componentKey,
+          operation: "evaluation_import",
+        },
         [unknownGrant],
         [approval],
         release,
@@ -281,7 +302,12 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     it("denies territory mismatch", () => {
       const territorial = makeGrant({ territory: "US" });
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: territorial.componentKey, operation: "evaluation_import", territory: "IN" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: territorial.componentKey,
+          operation: "evaluation_import",
+          territory: "IN",
+        },
         [territorial],
         [approval],
         release,
@@ -293,7 +319,12 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     it("denies language mismatch", () => {
       const langGrant = makeGrant({ languageTag: "en" });
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: langGrant.componentKey, operation: "evaluation_import", languageTag: "te" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: langGrant.componentKey,
+          operation: "evaluation_import",
+          languageTag: "te",
+        },
         [langGrant],
         [approval],
         release,
@@ -304,7 +335,11 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
 
     it("denies when no approval for release:component", () => {
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: grant.componentKey, operation: "evaluation_import" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: grant.componentKey,
+          operation: "evaluation_import",
+        },
         [grant],
         [],
         release,
@@ -314,9 +349,15 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     });
 
     it("denies when approval digest not bound", () => {
-      const badApproval = makeApproval({ subjectDigest: "bad" as unknown as string });
+      const badApproval = makeApproval({
+        subjectDigest: "bad" as unknown as string,
+      });
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: grant.componentKey, operation: "evaluation_import" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: grant.componentKey,
+          operation: "evaluation_import",
+        },
         [grant],
         [badApproval],
         release,
@@ -326,7 +367,11 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
 
     it("denies when release key mismatches requested", () => {
       const result = evaluateAuthorization(
-        { releaseKey: "release:source:stepbible:tipnr@other:sha-aaaaaaaa", componentKey: grant.componentKey, operation: "evaluation_import" },
+        {
+          releaseKey: "release:source:stepbible:tipnr@other:sha-aaaaaaaa",
+          componentKey: grant.componentKey,
+          operation: "evaluation_import",
+        },
         [grant],
         [approval],
         release,
@@ -338,10 +383,18 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     it("denies revoked approval (latest decision rejected supersedes prior approved)", () => {
       const revokedApprovals: ApprovalRecord[] = [
         approval,
-        makeApproval({ decision: "rejected", createdAt: "2026-09-15T00:00:00.000Z", subjectDigest: SYNTH_SHA_C }),
+        makeApproval({
+          decision: "rejected",
+          createdAt: "2026-09-15T00:00:00.000Z",
+          subjectDigest: SYNTH_SHA_C,
+        }),
       ];
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: grant.componentKey, operation: "evaluation_import" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: grant.componentKey,
+          operation: "evaluation_import",
+        },
         [grant],
         revokedApprovals,
         release,
@@ -351,9 +404,16 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     });
 
     it("denies external_ai_processing unless explicitly allowed", () => {
-      const aiDenied = makeGrant({ operation: "external_ai_processing", state: "denied" });
+      const aiDenied = makeGrant({
+        operation: "external_ai_processing",
+        state: "denied",
+      });
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: aiDenied.componentKey, operation: "external_ai_processing" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: aiDenied.componentKey,
+          operation: "external_ai_processing",
+        },
         [aiDenied],
         [approval],
         release,
@@ -364,7 +424,11 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
     it("markdown status cannot authorize — unknown must not default to allowed", () => {
       // Simulate catalog says candidate_only but no grant exists — evaluator must deny
       const result = evaluateAuthorization(
-        { releaseKey: release.releaseKey, componentKey: "unregistered-component", operation: "publication" },
+        {
+          releaseKey: release.releaseKey,
+          componentKey: "unregistered-component",
+          operation: "publication",
+        },
         [],
         [],
         release,
@@ -379,9 +443,25 @@ describe("Task 07 — source-registry contract (fail-closed)", () => {
       const release = makeRelease();
       const grant = makeGrant();
       const approval = makeApproval();
-      const request = { releaseKey: release.releaseKey, componentKey: grant.componentKey, operation: "evaluation_import" as const };
-      const result = evaluateAuthorization(request, [grant], [approval], release);
-      const receipt = createAuditReceipt("task:registry-contract:07:attempt-1", request, result, release, [grant], [approval]);
+      const request = {
+        releaseKey: release.releaseKey,
+        componentKey: grant.componentKey,
+        operation: "evaluation_import" as const,
+      };
+      const result = evaluateAuthorization(
+        request,
+        [grant],
+        [approval],
+        release,
+      );
+      const receipt = createAuditReceipt(
+        "task:registry-contract:07:attempt-1",
+        request,
+        result,
+        release,
+        [grant],
+        [approval],
+      );
       expect(receipt.attemptId).toBe("task:registry-contract:07:attempt-1");
       expect(receipt.requestDigest).toMatch(/^sha256:/);
       expect(receipt.releaseDigest).toBe(release.artifactSha256);

@@ -82,9 +82,14 @@ export function BibleView({ onOpenPassage }: BibleViewProps) {
       />
 
       {selectedBook ? (
-        <SelectedBookCard book={selectedBook} />
+        <SelectedBookCard book={selectedBook} translationId={translationId} />
       ) : testament === 0 ? (
-        <View style={[styles.readyCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+        <View
+          style={[
+            styles.readyCard,
+            { backgroundColor: colors.surface, borderColor: colors.border },
+          ]}
+        >
           <AppText variant="caption" color="accent">
             CONTEXT READY
           </AppText>
@@ -119,20 +124,22 @@ export function BibleView({ onOpenPassage }: BibleViewProps) {
   );
 }
 
-function SelectedBookCard({ book }: { book: BookEntry }) {
+function SelectedBookCard({ book, translationId }: { book: BookEntry; translationId: string }) {
   const { colors } = useTheme();
   return (
-    <View style={[styles.readyCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+    <View
+      style={[styles.readyCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
+    >
       <AppText variant="caption" color="accent">
         {book.chapters} CHAPTERS
       </AppText>
-          <AppText variant="title2" style={styles.readyTitle}>
-            {book.name}
-          </AppText>
-          <AppText variant="body" color="textSecondary">
-            {book.osis === 'Neh'
-              ? `${bookNameFor('Neh', translationId)} 2 carries full orientation, profiles, map and timeline. Other chapters are Scripture only.`
-              : 'Scripture is available for every chapter. Contextual layers are being added book by book.'}
+      <AppText variant="title2" style={styles.readyTitle}>
+        {book.name}
+      </AppText>
+      <AppText variant="body" color="textSecondary">
+        {book.osis === 'Neh'
+          ? `${bookNameFor('Neh', translationId)} 2 carries full orientation, profiles, map and timeline. Other chapters are Scripture only.`
+          : 'Scripture is available for every chapter. Contextual layers are being added book by book.'}
       </AppText>
     </View>
   );
@@ -161,9 +168,7 @@ function BookRow({
         onPress={handlePress}
         testID={`book-${book.osis.toLowerCase()}`}
       />
-      {expanded ? (
-        <ChapterGrid book={book} onOpenChapter={onOpenChapter} />
-      ) : null}
+      {expanded ? <ChapterGrid book={book} onOpenChapter={onOpenChapter} /> : null}
     </View>
   );
 }
@@ -186,12 +191,7 @@ function ChapterGrid({
   return (
     <View style={styles.grid} testID="chapter-grid">
       {chapterNumbers(book.chapters).map((chapter) => (
-        <ChapterCell
-          key={chapter}
-          book={book}
-          chapter={chapter}
-          onOpenChapter={onOpenChapter}
-        />
+        <ChapterCell key={chapter} book={book} chapter={chapter} onOpenChapter={onOpenChapter} />
       ))}
     </View>
   );

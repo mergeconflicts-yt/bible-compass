@@ -38,7 +38,12 @@ export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyVi
   return (
     <Screen testID="daily-screen">
       <View style={styles.header}>
-        <IconButton name="chevron-back" accessibilityLabel="Back" onPress={onBack} testID="daily-back" />
+        <IconButton
+          name="chevron-back"
+          accessibilityLabel="Back"
+          onPress={onBack}
+          testID="daily-back"
+        />
         <View style={styles.headerTitle}>
           <AppText variant="title3" style={styles.centered}>
             Verse of the day
@@ -104,7 +109,12 @@ export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyVi
       <View style={styles.chips}>
         {['Who', 'Where', 'When'].map((chip) => (
           <View key={chip} style={styles.chip}>
-            <Button title={chip} variant="secondary" onPress={() => setContextOpen(true)} testID={`daily-chip-${chip.toLowerCase()}`} />
+            <Button
+              title={chip}
+              variant="secondary"
+              onPress={() => setContextOpen(true)}
+              testID={`daily-chip-${chip.toLowerCase()}`}
+            />
           </View>
         ))}
       </View>
@@ -125,7 +135,11 @@ export function DailyView({ dateLabel, onBack, onShare, onOpenPassage }: DailyVi
         Unreviewed AI draft. Production moment text requires reviewed sources.
       </AppText>
 
-      <ComposerSheet visible={composerOpen} onClose={() => setComposerOpen(false)} onShare={onShare} />
+      <ComposerSheet
+        visible={composerOpen}
+        onClose={() => setComposerOpen(false)}
+        onShare={onShare}
+      />
       <ContextFlow
         visible={contextOpen}
         onClose={() => setContextOpen(false)}

@@ -3,22 +3,30 @@ import * as path from "path";
 import * as crypto from "crypto";
 import { parseMaculaForNeh2 } from "../src/parser";
 
-function resolveQuarantine(p: string): string {
-  if (fs.existsSync(p)) return p;
-  const cands = [path.resolve(__dirname, "../../../", p)];
-  for (const c of cands) if (fs.existsSync(c)) return c;
-  return p;
-}
+// Committed synthetic fixture (R1-A): hermetic on clean clones without the
+// git-ignored production quarantine. Production defaults in src/parser.ts
+// are unchanged.
+const FIXTURE = {
+  quarantinePath: path.join(
+    __dirname,
+    "fixtures",
+    "16-Neh-002-synthetic-lowfat.xml",
+  ),
+  expectedSha256:
+    "sha256:357d8cea36cf89204d0f248f48f3a759aae723eb342634e93d79fd89aad32ec5",
+  releaseKey: "release:source:macula:hebrew@fixture:sha-bf5a1e2f",
+};
 
 describe("Task 13 — MACULA Hebrew linguistic adapter (Nehemiah 2)", () => {
   it("re-verifies SHA before parsing", () => {
-    const r = parseMaculaForNeh2();
-    expect(r.receipt.sha256).toBe("sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6");
-    expect(r.receipt.byteSize).toBe(543402);
+    expect(fs.existsSync(FIXTURE.quarantinePath)).toBe(true);
+    const r = parseMaculaForNeh2(FIXTURE);
+    expect(r.receipt.sha256).toBe(FIXTURE.expectedSha256);
+    expect(r.receipt.byteSize).toBe(582);
   });
 
   it("every field retains component-level license/provenance", () => {
-    const { tokens, referents } = parseMaculaForNeh2();
+    const { tokens, referents } = parseMaculaForNeh2(FIXTURE);
     for (const t of tokens) {
       expect(t.sourceReleaseKey).toMatch(/^release:source:macula:hebrew@/);
       expect(t.sourceLocator).toMatch(/^WLC:/);
@@ -31,7 +39,7 @@ describe("Task 13 — MACULA Hebrew linguistic adapter (Nehemiah 2)", () => {
   });
 
   it("source token and app-edition identity remain separate (no BSB offset reuse)", () => {
-    const { tokens } = parseMaculaForNeh2();
+    const { tokens } = parseMaculaForNeh2(FIXTURE);
     for (const t of tokens) {
       expect(t.wlcTokenId).toMatch(/^WLC:/);
       expect(t.wlcTokenId).not.toMatch(/^BSB:/);
@@ -40,7 +48,7 @@ describe("Task 13 — MACULA Hebrew linguistic adapter (Nehemiah 2)", () => {
   });
 
   it("ambiguous/missing referents remain unresolved (isAmbiguous)", () => {
-    const { referents, coverage } = parseMaculaForNeh2();
+    const { referents, coverage } = parseMaculaForNeh2(FIXTURE);
     const ambiguous = referents.filter((r) => r.isAmbiguous);
     expect(ambiguous.length).toBeGreaterThan(0);
     expect(coverage.ambiguous).toBe(ambiguous.length);
@@ -48,7 +56,7 @@ describe("Task 13 — MACULA Hebrew linguistic adapter (Nehemiah 2)", () => {
   });
 
   it("Hebrew referent coverage is reported as partial", () => {
-    const { coverage } = parseMaculaForNeh2();
+    const { coverage } = parseMaculaForNeh2(FIXTURE);
     expect(coverage.neh2Tokens).toBe(5);
     expect(coverage.totalTokens).toBeGreaterThan(coverage.neh2Tokens);
     expect(coverage.produced.tokens).toBe(5);
@@ -56,24 +64,28 @@ describe("Task 13 — MACULA Hebrew linguistic adapter (Nehemiah 2)", () => {
   });
 
   it("fails on SHA mismatch", () => {
-    const qPath = resolveQuarantine("content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml");
-    const buf = fs.readFileSync(qPath);
+    const buf = fs.readFileSync(FIXTURE.quarantinePath);
     const tmp = "/tmp/macula-tampered.xml";
     fs.writeFileSync(tmp, Buffer.concat([buf, Buffer.from("x")]));
-    expect(() => parseMaculaForNeh2({ quarantinePath: tmp, expectedSha256: "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6" })).toThrow(
-      /SHA mismatch/,
-    );
+    expect(() =>
+      parseMaculaForNeh2({
+        quarantinePath: tmp,
+        expectedSha256: FIXTURE.expectedSha256,
+      }),
+    ).toThrow(/SHA mismatch/);
   });
 
   it("fails on missing header", () => {
     const tmp = "/tmp/macula-invalid.xml";
     fs.writeFileSync(tmp, "<not>macula</not>");
     const sha = `sha256:${crypto.createHash("sha256").update(fs.readFileSync(tmp)).digest("hex")}`;
-    expect(() => parseMaculaForNeh2({ quarantinePath: tmp, expectedSha256: sha })).toThrow(/MACULA header not found/);
+    expect(() =>
+      parseMaculaForNeh2({ quarantinePath: tmp, expectedSha256: sha }),
+    ).toThrow(/MACULA header not found/);
   });
 
   it("does not infer person identity (referent is annotation, not approved fact)", () => {
-    const { referents } = parseMaculaForNeh2();
+    const { referents } = parseMaculaForNeh2(FIXTURE);
     for (const r of referents) {
       expect(r.referent).toMatch(/^(narrator|speaker|entity):/);
       // Should not claim as established fact, only candidate
@@ -82,8 +94,8 @@ describe("Task 13 — MACULA Hebrew linguistic adapter (Nehemiah 2)", () => {
   });
 
   it("deterministic output", () => {
-    const r1 = parseMaculaForNeh2();
-    const r2 = parseMaculaForNeh2();
+    const r1 = parseMaculaForNeh2(FIXTURE);
+    const r2 = parseMaculaForNeh2(FIXTURE);
     expect(r1.receipt.candidatesSha256).toBe(r2.receipt.candidatesSha256);
   });
 });

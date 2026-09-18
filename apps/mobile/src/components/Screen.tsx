@@ -20,7 +20,9 @@ export function Screen({ children, testID, header, floatingAction, scrollRef }: 
   return (
     <SafeAreaView style={[styles.safe, { backgroundColor: colors.canvas }]} testID={testID}>
       {header ? (
-        <View style={[styles.header, { backgroundColor: colors.canvas, borderColor: colors.border }]}>
+        <View
+          style={[styles.header, { backgroundColor: colors.canvas, borderColor: colors.border }]}
+        >
           {header}
         </View>
       ) : null}

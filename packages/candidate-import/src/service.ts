@@ -11,12 +11,19 @@ export interface ImportActor {
 export function assertCanImport(actor: ImportActor): void {
   const role = actor.role as string;
   if (role === "anon" || role === "authenticated") {
-    throw Object.assign(new Error("Public client cannot import"), { code: "forbidden-public" });
+    throw Object.assign(new Error("Public client cannot import"), {
+      code: "forbidden-public",
+    });
   }
   if (!actor.isPrivileged || (role !== "importer" && role !== "service_role")) {
-    throw Object.assign(new Error(`Import actor ${actor.principalId} role ${actor.role} cannot import — requires importer`), {
-      code: "forbidden-not-importer",
-    });
+    throw Object.assign(
+      new Error(
+        `Import actor ${actor.principalId} role ${actor.role} cannot import — requires importer`,
+      ),
+      {
+        code: "forbidden-not-importer",
+      },
+    );
   }
 }
 
@@ -67,7 +74,10 @@ export class CandidateImportService {
     return `sha256:${crypto.createHash("sha256").update(json).digest("hex")}`;
   }
 
-  private validateCandidateFile(filePath: string): { data: unknown; digest: string } {
+  private validateCandidateFile(filePath: string): {
+    data: unknown;
+    digest: string;
+  } {
     const resolved = this.resolveCandidatePath(filePath);
     const buf = fs.readFileSync(resolved);
     const data = JSON.parse(buf.toString("utf-8"));
@@ -82,9 +92,12 @@ export class CandidateImportService {
       (data as Record<string, unknown>).mappings !== undefined ||
       (data as Record<string, unknown>).mentions !== undefined;
     if (!hasKnown) {
-      throw Object.assign(new Error(`Invalid candidate file ${filePath}: no known candidate key`), {
-        code: "invalid-candidate",
-      });
+      throw Object.assign(
+        new Error(`Invalid candidate file ${filePath}: no known candidate key`),
+        {
+          code: "invalid-candidate",
+        },
+      );
     }
     const digest = this.computeDigest(data);
     return { data, digest };
@@ -98,8 +111,13 @@ export class CandidateImportService {
     assertCanImport(actor);
 
     // Import actor cannot approve or publish — ensure actor is not approver
-    if (actor.role === "service_role" && actor.principalId.includes("approver")) {
-      throw Object.assign(new Error("Import actor cannot approve or publish"), { code: "forbidden-approver" });
+    if (
+      actor.role === "service_role" &&
+      actor.principalId.includes("approver")
+    ) {
+      throw Object.assign(new Error("Import actor cannot approve or publish"), {
+        code: "forbidden-approver",
+      });
     }
 
     // Validate all before any mutation (atomic)
@@ -183,10 +201,14 @@ export class CandidateImportService {
       // Stage it (in-memory; in real would be transaction)
       this.staged.set(key, { digest: v.digest, payload: v.data });
       imported++;
-      lineage.push(`${v.path} staged ${v.digest.slice(0, 8)} lineage ${String(dataObj.sourceReleaseKey ?? dataObj.candidatesSha256 ?? "report").slice(0, 16)}`);
+      lineage.push(
+        `${v.path} staged ${v.digest.slice(0, 8)} lineage ${String(dataObj.sourceReleaseKey ?? dataObj.candidatesSha256 ?? "report").slice(0, 16)}`,
+      );
     }
 
-    const overallDigest = this.computeDigest(validated.map((v) => v.digest).join(","));
+    const overallDigest = this.computeDigest(
+      validated.map((v) => v.digest).join(","),
+    );
     const receipt = {
       packageKey,
       candidatesSha256: overallDigest,
@@ -194,7 +216,11 @@ export class CandidateImportService {
       actor: actor.principalId,
       lineage,
     };
-    this.importLog.push({ packageKey, digest: overallDigest, at: receipt.importedAt });
+    this.importLog.push({
+      packageKey,
+      digest: overallDigest,
+      at: receipt.importedAt,
+    });
 
     return {
       success: true,

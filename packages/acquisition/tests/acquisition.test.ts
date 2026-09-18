@@ -1,5 +1,9 @@
 import * as crypto from "crypto";
-import { InMemoryRegistryRepository, RegistryService, serviceActor } from "@bible-compass/registry-service";
+import {
+  InMemoryRegistryRepository,
+  RegistryService,
+  serviceActor,
+} from "@bible-compass/registry-service";
 import { FixtureFetcher } from "../src/fetcher";
 import { InMemoryQuarantineWriter } from "../src/quarantine";
 import { AcquisitionService } from "../src/service";
@@ -12,11 +16,17 @@ function sha256Hex(buf: Buffer): string {
 const SYNTH_SHA_B = "sha256:" + "b".repeat(64);
 
 describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
-  async function setupRegistry(): Promise<{ service: RegistryService; releaseKey: string }> {
+  async function setupRegistry(): Promise<{
+    service: RegistryService;
+    releaseKey: string;
+  }> {
     const repo = new InMemoryRegistryRepository();
     const service = new RegistryService(repo);
     const actor = serviceActor();
-    await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "STEPBible" });
+    await repo.recordSource({
+      sourceKey: "source:stepbible:tipnr",
+      publisher: "STEPBible",
+    });
     const releaseKey = "release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c";
     await service.admitRelease(
       {
@@ -43,7 +53,12 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
       actor,
     );
     await service.grantOperation(
-      { componentKey: "tipnr-structured-fields", operation: "evaluation_import", state: "allowed", provenance: "synthetic" },
+      {
+        componentKey: "tipnr-structured-fields",
+        operation: "evaluation_import",
+        state: "allowed",
+        provenance: "synthetic",
+      },
       actor,
     );
     await service.recordApproval(
@@ -66,7 +81,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     const quarantine = new InMemoryQuarantineWriter();
     const acq = new AcquisitionService(service, fetcher, quarantine);
     const buf = Buffer.from("hello world");
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf, "text/tab-separated-values");
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf,
+      "text/tab-separated-values",
+    );
 
     // Try with operation not granted (publication not allowed)
     const result = await acq.acquire(
@@ -94,7 +113,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     const acq = new AcquisitionService(service, fetcher, quarantine);
     const buf = Buffer.from("actual content");
     const wrongSha = "sha256:" + "f".repeat(64);
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf, "text/tab-separated-values");
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf,
+      "text/tab-separated-values",
+    );
 
     const result = await acq.acquire(
       {
@@ -111,7 +134,9 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     expect(result.quarantined).toBe(true);
     expect(result.receipt.status).toBe("quarantined_mismatch");
     expect(quarantine.getWriteCount()).toBe(1);
-    expect(await quarantine.exists("content/quarantine/stepbible/tipnr/file.tsv")).toBe(true);
+    expect(
+      await quarantine.exists("content/quarantine/stepbible/tipnr/file.tsv"),
+    ).toBe(true);
   });
 
   it("size mismatch quarantines and fails", async () => {
@@ -120,7 +145,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     const quarantine = new InMemoryQuarantineWriter();
     const acq = new AcquisitionService(service, fetcher, quarantine);
     const buf = Buffer.from("12345");
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf, "text/tab-separated-values");
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf,
+      "text/tab-separated-values",
+    );
     const result = await acq.acquire(
       {
         releaseKey,
@@ -146,7 +175,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
       allowedMediaTypes: ["text/tab-separated-values"],
     });
     const buf = Buffer.from("data");
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf, "application/json"); // actual json but expected tsv
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf,
+      "application/json",
+    ); // actual json but expected tsv
     const result = await acq.acquire(
       {
         releaseKey,
@@ -170,7 +203,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     const acq = new AcquisitionService(service, fetcher, quarantine);
     const buf = Buffer.from("deterministic content");
     const sha = sha256Hex(buf);
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf, "text/tab-separated-values");
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf,
+      "text/tab-separated-values",
+    );
 
     const req = {
       releaseKey,
@@ -201,7 +238,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     const buf2 = Buffer.from("bytes version 2 different");
     const sha1 = sha256Hex(buf1);
     // First acquire with buf1
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf1, "text/tab-separated-values");
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf1,
+      "text/tab-separated-values",
+    );
     const r1 = await acq.acquire(
       {
         releaseKey,
@@ -215,7 +256,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     );
     expect(r1.success).toBe(true);
     // Second acquire with different bytes but same expectedSha still sha1 — should fail because actual sha mismatches and also different bytes under same releaseKey
-    fetcher.setFixture("https://example.invalid/stepbible/tipnr/file.tsv", buf2, "text/tab-separated-values");
+    fetcher.setFixture(
+      "https://example.invalid/stepbible/tipnr/file.tsv",
+      buf2,
+      "text/tab-separated-values",
+    );
     const r2 = await acq.acquire(
       {
         releaseKey,
@@ -262,7 +307,11 @@ describe("Task 08 — Quarantined acquisition and integrity tooling", () => {
     const fetcher = new FixtureFetcher();
     const quarantine = new InMemoryQuarantineWriter();
     const acq = new AcquisitionService(service, fetcher, quarantine);
-    fetcher.setFixture("https://example.invalid/file.tsv", Buffer.from("hi"), "text/plain");
+    fetcher.setFixture(
+      "https://example.invalid/file.tsv",
+      Buffer.from("hi"),
+      "text/plain",
+    );
     await expect(
       acq.acquire(
         {

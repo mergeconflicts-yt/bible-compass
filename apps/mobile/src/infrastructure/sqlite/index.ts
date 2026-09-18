@@ -8,6 +8,14 @@
 
 export { DATABASE_FILE, hashSqlWithExpoCrypto, openAppDatabase } from './database';
 export { MIGRATIONS } from './migrations';
+export {
+  chapterLocalKey,
+  ordinalFor,
+  projectChapter,
+  verseLocalKey,
+  workKeyFor,
+} from './projection';
+export type { ChapterInput, ProjectionOptions, ProjectionResult, SourceVerse } from './projection';
 export { LEDGER_SQL, migrate, validateMigrations } from './runner';
 export type {
   HashSql,

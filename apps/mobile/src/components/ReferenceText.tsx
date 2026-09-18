@@ -55,7 +55,7 @@ export function ReferenceText({
             variant={variant}
             color="accent"
             scripture={scripture}
-            onPress={() => onOpenPassage(span.passageKey as string)}
+            onPress={onOpenPassage ? () => onOpenPassage(span.passageKey as string) : undefined}
             accessibilityRole="link"
             accessibilityLabel={`Open ${span.text}`}
             style={styles.link}

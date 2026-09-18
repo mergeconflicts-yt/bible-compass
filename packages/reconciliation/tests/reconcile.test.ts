@@ -25,7 +25,9 @@ describe("Task 15A — Identity and attestation reconciliation", () => {
   it("a canonical attestation can exist without an English surface mention (translation-independent)", () => {
     const r = reconcile15A();
     // Attestations are canonical (translation-independent) — they exist even if no edition mention yet
-    const att = r.attestations.find((a) => a.entityKey === "entity:susa-citadel");
+    const att = r.attestations.find(
+      (a) => a.entityKey === "entity:susa-citadel",
+    );
     expect(att?.explicitness).toBe("strongly_implied");
     expect(att?.referenceUnit).toBe("Neh.2.1");
   });
@@ -50,11 +52,15 @@ describe("Task 15A — Identity and attestation reconciliation", () => {
 
   it("relevant-but-not-attested is separate from attestation", () => {
     const r = reconcile15A();
-    const relevantNotAttested = r.relevances.find((rel) => rel.entityKey === "entity:hanani-brother");
+    const relevantNotAttested = r.relevances.find(
+      (rel) => rel.entityKey === "entity:hanani-brother",
+    );
     expect(relevantNotAttested?.isAttested).toBe(false);
     expect(relevantNotAttested?.importance).toBe("background");
     // Hanani has relevance but no attestation in Neh2
-    const hasAttestation = r.attestations.some((a) => a.entityKey === "entity:hanani-brother");
+    const hasAttestation = r.attestations.some(
+      (a) => a.entityKey === "entity:hanani-brother",
+    );
     expect(hasAttestation).toBe(false);
   });
 

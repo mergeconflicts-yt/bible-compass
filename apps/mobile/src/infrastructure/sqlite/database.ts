@@ -13,6 +13,7 @@
 
 import * as Crypto from 'expo-crypto';
 import { openDatabaseAsync, type SQLiteDatabase } from 'expo-sqlite';
+import type { PassageDbHandle } from '@/content/passageStore';
 
 import { MIGRATIONS } from './migrations';
 import { migrate } from './runner';
@@ -24,6 +25,37 @@ export const hashSqlWithExpoCrypto: HashSql = async (sql: string): Promise<strin
   const hex = await Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, sql);
   return `sha256:${hex}`;
 };
+
+/**
+ * Stable client UUID for user mutations (bookmarks, outbox ops) per
+ * `docs/CONTEXT_DATA_ARCHITECTURE.md`. Lives here because this module is
+ * the only one allowed to import `expo-crypto`.
+ */
+export function newClientId(): string {
+  return Crypto.randomUUID();
+}
+
+/**
+ * Adapts a live handle to the content layer's structural contract
+ * (type-only import: erased at runtime, no layering violation at runtime).
+ */
+export function asPassageDbHandle(db: SQLiteDatabase): PassageDbHandle {
+  return {
+    execAsync: (source: string) => db.execAsync(source),
+    runAsync: (source: string, params: (string | number)[] = []) =>
+      db.runAsync(source, params).then((result) => ({
+        lastInsertRowId: result.lastInsertRowId,
+        changes: result.changes,
+      })),
+    getAllAsync: <T>(source: string, params: (string | number)[] = []) =>
+      db.getAllAsync<T>(source, params),
+    getAllSync: <T>(source: string, params: (string | number)[]) =>
+      db.getAllSync<T>(source, params),
+    getFirstSync: <T>(source: string, params: (string | number)[]) =>
+      db.getFirstSync<T>(source, params),
+    withTransactionAsync: (task: () => Promise<void>) => db.withTransactionAsync(task),
+  };
+}
 
 /**
  * Opens the app database, enables required pragmas, and applies pending
@@ -42,7 +74,8 @@ export async function openAppDatabase(): Promise<SQLiteDatabase> {
       const result = await db.runAsync(source, params);
       return { lastInsertRowId: result.lastInsertRowId, changes: result.changes };
     },
-    getAllAsync: <T>(source: string) => db.getAllAsync<T>(source),
+    getAllAsync: <T>(source: string, params: (string | number)[] = []) =>
+      db.getAllAsync<T>(source, params),
     withTransactionAsync: (task) => db.withTransactionAsync(task),
   };
   await migrate(executor, MIGRATIONS, hashSqlWithExpoCrypto);

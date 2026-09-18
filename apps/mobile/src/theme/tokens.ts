@@ -64,6 +64,7 @@ export const space = {
   6: 24,
   8: 32,
   10: 40,
+  11: 44,
   12: 48,
 } as const;
 

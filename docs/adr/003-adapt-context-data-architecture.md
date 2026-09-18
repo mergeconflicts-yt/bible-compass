@@ -8,18 +8,19 @@ decided, not still an open option among several drafts.
 
 Context
 Three data-model drafts existed for this problem in sequence:
+
 1. The original DATA_MoDEL. md — a mobile developer's working reference for the Nehemiah 2 slice.
 2. DATA_MODEL_V2. md / the proposed ADR-002 — a first redesign attempt (events as entities,
-entity_appearances，entity_relationships,chapter/book context units).
+   entity_appearances，entity_relationships,chapter/book context units).
 3. CONTEXT_DATA_ARCHITECTURE.md，WHOLE_BIBLE_CURATION_SPEC.md and AI_CURATION_CONTRACT.md —
-I specific, concrete defects in (2) that would have caused real product bugs: false mention a specialist review (CoNTEXT_MODEL_REVIEW.md) built on top of both prior drafts and found
-counts from expanding passage relevance into verse occurrences, no immutable translation
-edition (a corrected text could silently invalidate published anchors), one collapsed
-confidence scale hiding real differences between evidence strength/precision/tradition/dispute,
-a single-parent passage tree that can't express alternate or overlapping segmentation, and a
-rights model reduced to four booleans when the product needs operation-level grants.
-coNTEXT_MODEL_REVIEW. md 's consensus findings (14 items) and its list of what must not be
-contradicts the review; it is the review's output. implemented from the (2) draft are both incorporated wholesale into (3). No part of (3)
+   I specific, concrete defects in (2) that would have caused real product bugs: false mention a specialist review (CoNTEXT_MODEL_REVIEW.md) built on top of both prior drafts and found
+   counts from expanding passage relevance into verse occurrences, no immutable translation
+   edition (a corrected text could silently invalidate published anchors), one collapsed
+   confidence scale hiding real differences between evidence strength/precision/tradition/dispute,
+   a single-parent passage tree that can't express alternate or overlapping segmentation, and a
+   rights model reduced to four booleans when the product needs operation-level grants.
+   coNTEXT_MODEL_REVIEW. md 's consensus findings (14 items) and its list of what must not be
+   contradicts the review; it is the review's output. implemented from the (2) draft are both incorporated wholesale into (3). No part of (3)
 
 Decision
 with its two companion documents: Adopt coNTEXT_DATA_ARCHITECTURE.md as the authoritative logical model going forward, together
@@ -75,17 +76,18 @@ Al-provider rights, locale fallback policy). Adopting the logical model does not
 these; it defines the shape they'll be recorded in once resolved.
 
 Next steps
+
 1. Owner resolves the Phase 0 decisions this architecture assumes will eventually be answered
-(canon, initial edition + rights grants, launch locales + fallback policy, editorial lens,
-reviewer qualifications, source hierarchy, Al-provider processing rights).
+   (canon, initial edition + rights grants, launch locales + fallback policy, editorial lens,
+   reviewer qualifications, source hierarchy, Al-provider processing rights).
 2. Rewrite DATA_MODEL.md as concrete DDL-ready tables implementing CONTEXT_DATA_ARCHITECTURE.md
-column types, constraints, indexes, RLS policies — scoped to what the Nehemiah 2 slice
-actually needs first, with the rest of the logical model present but unpopulated.
-2a. Update CANoNICAL_IDENTIFIERS.md for the reference-system-qualified key scheme.
+   column types, constraints, indexes, RLS policies — scoped to what the Nehemiah 2 slice
+   actually needs first, with the rest of the logical model present but unpopulated.
+   2a. Update CANoNICAL_IDENTIFIERS.md for the reference-system-qualified key scheme.
 3. Build the golden fixtures AI_cURATION_CoNTRACT.md requires before any Al-assisted curation:
-English/Telugu/Tamil, repeated names, pronouns, genealogies, split/merged versification,
-NDJSON failure, release rollback. disputed identity/chronology, corrected editions, invalid rights, ambiguous mentions, atomic
+   English/Telugu/Tamil, repeated names, pronouns, genealogies, split/merged versification,
+   NDJSON failure, release rollback. disputed identity/chronology, corrected editions, invalid rights, ambiguous mentions, atomic
 4. Validate the full adoption gate against the Nehemiah 2 subset before any whole-canon curation
-begins.
+   begins.
 
 independently once scoped - it feeds curation candidates

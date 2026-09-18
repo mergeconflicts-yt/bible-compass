@@ -1,7 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as crypto from "crypto";
-import { referenceMappingCandidateSchema, type ParseResult, type ReferenceMappingCandidate } from "./types";
+import {
+  referenceMappingCandidateSchema,
+  type ParseResult,
+  type ReferenceMappingCandidate,
+} from "./types";
 
 function resolveQuarantinePath(qPath: string): string {
   if (path.isAbsolute(qPath) && fs.existsSync(qPath)) return qPath;
@@ -19,8 +23,10 @@ function resolveQuarantinePath(qPath: string): string {
   return qPath; // fallback to original for error message
 }
 
-const EXPECTED_SHA = "sha256:63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8";
-const EXPECTED_RELEASE_KEY = "release:source:stepbible:tvtms@ae39711d:sha-63058e0f";
+const EXPECTED_SHA =
+  "sha256:63058e0f20201af4bdaa7d830da5be8f493455d947c5f147d84840b33db9ddf8";
+const EXPECTED_RELEASE_KEY =
+  "release:source:stepbible:tvtms@ae39711d:sha-63058e0f";
 const QUARANTINE_PATH = "content/quarantine/stepbible/tvtms/TVTMS.txt";
 
 /**
@@ -43,16 +49,24 @@ export function parseTVTMSForNeh2(options?: {
   const buf = fs.readFileSync(qPath);
   const actualSha = `sha256:${crypto.createHash("sha256").update(buf).digest("hex")}`;
   if (actualSha !== expectedSha) {
-    throw Object.assign(new Error(`SHA mismatch for ${qPath}: expected ${expectedSha} got ${actualSha}`), {
-      code: "sha-mismatch",
-    });
+    throw Object.assign(
+      new Error(
+        `SHA mismatch for ${qPath}: expected ${expectedSha} got ${actualSha}`,
+      ),
+      {
+        code: "sha-mismatch",
+      },
+    );
   }
   const byteSize = buf.length;
   const text = buf.toString("utf-8");
 
   // Basic hierarchical validation: must start with TVTMS header and contain Neh entries
   if (!text.includes("TVTMS")) {
-    throw Object.assign(new Error("TVTMS header not found — invalid artifact"), { code: "invalid-artifact" });
+    throw Object.assign(
+      new Error("TVTMS header not found — invalid artifact"),
+      { code: "invalid-artifact" },
+    );
   }
 
   const lines = text.split(/\r?\n/);
@@ -82,31 +96,88 @@ export function parseTVTMSForNeh2(options?: {
       kind,
       sourceReleaseKey: releaseKey,
       sourceLocator: locator,
-      confidence: kind === "equivalent" ? "established" : kind === "uncertain" ? "unknown" : "probable",
+      confidence:
+        kind === "equivalent"
+          ? "established"
+          : kind === "uncertain"
+            ? "unknown"
+            : "probable",
     };
   }
 
   // 1-3: equivalent (most verses are equivalent)
   for (let i = 1; i <= 3; i++) {
     const v = `Neh.2.${i}`;
-    candidates.push(mk(v, v, "equivalent", "refsys:tel-v1", `TVTMS:Neh.2.${i}:equivalent`));
+    candidates.push(
+      mk(v, v, "equivalent", "refsys:tel-v1", `TVTMS:Neh.2.${i}:equivalent`),
+    );
   }
   // 4: split example per CANONICAL_IDENTIFIERS.md: split into 4a/4b for tel
-  candidates.push(mk("Neh.2.4", "Neh.2.4a", "split", "refsys:tel-v1", "TVTMS:Neh.2.4:split:tel"));
-  candidates.push(mk("Neh.2.4", "Neh.2.4b", "split", "refsys:tel-v1", "TVTMS:Neh.2.4:split:tel:2"));
+  candidates.push(
+    mk(
+      "Neh.2.4",
+      "Neh.2.4a",
+      "split",
+      "refsys:tel-v1",
+      "TVTMS:Neh.2.4:split:tel",
+    ),
+  );
+  candidates.push(
+    mk(
+      "Neh.2.4",
+      "Neh.2.4b",
+      "split",
+      "refsys:tel-v1",
+      "TVTMS:Neh.2.4:split:tel:2",
+    ),
+  );
   // 5: omitted in tel
-  candidates.push(mk("Neh.2.5", "Neh.2.5", "omitted", "refsys:tel-v1", "TVTMS:Neh.2.5:omitted"));
+  candidates.push(
+    mk(
+      "Neh.2.5",
+      "Neh.2.5",
+      "omitted",
+      "refsys:tel-v1",
+      "TVTMS:Neh.2.5:omitted",
+    ),
+  );
   // 6-8: equivalent to tam
   for (let i = 6; i <= 8; i++) {
     const v = `Neh.2.${i}`;
-    candidates.push(mk(v, v, "equivalent", "refsys:tam-v1", `TVTMS:${v}:equivalent:tam`));
+    candidates.push(
+      mk(v, v, "equivalent", "refsys:tam-v1", `TVTMS:${v}:equivalent:tam`),
+    );
   }
   // 3+4 merge example per spec: eng 2.3+2.4 merge into tam 2.3
-  candidates.push(mk("Neh.2.3", "Neh.2.3", "merge", "refsys:tam-v1", "TVTMS:Neh.2.3+2.4:merge:tam"));
+  candidates.push(
+    mk(
+      "Neh.2.3",
+      "Neh.2.3",
+      "merge",
+      "refsys:tam-v1",
+      "TVTMS:Neh.2.3+2.4:merge:tam",
+    ),
+  );
   // 9: renumbered Ps example mapped to Neh for demonstration (still valid kind)
-  candidates.push(mk("Neh.2.9", "Neh.2.9", "renumbered", "refsys:tel-v1", "TVTMS:Neh.2.9:renumbered"));
+  candidates.push(
+    mk(
+      "Neh.2.9",
+      "Neh.2.9",
+      "renumbered",
+      "refsys:tel-v1",
+      "TVTMS:Neh.2.9:renumbered",
+    ),
+  );
   // 10: uncertain
-  candidates.push(mk("Neh.2.10", "Neh.2.10", "uncertain", "refsys:tel-v1", "TVTMS:Neh.2.10:uncertain"));
+  candidates.push(
+    mk(
+      "Neh.2.10",
+      "Neh.2.10",
+      "uncertain",
+      "refsys:tel-v1",
+      "TVTMS:Neh.2.10:uncertain",
+    ),
+  );
   // 11-20: equivalent remaining to cover Neh2
   for (let i = 11; i <= 20; i++) {
     if (i === 10) continue;
@@ -123,7 +194,8 @@ export function parseTVTMSForNeh2(options?: {
   // If file contains a line with "Neh.2.999" invalid verse, we would reject it — here we add one synthetic reject for coverage
   rejects.push({
     line: 99999,
-    reason: "unmapped: Neh.2.999 not in Nehemiah 2 pilot scope scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20 — rejected, not guessed",
+    reason:
+      "unmapped: Neh.2.999 not in Nehemiah 2 pilot scope scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20 — rejected, not guessed",
     raw: "Neh.2.999 hypothetical outside pilot",
   });
 
@@ -131,7 +203,9 @@ export function parseTVTMSForNeh2(options?: {
   for (const c of candidates) {
     const parsed = referenceMappingCandidateSchema.safeParse(c);
     if (!parsed.success) {
-      throw new Error(`Candidate validation failed: ${parsed.error.issues[0]?.message} for ${JSON.stringify(c)}`);
+      throw new Error(
+        `Candidate validation failed: ${parsed.error.issues[0]?.message} for ${JSON.stringify(c)}`,
+      );
     }
   }
 

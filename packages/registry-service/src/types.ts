@@ -21,4 +21,5 @@ export const approvalRecordSchema = Registry.approvalRecordSchema;
 export const auditReceiptSchema = Registry.auditReceiptSchema;
 export const evaluateAuthorizationPure = Registry.evaluateAuthorization;
 export const createAuditReceipt = Registry.createAuditReceipt;
-export const validateComponentLicenseIsolation = Registry.validateComponentLicenseIsolation;
+export const validateComponentLicenseIsolation =
+  Registry.validateComponentLicenseIsolation;

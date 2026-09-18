@@ -6,14 +6,31 @@ export const referenceMappingCandidateSchema = z
     toRefsys: z.enum(["refsys:eng-v22", "refsys:tel-v1", "refsys:tam-v1"]),
     from: z.string().regex(/^[A-Za-z1-9]+\.\d+(\.\d+)?$/),
     to: z.string().regex(/^[A-Za-z1-9]+\.\d+(\.\d+)?(a|b)?$/),
-    kind: z.enum(["equivalent", "split", "merge", "overlap", "renumbered", "omitted", "added", "uncertain"]),
+    kind: z.enum([
+      "equivalent",
+      "split",
+      "merge",
+      "overlap",
+      "renumbered",
+      "omitted",
+      "added",
+      "uncertain",
+    ]),
     sourceReleaseKey: z.string().regex(/^release:source:stepbible:tvtms@/),
     sourceLocator: z.string().min(1),
-    confidence: z.enum(["established", "probable", "possible", "disputed", "unknown"]),
+    confidence: z.enum([
+      "established",
+      "probable",
+      "possible",
+      "disputed",
+      "unknown",
+    ]),
   })
   .strict();
 
-export type ReferenceMappingCandidate = z.infer<typeof referenceMappingCandidateSchema>;
+export type ReferenceMappingCandidate = z.infer<
+  typeof referenceMappingCandidateSchema
+>;
 
 export interface ParseResult {
   candidates: ReferenceMappingCandidate[];

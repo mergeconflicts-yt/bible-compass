@@ -13,9 +13,7 @@
       "reportSha256": "sha256:618f3f0bbc39a5449284d6dd141493ba19a84c6cc5d6108558edaf4463942d19"
     }
   ],
-  "files_not_changed": [
-    "No content repair, no package build yet"
-  ],
+  "files_not_changed": ["No content repair, no package build yet"],
   "commands_executed": [
     {
       "command": "python3 update content/pilot/eligibility-22.json to PASSED with 6 verified receipts",
@@ -49,7 +47,10 @@
   "known_limitations": [
     "Eligibility was DENIED before Gate E1 — now PASSED with human receipts, but package-23 still staging_candidate not installed"
   ],
-  "follow_up": ["23 Immutable staging-package build re-verified with Gate E1 receipts", "Gate E2"],
+  "follow_up": [
+    "23 Immutable staging-package build re-verified with Gate E1 receipts",
+    "Gate E2"
+  ],
   "no_content_approved_or_published_by_ai": true,
   "task_attempt": "task:eligibility:22:attempt-1",
   "repository_revision_before": {

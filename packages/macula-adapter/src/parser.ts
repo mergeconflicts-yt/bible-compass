@@ -1,11 +1,18 @@
 import * as fs from "fs";
 import * as path from "path";
 import * as crypto from "crypto";
-import { tokenCandidateSchema, referentCandidateSchema, type ParseResult } from "./types";
+import {
+  tokenCandidateSchema,
+  referentCandidateSchema,
+  type ParseResult,
+} from "./types";
 
-const EXPECTED_SHA = "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6";
-const EXPECTED_RELEASE_KEY = "release:source:macula:hebrew@47db250b:sha-f125eed6";
-const QUARANTINE_PATH = "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml";
+const EXPECTED_SHA =
+  "sha256:f125eed6cb098da454d8de45eccdfd750d2b2f9909258174fbe492e98b7e07f6";
+const EXPECTED_RELEASE_KEY =
+  "release:source:macula:hebrew@47db250b:sha-f125eed6";
+const QUARANTINE_PATH =
+  "content/quarantine/macula/hebrew/16-Neh-002-lowfat.xml";
 
 function resolveQuarantine(p: string): string {
   if (path.isAbsolute(p) && fs.existsSync(p)) return p;
@@ -38,14 +45,22 @@ export function parseMaculaForNeh2(options?: {
   const buf = fs.readFileSync(qPath);
   const actualSha = `sha256:${crypto.createHash("sha256").update(buf).digest("hex")}`;
   if (actualSha !== expectedSha) {
-    throw Object.assign(new Error(`SHA mismatch for ${qPathInput}: expected ${expectedSha} got ${actualSha}`), {
-      code: "sha-mismatch",
-    });
+    throw Object.assign(
+      new Error(
+        `SHA mismatch for ${qPathInput}: expected ${expectedSha} got ${actualSha}`,
+      ),
+      {
+        code: "sha-mismatch",
+      },
+    );
   }
   const byteSize = buf.length;
   const text = buf.toString("utf-8");
   if (!text.includes("<chapter") || !text.includes("NEH 2")) {
-    throw Object.assign(new Error("MACULA header not found — invalid artifact"), { code: "invalid-artifact" });
+    throw Object.assign(
+      new Error("MACULA header not found — invalid artifact"),
+      { code: "invalid-artifact" },
+    );
   }
 
   // Minimal XML token extraction — count <w> or similar tags; for this slice we synthesize deterministic tokens
@@ -131,7 +146,8 @@ export function parseMaculaForNeh2(options?: {
   const rejects = [
     {
       line: 100,
-      reason: "Qere/Ketiv flattened without preservation — rejected, requires separate handling per Task 13 forbidden",
+      reason:
+        "Qere/Ketiv flattened without preservation — rejected, requires separate handling per Task 13 forbidden",
       raw: "WLC:Neh.2.13:qere/ketiv",
     },
   ];

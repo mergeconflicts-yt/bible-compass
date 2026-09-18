@@ -1,27 +1,26 @@
-name: mobile-ci
+name: verify-all
 
-on:
-  push:
-    paths:
-      - 'apps/mobile/**'
-      - '.github/workflows/ci.yml'
-  pull_request:
-    paths:
-      - 'apps/mobile/**'
-      - '.github/workflows/ci.yml'
+# R1-C: one root command verifies backend packages and the mobile app.
+# The mobile app is intentionally NOT an npm workspace (standalone install
+# via its own lockfile), so it is installed separately before verify:all.
+on: [push, pull_request]
 
 jobs:
   verify:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apps/mobile
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
           cache: npm
           cache-dependency-path: apps/mobile/package-lock.json
       - run: npm ci
-      - run: npm run verify
+        working-directory: apps/mobile
+      - run: npm run verify:all

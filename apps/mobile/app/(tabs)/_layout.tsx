@@ -51,7 +51,11 @@ export default function TabLayout() {
         options={{
           title: 'Saved',
           tabBarIcon: ({ color, focused, size }) => (
-            <Ionicons name={focused ? 'bookmark' : 'bookmark-outline'} size={size ?? 24} color={color} />
+            <Ionicons
+              name={focused ? 'bookmark' : 'bookmark-outline'}
+              size={size ?? 24}
+              color={color}
+            />
           ),
         }}
       />
@@ -60,7 +64,11 @@ export default function TabLayout() {
         options={{
           title: 'Search',
           tabBarIcon: ({ color, focused, size }) => (
-            <Ionicons name={focused ? 'search' : 'search-outline'} size={size ?? 24} color={color} />
+            <Ionicons
+              name={focused ? 'search' : 'search-outline'}
+              size={size ?? 24}
+              color={color}
+            />
           ),
         }}
       />
@@ -69,7 +77,11 @@ export default function TabLayout() {
         options={{
           title: 'Settings',
           tabBarIcon: ({ color, focused, size }) => (
-            <Ionicons name={focused ? 'settings' : 'settings-outline'} size={size ?? 24} color={color} />
+            <Ionicons
+              name={focused ? 'settings' : 'settings-outline'}
+              size={size ?? 24}
+              color={color}
+            />
           ),
         }}
       />

@@ -18,9 +18,7 @@
       "sha256": "ef441f222beaf146ce0e900451285f0788db5682680d91db7bf1c678a01be1e6"
     }
   ],
-  "files_not_changed": [
-    "No real content activation, no SQLite, no mobile"
-  ],
+  "files_not_changed": ["No real content activation, no SQLite, no mobile"],
   "commands_executed": [
     {
       "command": "git diff --check",
@@ -44,9 +42,7 @@
       "Verified append-only trigger for approval_records",
       "Verified no partial package activation via check"
     ],
-    "not_run": [
-      "Full supabase db reset with 17A+17B+17C — requires Docker"
-    ]
+    "not_run": ["Full supabase db reset with 17A+17B+17C — requires Docker"]
   },
   "database_migrations": "Applied 20260915000004_review_package_rls.sql — creates 5 tables + 3 views in private_staging/public_content. Clean rebuild via supabase db reset (17A+17B+17C).",
   "rls_permissions_config": "RLS enabled on all 5, revoke all, deny private, allow anon published (select using published_at), service_role bypasses. Draft/raw denied.",

@@ -1,0 +1,73 @@
+{
+  "attempt_id": "task:mobile-search-recents:06b:attempt-1",
+  "task_id": "M06b",
+  "task_title": "Offline verse-text search + recents (M06 exit gate: airplane-mode journey)",
+  "result": "PASS",
+  "user_visible_outcome": "Search now finds offline verse text (new VERSES section opening the verse) alongside reference hits; Search and Saved show real on-device recents of opened chapters with honest empty states; every chapter open is recorded locally. No visible change when offline data is absent.",
+  "files_changed": [
+    "apps/mobile/src/content/passageRepository.ts (added VerseHit + searchVerses to the port)",
+    "apps/mobile/src/infrastructure/sqlite/passageRepository.ts (LIKE with ESCAPE over projected rows, bound params, deterministic order)",
+    "apps/mobile/src/content/jsonPassageRepository.ts (bounded bundle-scan fallback, canonical order, early exit at cap)",
+    "apps/mobile/src/content/passageStore.ts (added searchVerseText: SQLite-first, JSON fallback, blank short-circuit, cap clamp 50)",
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (appended 004_recents)",
+    "apps/mobile/src/content/recentStore.ts (new: locations-only recents, never-throwing recordRecent, sync reads)",
+    "apps/mobile/src/infrastructure/sqlite/recents.ts (new: upsert + prune-to-10 in one transaction)",
+    "apps/mobile/src/lib/reference.ts (added chapterLabel shared by Saved/Search)",
+    "apps/mobile/src/components/SearchView.tsx (VERSES section with testIDs search-verse-{chapter}-{verse}; real recents; empty state accounts verse hits)",
+    "apps/mobile/src/components/SavedView.tsx (real recents with empty state; bookmark rows use chapterLabel)",
+    "apps/mobile/app/passage/[reference].tsx (records single-chapter opens best-effort)",
+    "apps/mobile/app/_layout.tsx (initializes the recent store on the shared handle)",
+    "apps/mobile/src/fixtures/demo.ts (removed static searchRecentsFor/savedRowsFor; entity fixtures stay for M04)",
+    "apps/mobile/__tests__/verse-search.test.ts (new: 5 routing + 2 adapter + 1 real-engine tests)",
+    "apps/mobile/__tests__/recents.test.ts (new: 4 contract + 1 restart tests)",
+    "apps/mobile/__tests__/airplane-journey.test.ts (new: file-backed search/bookmark/recent/restart journey)",
+    "apps/mobile/__tests__/tabs.test.tsx (Search/Saved suites seed stub stores; 3 new tests)",
+    "apps/mobile/__tests__/passage-store.test.ts + daily-verse.test.ts (stubs gain searchVerses)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (tripwire to versions 1-4)",
+    "docs/MOBILE_INSTALL_PLAN.md (M06b DONE)"
+  ],
+  "files_not_changed": [
+    "No entity/context search (M04-blocked fixtures stay)",
+    "No reference-matching changes (lib/search untouched; search.test.ts green unmodified)",
+    "No query-string storage anywhere (recents are locations only, by design)",
+    "No FTS index or other new artifact; no outbox drain/sync (M07)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "sqlite3 CLI on 004_recents SQL",
+      "exit_code": 0,
+      "output": "applies clean; upsert works; duplicate without upsert and chapter 0 rejected"
+    },
+    {
+      "command": "jest verse-search + recents + airplane-journey (3x repeat)",
+      "exit_code": 0,
+      "output": "14 passed, stable across 3 runs (same-millisecond tiebreak made deterministic)"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "17 passed / 3 failed suites; 165 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint + prettier --check (mobile and root)",
+      "exit_code": 0,
+      "output": "0 errors; 16 pre-existing warnings; M06b files add zero"
+    }
+  ],
+  "bugs_found_by_tests": [
+    "Fallback assertion assumed Neh.2.4 in the first hits for 'request' — the whole-bundle scan correctly returns earlier-canonical hits first; test now queries the verse's own text (deterministic self-match)",
+    "Same-millisecond opened_at stamps made newest-first ordering nondeterministic — fake and assertion now use the adapter's (opened_at DESC, id DESC) tiebreak; repeat runs stable"
+  ],
+  "rights_note": "Verse search reads already-stored offline rows via LIKE (no new index artifact); recents store user locations only. The OPEN 'Local search index' permission-matrix row stays a release-gate follow-up for the owner, not a build gate (same basis as the M02 offline-storage precedent).",
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-search-recents:06b:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M06b DONE; M06 exit gate met)",
+  "data_kind": "code+tests only; licensed BSB text used as test input, never redistributed"
+}

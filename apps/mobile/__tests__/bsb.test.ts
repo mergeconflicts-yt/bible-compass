@@ -109,7 +109,8 @@ describe('bundled translations', () => {
     expect(isIndicTranslation('xx')).toBe(false);
   });
 
-  it('localizes the book registry and testament labels per translation', () => {    expect(booksFor('BSB')).toHaveLength(66);
+  it('localizes the book registry and testament labels per translation', () => {
+    expect(booksFor('BSB')).toHaveLength(66);
     expect(booksFor('tam_irv')).toHaveLength(66);
     expect(booksFor('tel_irv')).toHaveLength(66);
     expect(booksFor('tam_irv').find((book) => book.osis === 'Neh')?.name).toBe('நெகேமியா');
@@ -127,6 +128,6 @@ describe('bundled translations', () => {
     expect(verseLabel('Neh', 2, 4, 'BSB')).toBe('Nehemiah 2:4');
     expect(verseLabel('Neh', 2, 4, 'tam_irv')).toBe('நெகேமியா 2:4');
     expect(rangeLabel('Neh', 2, 1, 8, 'BSB')).toBe('Nehemiah 2:1–8');
-    expect(rangeLabel('Ezra', 4, 23, 'tel_irv')).toBe('ఎజ్రా 4:23');
+    expect(verseLabel('Ezra', 4, 23, 'tel_irv')).toBe('ఎజ్రా 4:23');
   });
 });

@@ -36,19 +36,20 @@ Executive assessment
 There is no single open database that satisfies the complete model in
 WHOLE BIBLE CURATION SPEC.md. The strongest starting combination
 is:
+
 1. STEPBible TIPNR and TVTMS for proper-name candidates, references, relationships, original-name
-forms, and versification mappings.
+   forms, and versification mappings.
 2. MACULA Greek and Hebrew for original-language linguistic structure and participant-referent
-candidates.
+   candidates.
 3. OpenBible.info Geocoding for place-identification candidates, competing locations, evidence,
-and geographic confidence.
+   and geographic confidence.
 4. OpenBible.info Cross References for untyped related-passage candidates.
 5. BibleData as a comparison source for people, relationships, and person-to-verse coverage.
-Theographic and ACAl Realia are valuable enrichment sources but require share-alike isolation and
-legal review. SemanticBible NT Names is useful as an ontology reference, but its reuse license is
-not clear enough for ingestion.
-No source becomes the canonical identity system. Bible Compass owns stable canonical keys and
-maps every upstream identifier through source-versioned crosswalks.
+   Theographic and ACAl Realia are valuable enrichment sources but require share-alike isolation and
+   legal review. SemanticBible NT Names is useful as an ontology reference, but its reuse license is
+   not clear enough for ingestion.
+   No source becomes the canonical identity system. Bible Compass owns stable canonical keys and
+   maps every upstream identifier through source-versioned crosswalks.
 
 Most entries below are downloadable datasets, not hosted databases. TSV, CSV, JSON, XML, KML,
 and RDF can all be normalized into the authoritative Postgres model. Theographic additionally
@@ -325,9 +326,9 @@ Proposed source keys source:macula:greek,source:macula:hebrew
 
 Maintainer Clear Bible and credited source partners
 
-Primary pages MACULA Greek and  MACULA Hebrew
+Primary pages MACULA Greek and MACULA Hebrew
 
-License evidence Greek license and  Hebrew license; repositories
+License evidence Greek license and Hebrew license; repositories
 describe CC BY 4.0 components and enumerate upstream
 sources
 
@@ -413,7 +414,7 @@ Proposed source key source:semanticbible:nt-names
 
 Maintainer Sean Boisen/ SemanticBible
 
-Primary pages NT Names documentation and  downloads/status
+Primary pages NT Names documentation and downloads/status
 
 Format OWL/RDF expressed in XML; ontology and instance files
 are separate
@@ -569,27 +570,28 @@ Raw source, normalized output, rejects, and import receipt remain reproducible
 Rollback or forward-fix plan exists
 
 Recommended evaluation sequence
+
 1. Audit and pin only the relevant STEPBible TIPNR and TVTMS files.
 2. Import Nehemiah 2 into isolated staging and produce entity/reference candidates without prose.
 3. Compare people and verse references against BibleData.
 4. Add OpenBible geographic candidates for places in the slice.
 5. Evaluate MACULA referents needed to resolve pronouns or implicit participants.
 6. Measure disagreements, unresolved identities, false coordinate precision, and reference mapping
-failures.
-approved_for_drafting. 7. Have rights and content reviewers decide whether any exact source release may advance to
-8. Consider Theographic and ACAl only after the share-alike isolation design is approved.
-This sequence evaluates usefulness without importing a whole canon or changing the MVP corpus.
-Known gaps after combining these sources
-Even a successful combined import will not provide production-ready:
-Reviewed book, chapter, and passage context
-Context-specific explanations of why an entity matters in a passage
-Complete typed events, event participation, and competing chronologies
-Reliably typed quotations, allusions, echoes, fulfillments, and parallel accounts
-Claim-level scholarly citations for every historical or interpretive statement
-Complete objects, practices, institutions, roles, laws, covenants, themes, and concepts
-Reviewed identity policy for divine, angelic, demonic, and other spiritual beings
-Metonymic person/people/place/polity references and eponymous ancestor/collective distinctions
-Approved multilingual descriptions, relationship renderings, and search aliases
-Translation-edition mention spans validated against each exact edition
-Rights-approved maps, images, accessibility copy, or reader-facing prose
-versions Editorial approval, theological-perspective handling, corrections, and immutable publication
+   failures.
+   approved_for_drafting. 7. Have rights and content reviewers decide whether any exact source release may advance to
+7. Consider Theographic and ACAl only after the share-alike isolation design is approved.
+   This sequence evaluates usefulness without importing a whole canon or changing the MVP corpus.
+   Known gaps after combining these sources
+   Even a successful combined import will not provide production-ready:
+   Reviewed book, chapter, and passage context
+   Context-specific explanations of why an entity matters in a passage
+   Complete typed events, event participation, and competing chronologies
+   Reliably typed quotations, allusions, echoes, fulfillments, and parallel accounts
+   Claim-level scholarly citations for every historical or interpretive statement
+   Complete objects, practices, institutions, roles, laws, covenants, themes, and concepts
+   Reviewed identity policy for divine, angelic, demonic, and other spiritual beings
+   Metonymic person/people/place/polity references and eponymous ancestor/collective distinctions
+   Approved multilingual descriptions, relationship renderings, and search aliases
+   Translation-edition mention spans validated against each exact edition
+   Rights-approved maps, images, accessibility copy, or reader-facing prose
+   versions Editorial approval, theological-perspective handling, corrections, and immutable publication

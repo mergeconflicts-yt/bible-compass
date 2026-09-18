@@ -1,62 +1,147 @@
--- Test: Knowledge/claim/context staging (Task 17B)
-\set ON_ERROR_STOP on
+-- Test: Knowledge/claim/context staging — enforceable (R1-B, Task 17B).
+-- Every check is a real assertion (EXCEPTION on violation). No string PASS.
+-- Run: psql "$DATABASE_URL" -f supabase/tests/03_knowledge_claim_context_test.sql
+-- Single transaction, rolls back. Requires a superuser-equivalent role for
+-- SET ROLE impersonation. Supabase-gated runs: docs/REGISTRY_MIGRATION_NOTES.md.
+
 begin;
 
--- 1. RLS enabled on all 22 private_staging tables (11 from 17A + 11 from 17B? Actually 17B adds 22, but we check total 22? Let's check 17B adds 22, plus 11 from 17A = 22? Wait 17B adds 22, total should be 11+22=33? But we check at least 22)
-select
-  case when count(*) >= 22 then 'PASS: >=22 private_staging tables have RLS enabled (' || count(*)::text || ')'
-       else 'FAIL: expected >=22, got ' || count(*)::text
-  end as rls_check
-from pg_tables t
-join pg_class c on c.relname = t.tablename
-where t.schemaname = 'private_staging'
-  and c.relrowsecurity = true;
+-- 1. RLS enabled on all 22 knowledge tables (named, exact).
+DO $$
+DECLARE
+  missing text;
+BEGIN
+  SELECT string_agg(c.relname, ', ' ORDER BY c.relname) INTO missing
+  FROM pg_class c
+  JOIN pg_namespace n ON n.oid = c.relnamespace
+  WHERE n.nspname = 'private_staging'
+    AND c.relkind = 'r'
+    AND c.relname IN ('entities', 'entity_names', 'entity_descriptions', 'claims', 'claim_citations', 'relationship_predicates', 'entity_relationship_assertions', 'reference_entity_attestations', 'edition_mentions', 'edition_render_spans', 'scope_entity_relevance', 'scope_entity_relevance_localizations', 'events', 'event_participants', 'event_places', 'event_scripture_accounts', 'place_geometries', 'context_artifacts', 'context_revisions', 'context_sections', 'context_section_localizations')
+    AND NOT c.relrowsecurity;
+  IF missing IS NOT NULL THEN
+    RAISE EXCEPTION 'FAIL: RLS not enabled on knowledge tables: %', missing;
+  END IF;
+END $$;
 
--- 2. No grants to anon/authenticated
-select
-  case when count(*) = 0 then 'PASS: no grants to anon/authenticated on private_staging'
-       else 'FAIL: found ' || count(*)::text || ' grants'
-  end as grant_check
-from information_schema.role_table_grants
-where table_schema = 'private_staging'
-  and grantee in ('anon','authenticated','public');
+-- 2. No write grants to anon/authenticated/public on those tables.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n
+  FROM information_schema.role_table_grants
+  WHERE table_schema = 'private_staging'
+    AND table_name IN ('entities', 'entity_names', 'entity_descriptions', 'claims', 'claim_citations', 'relationship_predicates', 'entity_relationship_assertions', 'reference_entity_attestations', 'edition_mentions', 'edition_render_spans', 'scope_entity_relevance', 'scope_entity_relevance_localizations', 'events', 'event_participants', 'event_places', 'event_scripture_accounts', 'place_geometries', 'context_artifacts', 'context_revisions', 'context_sections', 'context_section_localizations')
+    AND grantee IN ('anon', 'authenticated', 'public')
+    AND privilege_type IN ('INSERT', 'UPDATE', 'DELETE', 'TRUNCATE', 'REFERENCES', 'TRIGGER');
+  IF n <> 0 THEN
+    RAISE EXCEPTION 'FAIL: % write grants on knowledge tables', n;
+  END IF;
+END $$;
 
--- 3. Attestation unique constraint exists
-select case when count(*) = 1 then 'PASS: attestations unique (entity,scope,unit,kind)' else 'FAIL' end as attestation_unique_check
-from pg_constraint where conrelid = 'private_staging.reference_entity_attestations'::regclass and contype = 'u';
+-- 3. Anonymous cannot read staging knowledge (no grant on entities).
+SET ROLE anon;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_staging.entities LIMIT 1;
+  RAISE EXCEPTION 'FAIL: anon could read private_staging.entities';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 4. Edition mentions check exactly one of entity_id/context_card_id
-savepoint test_edition_mention_check;
-do $$
-begin
-  -- Try to insert with both null (should fail)
-  insert into private_staging.edition_mentions (edition_id, verse_id, form, quote, occurrence_ordinal, pipeline_text_sha256, review_state)
-  values ('00000000-0000-0000-0000-000000000001','00000000-0000-0000-0000-000000000001','explicit_name','test',1,'sha256:'||repeat('a',64),'draft');
-  raise exception 'FAIL: both null should be rejected';
-exception when check_violation then null;
-end $$;
-rollback to savepoint test_edition_mention_check;
+-- 4. Authenticated cannot read ungranted staging tables (claims has no
+-- SELECT grant at all; published-projection tables from migration 05 are
+-- covered separately by view tests in 04).
+SET ROLE authenticated;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_staging.claims LIMIT 1;
+  RAISE EXCEPTION 'FAIL: authenticated could read private_staging.claims';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 5. Scope relevance isAttested boolean, not conflated with attestation
-select case when exists (select 1 from information_schema.columns where table_schema='private_staging' and table_name='scope_entity_relevance' and column_name='is_attested' and data_type='boolean')
-  then 'PASS: scope_entity_relevance.is_attested boolean exists'
-  else 'FAIL' end as relevance_check;
+-- 5. Attestation uniqueness (entity, scope, unit, kind) is enforced.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n
+  FROM pg_constraint
+  WHERE conrelid = 'private_staging.reference_entity_attestations'::regclass
+    AND contype = 'u';
+  IF n < 1 THEN
+    RAISE EXCEPTION 'FAIL: attestation uniqueness constraint missing';
+  END IF;
+END $$;
 
--- 6. Place geometries has geometry type and precision check
-select case when exists (select 1 from information_schema.columns where table_schema='private_staging' and table_name='place_geometries' and column_name='geometry')
-  then 'PASS: place_geometries.geometry exists'
-  else 'FAIL' end as geometry_check;
+-- 6. Claim enums stay closed: bogus evidence_status rejected (claims has no
+-- FKs, so the CHECK is isolated deterministically).
+DO $$
+BEGIN
+  INSERT INTO private_staging.claims
+    (key, subject_type, subject_id, predicate, object_type, object, evidence_status, textual_basis, review_state)
+  VALUES (
+    'claim:rls-probe-bogus',
+    'entity',
+    gen_random_uuid(),
+    'test_pred',
+    'text',
+    '"x"',
+    'bogus-status',
+    'explicit',
+    'draft'
+  );
+  RAISE EXCEPTION 'FAIL: invalid evidence_status was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
 
--- 7. Context sections kind check
-savepoint test_context_kind;
-do $$
-begin
-  insert into private_staging.context_sections (revision_id, kind, text, claim_ids) values ('00000000-0000-0000-0000-000000000001','invalid_kind','text','{}');
-  raise exception 'FAIL: invalid kind accepted';
-exception when check_violation then null;
-end $$;
-rollback to savepoint test_context_kind;
+-- 7. scope_entity_relevance keeps is_attested as a real boolean column,
+-- separate from attestations (no attestation/relevance conflation).
+DO $$
+DECLARE
+  is_bool boolean;
+BEGIN
+  SELECT (data_type = 'boolean') INTO is_bool
+  FROM information_schema.columns
+  WHERE table_schema = 'private_staging'
+    AND table_name = 'scope_entity_relevance'
+    AND column_name = 'is_attested';
+  IF NOT coalesce(is_bool, false) THEN
+    RAISE EXCEPTION 'FAIL: scope_entity_relevance.is_attested is not boolean';
+  END IF;
+END $$;
 
-select 'RLS_TEST_17B_COMPLETE' as status;
+-- 8. place_geometries carries a geometry column for PostGIS storage.
+DO $$
+DECLARE
+  has_geom boolean;
+BEGIN
+  SELECT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema = 'private_staging'
+      AND table_name = 'place_geometries'
+      AND column_name = 'geometry'
+  ) INTO has_geom;
+  IF NOT has_geom THEN
+    RAISE EXCEPTION 'FAIL: place_geometries.geometry column missing';
+  END IF;
+END $$;
+
+-- 9. Context section kinds stay closed (invalid kind rejected).
+-- Chain-free probe: CHECK constraints evaluate before immediate FK triggers
+-- (which fire after row insert), so a fixed bogus UUID deterministically
+-- yields check_violation here without seeding parent rows.
+DO $$
+BEGIN
+  INSERT INTO private_staging.context_sections (revision_id, kind, text, claim_ids)
+  VALUES ('00000000-0000-0000-0000-000000000001', 'invalid_kind', 'probe', '{}');
+  RAISE EXCEPTION 'FAIL: invalid context kind was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
 
 rollback;

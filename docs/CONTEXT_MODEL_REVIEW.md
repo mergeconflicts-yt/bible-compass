@@ -13,16 +13,17 @@ Biblical ontology and editorial curation
 Al-ingestion security and deterministic publication
 
 Consensus findings incorporated
+
 1. Keep PostgreSQL as a relational knowledge graph and SQLite as a reader projection.
 2. Qualify Scripture addresses by reference/versification system and support split/merge/omitted/
-reordered mappings.
+   reordered mappings.
 3. Separate a translation work from an immutable translation edition.
 4. Separate canonical Scripture attestations, edition surface mentions, and contextual relevance.
 5. Never expand passage relevance across its verses or use it as a textual reference count.
 6. Make claims the evidence boundary; citations to broad prose records are insufficient.
 7. Version localized prose independently and avoid structural preference for English.
 8. Separate evidence strength, textual basis, identity status, date precision, location precision,
-and interpretive perspective.
+   and interpretive perspective.
 9. Represent events with participants, places, Scripture accounts, and event relationships.
 10. Use structured, scoped relationship assertions and localized rendering.
 11. Replace coarse rights flags with operation-level, time/territory/language-aware grants.
@@ -46,6 +47,7 @@ Record-level citation junctions cannot prove individual claims inside prose or r
 
 Adoption gate
 Before migrations, the executable contracts must demonstrate:
+
 1. One person shared across multiple locales and immutable translation editions.
 2. A relevant passage entity that is not counted as textually mentioned.
 3. A split or merged reference mapping.

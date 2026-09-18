@@ -28,7 +28,9 @@
       },
       "component": {
         "componentKey": "tvtms-mappings",
-        "pathsOrFields": ["Versification/TVTMS - Translators Versification Traditions with Methodology for Standardisation for Eng+Heb+Lat+Grk+Others - STEPBible.org CC BY.txt"],
+        "pathsOrFields": [
+          "Versification/TVTMS - Translators Versification Traditions with Methodology for Standardisation for Eng+Heb+Lat+Grk+Others - STEPBible.org CC BY.txt"
+        ],
         "fieldCount": "hierarchical",
         "requestedOperation": "evaluation_import",
         "proposedNextOperation": "drafting (parsing for Neh2 mappings)",
@@ -60,8 +62,19 @@
       },
       "component": {
         "componentKey": "tipnr-structured-fields",
-        "pathsOrFields": ["Proper Nouns/TIPNR:person", "Proper Nouns/TIPNR:place", "Proper Nouns/TIPNR:thing", "Proper Nouns/TIPNR:originalName", "Proper Nouns/TIPNR:familyRelation", "Proper Nouns/TIPNR:reference"],
-        "excludedFields": ["brief/short/article descriptions (Claude 3, not evidence)", "geodata", "embedded Scripture"],
+        "pathsOrFields": [
+          "Proper Nouns/TIPNR:person",
+          "Proper Nouns/TIPNR:place",
+          "Proper Nouns/TIPNR:thing",
+          "Proper Nouns/TIPNR:originalName",
+          "Proper Nouns/TIPNR:familyRelation",
+          "Proper Nouns/TIPNR:reference"
+        ],
+        "excludedFields": [
+          "brief/short/article descriptions (Claude 3, not evidence)",
+          "geodata",
+          "embedded Scripture"
+        ],
         "requestedOperation": "evaluation_import",
         "proposedNextOperation": "drafting for Neh2 entity candidates per Task 11"
       },
@@ -162,7 +175,10 @@
       },
       "component": {
         "componentKey": "macula-hebrew-lowfat-neh2",
-        "pathsOrFields": ["WLC/lowfat/16-Neh-002-lowfat.xml:token", "WLC/lowfat/16-Neh-002-lowfat.xml:lemma/morph via XML"],
+        "pathsOrFields": [
+          "WLC/lowfat/16-Neh-002-lowfat.xml:token",
+          "WLC/lowfat/16-Neh-002-lowfat.xml:lemma/morph via XML"
+        ],
         "proposedNextOperation": "drafting for Neh2 linguistic per Task 13",
         "note": "Original 3 TSV components reduced to 1 XML lowfat for Neh2 at this commit — 2 TSVs omitted as not at commit"
       },
@@ -189,8 +205,15 @@
       },
       "component": {
         "componentKey": "openbible-core-geocoding",
-        "pathsOrFields": ["data/ancient.jsonl:place/coordinates/confidence/verseReference"],
-        "excluded": ["data/images/**", "data/openstreetmap/** ODbL", "site prose/ESV", "KMZ/KML"],
+        "pathsOrFields": [
+          "data/ancient.jsonl:place/coordinates/confidence/verseReference"
+        ],
+        "excluded": [
+          "data/images/**",
+          "data/openstreetmap/** ODbL",
+          "site prose/ESV",
+          "KMZ/KML"
+        ],
         "proposedNextOperation": "drafting for Neh2 places per Task 14"
       },
       "status": "acquired"
@@ -217,9 +240,19 @@
   "coverageNote": "5 sources acquired (7 files) covering 7 components for Neh2 minimal slice. Reduced-source coverage: MACULA original 3 TSVs reduced to 1 XML at this commit; BibleData places/events not acquired (deferred per 09 request). This is the complete 09A-E set — no other 09 slot omitted except share-alike 3.",
   "gateC2Request": {
     "requestedOperations": ["drafting"],
-    "forbiddenOperations": ["publication", "external_ai_processing", "embedding"],
+    "forbiddenOperations": [
+      "publication",
+      "external_ai_processing",
+      "embedding"
+    ],
     "requiresHumanApproval": true,
-    "nextTasks": ["10 TVTMS adapter", "11 TIPNR adapter", "12 BibleData adapter", "13 MACULA adapter", "14 OpenBible adapter"]
+    "nextTasks": [
+      "10 TVTMS adapter",
+      "11 TIPNR adapter",
+      "12 BibleData adapter",
+      "13 MACULA adapter",
+      "14 OpenBible adapter"
+    ]
   },
   "requestMetadata": {
     "requestId": "packet:09F:20260915",

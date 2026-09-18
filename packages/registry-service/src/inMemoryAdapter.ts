@@ -25,7 +25,10 @@ export class InMemoryRegistryRepository implements RegistryRepository {
   private sources = new Map<string, SourceRecord & { id: string }>();
   private releases = new Map<string, SourceRelease & { id: string }>();
   private components = new Map<string, RightsComponent & { id: string }>(); // key: releaseKey:componentKey
-  private grants = new Map<string, (OperationGrant & { id: string; componentKey: string })[]>();
+  private grants = new Map<
+    string,
+    (OperationGrant & { id: string; componentKey: string })[]
+  >();
   private approvals = new Map<string, ApprovalRecord[]>();
   private audits = new Map<string, AuditReceipt>();
 
@@ -35,13 +38,20 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     return `00000000-0000-0000-0000-${String(this.nextId++).padStart(12, "0")}`;
   }
 
-  async recordSource(source: SourceRecord): Promise<{ created: boolean; id: string }> {
+  async recordSource(
+    source: SourceRecord,
+  ): Promise<{ created: boolean; id: string }> {
     const existing = this.sources.get(source.sourceKey);
     if (existing) {
       if (existing.publisher !== source.publisher) {
-        throw Object.assign(new Error(`Changed payload under same sourceKey ${source.sourceKey} rejected (idempotent)`), {
-          code: "conflict-changed-payload",
-        });
+        throw Object.assign(
+          new Error(
+            `Changed payload under same sourceKey ${source.sourceKey} rejected (idempotent)`,
+          ),
+          {
+            code: "conflict-changed-payload",
+          },
+        );
       }
       return { created: false, id: existing.id };
     }
@@ -52,15 +62,26 @@ export class InMemoryRegistryRepository implements RegistryRepository {
 
   async findSourceByKey(sourceKey: string): Promise<SourceRecord | null> {
     const r = this.sources.get(sourceKey);
-    return r ? { sourceKey: r.sourceKey, publisher: r.publisher, description: r.description } : null;
+    return r
+      ? {
+          sourceKey: r.sourceKey,
+          publisher: r.publisher,
+          description: r.description,
+        }
+      : null;
   }
 
-  async recordRelease(release: SourceRelease): Promise<{ created: boolean; id: string }> {
+  async recordRelease(
+    release: SourceRelease,
+  ): Promise<{ created: boolean; id: string }> {
     const parsed = sourceReleaseSchema.safeParse(release);
     if (!parsed.success) {
-      throw Object.assign(new Error(`Invalid release: ${parsed.error.issues[0]?.message}`), {
-        code: "invalid-release",
-      });
+      throw Object.assign(
+        new Error(`Invalid release: ${parsed.error.issues[0]?.message}`),
+        {
+          code: "invalid-release",
+        },
+      );
     }
     const existing = this.releases.get(release.releaseKey);
     if (existing) {
@@ -72,7 +93,9 @@ export class InMemoryRegistryRepository implements RegistryRepository {
         existing.commitOrTag === release.commitOrTag;
       if (!same) {
         throw Object.assign(
-          new Error(`Changed bytes under same releaseKey ${release.releaseKey} rejected — append new release, do not overwrite`),
+          new Error(
+            `Changed bytes under same releaseKey ${release.releaseKey} rejected — append new release, do not overwrite`,
+          ),
           { code: "conflict-changed-payload" },
         );
       }
@@ -80,7 +103,10 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     }
     // Enforce source exists
     if (!this.sources.has(release.sourceKey)) {
-      throw Object.assign(new Error(`Source ${release.sourceKey} not found for release`), { code: "not-found-source" });
+      throw Object.assign(
+        new Error(`Source ${release.sourceKey} not found for release`),
+        { code: "not-found-source" },
+      );
     }
     const id = this.genId();
     this.releases.set(release.releaseKey, { ...release, id });
@@ -94,30 +120,41 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     return rest as SourceRelease;
   }
 
-  async recordComponent(component: RightsComponent): Promise<{ created: boolean; id: string }> {
+  async recordComponent(
+    component: RightsComponent,
+  ): Promise<{ created: boolean; id: string }> {
     const key = `${component.releaseKey}:${component.componentKey}`;
     const existing = this.components.get(key);
     if (existing) {
       const same =
         existing.licenseSpdx === component.licenseSpdx &&
         existing.licenseEvidenceSha256 === component.licenseEvidenceSha256 &&
-        JSON.stringify(existing.pathsOrFields) === JSON.stringify(component.pathsOrFields);
+        JSON.stringify(existing.pathsOrFields) ===
+          JSON.stringify(component.pathsOrFields);
       if (!same) {
-        throw Object.assign(new Error(`Changed component payload under ${key} rejected`), {
-          code: "conflict-changed-payload",
-        });
+        throw Object.assign(
+          new Error(`Changed component payload under ${key} rejected`),
+          {
+            code: "conflict-changed-payload",
+          },
+        );
       }
       return { created: false, id: existing.id };
     }
     if (!this.releases.has(component.releaseKey)) {
-      throw Object.assign(new Error(`Release ${component.releaseKey} not found`), { code: "not-found-release" });
+      throw Object.assign(
+        new Error(`Release ${component.releaseKey} not found`),
+        { code: "not-found-release" },
+      );
     }
     const id = this.genId();
     this.components.set(key, { ...component, id });
     return { created: true, id };
   }
 
-  async findComponentsByRelease(releaseKey: string): Promise<RightsComponent[]> {
+  async findComponentsByRelease(
+    releaseKey: string,
+  ): Promise<RightsComponent[]> {
     const out: RightsComponent[] = [];
     for (const c of this.components.values()) {
       if (c.releaseKey === releaseKey) {
@@ -140,17 +177,30 @@ export class InMemoryRegistryRepository implements RegistryRepository {
         g.languageTag === grant.languageTag,
     );
     if (existing) {
-      if (existing.state !== grant.state || existing.provenance !== grant.provenance) {
-        throw Object.assign(new Error(`Changed grant payload for ${grant.componentKey}:${grant.operation} rejected`), {
-          code: "conflict-changed-payload",
-        });
+      if (
+        existing.state !== grant.state ||
+        existing.provenance !== grant.provenance
+      ) {
+        throw Object.assign(
+          new Error(
+            `Changed grant payload for ${grant.componentKey}:${grant.operation} rejected`,
+          ),
+          {
+            code: "conflict-changed-payload",
+          },
+        );
       }
       return { created: false, id: existing.id };
     }
     // Ensure component exists (at least one component with this key)
-    const hasComponent = [...this.components.values()].some((c) => c.componentKey === grant.componentKey);
+    const hasComponent = [...this.components.values()].some(
+      (c) => c.componentKey === grant.componentKey,
+    );
     if (!hasComponent) {
-      throw Object.assign(new Error(`Component ${grant.componentKey} not found`), { code: "not-found-component" });
+      throw Object.assign(
+        new Error(`Component ${grant.componentKey} not found`),
+        { code: "not-found-component" },
+      );
     }
     const id = this.genId();
     const entry = { ...grant, id };
@@ -159,16 +209,25 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     return { created: true, id };
   }
 
-  async listGrantsForComponent(componentKey: string): Promise<OperationGrant[]> {
+  async listGrantsForComponent(
+    componentKey: string,
+  ): Promise<OperationGrant[]> {
     const list = this.grants.get(componentKey) ?? [];
-    return list.map(({ id: _id, ...rest }) => rest as unknown as OperationGrant);
+    return list.map(
+      ({ id: _id, ...rest }) => rest as unknown as OperationGrant,
+    );
   }
 
-  async recordApproval(approval: ApprovalRecord, actor: PrivilegedActor): Promise<{ created: boolean; id: string }> {
+  async recordApproval(
+    approval: ApprovalRecord,
+    actor: PrivilegedActor,
+  ): Promise<{ created: boolean; id: string }> {
     assertPrivileged(actor);
     // Validate digest-bound
     if (!approval.subjectDigest.match(/^sha256:[0-9a-f]{64}$/)) {
-      throw Object.assign(new Error("approval digest not bound"), { code: "digest-not-bound" });
+      throw Object.assign(new Error("approval digest not bound"), {
+        code: "digest-not-bound",
+      });
     }
     const list = this.approvals.get(approval.subjectKey) ?? [];
     // Idempotent if exact same record (same subjectDigest+reviewer+decision+createdAt) already exists
@@ -194,7 +253,9 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     return [...(this.approvals.get(subjectKey) ?? [])];
   }
 
-  async recordAuditReceipt(receipt: AuditReceipt): Promise<{ created: boolean }> {
+  async recordAuditReceipt(
+    receipt: AuditReceipt,
+  ): Promise<{ created: boolean }> {
     const existing = this.audits.get(receipt.attemptId);
     if (existing) {
       // Idempotent if same digests/decision
@@ -203,9 +264,14 @@ export class InMemoryRegistryRepository implements RegistryRepository {
         existing.releaseDigest === receipt.releaseDigest &&
         existing.decision === receipt.decision;
       if (!same) {
-        throw Object.assign(new Error(`Changed audit payload under attempt ${receipt.attemptId} rejected`), {
-          code: "conflict-changed-payload",
-        });
+        throw Object.assign(
+          new Error(
+            `Changed audit payload under attempt ${receipt.attemptId} rejected`,
+          ),
+          {
+            code: "conflict-changed-payload",
+          },
+        );
       }
       return { created: false };
     }
@@ -217,11 +283,17 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     return this.audits.get(attemptId) ?? null;
   }
 
-  async evaluateAuthorization(request: AuthorizationRequest): Promise<AuthorizationResult> {
+  async evaluateAuthorization(
+    request: AuthorizationRequest,
+  ): Promise<AuthorizationResult> {
     // Gather required data from in-memory store
     const release = await this.findReleaseByKey(request.releaseKey);
     if (!release) {
-      return { allowed: false, reason: "release not found", deniedCode: "invalid-release" };
+      return {
+        allowed: false,
+        reason: "release not found",
+        deniedCode: "invalid-release",
+      };
     }
     const grants = await this.listGrantsForComponent(request.componentKey);
     // Need approvals for subjectKey = releaseKey:componentKey
@@ -231,7 +303,12 @@ export class InMemoryRegistryRepository implements RegistryRepository {
     // We synthesize a SourceRelease-like object expected by pure evaluator: need full release
     const fullRelease = release as SourceRelease;
     // Use pure function
-    const result = evaluateAuthorizationPure(request, grants, approvals, fullRelease);
+    const result = evaluateAuthorizationPure(
+      request,
+      grants,
+      approvals,
+      fullRelease,
+    );
     // Record audit receipt (safe: only digests, not protected payload)
     const receipt = createAuditReceipt(
       `eval:${request.releaseKey}:${request.componentKey}:${request.operation}`,

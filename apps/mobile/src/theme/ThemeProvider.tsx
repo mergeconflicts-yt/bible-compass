@@ -46,8 +46,7 @@ export function AppPreferencesProvider({ children }: { children: ReactNode }) {
   const [scriptureSizeIndex, setScriptureSizeIndex] = useState(0);
   const [translationId, setTranslationIdState] = useState('BSB');
 
-  const scheme: ColorScheme =
-    appearanceOverride ?? (system === 'dark' ? 'dark' : 'light');
+  const scheme: ColorScheme = appearanceOverride ?? (system === 'dark' ? 'dark' : 'light');
 
   const toggleAppearance = useCallback(() => {
     setAppearanceOverride((current) => {
@@ -81,7 +80,15 @@ export function AppPreferencesProvider({ children }: { children: ReactNode }) {
       setTranslationId,
       translation: translationById(translationId) ?? getActiveTranslation(),
     }),
-    [scheme, appearanceOverride, toggleAppearance, scriptureSizeIndex, cycleScriptureSize, translationId, setTranslationId],
+    [
+      scheme,
+      appearanceOverride,
+      toggleAppearance,
+      scriptureSizeIndex,
+      cycleScriptureSize,
+      translationId,
+      setTranslationId,
+    ],
   );
 
   return <PreferencesContext.Provider value={value}>{children}</PreferencesContext.Provider>;

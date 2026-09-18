@@ -9,8 +9,10 @@ import {
   type ParseResult,
 } from "./types";
 
-const EXPECTED_SHA = "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d";
-const EXPECTED_RELEASE_KEY = "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b";
+const EXPECTED_SHA =
+  "sha256:6cab6e4b6b2597996abc2ce9c9c621beca672c84ce473eb6c67224b02bf0003d";
+const EXPECTED_RELEASE_KEY =
+  "release:source:stepbible:tipnr@ae39711d:sha-6cab6e4b";
 const QUARANTINE_PATH = "content/quarantine/stepbible/tipnr/TIPNR.txt";
 
 function resolveQuarantinePath(qPath: string): string {
@@ -44,14 +46,21 @@ export function parseTIPNRForNeh2(options?: {
   const buf = fs.readFileSync(qPath);
   const actualSha = `sha256:${crypto.createHash("sha256").update(buf).digest("hex")}`;
   if (actualSha !== expectedSha) {
-    throw Object.assign(new Error(`SHA mismatch for ${qPathInput}: expected ${expectedSha} got ${actualSha}`), {
-      code: "sha-mismatch",
-    });
+    throw Object.assign(
+      new Error(
+        `SHA mismatch for ${qPathInput}: expected ${expectedSha} got ${actualSha}`,
+      ),
+      {
+        code: "sha-mismatch",
+      },
+    );
   }
   const byteSize = buf.length;
   const text = buf.toString("utf-8");
   if (!text.includes("TIPNR")) {
-    throw Object.assign(new Error("TIPNR header not found"), { code: "invalid-artifact" });
+    throw Object.assign(new Error("TIPNR header not found"), {
+      code: "invalid-artifact",
+    });
   }
   const lines = text.split(/\r?\n/);
   const totalLines = lines.length;
@@ -229,7 +238,8 @@ export function parseTIPNRForNeh2(options?: {
   const rejects = [
     {
       line: 1234,
-      reason: "Claude-generated description field excluded per 09F — not evidence",
+      reason:
+        "Claude-generated description field excluded per 09F — not evidence",
       raw: "TIPNR:NEH:2:description:artaxerxes-i:claude3",
     },
     {
@@ -242,7 +252,8 @@ export function parseTIPNRForNeh2(options?: {
   const unresolved = [
     {
       upstreamId: "tipnr:person:unknown-homonym:999",
-      reason: "Homonym distinct — same spelling Nehemiah but different person, not merged (distinct)",
+      reason:
+        "Homonym distinct — same spelling Nehemiah but different person, not merged (distinct)",
     },
   ];
 

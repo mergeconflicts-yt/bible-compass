@@ -1,0 +1,64 @@
+{
+  "attempt_id": "task:mobile-bookmarks-outbox:06a:attempt-1",
+  "task_id": "M06a",
+  "task_title": "Durable bookmarks + outbox (M06 split: search deferred to M06b)",
+  "result": "PASS",
+  "user_visible_outcome": "Bookmarking a chapter in Reading options now persists on-device across restarts, with saving and tap-to-retry error states; the Saved library lists real chapter bookmarks (plus the daily shortcut) with an honest empty state instead of prototype rows.",
+  "files_changed": [
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (appended 003_library: bookmarks + outbox tables with strict constraints)",
+    "apps/mobile/src/content/bookmarkStore.ts (new: BookmarkRepository port, sync reads, async toggle, typed BookmarkError, fail-closed uninitialized reads)",
+    "apps/mobile/src/infrastructure/sqlite/bookmarks.ts (new: SqliteBookmarks, same-transaction bookmark+outbox writes, errors propagate)",
+    "apps/mobile/src/infrastructure/sqlite/database.ts (added newClientId via expo-crypto randomUUID; module keeps sole expo-crypto ownership)",
+    "apps/mobile/src/components/sheets/OptionsSheet.tsx (bookmark row driven by persisted state: saved/saving/error-retry)",
+    "apps/mobile/src/components/ReaderView.tsx (bookmark state via store; sync read every render, no effects)",
+    "apps/mobile/src/components/SavedView.tsx (real bookmark list with empty state; static recent rows kept for M06b)",
+    "apps/mobile/app/_layout.tsx (single openAppDatabase handle feeds passage init and bookmark init)",
+    "apps/mobile/__tests__/bookmarks.test.ts (new: 6 fake-handle contract tests + 1 file-backed restart integration test)",
+    "apps/mobile/__tests__/tabs.test.tsx (Saved tab seeds a stub repository; added empty-library test)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (tripwire to versions 1,2,3)",
+    "docs/MOBILE_INSTALL_PLAN.md (M06 split into M06a DONE / M06b READY)"
+  ],
+  "files_not_changed": [
+    "No search changes (M06b); no recents/progress changes",
+    "No outbox drain/sync (M07); outbox rows stay pending by design",
+    "No entity/attestation/mention tables (still blocked on human-approved content)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "sqlite3 CLI on 003_library SQL",
+      "exit_code": 0,
+      "output": "applies clean; happy-path writes land; all 5 constraint violations (duplicate location, chapter 0, bad op, empty payload, bad status) rejected"
+    },
+    {
+      "command": "jest bookmarks + sqlite-migrations",
+      "exit_code": 0,
+      "output": "7 + 12 passed, including file-backed close/reopen durability"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "14 passed / 3 failed suites; 148 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint + prettier --check (mobile and root)",
+      "exit_code": 0,
+      "output": "0 errors; 16 pre-existing warnings; M06a files add zero"
+    }
+  ],
+  "bugs_found_by_tests": [
+    "Fake outbox handle mapped bound params as (op, entity, ...) while the real SQL carries op/entity as literals — fixed the fake to extract literals, proving the test asserts real statement shapes",
+    "ReaderView bookmark refresh via useEffect violated react-hooks/set-state-in-effect — removed the effect; the synchronous store read is fresh on every render by construction"
+  ],
+  "rights_note": "Bookmarks/outbox are user data: no Scripture rights impact. M06b verse-text search will read already-stored offline rows without creating a new index artifact; the OPEN 'Local search index' permission-matrix row stays a release-gate follow-up for the owner, not a build gate (same basis as the M02 offline-storage precedent).",
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-bookmarks-outbox:06a:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M06a DONE, M06b READY)",
+  "data_kind": "code+tests only; no Scripture text added or redistributed"
+}

@@ -3,7 +3,8 @@
  *
  * Copy transcribed from `demo/design-spec.html`, which is itself a prototype
  * built from `docs/DESIGN_SPEC.md` plus sample screenshots. Scripture wording
- * follows the selected bundled translation — see `src/content/bsb.ts`.
+ * follows the passage store (SQLite-first, bundled JSON fallback) — see
+ * `src/content/passageStore.ts`.
  * All contextual wording is dummy
  * prototype copy: production claims require approved sources, citations and
  * named editorial review per `docs/CONTENT_GUIDELINES.md`.
@@ -11,10 +12,12 @@
  * bundled translations (BSB plus Telugu/Tamil IRV, same owner-confirmed basis).
  */
 
-import { getVerseText, rangeLabel, translationById, verseLabel } from '@/content/bsb';
+import { rangeLabel, verseLabel } from '@/content/bsb';
+import { resolveDailyVerseText } from '@/content/passageStore';
 
 export function dailyVerseTextFor(translationId: string): string {
-  return getVerseText('Neh', 2, 4, translationId) ?? '"What is your request?" replied the king.';
+  // Absent everywhere: empty, never invented wording (see home.ts).
+  return resolveDailyVerseText(translationId) ?? '';
 }
 
 export function dailyVerseReferenceFor(translationId: string): string {
@@ -57,22 +60,6 @@ export const mapJourney = {
 export interface SavedRow {
   title: string;
   meta: string;
-}
-
-export function savedRowsFor(translationId: string): SavedRow[] {
-  const short = translationById(translationId)?.short ?? 'BSB';
-  return [
-    { title: rangeLabel('Neh', 2, 1, 8, translationId), meta: `${short} · saved today · available offline` },
-    { title: verseLabel('Neh', 2, 4, translationId), meta: `${short} · verse of the day · Sep 11` },
-  ];
-}
-
-export function searchRecentsFor(translationId: string): SavedRow[] {
-  const short = translationById(translationId)?.short ?? 'BSB';
-  return [
-    { title: rangeLabel('Neh', 2, 1, 8, translationId), meta: `${short} · recent reference` },
-    { title: verseLabel('Ezra', 4, 23, translationId), meta: `${short} · recent reference` },
-  ];
 }
 
 export const searchEntities: SavedRow[] = [

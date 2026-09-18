@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { Modal, Pressable, StyleSheet, useWindowDimensions, View, type ScrollView } from 'react-native';
+import {
+  Modal,
+  Pressable,
+  StyleSheet,
+  useWindowDimensions,
+  View,
+  type ScrollView,
+} from 'react-native';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { scriptureSizes, usePreferences } from '@/theme/ThemeProvider';
@@ -20,11 +27,10 @@ import { TimelineRail } from '@/components/TimelineRail';
 import { eraRail } from '@/fixtures/demo';
 import { anchorsForVerse, getDraft, splitAnchored } from '@/content/neh2Draft';
 import { parseReference } from '@/lib/reference';
-import {
-  getChapter,
-  isIndicTranslation,
-  type ChapterBlock,
-} from '@/content/bsb';
+import { isIndicTranslation, type ChapterBlock } from '@/content/bsb';
+import { getPassageContent } from '@/content/passageStore';
+import { isBookmarked, toggleBookmark } from '@/content/bookmarkStore';
+import { recordProgress } from '@/content/progressStore';
 
 export interface ReaderViewProps {
   bookOsis: string;
@@ -41,7 +47,13 @@ export interface ReaderViewProps {
  * (era rail, story, person cards, understand action). Other chapters
  * say so honestly instead of faking context. Sheets are local UI state.
  */
-export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPassage }: ReaderViewProps) {
+export function ReaderView({
+  bookOsis,
+  chapter,
+  initialVerse,
+  onBack,
+  onOpenPassage,
+}: ReaderViewProps) {
   const { colors } = useTheme();
   const preferences = usePreferences();
   const [storyOpen, setStoryOpen] = useState(true);
@@ -58,7 +70,31 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
   const blockOffset = useRef(0);
   const pendingVerse = useRef<number | null>(initialVerse ?? null);
 
-  const content = getChapter(bookOsis, chapter, preferences.translationId);
+  const translationId = preferences.translationId;
+  // Synchronous store read: always fresh on every render (status changes and
+  // chapter mounts both re-render), so no effect or cached flag is needed.
+  const bookmarkSaved = isBookmarked(translationId, bookOsis, chapter);
+  const [bookmarkStatus, setBookmarkStatus] = useState<'ready' | 'saving' | 'error'>('ready');
+
+  const handleToggleBookmark = () => {
+    setBookmarkStatus('saving');
+    toggleBookmark(translationId, bookOsis, chapter).then(
+      () => {
+        setBookmarkStatus('ready');
+      },
+      () => {
+        setBookmarkStatus('error');
+      },
+    );
+  };
+
+  // Reading progress: chapter entry and verse landings are recorded
+  // best-effort and never block the reader (recordProgress never rejects).
+  useEffect(() => {
+    void recordProgress(translationId, bookOsis, chapter, initialVerse ?? 0);
+  }, [translationId, bookOsis, chapter, initialVerse]);
+
+  const content = getPassageContent(bookOsis, chapter, translationId);
   const contextMode = bookOsis === 'Neh' && chapter === 2 && content !== null;
   const title = content ? `${content.bookName} ${chapter}` : `${bookOsis} ${chapter}`;
 
@@ -82,6 +118,7 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
   /** Scrolls to a verse and flashes it; waits for layout when needed. */
   const landOnVerse = (verse: number, animated: boolean) => {
     setHighlightedVerse(verse);
+    void recordProgress(translationId, bookOsis, chapter, verse);
     const known = verseOffsets.current.get(verse);
     if (known !== undefined) {
       scrollRef.current?.scrollTo({ y: Math.max(0, blockOffset.current + known - 100), animated });
@@ -94,7 +131,10 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
     verseOffsets.current.set(verse, y);
     if (pendingVerse.current === verse) {
       pendingVerse.current = null;
-      scrollRef.current?.scrollTo({ y: Math.max(0, blockOffset.current + y - 100), animated: false });
+      scrollRef.current?.scrollTo({
+        y: Math.max(0, blockOffset.current + y - 100),
+        animated: false,
+      });
       setHighlightedVerse(verse);
     }
   };
@@ -133,7 +173,14 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
     return (
       <Screen
         testID="reader-screen"
-        header={<ReaderHeader title={title} translationShort={preferences.translation.short} onBack={onBack} onOptions={undefined} />}
+        header={
+          <ReaderHeader
+            title={title}
+            translationName={preferences.translation.name}
+            onBack={onBack}
+            onOptions={undefined}
+          />
+        }
       >
         <AppText variant="body" color="textSecondary">
           This chapter is not in the bundled build yet.
@@ -145,7 +192,14 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
   return (
     <Screen
       testID="reader-screen"
-      header={<ReaderHeader title={title} translationShort={preferences.translation.short} onBack={onBack} onOptions={() => setOptionsOpen(true)} />}
+      header={
+        <ReaderHeader
+          title={title}
+          translationName={preferences.translation.name}
+          onBack={onBack}
+          onOptions={() => setOptionsOpen(true)}
+        />
+      }
       scrollRef={scrollRef}
       floatingAction={
         contextMode ? (
@@ -167,7 +221,6 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
         ) : undefined
       }
     >
-
       <View style={[styles.era, { borderColor: colors.border }]}>
         {contextMode ? (
           <View style={styles.eraRow}>
@@ -183,7 +236,10 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
               accessibilityLabel="Open timeline"
             >
               <AppText variant="caption" style={styles.eraSmall}>
-                Open timeline <AppText variant="caption" color="textSecondary" style={styles.eraSmall}>›</AppText>
+                Open timeline{' '}
+                <AppText variant="caption" color="textSecondary" style={styles.eraSmall}>
+                  ›
+                </AppText>
               </AppText>
             </Pressable>
           </View>
@@ -212,7 +268,11 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
             </AppText>
           </View>
           {storyOpen ? (
-            <AppText variant="body" scripture style={[styles.storyText, { fontSize: 20, lineHeight: 33 }]}>
+            <AppText
+              variant="body"
+              scripture
+              style={[styles.storyText, { fontSize: 20, lineHeight: 33 }]}
+            >
               {getDraft().immediate_summary}
             </AppText>
           ) : null}
@@ -351,13 +411,26 @@ export function ReaderView({ bookOsis, chapter, initialVerse, onBack, onOpenPass
         }}
       />
       <MapSheet visible={mapOpen} onClose={() => setMapOpen(false)} />
-      <OptionsSheet visible={optionsOpen} onClose={() => setOptionsOpen(false)} />
+      <OptionsSheet
+        visible={optionsOpen}
+        onClose={() => setOptionsOpen(false)}
+        bookmarked={bookmarkSaved}
+        bookmarkStatus={bookmarkStatus}
+        onToggleBookmark={handleToggleBookmark}
+      />
     </Screen>
   );
 }
 
 /** Validated anchor phrase for Nehemiah 2:1 in this translation. */
 export const NEH2_ANCHOR_PHRASE = 'King Artaxerxes';
+
+/**
+ * A tap must never die silently when native measurement does not call
+ * back (unlaid view on device; stubs headless). The fallback opens the
+ * peek unpositioned after this window — measure-first in the normal case.
+ */
+const MEASURE_TIMEOUT_MS = 250;
 
 /** Minimal surface for positioning the peek: a node that can report window bounds. */
 interface MeasurableNode {
@@ -385,6 +458,14 @@ function ChapterBlockView({
 }) {
   const { colors } = useTheme();
   const anchorNodes = useRef(new Map<string, MeasurableNode>());
+  const pendingTimers = useRef<Array<ReturnType<typeof setTimeout>>>([]);
+  useEffect(() => {
+    const Outstanding = pendingTimers.current;
+    return () => {
+      Outstanding.forEach(clearTimeout);
+      Outstanding.length = 0;
+    };
+  }, []);
   if (block.kind === 'heading') {
     return (
       <AppText variant="title3" scripture style={styles.heading}>
@@ -395,9 +476,19 @@ function ChapterBlockView({
   const pressAnchor = (slug: string, key: string) => {
     const node = anchorNodes.current.get(key);
     if (node && typeof node.measureInWindow === 'function') {
+      let settled = false;
+      const open = (rect: AnchorRect | null) => {
+        if (settled) return;
+        settled = true;
+        onAnchorPress(slug, rect);
+      };
       node.measureInWindow((x, y, width, height) => {
-        onAnchorPress(slug, width > 0 && height > 0 ? { x, y, width, height } : null);
+        open(width > 0 && height > 0 ? { x, y, width, height } : null);
       });
+      // Fallback only: a fired measure settles first, so positioned peeks
+      // never wait for this timer.
+      const timer = setTimeout(() => open(null), MEASURE_TIMEOUT_MS);
+      pendingTimers.current.push(timer);
     } else {
       onAnchorPress(slug, null);
     }
@@ -416,8 +507,13 @@ function ChapterBlockView({
         targeted && { backgroundColor: colors.accentSoft, borderRadius: 8 },
       ]}
     >
-      <AppText variant="verseNumber" color="accent" style={[styles.verseNum, { lineHeight: scriptLine }]}>
-        {block.number}{'\u00A0'}
+      <AppText
+        variant="verseNumber"
+        color="accent"
+        style={[styles.verseNum, { lineHeight: scriptLine }]}
+      >
+        {block.number}
+        {'\u00A0'}
       </AppText>
       {segments.map((segment, index) =>
         segment.slug ? (
@@ -451,12 +547,12 @@ function ChapterBlockView({
 /** Compact sticky header: plain-text back and options glyphs, one-line title. */
 function ReaderHeader({
   title,
-  translationShort,
+  translationName,
   onBack,
   onOptions,
 }: {
   title: string;
-  translationShort: string;
+  translationName: string;
   onBack: () => void;
   onOptions: (() => void) | undefined;
 }) {
@@ -476,7 +572,7 @@ function ReaderHeader({
       <AppText variant="label" style={styles.headerTitle} numberOfLines={1}>
         {title}{' '}
         <AppText variant="caption" color="textSecondary">
-          {translationShort}
+          {translationName}
         </AppText>
       </AppText>
       {onOptions ? (

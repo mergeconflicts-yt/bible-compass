@@ -49,7 +49,17 @@ describe('draft context wiring', () => {
 
   it('validates every anchor phrase and offset against its exact verse text', () => {
     const draft = getDraft();
-    const anchors = (draft as unknown as { anchors: Array<{ verse_id: string; matched_text: string; entity_id: string; start_offset: number; end_offset: number }> }).anchors;
+    const anchors = (
+      draft as unknown as {
+        anchors: Array<{
+          verse_id: string;
+          matched_text: string;
+          entity_id: string;
+          start_offset: number;
+          end_offset: number;
+        }>;
+      }
+    ).anchors;
     expect(anchors.length).toBeGreaterThanOrEqual(19);
     for (const anchor of anchors) {
       const [, chapterRaw, verseRaw] = anchor.verse_id.split('.');
@@ -112,7 +122,8 @@ describe('draft context wiring', () => {
     expect(formatYear('30')).toBe('AD 30');
   });
 
-  it('stores machine-verified appearance refs on person entities', () => {    const artaxerxes = entityBySlug('artaxerxes-i');
+  it('stores machine-verified appearance refs on person entities', () => {
+    const artaxerxes = entityBySlug('artaxerxes-i');
     expect(artaxerxes?.appearances?.length).toBe(7);
     for (const appearance of artaxerxes?.appearances ?? []) {
       expect(appearance.ref.length).toBeGreaterThan(0);

@@ -10,10 +10,10 @@
     "principal_id": "owner:theone",
     "role": "CONTROLLER"
   },
-  "decision": "PASSED",
+  "decision": "VOID",
   "expires_at": "2026-12-15T05:30:00.000Z",
   "gate_id": "C2",
-  "gate_status": "PASSED",
+  "gate_status": "VOID",
   "gate_version": 1,
   "human_actors": [
     {
@@ -22,17 +22,21 @@
     }
   ],
   "issued_at": "2026-09-15T05:30:00.000Z",
-  "permitted_next_tasks": ["10", "11", "12", "13", "14"],
+  "permitted_next_tasks": [],
   "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
   "plan_header_version": 12,
   "plan_version": "1.2.0",
   "receipt_kind": "owner_gate",
   "record_id": "gate-C2-v1-20260915T053000Z",
-  "record_sha256": "b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2",
+  "record_sha256": "b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2",
   "review_packet_sha": "4d412ff546b6217f3dcd5c8126013d289c53b82597ea64729a0837ba294e5db5",
   "revocation": {
     "status": "active"
   },
+  "synthetic": true,
+  "voided_at": "2026-09-15",
+  "void_reason": "VOID by owner direction 2026-09-15: AI-generated test signature and no human rights review of exact-byte parsing cannot authorize production use. See docs/receipts/gate-void-registry.json. This gate never released any work.",
+  "original_claimed_decision": "PASSED",
   "server_timestamp": "2026-09-15T05:30:00.000Z",
   "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
   "service_id": "bootstrap-trust-v1",

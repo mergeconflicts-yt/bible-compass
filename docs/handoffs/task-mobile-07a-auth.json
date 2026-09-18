@@ -1,0 +1,67 @@
+{
+  "attempt_id": "task:mobile-auth:07a:attempt-1",
+  "task_id": "M07a",
+  "task_title": "Auth: OAuth sign-in, SecureStore sessions, sign-out wipe",
+  "result": "PASS",
+  "user_visible_outcome": "Settings gains an Account section: anonymous by default with an honest 'Sync unavailable' state; configured builds offer Sign in with Apple/Google, show the signed-in account, and sign out only after a destructive confirmation (library on the device is deleted). No visible change in unconfigured builds.",
+  "files_changed": [
+    "apps/mobile/package.json + package-lock.json (@supabase/supabase-js 2.116.0 exact, expo-secure-store 57.0.4 exact; owner-approved 2026-09-15)",
+    "apps/mobile/app.json (expo-secure-store config plugin, via npx expo install)",
+    "apps/mobile/src/config.ts (optional EXPO_PUBLIC_SUPABASE_URL/ANON_KEY via zod; isSyncConfigured gate)",
+    "apps/mobile/src/content/authStore.ts (new: state machine, subscribe/getSnapshot for screens, restore/signIn/signOut/deleteAccount, typed AuthError, fail-closed unconfigured)",
+    "apps/mobile/src/infrastructure/supabase/auth.ts (new: sole owner of supabase-js/secure-store/web-browser/linking imports; PKCE OAuth, SecureStore GOTRUE storage, cancel mapping)",
+    "apps/mobile/src/infrastructure/sqlite/library.ts (new: wipeUserData deletes bookmarks/outbox/recents/progress in one transaction; Scripture cache untouched)",
+    "apps/mobile/src/components/SettingsView.tsx (new ACCOUNT section: unavailable/sign-in/error-retry/signed-in/sign-out states)",
+    "apps/mobile/app/_layout.tsx (initializes auth + restores session only when configured, on the shared DB handle)",
+    "apps/mobile/__tests__/auth.test.ts (new: 11 state-machine tests)",
+    "apps/mobile/__tests__/tabs.test.ts (3 new Settings account tests)",
+    "docs/MOBILE_INSTALL_PLAN.md (M07 split into M07a DONE / M07b READY / M07c BLOCKED)",
+    "docs/DECISION_M07_SYNC.md (approvals + PD-020 copy recorded)"
+  ],
+  "files_not_changed": [
+    "No sync engine push/pull/merge (M07b)",
+    "No reminder (M07c; expo-notifications approval still open)",
+    "No service-role keys, push credentials, or secrets anywhere (anon key via env only, absent from repo)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "npx expo install expo-secure-store + npm install --save-exact @supabase/supabase-js@2.116.0",
+      "exit_code": 0,
+      "output": "secure-store 57.0.4 + supabase-js 2.116.0 pinned exact in package.json and lockfile"
+    },
+    {
+      "command": "jest auth + tabs",
+      "exit_code": 0,
+      "output": "29 passed: 11 state machine + 18 tabs incl. 3 new account tests"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "19 passed / 3 failed suites; 186 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint + prettier --check (mobile and root)",
+      "exit_code": 0,
+      "output": "0 errors; 14 warnings (2 pre-existing duplicates cleaned by the Settings import merge); M07a files add zero"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "needs_from_owner": [
+    "Supabase project + applied 20260915000006_user_library migration + Apple/Google OAuth credentials (M07 exit gate)",
+    "iOS + Android devices and expired-session + cross-user test accounts (M07 exit gate)",
+    "expo-notifications written approval (M07c reminder)",
+    "Edge Function for cloud account deletion (deleteAccount currently wipes locally and reports cloud pending) — new backend component, propose as M07b prerequisite or separate decision",
+    "Device verification: supabase-js URL/PKCE behavior on Hermes, SecureStore entitlements, OAuth redirect on both platforms"
+  ],
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-auth:07a:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M07a DONE; M07b READY pending runtime; M07c BLOCKED on notifications dep)",
+  "data_kind": "code+tests only; no Scripture text added or redistributed; no credentials committed"
+}

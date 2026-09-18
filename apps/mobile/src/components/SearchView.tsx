@@ -7,18 +7,27 @@ import { AppText } from '@/components/AppText';
 import { NavRow } from '@/components/NavRow';
 import { EntitySheet } from '@/components/sheets/EntitySheet';
 import { searchDemoVisibility } from '@/lib/search';
-import { searchEntities, searchRecentsFor } from '@/fixtures/demo';
-import { bookNameFor } from '@/content/bsb';
+import { searchEntities } from '@/fixtures/demo';
+import { bookNameFor, translationById, verseLabel } from '@/content/bsb';
+import { searchVerseText } from '@/content/passageStore';
+import { listRecents } from '@/content/recentStore';
+import { chapterLabel } from '@/lib/reference';
 import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
 export interface SearchViewProps {
   onOpenPassage: (passageKey: string) => void;
 }
 
+/** Shortens a verse hit for the row meta; the reader shows the full text. */
+function snippetFor(text: string): string {
+  return text.length > 120 ? `${text.slice(0, 117)}…` : text;
+}
+
 /**
- * Reference-first search — demo #v-search. Empty query shows recents plus
- * people/places; typing narrows to reference hits, person hits, or an empty
- * state with a typed hint. No query text ever leaves the device.
+ * Reference-first search — demo #v-search. Empty query shows on-device
+ * recents plus people/places; typing narrows to reference hits, verse-text
+ * hits from the offline store, person hits, or an empty state with a typed
+ * hint. No query text ever leaves the device (recents store locations only).
  */
 export function SearchView({ onOpenPassage }: SearchViewProps) {
   const { colors } = useTheme();
@@ -26,7 +35,10 @@ export function SearchView({ onOpenPassage }: SearchViewProps) {
   const [entitySlug, setEntitySlug] = useState<string | null>(null);
   const preferences = useOptionalPreferences();
   const translationId = preferences?.translationId ?? 'BSB';
-  const recents = searchRecentsFor(translationId);
+  const short = translationById(translationId)?.short ?? 'BSB';
+  const trimmed = query.trim();
+  const recents = trimmed === '' ? listRecents(translationId) : [];
+  const verseHits = trimmed.length >= 2 ? searchVerseText(trimmed, translationId) : [];
   const visibility = searchDemoVisibility(query);
 
   return (
@@ -62,22 +74,37 @@ export function SearchView({ onOpenPassage }: SearchViewProps) {
         />
       ) : null}
 
-      {visibility.showRecents ? (
+      {visibility.showRecents && recents.length > 0 ? (
         <View>
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
             RECENT
           </AppText>
-          <NavRow
-            title={recents[0]?.title ?? 'Nehemiah 2:1–8'}
-            meta={recents[0]?.meta}
-            onPress={() => onOpenPassage('Neh.2.1-Neh.2.8')}
-            testID="search-recent-passage"
-          />
-          <NavRow
-            title={recents[1]?.title ?? 'Ezra 4:23'}
-            meta={recents[1]?.meta}
-            testID="search-recent-ezra"
-          />
+          {recents.map((recent, index) => (
+            <NavRow
+              key={`${recent.bookOsis}.${recent.chapter}`}
+              title={chapterLabel(recent.bookOsis, recent.chapter)}
+              meta={`${short} · recent`}
+              onPress={() => onOpenPassage(`${recent.bookOsis}.${recent.chapter}`)}
+              testID={`search-recent-${index}`}
+            />
+          ))}
+        </View>
+      ) : null}
+
+      {verseHits.length > 0 ? (
+        <View>
+          <AppText variant="caption" color="accent" style={styles.eyebrow}>
+            VERSES
+          </AppText>
+          {verseHits.map((hit) => (
+            <NavRow
+              key={`${hit.bookOsis}.${hit.chapter}.${hit.verse}`}
+              title={verseLabel(hit.bookOsis, hit.chapter, hit.verse, translationId)}
+              meta={snippetFor(hit.text)}
+              onPress={() => onOpenPassage(`${hit.bookOsis}.${hit.chapter}.${hit.verse}`)}
+              testID={`search-verse-${hit.chapter}-${hit.verse}`}
+            />
+          ))}
         </View>
       ) : null}
 
@@ -95,7 +122,7 @@ export function SearchView({ onOpenPassage }: SearchViewProps) {
         </View>
       ) : null}
 
-      {visibility.showEmpty ? (
+      {visibility.showEmpty && verseHits.length === 0 ? (
         <AppText variant="body" color="textSecondary" style={styles.empty} testID="search-empty">
           No matches — try a reference like “Neh 2”.
         </AppText>

@@ -58,12 +58,12 @@
 
 ## 5. Severity-Ranked Findings
 
-| ID | Severity | Area | Description | Status |
-|---|---|---|---|---|
-| F-11-01 | P1 | Biblical-ontology | `tipnr-adapter` relation `entity:cupbearer-role` dangling — `nehemiah-governor served_as cupbearer-role` references non-existent `entity:cupbearer-role`. Fix: create `entity:cupbearer` type `role` or change predicate to `holds_role` with `claim:` not entity. Must fix before Task 17A (DB FK) | **Open, not blocking pilot report but blocks migration** |
-| F-16A-01 | P2 | Data-engineering | `bibledata-adapter` reads 3 CSVs but `relBuf`/`pvBuf` unused after SHA verify — minor Dead code | **Info** |
-| F-16A-02 | P2 | License | `STEPBible`/`OpenBible` LICENSE digests synthetic `b...`/`888...` — real LICENSE not fetched via raw at that commit (needs API contents) | **Info, not blocking evaluation** |
-| — | P0 | All | No P0 | **None** |
+| ID       | Severity | Area              | Description                                                                                                                                                                                                                                                                                         | Status                                                   |
+| -------- | -------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| F-11-01  | P1       | Biblical-ontology | `tipnr-adapter` relation `entity:cupbearer-role` dangling — `nehemiah-governor served_as cupbearer-role` references non-existent `entity:cupbearer-role`. Fix: create `entity:cupbearer` type `role` or change predicate to `holds_role` with `claim:` not entity. Must fix before Task 17A (DB FK) | **Open, not blocking pilot report but blocks migration** |
+| F-16A-01 | P2       | Data-engineering  | `bibledata-adapter` reads 3 CSVs but `relBuf`/`pvBuf` unused after SHA verify — minor Dead code                                                                                                                                                                                                     | **Info**                                                 |
+| F-16A-02 | P2       | License           | `STEPBible`/`OpenBible` LICENSE digests synthetic `b...`/`888...` — real LICENSE not fetched via raw at that commit (needs API contents)                                                                                                                                                            | **Info, not blocking evaluation**                        |
+| —        | P0       | All               | No P0                                                                                                                                                                                                                                                                                               | **None**                                                 |
 
 ## 6. Coverage Assessment
 
@@ -74,13 +74,13 @@
 
 ## 7. Recommendation per Adapter
 
-| Adapter | Recommendation | Reason |
-|---|---|---|
-| TVTMS | **accept** | Deterministic, split/merge preserved, no guess |
-| TIPNR | **revise** | Fix P1 dangling `cupbearer-role` before 17A, otherwise good |
-| BibleData | **accept** | Source-local, no winner, flags correct |
-| MACULA | **revise** | Expand token coverage beyond 5 minimal before publication, confirm TSV vs XML at commit |
-| OpenBible | **accept** | Competing preserved, correct exclusions |
+| Adapter   | Recommendation | Reason                                                                                  |
+| --------- | -------------- | --------------------------------------------------------------------------------------- |
+| TVTMS     | **accept**     | Deterministic, split/merge preserved, no guess                                          |
+| TIPNR     | **revise**     | Fix P1 dangling `cupbearer-role` before 17A, otherwise good                             |
+| BibleData | **accept**     | Source-local, no winner, flags correct                                                  |
+| MACULA    | **revise**     | Expand token coverage beyond 5 minimal before publication, confirm TSV vs XML at commit |
+| OpenBible | **accept**     | Competing preserved, correct exclusions                                                 |
 
 **Overall:** **PASS with 1 P1** — No P0, pipeline is sound for Neh2, board can decide to accept 3, revise 2, omit 0, stop 0. **No P0 blocks Gate D**, but **P1 must be fixed before Task 17** migrations.
 
@@ -95,11 +95,11 @@
 
 **Sign-off (read-only, no approval):**
 
-| Role | Reviewer | Date | Decision |
-|---|---|---|---|
-| Data-engineering | independent-data | 2026-09-15 | PASS with P1 |
+| Role              | Reviewer             | Date       | Decision     |
+| ----------------- | -------------------- | ---------- | ------------ |
+| Data-engineering  | independent-data     | 2026-09-15 | PASS with P1 |
 | Biblical-ontology | independent-biblical | 2026-09-15 | PASS with P1 |
-| License/security | independent-license | 2026-09-15 | PASS |
-| Multilingual | independent-i18n | 2026-09-15 | PASS |
+| License/security  | independent-license  | 2026-09-15 | PASS         |
+| Multilingual      | independent-i18n     | 2026-09-15 | PASS         |
 
 > No files edited, no approval granted, no candidates mutated. 16A author not reviewer. One P1 `cupbearer-role` blocks migration until fix.

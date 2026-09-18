@@ -47,18 +47,11 @@ create index idx_package_manifests_locale on private_staging.package_manifests (
 -- ---------------------------------------------------------------------------
 -- 3. package_members
 -- ---------------------------------------------------------------------------
-create table private_staging.package_members (
-  package_id uuid not null references private_staging.package_manifests(id) on delete restrict,
-  entity_id uuid references private_staging.entities(id) on delete restrict,
-  claim_id uuid references private_staging.claims(id) on delete restrict,
-  context_revision_id uuid references private_staging.context_revisions(id) on delete restrict,
-  primary key (package_id, coalesce(entity_id, claim_id, context_revision_id))
-);
--- Note: Postgres doesn't allow coalesce in PK, so we use composite with check
--- Instead, create separate table with check that exactly one is not null is enforced via trigger below
--- For now, create with simple PK on package_id + entity_id where entity_id not null, etc. — we use generic PK
--- To keep migration simple, we create with id and unique constraint
-drop table if exists private_staging.package_members;
+-- Note (R1-B correction 2026-09-15): an earlier draft of this file created
+-- this table with an expression primary key, which Postgres rejects, so the
+-- migration could never execute. That statement never ran on any database
+-- (no stack exists), hence this in-place correction instead of a repair
+-- migration. Canonical definition uses a surrogate id plus exactly-one check.
 create table private_staging.package_members (
   id uuid primary key default gen_random_uuid(),
   package_id uuid not null references private_staging.package_manifests(id) on delete restrict,

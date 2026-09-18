@@ -1,107 +1,164 @@
--- Test: Private registry RLS — allow/deny (Task 07A)
--- Framework: supabase test db / pgTAP-compatible or plain psql assertions
--- Run: `supabase db test` or `psql -f supabase/tests/01_private_registry_rls_test.sql`
--- Expected: anonymous and authenticated cannot SELECT/INSERT/UPDATE/DELETE; service_role bypasses RLS and can
--- This test uses synthetic transaction + role simulation where available; fallback is structural checks.
+-- Test: Private registry RLS — enforceable (R1-B).
+-- Every check below is a real assertion: any violation raises EXCEPTION and
+-- aborts with a non-zero exit. String-returning PASS/FAIL selects are banned.
+--
+-- Run (single transaction, rolls back, no state changes):
+--   psql "$DATABASE_URL" -f supabase/tests/01_private_registry_rls_test.sql
+-- Run as a superuser/service_role-equivalent (default local DATABASE_URL user)
+-- so SET ROLE impersonation is permitted. Supabase-gated runs: see
+-- docs/REGISTRY_MIGRATION_NOTES.md (explicit SUPABASE_TESTS_SKIPPED notice
+-- when no stack is available; never silent).
 
-\set ON_ERROR_STOP on
 begin;
 
--- 1. Structural: all private_registry tables have RLS enabled
-select
-  case when count(*) = 11 then 'PASS: 11 private_registry tables have RLS enabled'
-       else 'FAIL: expected 11 RLS tables, got ' || count(*)::text
-  end as rls_check
-from pg_tables t
-join pg_class c on c.relname = t.tablename
-where t.schemaname = 'private_registry'
-  and c.relrowsecurity = true;
+-- 1. RLS enabled on exactly the 11 private_registry tables.
+DO $$
+DECLARE
+  missing text;
+BEGIN
+  SELECT string_agg(c.relname, ', ' ORDER BY c.relname) INTO missing
+  FROM pg_class c
+  JOIN pg_namespace n ON n.oid = c.relnamespace
+  WHERE n.nspname = 'private_registry'
+    AND c.relkind = 'r'
+    AND c.relname IN ('sources', 'source_releases', 'source_artifacts', 'rights_components', 'operation_grants', 'approval_records', 'audit_receipts', 'raw_records', 'import_runs', 'external_mappings', 'findings')
+    AND NOT c.relrowsecurity;
+  IF missing IS NOT NULL THEN
+    RAISE EXCEPTION 'FAIL: RLS not enabled on private_registry tables: %', missing;
+  END IF;
+END $$;
 
--- 2. No GRANT to anon/authenticated on schema or tables
-select
-  case when count(*) = 0 then 'PASS: no grants to anon/authenticated on private_registry tables'
-       else 'FAIL: found ' || count(*)::text || ' grants to anon/authenticated'
-  end as grant_check
-from information_schema.role_table_grants
-where table_schema = 'private_registry'
-  and grantee in ('anon','authenticated','public')
-  and privilege_type in ('SELECT','INSERT','UPDATE','DELETE');
+-- 2. Zero grants of any kind to anon/authenticated/public on private_registry.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n
+  FROM information_schema.role_table_grants
+  WHERE table_schema = 'private_registry'
+    AND grantee IN ('anon', 'authenticated', 'public');
+  IF n <> 0 THEN
+    RAISE EXCEPTION 'FAIL: % grants to anon/authenticated/public on private_registry', n;
+  END IF;
+END $$;
 
--- 3. Policies exist denying anon/authenticated
-select
-  case when count(*) >= 11 then 'PASS: deny policies exist for private tables (' || count(*)::text || ')'
-       else 'FAIL: expected >=11 deny policies, got ' || count(*)::text
-  end as policy_check
-from pg_policies
-where schemaname = 'private_registry'
-  and policyname like 'deny_all_%';
+-- 3. Anonymous cannot read private registry (expects permission error).
+SET ROLE anon;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_registry.sources LIMIT 1;
+  RAISE EXCEPTION 'FAIL: anon could read private_registry.sources';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 4. Approval records append-only trigger exists
-select
-  case when count(*) = 1 then 'PASS: approval append-only trigger exists'
-       else 'FAIL: approval trigger missing'
-  end as trigger_check
-from pg_trigger
-where tgname = 'trg_prevent_approval_update';
+-- 4. Authenticated cannot read private registry either.
+SET ROLE authenticated;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_registry.sources LIMIT 1;
+  RAISE EXCEPTION 'FAIL: authenticated could read private_registry.sources';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 5. Synthetic seed can be inserted as service_role (simulated by direct insert in this migration role)
--- This will be run as service_role / postgres; if RLS were misconfigured, the next inserts would fail for anon
--- We verify the seed data exists (inserted via seed.sql after migration)
--- Note: seed verification is separate; here we just ensure constraints hold
+-- 5. Authenticated cannot insert into private registry.
+SET ROLE authenticated;
+DO $$
+BEGIN
+  INSERT INTO private_registry.sources (source_key, publisher)
+  VALUES ('source:test:probe', 'probe');
+  RAISE EXCEPTION 'FAIL: authenticated could insert into private_registry.sources';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 6. Digest-bound check: invalid sha256 must fail
--- Use a savepoint so the expected failure does not abort the test transaction
-savepoint test_invalid_sha;
-do $$
-begin
-  insert into private_registry.sources (source_key, publisher) values ('source:test:invalid', 'test');
-  insert into private_registry.source_releases (source_id, release_key, commit_or_tag, artifact_sha256, byte_size, retrieved_at, license_evidence_sha256, required_attribution, status)
-  values (
-    (select id from private_registry.sources where source_key='source:test:invalid'),
-    'release:source:test:invalid@abc123:sha-deadbeef',
+-- 6. Digest CHECK is still enforced (privileged run; expects check violation).
+DO $$
+DECLARE
+  src uuid;
+BEGIN
+  INSERT INTO private_registry.sources (source_key, publisher)
+  VALUES ('source:test:invalid-sha-probe', 'probe');
+  SELECT id INTO src FROM private_registry.sources
+  WHERE source_key = 'source:test:invalid-sha-probe';
+  INSERT INTO private_registry.source_releases
+    (source_id, release_key, commit_or_tag, artifact_sha256, byte_size, retrieved_at, license_evidence_sha256, required_attribution, status)
+  VALUES (
+    src,
+    'release:source:test:invalid-sha-probe@abc123:sha-deadbeef',
     'abc123',
-    'bad-sha'::text, -- should fail check
+    'bad-sha',
     100,
     now(),
-    'sha256:' || repeat('b',64),
-    'test',
+    'sha256:' || repeat('b', 64),
+    'probe',
     'candidate'
   );
-  raise exception 'FAIL: invalid sha256 was accepted';
-exception when check_violation then
-  -- expected
-  null;
-end $$;
-rollback to savepoint test_invalid_sha;
+  RAISE EXCEPTION 'FAIL: invalid artifact_sha256 was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
 
--- 7. Quarantine path check: must start with content/quarantine/
-savepoint test_quarantine_path;
-do $$
-begin
-  insert into private_registry.source_artifacts (release_id, url, media_type, byte_size, sha256, quarantine_path)
-  values (
-    (select id from private_registry.source_releases where release_key='release:source:stepbible:tipnr@abc12345:sha-9f3e7d6c'),
+-- 7. Quarantine-path CHECK is still enforced.
+DO $$
+DECLARE
+  src uuid;
+  rel uuid;
+BEGIN
+  INSERT INTO private_registry.sources (source_key, publisher)
+  VALUES ('source:test:quarantine-probe', 'probe');
+  SELECT id INTO src FROM private_registry.sources
+  WHERE source_key = 'source:test:quarantine-probe';
+  INSERT INTO private_registry.source_releases
+    (source_id, release_key, commit_or_tag, artifact_sha256, byte_size, retrieved_at, license_evidence_sha256, required_attribution, status)
+  VALUES (
+    src,
+    'release:source:test:quarantine-probe@abc123:sha-deadbeef',
+    'abc123',
+    'sha256:' || repeat('a', 64),
+    100,
+    now(),
+    'sha256:' || repeat('b', 64),
+    'probe',
+    'candidate'
+  );
+  SELECT id INTO rel FROM private_registry.source_releases
+  WHERE release_key = 'release:source:test:quarantine-probe@abc123:sha-deadbeef';
+  INSERT INTO private_registry.source_artifacts
+    (release_id, url, media_type, byte_size, sha256, quarantine_path)
+  VALUES (
+    rel,
     'https://example.invalid/bad.zip',
     'application/zip',
     100,
-    'sha256:' || repeat('a',64),
-    '/tmp/bad.zip' -- should fail
+    'sha256:' || repeat('a', 64),
+    '/tmp/bad.zip'
   );
-  raise exception 'FAIL: bad quarantine_path was accepted';
-exception when check_violation then null;
-end $$;
-rollback to savepoint test_quarantine_path;
+  RAISE EXCEPTION 'FAIL: bad quarantine_path was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
 
--- 8. Unknown state fail-closed: operation_grants defaults to unknown, but insertion allowed
--- Validation of unknown->denied is enforced at application layer (registry.ts:84) and via check constraint allowing unknown but evaluator denies
-select
-  case when exists (select 1 from private_registry.operation_grants where state='unknown') or true
-       then 'PASS: unknown state permitted in DB but evaluator denies (fail-closed)'
-       else 'FAIL'
-  end as unknown_state_check;
-
--- 9. Compact summary
-select 'RLS_TEST_COMPLETE' as status;
+-- 8. Unknown operation state stays permitted in storage but denied by the
+-- evaluator (fail-closed). DB shape check only; denial is proven by the
+-- registry unit suite (rights-unknown) in CI.
+DO $$
+DECLARE
+  has_unknown boolean;
+BEGIN
+  SELECT EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema = 'private_registry'
+      AND table_name = 'operation_grants'
+      AND column_name = 'state'
+  ) INTO has_unknown;
+  IF NOT has_unknown THEN
+    RAISE EXCEPTION 'FAIL: operation_grants.state column missing';
+  END IF;
+END $$;
 
 rollback;
--- Do not commit; test runs in rollback transaction

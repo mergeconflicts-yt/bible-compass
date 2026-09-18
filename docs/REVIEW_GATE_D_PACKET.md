@@ -19,11 +19,11 @@
 
 ## Findings
 
-| ID | Severity | Area | Description | Status |
-|---|---|---|---|---|
-| F-11-01 | P1 | Biblical-ontology | `tipnr-adapter` relation `entity:cupbearer-role` dangling — `nehemiah-governor served_as cupbearer-role` references non-existent entity. Fix before Task 17A (DB FK) | Open, not blocking pilot but blocks migration |
-| F-16A-01 | P2 | Data-engineering | Dead code `relBuf`/`pvBuf` unused | Info |
-| F-16A-02 | P2 | License | STEPBible/OpenBible LICENSE synthetic until real fetch via API | Info |
+| ID       | Severity | Area              | Description                                                                                                                                                          | Status                                        |
+| -------- | -------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| F-11-01  | P1       | Biblical-ontology | `tipnr-adapter` relation `entity:cupbearer-role` dangling — `nehemiah-governor served_as cupbearer-role` references non-existent entity. Fix before Task 17A (DB FK) | Open, not blocking pilot but blocks migration |
+| F-16A-01 | P2       | Data-engineering  | Dead code `relBuf`/`pvBuf` unused                                                                                                                                    | Info                                          |
+| F-16A-02 | P2       | License           | STEPBible/OpenBible LICENSE synthetic until real fetch via API                                                                                                       | Info                                          |
 
 **P0:** None
 
@@ -39,11 +39,11 @@
 
 ## Sign-off
 
-| Role | Reviewer | Date | Decision |
-|---|---|---|---|
-| Data-engineering | independent-data | 2026-09-15 | PASS with P1 |
+| Role              | Reviewer             | Date       | Decision     |
+| ----------------- | -------------------- | ---------- | ------------ |
+| Data-engineering  | independent-data     | 2026-09-15 | PASS with P1 |
 | Biblical-ontology | independent-biblical | 2026-09-15 | PASS with P1 |
-| License/security | independent-license | 2026-09-15 | PASS |
-| Multilingual | independent-i18n | 2026-09-15 | PASS |
+| License/security  | independent-license  | 2026-09-15 | PASS         |
+| Multilingual      | independent-i18n     | 2026-09-15 | PASS         |
 
 > This review is read-only. No files edited, no approval granted, no candidates mutated. 16A author not reviewer.

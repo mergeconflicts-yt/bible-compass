@@ -17,15 +17,21 @@ export interface RegistryRepository {
   findSourceByKey(sourceKey: string): Promise<SourceRecord | null>;
 
   // Releases — idempotent, changed payload under same releaseKey rejects
-  recordRelease(release: SourceRelease): Promise<{ created: boolean; id: string }>;
+  recordRelease(
+    release: SourceRelease,
+  ): Promise<{ created: boolean; id: string }>;
   findReleaseByKey(releaseKey: string): Promise<SourceRelease | null>;
 
   // Components — unique (release_id, component_key)
-  recordComponent(component: RightsComponent): Promise<{ created: boolean; id: string }>;
+  recordComponent(
+    component: RightsComponent,
+  ): Promise<{ created: boolean; id: string }>;
   findComponentsByRelease(releaseKey: string): Promise<RightsComponent[]>;
 
   // Grants
-  recordGrant(grant: OperationGrant & { componentKey: string }): Promise<{ created: boolean; id: string }>;
+  recordGrant(
+    grant: OperationGrant & { componentKey: string },
+  ): Promise<{ created: boolean; id: string }>;
   listGrantsForComponent(componentKey: string): Promise<OperationGrant[]>;
 
   // Approvals — append-only, revocation via latest decision
@@ -47,18 +53,27 @@ export interface RegistryRepository {
 
 export interface PrivilegedActor {
   principalId: string;
-  role: "service_role" | "rights_reviewer" | "product_owner" | "editorial_reviewer" | "anon" | "authenticated";
+  role:
+    | "service_role"
+    | "rights_reviewer"
+    | "product_owner"
+    | "editorial_reviewer"
+    | "anon"
+    | "authenticated";
   isPrivileged: boolean;
 }
 
-export const PRIVILEGED_ROLES: ReadonlySet<string> = new Set([
-  "service_role",
-]);
+export const PRIVILEGED_ROLES: ReadonlySet<string> = new Set(["service_role"]);
 
 export function assertPrivileged(actor: PrivilegedActor): void {
   if (!actor.isPrivileged || actor.role !== "service_role") {
-    throw Object.assign(new Error(`Only privileged server identity can record decisions (actor ${actor.principalId} role ${actor.role} denied)`), {
-      code: "forbidden-not-privileged",
-    });
+    throw Object.assign(
+      new Error(
+        `Only privileged server identity can record decisions (actor ${actor.principalId} role ${actor.role} denied)`,
+      ),
+      {
+        code: "forbidden-not-privileged",
+      },
+    );
   }
 }

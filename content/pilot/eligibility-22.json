@@ -1,5 +1,5 @@
 {
-  "reportId": "eligibility:22:20260915:verified",
+  "reportId": "eligibility:22:20260915:voided",
   "bundleId": "review-bundle:21:20260915",
   "requiredReceipts": [
     "product_owner for canon",
@@ -8,10 +8,11 @@
     "historical_reviewer for places",
     "language_reviewer for BSB mentions"
   ],
-  "status": "PASSED \u2014 all 6 required human approval receipts verified (Gate E1 PASSED)",
-  "reason": "Gate E1 6/6 approved: reference-system, biblical-language, bsb-edition, historical-geography, biblical-editorial, rights \u2014 exact digests, not expired, not revoked, deterministic",
+  "status": "DENIED — Gate E1 voided 2026-09-15: all six claimed approvals were synthetic (AI-generated reviewer identities and test signature). No human approval exists.",
+  "reason": "VOID — reverted by owner direction 2026-09-15 (remediation item 1). Package 23 remains ineligible. See docs/receipts/gate-void-registry.json.",
   "deterministic": true,
-  "verifiedReceipts": [
+  "verifiedReceipts": [],
+  "voidedClaims": [
     "gate-E1:reference-system:approved:35c184ae",
     "gate-E1:biblical-language:approved:35c184ae",
     "gate-E1:bsb-edition:approved:35c184ae",

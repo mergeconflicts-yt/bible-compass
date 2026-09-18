@@ -19,15 +19,15 @@ Clean rebuild `python3 generate` reproduces same SHAs. Receipts bind `quarantine
 
 ## Source Contribution
 
-| Adapter | Produces | Note |
-|---|---|---|
-| TVTMS | 22 mappings (16 equiv, 2 split Neh2.4a/b, 1 merge, 1 omitted, 1 renumbered, 1 uncertain) | Deterministic, no guess |
-| TIPNR | 5 entities (Nehemiah, Artaxerxes I, Jerusalem, Susa, Hanani) + 4 names + 4 attestations via TVTMS + 2 family relations | Distinct homonym not merged, Claude/geodata excluded |
-| BibleData | 7 discrepancy records vs TIPNR: exact 1, probable 1, possible 1, conflict 1, missing 2, unresolved 1 | Source-local, no winner |
-| MACULA | 5 WLC tokens + 3 referents (2 high, 1 ambiguous medium) | WLC lowfat XML, no BSB offset, partial |
-| OpenBible | 2 ancient (Jerusalem approximate, Susa area) + 3 modern (Jerusalem 2 competing, Susa 1) EPSG:4326 | Competing preserved |
-| Reconciliation | 8 mappings (exact 4, probable 1, possible 1, distinct 1, unresolved 1) + 4 attestations + 3 relevances | Separate attestations/relevance |
-| BSB Mentions | 4 selectors (Artaxerxes explicit, Nehemiah pronoun, Jerusalem/Susa indirect) | Exact quote, prefix/suffix, grapheme/UTF-16 |
+| Adapter        | Produces                                                                                                               | Note                                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| TVTMS          | 22 mappings (16 equiv, 2 split Neh2.4a/b, 1 merge, 1 omitted, 1 renumbered, 1 uncertain)                               | Deterministic, no guess                              |
+| TIPNR          | 5 entities (Nehemiah, Artaxerxes I, Jerusalem, Susa, Hanani) + 4 names + 4 attestations via TVTMS + 2 family relations | Distinct homonym not merged, Claude/geodata excluded |
+| BibleData      | 7 discrepancy records vs TIPNR: exact 1, probable 1, possible 1, conflict 1, missing 2, unresolved 1                   | Source-local, no winner                              |
+| MACULA         | 5 WLC tokens + 3 referents (2 high, 1 ambiguous medium)                                                                | WLC lowfat XML, no BSB offset, partial               |
+| OpenBible      | 2 ancient (Jerusalem approximate, Susa area) + 3 modern (Jerusalem 2 competing, Susa 1) EPSG:4326                      | Competing preserved                                  |
+| Reconciliation | 8 mappings (exact 4, probable 1, possible 1, distinct 1, unresolved 1) + 4 attestations + 3 relevances                 | Separate attestations/relevance                      |
+| BSB Mentions   | 4 selectors (Artaxerxes explicit, Nehemiah pronoun, Jerusalem/Susa indirect)                                           | Exact quote, prefix/suffix, grapheme/UTF-16          |
 
 ## Conflicts / Rejects / Unresolved
 
@@ -86,4 +86,5 @@ Theographic, ACA Realia, SemanticBible — OMITTED per 09F (share-alike/unclear)
 TIPNR and BibleData may share upstream name list — agreement on Nehemiah `exact` not counted as independent evidence (flagged).
 
 ---
-*Machine findings only — no independent review, no approval.*
+
+_Machine findings only — no independent review, no approval._

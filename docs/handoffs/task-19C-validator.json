@@ -33,9 +33,7 @@
       "status": "A"
     }
   ],
-  "files_not_changed": [
-    "No auto-repair, no second model call, no approval"
-  ],
+  "files_not_changed": ["No auto-repair, no second model call, no approval"],
   "commands_executed": [
     {
       "command": "npm --prefix packages/submission-validator run typecheck",
@@ -75,7 +73,9 @@
   "known_limitations": [
     "Draft is synthetic minimal (1 record) — full draft with 20A-G will have more records per package kind"
   ],
-  "follow_up": ["20A-G draft packages (one per task, each with its own bundle)"],
+  "follow_up": [
+    "20A-G draft packages (one per task, each with its own bundle)"
+  ],
   "no_content_approved_or_published_by_ai": true,
   "task_attempt": "task:validator:19C:attempt-1",
   "repository_revision_before": {

@@ -12,24 +12,24 @@ Add to repo-root `package.json` (currently absent at root; `apps/mobile/package.
 {
   "private": true,
   "workspaces": ["apps/mobile", "packages/domain", "packages/content-schema"],
-  "engines": {"node": ">=22.13"}
+  "engines": { "node": ">=22.13" }
 }
 ```
 
-*No other root changes.* `apps/mobile` remains the Expo app; its `name: mobile` unchanged.
+_No other root changes._ `apps/mobile` remains the Expo app; its `name: mobile` unchanged.
 
 ## 2. Existing `apps/mobile` pins — keep exact
 
 From `apps/mobile/package.json:10-35`:
 
-* `expo@~57.0.22`, `react@19.2.3`, `react-native@0.86.3`, `expo-router@~57.0.21`, `zod@3.23.8`, `typescript@~6.0.3`, `jest@~29.7.0`, `jest-expo@~57.0.0`, `eslint@^9.39.5`, `prettier@^3.9.6`
-* `package-lock.json` must be committed after `npm install` → `npm ci` reproduces exact tree.
+- `expo@~57.0.22`, `react@19.2.3`, `react-native@0.86.3`, `expo-router@~57.0.21`, `zod@3.23.8`, `typescript@~6.0.3`, `jest@~29.7.0`, `jest-expo@~57.0.0`, `eslint@^9.39.5`, `prettier@^3.9.6`
+- `package-lock.json` must be committed after `npm install` → `npm ci` reproduces exact tree.
 
 ## 3. New package: `packages/domain`
 
-* **Type:** pure TypeScript, `private:true`, no runtime deps.
-* **Dev:** `typescript@~6.0.3` exact.
-* **Structure:**
+- **Type:** pure TypeScript, `private:true`, no runtime deps.
+- **Dev:** `typescript@~6.0.3` exact.
+- **Structure:**
   ```
   packages/domain/
     src/index.ts          # public API
@@ -39,12 +39,12 @@ From `apps/mobile/package.json:10-35`:
     src/claim.ts          # evidence_status, textual_basis, date/location precision
     tsconfig.json
   ```
-* **Rule:** No `react-native`/`expo`/`supabase`/`sqlite` imports (`AGENTS.md:46`).
+- **Rule:** No `react-native`/`expo`/`supabase`/`sqlite` imports (`AGENTS.md:46`).
 
 ## 4. New package: `packages/content-schema`
 
-* **Deps:** `zod@3.23.8` **exact** (no `^`), `typescript@~6.0.3` dev.
-* **Structure:**
+- **Deps:** `zod@3.23.8` **exact** (no `^`), `typescript@~6.0.3` dev.
+- **Structure:**
   ```
   packages/content-schema/
     src/schemas.ts        # Zod schemas for translation_editions, attestations, mentions, relevance, claims
@@ -52,7 +52,7 @@ From `apps/mobile/package.json:10-35`:
     tests/                # fixture matrix (valid/invalid per rejection category)
     tsconfig.json
   ```
-* **Rule:** `allowedOperations` defaults to `denied` when `unknown`; share-alike obligations union checked.
+- **Rule:** `allowedOperations` defaults to `denied` when `unknown`; share-alike obligations union checked.
 
 ## 5. Scripts (root `package.json`)
 
@@ -74,11 +74,11 @@ Reuse existing `zod@3.23.8` via `apps/mobile/src/lib/schemas` — no new `packag
 
 ## 7. Installation verification
 
-After Gate A2 receipt lists *exact* paths above:
+After Gate A2 receipt lists _exact_ paths above:
 
-* `npm install` → `npm ci` → `npm run verify` must pass for `apps/mobile` + new packages.
-* No `any`, `@ts-ignore`, unchecked casts, skipped tests (`AGENTS.md:78`).
+- `npm install` → `npm ci` → `npm run verify` must pass for `apps/mobile` + new packages.
+- No `any`, `@ts-ignore`, unchecked casts, skipped tests (`AGENTS.md:78`).
 
 ## 8. Digests
 
-* This proposal `docs/DOMAIN_WORKSPACE_PROPOSAL.md` sha256 `(computed on save)` — synthetic, not an install.
+- This proposal `docs/DOMAIN_WORKSPACE_PROPOSAL.md` sha256 `(computed on save)` — synthetic, not an install.

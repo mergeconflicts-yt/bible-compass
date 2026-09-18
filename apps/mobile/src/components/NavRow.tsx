@@ -37,9 +37,7 @@ export function NavRow({ title, meta, aside, card, onPress, testID }: NavRowProp
           {aside}
         </AppText>
       ) : null}
-      {onPress ? (
-        <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
-      ) : null}
+      {onPress ? <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} /> : null}
     </View>
   );
   if (!onPress) {
@@ -65,7 +63,9 @@ export function NavRow({ title, meta, aside, card, onPress, testID }: NavRowProp
       onPress={onPress}
       testID={testID}
       accessibilityRole="button"
-      accessibilityLabel={aside ? `${title}, ${aside} chapters` : meta ? `${title}, ${meta}` : title}
+      accessibilityLabel={
+        aside ? `${title}, ${aside} chapters` : meta ? `${title}, ${meta}` : title
+      }
       style={({ pressed }) => [
         styles.row,
         styles.pressable,

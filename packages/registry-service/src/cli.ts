@@ -22,9 +22,17 @@ async function main(): Promise<void> {
   const args = parseArgs(process.argv);
   const releaseKey = args["releaseKey"];
   const componentKey = args["componentKey"];
-  const operation = args["operation"] as "evaluation_import" | "drafting" | "publication" | "external_ai_processing" | "embedding" | undefined;
+  const operation = args["operation"] as
+    | "evaluation_import"
+    | "drafting"
+    | "publication"
+    | "external_ai_processing"
+    | "embedding"
+    | undefined;
   if (!releaseKey || !componentKey || !operation) {
-    console.error("Usage: cli --releaseKey <releaseKey> --componentKey <componentKey> --operation <evaluation_import|drafting|publication|external_ai_processing|embedding>");
+    console.error(
+      "Usage: cli --releaseKey <releaseKey> --componentKey <componentKey> --operation <evaluation_import|drafting|publication|external_ai_processing|embedding>",
+    );
     process.exit(1);
   }
   // In real deployment this would use Postgres adapter with service_role; here we use in-memory for demo
@@ -32,9 +40,26 @@ async function main(): Promise<void> {
   const service = new RegistryService(repo);
   const actor = serviceActor("cli-service-role");
   // Note: no protected source data is logged; only keys/digests
-  console.log(JSON.stringify({ releaseKey, componentKey, operation, actor: actor.principalId }));
-  const result = await service.authorize({ releaseKey, componentKey, operation });
-  console.log(JSON.stringify({ allowed: result.allowed, reason: result.reason, deniedCode: result.deniedCode }));
+  console.log(
+    JSON.stringify({
+      releaseKey,
+      componentKey,
+      operation,
+      actor: actor.principalId,
+    }),
+  );
+  const result = await service.authorize({
+    releaseKey,
+    componentKey,
+    operation,
+  });
+  console.log(
+    JSON.stringify({
+      allowed: result.allowed,
+      reason: result.reason,
+      deniedCode: result.deniedCode,
+    }),
+  );
   process.exit(result.allowed ? 0 : 2);
 }
 

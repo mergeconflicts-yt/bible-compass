@@ -35,31 +35,32 @@ export interface TranslationRecord {
 
 const TRANSLATIONS: Record<string, TranslationRecord> = {
   BSB: {
-  id: 'BSB',
-  language: 'en',
-  name: 'Berean Standard Bible',
-  short: 'BSB',
-  attribution: 'Berean Standard Bible · BSB',
+    id: 'BSB',
+    language: 'en',
+    name: 'Berean Standard Bible',
+    short: 'BSB',
+    attribution: 'Berean Standard Bible · BSB',
     licenseUrl: 'https://berean.bible/',
-    rightsBasis: 'Owner-confirmed berean.bible distribution terms; formal sign-off pending (CONTENT_RIGHTS.md).',
+    rightsBasis:
+      'Owner-confirmed berean.bible distribution terms; formal sign-off pending (CONTENT_RIGHTS.md).',
     testaments: ['Old Testament', 'New Testament'],
   },
   tam_irv: {
-  id: 'tam_irv',
-  language: 'ta',
-  name: 'Indian Revised Version (Tamil)',
-  short: 'IRV-TA',
-  attribution: 'Indian Revised Version (Tamil) · IRV-TA',
+    id: 'tam_irv',
+    language: 'ta',
+    name: 'Indian Revised Version (Tamil)',
+    short: 'IRV-TA',
+    attribution: 'Indian Revised Version (Tamil) · IRV-TA',
     licenseUrl: 'https://ebible.org/Scriptures/details.php?id=tam2017',
     rightsBasis: 'Owner-confirmed: same basis as BSB (CONTENT_RIGHTS.md).',
     testaments: ['பழைய ஏற்பாடு', 'புதிய ஏற்பாடு'],
   },
   tel_irv: {
-  id: 'tel_irv',
-  language: 'te',
-  name: 'Indian Revised Version (Telugu)',
-  short: 'IRV-TE',
-  attribution: 'Indian Revised Version (Telugu) · IRV-TE',
+    id: 'tel_irv',
+    language: 'te',
+    name: 'Indian Revised Version (Telugu)',
+    short: 'IRV-TE',
+    attribution: 'Indian Revised Version (Telugu) · IRV-TE',
     licenseUrl: 'https://ebible.org/Scriptures/details.php?id=tel2017',
     rightsBasis: 'Owner-confirmed: same basis as BSB (CONTENT_RIGHTS.md).',
     testaments: ['పాత నిబంధన', 'క్రొత్త నిబంధన'],
@@ -131,8 +132,7 @@ export function rangeLabel(
 }
 
 export type ChapterBlock =
-  | { kind: 'heading'; text: string }
-  | { kind: 'verse'; number: number; text: string };
+  { kind: 'heading'; text: string } | { kind: 'verse'; number: number; text: string };
 
 export interface ChapterContent {
   bookOsis: string;

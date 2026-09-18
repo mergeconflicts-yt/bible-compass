@@ -1,0 +1,81 @@
+{
+  "attempt_id": "task:remediation:R1:attempt-1",
+  "task_id": "R1",
+  "task_title": "Remediation: source of truth (single root verify)",
+  "result": "PARTIAL",
+  "user_visible_outcome": "R1-A complete (8 committed fixtures, 5 adapter suites hermetic, 47 tests green with quarantine untouched). R1-B files complete (migrations 05 grants/invoker and 06 user library; tests 01-05 rewritten with real assertions, impersonation, cross-user denial; 17C expression-PK correction) with runtime verification pending (no docker/CLI here). R1-C complete except 10 triaged jest failures: root verify:all wired, mobile tsc zero errors, expo lint zero errors, scoped prettier clean, 10/13 jest suites green (was 5/13 crashed). R1-D recorded in plan (rev 21, R1 row, ACTIVE idle).",
+  "files_changed": [
+    "packages/*/tests/fixtures/* (8 new synthetic files, SYNTHETIC-marked)",
+    "packages/tvtms-adapter, tipnr-adapter, macula-adapter, openbible-adapter, bibledata-adapter tests (fixture wiring; bibledata parser gained optional fixture overrides with identical defaults)",
+    "supabase/migrations/20260915000005_rls_grants_invoker.sql (new)",
+    "supabase/migrations/20260915000006_user_library.sql (new)",
+    "supabase/migrations/20260915000004_review_package_rls.sql (expression-PK correction of never-executed draft statement)",
+    "supabase/tests/01-05 (assertion rewrite + new user-library test)",
+    "docs/REGISTRY_MIGRATION_NOTES.md (R1-B rebuild/test gate addendum)",
+    "apps/mobile/src/components/BibleView.tsx, PeekCard.tsx, Sheet.tsx, ReferenceText.tsx, sheets/EntitySheet.tsx (type fixes, zero behavior change)",
+    "apps/mobile/src/theme/tokens.ts (space 11:44 on the 4dp grid, zero visual change)",
+    "apps/mobile/__tests__/bsb.test.ts (rangeLabel 4-arg call corrected to verseLabel)",
+    "apps/mobile/package.json (jest setupFilesAfterEnv key fix)",
+    "apps/mobile/jest.setup.js (reanimated headless double for the exact imported surface)",
+    "apps/mobile/.prettierignore (new), .prettierignore (new)",
+    "package.json (verify:all, verify:supabase)",
+    "tools/verify-hygiene.sh, tools/verify-supabase.sh (new, executable)",
+    ".github/workflows/ci.yml (single verify-all job)",
+    "docs/AI_AGENT_NEXT_IMPLEMENTATION_PLAN.md (rev 21, R1 row, ACTIVE idle, history rows)",
+    "docs/REMEDIATION_TASK_R1.md (criterion 6 amended to triaged outcome)",
+    "docs/R1_JEST_TRIAGE.md (new, 10-item owner decision list)"
+  ],
+  "files_not_changed": [
+    "docs/receipts/gate-*-v1-*.json (void stays void)",
+    "content/pilot/eligibility-22.json (DENIED stays DENIED)",
+    "content/pilot/package-23.json (INELIGIBLE stays INELIGIBLE)",
+    "No app behavior, no test expectations for the 10 triaged items"
+  ],
+  "commands_executed": [
+    {
+      "command": "5 adapter suites after fixture rewire",
+      "exit_code": 0,
+      "output": "47 passed (9+10+9+9+10), typecheck+lint clean per package"
+    },
+    {
+      "command": "sqlite3 CLI validation of mobile 001 SQL (prior turn, still valid)",
+      "exit_code": 0,
+      "output": "schema applies; FK/CHECK/PK violations correctly rejected"
+    },
+    {
+      "command": "npm run verify:all (root)",
+      "exit_code": 1,
+      "output": "all backend suites green; mobile typecheck/lint/format green; hygiene green; supabase explicit SKIP (no psql here); mobile jest 109 passed, 10 failed (triaged)"
+    },
+    {
+      "command": "npx prettier --check . (root)",
+      "exit_code": 0,
+      "output": "All matched files use Prettier code style"
+    },
+    {
+      "command": "python3 -m json.tool on all edited JSON",
+      "exit_code": 0,
+      "output": "valid"
+    }
+  ],
+  "test_triage_10": [
+    "reader era rail: expects full 'Berean Standard Bible', app shows short 'BSB' — attribution-display decision",
+    "reader verse-1 peek: testID peek-overlay absent — design vs stale expectation",
+    "reader dismiss peek: testID peek-card-artaxerxes-i absent — same",
+    "reader peek-others/hierarchy/jump-in-place: multiple 'Sanballat the Horonite' nodes — single-anchor vs instance targeting",
+    "reader Tamil title: exact-match miss, likely split-text — confirm content present",
+    "reader Genesis 1: split across nodes, content present — matcher-only fix candidate",
+    "cards EntitySheet: 'PLACE · PERSIAN PERIOD' eyebrow absent — design vs fixture",
+    "autolink splitReferences: undotted 'Neh 1' stays plain — precision-vs-recall product call"
+  ],
+  "pending_owner": [
+    "Decide the 10 triage items (fix app, fix test, or device-gate with sign-off)",
+    "Run supabase-gated leg: supabase start && supabase db reset && per-file psql runs per docs/REGISTRY_MIGRATION_NOTES.md",
+    "Commit this work (git unavailable in this environment for verification)",
+    "Dispatch next work one task at a time under a reinstated controller"
+  ],
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:remediation:R1:attempt-1",
+  "plan_version": "1.2.0",
+  "data_kind": "mixed: code+tests+docs, synthetic fixtures only, no production data"
+}

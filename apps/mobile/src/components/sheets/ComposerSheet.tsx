@@ -42,7 +42,11 @@ export function ComposerSheet({ visible, onClose, onShare }: ComposerSheetProps)
       testID="composer-sheet"
     >
       <View style={[styles.preview, { backgroundColor: colors.brand }]}>
-        <AppText variant="body" scripture style={[styles.previewVerse, { color: colors.textOnBrand }]}>
+        <AppText
+          variant="body"
+          scripture
+          style={[styles.previewVerse, { color: colors.textOnBrand }]}
+        >
           {dailyVerseTextFor(translationId)}
         </AppText>
         <AppText variant="label" style={{ color: colors.textOnBrand }}>

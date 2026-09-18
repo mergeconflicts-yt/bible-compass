@@ -21,7 +21,7 @@ import {
   type DraftEntity,
   type DraftEvent,
 } from '@/content/neh2Draft';
-import { getChapter } from '@/content/bsb';
+import { getPassageContent } from '@/content/passageStore';
 
 interface EntitySheetProps {
   visible: boolean;
@@ -55,7 +55,7 @@ function passageLabel(translationId: string): string {
   const [bookOsis, chapterRaw] = getDraft().passage.split('.');
   const chapter = Number.parseInt(chapterRaw ?? '', 10);
   if (!bookOsis || !Number.isInteger(chapter)) return 'IN THIS PASSAGE';
-  const content = getChapter(bookOsis, chapter, translationId);
+  const content = getPassageContent(bookOsis, chapter, translationId);
   if (!content) return 'IN THIS PASSAGE';
   return `IN ${content.bookName.toUpperCase()} ${chapter}`;
 }
@@ -72,7 +72,9 @@ export function eventDistance(event: DraftEvent, sceneStart: string | null): str
   const diff = scene - start;
   if (diff === 0) return 'The scene itself';
   const years = (Math.round(Math.abs(diff) / 10) * 10).toLocaleString('en-US');
-  return diff > 0 ? `About ${years} years before this scene` : `About ${years} years after this scene`;
+  return diff > 0
+    ? `About ${years} years before this scene`
+    : `About ${years} years after this scene`;
 }
 
 function precisionLabel(raw: string): string {
@@ -116,9 +118,7 @@ export function EntitySheet({
   const entity = slug ? entityBySlug(slug) : null;
   const role = slug ? roleBySlug(slug) : null;
   const connected =
-    slug && entity?.type === 'person'
-      ? draftPeople().filter((person) => person.slug !== slug)
-      : [];
+    slug && entity?.type === 'person' ? draftPeople().filter((person) => person.slug !== slug) : [];
   const sceneStart =
     getTimeline().find((item) => item.relevance.toLowerCase().includes('you are here'))?.start ??
     null;
@@ -136,7 +136,7 @@ export function EntitySheet({
           <View style={styles.headerRow}>
             <View style={[styles.headerGlyph, { backgroundColor: colors.accentSoft }]}>
               <Ionicons
-                name={(headerType && TYPE_GLYPHS[headerType]) ?? 'layers-outline'}
+                name={headerType ? (TYPE_GLYPHS[headerType] ?? 'layers-outline') : 'layers-outline'}
                 size={20}
                 color={colors.accent}
               />
@@ -223,9 +223,7 @@ export function FullCard({
     : (event?.description ?? '');
   const sources = entity?.sources ?? [];
   const profileHeading =
-    type === 'person' && entity
-      ? `About ${pronoun(entity.slug, true)}`
-      : `About the ${type}`;
+    type === 'person' && entity ? `About ${pronoun(entity.slug, true)}` : `About the ${type}`;
 
   const facts: FactItem[] = [];
   if (entity) {
@@ -265,7 +263,11 @@ export function FullCard({
 
   return (
     <View testID="full-card">
-      {standing ? <AppText variant="body" style={styles.standing}>{standing}</AppText> : null}
+      {standing ? (
+        <AppText variant="body" style={styles.standing}>
+          {standing}
+        </AppText>
+      ) : null}
 
       {type === 'person' && entity && connected.length > 0 ? (
         <View style={[styles.spineCard, { backgroundColor: colors.surfaceSubtle }]}>
@@ -289,7 +291,7 @@ export function FullCard({
       {type === 'place' && entity && onOpenMap ? (
         <View style={[styles.spineCard, { backgroundColor: colors.surfaceSubtle }]}>
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
-            LOCATOR
+            {`${entity.type.toUpperCase()} · ${entity.temporal_range.label.toUpperCase()}`}
           </AppText>
           <Pressable
             onPress={onOpenMap}
@@ -302,7 +304,9 @@ export function FullCard({
             <AppText variant="label" style={styles.locateText}>
               {`See ${entity.canonical_name} on the historical map`}
             </AppText>
-            <AppText variant="body" color="textSecondary">›</AppText>
+            <AppText variant="body" color="textSecondary">
+              ›
+            </AppText>
           </Pressable>
         </View>
       ) : null}
@@ -323,7 +327,10 @@ export function FullCard({
 
       {inPassage ? (
         <View
-          style={[styles.contextCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
+          style={[
+            styles.contextCard,
+            { backgroundColor: colors.surface, borderColor: colors.border },
+          ]}
           testID="fullcard-in-passage"
         >
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
@@ -424,11 +431,7 @@ export function FullCard({
       ) : null}
       {onBack ? (
         <View style={styles.action}>
-          <Button
-            title="‹ Back to the passage"
-            onPress={onBack}
-            testID="fullcard-back"
-          />
+          <Button title="‹ Back to the passage" onPress={onBack} testID="fullcard-back" />
         </View>
       ) : null}
     </View>

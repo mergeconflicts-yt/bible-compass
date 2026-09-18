@@ -1,0 +1,48 @@
+{
+  "attempt_id": "task:mobile-daily-sqlite:05:attempt-1",
+  "task_id": "M05",
+  "task_title": "Daily verse + share composer on SQLite reads",
+  "result": "PASS",
+  "user_visible_outcome": "No visible text change. The home daily card, daily artwork, composer preview, and both Share actions now resolve verse text through the passage store (offline SQLite first, bundled JSON fallback) instead of reading the raw bundle; a missing verse renders empty, never invented wording.",
+  "files_changed": [
+    "apps/mobile/src/content/passageStore.ts (added DAILY_VERSE coords + resolveDailyVerseText: SQLite-first, fail-closed null)",
+    "apps/mobile/src/fixtures/home.ts (buildDailyVerseFixture text via the store; hardcoded FALLBACK_VERSE removed)",
+    "apps/mobile/src/fixtures/demo.ts (dailyVerseTextFor via the store; hardcoded fallback removed)",
+    "apps/mobile/__tests__/daily-verse.test.ts (new: 3 routing/fail-closed tests + 1 node:sqlite integration test)",
+    "docs/MOBILE_INSTALL_PLAN.md (M05 DONE)"
+  ],
+  "files_not_changed": [
+    "No component, route, or share-message change (same props, same format)",
+    "No download enablement (image rights still unconfirmed; stays disabled)",
+    "No entity/attestation/mention tables (still blocked on human-approved content)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "jest daily-verse",
+      "exit_code": 0,
+      "output": "4 passed: SQLite routing, JSON fallback, fail-closed, real-engine offline render"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "13 passed / 3 failed suites; 140 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md); bsb/home/daily suites green after the fixture rewire"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint + prettier --check (mobile and root)",
+      "exit_code": 0,
+      "output": "0 errors; 16 pre-existing warnings; M05 files add zero"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-daily-sqlite:05:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M05 DONE)",
+  "data_kind": "code+tests only; licensed BSB text used as test input, never redistributed"
+}

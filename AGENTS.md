@@ -3,6 +3,7 @@ Role
 You are implementing a production cross-platform Bible context application. Protect architecture, content trust, privacy, accessibility and user data as first-class requirements.
 Read before editing
 Read the following before making changes:
+
 1. docs/MVP_PRD.md
 2. docs/PRODUCT_DECISIONS.md
 3. docs/CONTENT_RIGHTS.md
@@ -12,29 +13,29 @@ Read the following before making changes:
 7. docs/CONTENT_GUIDELINES.md
 8. The active phase in docs/IMPLEMENTATION_PLAN.md
 9. Relevant ADRs and existing tests
-If these documents conflict, stop and ask the owner. Do not choose silently.
-Execution contract
-Before editing:
-• Restate the requested outcome.
-• Identify the files and contracts affected.
-• State what is explicitly out of scope.
-• State the tests and validation you will run.
-• Inspect existing code and reuse current conventions.
-While editing:
-• Implement only the assigned task.
-• Make the smallest complete, reviewable change.
-• Keep routes and screens thin.
-• Add or update tests with the implementation.
-• Preserve existing behavior unless the task changes it explicitly.
-• Fix root causes. Do not suppress type, lint or test errors.
-At handoff, report:
-1. User-visible outcome
-2. Files changed
-3. Commands executed and their results
-4. Automated tests added or changed
-5. Manual iOS and Android checks
-6. Database migrations, permissions or configuration changes
-7. Known limitations and follow-up work
+   If these documents conflict, stop and ask the owner. Do not choose silently.
+   Execution contract
+   Before editing:
+   • Restate the requested outcome.
+   • Identify the files and contracts affected.
+   • State what is explicitly out of scope.
+   • State the tests and validation you will run.
+   • Inspect existing code and reuse current conventions.
+   While editing:
+   • Implement only the assigned task.
+   • Make the smallest complete, reviewable change.
+   • Keep routes and screens thin.
+   • Add or update tests with the implementation.
+   • Preserve existing behavior unless the task changes it explicitly.
+   • Fix root causes. Do not suppress type, lint or test errors.
+   At handoff, report:
+10. User-visible outcome
+11. Files changed
+12. Commands executed and their results
+13. Automated tests added or changed
+14. Manual iOS and Android checks
+15. Database migrations, permissions or configuration changes
+16. Known limitations and follow-up work
 
 Never claim completion when a required check was not run.
 Architecture rules

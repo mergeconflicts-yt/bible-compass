@@ -16,7 +16,15 @@ export const referentCandidateSchema = z
   .object({
     tokenId: z.string().min(1),
     referent: z.string().min(1),
-    semanticRole: z.enum(["agent", "patient", "experiencer", "beneficiary", "instrument", "location", "unknown"]),
+    semanticRole: z.enum([
+      "agent",
+      "patient",
+      "experiencer",
+      "beneficiary",
+      "instrument",
+      "location",
+      "unknown",
+    ]),
     mappingConfidence: z.enum(["high", "medium", "low", "unknown"]),
     isAmbiguous: z.boolean(),
     sourceLocator: z.string().min(1),

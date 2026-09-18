@@ -27,7 +27,9 @@ export class RegistryService {
   ): Promise<{ created: boolean; id: string }> {
     // Only privileged can admit releases
     if (!actor.isPrivileged) {
-      throw Object.assign(new Error("Only service_role can admit releases"), { code: "forbidden-not-privileged" });
+      throw Object.assign(new Error("Only service_role can admit releases"), {
+        code: "forbidden-not-privileged",
+      });
     }
     return this.repo.recordRelease(release);
   }
@@ -37,7 +39,9 @@ export class RegistryService {
     actor: PrivilegedActor,
   ): Promise<{ created: boolean; id: string }> {
     if (!actor.isPrivileged) {
-      throw Object.assign(new Error("Only service_role can admit components"), { code: "forbidden-not-privileged" });
+      throw Object.assign(new Error("Only service_role can admit components"), {
+        code: "forbidden-not-privileged",
+      });
     }
     return this.repo.recordComponent(component);
   }
@@ -47,7 +51,9 @@ export class RegistryService {
     actor: PrivilegedActor,
   ): Promise<{ created: boolean; id: string }> {
     if (!actor.isPrivileged) {
-      throw Object.assign(new Error("Only service_role can grant operations"), { code: "forbidden-not-privileged" });
+      throw Object.assign(new Error("Only service_role can grant operations"), {
+        code: "forbidden-not-privileged",
+      });
     }
     return this.repo.recordGrant(grant);
   }
@@ -82,7 +88,9 @@ export class RegistryService {
 }
 
 // Helper to create a privileged service actor for tests/synthetic seeds
-export function serviceActor(principalId = "service-role-test"): PrivilegedActor {
+export function serviceActor(
+  principalId = "service-role-test",
+): PrivilegedActor {
   return { principalId, role: "service_role", isPrivileged: true };
 }
 

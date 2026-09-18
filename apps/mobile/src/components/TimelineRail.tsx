@@ -87,9 +87,14 @@ export function TimelineRail({ activeKey, onOpenTimeline }: TimelineRailProps) {
                     active && { backgroundColor: colors.accentSoft, borderRadius: 10 },
                   ]}
                 >
-              <AppText variant="caption" color="textSecondary" style={styles.year} numberOfLines={1}>
-                {formatYear(event.start)}
-              </AppText>
+                  <AppText
+                    variant="caption"
+                    color="textSecondary"
+                    style={styles.year}
+                    numberOfLines={1}
+                  >
+                    {formatYear(event.start)}
+                  </AppText>
                   <View
                     style={[
                       styles.dot,

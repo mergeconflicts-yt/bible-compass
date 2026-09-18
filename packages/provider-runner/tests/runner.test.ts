@@ -11,9 +11,12 @@ function resolveBundle(p: string): string {
 }
 
 describe("Task 19B — One-attempt provider runner", () => {
-  const bundlePath = resolveBundle("content/pilot/bundles/19A-entity-profile.json");
+  const bundlePath = resolveBundle(
+    "content/pilot/bundles/19A-entity-profile.json",
+  );
   const bundleSha = `sha256:${crypto.createHash("sha256").update(fs.readFileSync(bundlePath)).digest("hex")}`;
-  const gateSha = "sha256:a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b";
+  const gateSha =
+    "sha256:a1da9ecef6bd8d61b4433d5733a6587434a391dab023f6c6864271254d91517b";
 
   it("provider call cannot start unless bundle digest matches", async () => {
     await expect(
@@ -41,7 +44,11 @@ describe("Task 19B — One-attempt provider runner", () => {
     expect(receipt.inputDigest).toBe(bundleSha);
     expect(receipt.outputDigest).toMatch(/^sha256:/);
     expect(receipt.status).toBe("success");
-    const rawPathResolved = path.resolve(__dirname, "../../../", receipt.rawResponsePath);
+    const rawPathResolved = path.resolve(
+      __dirname,
+      "../../../",
+      receipt.rawResponsePath,
+    );
     expect(fs.existsSync(rawPathResolved)).toBe(true);
     const raw = fs.readFileSync(rawPathResolved, "utf-8");
     expect(JSON.parse(raw).package_kind).toBe("entity-profile-draft");

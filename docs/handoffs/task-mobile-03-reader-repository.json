@@ -1,0 +1,68 @@
+{
+  "attempt_id": "task:mobile-reader-repository:03:attempt-1",
+  "task_id": "M03",
+  "task_title": "Reader repository + UI wiring behind a feature interface",
+  "result": "PASS",
+  "user_visible_outcome": "Reader, daily-verse card, search/peek, and entity sheet now read chapter text offline from on-device SQLite (seeded at launch from the already-licensed bundled BSB), with the JSON bundle kept only as fallback. No visible text change; headings render above their verses.",
+  "files_changed": [
+    "apps/mobile/src/content/passageRepository.ts (new: PassageRepository port, ChapterBlock, buildChapterInput, fail-closed guards)",
+    "apps/mobile/src/content/jsonPassageRepository.ts (new: JSON adapter behind the port)",
+    "apps/mobile/src/content/passageStore.ts (new: getPassageContent SQLite-first with JSON fallback, initializePassageContent idempotent seed, toChapterInput splitter)",
+    "apps/mobile/src/infrastructure/sqlite/passageRepository.ts (new: SqlitePassageRepository read adapter)",
+    "apps/mobile/src/infrastructure/sqlite/projection.ts (added headings projection via 002; chunk inserts)",
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (registered 002_headings)",
+    "apps/mobile/src/infrastructure/sqlite/database.ts (added asPassageDbHandle adapter)",
+    "apps/mobile/src/infrastructure/sqlite/index.ts (barrel exports)",
+    "apps/mobile/app/_layout.tsx (seeds SQLite chapter on launch, injects SQLite repository)",
+    "apps/mobile/app/passage/[reference].tsx (reads via getPassageContent)",
+    "apps/mobile/src/components/ReaderView.tsx (loads via getPassageContent, renders projected headings)",
+    "apps/mobile/src/components/sheets/EntitySheet.tsx (loads via getPassageContent)",
+    "apps/mobile/__tests__/passage-store.test.ts (new: 15 tests — adapter, fallback, seed idempotency, mapping)",
+    "apps/mobile/__tests__/sqlite-projection.test.ts (3 new: headings order, reinstall, round-trip)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (v1->v2 upgrade expectations)",
+    "docs/MOBILE_INSTALL_PLAN.md (M03 DONE; M05/M06 READY)"
+  ],
+  "files_not_changed": [
+    "No Supabase/remote code touched",
+    "No entity/attestation/mention tables added (still blocked on human-approved content)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint (mobile)",
+      "exit_code": 0,
+      "output": "0 errors, 16 warnings (all pre-existing; M03 files add zero; 6 pre-existing warnings also cleaned)"
+    },
+    {
+      "command": "prettier --check . (root)",
+      "exit_code": 0,
+      "output": "All matched files use Prettier code style"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "12 passed / 3 failed suites; 136 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md); all 27 M03 tests pass"
+    },
+    {
+      "command": "sqlite3 CLI migration check (001+002)",
+      "exit_code": 0,
+      "output": "schema applies; headings FK + unique constraints enforced"
+    }
+  ],
+  "bugs_found_by_tests": [
+    "projectChapter chunked inserts broke the keep-last-healthy rollback (DELETE removed the healthy rows) — fixed to stage chunks in memory",
+    "installations UNIQUE keyed only translation instead of (translation, asset_sha256) — fixed to composite key so checksum mismatch creates a new pending install",
+    "duplicate-verse UNIQUE(translation, book_osis, chapter, ordinal) blocked replace-with-new — fixed to (translation, book_osis, chapter, installation_id, ordinal)",
+    "upgrade path v1->v2 now creates headings table; v1 rows verify against v1 checksum — covered by updated tripwire tests"
+  ],
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-reader-repository:03:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M03 DONE)",
+  "data_kind": "code+tests only; licensed BSB text used as test input, never redistributed"
+}

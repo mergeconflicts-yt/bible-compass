@@ -15,13 +15,19 @@ Narrow server-side repository/service that records acquisition requests, admits 
 
 ```ts
 import { InMemoryRegistryRepository } from "@bible-compass/registry-service/src/inMemoryAdapter";
-import { RegistryService, serviceActor } from "@bible-compass/registry-service/src/service";
+import {
+  RegistryService,
+  serviceActor,
+} from "@bible-compass/registry-service/src/service";
 
 const repo = new InMemoryRegistryRepository();
 const service = new RegistryService(repo);
 const actor = serviceActor();
 
-await repo.recordSource({ sourceKey: "source:stepbible:tipnr", publisher: "STEPBible" });
+await repo.recordSource({
+  sourceKey: "source:stepbible:tipnr",
+  publisher: "STEPBible",
+});
 await service.admitRelease(release, actor);
 await service.admitComponent(component, actor);
 await service.grantOperation(grant, actor);

@@ -22,7 +22,10 @@ let concurrent = 0;
 
 function resolveBundle(p: string): string {
   if (fs.existsSync(p)) return p;
-  const cands = [path.resolve(__dirname, "../../../", p), path.resolve(process.cwd(), p)];
+  const cands = [
+    path.resolve(__dirname, "../../../", p),
+    path.resolve(process.cwd(), p),
+  ];
   for (const c of cands) if (fs.existsSync(c)) return c;
   return p;
 }
@@ -36,7 +39,9 @@ export async function runOneAttempt(options: {
   model: string;
 }): Promise<GenerationReceipt> {
   if (concurrent >= CONCURRENCY_LIMIT) {
-    throw Object.assign(new Error("Concurrency limit exceeded"), { code: "rate-limited" });
+    throw Object.assign(new Error("Concurrency limit exceeded"), {
+      code: "rate-limited",
+    });
   }
   concurrent++;
   try {
@@ -44,12 +49,19 @@ export async function runOneAttempt(options: {
     const buf = fs.readFileSync(bundlePath);
     const actualDigest = `sha256:${crypto.createHash("sha256").update(buf).digest("hex")}`;
     if (actualDigest !== options.expectedBundleDigest) {
-      throw Object.assign(new Error(`Bundle digest mismatch: expected ${options.expectedBundleDigest} got ${actualDigest}`), {
-        code: "digest-mismatch",
-      });
+      throw Object.assign(
+        new Error(
+          `Bundle digest mismatch: expected ${options.expectedBundleDigest} got ${actualDigest}`,
+        ),
+        {
+          code: "digest-mismatch",
+        },
+      );
     }
     if (!options.gateD2Sha.startsWith("sha256:")) {
-      throw Object.assign(new Error("Gate D2 SHA required"), { code: "gate-d2-denied" });
+      throw Object.assign(new Error("Gate D2 SHA required"), {
+        code: "gate-d2-denied",
+      });
     }
 
     const startedAt = new Date().toISOString();
@@ -64,7 +76,10 @@ export async function runOneAttempt(options: {
           record_kind: "entity_profile",
           entity_key: "entity:nehemiah-governor",
           language_tag: "en",
-          short_description: { text: "Nehemiah was cupbearer to Artaxerxes.", claim_keys: ["claim-001"] },
+          short_description: {
+            text: "Nehemiah was cupbearer to Artaxerxes.",
+            claim_keys: ["claim-001"],
+          },
         },
       ],
       open_questions: [],
@@ -76,11 +91,16 @@ export async function runOneAttempt(options: {
     // Enforce cost limit
     const costCents = 5;
     if (costCents > COST_LIMIT_CENTS) {
-      throw Object.assign(new Error("Cost limit exceeded"), { code: "cost-exceeded" });
+      throw Object.assign(new Error("Cost limit exceeded"), {
+        code: "cost-exceeded",
+      });
     }
 
     // Write raw response quarantine — always to repo root content/pilot/raw-responses
-    const rawDir = path.resolve(__dirname, "../../../content/pilot/raw-responses");
+    const rawDir = path.resolve(
+      __dirname,
+      "../../../content/pilot/raw-responses",
+    );
     fs.mkdirSync(rawDir, { recursive: true });
     const rawPath = path.join(rawDir, `${options.attemptId}.json`);
     fs.writeFileSync(rawPath, syntheticRaw);
@@ -97,10 +117,16 @@ export async function runOneAttempt(options: {
       completedAt,
       status: "success",
       costCents,
-      rawResponsePath: path.join("content/pilot/raw-responses", `${options.attemptId}.json`),
+      rawResponsePath: path.join(
+        "content/pilot/raw-responses",
+        `${options.attemptId}.json`,
+      ),
     };
     // Write receipt
-    fs.writeFileSync(path.join(rawDir, `${options.attemptId}.receipt.json`), JSON.stringify(receipt, null, 2));
+    fs.writeFileSync(
+      path.join(rawDir, `${options.attemptId}.receipt.json`),
+      JSON.stringify(receipt, null, 2),
+    );
     return receipt;
   } finally {
     concurrent--;

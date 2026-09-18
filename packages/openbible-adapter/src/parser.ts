@@ -7,8 +7,10 @@ import {
   type ParseResult,
 } from "./types";
 
-const EXPECTED_SHA = "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2";
-const EXPECTED_RELEASE_KEY = "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4";
+const EXPECTED_SHA =
+  "sha256:b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2";
+const EXPECTED_RELEASE_KEY =
+  "release:source:openbible:geocoding@7eb18a5e:sha-b8187aa4";
 const QUARANTINE_PATH = "content/quarantine/openbible/ancient.jsonl";
 
 function resolveQuarantine(p: string): string {
@@ -43,9 +45,14 @@ export function parseOpenBibleForNeh2(options?: {
   const buf = fs.readFileSync(qPath);
   const actualSha = `sha256:${crypto.createHash("sha256").update(buf).digest("hex")}`;
   if (actualSha !== expectedSha) {
-    throw Object.assign(new Error(`SHA mismatch for ${qPathInput}: expected ${expectedSha} got ${actualSha}`), {
-      code: "sha-mismatch",
-    });
+    throw Object.assign(
+      new Error(
+        `SHA mismatch for ${qPathInput}: expected ${expectedSha} got ${actualSha}`,
+      ),
+      {
+        code: "sha-mismatch",
+      },
+    );
   }
   const byteSize = buf.length;
   const text = buf.toString("utf-8");
@@ -57,7 +64,9 @@ export function parseOpenBibleForNeh2(options?: {
     try {
       JSON.parse(lines[i] as string);
     } catch {
-      throw Object.assign(new Error(`Invalid JSONL at line ${i + 1}`), { code: "invalid-jsonl" });
+      throw Object.assign(new Error(`Invalid JSONL at line ${i + 1}`), {
+        code: "invalid-jsonl",
+      });
     }
   }
 
@@ -93,7 +102,8 @@ export function parseOpenBibleForNeh2(options?: {
         crs: "EPSG:4326",
         precision: "approximate" as const,
         period: "Iron Age II - present",
-        evidence: "OpenBible source: ancient.jsonl:jerusalem:modern:1:source:AnchorYale",
+        evidence:
+          "OpenBible source: ancient.jsonl:jerusalem:modern:1:source:AnchorYale",
         componentLicense: "CC-BY-4.0",
       },
       sourceLocator: "openbible:ancient:jerusalem:modern:1:ancient.jsonl",
@@ -111,7 +121,8 @@ export function parseOpenBibleForNeh2(options?: {
         crs: "EPSG:4326",
         precision: "candidates" as const, // second candidate, less certain
         period: "Iron Age II",
-        evidence: "OpenBible source: ancient.jsonl:jerusalem:modern:2:source:Oxford",
+        evidence:
+          "OpenBible source: ancient.jsonl:jerusalem:modern:2:source:Oxford",
         componentLicense: "CC-BY-4.0",
       },
       sourceLocator: "openbible:ancient:jerusalem:modern:2:ancient.jsonl",
@@ -130,7 +141,8 @@ export function parseOpenBibleForNeh2(options?: {
         crs: "EPSG:4326",
         precision: "approximate" as const,
         period: "Achaemenid - present",
-        evidence: "OpenBible source: ancient.jsonl:susa:modern:1:source:Reallexikon",
+        evidence:
+          "OpenBible source: ancient.jsonl:susa:modern:1:source:Reallexikon",
         componentLicense: "CC-BY-4.0",
       },
       sourceLocator: "openbible:ancient:susa:modern:1:ancient.jsonl",
@@ -144,7 +156,8 @@ export function parseOpenBibleForNeh2(options?: {
   const rejects = [
     {
       line: 1,
-      reason: "Excluded asset field image.jsonl — not in requested component openbible-core-geocoding per 09F",
+      reason:
+        "Excluded asset field image.jsonl — not in requested component openbible-core-geocoding per 09F",
       raw: "image.jsonl:1",
     },
     {
@@ -177,7 +190,9 @@ export function parseOpenBibleForNeh2(options?: {
         modern: modernSites.length,
       },
       rejected: rejects.length,
-      competingLocations: modernSites.filter((m) => m.ancientPlaceId === "openbible:ancient:jerusalem").length,
+      competingLocations: modernSites.filter(
+        (m) => m.ancientPlaceId === "openbible:ancient:jerusalem",
+      ).length,
     },
     receipt: {
       sourceReleaseKey: releaseKey,

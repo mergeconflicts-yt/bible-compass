@@ -10,10 +10,10 @@
     "principal_id": "owner:theone",
     "role": "CONTROLLER"
   },
-  "decision": "PASSED",
+  "decision": "VOID",
   "expires_at": "2026-12-15T07:00:00.000Z",
   "gate_id": "E1",
-  "gate_status": "PASSED",
+  "gate_status": "VOID",
   "gate_version": 1,
   "human_actors": [
     {
@@ -42,17 +42,21 @@
     }
   ],
   "issued_at": "2026-09-15T07:00:00.000Z",
-  "permitted_next_tasks": ["22"],
+  "permitted_next_tasks": [],
   "plan_definition_sha256": "4f782339d4c76306ef134ce9f01ceb4954bd4172ae8fba616a0f03a057e35faa",
   "plan_header_version": 12,
   "plan_version": "1.2.0",
   "receipt_kind": "owner_gate",
   "record_id": "gate-E1-v1-20260915T070000Z",
-  "record_sha256": "e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4",
+  "record_sha256": "e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0d1e2f3a4b",
   "review_packet_sha": "35c184aeb251b1c6230953fb9a741ca5d87eda7b4bba86e2276ead52f72bf572",
   "revocation": {
     "status": "active"
   },
+  "synthetic": true,
+  "voided_at": "2026-09-15",
+  "void_reason": "VOID by owner direction 2026-09-15: generic reviewer identities (reviewer:reference-system and five others — no named qualified humans) plus an AI-generated test signature cannot approve production content. See docs/receipts/gate-void-registry.json. This gate never released any work.",
+  "original_claimed_decision": "PASSED",
   "server_timestamp": "2026-09-15T07:00:00.000Z",
   "service_config_sha256": "c72842dbd592dedcfb906d030227ebf77bd6876d8ac90925fc38c08c9ab41a67",
   "service_id": "bootstrap-trust-v1",

@@ -14,11 +14,22 @@ interface SegmentedProps {
 }
 
 /** Segmented control: one selected option, never color-only. */
-export function Segmented({ options, selected, onSelect, accessibilityLabel, testID, compact }: SegmentedProps) {
+export function Segmented({
+  options,
+  selected,
+  onSelect,
+  accessibilityLabel,
+  testID,
+  compact,
+}: SegmentedProps) {
   const { colors } = useTheme();
   return (
     <View
-      style={[styles.track, compact && styles.compactTrack, { backgroundColor: colors.surfaceSubtle }]}
+      style={[
+        styles.track,
+        compact && styles.compactTrack,
+        { backgroundColor: colors.surfaceSubtle },
+      ]}
       role="tablist"
       aria-label={accessibilityLabel}
       testID={testID}

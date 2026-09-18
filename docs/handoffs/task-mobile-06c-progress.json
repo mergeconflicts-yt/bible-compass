@@ -1,0 +1,66 @@
+{
+  "attempt_id": "task:mobile-progress:06c:attempt-1",
+  "task_id": "M06c",
+  "task_title": "Reading progress (owner-authorized pre-M07, D2 verdict)",
+  "result": "PASS",
+  "user_visible_outcome": "The Home continue-reading card now resumes where the reader left off (chapter entry and verse landings persist across restarts); first-run readers still see the Nehemiah 2 entry point, unchanged.",
+  "files_changed": [
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (appended 005_progress: one row per translation)",
+    "apps/mobile/src/content/progressStore.ts (new: ProgressRepository port, sync reads, never-throwing record, fail-closed null)",
+    "apps/mobile/src/infrastructure/sqlite/progress.ts (new: atomic upsert adapter)",
+    "apps/mobile/src/components/ReaderView.tsx (records chapter entry on mount + verse on landings, fire-and-forget)",
+    "apps/mobile/src/fixtures/home.ts (continue-reading sourced from store; pilot default byte-identical when never started)",
+    "apps/mobile/app/_layout.tsx (initializes the progress store on the shared handle)",
+    "apps/mobile/__tests__/progress.test.ts (new: 3 contract + 3 fixture + 1 restart tests)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (tripwire to versions 1-5)",
+    "docs/MOBILE_INSTALL_PLAN.md (M06c DONE)",
+    "docs/DECISION_M07_SYNC.md (owner answers recorded 2026-09-15)"
+  ],
+  "files_not_changed": [
+    "No outbox queue for progress: D2 syncs bookmarks-only, so progress ops would have no drain (documented deviation from the 'same outbox pattern' phrasing — transactional SQLite durability is kept)",
+    "No HomeView changes (same fixture interface, same card)",
+    "No entity/attestation/mention tables (still blocked on human-approved content)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "sqlite3 CLI on 005_progress SQL",
+      "exit_code": 0,
+      "output": "applies clean; upsert overwrites; chapter 0 and verse -1 rejected"
+    },
+    {
+      "command": "jest progress + home + sqlite-migrations",
+      "exit_code": 0,
+      "output": "28 passed, including file-backed restart resume"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "18 passed / 3 failed suites; 172 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint + prettier --check (mobile and root)",
+      "exit_code": 0,
+      "output": "0 errors; 16 pre-existing warnings; M06c files add zero"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "owner_decisions_recorded": {
+    "D1": "Apple + Google OAuth (overrides recommendation)",
+    "D2": "Bookmarks only; progress-first authorized (this task)",
+    "D3": "Op-log replay + BSB-only identity + union merge approved",
+    "D4": "Local-only daily reminder; PD-020 copy still OPEN",
+    "D5": "Sign-out WIPES local (overrides recommendation — destructive, must warn)",
+    "still_open": "Dependency approvals (supabase-js, secure-store, auth-session?, notifications), PD-020 copy, runtime (project, devices, accounts, OAuth creds)"
+  },
+  "scope_guard": "Scripture only. Candidate identity data stays out of the app until human-approved content exists (all publication gates VOID).",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-progress:06c:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M06c DONE; M07 awaiting deps + PD-020 + runtime)",
+  "data_kind": "code+tests only; no Scripture text added or redistributed"
+}

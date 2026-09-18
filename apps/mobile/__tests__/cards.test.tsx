@@ -60,7 +60,9 @@ describe('EntitySheet full hierarchy', () => {
     fireEvent.press(screen.getByTestId('fullcard-locate'));
     expect(sheetProps.onOpenMap).toHaveBeenCalledTimes(1);
     expect(screen.getByText('About the place')).toBeTruthy();
-    expect(screen.getAllByText(/damaged ancestral city/)).toHaveLength(2);
+    // Single source in current draft data: the In-this-passage role text.
+    // (Standing and profile prose no longer repeat the phrase.)
+    expect(screen.getAllByText(/damaged ancestral city/)).toHaveLength(1);
   });
 
   it('omits locator and lateral moves when no opener is provided', () => {

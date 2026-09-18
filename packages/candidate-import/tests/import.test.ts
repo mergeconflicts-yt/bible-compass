@@ -1,6 +1,10 @@
 import * as fs from "fs";
 import * as path from "path";
-import { CandidateImportService, importerActor, anonActor } from "../src/service";
+import {
+  CandidateImportService,
+  importerActor,
+  anonActor,
+} from "../src/service";
 
 function resolveCandidate(p: string): string {
   if (fs.existsSync(p)) return p;
@@ -45,8 +49,12 @@ describe("Task 18 — Idempotent candidate import service", () => {
     const tmp = "/tmp/candidate-tampered-same-key.json";
     const data = JSON.parse(fs.readFileSync(originalPath, "utf-8"));
     // Modify a field to make digest different but still valid
-    if (Array.isArray((data as unknown as { candidates?: unknown[] }).candidates)) {
-      ((data as unknown as { candidates: unknown[] }).candidates as unknown[]).push({ fake: "tampered" });
+    if (
+      Array.isArray((data as unknown as { candidates?: unknown[] }).candidates)
+    ) {
+      (
+        (data as unknown as { candidates: unknown[] }).candidates as unknown[]
+      ).push({ fake: "tampered" });
     } else {
       (data as Record<string, unknown>).tampered = true;
     }
@@ -56,12 +64,26 @@ describe("Task 18 — Idempotent candidate import service", () => {
     // We'll copy tampered to a file that we will import with same packageKey and same path string as original, but we need to make the service see same key.
     // For this test, we simulate by importing the same tmp path twice with different content.
     const sameTacPath = "/tmp/candidate-same-key.json";
-    fs.writeFileSync(sameTacPath, JSON.stringify({ candidates: [{ a: 1 }], sourceReleaseKey: "test" }));
-    const rA = await svc.importPackage("package:changed-test", [sameTacPath], actor);
+    fs.writeFileSync(
+      sameTacPath,
+      JSON.stringify({ candidates: [{ a: 1 }], sourceReleaseKey: "test" }),
+    );
+    const rA = await svc.importPackage(
+      "package:changed-test",
+      [sameTacPath],
+      actor,
+    );
     expect(rA.success).toBe(true);
     // Now change content at same path
-    fs.writeFileSync(sameTacPath, JSON.stringify({ candidates: [{ a: 2 }], sourceReleaseKey: "test2" }));
-    const rB = await svc.importPackage("package:changed-test", [sameTacPath], actor);
+    fs.writeFileSync(
+      sameTacPath,
+      JSON.stringify({ candidates: [{ a: 2 }], sourceReleaseKey: "test2" }),
+    );
+    const rB = await svc.importPackage(
+      "package:changed-test",
+      [sameTacPath],
+      actor,
+    );
     expect(rB.success).toBe(false);
     expect(rB.error).toMatch(/Changed bytes/);
   });
@@ -71,7 +93,11 @@ describe("Task 18 — Idempotent candidate import service", () => {
     const actor = importerActor();
     const tmp = "/tmp/candidate-invalid.json";
     fs.writeFileSync(tmp, JSON.stringify({ notACandidate: true }));
-    const r = await svc.importPackage(packageKey, [candidatePaths[0]!, tmp], actor);
+    const r = await svc.importPackage(
+      packageKey,
+      [candidatePaths[0]!, tmp],
+      actor,
+    );
     expect(r.success).toBe(false);
     expect(r.error).toMatch(/One invalid record fails atomic package/);
     expect(svc.getStagedCount()).toBe(0);
@@ -90,7 +116,9 @@ describe("Task 18 — Idempotent candidate import service", () => {
   it("import actor cannot approve or publish (public client privilege)", async () => {
     const svc = new CandidateImportService();
     const anon = anonActor();
-    await expect(svc.importPackage(packageKey, [candidatePaths[0]!], anon)).rejects.toThrow(/Public client cannot import/);
+    await expect(
+      svc.importPackage(packageKey, [candidatePaths[0]!], anon),
+    ).rejects.toThrow(/Public client cannot import/);
   });
 
   it("is deterministic and produces audit receipt", async () => {

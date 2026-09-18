@@ -6,7 +6,13 @@ export const ancientPlaceCandidateSchema = z
     name: z.string().min(1),
     sourceReleaseKey: z.string().regex(/^release:source:openbible:geocoding@/),
     sourceLocator: z.string().min(1),
-    confidence: z.enum(["exact", "approximate", "area", "candidates", "unknown"]),
+    confidence: z.enum([
+      "exact",
+      "approximate",
+      "area",
+      "candidates",
+      "unknown",
+    ]),
     reviewStatus: z.enum(["draft", "in_review", "approved", "published"]),
   })
   .strict();
@@ -19,7 +25,13 @@ export const modernSiteCandidateSchema = z
       type: z.enum(["Point"]),
       coordinates: z.tuple([z.number(), z.number()]),
       crs: z.string().min(1),
-      precision: z.enum(["exact_site", "approximate", "area", "candidates", "unknown"]),
+      precision: z.enum([
+        "exact_site",
+        "approximate",
+        "area",
+        "candidates",
+        "unknown",
+      ]),
       period: z.string().nullable(),
       evidence: z.string().min(1),
       componentLicense: z.string().min(1),

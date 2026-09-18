@@ -49,15 +49,24 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
       testID="timeline-sheet"
       scrollRef={scrollRef}
     >
-      <View style={styles.legend} onLayout={(event) => {
-        legendHeight.current = event.nativeEvent.layout.height;
-        maybeScroll();
-      }}>
+      <View
+        style={styles.legend}
+        onLayout={(event) => {
+          legendHeight.current = event.nativeEvent.layout.height;
+          maybeScroll();
+        }}
+      >
         <AppText variant="metadata">
-          <AppText variant="metadata" color="accent">●</AppText> Biblical events
+          <AppText variant="metadata" color="accent">
+            ●
+          </AppText>{' '}
+          Biblical events
         </AppText>
         <AppText variant="metadata">
-          <AppText variant="metadata" color="textSecondary">●</AppText> World history
+          <AppText variant="metadata" color="textSecondary">
+            ●
+          </AppText>{' '}
+          World history
         </AppText>
       </View>
       <View style={[styles.rail, { borderColor: colors.border }]}>
@@ -67,7 +76,9 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
           const active = event.relevance.toLowerCase().includes('you are here');
           const year = formatYear(event.start);
           const precision =
-            event.date_precision === 'approximate' ? 'APPROXIMATE' : event.date_precision.toUpperCase();
+            event.date_precision === 'approximate'
+              ? 'APPROXIMATE'
+              : event.date_precision.toUpperCase();
           return (
             <View
               key={event.canonical_key}
@@ -100,7 +111,10 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
               <View style={styles.itemText}>
                 <AppText variant="label">
                   {event.title}
-                  <AppText variant="caption" color="accent"> {precision}</AppText>
+                  <AppText variant="caption" color="accent">
+                    {' '}
+                    {precision}
+                  </AppText>
                 </AppText>
                 <ReferenceText
                   text={`${event.description} ${event.relevance}`}

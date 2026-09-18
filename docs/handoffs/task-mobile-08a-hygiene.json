@@ -1,0 +1,62 @@
+{
+  "attempt_id": "task:mobile-hardening:08a:attempt-1",
+  "task_id": "M08a",
+  "task_title": "Headless hardening: dependency, permission, secrets, and error-copy tripwires",
+  "result": "PASS",
+  "user_visible_outcome": "No visible change. The release now fails loudly instead of silently on the most dangerous regressions: a new shipped dependency, a new native permission, committed credential material, or a new user-facing error string that could leak sensitive data.",
+  "files_changed": [
+    "apps/mobile/__tests__/hygiene.test.ts (new: 10 tests — exact runtime + dev dependency snapshots, exact plugin list, no-permission-beyond-notifications, no remote-push surface, exact reviewed error copy per store, secret-like redaction over every message)",
+    "tools/verify-hygiene.sh (secrets gate: JWT-shaped material, private-key/provider-token prefixes, real .env files, keystore/certificate files — patterns match values, not prose)",
+    "docs/MOBILE_INSTALL_PLAN.md (M08 PARTIAL: headless tripwires DONE, device-gated remainder listed)"
+  ],
+  "files_not_changed": [
+    "No app behavior, copy, schema, dependency, permission, or config change of any kind",
+    "No telemetry collection (needs privacy review + owner approval)",
+    "No crash-reporting SDK (needs owner approval)",
+    "No sync/auth/reminder timeouts (behavior change; proposed as M08b with explicit budgets)",
+    "No gate, eligibility, or package file touched (void stays void)"
+  ],
+  "commands_executed": [
+    {
+      "command": "sh tools/verify-hygiene.sh",
+      "exit_code": 0,
+      "output": "HYGIENE-PASS (quarantine, void gates, JWT, key/token prefixes, .env, keystores all OK)"
+    },
+    {
+      "command": "jest __tests__/hygiene.test.ts",
+      "exit_code": 0,
+      "output": "10 passed (5 inventory + 5 error-copy)"
+    },
+    {
+      "command": "jest (mobile full suite)",
+      "exit_code": 1,
+      "output": "22 passed / 3 failed suites; 220 passed / 10 failed tests — failures are exactly the pre-existing triaged set (docs/R1_JEST_TRIAGE.md)"
+    },
+    {
+      "command": "tsc --noEmit (mobile)",
+      "exit_code": 0,
+      "output": "0 errors"
+    },
+    {
+      "command": "expo lint (__tests__/hygiene.test.ts)",
+      "exit_code": 0,
+      "output": "0 errors, 0 warnings"
+    },
+    {
+      "command": "prettier --check (mobile)",
+      "exit_code": 0,
+      "output": "clean"
+    }
+  ],
+  "bugs_found_by_tests": [],
+  "needs_from_owner": [
+    "M08 remainder still needs devices/runtime/approvals: cold-start/scroll/image-export/db/sync/memory budgets on mid-range iPhones + Android (incl. lower-performance), VoiceOver/TalkBack + font-scaling + dark-mode + reduced-motion + contrast + target-size review, crash-reporting SDK approval (incl. source-map upload token + payload redaction review), telemetry provider/region/retention approval (PD-019), backup/restore + migration-recovery + content-rollback + push-failure drills, Apple App Privacy + Google Data Safety declarations from the final inventory",
+    "Proposed M08b (needs scoping approval): resilient timeouts + retry-with-jitter for sync/auth/reminder paths with explicit budgets",
+    "10 R1 triage items still await fix-app/fix-test/device-gate rulings; M07 exit-gate runtime still OPEN"
+  ],
+  "scope_guard": "Hardening only. No product behavior, content, or collection changed; the new tests assert the existing reviewed surface.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:mobile-hardening:08a:attempt-1",
+  "plan": "docs/MOBILE_INSTALL_PLAN.md (M08 PARTIAL headless; device-gated hardening + release checklist pending)",
+  "data_kind": "tests + shell gate only; no Scripture, user data, or credentials touched"
+}

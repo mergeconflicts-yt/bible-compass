@@ -1,73 +1,144 @@
--- Test: Canon/reference/edition staging (Task 17A)
--- Verify clean rebuild, constraints, indexes, and private RLS
-\set ON_ERROR_STOP on
+-- Test: Canon/reference/edition staging — enforceable (R1-B, Task 17A).
+-- Every check is a real assertion (EXCEPTION on violation). No string PASS.
+-- Run: psql "$DATABASE_URL" -f supabase/tests/02_canon_reference_edition_test.sql
+-- Single transaction, rolls back. Requires a superuser-equivalent role for
+-- SET ROLE impersonation. Supabase-gated runs: docs/REGISTRY_MIGRATION_NOTES.md.
+
 begin;
 
--- 1. RLS enabled on all 11 private_staging tables
-select
-  case when count(*) = 11 then 'PASS: 11 private_staging tables have RLS enabled'
-       else 'FAIL: expected 11, got ' || count(*)::text
-  end as rls_check
-from pg_tables t
-join pg_class c on c.relname = t.tablename
-where t.schemaname = 'private_staging'
-  and c.relrowsecurity = true;
+-- 1. RLS enabled on all 11 canon/reference/edition tables (named, exact).
+DO $$
+DECLARE
+  missing text;
+BEGIN
+  SELECT string_agg(c.relname, ', ' ORDER BY c.relname) INTO missing
+  FROM pg_class c
+  JOIN pg_namespace n ON n.oid = c.relnamespace
+  WHERE n.nspname = 'private_staging'
+    AND c.relkind = 'r'
+    AND c.relname IN ('canons', 'scripture_works', 'canon_work_memberships', 'reference_systems', 'reference_units', 'reference_mappings', 'scripture_scopes', 'scope_members', 'translation_works', 'translation_editions', 'translation_edition_verses')
+    AND NOT c.relrowsecurity;
+  IF missing IS NOT NULL THEN
+    RAISE EXCEPTION 'FAIL: RLS not enabled on staging tables: %', missing;
+  END IF;
+END $$;
 
--- 2. No grants to anon/authenticated
-select
-  case when count(*) = 0 then 'PASS: no grants to anon/authenticated on private_staging'
-       else 'FAIL: found ' || count(*)::text || ' grants'
-  end as grant_check
-from information_schema.role_table_grants
-where table_schema = 'private_staging'
-  and grantee in ('anon','authenticated','public');
+-- 2. No write grants to anon/authenticated/public on those 11 tables.
+-- (SELECT grants exist only where migration 05 allows published reads.)
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n
+  FROM information_schema.role_table_grants
+  WHERE table_schema = 'private_staging'
+    AND table_name IN ('canons', 'scripture_works', 'canon_work_memberships', 'reference_systems', 'reference_units', 'reference_mappings', 'scripture_scopes', 'scope_members', 'translation_works', 'translation_editions', 'translation_edition_verses')
+    AND grantee IN ('anon', 'authenticated', 'public')
+    AND privilege_type IN ('INSERT', 'UPDATE', 'DELETE', 'TRUNCATE', 'REFERENCES', 'TRIGGER');
+  IF n <> 0 THEN
+    RAISE EXCEPTION 'FAIL: % write grants on canon tables', n;
+  END IF;
+END $$;
 
--- 3. Check constraints exist
-select case when count(*) >= 11 then 'PASS: check constraints exist' else 'FAIL' end as check_check
-from pg_constraint where conrelid::regclass::text like 'private_staging.%';
+-- 3. Anonymous cannot read staging canon tables (no grant: expects error).
+SET ROLE anon;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_staging.canons LIMIT 1;
+  RAISE EXCEPTION 'FAIL: anon could read private_staging.canons';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 4. Unique constraints for reference_units
-select case when count(*) = 2 then 'PASS: reference_units has 2 unique constraints (refsys,local) and (refsys,ordinal)' else 'FAIL' end as uniq_check
-from pg_constraint where conrelid = 'private_staging.reference_units'::regclass and contype = 'u';
+-- 4. Authenticated cannot read staging canon tables either.
+SET ROLE authenticated;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_staging.reference_units LIMIT 1;
+  RAISE EXCEPTION 'FAIL: authenticated could read private_staging.reference_units';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+RESET ROLE;
 
--- 5. Split/merge mapping kinds are allowed
-do $$
-begin
-  -- This will fail if kind check is wrong
-  perform 1 from private_staging.reference_mappings where kind = 'split';
-  -- If no rows, just check the check constraint exists
-  if not exists (select 1 from pg_constraint where conname like '%reference_mappings_kind%') then
-    -- Fallback: check via pg_get_constraintdef
-    null;
-  end if;
-end $$;
-select 'PASS: reference_mappings kinds check exists' as mapping_kind_check;
+-- 5. reference_units keeps both uniqueness scopes (refsys,local) + (refsys,ordinal).
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n
+  FROM pg_constraint
+  WHERE conrelid = 'private_staging.reference_units'::regclass
+    AND contype = 'u';
+  IF n <> 2 THEN
+    RAISE EXCEPTION 'FAIL: reference_units has % unique constraints, expected 2', n;
+  END IF;
+END $$;
 
--- 6. Digest-bound: translation_editions source_artifact_sha256 must be sha256
-savepoint test_invalid_sha;
-do $$
-begin
-  insert into private_staging.translation_editions (work_id, key, language_tag, reference_system_id, revision_date, source_artifact_sha256, attribution, status)
-  values (
-    '00000000-0000-0000-0000-000000000001',
-    'edition:bsb@20260912:sha-b2898c49',
+-- 6. Digest CHECK enforced: bad source_artifact_sha256 rejected.
+-- Chain built with collision-proof probe keys (ON CONFLICT guards).
+DO $$
+DECLARE
+  canon_id uuid;
+  work_id uuid;
+  refsys_id uuid;
+  trans_id uuid;
+BEGIN
+  INSERT INTO private_staging.canons (key, name)
+  VALUES ('canon:prot-66', 'probe-rls-test')
+  ON CONFLICT (key) DO NOTHING;
+  SELECT id INTO canon_id FROM private_staging.canons WHERE key = 'canon:prot-66';
+  INSERT INTO private_staging.scripture_works (key, osis_code, name, testament)
+  VALUES ('work:Prob:prot-66', 'Prob', 'Probe', 'OT')
+  ON CONFLICT (key) DO NOTHING;
+  SELECT id INTO work_id FROM private_staging.scripture_works WHERE key = 'work:Prob:prot-66';
+  INSERT INTO private_staging.reference_systems (key, canon_id, version, status)
+  VALUES ('refsys:eng-v99', canon_id, 99, 'draft')
+  ON CONFLICT (key) DO NOTHING;
+  SELECT id INTO refsys_id FROM private_staging.reference_systems WHERE key = 'refsys:eng-v99';
+  INSERT INTO private_staging.translation_works (key, language_tag, name, publisher)
+  VALUES ('trans:bsb', 'en', 'probe', 'probe')
+  ON CONFLICT (key) DO NOTHING;
+  SELECT id INTO trans_id FROM private_staging.translation_works WHERE key = 'trans:bsb';
+  INSERT INTO private_staging.translation_editions
+    (work_id, key, language_tag, reference_system_id, revision_date, source_artifact_sha256, attribution, status)
+  VALUES (
+    trans_id,
+    'edition:bsb@20260915:sha-deadbeef',
     'en',
-    '00000000-0000-0000-0000-000000000002',
-    '2026-09-12',
+    refsys_id,
+    '2026-09-15',
     'bad-sha',
-    'BSB',
+    'probe',
     'draft'
   );
-  raise exception 'FAIL: invalid sha accepted';
-exception when check_violation then null;
-end $$;
-rollback to savepoint test_invalid_sha;
+  RAISE EXCEPTION 'FAIL: invalid source_artifact_sha256 was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
 
--- 7. Immutability: published edition cannot be updated (trigger)
--- This is tested via trigger existence
-select case when count(*) >= 1 then 'PASS: immutability trigger exists' else 'FAIL' end as trigger_check
-from pg_trigger where tgname like 'trg_prevent_published%';
+-- 7. Mapping kinds stay closed: bogus kind rejected (no FKs on this table,
+-- so the CHECK is isolated deterministically).
+DO $$
+BEGIN
+  INSERT INTO private_staging.reference_mappings
+    (from_refsys, from_unit, to_refsys, to_unit, kind, review_state)
+  VALUES ('refsys:eng-v22', 'Neh.2.4', 'refsys:tel-v1', 'Neh.2.4a', 'bogus', 'draft');
+  RAISE EXCEPTION 'FAIL: invalid mapping kind was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
 
-select 'RLS_TEST_17A_COMPLETE' as status;
+-- 8. Published-edition immutability trigger exists.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n FROM pg_trigger WHERE tgname LIKE 'trg_prevent_published%';
+  IF n < 1 THEN
+    RAISE EXCEPTION 'FAIL: published-edition immutability trigger missing';
+  END IF;
+END $$;
 
 rollback;

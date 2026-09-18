@@ -38,14 +38,14 @@ Do not place historical facts, cards, controls or decorative artwork above Scrip
 
 ### Product character
 
-| Quality | UI expression |
-|---|---|
-| Calm | Warm neutral canvas, limited color, generous line height |
-| Trustworthy | Clear attribution, visible uncertainty, consistent hierarchy |
-| Welcoming | Plain language, familiar navigation, no academic jargon by default |
-| Exploratory | Subtle anchors and maps that invite rather than interrupt |
-| Contemporary | Clean shapes and spacing without looking like a social-media app |
-| Multilingual | Native-script typography, no English-first layout assumptions |
+| Quality      | UI expression                                                      |
+| ------------ | ------------------------------------------------------------------ |
+| Calm         | Warm neutral canvas, limited color, generous line height           |
+| Trustworthy  | Clear attribution, visible uncertainty, consistent hierarchy       |
+| Welcoming    | Plain language, familiar navigation, no academic jargon by default |
+| Exploratory  | Subtle anchors and maps that invite rather than interrupt          |
+| Contemporary | Clean shapes and spacing without looking like a social-media app   |
+| Multilingual | Native-script typography, no English-first layout assumptions      |
 
 ### Design principles
 
@@ -63,11 +63,11 @@ Do not place historical facts, cards, controls or decorative artwork above Scrip
 
 Use three bottom tabs:
 
-| Tab | Destination | Purpose |
-|---|---|---|
-| Home | `/(tabs)/home` | Daily verse, continue reading and featured contextual entry |
-| Bible | `/(tabs)/bible` | Book and chapter selection |
-| Saved | `/(tabs)/saved` | Bookmarks and recent reading |
+| Tab   | Destination     | Purpose                                                     |
+| ----- | --------------- | ----------------------------------------------------------- |
+| Home  | `/(tabs)/home`  | Daily verse, continue reading and featured contextual entry |
+| Bible | `/(tabs)/bible` | Book and chapter selection                                  |
+| Saved | `/(tabs)/saved` | Bookmarks and recent reading                                |
 
 **Reader is not a tab.** A passage is pushed from Home, Bible, Search, Saved or a deep link. The reader is a focused full-screen destination and hides the tab bar.
 
@@ -113,45 +113,45 @@ Flow:
 
 #### Light theme
 
-| Token | Value | Use |
-|---|---|---|
-| `color.canvas` | `#F7F4EE` | Main application background |
-| `color.surface` | `#FFFCF7` | Cards, sheets and raised reading surfaces |
-| `color.surfaceSubtle` | `#EFE9DD` | Quiet grouped regions |
-| `color.textPrimary` | `#18242D` | Primary UI text |
-| `color.textSecondary` | `#59656E` | Metadata and supporting text |
-| `color.textOnBrand` | `#FFFFFF` | Text on dark brand surfaces |
-| `color.brand` | `#285C58` | Primary actions and active navigation |
-| `color.brandPressed` | `#1E4845` | Pressed primary state |
-| `color.accent` | `#A86F28` | Historical anchors and restrained emphasis |
-| `color.accentSoft` | `#F1E4CE` | Context highlights |
-| `color.border` | `#DDD6CA` | Dividers and card boundaries |
-| `color.focus` | `#1D67D7` | Keyboard/switch-control focus ring |
-| `color.success` | `#2F6C4D` | Confirmed success |
-| `color.warning` | `#8A5A17` | Approximate or attention state |
-| `color.danger` | `#B33A3A` | Destructive/error state |
-| `color.scrim` | `rgba(15, 24, 30, 0.52)` | Modal background |
+| Token                 | Value                    | Use                                        |
+| --------------------- | ------------------------ | ------------------------------------------ |
+| `color.canvas`        | `#F7F4EE`                | Main application background                |
+| `color.surface`       | `#FFFCF7`                | Cards, sheets and raised reading surfaces  |
+| `color.surfaceSubtle` | `#EFE9DD`                | Quiet grouped regions                      |
+| `color.textPrimary`   | `#18242D`                | Primary UI text                            |
+| `color.textSecondary` | `#59656E`                | Metadata and supporting text               |
+| `color.textOnBrand`   | `#FFFFFF`                | Text on dark brand surfaces                |
+| `color.brand`         | `#285C58`                | Primary actions and active navigation      |
+| `color.brandPressed`  | `#1E4845`                | Pressed primary state                      |
+| `color.accent`        | `#A86F28`                | Historical anchors and restrained emphasis |
+| `color.accentSoft`    | `#F1E4CE`                | Context highlights                         |
+| `color.border`        | `#DDD6CA`                | Dividers and card boundaries               |
+| `color.focus`         | `#1D67D7`                | Keyboard/switch-control focus ring         |
+| `color.success`       | `#2F6C4D`                | Confirmed success                          |
+| `color.warning`       | `#8A5A17`                | Approximate or attention state             |
+| `color.danger`        | `#B33A3A`                | Destructive/error state                    |
+| `color.scrim`         | `rgba(15, 24, 30, 0.52)` | Modal background                           |
 
 #### Dark theme
 
-| Token | Value | Use |
-|---|---|---|
-| `color.canvas` | `#101614` | Main application background |
-| `color.surface` | `#18201E` | Cards and sheets |
-| `color.surfaceSubtle` | `#222C29` | Quiet grouped regions |
-| `color.textPrimary` | `#F3F0E8` | Primary UI and Scripture text |
-| `color.textSecondary` | `#B9C1BC` | Metadata |
-| `color.textOnBrand` | `#FFFFFF` | Text on brand surfaces |
-| `color.brand` | `#72AAA4` | Primary interactive emphasis |
-| `color.brandPressed` | `#8BBCB7` | Pressed state |
-| `color.accent` | `#D6A65B` | Historical anchors |
-| `color.accentSoft` | `#392F21` | Context highlights |
-| `color.border` | `#34403C` | Dividers and boundaries |
-| `color.focus` | `#77A7FF` | Focus ring |
-| `color.success` | `#78B993` | Success |
-| `color.warning` | `#E2B766` | Approximate or attention state |
-| `color.danger` | `#FF8E8E` | Destructive/error state |
-| `color.scrim` | `rgba(0, 0, 0, 0.64)` | Modal background |
+| Token                 | Value                 | Use                            |
+| --------------------- | --------------------- | ------------------------------ |
+| `color.canvas`        | `#101614`             | Main application background    |
+| `color.surface`       | `#18201E`             | Cards and sheets               |
+| `color.surfaceSubtle` | `#222C29`             | Quiet grouped regions          |
+| `color.textPrimary`   | `#F3F0E8`             | Primary UI and Scripture text  |
+| `color.textSecondary` | `#B9C1BC`             | Metadata                       |
+| `color.textOnBrand`   | `#FFFFFF`             | Text on brand surfaces         |
+| `color.brand`         | `#72AAA4`             | Primary interactive emphasis   |
+| `color.brandPressed`  | `#8BBCB7`             | Pressed state                  |
+| `color.accent`        | `#D6A65B`             | Historical anchors             |
+| `color.accentSoft`    | `#392F21`             | Context highlights             |
+| `color.border`        | `#34403C`             | Dividers and boundaries        |
+| `color.focus`         | `#77A7FF`             | Focus ring                     |
+| `color.success`       | `#78B993`             | Success                        |
+| `color.warning`       | `#E2B766`             | Approximate or attention state |
+| `color.danger`        | `#FF8E8E`             | Destructive/error state        |
+| `color.scrim`         | `rgba(0, 0, 0, 0.64)` | Modal background               |
 
 Requirements:
 
@@ -164,11 +164,11 @@ Requirements:
 
 #### Font families
 
-| Content | English/Latin | Telugu | Tamil |
-|---|---|---|---|
-| Interface | Inter or platform sans fallback | Noto Sans Telugu | Noto Sans Tamil |
-| Scripture and editorial reading | Source Serif 4 | Noto Serif Telugu | Noto Serif Tamil |
-| Verse-card export | Same script-appropriate reading font | Noto Serif Telugu | Noto Serif Tamil |
+| Content                         | English/Latin                        | Telugu            | Tamil            |
+| ------------------------------- | ------------------------------------ | ----------------- | ---------------- |
+| Interface                       | Inter or platform sans fallback      | Noto Sans Telugu  | Noto Sans Tamil  |
+| Scripture and editorial reading | Source Serif 4                       | Noto Serif Telugu | Noto Serif Tamil |
+| Verse-card export               | Same script-appropriate reading font | Noto Serif Telugu | Noto Serif Tamil |
 
 Bundle only approved weights used by the app. Until fonts finish loading, keep the splash/loading surface visible or use a dimension-compatible fallback; do not let the reader visibly reflow after the user begins reading.
 
@@ -176,20 +176,20 @@ The app-interface locale chooses interface fonts. The selected Bible translation
 
 #### Type scale
 
-| Style token | Size / line height | Weight | Use |
-|---|---|---|---|
-| `display` | 36 / 43 sp | 700 | Rare Home greeting or campaign title |
-| `title1` | 30 / 38 sp | 700 | Passage and major screen title |
-| `title2` | 24 / 31 sp | 700 | Sheet title and major card heading |
-| `title3` | 20 / 27 sp | 600 | Section heading |
-| `body` | 16 / 24 sp | 400 | Interface body text |
-| `bodyStrong` | 16 / 24 sp | 600 | Emphasized interface text |
-| `metadata` | 13 / 18 sp | 500 | Translation, dates and supportive labels |
-| `label` | 14 / 20 sp | 600 | Buttons and controls |
-| `caption` | 12 / 17 sp | 500 | Attribution and compact metadata |
-| `scripture` | 20 / 32 sp | 400 | English Scripture default |
-| `scriptureIndic` | 20 / 36 sp | 400 | Telugu and Tamil Scripture default |
-| `verseNumber` | 12 / 18 sp | 600 | Verse number |
+| Style token      | Size / line height | Weight | Use                                      |
+| ---------------- | ------------------ | ------ | ---------------------------------------- |
+| `display`        | 36 / 43 sp         | 700    | Rare Home greeting or campaign title     |
+| `title1`         | 30 / 38 sp         | 700    | Passage and major screen title           |
+| `title2`         | 24 / 31 sp         | 700    | Sheet title and major card heading       |
+| `title3`         | 20 / 27 sp         | 600    | Section heading                          |
+| `body`           | 16 / 24 sp         | 400    | Interface body text                      |
+| `bodyStrong`     | 16 / 24 sp         | 600    | Emphasized interface text                |
+| `metadata`       | 13 / 18 sp         | 500    | Translation, dates and supportive labels |
+| `label`          | 14 / 20 sp         | 600    | Buttons and controls                     |
+| `caption`        | 12 / 17 sp         | 500    | Attribution and compact metadata         |
+| `scripture`      | 20 / 32 sp         | 400    | English Scripture default                |
+| `scriptureIndic` | 20 / 36 sp         | 400    | Telugu and Tamil Scripture default       |
+| `verseNumber`    | 12 / 18 sp         | 600    | Verse number                             |
 
 Typography rules:
 
@@ -205,15 +205,15 @@ Typography rules:
 
 Use a 4 dp base grid.
 
-| Token | Value |
-|---|---|
-| `space.1` | 4 dp |
-| `space.2` | 8 dp |
-| `space.3` | 12 dp |
-| `space.4` | 16 dp |
-| `space.5` | 20 dp |
-| `space.6` | 24 dp |
-| `space.8` | 32 dp |
+| Token      | Value |
+| ---------- | ----- |
+| `space.1`  | 4 dp  |
+| `space.2`  | 8 dp  |
+| `space.3`  | 12 dp |
+| `space.4`  | 16 dp |
+| `space.5`  | 20 dp |
+| `space.6`  | 24 dp |
+| `space.8`  | 32 dp |
 | `space.10` | 40 dp |
 | `space.12` | 48 dp |
 
@@ -254,12 +254,12 @@ Use a 4 dp base grid.
 
 ### Breakpoints
 
-| Layout | Width | Behavior |
-|---|---|---|
-| Compact phone | `< 360 dp` | 16 dp margins, actions stack, compact card artwork |
-| Standard phone | `360–599 dp` | Default single-column layout |
-| Large phone/small tablet | `600–839 dp` | Centered content; some two-column sections |
-| Tablet | `>= 840 dp` | Max-width reader; context sheet may become a 360–420 dp side panel |
+| Layout                   | Width        | Behavior                                                           |
+| ------------------------ | ------------ | ------------------------------------------------------------------ |
+| Compact phone            | `< 360 dp`   | 16 dp margins, actions stack, compact card artwork                 |
+| Standard phone           | `360–599 dp` | Default single-column layout                                       |
+| Large phone/small tablet | `600–839 dp` | Centered content; some two-column sections                         |
+| Tablet                   | `>= 840 dp`  | Max-width reader; context sheet may become a 360–420 dp side panel |
 
 Do not use device names to choose layouts. Use available width, safe areas and text scale.
 
@@ -525,11 +525,11 @@ Order:
 
 The popup uses progressive depth without leaving the passage:
 
-| Tab | Required contents |
-|---|---|
-| Essential | A 30-second story flow — Before this, Right now and What is at stake — followed by people in this passage |
-| History | When and where, political setting, cultural context, Timeline and Map actions |
-| Connections | Reviewed prior, parallel and following Scripture connections |
+| Tab         | Required contents                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------------- |
+| Essential   | A 30-second story flow — Before this, Right now and What is at stake — followed by people in this passage |
+| History     | When and where, political setting, cultural context, Timeline and Map actions                             |
+| Connections | Reviewed prior, parallel and following Scripture connections                                              |
 
 Open on Essential every time the popup is invoked for a newly opened passage. Preserve the selected tab while the same popup remains open. Tabs must use real accessibility tab semantics, expose selected state and remain usable at 200 percent text scale. If labels do not fit, the tab bar may scroll horizontally but labels may not be truncated.
 
@@ -623,11 +623,11 @@ MVP customization is intentionally limited. Users cannot upload photos, drag tex
 
 #### Export dimensions
 
-| Format | Output | Primary use |
-|---|---|---|
-| Status | 1080 x 1920 px | WhatsApp Status and stories |
-| Square | 1080 x 1080 px | WhatsApp groups and social posts |
-| Portrait | 1080 x 1350 px | Social feeds |
+| Format   | Output         | Primary use                      |
+| -------- | -------------- | -------------------------------- |
+| Status   | 1080 x 1920 px | WhatsApp Status and stories      |
+| Square   | 1080 x 1080 px | WhatsApp groups and social posts |
+| Portrait | 1080 x 1350 px | Social feeds                     |
 
 #### Export safe regions
 
@@ -781,18 +781,18 @@ For HelloAO-imported translations, HelloAO is ingestion provenance, while the or
 
 ## 10. Loading, empty, offline and error behavior
 
-| Situation | Required UI |
-|---|---|
-| Cached passage exists | Render immediately; revalidate quietly |
-| No cache and loading | Reader-shaped skeleton, then content or actionable error |
-| Offline with cached passage | Read normally; small offline indicator only when relevant |
-| Offline without passage | Explain it is not downloaded; offer downloaded content |
-| Context missing | Scripture remains available; say context is not available yet |
-| Image right unavailable | Disable/hide export with clear translation-specific explanation |
-| Export fails | Preserve composer state; Retry and Cancel |
-| Download interrupted | Preserve last healthy content; show resumable/retry state |
-| Search has no results | Suggest reference format, translation and download coverage |
-| Sync conflict | Resolve by documented policy; do not show a technical modal unless user action is required |
+| Situation                   | Required UI                                                                                |
+| --------------------------- | ------------------------------------------------------------------------------------------ |
+| Cached passage exists       | Render immediately; revalidate quietly                                                     |
+| No cache and loading        | Reader-shaped skeleton, then content or actionable error                                   |
+| Offline with cached passage | Read normally; small offline indicator only when relevant                                  |
+| Offline without passage     | Explain it is not downloaded; offer downloaded content                                     |
+| Context missing             | Scripture remains available; say context is not available yet                              |
+| Image right unavailable     | Disable/hide export with clear translation-specific explanation                            |
+| Export fails                | Preserve composer state; Retry and Cancel                                                  |
+| Download interrupted        | Preserve last healthy content; show resumable/retry state                                  |
+| Search has no results       | Suggest reference format, translation and download coverage                                |
+| Sync conflict               | Resolve by documented policy; do not show a technical modal unless user action is required |
 
 Avoid persistent full-width banners. Use banners only when a condition changes what the user can safely do.
 
@@ -912,18 +912,18 @@ The agent must implement this design in bounded tasks. Do not ask one agent to �
 
 At minimum, capture and review:
 
-| Dimension | Required cases |
-|---|---|
-| Platform | Current supported iOS, current supported Android |
-| Device | Small phone, standard phone, lower-performance Android, tablet |
-| Theme | Light, dark |
-| UI language | English, Telugu, Tamil |
-| Scripture language | English, Telugu, Tamil, including mixed UI/Scripture choices |
-| Text scale | 100%, 150%, 200% |
-| Network | Online, slow, offline cached, offline uncached |
-| Content | Short verse, long verse, poetry, missing context, uncertain date/place |
-| Rights | Share allowed, share forbidden, attribution required |
-| Input | Touch, screen reader, hardware keyboard where supported |
+| Dimension          | Required cases                                                         |
+| ------------------ | ---------------------------------------------------------------------- |
+| Platform           | Current supported iOS, current supported Android                       |
+| Device             | Small phone, standard phone, lower-performance Android, tablet         |
+| Theme              | Light, dark                                                            |
+| UI language        | English, Telugu, Tamil                                                 |
+| Scripture language | English, Telugu, Tamil, including mixed UI/Scripture choices           |
+| Text scale         | 100%, 150%, 200%                                                       |
+| Network            | Online, slow, offline cached, offline uncached                         |
+| Content            | Short verse, long verse, poetry, missing context, uncertain date/place |
+| Rights             | Share allowed, share forbidden, attribution required                   |
+| Input              | Touch, screen reader, hardware keyboard where supported                |
 
 ## 14. Design acceptance checklist
 
@@ -978,19 +978,19 @@ At minimum, capture and review:
 
 The existing HTML prototype proves the feature concept but is not the production UI specification. Apply these corrections during implementation:
 
-| Prototype behavior | Production decision |
-|---|---|
-| Home, Bible and Reader tabs | Home, Bible and Saved tabs; Search and Reader are pushed routes |
-| Emoji/Unicode navigation icons | One approved accessible vector icon family |
-| Five tiny context buttons in one row | Flexible chips/list inside a single Understand entry point |
-| Timeline as four compressed horizontal nodes | Vertical phone timeline with descriptions and certainty |
-| Timeline, Context and Map sticky reader toolbar | One restrained Understand action; depth options inside context |
-| Generic Georgia/system typography | Script-aware bundled reading and interface fonts |
-| Fixed English-sized labels and cards | Content-driven multilingual layout and 200% text support |
-| Reusable profile appears before passage meaning | `In this passage` appears first |
-| Decorative portrait placeholders | Neutral approved visuals; no invented factual portraits |
-| Browser-only share fallback assumptions | Native iOS/Android share, explicit media save and rights enforcement |
-| Style values embedded per screen | Semantic design tokens and reusable primitives |
+| Prototype behavior                              | Production decision                                                  |
+| ----------------------------------------------- | -------------------------------------------------------------------- |
+| Home, Bible and Reader tabs                     | Home, Bible and Saved tabs; Search and Reader are pushed routes      |
+| Emoji/Unicode navigation icons                  | One approved accessible vector icon family                           |
+| Five tiny context buttons in one row            | Flexible chips/list inside a single Understand entry point           |
+| Timeline as four compressed horizontal nodes    | Vertical phone timeline with descriptions and certainty              |
+| Timeline, Context and Map sticky reader toolbar | One restrained Understand action; depth options inside context       |
+| Generic Georgia/system typography               | Script-aware bundled reading and interface fonts                     |
+| Fixed English-sized labels and cards            | Content-driven multilingual layout and 200% text support             |
+| Reusable profile appears before passage meaning | `In this passage` appears first                                      |
+| Decorative portrait placeholders                | Neutral approved visuals; no invented factual portraits              |
+| Browser-only share fallback assumptions         | Native iOS/Android share, explicit media save and rights enforcement |
+| Style values embedded per screen                | Semantic design tokens and reusable primitives                       |
 
 ## 16. Agent handoff contract
 

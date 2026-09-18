@@ -95,7 +95,11 @@ export function HomeView({
         accessibilityLabel={`Continue reading ${progress.bookLabel} chapter ${progress.chapter}, ${progress.lastVerseLabel}`}
         style={({ pressed }) => [
           styles.contCard,
-          { backgroundColor: colors.surface, borderColor: colors.border, opacity: pressed ? 0.85 : 1 },
+          {
+            backgroundColor: colors.surface,
+            borderColor: colors.border,
+            opacity: pressed ? 0.85 : 1,
+          },
         ]}
       >
         <View style={[styles.ring, { borderColor: colors.border, borderTopColor: colors.brand }]} />
@@ -120,7 +124,11 @@ export function HomeView({
         accessibilityLabel="Where are we in the story? Persian period, Jerusalem"
         style={({ pressed }) => [
           styles.contCard,
-          { backgroundColor: colors.surface, borderColor: colors.border, opacity: pressed ? 0.85 : 1 },
+          {
+            backgroundColor: colors.surface,
+            borderColor: colors.border,
+            opacity: pressed ? 0.85 : 1,
+          },
         ]}
       >
         <View style={[styles.storyDot, { backgroundColor: colors.accentSoft }]}>
@@ -138,7 +146,11 @@ export function HomeView({
         {`Scripture in ${preferences?.translation.name ?? 'Berean Standard Bible'} — change it in Settings.`}
       </AppText>
 
-      <ComposerSheet visible={composerOpen} onClose={() => setComposerOpen(false)} onShare={onShare} />
+      <ComposerSheet
+        visible={composerOpen}
+        onClose={() => setComposerOpen(false)}
+        onShare={onShare}
+      />
       <ContextFlow
         visible={contextOpen}
         onClose={() => setContextOpen(false)}
