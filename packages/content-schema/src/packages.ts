@@ -67,9 +67,12 @@ const evidenceItemKeySchema = z
 const candidateKeySchema = z
   .string()
   .regex(/^candidate:[a-z0-9-]+:[a-z0-9-]+$/, "Invalid candidate_key");
-const scopeKeySchema = z
-  .string()
-  .regex(/^scope:[a-z0-9-:.]+$/, "Invalid scope_key");
+const scopeKeySchema = z.string().regex(
+  // Ratified scope keys carry the ASCII OSIS book code in the reference
+  // span (docs/CANONICAL_IDENTIFIERS.md §6), which uses upper case.
+  /^scope:[A-Za-z0-9-:.]+$/,
+  "Invalid scope_key",
+);
 const verseKeySchema = z.string().regex(
   // Leading digit permitted so numbered OSIS works (1John, 2Kgs, ...)
   // align with workKeySchema in schemas.ts, which already allows [A-Za-z1-9].
@@ -83,9 +86,12 @@ const submissionKeySchema = z
   .string()
   .regex(/^submission:[a-z0-9-:]+$/, "Invalid submission_id");
 const jobKeySchema = z.string().regex(/^job:[a-z0-9-:]+$/, "Invalid job key");
-const editionKeySchema = z
-  .string()
-  .regex(/^edition:[a-z0-9-]+@[a-z0-9-]+$/, "Invalid translation_edition_key");
+const editionKeySchema = z.string().regex(
+  // Ratified immutable edition keys append the source digest
+  // (docs/CANONICAL_IDENTIFIERS.md §7): edition:bsb@20260912:sha-b2898c49
+  /^edition:[a-z0-9-]+@[a-z0-9-]+(?::sha-[0-9a-f]{8})?$/,
+  "Invalid translation_edition_key",
+);
 
 // --- Shared vocabularies (ratified lists; extended only by vocabulary review) ---
 

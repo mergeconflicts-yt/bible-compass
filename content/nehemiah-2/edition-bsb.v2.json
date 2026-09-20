@@ -1,0 +1,1254 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:neh2:edition-bsb",
+  "package_revision": 1,
+  "submission_id": "submission:neh2:edition-bsb:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:neh2:edition-bsb",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+      "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+      "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+      "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+      "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20"
+    ],
+    "reference_keys": [
+      "verse:Neh.2.1",
+      "verse:Neh.2.2",
+      "verse:Neh.2.3",
+      "verse:Neh.2.4",
+      "verse:Neh.2.5",
+      "verse:Neh.2.6",
+      "verse:Neh.2.7",
+      "verse:Neh.2.8",
+      "verse:Neh.2.9",
+      "verse:Neh.2.10",
+      "verse:Neh.2.11",
+      "verse:Neh.2.12",
+      "verse:Neh.2.13",
+      "verse:Neh.2.14",
+      "verse:Neh.2.15",
+      "verse:Neh.2.16",
+      "verse:Neh.2.17",
+      "verse:Neh.2.18",
+      "verse:Neh.2.19",
+      "verse:Neh.2.20"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "draft:neh2:canonical",
+      "revision": 1,
+      "digest": "sha256:b3d1f6b4098e0f125efebe0dbbf25d914e2774583e0189beb64a53474008ab2b"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:bsb-neh-2-1:artaxerxes-i",
+        "verse_key": "verse:Neh.2.1",
+        "attestation_key": "attestation:eng-v22-neh-2-1-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "King Artaxerxes",
+          "occurrence_ordinal": 1,
+          "prefix": "e twentieth year of ",
+          "suffix": ", when wine was set "
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-1:wine",
+        "verse_key": "verse:Neh.2.1",
+        "attestation_key": "attestation:eng-v22-neh-2-1-wine-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:wine"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "wine",
+          "occurrence_ordinal": 1,
+          "prefix": "ng Artaxerxes, when ",
+          "suffix": " was set before him,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-2:artaxerxes-i",
+        "verse_key": "verse:Neh.2.2",
+        "attestation_key": "attestation:eng-v22-neh-2-2-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "so ",
+          "suffix": " said to me, “Why is"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-3:artaxerxes-i",
+        "verse_key": "verse:Neh.2.3",
+        "attestation_key": "attestation:eng-v22-neh-2-3-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "and replied to ",
+          "suffix": ", “May the king live"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-3:jerusalem",
+        "verse_key": "verse:Neh.2.3",
+        "attestation_key": "attestation:eng-v22-neh-2-3-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the city where my fathers are buried",
+          "occurrence_ordinal": 1,
+          "prefix": "d I not be sad when ",
+          "suffix": " lies in ruins, and "
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-4:artaxerxes-i",
+        "verse_key": "verse:Neh.2.4",
+        "attestation_key": "attestation:eng-v22-neh-2-4-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "r request?” replied ",
+          "suffix": ". So I prayed to the"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-4:god-of-heaven",
+        "verse_key": "verse:Neh.2.4",
+        "attestation_key": "attestation:eng-v22-neh-2-4-god-of-heaven-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:god-of-heaven"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the God of heaven",
+          "occurrence_ordinal": 1,
+          "prefix": "ing. So I prayed to ",
+          "suffix": ""
+        },
+        "claim_keys": [
+          "claim:nehemiah-prays",
+          "claim:god-grants-success"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-4:prayer-to-god-of-heaven",
+        "verse_key": "verse:Neh.2.4",
+        "attestation_key": "attestation:eng-v22-neh-2-4-prayer-to-god-of-heaven-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:prayer-to-god-of-heaven"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "prayed",
+          "occurrence_ordinal": 1,
+          "prefix": "lied the king. So I ",
+          "suffix": " to the God of heave"
+        },
+        "claim_keys": [
+          "claim:nehemiah-prays"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-5:artaxerxes-i",
+        "verse_key": "verse:Neh.2.5",
+        "attestation_key": "attestation:eng-v22-neh-2-5-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "and answered ",
+          "suffix": ", “If it pleases the"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-5:judah",
+        "verse_key": "verse:Neh.2.5",
+        "attestation_key": "attestation:eng-v22-neh-2-5-judah-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:judah"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "that you send me to ",
+          "suffix": ", to the city where "
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:nehemiah-governor-of-judah"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-5:jerusalem",
+        "verse_key": "verse:Neh.2.5",
+        "attestation_key": "attestation:eng-v22-neh-2-5-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the city where my fathers are buried",
+          "occurrence_ordinal": 1,
+          "prefix": "end me to Judah, to ",
+          "suffix": ", so that I may rebu"
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-6:artaxerxes-i",
+        "verse_key": "verse:Neh.2.6",
+        "attestation_key": "attestation:eng-v22-neh-2-6-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": ", with the queen sea"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-6:queen",
+        "verse_key": "verse:Neh.2.6",
+        "attestation_key": "attestation:eng-v22-neh-2-6-queen-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:queen"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the queen",
+          "occurrence_ordinal": 1,
+          "prefix": "Then the king, with ",
+          "suffix": " seated beside him, "
+        },
+        "claim_keys": [
+          "claim:queen-present"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-7:artaxerxes-i",
+        "verse_key": "verse:Neh.2.7",
+        "attestation_key": "attestation:eng-v22-neh-2-7-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "him, “If it pleases ",
+          "suffix": ", may letters be giv"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-7:royal-letters",
+        "verse_key": "verse:Neh.2.7",
+        "attestation_key": "attestation:eng-v22-neh-2-7-royal-letters-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:royal-letters"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "letters",
+          "occurrence_ordinal": 1,
+          "prefix": "eases the king, may ",
+          "suffix": " be given to me for "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-7:governors-beyond-the-river",
+        "verse_key": "verse:Neh.2.7",
+        "attestation_key": "attestation:eng-v22-neh-2-7-governors-beyond-the-river-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:governors-beyond-the-river"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "the governors west of the Euphrates",
+          "occurrence_ordinal": 1,
+          "prefix": " be given to me for ",
+          "suffix": ", so that they will "
+        },
+        "claim_keys": [
+          "claim:governors-govern-beyond-river"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-7:beyond-the-river",
+        "verse_key": "verse:Neh.2.7",
+        "attestation_key": "attestation:eng-v22-neh-2-7-beyond-the-river-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:beyond-the-river"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "west of the Euphrates",
+          "occurrence_ordinal": 1,
+          "prefix": "e for the governors ",
+          "suffix": ", so that they will "
+        },
+        "claim_keys": [
+          "claim:beyond-river-part-of-persia"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-7:judah",
+        "verse_key": "verse:Neh.2.7",
+        "attestation_key": "attestation:eng-v22-neh-2-7-judah-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:judah"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "ssage until I reach ",
+          "suffix": "."
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:nehemiah-governor-of-judah"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-8:asaph-royal-park",
+        "verse_key": "verse:Neh.2.8",
+        "attestation_key": "attestation:eng-v22-neh-2-8-asaph-royal-park-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:asaph-royal-park"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Asaph",
+          "occurrence_ordinal": 1,
+          "prefix": " I have a letter to ",
+          "suffix": ", keeper of the king"
+        },
+        "claim_keys": [
+          "claim:asaph-keeper-forest"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-8:kings-forest",
+        "verse_key": "verse:Neh.2.8",
+        "attestation_key": "attestation:eng-v22-neh-2-8-kings-forest-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:kings-forest"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the king’s forest",
+          "occurrence_ordinal": 1,
+          "prefix": "to Asaph, keeper of ",
+          "suffix": ", so that he will gi"
+        },
+        "claim_keys": [
+          "claim:asaph-keeper-forest"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-8:timber",
+        "verse_key": "verse:Neh.2.8",
+        "attestation_key": "attestation:eng-v22-neh-2-8-timber-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:timber"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "timber",
+          "occurrence_ordinal": 1,
+          "prefix": "hat he will give me ",
+          "suffix": " to make beams for t"
+        },
+        "claim_keys": [
+          "claim:asaph-keeper-forest"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-8:jerusalem-wall",
+        "verse_key": "verse:Neh.2.8",
+        "attestation_key": "attestation:eng-v22-neh-2-8-jerusalem-wall-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem-wall"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the city wall",
+          "occurrence_ordinal": 1,
+          "prefix": " to the temple, for ",
+          "suffix": ", and for the house "
+        },
+        "claim_keys": [
+          "claim:wall-destroyed-by-fire",
+          "claim:jerusalem-wall-part-of-jerusalem",
+          "claim:nehemiah-inspects-wall",
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-8:artaxerxes-i",
+        "verse_key": "verse:Neh.2.8",
+        "attestation_key": "attestation:eng-v22-neh-2-8-artaxerxes-i-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 2,
+          "prefix": "my God was upon me, ",
+          "suffix": " granted my requests"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-9:governors-beyond-the-river",
+        "verse_key": "verse:Neh.2.9",
+        "attestation_key": "attestation:eng-v22-neh-2-9-governors-beyond-the-river-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:governors-beyond-the-river"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "the governors west of the Euphrates",
+          "occurrence_ordinal": 1,
+          "prefix": "Then I went to ",
+          "suffix": " and gave them the k"
+        },
+        "claim_keys": [
+          "claim:governors-govern-beyond-river"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-9:royal-letters",
+        "verse_key": "verse:Neh.2.9",
+        "attestation_key": "attestation:eng-v22-neh-2-9-royal-letters-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:royal-letters"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the king’s letters",
+          "occurrence_ordinal": 1,
+          "prefix": "rates and gave them ",
+          "suffix": ". The king had also "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-9:royal-escort",
+        "verse_key": "verse:Neh.2.9",
+        "attestation_key": "attestation:eng-v22-neh-2-9-royal-escort-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:royal-escort"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "army officers and cavalry",
+          "occurrence_ordinal": 1,
+          "prefix": " king had also sent ",
+          "suffix": " with me."
+        },
+        "claim_keys": [
+          "claim:royal-escort-provided"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-10:sanballat-the-horonite",
+        "verse_key": "verse:Neh.2.10",
+        "attestation_key": "attestation:eng-v22-neh-2-10-sanballat-the-horonite-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:sanballat-the-horonite"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sanballat the Horonite",
+          "occurrence_ordinal": 1,
+          "prefix": "But when ",
+          "suffix": " and Tobiah the Ammo"
+        },
+        "claim_keys": [
+          "claim:sanballat-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-10:tobiah-ammonite",
+        "verse_key": "verse:Neh.2.10",
+        "attestation_key": "attestation:eng-v22-neh-2-10-tobiah-ammonite-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:tobiah-ammonite"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tobiah the Ammonite official",
+          "occurrence_ordinal": 1,
+          "prefix": "at the Horonite and ",
+          "suffix": " heard about this, t"
+        },
+        "claim_keys": [
+          "claim:tobiah-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-10:israelites",
+        "verse_key": "verse:Neh.2.10",
+        "attestation_key": "attestation:eng-v22-neh-2-10-israelites-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "the Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "k the well-being of ",
+          "suffix": "."
+        },
+        "claim_keys": [
+          "claim:sanballat-opposes",
+          "claim:tobiah-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-11:jerusalem",
+        "verse_key": "verse:Neh.2.11",
+        "attestation_key": "attestation:eng-v22-neh-2-11-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "er I had arrived in ",
+          "suffix": " and had been there "
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-12:jerusalem",
+        "verse_key": "verse:Neh.2.12",
+        "attestation_key": "attestation:eng-v22-neh-2-12-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": " my heart to do for ",
+          "suffix": ". The only animal wi"
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-12:god-of-heaven",
+        "verse_key": "verse:Neh.2.12",
+        "attestation_key": "attestation:eng-v22-neh-2-12-god-of-heaven-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:god-of-heaven"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "my God",
+          "occurrence_ordinal": 1,
+          "prefix": "ot tell anyone what ",
+          "suffix": " had laid on my hear"
+        },
+        "claim_keys": [
+          "claim:nehemiah-prays",
+          "claim:god-grants-success"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-13:valley-gate",
+        "verse_key": "verse:Neh.2.13",
+        "attestation_key": "attestation:eng-v22-neh-2-13-valley-gate-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:valley-gate"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the Valley Gate",
+          "occurrence_ordinal": 1,
+          "prefix": "ut at night through ",
+          "suffix": " toward the Well of "
+        },
+        "claim_keys": [
+          "claim:valley-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-13:well-of-the-serpent",
+        "verse_key": "verse:Neh.2.13",
+        "attestation_key": "attestation:eng-v22-neh-2-13-well-of-the-serpent-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:well-of-the-serpent"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the Well of the Serpent",
+          "occurrence_ordinal": 1,
+          "prefix": " Valley Gate toward ",
+          "suffix": " and the Dung Gate, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-13:dung-gate",
+        "verse_key": "verse:Neh.2.13",
+        "attestation_key": "attestation:eng-v22-neh-2-13-dung-gate-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:dung-gate"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the Dung Gate",
+          "occurrence_ordinal": 1,
+          "prefix": " of the Serpent and ",
+          "suffix": ", and I inspected th"
+        },
+        "claim_keys": [
+          "claim:dung-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-13:jerusalem-wall",
+        "verse_key": "verse:Neh.2.13",
+        "attestation_key": "attestation:eng-v22-neh-2-13-jerusalem-wall-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem-wall"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the walls of Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "te, and I inspected ",
+          "suffix": " that had been broke"
+        },
+        "claim_keys": [
+          "claim:wall-destroyed-by-fire",
+          "claim:jerusalem-wall-part-of-jerusalem",
+          "claim:nehemiah-inspects-wall",
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-13:jerusalem",
+        "verse_key": "verse:Neh.2.13",
+        "attestation_key": "attestation:eng-v22-neh-2-13-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "pected the walls of ",
+          "suffix": " that had been broke"
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-14:fountain-gate",
+        "verse_key": "verse:Neh.2.14",
+        "attestation_key": "attestation:eng-v22-neh-2-14-fountain-gate-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:fountain-gate"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the Fountain Gate",
+          "occurrence_ordinal": 1,
+          "prefix": "Then I went on to ",
+          "suffix": " and the King’s Pool"
+        },
+        "claim_keys": [
+          "claim:fountain-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-14:kings-pool",
+        "verse_key": "verse:Neh.2.14",
+        "attestation_key": "attestation:eng-v22-neh-2-14-kings-pool-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:kings-pool"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the King’s Pool",
+          "occurrence_ordinal": 1,
+          "prefix": "e Fountain Gate and ",
+          "suffix": ", but there was no r"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-15:jerusalem-wall",
+        "verse_key": "verse:Neh.2.15",
+        "attestation_key": "attestation:eng-v22-neh-2-15-jerusalem-wall-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem-wall"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the wall",
+          "occurrence_ordinal": 1,
+          "prefix": "night and inspected ",
+          "suffix": ". Then I headed back"
+        },
+        "claim_keys": [
+          "claim:wall-destroyed-by-fire",
+          "claim:jerusalem-wall-part-of-jerusalem",
+          "claim:nehemiah-inspects-wall",
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-15:valley-gate",
+        "verse_key": "verse:Neh.2.15",
+        "attestation_key": "attestation:eng-v22-neh-2-15-valley-gate-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:valley-gate"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the Valley Gate",
+          "occurrence_ordinal": 1,
+          "prefix": "d reentered through ",
+          "suffix": "."
+        },
+        "claim_keys": [
+          "claim:valley-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-16:judean-people",
+        "verse_key": "verse:Neh.2.16",
+        "attestation_key": "attestation:eng-v22-neh-2-16-judean-people-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:judean-people"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "the Jews",
+          "occurrence_ordinal": 1,
+          "prefix": " I had not yet told ",
+          "suffix": " or priests or noble"
+        },
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-17:jerusalem-wall",
+        "verse_key": "verse:Neh.2.17",
+        "attestation_key": "attestation:eng-v22-neh-2-17-jerusalem-wall-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem-wall"
+        },
+        "mention_form": "indirect",
+        "selector": {
+          "exact_quote": "the wall of Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "ome, let us rebuild ",
+          "suffix": ", so that we will no"
+        },
+        "claim_keys": [
+          "claim:wall-destroyed-by-fire",
+          "claim:jerusalem-wall-part-of-jerusalem",
+          "claim:nehemiah-inspects-wall",
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-17:jerusalem",
+        "verse_key": "verse:Neh.2.17",
+        "attestation_key": "attestation:eng-v22-neh-2-17-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "rebuild the wall of ",
+          "suffix": ", so that we will no"
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-17:judean-people",
+        "verse_key": "verse:Neh.2.17",
+        "attestation_key": "attestation:eng-v22-neh-2-17-judean-people-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:judean-people"
+        },
+        "mention_form": "pronoun",
+        "selector": {
+          "exact_quote": "us",
+          "occurrence_ordinal": 1,
+          "prefix": "ouble we are in. Jer",
+          "suffix": "alem lies in ruins, "
+        },
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-18:judean-people",
+        "verse_key": "verse:Neh.2.18",
+        "attestation_key": "attestation:eng-v22-neh-2-18-judean-people-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:judean-people"
+        },
+        "mention_form": "pronoun",
+        "selector": {
+          "exact_quote": "they",
+          "occurrence_ordinal": 1,
+          "prefix": " start rebuilding,” ",
+          "suffix": " replied, and they s"
+        },
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-19:sanballat-the-horonite",
+        "verse_key": "verse:Neh.2.19",
+        "attestation_key": "attestation:eng-v22-neh-2-19-sanballat-the-horonite-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:sanballat-the-horonite"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sanballat the Horonite",
+          "occurrence_ordinal": 1,
+          "prefix": "But when ",
+          "suffix": ", Tobiah the Ammonit"
+        },
+        "claim_keys": [
+          "claim:sanballat-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-19:tobiah-ammonite",
+        "verse_key": "verse:Neh.2.19",
+        "attestation_key": "attestation:eng-v22-neh-2-19-tobiah-ammonite-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:tobiah-ammonite"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tobiah the Ammonite official",
+          "occurrence_ordinal": 1,
+          "prefix": "allat the Horonite, ",
+          "suffix": ", and Geshem the Ara"
+        },
+        "claim_keys": [
+          "claim:tobiah-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-19:geshem-arabian",
+        "verse_key": "verse:Neh.2.19",
+        "attestation_key": "attestation:eng-v22-neh-2-19-geshem-arabian-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:geshem-arabian"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Geshem the Arab",
+          "occurrence_ordinal": 1,
+          "prefix": "onite official, and ",
+          "suffix": " heard about this, t"
+        },
+        "claim_keys": [
+          "claim:geshem-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-19:artaxerxes-i",
+        "verse_key": "verse:Neh.2.19",
+        "attestation_key": "attestation:eng-v22-neh-2-19-artaxerxes-i-implied-referent",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "title",
+        "selector": {
+          "exact_quote": "the king",
+          "occurrence_ordinal": 1,
+          "prefix": "u rebelling against ",
+          "suffix": "?”"
+        },
+        "claim_keys": [
+          "claim:artaxerxes-reigns",
+          "claim:artaxerxes-rules-persia",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-20:god-of-heaven",
+        "verse_key": "verse:Neh.2.20",
+        "attestation_key": "attestation:eng-v22-neh-2-20-god-of-heaven-topic",
+        "target": {
+          "type": "entity",
+          "key": "entity:god-of-heaven"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "The God of heaven",
+          "occurrence_ordinal": 1,
+          "prefix": "red them and said, “",
+          "suffix": " is the One who will"
+        },
+        "claim_keys": [
+          "claim:nehemiah-prays",
+          "claim:god-grants-success"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-20:judean-people",
+        "verse_key": "verse:Neh.2.20",
+        "attestation_key": "attestation:eng-v22-neh-2-20-judean-people-participant",
+        "target": {
+          "type": "entity",
+          "key": "entity:judean-people"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "His servants",
+          "occurrence_ordinal": 1,
+          "prefix": "ant us success. We, ",
+          "suffix": ", will start rebuild"
+        },
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:bsb-neh-2-20:jerusalem",
+        "verse_key": "verse:Neh.2.20",
+        "attestation_key": "attestation:eng-v22-neh-2-20-jerusalem-location",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": " right, or claim in ",
+          "suffix": ".”"
+        },
+        "claim_keys": [
+          "claim:jerusalem-in-judah",
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "incomplete",
+          "reference_keys": [
+            "verse:Neh.2.1",
+            "verse:Neh.2.2",
+            "verse:Neh.2.3",
+            "verse:Neh.2.4",
+            "verse:Neh.2.5",
+            "verse:Neh.2.6",
+            "verse:Neh.2.7",
+            "verse:Neh.2.8",
+            "verse:Neh.2.9",
+            "verse:Neh.2.10",
+            "verse:Neh.2.11",
+            "verse:Neh.2.12",
+            "verse:Neh.2.13",
+            "verse:Neh.2.14",
+            "verse:Neh.2.15",
+            "verse:Neh.2.16",
+            "verse:Neh.2.17",
+            "verse:Neh.2.18",
+            "verse:Neh.2.19",
+            "verse:Neh.2.20"
+          ],
+          "record_keys": [
+            "mention:bsb-neh-2-1:artaxerxes-i",
+            "mention:bsb-neh-2-1:wine",
+            "mention:bsb-neh-2-2:artaxerxes-i",
+            "mention:bsb-neh-2-3:artaxerxes-i",
+            "mention:bsb-neh-2-3:jerusalem",
+            "mention:bsb-neh-2-4:artaxerxes-i",
+            "mention:bsb-neh-2-4:god-of-heaven",
+            "mention:bsb-neh-2-4:prayer-to-god-of-heaven",
+            "mention:bsb-neh-2-5:artaxerxes-i",
+            "mention:bsb-neh-2-5:judah",
+            "mention:bsb-neh-2-5:jerusalem",
+            "mention:bsb-neh-2-6:artaxerxes-i",
+            "mention:bsb-neh-2-6:queen",
+            "mention:bsb-neh-2-7:artaxerxes-i",
+            "mention:bsb-neh-2-7:royal-letters",
+            "mention:bsb-neh-2-7:governors-beyond-the-river",
+            "mention:bsb-neh-2-7:beyond-the-river",
+            "mention:bsb-neh-2-7:judah",
+            "mention:bsb-neh-2-8:asaph-royal-park",
+            "mention:bsb-neh-2-8:kings-forest",
+            "mention:bsb-neh-2-8:timber",
+            "mention:bsb-neh-2-8:jerusalem-wall",
+            "mention:bsb-neh-2-8:artaxerxes-i",
+            "mention:bsb-neh-2-9:governors-beyond-the-river",
+            "mention:bsb-neh-2-9:royal-letters",
+            "mention:bsb-neh-2-9:royal-escort",
+            "mention:bsb-neh-2-10:sanballat-the-horonite",
+            "mention:bsb-neh-2-10:tobiah-ammonite",
+            "mention:bsb-neh-2-10:israelites",
+            "mention:bsb-neh-2-11:jerusalem",
+            "mention:bsb-neh-2-12:jerusalem",
+            "mention:bsb-neh-2-12:god-of-heaven",
+            "mention:bsb-neh-2-13:valley-gate",
+            "mention:bsb-neh-2-13:well-of-the-serpent",
+            "mention:bsb-neh-2-13:dung-gate",
+            "mention:bsb-neh-2-13:jerusalem-wall",
+            "mention:bsb-neh-2-13:jerusalem",
+            "mention:bsb-neh-2-14:fountain-gate",
+            "mention:bsb-neh-2-14:kings-pool",
+            "mention:bsb-neh-2-15:jerusalem-wall",
+            "mention:bsb-neh-2-15:valley-gate",
+            "mention:bsb-neh-2-16:judean-people",
+            "mention:bsb-neh-2-17:jerusalem-wall",
+            "mention:bsb-neh-2-17:jerusalem",
+            "mention:bsb-neh-2-17:judean-people",
+            "mention:bsb-neh-2-18:judean-people",
+            "mention:bsb-neh-2-19:sanballat-the-horonite",
+            "mention:bsb-neh-2-19:tobiah-ammonite",
+            "mention:bsb-neh-2-19:geshem-arabian",
+            "mention:bsb-neh-2-19:artaxerxes-i",
+            "mention:bsb-neh-2-20:god-of-heaven",
+            "mention:bsb-neh-2-20:judean-people",
+            "mention:bsb-neh-2-20:jerusalem"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Curated from the bundled Berean Standard Bible (BSB) text with structured name and reference evidence from STEPBible TIPNR, BibleData and OpenBible (all CC BY 4.0). Draft machine-assisted curation; not reviewed, approved or published."
+    },
+    {
+      "code": "bounded-mention-set",
+      "note": "Mentions cover the curated entity catalog; pronouns and indirect references are not exhaustively extracted, so coverage is reported incomplete."
+    }
+  ]
+}

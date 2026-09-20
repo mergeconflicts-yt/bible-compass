@@ -1,0 +1,1664 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:neh2:locale-en",
+  "package_revision": 1,
+  "submission_id": "submission:neh2:locale-en:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:neh2:locale-en",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+      "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+      "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+      "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+      "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+      "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20"
+    ],
+    "reference_keys": [
+      "verse:Neh.2.1",
+      "verse:Neh.2.2",
+      "verse:Neh.2.3",
+      "verse:Neh.2.4",
+      "verse:Neh.2.5",
+      "verse:Neh.2.6",
+      "verse:Neh.2.7",
+      "verse:Neh.2.8",
+      "verse:Neh.2.9",
+      "verse:Neh.2.10",
+      "verse:Neh.2.11",
+      "verse:Neh.2.12",
+      "verse:Neh.2.13",
+      "verse:Neh.2.14",
+      "verse:Neh.2.15",
+      "verse:Neh.2.16",
+      "verse:Neh.2.17",
+      "verse:Neh.2.18",
+      "verse:Neh.2.19",
+      "verse:Neh.2.20"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "draft:neh2:canonical",
+      "revision": 1,
+      "digest": "sha256:b3d1f6b4098e0f125efebe0dbbf25d914e2774583e0189beb64a53474008ab2b"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:en:nehemiah-governor",
+        "entity_key": "entity:nehemiah-governor",
+        "language_tag": "en",
+        "preferred_name": "Nehemiah",
+        "aliases": [
+          "Nehemiah the governor",
+          "the cupbearer"
+        ],
+        "short_description": {
+          "text": "Jewish official in the Persian court who returned to rebuild Jerusalem's walls.",
+          "claim_keys": [
+            "claim:nehemiah-cupbearer",
+            "claim:nehemiah-serves-artaxerxes"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah son of Hacaliah served King Artaxerxes I as cupbearer. In the king's twentieth year he asked permission to rebuild Jerusalem, travelled to Judah with royal letters and an escort, secretly inspected the ruined walls, and rallied the people to rebuild.",
+          "claim_keys": [
+            "claim:nehemiah-cupbearer",
+            "claim:nehemiah-serves-artaxerxes"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:artaxerxes-i",
+        "entity_key": "entity:artaxerxes-i",
+        "language_tag": "en",
+        "preferred_name": "Artaxerxes I",
+        "aliases": [
+          "King Artaxerxes"
+        ],
+        "short_description": {
+          "text": "Persian king who granted Nehemiah permission, letters, timber and an escort.",
+          "claim_keys": [
+            "claim:artaxerxes-reigns",
+            "claim:artaxerxes-rules-persia",
+            "claim:artaxerxes-grants-request"
+          ]
+        },
+        "extended_description": {
+          "text": "The Persian king addressed in Nehemiah 2. He notices Nehemiah's sadness, asks about his request, and grants letters for safe passage, timber from the royal forest and a military escort. Ancient regnal-year reckoning means the exact year is approximate.",
+          "claim_keys": [
+            "claim:artaxerxes-reigns",
+            "claim:artaxerxes-rules-persia",
+            "claim:artaxerxes-grants-request"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:queen",
+        "entity_key": "entity:queen",
+        "language_tag": "en",
+        "preferred_name": "The queen",
+        "aliases": [],
+        "short_description": {
+          "text": "The queen seated beside Artaxerxes during Nehemiah's request; the text does not name her.",
+          "claim_keys": [
+            "claim:queen-present"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:6 notes that the queen was seated beside the king when he questioned Nehemiah. She is not named and no further detail is given in the chapter.",
+          "claim_keys": [
+            "claim:queen-present"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:asaph-royal-park",
+        "entity_key": "entity:asaph-royal-park",
+        "language_tag": "en",
+        "preferred_name": "Asaph",
+        "aliases": [
+          "keeper of the king's forest"
+        ],
+        "short_description": {
+          "text": "Keeper of the king's forest, asked to supply timber for the rebuilding.",
+          "claim_keys": [
+            "claim:asaph-keeper-forest"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah asks for a letter to Asaph, keeper of the king's forest, so that timber may be given for the gates of the citadel, the city wall and Nehemiah's house. Several men named Asaph appear in Scripture; the chapter does not identify this Asaph further.",
+          "claim_keys": [
+            "claim:asaph-keeper-forest"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:sanballat-the-horonite",
+        "entity_key": "entity:sanballat-the-horonite",
+        "language_tag": "en",
+        "preferred_name": "Sanballat the Horonite",
+        "aliases": [],
+        "short_description": {
+          "text": "Regional opponent of the rebuilding, first named as Nehemiah arrives.",
+          "claim_keys": [
+            "claim:sanballat-opposes"
+          ]
+        },
+        "extended_description": {
+          "text": "Sanballat is introduced in Nehemiah 2:10 as deeply disturbed that someone had come to seek the well-being of the Israelites, and in 2:19 he mocks the builders. He reappears throughout Nehemiah's account.",
+          "claim_keys": [
+            "claim:sanballat-opposes"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tobiah-ammonite",
+        "entity_key": "entity:tobiah-ammonite",
+        "language_tag": "en",
+        "preferred_name": "Tobiah the Ammonite official",
+        "aliases": [],
+        "short_description": {
+          "text": "Ammonite official who opposes Nehemiah alongside Sanballat.",
+          "claim_keys": [
+            "claim:tobiah-opposes"
+          ]
+        },
+        "extended_description": {
+          "text": "Tobiah is named with Sanballat in Nehemiah 2:10 and 2:19 as an opponent of the rebuilding. His title in the BSB is 'the Ammonite official'.",
+          "claim_keys": [
+            "claim:tobiah-opposes"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:geshem-arabian",
+        "entity_key": "entity:geshem-arabian",
+        "language_tag": "en",
+        "preferred_name": "Geshem the Arab",
+        "aliases": [],
+        "short_description": {
+          "text": "Arabian figure who joins Sanballat and Tobiah in mocking the rebuilding.",
+          "claim_keys": [
+            "claim:geshem-opposes"
+          ]
+        },
+        "extended_description": {
+          "text": "Geshem is named in Nehemiah 2:19 with Sanballat and Tobiah when they mock the builders and accuse them of rebelling against the king.",
+          "claim_keys": [
+            "claim:geshem-opposes"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:god-of-heaven",
+        "entity_key": "entity:god-of-heaven",
+        "language_tag": "en",
+        "preferred_name": "The God of heaven",
+        "aliases": [],
+        "short_description": {
+          "text": "The God to whom Nehemiah prays and on whom he relies for success.",
+          "claim_keys": [
+            "claim:nehemiah-prays",
+            "claim:god-grants-success"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah prays to the God of heaven before answering the king (2:4) and declares that the God of heaven will grant success to the builders (2:20). The entity-type vocabulary has no deity type; 'person' is used pending vocabulary review.",
+          "claim_keys": [
+            "claim:nehemiah-prays",
+            "claim:god-grants-success"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:susa",
+        "entity_key": "entity:susa",
+        "language_tag": "en",
+        "preferred_name": "Susa",
+        "aliases": [
+          "Shushan"
+        ],
+        "short_description": {
+          "text": "Persian administrative centre traditionally associated with the court scene.",
+          "claim_keys": [
+            "claim:artaxerxes-rules-persia"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2 does not name the city of the royal court. Nehemiah 1:1 places Nehemiah in Susa, and the court scene of chapter 2 is traditionally read as taking place there.",
+          "claim_keys": [
+            "claim:artaxerxes-rules-persia"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:jerusalem",
+        "entity_key": "entity:jerusalem",
+        "language_tag": "en",
+        "preferred_name": "Jerusalem",
+        "aliases": [],
+        "short_description": {
+          "text": "The ruined ancestral city Nehemiah seeks to restore.",
+          "claim_keys": [
+            "claim:jerusalem-in-judah",
+            "claim:jerusalem-ancestral-city"
+          ]
+        },
+        "extended_description": {
+          "text": "Jerusalem is the city whose walls and gates lie in ruins. Nehemiah calls it the city where his fathers are buried, inspects its damage by night, and rallies the people to rebuild.",
+          "claim_keys": [
+            "claim:jerusalem-in-judah",
+            "claim:jerusalem-ancestral-city"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:judah",
+        "entity_key": "entity:judah",
+        "language_tag": "en",
+        "preferred_name": "Judah",
+        "aliases": [
+          "Yehud"
+        ],
+        "short_description": {
+          "text": "The province and homeland to which Nehemiah asks to be sent.",
+          "claim_keys": [
+            "claim:jerusalem-in-judah",
+            "claim:nehemiah-governor-of-judah"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah asks the king to send him to Judah, to the city where his fathers are buried, so that he may rebuild it (2:5).",
+          "claim_keys": [
+            "claim:jerusalem-in-judah",
+            "claim:nehemiah-governor-of-judah"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:beyond-the-river",
+        "entity_key": "entity:beyond-the-river",
+        "language_tag": "en",
+        "preferred_name": "Beyond the River",
+        "aliases": [
+          "west of the Euphrates"
+        ],
+        "short_description": {
+          "text": "The Persian province west of the Euphrates through which Nehemiah travels.",
+          "claim_keys": [
+            "claim:beyond-river-part-of-persia"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah asks for letters to the governors west of the Euphrates so that they will grant him safe passage until he reaches Judah (2:7), and he delivers those letters to them on the way (2:9).",
+          "claim_keys": [
+            "claim:beyond-river-part-of-persia"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:kings-pool",
+        "entity_key": "entity:kings-pool",
+        "language_tag": "en",
+        "preferred_name": "The King's Pool",
+        "aliases": [],
+        "short_description": {
+          "text": "Water feature on Nehemiah's night route near the Fountain Gate.",
+          "claim_keys": []
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:14 records that he went on to the Fountain Gate and the King's Pool, where there was no room for the animal under him to get through. Its exact location is not established by the chapter.",
+          "claim_keys": []
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:kings-forest",
+        "entity_key": "entity:kings-forest",
+        "language_tag": "en",
+        "preferred_name": "The king's forest",
+        "aliases": [],
+        "short_description": {
+          "text": "Royal forest from which timber is requested.",
+          "claim_keys": [
+            "claim:asaph-keeper-forest"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah asks for a letter to Asaph, keeper of the king's forest, for timber to make beams (2:8). The chapter does not locate the forest.",
+          "claim_keys": [
+            "claim:asaph-keeper-forest"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:well-of-the-serpent",
+        "entity_key": "entity:well-of-the-serpent",
+        "language_tag": "en",
+        "preferred_name": "The Well of the Serpent",
+        "aliases": [],
+        "short_description": {
+          "text": "Landmark on Nehemiah's night inspection route.",
+          "claim_keys": []
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:13 records that he went out by night through the Valley Gate toward the Well of the Serpent and the Dung Gate. Its identification is uncertain.",
+          "claim_keys": []
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:jerusalem-wall",
+        "entity_key": "entity:jerusalem-wall",
+        "language_tag": "en",
+        "preferred_name": "The wall of Jerusalem",
+        "aliases": [
+          "the city wall"
+        ],
+        "short_description": {
+          "text": "The broken wall and burned gates that Nehemiah inspects and rebuilds.",
+          "claim_keys": [
+            "claim:wall-destroyed-by-fire",
+            "claim:jerusalem-wall-part-of-jerusalem",
+            "claim:nehemiah-inspects-wall",
+            "claim:people-agree-rebuild"
+          ]
+        },
+        "extended_description": {
+          "text": "Jerusalem's wall and gates had been broken down and destroyed by fire (2:3, 13, 17). Nehemiah inspects the damage by night and calls the people to rebuild the wall.",
+          "claim_keys": [
+            "claim:wall-destroyed-by-fire",
+            "claim:jerusalem-wall-part-of-jerusalem",
+            "claim:nehemiah-inspects-wall",
+            "claim:people-agree-rebuild"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:valley-gate",
+        "entity_key": "entity:valley-gate",
+        "language_tag": "en",
+        "preferred_name": "The Valley Gate",
+        "aliases": [],
+        "short_description": {
+          "text": "Gate marking the start and end of Nehemiah's night inspection.",
+          "claim_keys": [
+            "claim:valley-gate-part-of-jerusalem"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah goes out through the Valley Gate (2:13) and re-enters through it (2:15). Its Persian-period location is reconstructed rather than certain.",
+          "claim_keys": [
+            "claim:valley-gate-part-of-jerusalem"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:dung-gate",
+        "entity_key": "entity:dung-gate",
+        "language_tag": "en",
+        "preferred_name": "The Dung Gate",
+        "aliases": [],
+        "short_description": {
+          "text": "Gate on Nehemiah's night inspection route.",
+          "claim_keys": [
+            "claim:dung-gate-part-of-jerusalem"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:13 names the Dung Gate as he inspects the broken walls and burned gates.",
+          "claim_keys": [
+            "claim:dung-gate-part-of-jerusalem"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:fountain-gate",
+        "entity_key": "entity:fountain-gate",
+        "language_tag": "en",
+        "preferred_name": "The Fountain Gate",
+        "aliases": [],
+        "short_description": {
+          "text": "Gate near the King's Pool on Nehemiah's night route.",
+          "claim_keys": [
+            "claim:fountain-gate-part-of-jerusalem"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:14 records that he went on to the Fountain Gate and the King's Pool.",
+          "claim_keys": [
+            "claim:fountain-gate-part-of-jerusalem"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:persian-empire",
+        "entity_key": "entity:persian-empire",
+        "language_tag": "en",
+        "preferred_name": "The Persian Empire",
+        "aliases": [
+          "Achaemenid Empire"
+        ],
+        "short_description": {
+          "text": "The empire governing Judah and the province Beyond the River.",
+          "claim_keys": [
+            "claim:artaxerxes-rules-persia",
+            "claim:beyond-river-part-of-persia"
+          ]
+        },
+        "extended_description": {
+          "text": "Artaxerxes' empire authorises Nehemiah's journey, letters, timber and escort; Judah lies within its province Beyond the River.",
+          "claim_keys": [
+            "claim:artaxerxes-rules-persia",
+            "claim:beyond-river-part-of-persia"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:governors-beyond-the-river",
+        "entity_key": "entity:governors-beyond-the-river",
+        "language_tag": "en",
+        "preferred_name": "The governors west of the Euphrates",
+        "aliases": [],
+        "short_description": {
+          "text": "Provincial governors who receive the king's letters for Nehemiah's passage.",
+          "claim_keys": [
+            "claim:governors-govern-beyond-river"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah asks for letters to the governors west of the Euphrates so that they grant him safe passage to Judah (2:7), and he delivers the king's letters to them (2:9).",
+          "claim_keys": [
+            "claim:governors-govern-beyond-river"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:israelites",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "preferred_name": "The Israelites",
+        "aliases": [],
+        "short_description": {
+          "text": "The people whose well-being Nehemiah came to seek.",
+          "claim_keys": [
+            "claim:sanballat-opposes",
+            "claim:tobiah-opposes"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:10 says Sanballat and Tobiah were deeply disturbed that someone had come to seek the well-being of the Israelites.",
+          "claim_keys": [
+            "claim:sanballat-opposes",
+            "claim:tobiah-opposes"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:judean-people",
+        "entity_key": "entity:judean-people",
+        "language_tag": "en",
+        "preferred_name": "The Jews, priests, nobles and officials",
+        "aliases": [
+          "the people of Jerusalem"
+        ],
+        "short_description": {
+          "text": "The Jerusalem community Nehemiah rallies to rebuild the wall.",
+          "claim_keys": [
+            "claim:people-agree-rebuild"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:16 names the Jews, priests, nobles, officials and other workers; in 2:17-18 he calls them to rebuild and they set their hands to the work.",
+          "claim_keys": [
+            "claim:people-agree-rebuild"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:royal-escort",
+        "entity_key": "entity:royal-escort",
+        "language_tag": "en",
+        "preferred_name": "The army officers and cavalry",
+        "aliases": [
+          "the king's escort"
+        ],
+        "short_description": {
+          "text": "Military escort sent with Nehemiah by the king.",
+          "claim_keys": [
+            "claim:royal-escort-provided"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:9 records that the king had sent army officers and cavalry with him.",
+          "claim_keys": [
+            "claim:royal-escort-provided"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:cupbearer",
+        "entity_key": "entity:cupbearer",
+        "language_tag": "en",
+        "preferred_name": "Cupbearer",
+        "aliases": [
+          "the king's cupbearer"
+        ],
+        "short_description": {
+          "text": "Court office giving Nehemiah trusted access to the king.",
+          "claim_keys": [
+            "claim:nehemiah-cupbearer"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah is identified elsewhere as the king's cupbearer (Neh.1.11; BibleData 'cup-bearer to King Artaxerxes'). In Nehemiah 2 he serves the king wine, and this access explains his opportunity to speak.",
+          "claim_keys": [
+            "claim:nehemiah-cupbearer"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:king",
+        "entity_key": "entity:king",
+        "language_tag": "en",
+        "preferred_name": "King",
+        "aliases": [],
+        "short_description": {
+          "text": "The royal office held by Artaxerxes.",
+          "claim_keys": [
+            "claim:artaxerxes-reigns"
+          ]
+        },
+        "extended_description": {
+          "text": "Artaxerxes is repeatedly called 'the king' in Nehemiah 2 and holds sole authority to grant Nehemiah's request.",
+          "claim_keys": [
+            "claim:artaxerxes-reigns"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:royal-letters",
+        "entity_key": "entity:royal-letters",
+        "language_tag": "en",
+        "preferred_name": "The king's letters",
+        "aliases": [],
+        "short_description": {
+          "text": "Written authorisation Nehemiah requests and carries.",
+          "claim_keys": []
+        },
+        "extended_description": {
+          "text": "Nehemiah asks for letters to the governors west of the Euphrates for safe passage (2:7) and delivers the king's letters to them (2:9).",
+          "claim_keys": []
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:timber",
+        "entity_key": "entity:timber",
+        "language_tag": "en",
+        "preferred_name": "Timber",
+        "aliases": [],
+        "short_description": {
+          "text": "Beams requested from the king's forest for gates, wall and house.",
+          "claim_keys": [
+            "claim:asaph-keeper-forest"
+          ]
+        },
+        "extended_description": {
+          "text": "Nehemiah asks for timber to make beams for the gates of the citadel, the city wall and the house he will occupy (2:8).",
+          "claim_keys": [
+            "claim:asaph-keeper-forest"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:wine",
+        "entity_key": "entity:wine",
+        "language_tag": "en",
+        "preferred_name": "The wine",
+        "aliases": [],
+        "short_description": {
+          "text": "The wine Nehemiah served the king when his sadness was noticed.",
+          "claim_keys": []
+        },
+        "extended_description": {
+          "text": "Nehemiah 2:1 records that wine was set before the king and that Nehemiah took it and gave it to him.",
+          "claim_keys": []
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:prayer-to-god-of-heaven",
+        "entity_key": "entity:prayer-to-god-of-heaven",
+        "language_tag": "en",
+        "preferred_name": "Prayer to the God of heaven",
+        "aliases": [],
+        "short_description": {
+          "text": "Nehemiah's prayer between the king's question and his answer.",
+          "claim_keys": [
+            "claim:nehemiah-prays"
+          ]
+        },
+        "extended_description": {
+          "text": "When the king asks what Nehemiah wants, Nehemiah first prays to the God of heaven before answering (2:4).",
+          "claim_keys": [
+            "claim:nehemiah-prays"
+          ]
+        },
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:en:neh-2",
+        "scope_key": "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Nehemiah, a Jewish cupbearer to King Artaxerxes I; the king; the queen; Asaph keeper of the king's forest; the governors west of the Euphrates; and the opponents Sanballat, Tobiah and Geshem.",
+            "claim_keys": [
+              "claim:nehemiah-cupbearer",
+              "claim:sanballat-opposes",
+              "claim:tobiah-opposes",
+              "claim:geshem-opposes"
+            ],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "The Persian royal court (chapter 2 names no city; it is traditionally associated with Susa), the province Beyond the River, and Jerusalem.",
+            "claim_keys": [
+              "claim:beyond-river-part-of-persia"
+            ],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "Nisan in the twentieth year of King Artaxerxes, commonly rendered about 445 BC; the date is approximate.",
+            "claim_keys": [
+              "claim:artaxerxes-reigns"
+            ],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "Nehemiah, sad over Jerusalem's ruined walls, prays and asks the king to send him to Judah. He receives letters, timber and an escort, travels to Jerusalem, inspects the walls by night, rallies the people to rebuild, and answers the mockery of Sanballat, Tobiah and Geshem.",
+            "claim_keys": [
+              "claim:artaxerxes-grants-request",
+              "claim:nehemiah-inspects-wall",
+              "claim:people-agree-rebuild",
+              "claim:opponents-no-claim"
+            ],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "A report of Jerusalem's ruin had reached Nehemiah, who mourned, fasted and prayed (Neh.1). An earlier imperial order had stopped work on the city by force (Ezra 4:17-23).",
+            "claim_keys": [
+              "claim:prior-stop-order"
+            ],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "Nehemiah risks the king's displeasure by appearing sad and by seeking to reverse earlier opposition to the city; royal permission, letters and timber are what make the mission possible.",
+            "claim_keys": [
+              "claim:artaxerxes-grants-request"
+            ],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "Nehemiah receives permission, letters, timber and an escort to rebuild Jerusalem, inspects the walls and leads the people to begin.",
+            "claim_keys": [
+              "claim:artaxerxes-grants-request"
+            ],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:neh-2-request",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Nehemiah, King Artaxerxes, the queen seated beside him, and Asaph keeper of the king's forest.",
+            "claim_keys": [
+              "claim:nehemiah-cupbearer",
+              "claim:queen-present",
+              "claim:asaph-keeper-forest"
+            ],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "The Persian royal court. Chapter 2 does not name the city, so the traditional association with Susa is labelled rather than asserted.",
+            "claim_keys": [
+              "claim:artaxerxes-rules-persia"
+            ],
+            "open_question_key": "question:neh-2-court-city"
+          },
+          "when": {
+            "text": "Nisan in the twentieth year of Artaxerxes. Ancient regnal-year reckoning varies, so about 445 BC is an approximation.",
+            "claim_keys": [
+              "claim:artaxerxes-reigns"
+            ],
+            "open_question_key": "question:neh-2-year-reckoning"
+          },
+          "what": {
+            "text": "Nehemiah, sad over Jerusalem's ruins, prays to the God of heaven and asks to be sent to Judah, requesting letters for safe passage and timber for the gates, wall and his house; the king grants the requests.",
+            "claim_keys": [
+              "claim:nehemiah-prays",
+              "claim:artaxerxes-grants-request"
+            ],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "Nehemiah had mourned, fasted and prayed over the report of Jerusalem's ruin (Neh.1), and an earlier imperial order had stopped the city's rebuilding by force (Ezra 4:17-23).",
+            "claim_keys": [
+              "claim:prior-stop-order"
+            ],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "Appearing sad before the king is dangerous, and requesting the rebuilding reverses an earlier imperial stop order; the king's permission, letters and timber are the difference between a plan and a journey.",
+            "claim_keys": [
+              "claim:artaxerxes-grants-request"
+            ],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "Nehemiah prays and asks the king to send him to rebuild Jerusalem; the king grants letters, timber and an escort.",
+            "claim_keys": [
+              "claim:artaxerxes-grants-request"
+            ],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:neh-2-journey",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Nehemiah, the governors west of the Euphrates who receive the king's letters, the army officers and cavalry escorting him, and the opponents Sanballat and Tobiah.",
+            "claim_keys": [
+              "claim:governors-govern-beyond-river",
+              "claim:royal-escort-provided",
+              "claim:sanballat-opposes",
+              "claim:tobiah-opposes"
+            ],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "The route through the province Beyond the River to Judah and on to Jerusalem.",
+            "claim_keys": [
+              "claim:beyond-river-part-of-persia"
+            ],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "Following the audience in Nisan of Artaxerxes' twentieth year; the date is approximate.",
+            "claim_keys": [
+              "claim:artaxerxes-reigns"
+            ],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "Nehemiah delivers the king's letters to the governors and travels with a royal escort. Sanballat and Tobiah are deeply disturbed that someone has come to seek the well-being of the Israelites.",
+            "claim_keys": [
+              "claim:governors-govern-beyond-river",
+              "claim:sanballat-opposes",
+              "claim:tobiah-opposes"
+            ],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "The king's grant of letters, timber and an escort in verses 1-8.",
+            "claim_keys": [
+              "claim:artaxerxes-grants-request"
+            ],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "Opposition begins as soon as the mission becomes known, setting up the conflict that continues through the book.",
+            "claim_keys": [
+              "claim:sanballat-opposes",
+              "claim:tobiah-opposes"
+            ],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "Nehemiah reaches the province with the king's letters and an escort, and meets immediate opposition.",
+            "claim_keys": [
+              "claim:royal-escort-provided"
+            ],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:neh-2-inspection",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Nehemiah and a few men; the officials of Jerusalem did not yet know his purpose.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall"
+            ],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Jerusalem by night: the Valley Gate, the Well of the Serpent, the Dung Gate, the Fountain Gate, the King's Pool and the wall.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall"
+            ],
+            "open_question_key": "question:neh-2-route-locations"
+          },
+          "when": {
+            "text": "After three days in Jerusalem, at night.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall"
+            ],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "Nehemiah secretly inspects the broken walls and burned gates, finding the damage so extensive that at the King's Pool his mount cannot pass through.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall",
+              "claim:wall-destroyed-by-fire"
+            ],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "His arrival in Jerusalem and three days there (verse 11).",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "He assesses the work first-hand before disclosing it, so the rebuilding plan rests on direct knowledge of the ruins.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall"
+            ],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "Nehemiah makes a night circuit of Jerusalem's ruined walls and gates.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall"
+            ],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:neh-2-rally",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Nehemiah and the Jews, priests, nobles, officials and other workers of Jerusalem.",
+            "claim_keys": [
+              "claim:people-agree-rebuild"
+            ],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Jerusalem.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "After the night inspection, before the wall is rebuilt.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "Nehemiah tells the people of the city's ruin and disgrace, of the gracious hand of God and of the king's words, and they agree to start rebuilding.",
+            "claim_keys": [
+              "claim:people-agree-rebuild",
+              "claim:wall-destroyed-by-fire"
+            ],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "The night inspection of verses 11-16.",
+            "claim_keys": [
+              "claim:nehemiah-inspects-wall"
+            ],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "The community's shared labour and morale depend on Nehemiah's testimony of God's favour and the king's support.",
+            "claim_keys": [
+              "claim:people-agree-rebuild"
+            ],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "The people commit to rebuilding the wall of Jerusalem.",
+            "claim_keys": [
+              "claim:people-agree-rebuild"
+            ],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:neh-2-answer",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Nehemiah, and the opponents Sanballat the Horonite, Tobiah the Ammonite official and Geshem the Arab.",
+            "claim_keys": [
+              "claim:sanballat-opposes",
+              "claim:tobiah-opposes",
+              "claim:geshem-opposes"
+            ],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Jerusalem.",
+            "claim_keys": [
+              "claim:opponents-no-claim"
+            ],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "After the people commit to rebuild.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "The opponents mock the builders and accuse them of rebelling against the king. Nehemiah answers that the God of heaven will grant success, and that they have no portion, right or claim in Jerusalem.",
+            "claim_keys": [
+              "claim:opponents-no-claim",
+              "claim:god-grants-success"
+            ],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "The people's commitment to rebuild in verses 17-18.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "The work faces political and religious opposition that continues in later chapters.",
+            "claim_keys": [
+              "claim:sanballat-opposes",
+              "claim:tobiah-opposes",
+              "claim:geshem-opposes"
+            ],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "Nehemiah answers the opponents' mockery with confidence in God.",
+            "claim_keys": [
+              "claim:god-grants-success"
+            ],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-nehemiah-governor",
+        "relevance_key": "relevance:neh-2-request-nehemiah-governor",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:nehemiah-governor",
+        "language_tag": "en",
+        "role_text": "Nehemiah is the cupbearer whose visible sadness prompts the king's question; he prays, then asks for permission, letters, timber and an escort to rebuild Jerusalem.",
+        "claim_keys": [
+          "claim:nehemiah-cupbearer",
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-artaxerxes-i",
+        "relevance_key": "relevance:neh-2-request-artaxerxes-i",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:artaxerxes-i",
+        "language_tag": "en",
+        "role_text": "Artaxerxes holds sole authority to grant the journey, safe passage and materials, and he grants Nehemiah's requests.",
+        "claim_keys": [
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-cupbearer",
+        "relevance_key": "relevance:neh-2-request-cupbearer",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:cupbearer",
+        "language_tag": "en",
+        "role_text": "The cupbearer's trusted access to the king explains both Nehemiah's opportunity to speak and the danger of appearing sad before him.",
+        "claim_keys": [
+          "claim:nehemiah-cupbearer"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-queen",
+        "relevance_key": "relevance:neh-2-request-queen",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:queen",
+        "language_tag": "en",
+        "role_text": "The queen is seated beside the king when he questions Nehemiah; she is named only by her office.",
+        "claim_keys": [
+          "claim:queen-present"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-jerusalem",
+        "relevance_key": "relevance:neh-2-request-jerusalem",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:jerusalem",
+        "language_tag": "en",
+        "role_text": "Jerusalem is the ruined ancestral city Nehemiah seeks to restore; the chapter does not name it directly but calls it the city where his fathers are buried.",
+        "claim_keys": [
+          "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-judah",
+        "relevance_key": "relevance:neh-2-request-judah",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:judah",
+        "language_tag": "en",
+        "role_text": "Judah is the province Nehemiah asks to be sent to, the destination of his mission.",
+        "claim_keys": [
+          "claim:jerusalem-in-judah"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-royal-letters",
+        "relevance_key": "relevance:neh-2-request-royal-letters",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:royal-letters",
+        "language_tag": "en",
+        "role_text": "The letters are the written authorisation Nehemiah requests for safe passage and for timber.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-governors-beyond-the-river",
+        "relevance_key": "relevance:neh-2-request-governors-beyond-the-river",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:governors-beyond-the-river",
+        "language_tag": "en",
+        "role_text": "These provincial governors control the route and are ordered by the king's letters to grant Nehemiah safe passage.",
+        "claim_keys": [
+          "claim:governors-govern-beyond-river"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-beyond-the-river",
+        "relevance_key": "relevance:neh-2-request-beyond-the-river",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:beyond-the-river",
+        "language_tag": "en",
+        "role_text": "The province west of the Euphrates lies on Nehemiah's route to Judah.",
+        "claim_keys": [
+          "claim:beyond-river-part-of-persia"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-asaph-royal-park",
+        "relevance_key": "relevance:neh-2-request-asaph-royal-park",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:asaph-royal-park",
+        "language_tag": "en",
+        "role_text": "Asaph, keeper of the king's forest, is asked to supply timber for the gates, wall and Nehemiah's house.",
+        "claim_keys": [
+          "claim:asaph-keeper-forest"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-kings-forest",
+        "relevance_key": "relevance:neh-2-request-kings-forest",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:kings-forest",
+        "language_tag": "en",
+        "role_text": "The royal forest is the source of the timber Nehemiah requests.",
+        "claim_keys": [
+          "claim:asaph-keeper-forest"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-timber",
+        "relevance_key": "relevance:neh-2-request-timber",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:timber",
+        "language_tag": "en",
+        "role_text": "Timber is requested for the citadel gates, the city wall and Nehemiah's house.",
+        "claim_keys": [
+          "claim:asaph-keeper-forest"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-susa",
+        "relevance_key": "relevance:neh-2-request-susa",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:susa",
+        "language_tag": "en",
+        "role_text": "Susa is traditionally the setting of the Persian court, though chapter 2 names no city.",
+        "claim_keys": [
+          "claim:artaxerxes-rules-persia"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-prayer-to-god-of-heaven",
+        "relevance_key": "relevance:neh-2-request-prayer-to-god-of-heaven",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:prayer-to-god-of-heaven",
+        "language_tag": "en",
+        "role_text": "Nehemiah prays to the God of heaven between the king's question and his answer.",
+        "claim_keys": [
+          "claim:nehemiah-prays"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-god-of-heaven",
+        "relevance_key": "relevance:neh-2-request-god-of-heaven",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:god-of-heaven",
+        "language_tag": "en",
+        "role_text": "The God of heaven is the one Nehemiah petitions before answering the king.",
+        "claim_keys": [
+          "claim:nehemiah-prays"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-wine",
+        "relevance_key": "relevance:neh-2-request-wine",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:wine",
+        "language_tag": "en",
+        "role_text": "The wine Nehemiah serves identifies his court service and the moment the king notices his sadness.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-nehemiah-governor",
+        "relevance_key": "relevance:neh-2-journey-nehemiah-governor",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:nehemiah-governor",
+        "language_tag": "en",
+        "role_text": "Nehemiah travels to the province, delivers the king's letters and arrives in Jerusalem.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-royal-letters",
+        "relevance_key": "relevance:neh-2-journey-royal-letters",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:royal-letters",
+        "language_tag": "en",
+        "role_text": "The king's letters are delivered to the governors as Nehemiah travels.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-governors-beyond-the-river",
+        "relevance_key": "relevance:neh-2-journey-governors-beyond-the-river",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:governors-beyond-the-river",
+        "language_tag": "en",
+        "role_text": "The governors receive the king's letters for Nehemiah's safe passage.",
+        "claim_keys": [
+          "claim:governors-govern-beyond-river"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-beyond-the-river",
+        "relevance_key": "relevance:neh-2-journey-beyond-the-river",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:beyond-the-river",
+        "language_tag": "en",
+        "role_text": "The province is crossed on the way to Judah.",
+        "claim_keys": [
+          "claim:beyond-river-part-of-persia"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-royal-escort",
+        "relevance_key": "relevance:neh-2-journey-royal-escort",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:royal-escort",
+        "language_tag": "en",
+        "role_text": "The army officers and cavalry show that the king has authorised and protected the mission.",
+        "claim_keys": [
+          "claim:royal-escort-provided"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-sanballat-the-horonite",
+        "relevance_key": "relevance:neh-2-journey-sanballat-the-horonite",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:sanballat-the-horonite",
+        "language_tag": "en",
+        "role_text": "Sanballat is deeply disturbed that someone has come to seek Israel's well-being; opposition begins at once.",
+        "claim_keys": [
+          "claim:sanballat-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-tobiah-ammonite",
+        "relevance_key": "relevance:neh-2-journey-tobiah-ammonite",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:tobiah-ammonite",
+        "language_tag": "en",
+        "role_text": "Tobiah is named with Sanballat as an opponent when Nehemiah arrives.",
+        "claim_keys": [
+          "claim:tobiah-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-journey-israelites",
+        "relevance_key": "relevance:neh-2-journey-israelites",
+        "scope_key": "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "The Israelites are the people whose well-being Nehemiah came to seek.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-nehemiah-governor",
+        "relevance_key": "relevance:neh-2-inspection-nehemiah-governor",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:nehemiah-governor",
+        "language_tag": "en",
+        "role_text": "Nehemiah inspects the damage secretly by night before disclosing his plan.",
+        "claim_keys": [
+          "claim:nehemiah-inspects-wall"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-jerusalem",
+        "relevance_key": "relevance:neh-2-inspection-jerusalem",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:jerusalem",
+        "language_tag": "en",
+        "role_text": "Jerusalem is the ruined city Nehemiah surveys.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-jerusalem-wall",
+        "relevance_key": "relevance:neh-2-inspection-jerusalem-wall",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:jerusalem-wall",
+        "language_tag": "en",
+        "role_text": "The broken wall and burned gates are the object of Nehemiah's inspection.",
+        "claim_keys": [
+          "claim:nehemiah-inspects-wall",
+          "claim:wall-destroyed-by-fire"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-valley-gate",
+        "relevance_key": "relevance:neh-2-inspection-valley-gate",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:valley-gate",
+        "language_tag": "en",
+        "role_text": "The Valley Gate is the start and end point of the night circuit.",
+        "claim_keys": [
+          "claim:valley-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-well-of-the-serpent",
+        "relevance_key": "relevance:neh-2-inspection-well-of-the-serpent",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:well-of-the-serpent",
+        "language_tag": "en",
+        "role_text": "The Well of the Serpent is a landmark on the route whose location is uncertain.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-dung-gate",
+        "relevance_key": "relevance:neh-2-inspection-dung-gate",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:dung-gate",
+        "language_tag": "en",
+        "role_text": "The Dung Gate is named as Nehemiah inspects the burned gates.",
+        "claim_keys": [
+          "claim:dung-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-fountain-gate",
+        "relevance_key": "relevance:neh-2-inspection-fountain-gate",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:fountain-gate",
+        "language_tag": "en",
+        "role_text": "The Fountain Gate lies near the King's Pool on the route.",
+        "claim_keys": [
+          "claim:fountain-gate-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-kings-pool",
+        "relevance_key": "relevance:neh-2-inspection-kings-pool",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:kings-pool",
+        "language_tag": "en",
+        "role_text": "At the King's Pool the way narrows so that Nehemiah's mount cannot pass.",
+        "claim_keys": [
+          "claim:kings-pool-part-of-jerusalem"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-judean-people",
+        "relevance_key": "relevance:neh-2-inspection-judean-people",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:judean-people",
+        "language_tag": "en",
+        "role_text": "The officials of Jerusalem did not yet know where Nehemiah had gone or what he was doing.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-rally-nehemiah-governor",
+        "relevance_key": "relevance:neh-2-rally-nehemiah-governor",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:nehemiah-governor",
+        "language_tag": "en",
+        "role_text": "Nehemiah tells the people of the ruin, of God's hand and of the king's words, and calls them to rebuild.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-rally-judean-people",
+        "relevance_key": "relevance:neh-2-rally-judean-people",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:judean-people",
+        "language_tag": "en",
+        "role_text": "The community agrees to rebuild and sets its hands to the work.",
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-rally-jerusalem-wall",
+        "relevance_key": "relevance:neh-2-rally-jerusalem-wall",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:jerusalem-wall",
+        "language_tag": "en",
+        "role_text": "The wall of Jerusalem is the work the people commit to rebuild.",
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-rally-jerusalem",
+        "relevance_key": "relevance:neh-2-rally-jerusalem",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:jerusalem",
+        "language_tag": "en",
+        "role_text": "Jerusalem's ruin and disgrace are the reason for the rebuilding.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-rally-god-of-heaven",
+        "relevance_key": "relevance:neh-2-rally-god-of-heaven",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:god-of-heaven",
+        "language_tag": "en",
+        "role_text": "Nehemiah points to the gracious hand of God as the reason for hope.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-rally-artaxerxes-i",
+        "relevance_key": "relevance:neh-2-rally-artaxerxes-i",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:artaxerxes-i",
+        "language_tag": "en",
+        "role_text": "The king's words are evidence Nehemiah reports to the people.",
+        "claim_keys": [
+          "claim:artaxerxes-grants-request"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-nehemiah-governor",
+        "relevance_key": "relevance:neh-2-answer-nehemiah-governor",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:nehemiah-governor",
+        "language_tag": "en",
+        "role_text": "Nehemiah answers mockery by trusting God for success and denying the opponents any claim in Jerusalem.",
+        "claim_keys": [
+          "claim:god-grants-success"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-sanballat-the-horonite",
+        "relevance_key": "relevance:neh-2-answer-sanballat-the-horonite",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:sanballat-the-horonite",
+        "language_tag": "en",
+        "role_text": "Sanballat joins the mockery and the accusation of rebellion.",
+        "claim_keys": [
+          "claim:opponents-no-claim"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-tobiah-ammonite",
+        "relevance_key": "relevance:neh-2-answer-tobiah-ammonite",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:tobiah-ammonite",
+        "language_tag": "en",
+        "role_text": "Tobiah joins the mockery of the rebuilding.",
+        "claim_keys": [
+          "claim:tobiah-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-geshem-arabian",
+        "relevance_key": "relevance:neh-2-answer-geshem-arabian",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:geshem-arabian",
+        "language_tag": "en",
+        "role_text": "Geshem the Arab joins the mockery of the rebuilding.",
+        "claim_keys": [
+          "claim:geshem-opposes"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-artaxerxes-i",
+        "relevance_key": "relevance:neh-2-answer-artaxerxes-i",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:artaxerxes-i",
+        "language_tag": "en",
+        "role_text": "The opponents appeal to the king's authority by accusing the builders of rebellion.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-god-of-heaven",
+        "relevance_key": "relevance:neh-2-answer-god-of-heaven",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:god-of-heaven",
+        "language_tag": "en",
+        "role_text": "Nehemiah declares that the God of heaven will grant success.",
+        "claim_keys": [
+          "claim:god-grants-success"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-jerusalem",
+        "relevance_key": "relevance:neh-2-answer-jerusalem",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:jerusalem",
+        "language_tag": "en",
+        "role_text": "Nehemiah denies the opponents any portion, right or claim in Jerusalem.",
+        "claim_keys": [
+          "claim:opponents-no-claim"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-answer-judean-people",
+        "relevance_key": "relevance:neh-2-answer-judean-people",
+        "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
+        "entity_key": "entity:judean-people",
+        "language_tag": "en",
+        "role_text": "The builders are named as God's servants who will start rebuilding.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20",
+            "scope:neh-2-journey:refsys:eng-v22:Neh.2.9-Neh.2.10",
+            "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+            "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20"
+          ],
+          "record_keys": [
+            "context:en:neh-2",
+            "context:en:neh-2-journey",
+            "context:en:neh-2-rally",
+            "context:en:neh-2-answer"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+            "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16"
+          ],
+          "record_keys": [
+            "context:en:neh-2-request",
+            "context:en:neh-2-inspection"
+          ],
+          "blocker_question_keys": [
+            "question:neh-2-court-city",
+            "question:neh-2-route-locations",
+            "question:neh-2-year-reckoning"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:neh-2-court-city",
+      "question_type": "uncertain_location",
+      "record_key": "context:en:neh-2-request",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Chapter 2 names no court city; may the setting be identified with Susa, or must it be presented as unnamed?",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:neh-2-year-reckoning",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:neh-2-request",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "The twentieth year of Artaxerxes is commonly rendered about 445 BC; which regnal-year reckoning should the reader see?",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:neh-2-route-locations",
+      "question_type": "uncertain_location",
+      "record_key": "context:en:neh-2-inspection",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "The Persian-period locations of the Valley Gate and the King's Pool are reconstructed, not certain; which candidate placement should be shown?",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Curated from the bundled Berean Standard Bible (BSB) text with structured name and reference evidence from STEPBible TIPNR, BibleData and OpenBible (all CC BY 4.0). Draft machine-assisted curation; not reviewed, approved or published."
+    },
+    {
+      "code": "draft-context",
+      "note": "Reader context is authored draft material grounded in the cited Scripture and structured sources; it requires review and is not approved."
+    }
+  ]
+}
