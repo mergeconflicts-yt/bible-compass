@@ -144,4 +144,23 @@ EXCEPTION
   WHEN check_violation THEN NULL;
 END $$;
 
+-- 10. Entity type vocabulary accepts 'deity' and stays otherwise closed.
+DO $$
+BEGIN
+  INSERT INTO private_staging.entities (key, slug, type, identification_status, provenance)
+  VALUES ('entity:rls-probe-deity', 'rls-probe-deity', 'deity', 'established', 'probe');
+EXCEPTION
+  WHEN check_violation THEN
+    RAISE EXCEPTION 'FAIL: canonical deity entity type was rejected';
+END $$;
+
+DO $$
+BEGIN
+  INSERT INTO private_staging.entities (key, slug, type, identification_status, provenance)
+  VALUES ('entity:rls-probe-bogus', 'rls-probe-bogus', 'bogus', 'established', 'probe');
+  RAISE EXCEPTION 'FAIL: invalid entity type was accepted';
+EXCEPTION
+  WHEN check_violation THEN NULL;
+END $$;
+
 rollback;

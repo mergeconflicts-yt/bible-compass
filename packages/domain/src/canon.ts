@@ -168,7 +168,7 @@ export function parseSourceReleaseKey(input: string): SourceReleaseKey {
 
 export type CandidateKey = `candidate:${string}:${string}:${string}`;
 const CANDIDATE_PATTERN =
-  /^candidate:(person|place|collective|polity|role|object|structure|practice|institution|theme):refsys:(eng-v22|tel-v1|tam-v1):[a-z0-9-]+$/;
+  /^candidate:(person|deity|place|collective|polity|role|object|structure|practice|institution|theme):refsys:(eng-v22|tel-v1|tam-v1):[a-z0-9-]+$/;
 
 export function parseCandidateKey(input: string): CandidateKey {
   if (!input || input.trim().length === 0) {
