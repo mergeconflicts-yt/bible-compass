@@ -1,5 +1,5 @@
 {
-  "attempt_id": "task:EN-01-neh2-curation:attempt-3",
+  "attempt_id": "task:EN-01-neh2-curation:attempt-4",
   "task_id": "EN-01",
   "task_title": "Fix English Nehemiah 2 curation — three-package reference dataset",
   "result": "PASS (draft content; not approved, verified or production-ready)",
@@ -25,10 +25,12 @@
     "packages/content-schema/tests/neh2-global.test.ts (new; global + invalid-mutation tests)",
     "packages/content-schema/src/packages.ts (minimal key-grammar fixes for ratified identifiers; 'deity' entity type)",
     "packages/content-schema/src/schemas.ts (deity entity type)",
-    "packages/domain/src/entity.ts (deity EntityType)",
-    "packages/domain/src/canon.ts (deity in the candidate-key grammar)",
-    "packages/domain/tests/candidate.test.ts (new; deity candidate accepted, unknown rejected)",
-    "packages/tipnr-adapter/src/types.ts (deity entity type)",
+    "packages/domain/src/entity.ts (deity and event EntityType)",
+    "packages/content-schema/src/schemas.ts (deity and event entity type)",
+    "packages/domain/src/canon.ts (deity and event in the candidate-key grammar)",
+    "packages/domain/tests/candidate.test.ts (new; every entity type accepted, unknown rejected)",
+    "docs/DATA_MODEL.md (entity-type vocabulary, slice inventory, status amendment)",
+    "packages/tipnr-adapter/src/types.ts (deity and event entity type)",
     "supabase/migrations/20260915000009_entity_type_deity.sql (new; extends the entities type CHECK)",
     "supabase/tests/03_knowledge_claim_context_test.sql (deity accepted, invalid type rejected)",
     "tools/sync-context-draft.py (read the legacy draft from legacy/)",
@@ -90,9 +92,11 @@
   "schema_changes": [
     "packages/content-schema/src/packages.ts scopeKeySchema now allows upper-case OSIS in the reference span so the ratified key scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20 validates (docs/CANONICAL_IDENTIFIERS.md §6).",
     "packages/content-schema/src/packages.ts editionKeySchema now allows the optional :sha-<8hex> suffix so the ratified immutable edition key edition:bsb@20260912:sha-b2898c49 validates (docs/CANONICAL_IDENTIFIERS.md §7).",
-    "A canonical 'deity' entity type was added to the entity-type vocabulary in packages/content-schema/src/packages.ts, packages/content-schema/src/schemas.ts, packages/domain/src/entity.ts and packages/tipnr-adapter/src/types.ts.",
+    "A canonical 'deity' entity type was added to the entity-type vocabulary in packages/content-schema/src/packages.ts, packages/content-schema/src/schemas.ts, packages/domain/src/entity.ts and packages/tipnr-adapter/src/types.ts; 'event' was added wherever it was missing (domain EntityType, entity schema, candidate-key grammar, TIPNR adapter) so all validators and the database accept the same twelve types.",
     "The two key-grammar changes are loosenings; no existing fixture or test regressed.",
-    "The domain candidate parser (packages/domain/src/canon.ts CANDIDATE_PATTERN) now accepts the 'deity' entity type.",
+    "The domain candidate parser (packages/domain/src/canon.ts CANDIDATE_PATTERN) now accepts the 'deity' and 'event' entity types.",
+    "The 'event' entity type was added to the domain EntityType, the entity schema and the candidate-key grammar so event candidates pass domain validation like the package schema and database already allow.",
+    "DATA_MODEL.md was amended: entities.type vocabulary now includes 'deity' and 'event', the slice inventory names deities, and the status header records the amendment with the implementing migrations.",
     "supabase/migrations/20260915000009_entity_type_deity.sql extends the private_staging.entities CHECK constraint to include 'deity' (additive; no column/RLS/grant changes), and supabase/tests/03_knowledge_claim_context_test.sql asserts deity is accepted and unknown types rejected."
   ],
   "known_limitations": [

@@ -81,6 +81,7 @@ export const entitySchema = z
     type: z.enum([
       "person",
       "deity",
+      "event",
       "place",
       "collective",
       "polity",

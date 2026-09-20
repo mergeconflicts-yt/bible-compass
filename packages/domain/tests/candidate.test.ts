@@ -5,6 +5,7 @@ describe("candidate key", () => {
     for (const type of [
       "person",
       "deity",
+      "event",
       "place",
       "collective",
       "polity",

@@ -1,6 +1,7 @@
 export type EntityType =
   | "person"
   | "deity"
+  | "event"
   | "place"
   | "collective"
   | "polity"

@@ -1,6 +1,7 @@
 # Nehemiah 2 Physical Data-Model Specification — DDL-Ready Slice (Task 03)
 
 **Status:** SPECIFICATION — DDL-ready for Task 04/07A/17. No migration applied in this task. Exact DDL to be generated from this spec after Owner Gate A2 approval.
+**Amendment (Task EN-01):** the `entities.type` vocabulary now also includes `deity` and `event`, matching the implemented migration `supabase/migrations/20260915000003_knowledge_claim_context.sql` (which has always accepted `event`) plus `20260915000009_entity_type_deity.sql` (which adds `deity`). The domain `EntityType`, `entitySchema`, and candidate-key grammar accept the same set.
 **Prerequisites:** `docs/CANONICAL_IDENTIFIERS.md:1` (Gate A1 `gate-A1-v1-20260914T115751Z`), `docs/OWNER_GATE_A1_PACKET.md:1` (pilot `Neh.2.1-20` as `scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20`), `CONTEXT_DATA_ARCHUTECTURE.md:58-428`, `CONTEXT_MODEL_REVIEW.md:1`, `WHOLE_BIBLE_CURATION_SPEC.md:1`, `ADR-003`, `docs/SECURITY.md:1`, `docs/DATA_MODEL.md` (prior MVP reference).
 **Slice:** Nehemiah 2 only. Whole-Bible expansion is deferred (see §9 Deferred inventory).
 
@@ -26,7 +27,7 @@
 - `scripture_scopes` (including `scope:neh-2`), `scope_members`
 - `translation_works`, `translation_editions`, `translation_edition_verses` (immutable text, one row per verse per edition for `Neh.2.1-20` across `bsb@20260912`, `tel_irv@20260913`, `tam_irv@20260913`)
 - `private_registry.sources`, `source_releases`, `source_artifacts`, `rights_components`, `operation_grants`, `raw_records`, `import_runs`, `external_mappings`, `assertion_lineage`, `findings`
-- `entities`, `entity_names`, `entity_descriptions`, `entity_aliases` (Nehemiah 2 persons/places/roles only)
+- `entities`, `entity_names`, `entity_descriptions`, `entity_aliases` (Nehemiah 2 persons, places, roles, and deities; event-type entities allowed)
 - `claims`, `claim_citations`, `claim_reviews`
 - `reference_entity_attestations` (translation-independent), `edition_mentions`, `edition_render_spans`, `scope_entity_relevance`, `scope_entity_relevance_localizations`
 - `entity_relationship_assertions`, `relationship_predicates`
@@ -321,14 +322,14 @@ For non-contiguous or alternate-segmentation scopes (adoption gate #6): | `scope
 
 ### `entities`
 
-| column                  | type | constraints                                                                                                               |
-| ----------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------- |
-| `id`                    | uuid | pk                                                                                                                        |
-| `key`                   | text | not null unique check `key ~ '^entity:[a-z0-9-]+$'` e.g. `entity:artaxerxes-i`                                            |
-| `slug`                  | text | not null unique check `slug ~ '^[a-z0-9-]+$'`                                                                             |
-| `type`                  | text | not null check `in ('person','place','collective','polity','role','object','structure','practice','institution','theme')` |
-| `identification_status` | text | not null check `in ('established','traditional','proposed','disputed','unknown')`                                         |
-| `provenance`            | text | not null                                                                                                                  |
+| column                  | type | constraints                                                                                                                               |
+| ----------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                    | uuid | pk                                                                                                                                        |
+| `key`                   | text | not null unique check `key ~ '^entity:[a-z0-9-]+$'` e.g. `entity:artaxerxes-i`                                                            |
+| `slug`                  | text | not null unique check `slug ~ '^[a-z0-9-]+$'`                                                                                             |
+| `type`                  | text | not null check `in ('person','deity','event','place','collective','polity','role','object','structure','practice','institution','theme')` |
+| `identification_status` | text | not null check `in ('established','traditional','proposed','disputed','unknown')`                                                         |
+| `provenance`            | text | not null                                                                                                                                  |
 
 - No localized biography on this row.
 
