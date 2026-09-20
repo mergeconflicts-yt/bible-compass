@@ -59,6 +59,9 @@ BEGIN
 END $$;
 
 -- 5. Exactly three rows exist (proves 2 was rejected, 3 and 4 landed).
+-- Count as the privileged owner: the bookmarks_owner RLS policy would
+-- otherwise filter the count to the impersonated user only.
+RESET ROLE;
 DO $$
 DECLARE
   c integer;
@@ -68,6 +71,5 @@ BEGIN
     RAISE EXCEPTION 'FAIL: % bookmarks present, expected 3', c;
   END IF;
 END $$;
-RESET ROLE;
 
 rollback;

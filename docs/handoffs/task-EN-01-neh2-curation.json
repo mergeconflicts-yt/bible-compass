@@ -1,5 +1,5 @@
 {
-  "attempt_id": "task:EN-01-neh2-curation:attempt-4",
+  "attempt_id": "task:EN-01-neh2-curation:attempt-5",
   "task_id": "EN-01",
   "task_title": "Fix English Nehemiah 2 curation — three-package reference dataset",
   "result": "PASS (draft content; not approved, verified or production-ready)",
@@ -34,7 +34,11 @@
     "supabase/migrations/20260915000009_entity_type_deity.sql (new; extends the entities type CHECK)",
     "supabase/tests/03_knowledge_claim_context_test.sql (deity accepted, invalid type rejected)",
     "tools/sync-context-draft.py (read the legacy draft from legacy/)",
-    ".prettierignore (ignore generated Nehemiah 2 package JSON)"
+    ".prettierignore (ignore generated Nehemiah 2 package JSON)",
+    "tools/supabase-ci-bootstrap.sql (auth.uid uuid cast; USAGE ON SCHEMA auth)",
+    "supabase/migrations/20260915000003_knowledge_claim_context.sql (symmetric -> is_symmetric)",
+    "supabase/tests/03_knowledge_claim_context_test.sql (anon unpublished-invisibility)",
+    "supabase/tests/06_bookmark_identity_test.sql (owner count)"
   ],
   "files_not_changed": [
     "content/curated/** (whole-Bible generated corpus, including content/curated/*/Neh.v2.json)",
@@ -87,6 +91,21 @@
       "command": "regeneration diff",
       "exit_code": 0,
       "output": "byte-identical canonical/edition/locale output (deterministic)"
+    },
+    {
+      "command": "brew install postgresql@16 postgresql@17 postgis (local PG17.11 + PostGIS 3.6; Docker/Supabase CLI unavailable, CI-equivalent vanilla-Postgres path per .github/workflows/ci.yml)",
+      "exit_code": 0,
+      "output": "clean cluster /tmp/pgdata17; postgis 3.6 USE_GEOS=1 USE_PROJ=1"
+    },
+    {
+      "command": "fresh initdb; psql -v ON_ERROR_STOP=1 -f tools/supabase-ci-bootstrap.sql; for f in supabase/migrations/*.sql (01..10 in order)",
+      "exit_code": 0,
+      "output": "all 10 migrations applied, no errors"
+    },
+    {
+      "command": "DATABASE_URL=postgresql://theone@localhost:5434/postgres sh tools/verify-supabase.sh",
+      "exit_code": 0,
+      "output": "RUN 01..07, SUPABASE-TESTS-PASS (RLS allow/deny, deity/event constraints)"
     }
   ],
   "schema_changes": [
@@ -106,7 +125,8 @@
     "Mentions/attestations cover the curated entity catalog; pronouns and indirect references are not exhaustively resolved, so canonical and edition coverage honestly report 'incomplete'.",
     "Some context is genuinely uncertain and is marked blocked: the court city (Susa), the regnal-year reckoning, and the Persian-period locations of the Valley Gate and King's Pool.",
     "The bulk content/curated/Neh.v2.json (whole-book fixture) is unchanged and is not the reference dataset.",
-    "No human review, approval, publication, database import or app integration has occurred."
+    "No human review, approval, publication, database import or app integration has occurred.",
+    "The deity CHECK migration was validated by applying it on the clean rebuild and by SQL test 03 §10; a live Supabase-hosted confirmation still requires supabase db reset on a machine with the stack."
   ],
   "needs_from_owner": [
     "Confirm or author ADR-004 and say what it should cover.",
@@ -114,5 +134,18 @@
     "Decide whether the wall/gates and role modelling (including 'God of heaven' as person) should change the entity-type vocabulary."
   ],
   "scope_guard": "Nehemiah 2 English only. No other chapters/books, no Telugu/Tamil changes, no whole-Bible regeneration, no database/app integration, no approval or publication. All records are review_status draft.",
-  "no_content_approved_or_published_by_ai": true
+  "no_content_approved_or_published_by_ai": true,
+  "database_validation": {
+    "environment": "macOS arm64, PostgreSQL 17.11 + PostGIS 3.6 (CI uses postgis/postgis:16-3.4; PG15+ required for security_invoker, satisfied by PG17)",
+    "rebuild": "clean initdb cluster; bootstrap + migrations 20260914000001..20260915000010 in glob order, ON_ERROR_STOP=1, zero errors",
+    "tests": "verify-supabase.sh ran 01_private_registry_rls through 07_bookmark_tombstones; all passed, exit 0",
+    "defects_fixed": [
+      "tools/supabase-ci-bootstrap.sql: auth.uid() now casts to uuid (was return-type mismatch, blocked every RLS policy)",
+      "supabase/migrations/20260915000003: relationship_predicates.s.symmetric renamed to is_symmetric (reserved word, blocked the whole migration)",
+      "supabase/tests/03 §3: anon-unpublished-invisibility instead of stale insufficient_privilege (anon legitimately holds published-only SELECT since migration 05)",
+      "supabase/migrations/20260915000010 (new): SELECT on public_content published views + missing anon published-members mirror policy",
+      "tools/supabase-ci-bootstrap.sql: GRANT USAGE ON SCHEMA auth to anon/authenticated (authenticated could not call auth.uid())",
+      "supabase/tests/06 §5: count as owner (RLS filtered the count to the impersonated user)"
+    ]
+  }
 }

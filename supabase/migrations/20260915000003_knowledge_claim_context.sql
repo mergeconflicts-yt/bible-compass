@@ -93,10 +93,10 @@ create index idx_claim_citations_claim on private_staging.claim_citations (claim
 create table private_staging.relationship_predicates (
   key text primary key check (key ~ '^[a-z:_-]+$'),
   inverse text,
-  symmetric boolean not null default false,
+  is_symmetric boolean not null default false,
   created_at timestamptz not null default now()
 );
-insert into private_staging.relationship_predicates (key, inverse, symmetric) values
+insert into private_staging.relationship_predicates (key, inverse, is_symmetric) values
   ('served_as', 'held_by', false),
   ('family_of', 'family_of', true),
   ('ruled', 'ruled_by', false),

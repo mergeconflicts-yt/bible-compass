@@ -34,7 +34,11 @@ $$;
 
 CREATE SCHEMA IF NOT EXISTS auth;
 
+-- Real Supabase grants schema USAGE to anon/authenticated; without it the
+-- tests cannot call auth.uid() after SET ROLE.
+GRANT USAGE ON SCHEMA auth TO anon, authenticated;
+
 CREATE OR REPLACE FUNCTION auth.uid() RETURNS uuid
 LANGUAGE sql STABLE AS $$
-  SELECT NULLIF(current_setting('request.jwt.claims', true), '')::json ->> 'sub'
+  SELECT (NULLIF(current_setting('request.jwt.claims', true), '')::json ->> 'sub')::uuid
 $$;

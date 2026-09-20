@@ -39,16 +39,24 @@ BEGIN
   END IF;
 END $$;
 
--- 3. Anonymous cannot read staging knowledge (no grant on entities).
-SET ROLE anon;
+-- 3. Anonymous cannot read unpublished staging knowledge. anon holds a
+-- SELECT grant (migration 05, published-only RLS policies), so the assertion
+-- is row invisibility on a seeded unpublished entity, not insufficient_privilege.
 DO $$
+DECLARE
+  n integer;
 BEGIN
-  PERFORM 1 FROM private_staging.entities LIMIT 1;
-  RAISE EXCEPTION 'FAIL: anon could read private_staging.entities';
-EXCEPTION
-  WHEN insufficient_privilege THEN NULL;
+  INSERT INTO private_staging.entities (key, slug, type, identification_status, provenance)
+  VALUES ('entity:rls-probe-unpublished', 'rls-probe-unpublished', 'person', 'established', 'probe');
+  SET ROLE anon;
+  SELECT count(*) INTO n
+  FROM private_staging.entities
+  WHERE key = 'entity:rls-probe-unpublished';
+  IF n <> 0 THEN
+    RAISE EXCEPTION 'FAIL: anon could read unpublished private_staging.entities';
+  END IF;
+  RESET ROLE;
 END $$;
-RESET ROLE;
 
 -- 4. Authenticated cannot read ungranted staging tables (claims has no
 -- SELECT grant at all; published-projection tables from migration 05 are
