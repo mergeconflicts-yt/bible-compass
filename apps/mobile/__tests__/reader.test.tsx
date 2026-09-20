@@ -68,9 +68,9 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
 
   it('shows the draft story summary expanded, collapsible on demand', () => {
     renderReader();
-    expect(screen.getByText(/Jewish cupbearer to the Persian king/)).toBeTruthy();
+    expect(screen.getByText(/receives permission, letters, timber and an escort/)).toBeTruthy();
     fireEvent.press(screen.getByTestId('story-toggle'));
-    expect(screen.queryByText(/Jewish cupbearer to the Persian king/)).toBeNull();
+    expect(screen.queryByText(/receives permission, letters, timber and an escort/)).toBeNull();
   });
 
   it('opens a peek from the verse-1 anchor, then the full card onward', async () => {
@@ -85,7 +85,7 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getByText('Artaxerxes I')).toBeTruthy();
     fireEvent.press(screen.getByTestId('understand-passage'));
     expect(screen.getByTestId('context-sheet')).toBeTruthy();
-    expect(screen.getByLabelText('Open Neh 1')).toBeTruthy();
+    expect(screen.getByLabelText('Open Ezra 4:17-23')).toBeTruthy();
   });
 
   it('dismisses the peek on tap-outside without opening the full card', async () => {
@@ -106,7 +106,9 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(await screen.findByTestId('peek-card-sanballat-the-horonite')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
-    expect(screen.getByText(/Grieved by Nehemiah/)).toBeTruthy();
+    expect(
+      within(screen.getByTestId('fullcard-in-passage')).getByText(/deeply disturbed/),
+    ).toBeTruthy();
   });
 
   it('shows the full hierarchy with passage context, profile and a way back', async () => {
@@ -115,9 +117,13 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(await screen.findByTestId('peek-card-sanballat-the-horonite-know-more')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
-    expect(screen.getByText('Sanballat')).toBeTruthy();
-    expect(screen.getByText(/Grieved by Nehemiah/)).toBeTruthy();
-    expect(screen.getByText('Nehemiah 4')).toBeTruthy();
+    expect(
+      within(screen.getByTestId('entity-sheet')).getByText('Sanballat the Horonite'),
+    ).toBeTruthy();
+    expect(
+      within(screen.getByTestId('fullcard-in-passage')).getByText(/deeply disturbed/),
+    ).toBeTruthy();
+    expect(screen.getByTestId('fullcard-appearance-neh-2-10')).toBeTruthy();
     expect(screen.getByTestId('connected-nehemiah-governor')).toBeTruthy();
     fireEvent.press(screen.getByTestId('connected-nehemiah-governor'));
     expect(screen.getByText(/cupbearer whose visible sadness/)).toBeTruthy();
@@ -127,8 +133,8 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
 
   it('renders one underline anchor per validated phrase across the chapter', () => {
     renderReader();
-    expect(screen.getAllByText('Valley Gate')).toHaveLength(2);
-    expect(screen.getByText('Judah')).toBeTruthy();
+    expect(screen.getAllByText('the Valley Gate')).toHaveLength(2);
+    expect(screen.getAllByText('Judah')).toHaveLength(2);
   });
 
   it('lands on the referenced verse with a highlight instead of the chapter top', () => {
@@ -147,7 +153,7 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     fireEvent.press(within(screen.getByTestId('verse-10')).getByText('Sanballat the Horonite'));
     expect(await screen.findByTestId('peek-card-sanballat-the-horonite-know-more')).toBeTruthy();
     fireEvent.press(screen.getByTestId('peek-card-sanballat-the-horonite-know-more'));
-    fireEvent.press(screen.getByLabelText('Open v10'));
+    fireEvent.press(screen.getByTestId('fullcard-appearance-neh-2-10'));
     expect(screen.getByTestId('verse-10-target')).toBeTruthy();
     // Link taps dismiss layers and navigate: the sheet closes on the jump.
     expect(screen.queryByTestId('entity-sheet')).toBeNull();

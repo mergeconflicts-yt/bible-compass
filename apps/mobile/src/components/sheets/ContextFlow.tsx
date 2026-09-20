@@ -3,7 +3,7 @@ import { ContextSheet } from './ContextSheet';
 import { EntitySheet } from './EntitySheet';
 import { TimelineSheet } from './TimelineSheet';
 import { MapSheet } from './MapSheet';
-import type { DraftEvent } from '@/content/neh2Draft';
+import type { PreviewEvent } from '@/content/neh2Preview';
 
 interface ContextFlowProps {
   visible: boolean;
@@ -18,7 +18,7 @@ interface ContextFlowProps {
  */
 export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProps) {
   const [entitySlug, setEntitySlug] = useState<string | null>(null);
-  const [openEvent, setOpenEvent] = useState<DraftEvent | null>(null);
+  const [openEvent, setOpenEvent] = useState<PreviewEvent | null>(null);
   const [timelineOpen, setTimelineOpen] = useState(false);
   const [mapOpen, setMapOpen] = useState(false);
 

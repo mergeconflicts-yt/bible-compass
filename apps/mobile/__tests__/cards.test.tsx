@@ -1,6 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react-native';
-import { EntitySheet, eventDistance } from '@/components/sheets/EntitySheet';
-import { getTimeline } from '@/content/neh2Draft';
+import { fireEvent, render, screen, within } from '@testing-library/react-native';
+import { EntitySheet } from '@/components/sheets/EntitySheet';
+import { previewEvents } from '@/content/neh2Preview';
 
 describe('EntitySheet full hierarchy', () => {
   const sheetProps = {
@@ -16,7 +16,7 @@ describe('EntitySheet full hierarchy', () => {
     render(<EntitySheet visible slug="nehemiah-governor" {...sheetProps} />);
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
     expect(screen.getByText('Nehemiah')).toBeTruthy();
-    expect(screen.getAllByText(/cupbearer to Artaxerxes I who sought permission/)).toHaveLength(2);
+    expect(screen.getAllByText(/Jewish official in the Persian court/)).toHaveLength(2);
     expect(screen.getByText('WHO HE STANDS BETWEEN')).toBeTruthy();
     expect(screen.getByTestId('connected-artaxerxes-i')).toBeTruthy();
     expect(screen.getByTestId('fullcard-in-passage')).toBeTruthy();
@@ -26,9 +26,9 @@ describe('EntitySheet full hierarchy', () => {
     expect(screen.getByText(/cupbearer whose visible sadness/)).toBeTruthy();
     expect(screen.getByTestId('fullcard-profile')).toBeTruthy();
     expect(screen.getByText(/Also known as/)).toBeTruthy();
-    expect(screen.getByText(/Named in 7 passages/)).toBeTruthy();
-    fireEvent.press(screen.getByTestId('fullcard-appearance-nehemiah-1'));
-    expect(sheetProps.onOpenPassage).toHaveBeenCalledWith('Neh.1');
+    expect(screen.getByText(/Named in 19 passages/)).toBeTruthy();
+    fireEvent.press(screen.getByTestId('fullcard-appearance-neh-2-10'));
+    expect(sheetProps.onOpenPassage).toHaveBeenCalledWith('Neh.2.10');
     expect(screen.queryByTestId('fullcard-sources')).toBeNull();
     fireEvent.press(screen.getByTestId('fullcard-sources-toggle'));
     expect(screen.getByTestId('fullcard-sources')).toBeTruthy();
@@ -54,15 +54,16 @@ describe('EntitySheet full hierarchy', () => {
 
   it('gives places a locator lateral and no person spine', () => {
     render(<EntitySheet visible slug="jerusalem" {...sheetProps} />);
-    expect(screen.getByText('PLACE · PERSIAN PERIOD')).toBeTruthy();
+    expect(screen.getByText('PLACE')).toBeTruthy();
     expect(screen.queryByText('WHO HE STANDS BETWEEN')).toBeNull();
     expect(screen.getByTestId('fullcard-locate')).toBeTruthy();
     fireEvent.press(screen.getByTestId('fullcard-locate'));
     expect(sheetProps.onOpenMap).toHaveBeenCalledTimes(1);
     expect(screen.getByText('About the place')).toBeTruthy();
-    // Single source in current draft data: the In-this-passage role text.
-    // (Standing and profile prose no longer repeat the phrase.)
-    expect(screen.getAllByText(/damaged ancestral city/)).toHaveLength(1);
+    expect(screen.getByText('The ruined ancestral city Nehemiah seeks to restore.')).toBeTruthy();
+    expect(
+      within(screen.getByTestId('fullcard-in-passage')).getByText(/ruined ancestral city/),
+    ).toBeTruthy();
   });
 
   it('omits locator and lateral moves when no opener is provided', () => {
@@ -81,22 +82,22 @@ describe('EntitySheet full hierarchy', () => {
 
   it('renders nothing invented for unknown slugs', () => {
     render(<EntitySheet visible slug="no-such-place" {...sheetProps} />);
-    expect(screen.getByText(/no drafted content/)).toBeTruthy();
+    expect(screen.getByText(/no preview content/)).toBeTruthy();
     expect(screen.queryByTestId('full-card')).toBeNull();
   });
 });
 
 describe('Event full cards', () => {
-  it('shows distance in time, relevance, date facts and a timeline lateral', () => {
-    const events = getTimeline();
-    const abraham = events[0];
-    if (!abraham) throw new Error('expected timeline events in the draft');
+  it('shows scope, participants and places with a timeline lateral', () => {
+    const events = previewEvents();
+    const audience = events[0];
+    if (!audience) throw new Error('expected preview events');
     const onOpenTimeline = jest.fn();
     render(
       <EntitySheet
         visible
         slug={null}
-        event={abraham}
+        event={audience}
         onClose={jest.fn()}
         onOpenEntity={jest.fn()}
         onOpenPassage={jest.fn()}
@@ -104,21 +105,14 @@ describe('Event full cards', () => {
       />,
     );
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
-    expect(screen.getByText('Abraham')).toBeTruthy();
-    expect(screen.getByText('IN TIME')).toBeTruthy();
-    expect(screen.getByText(/1,560 years before this scene/)).toBeTruthy();
-    expect(screen.getByText(abraham.relevance)).toBeTruthy();
-    expect(screen.getByText('Date: 2000 BC')).toBeTruthy();
-    expect(screen.getByText('About the event')).toBeTruthy();
+    expect(
+      within(screen.getByTestId('entity-sheet')).getByText(
+        'Audience With Artaxerxes · Neh.2.1–Neh.2.8',
+      ),
+    ).toBeTruthy();
+    expect(screen.getByText('IN NEHEMIAH 2 · Neh.2.1–Neh.2.8')).toBeTruthy();
+    expect(screen.getByText(/With Nehemiah, Artaxerxes I, The queen/)).toBeTruthy();
     fireEvent.press(screen.getByTestId('fullcard-lateral'));
     expect(onOpenTimeline).toHaveBeenCalledTimes(1);
-  });
-
-  it('returns null distance when undatable instead of guessing', () => {
-    const events = getTimeline();
-    const abraham = events[0];
-    if (!abraham) throw new Error('expected timeline events in the draft');
-    expect(eventDistance(abraham, null)).toBeNull();
-    expect(eventDistance(abraham, '-445')).toMatch(/before this scene/);
   });
 });

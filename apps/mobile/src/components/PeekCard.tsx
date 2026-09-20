@@ -4,11 +4,15 @@ import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { AppText } from './AppText';
 import { ReferenceText } from './ReferenceText';
-import { entityBySlug, roleBySlug, toBullets } from '@/content/neh2Draft';
+import { entityBySlug, roleBySlug, toBullets } from '@/content/neh2Preview';
 
 const TYPE_LABELS: Record<string, string> = {
   person: 'Person',
+  deity: 'Deity',
   place: 'Place',
+  structure: 'Structure',
+  collective: 'Collective',
+  polity: 'Polity',
   empire: 'Empire',
   role: 'Role',
   practice: 'Practice',
@@ -104,7 +108,7 @@ export function PeekCard({
       testID={`peek-card-${slug}`}
       // RN 0.86 types omit the dialog role; assertion preserves screen-reader semantics. Revisit on SDK upgrade.
       accessibilityRole={'dialog' as unknown as AccessibilityRole}
-      accessibilityLabel={`${typeLabel}: ${entity.canonical_name}`}
+      accessibilityLabel={`${typeLabel}: ${entity.name}`}
     >
       <View style={styles.head}>
         <View style={[styles.iconBox, { backgroundColor: colors.accentSoft }]}>
@@ -118,7 +122,7 @@ export function PeekCard({
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
             {typeLabel.toUpperCase()}
           </AppText>
-          <AppText variant="title2">{entity.canonical_name}</AppText>
+          <AppText variant="title2">{entity.name}</AppText>
         </View>
       </View>
       <ReferenceText text={sentence} onOpenPassage={onOpenPassage} variant="body" />
@@ -128,7 +132,7 @@ export function PeekCard({
           onPress={() => onFullCard(slug)}
           testID={`peek-card-${slug}-know-more`}
           accessibilityRole="button"
-          accessibilityLabel={`Know more about ${entity.canonical_name}`}
+          accessibilityLabel={`Know more about ${entity.name}`}
           hitSlop={8}
           style={styles.knowMore}
         >

@@ -11,6 +11,7 @@ import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { scriptureSizes, usePreferences } from '@/theme/ThemeProvider';
 import { Screen } from '@/components/Screen';
+import { StateView } from '@/components/StateView';
 import { AppText } from '@/components/AppText';
 import {
   PeekCard,
@@ -25,7 +26,12 @@ import { MapSheet } from '@/components/sheets/MapSheet';
 import { TimelineSheet } from '@/components/sheets/TimelineSheet';
 import { TimelineRail } from '@/components/TimelineRail';
 import { eraRail } from '@/fixtures/demo';
-import { anchorsForVerse, getDraft, splitAnchored } from '@/content/neh2Draft';
+import {
+  anchorsForVerse,
+  previewAvailable,
+  previewChapter,
+  splitAnchored,
+} from '@/content/neh2Preview';
 import { parseReference } from '@/lib/reference';
 import { isIndicTranslation, type ChapterBlock } from '@/content/bsb';
 import { getPassageContent } from '@/content/passageStore';
@@ -95,7 +101,9 @@ export function ReaderView({
   }, [translationId, bookOsis, chapter, initialVerse]);
 
   const content = getPassageContent(bookOsis, chapter, translationId);
-  const contextMode = bookOsis === 'Neh' && chapter === 2 && content !== null;
+  const previewOk = previewAvailable();
+  const wantsPreview = bookOsis === 'Neh' && chapter === 2 && content !== null;
+  const contextMode = wantsPreview && previewOk;
   const title = content ? `${content.bookName} ${chapter}` : `${bookOsis} ${chapter}`;
 
   /* IMG_4195 measures: ~21sp serif with ~1.68 line-height (1.8 for Indic). */
@@ -189,6 +197,33 @@ export function ReaderView({
     );
   }
 
+  // Curated preview data is invalid: say so explicitly instead of silently
+  // falling back to any legacy draft.
+  if (wantsPreview && !previewOk) {
+    return (
+      <Screen
+        testID="reader-screen"
+        header={
+          <ReaderHeader
+            title={title}
+            translationName={preferences.translation.name}
+            onBack={onBack}
+            onOptions={undefined}
+          />
+        }
+      >
+        <StateView
+          variant="error"
+          title="Preview data isn't available"
+          explanation="The Nehemiah 2 curated preview failed validation, so context is hidden until a valid preview ships."
+          actionLabel="Back"
+          onAction={onBack}
+          testID="preview-unavailable"
+        />
+      </Screen>
+    );
+  }
+
   return (
     <Screen
       testID="reader-screen"
@@ -273,7 +308,7 @@ export function ReaderView({
               scripture
               style={[styles.storyText, { fontSize: 20, lineHeight: 33 }]}
             >
-              {getDraft().immediate_summary}
+              {previewChapter().immediate_summary}
             </AppText>
           ) : null}
         </Pressable>

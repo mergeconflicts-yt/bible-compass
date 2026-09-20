@@ -10,17 +10,17 @@ import { NavRow } from '@/components/NavRow';
 import { ReferenceText } from '@/components/ReferenceText';
 import { EntityChip, EventChip } from '@/components/EntityChip';
 import {
-  draftBrief,
-  draftConnections,
-  draftNotice,
-  draftPeople,
-  draftOtherSlugs,
-  draftPlaceSlugs,
-  foregroundEvents,
-  formatYear,
+  previewBrief,
+  previewConnections,
+  previewContexts,
+  previewEventsForScope,
+  previewNotice,
+  previewOtherSlugs,
+  previewPeople,
+  previewPlaceSlugs,
   toBullets,
-  type DraftEvent,
-} from '@/content/neh2Draft';
+  type PreviewEvent,
+} from '@/content/neh2Preview';
 import { bookNameFor } from '@/content/bsb';
 import { useOptionalPreferences } from '@/theme/ThemeProvider';
 
@@ -31,23 +31,17 @@ interface ContextSheetProps {
   onOpenTimeline: () => void;
   onOpenMap: () => void;
   onOpenPassage: (passageKey: string) => void;
-  onOpenEvent?: (event: DraftEvent) => void;
+  onOpenEvent?: (event: PreviewEvent) => void;
 }
 
 const tabs = ['Essential', 'History', 'Connections'] as const;
 
-/** "445 BC" or "445–444 BC" from draft year bounds — display only. */
-function eventRange(event: DraftEvent): string {
-  return event.end && event.end !== event.start
-    ? `${formatYear(event.start)}–${formatYear(event.end)}`
-    : formatYear(event.start);
-}
-
 /**
- * Passage context — rendered from the unreviewed AI draft
- * (`content/nehemiah-2/context-draft.json`, see ReviewBox). Three tabs: the
- * 30-second brief with people, history sections with timeline/map entries,
- * and canonical connections. Nothing here is approved content.
+ * Curated passage context — rendered from the generated Nehemiah 2 preview
+ * asset (see previewNotice). One scope picker across all six curated passage
+ * scopes, then the 30-second brief with people, history sections with
+ * places and events, and cross-passage connections. Nothing here is
+ * approved content.
  */
 export function ContextSheet({
   visible,
@@ -62,18 +56,29 @@ export function ContextSheet({
   const preferences = useOptionalPreferences();
   const translationId = preferences?.translationId ?? 'BSB';
   const [tab, setTab] = useState(0);
-  const brief = draftBrief();
-  const requestEvent = foregroundEvents()[0];
-  const whenLabel = requestEvent ? `About ${formatYear(requestEvent.start)}` : 'About 445 BC';
+  const scopes = previewContexts();
+  const [scopeIndex, setScopeIndex] = useState(0);
+  const scope = scopes[scopeIndex] ?? scopes[0]!;
+  const brief = previewBrief(scope.slug);
+  const [whenFirst] = toBullets(scope.when);
+  const scopeEvents = previewEventsForScope(scope.slug);
 
   return (
     <Sheet
       visible={visible}
       onClose={onClose}
-      title={`${bookNameFor('Neh', translationId)} 2 Context`}
+      title={`${bookNameFor('Neh', translationId)} 2 Context · Preview`}
       full
       testID="context-sheet"
     >
+      <Segmented
+        options={scopes.map((entry) => entry.title)}
+        selected={scopeIndex}
+        onSelect={setScopeIndex}
+        accessibilityLabel="Passage scopes"
+        testID="context-scope"
+        compact
+      />
       <Segmented
         options={tabs}
         selected={tab}
@@ -141,7 +146,7 @@ export function ContextSheet({
             PEOPLE IN THIS PASSAGE
           </AppText>
           <View style={styles.chipList}>
-            {draftPeople().map((person) => (
+            {previewPeople(scope.slug).map((person) => (
               <EntityChip
                 key={person.slug}
                 slug={person.slug}
@@ -155,7 +160,7 @@ export function ContextSheet({
             OTHERS IN THIS PASSAGE
           </AppText>
           <View style={styles.chipList}>
-            {draftOtherSlugs().map((slug) => (
+            {previewOtherSlugs(scope.slug).map((slug) => (
               <EntityChip
                 key={slug}
                 slug={slug}
@@ -171,7 +176,7 @@ export function ContextSheet({
         <View testID="context-history">
           <View style={styles.chipList}>
             <EventChip
-              title={whenLabel}
+              title={(whenFirst ?? scope.when).trim()}
               qualifier="Approximate"
               onPress={onOpenTimeline}
               testID="context-time-chip"
@@ -181,7 +186,7 @@ export function ContextSheet({
             PLACES IN THIS PASSAGE
           </AppText>
           <View style={styles.chipList}>
-            {draftPlaceSlugs().map((slug) => (
+            {previewPlaceSlugs(scope.slug).map((slug) => (
               <EntityChip
                 key={slug}
                 slug={slug}
@@ -191,16 +196,16 @@ export function ContextSheet({
             ))}
           </View>
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
-            EVENTS AROUND THIS PASSAGE
+            EVENTS IN THIS PASSAGE
           </AppText>
           <View style={styles.chipList}>
-            {foregroundEvents().map((event) => (
+            {scopeEvents.map((event) => (
               <EventChip
-                key={event.canonical_key}
+                key={event.key}
                 title={event.title}
-                qualifier={eventRange(event)}
+                qualifier={event.range}
                 onPress={() => (onOpenEvent ? onOpenEvent(event) : onOpenTimeline())}
-                testID={`context-event-${event.canonical_key}`}
+                testID={`context-event-${event.key}`}
               />
             ))}
           </View>
@@ -224,7 +229,7 @@ export function ContextSheet({
 
       {tab === 2 ? (
         <View testID="context-connections">
-          {draftConnections().map((connection) => (
+          {previewConnections().map((connection) => (
             <NavRow
               key={connection.title}
               title={connection.title}
@@ -247,9 +252,9 @@ export function ReviewBox() {
       style={[styles.review, { backgroundColor: colors.surfaceSubtle }]}
       testID="context-review-box"
     >
-      <AppText variant="caption">DRAFT · UNREVIEWED AI CONTENT</AppText>
+      <AppText variant="caption">DRAFT PREVIEW · UNVERIFIED CURATED CONTENT</AppText>
       <AppText variant="metadata" color="textSecondary" style={styles.reviewText}>
-        {draftNotice} Scripture and commentary remain separate.
+        {previewNotice()} Scripture and commentary remain separate.
       </AppText>
     </View>
   );

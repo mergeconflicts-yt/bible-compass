@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { radius, space } from '@/theme/tokens';
+import { space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { Sheet } from '@/components/Sheet';
 import { AppText } from '@/components/AppText';
 import { ReferenceText } from '@/components/ReferenceText';
 import { Button } from '@/components/Button';
-import { draftNotice, formatYear, getTimeline } from '@/content/neh2Draft';
+import { previewEvents, previewNotice } from '@/content/neh2Preview';
 
 interface TimelineSheetProps {
   visible: boolean;
@@ -15,21 +15,20 @@ interface TimelineSheetProps {
 }
 
 /**
- * Passage-centered timeline rendered from the unreviewed AI draft.
- * Opens scrolled to the highlighted passage event; precision and
- * disagreement labels come from the draft records and are never presented
- * as settled fact.
+ * Passage events rendered from the generated Nehemiah 2 preview asset.
+ * The curated packages carry no dates, so rows show the passage range plus
+ * participants and places instead of years. Precision labels are honest:
+ * everything here is unverified draft content (see previewNotice).
  */
 export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheetProps) {
   const { colors } = useTheme();
-  const events = getTimeline();
+  const events = previewEvents();
   const scrollRef = useRef<ScrollView>(null);
   const legendHeight = useRef(0);
   const activeY = useRef<number | null>(null);
   const didScroll = useRef(false);
 
-  // Layout positions arrive piecemeal; jump once both are known. Approximate
-  // by design — the goal is landing on the passage event, not pixel perfection.
+  // Layout positions arrive piecemeal; jump once both are known.
   const maybeScroll = () => {
     if (!visible || didScroll.current || activeY.current === null) return;
     didScroll.current = true;
@@ -43,8 +42,8 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
     <Sheet
       visible={visible}
       onClose={onClose}
-      eyebrow="Timeline · Draft"
-      title="Biblical timeline"
+      eyebrow="Timeline · Draft preview"
+      title="Events in Nehemiah 2"
       full
       testID="timeline-sheet"
       scrollRef={scrollRef}
@@ -60,76 +59,62 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
           <AppText variant="metadata" color="accent">
             ●
           </AppText>{' '}
-          Biblical events
-        </AppText>
-        <AppText variant="metadata">
-          <AppText variant="metadata" color="textSecondary">
-            ●
-          </AppText>{' '}
-          World history
+          Curated passage events
         </AppText>
       </View>
       <View style={[styles.rail, { borderColor: colors.border }]}>
-        {events.map((event) => {
-          // Draft convention: the foreground event whose relevance names the
-          // reader's position renders highlighted.
-          const active = event.relevance.toLowerCase().includes('you are here');
-          const year = formatYear(event.start);
-          const precision =
-            event.date_precision === 'approximate'
-              ? 'APPROXIMATE'
-              : event.date_precision.toUpperCase();
+        {events.map((event, index) => {
+          const participants = event.participants.map((person) => person.name).join(', ');
+          const places = event.places.map((place) => place.name).join(', ');
           return (
             <View
-              key={event.canonical_key}
-              testID={`timeline-${event.canonical_key}`}
+              key={event.key}
+              testID={`timeline-${event.key}`}
               onLayout={
-                active
+                index === 0
                   ? (layoutEvent) => {
                       activeY.current = layoutEvent.nativeEvent.layout.y;
                       maybeScroll();
                     }
                   : undefined
               }
-              style={[
-                styles.item,
-                active && { backgroundColor: colors.accentSoft, borderRadius: radius.button },
-              ]}
+              style={styles.item}
             >
               <AppText variant="label" style={styles.year}>
-                {year}
+                {event.range}
               </AppText>
               <View
                 style={[
                   styles.node,
                   {
-                    backgroundColor: active ? colors.accent : colors.border,
+                    backgroundColor: colors.border,
                     borderColor: colors.canvas,
                   },
                 ]}
               />
               <View style={styles.itemText}>
-                <AppText variant="label">
-                  {event.title}
-                  <AppText variant="caption" color="accent">
-                    {' '}
-                    {precision}
+                <AppText variant="label">{event.title}</AppText>
+                {participants ? (
+                  <AppText variant="metadata" color="textSecondary" style={styles.note}>
+                    {`With ${participants}`}
                   </AppText>
-                </AppText>
-                <ReferenceText
-                  text={`${event.description} ${event.relevance}`}
-                  onOpenPassage={onOpenPassage}
-                  variant="metadata"
-                  color="textSecondary"
-                  style={styles.note}
-                />
+                ) : null}
+                {places ? (
+                  <ReferenceText
+                    text={`At ${places}`}
+                    onOpenPassage={onOpenPassage}
+                    variant="metadata"
+                    color="textSecondary"
+                    style={styles.note}
+                  />
+                ) : null}
               </View>
             </View>
           );
         })}
       </View>
       <AppText variant="metadata" color="textSecondary">
-        {draftNotice}
+        {previewNotice()}
       </AppText>
       <View style={styles.action}>
         <Button title="Back to reading" onPress={onClose} testID="timeline-back" />

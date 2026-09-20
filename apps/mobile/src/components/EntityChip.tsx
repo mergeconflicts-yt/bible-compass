@@ -3,11 +3,15 @@ import { Ionicons } from '@expo/vector-icons';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 import { AppText } from './AppText';
-import { entityBySlug, roleBySlug, toBullets } from '@/content/neh2Draft';
+import { entityBySlug, roleBySlug, toBullets } from '@/content/neh2Preview';
 
 const ENTITY_GLYPHS: Record<string, keyof typeof Ionicons.glyphMap> = {
   person: 'person-outline',
+  deity: 'sparkles-outline',
   place: 'location-outline',
+  structure: 'business-outline',
+  collective: 'people-outline',
+  polity: 'flag-outline',
   event: 'calendar-outline',
   empire: 'flag-outline',
   role: 'briefcase-outline',
@@ -46,7 +50,7 @@ export function EntityChip({
   return (
     <ChipRow
       glyph={ENTITY_GLYPHS[entity.type] ?? 'layers-outline'}
-      title={entity.canonical_name}
+      title={entity.name}
       qualifier={resolvedQualifier}
       onPress={() => onPress(slug)}
       testID={testID ?? `entity-chip-${slug}`}

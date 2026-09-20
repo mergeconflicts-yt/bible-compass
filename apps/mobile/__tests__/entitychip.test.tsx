@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 import { EntityChip, EventChip } from '@/components/EntityChip';
 import { ContextSheet } from '@/components/sheets/ContextSheet';
 import { ContextFlow } from '@/components/sheets/ContextFlow';
-import { foregroundEvents } from '@/content/neh2Draft';
+import { previewEvents } from '@/content/neh2Preview';
 
 describe('EntityChip', () => {
   it('shows glyph, name and qualifier, and opens the full card on press', () => {
@@ -29,19 +29,19 @@ describe('EntityChip', () => {
 
 describe('EventChip', () => {
   it('shows title and date qualifier, and navigates on press', () => {
-    const request = foregroundEvents()[0];
-    if (!request) throw new Error('expected a foreground event in the draft');
+    const request = previewEvents()[0];
+    if (!request) throw new Error('expected a preview event');
     const onPress = jest.fn();
     render(
       <EventChip
         title={request.title}
-        qualifier="445 BC"
+        qualifier={request.range}
         onPress={onPress}
         testID="event-chip-test"
       />,
     );
-    expect(screen.getByText('Nehemiah before Artaxerxes')).toBeTruthy();
-    expect(screen.getByText('445 BC')).toBeTruthy();
+    expect(screen.getByText('Audience With Artaxerxes · Neh.2.1–Neh.2.8')).toBeTruthy();
+    expect(screen.getByText('Neh.2.1–Neh.2.8')).toBeTruthy();
     fireEvent.press(screen.getByTestId('event-chip-test'));
     expect(onPress).toHaveBeenCalledTimes(1);
   });
@@ -79,20 +79,22 @@ describe('ContextSheet entity chips', () => {
     render(<ContextSheet visible {...sheetProps} />);
     fireEvent.press(screen.getByTestId('context-tabs-1'));
     expect(screen.getByTestId('context-time-chip')).toBeTruthy();
-    expect(screen.getByText('About 445 BC')).toBeTruthy();
+    expect(screen.getByText(/commonly rendered about 445 BC/)).toBeTruthy();
     fireEvent.press(screen.getByTestId('context-time-chip'));
     expect(sheetProps.onOpenTimeline).toHaveBeenCalledTimes(1);
-    expect(screen.getByTestId('context-event-nehemiah-2-request')).toBeTruthy();
-    fireEvent.press(screen.getByTestId('context-event-nehemiah-2-request'));
+    expect(screen.getByTestId('context-event-audience-with-artaxerxes')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('context-event-audience-with-artaxerxes'));
     expect(sheetProps.onOpenEvent).toHaveBeenCalledTimes(1);
   });
 
   it('opens an event full card from a History event chip', () => {
     render(<ContextFlow visible onClose={jest.fn()} />);
     fireEvent.press(screen.getByTestId('context-tabs-1'));
-    fireEvent.press(screen.getByTestId('context-event-nehemiah-2-request'));
+    fireEvent.press(screen.getByTestId('context-event-audience-with-artaxerxes'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
-    expect(screen.getByText('Date: 445 BC')).toBeTruthy();
-    expect(screen.getByText(/central event/)).toBeTruthy();
+    expect(
+      screen.getAllByText('Audience With Artaxerxes · Neh.2.1–Neh.2.8').length,
+    ).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText(/With Nehemiah, Artaxerxes I, The queen/)).toBeTruthy();
   });
 });

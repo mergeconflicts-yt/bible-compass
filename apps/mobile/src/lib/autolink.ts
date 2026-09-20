@@ -1,5 +1,5 @@
 import { BOOKS } from '@/content/books';
-import { getDraft } from '@/content/neh2Draft';
+import { getPreview } from '@/content/neh2Preview';
 
 export interface PassageContext {
   bookOsis: string;
@@ -38,9 +38,9 @@ function resolveBook(word: string): string | null {
   return BOOK_ALIASES[word] ?? BOOK_NAMES[word] ?? null;
 }
 
-/** Draft passage start (Neh 2); explicit context wins where the caller knows it. */
+/** Preview passage start (Neh 2); explicit context wins where the caller knows it. */
 function draftContext(): PassageContext {
-  const [bookOsis, chapterRaw] = getDraft().passage.split('.');
+  const [bookOsis, chapterRaw] = getPreview().passage.split('.');
   const chapter = Number.parseInt(chapterRaw ?? '', 10);
   if (!bookOsis || !Number.isInteger(chapter)) return { bookOsis: 'Neh', chapter: 2 };
   return { bookOsis, chapter };
