@@ -6,6 +6,7 @@ export const entityCandidateSchema = z
     slug: z.string().regex(/^[a-z0-9-]+$/),
     type: z.enum([
       "person",
+      "deity",
       "place",
       "collective",
       "polity",

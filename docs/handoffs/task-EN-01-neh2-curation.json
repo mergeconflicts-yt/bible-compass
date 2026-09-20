@@ -1,5 +1,5 @@
 {
-  "attempt_id": "task:EN-01-neh2-curation:attempt-2",
+  "attempt_id": "task:EN-01-neh2-curation:attempt-3",
   "task_id": "EN-01",
   "task_title": "Fix English Nehemiah 2 curation — three-package reference dataset",
   "result": "PASS (draft content; not approved, verified or production-ready)",
@@ -23,7 +23,10 @@
     "content/nehemiah-2/legacy/context-draft.json (moved from content/nehemiah-2/context-draft.json)",
     "tools/curate_neh2.py (new; deterministic generator)",
     "packages/content-schema/tests/neh2-global.test.ts (new; global + invalid-mutation tests)",
-    "packages/content-schema/src/packages.ts (minimal key-grammar fixes for ratified identifiers)",
+    "packages/content-schema/src/packages.ts (minimal key-grammar fixes for ratified identifiers; 'deity' entity type)",
+    "packages/content-schema/src/schemas.ts (deity entity type)",
+    "packages/domain/src/entity.ts (deity EntityType)",
+    "packages/tipnr-adapter/src/types.ts (deity entity type)",
     "tools/sync-context-draft.py (read the legacy draft from legacy/)",
     ".prettierignore (ignore generated Nehemiah 2 package JSON)"
   ],
@@ -44,6 +47,8 @@
     "Tests now verify provenance locators against the underlying source files (bundled BSB verses and, when present, TIPNR/BibleData/OpenBible quarantine files).",
     "Tests rewritten without any/ts-ignore; the test file uses explicit interfaces.",
     "Legacy context-draft.json moved to content/nehemiah-2/legacy/ so glob-based importers of *.v2.json cannot pick it up.",
+    "Deity data model: a canonical 'deity' entity type was added to the vocabulary and 'God of heaven' is now typed deity, not person.",
+    "Neh.2.19 plural 'us' now targets the opposed collective entity:judean-people instead of Nehemiah; a judean-people attestation was added at v19. Plural first-person references are now checked so they can never target a singular person/deity.",
     "This EN-01 handoff added."
   ],
   "commands_executed": [
@@ -81,11 +86,14 @@
   "schema_changes": [
     "packages/content-schema/src/packages.ts scopeKeySchema now allows upper-case OSIS in the reference span so the ratified key scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20 validates (docs/CANONICAL_IDENTIFIERS.md §6).",
     "packages/content-schema/src/packages.ts editionKeySchema now allows the optional :sha-<8hex> suffix so the ratified immutable edition key edition:bsb@20260912:sha-b2898c49 validates (docs/CANONICAL_IDENTIFIERS.md §7).",
-    "Both are loosenings; no existing fixture or test regressed."
+    "A canonical 'deity' entity type was added to the entity-type vocabulary in packages/content-schema/src/packages.ts, packages/content-schema/src/schemas.ts, packages/domain/src/entity.ts and packages/tipnr-adapter/src/types.ts.",
+    "The two key-grammar changes are loosenings; no existing fixture or test regressed.",
+    "PENDING (database integration is out of EN-01 scope): supabase/migrations/20260915000003_knowledge_claim_context.sql:16 has a CHECK constraint listing entity types without 'deity'. A follow-up migration must extend that CHECK before any deity entity is imported."
   ],
   "known_limitations": [
     "ADR-004 was referenced by the task but does not exist in docs/; ADR-003 / CONTEXT_DATA_ARCHITECTURE.md was used as the authoritative model. Owner confirmation requested.",
-    "The entity-type vocabulary has no deity type; 'God of heaven' is modelled as person and flagged in editorial_observations.",
+    "The canonical code model now has a 'deity' entity type, but the Postgres CHECK constraint still lacks it; a migration is required before DB import (database integration is out of EN-01 scope).",
+    "Multi-target coreference is not modelled: a mention still has one target. Neh.2.19 plural 'us' is resolved to the collective entity:judean-people; richer multi-target/coreference records remain a future schema decision.",
     "Mentions/attestations cover the curated entity catalog; pronouns and indirect references are not exhaustively resolved, so canonical and edition coverage honestly report 'incomplete'.",
     "Some context is genuinely uncertain and is marked blocked: the court city (Susa), the regnal-year reckoning, and the Persian-period locations of the Valley Gate and King's Pool.",
     "The bulk content/curated/Neh.v2.json (whole-book fixture) is unchanged and is not the reference dataset.",

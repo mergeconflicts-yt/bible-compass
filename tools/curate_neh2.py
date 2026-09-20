@@ -181,9 +181,9 @@ ENTITIES = [
         "Arabian figure who joins Sanballat and Tobiah in mocking the rebuilding.",
         "Geshem is named in Nehemiah 2:19 with Sanballat and Tobiah when they mock the builders and accuse them of rebelling against the king.",
         ["geshem-opposes"]),
-    ent("god-of-heaven", "person", "The God of heaven", [], "established",
+    ent("god-of-heaven", "deity", "The God of heaven", [], "established",
         "The God to whom Nehemiah prays and on whom he relies for success.",
-        "Nehemiah prays to the God of heaven before answering the king (2:4) and declares that the God of heaven will grant success to the builders (2:20). The entity-type vocabulary has no deity type; 'person' is used pending vocabulary review.",
+        "Nehemiah prays to the God of heaven before answering the king (2:4) and declares that the God of heaven will grant success to the builders (2:20). The God of heaven is typed with the canonical 'deity' entity type, not 'person'.",
         ["nehemiah-prays", "god-will-grant-success"]),
     ent("susa", "place", "Susa", ["Shushan"], "traditional",
         "Persian administrative centre traditionally associated with the court scene.",
@@ -458,6 +458,7 @@ ATTEST: dict[int, list[tuple[str, str, str, str]]] = {
          ("tobiah-ammonite", "participant", "established", "explicit"),
          ("geshem-arabian", "participant", "established", "explicit"),
          ("nehemiah-governor", "participant", "established", "strongly_implied"),
+         ("judean-people", "participant", "established", "strongly_implied"),
          ("artaxerxes-i", "implied_referent", "established", "strongly_implied")],
     20: [("nehemiah-governor", "participant", "established", "strongly_implied"),
          ("god-of-heaven", "topic", "established", "explicit"),
@@ -816,7 +817,7 @@ MENTIONS: dict[int, list[tuple[str, str, str, int]]] = {
          ("judean-people", "us", "pronoun", 1)],
     18: [("nehemiah-governor", "I", "pronoun", 1),
          ("judean-people", "they", "pronoun", 1)],
-    19: [("nehemiah-governor", "us", "pronoun", 1),
+    19: [("judean-people", "us", "pronoun", 1),
          ("sanballat-the-horonite", "Sanballat the Horonite", "explicit_name", 1),
          ("tobiah-ammonite", "Tobiah the Ammonite official", "explicit_name", 1),
          ("geshem-arabian", "Geshem the Arab", "explicit_name", 1),
@@ -1045,7 +1046,7 @@ def build_canonical() -> dict:
         "editorial_observations": [
             {"code": "source-attribution", "note": PROVENANCE},
             {"code": "bounded-entity-catalog", "note": "Entity identification covers the curated Nehemiah 2 catalog; pronouns and indirect referents are not exhaustively resolved, so coverage is reported incomplete."},
-            {"code": "entity-type-vocabulary-gap", "note": "The entity-type vocabulary has no deity type; 'God of heaven' is modelled as person pending vocabulary review."},
+            {"code": "deity-entity-type", "note": "Divine beings use the canonical 'deity' entity type; the God of heaven is typed 'deity', not 'person'."},
         ],
     }
     return pkg

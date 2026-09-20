@@ -169,6 +169,7 @@ const scopeRelationSchema = z.enum([
 ]);
 const entityTypeSchema = z.enum([
   "person",
+  "deity",
   "place",
   "collective",
   "polity",

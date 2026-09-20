@@ -80,6 +80,7 @@ export const entitySchema = z
     slug: z.string().regex(/^[a-z0-9-]+$/, "Invalid slug"),
     type: z.enum([
       "person",
+      "deity",
       "place",
       "collective",
       "polity",

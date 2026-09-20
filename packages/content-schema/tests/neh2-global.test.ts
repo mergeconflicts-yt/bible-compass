@@ -572,6 +572,27 @@ export function checkGlobalNeh2(dataset: Dataset): void {
   )
     fail("the wall must not be claimed to have been destroyed by fire");
 
+  const godType = entityTypes.get("entity:god-of-heaven");
+  if (godType !== "deity")
+    fail(`the God of heaven must use the canonical deity type, got ${godType}`);
+
+  const pluralForms = new Set(["us", "we", "our", "ourselves"]);
+  for (const mention of edition.records.mentions) {
+    if (!pluralForms.has(mention.selector.exact_quote.toLowerCase())) continue;
+    const type = entityTypes.get(mention.target.key);
+    if (type === "person" || type === "deity")
+      fail(
+        `plural reference ${mention.mention_key} targets a singular ${type}`,
+      );
+  }
+  const usAt19 = edition.records.mentions.find(
+    (m) => m.verse_key === "verse:Neh.2.19" && m.selector.exact_quote === "us",
+  );
+  if (!usAt19 || usAt19.target.key !== "entity:judean-people")
+    fail(
+      "Neh.2.19 'us' must target the opposed collective, not a single person",
+    );
+
   const stopOrder = canonical.records.claims.find(
     (c) => c.claim_key === "claim:prior-stop-order",
   );
@@ -847,5 +868,34 @@ describe("Nehemiah 2 reference dataset — invalid mutations are rejected", () =
     bad.edition.dependencies[0]!.digest = digest(bad.canonical);
     bad.locale.dependencies[0]!.digest = digest(bad.canonical);
     expect(() => checkGlobalNeh2(bad)).toThrow(/broken down/);
+  });
+
+  it("rejects the God of heaven typed as person", () => {
+    const bad = clone(dataset);
+    const rec = bad.canonical.records.reconciliation_records.find(
+      (r) => r.canonical_entity_key === "entity:god-of-heaven",
+    );
+    if (!rec) throw new Error("god-of-heaven reconciliation missing");
+    const candidate = bad.canonical.records.entity_candidates.find(
+      (c) => c.candidate_key === rec.candidate_key,
+    );
+    if (!candidate) throw new Error("god-of-heaven candidate missing");
+    candidate.entity_type = "person";
+    bad.edition.dependencies[0]!.digest = digest(bad.canonical);
+    bad.locale.dependencies[0]!.digest = digest(bad.canonical);
+    expect(() => checkGlobalNeh2(bad)).toThrow(/deity type/);
+  });
+
+  it("rejects a plural reference targeting a single person", () => {
+    const bad = clone(dataset);
+    const us = bad.edition.records.mentions.find(
+      (m) =>
+        m.verse_key === "verse:Neh.2.19" && m.selector.exact_quote === "us",
+    );
+    if (!us) throw new Error("Neh.2.19 'us' mention missing");
+    us.target.key = "entity:nehemiah-governor";
+    bad.edition.dependencies[0]!.digest = digest(bad.canonical);
+    bad.locale.dependencies[0]!.digest = digest(bad.canonical);
+    expect(() => checkGlobalNeh2(bad)).toThrow(/plural reference/);
   });
 });

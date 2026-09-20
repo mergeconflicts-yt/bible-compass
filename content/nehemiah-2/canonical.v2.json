@@ -122,7 +122,7 @@
       },
       {
         "candidate_key": "candidate:neh2:god-of-heaven",
-        "entity_type": "person",
+        "entity_type": "deity",
         "proposed_label": "The God of heaven",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -2500,6 +2500,18 @@
         "review_status": "draft"
       },
       {
+        "attestation_key": "attestation:eng-v22-neh-2-19-judean-people-participant",
+        "reference_key": "verse:Neh.2.19",
+        "entity_key": "entity:judean-people",
+        "kind": "participant",
+        "textual_basis": "strongly_implied",
+        "identification_status": "established",
+        "claim_keys": [
+          "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
         "attestation_key": "attestation:eng-v22-neh-2-19-artaxerxes-i-implied-referent",
         "reference_key": "verse:Neh.2.19",
         "entity_key": "entity:artaxerxes-i",
@@ -3934,6 +3946,7 @@
             "attestation:eng-v22-neh-2-19-tobiah-ammonite-participant",
             "attestation:eng-v22-neh-2-19-geshem-arabian-participant",
             "attestation:eng-v22-neh-2-19-nehemiah-governor-participant",
+            "attestation:eng-v22-neh-2-19-judean-people-participant",
             "attestation:eng-v22-neh-2-19-artaxerxes-i-implied-referent",
             "attestation:eng-v22-neh-2-20-nehemiah-governor-participant",
             "attestation:eng-v22-neh-2-20-god-of-heaven-topic",
@@ -3968,8 +3981,8 @@
       "note": "Entity identification covers the curated Nehemiah 2 catalog; pronouns and indirect referents are not exhaustively resolved, so coverage is reported incomplete."
     },
     {
-      "code": "entity-type-vocabulary-gap",
-      "note": "The entity-type vocabulary has no deity type; 'God of heaven' is modelled as person pending vocabulary review."
+      "code": "deity-entity-type",
+      "note": "Divine beings use the canonical 'deity' entity type; the God of heaven is typed 'deity', not 'person'."
     }
   ]
 }
