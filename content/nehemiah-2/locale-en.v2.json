@@ -52,7 +52,7 @@
     {
       "package_key": "draft:neh2:canonical",
       "revision": 1,
-      "digest": "sha256:b3d1f6b4098e0f125efebe0dbbf25d914e2774583e0189beb64a53474008ab2b"
+      "digest": "sha256:fbd74c20ed334e22f1faed62f0f4834a5b9e846519fd7c013e54d664c644da6f"
     }
   ],
   "records": {
@@ -220,14 +220,14 @@
           "text": "The God to whom Nehemiah prays and on whom he relies for success.",
           "claim_keys": [
             "claim:nehemiah-prays",
-            "claim:god-grants-success"
+            "claim:god-will-grant-success"
           ]
         },
         "extended_description": {
           "text": "Nehemiah prays to the God of heaven before answering the king (2:4) and declares that the God of heaven will grant success to the builders (2:20). The entity-type vocabulary has no deity type; 'person' is used pending vocabulary review.",
           "claim_keys": [
             "claim:nehemiah-prays",
-            "claim:god-grants-success"
+            "claim:god-will-grant-success"
           ]
         },
         "review_status": "draft"
@@ -383,21 +383,43 @@
           "the city wall"
         ],
         "short_description": {
-          "text": "The broken wall and burned gates that Nehemiah inspects and rebuilds.",
+          "text": "The wall of Jerusalem, broken down in Nehemiah's time and rebuilt by the people.",
           "claim_keys": [
-            "claim:wall-destroyed-by-fire",
+            "claim:wall-broken-down",
             "claim:jerusalem-wall-part-of-jerusalem",
             "claim:nehemiah-inspects-wall",
             "claim:people-agree-rebuild"
           ]
         },
         "extended_description": {
-          "text": "Jerusalem's wall and gates had been broken down and destroyed by fire (2:3, 13, 17). Nehemiah inspects the damage by night and calls the people to rebuild the wall.",
+          "text": "Nehemiah 2:13 and 2:17 describe the wall of Jerusalem as broken down. Nehemiah inspects the damage by night and calls the people to rebuild the wall; the chapter does not say the wall itself was burned.",
           "claim_keys": [
-            "claim:wall-destroyed-by-fire",
+            "claim:wall-broken-down",
             "claim:jerusalem-wall-part-of-jerusalem",
             "claim:nehemiah-inspects-wall",
             "claim:people-agree-rebuild"
+          ]
+        },
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:jerusalem-gates",
+        "entity_key": "entity:jerusalem-gates",
+        "language_tag": "en",
+        "preferred_name": "The gates of Jerusalem",
+        "aliases": [
+          "its gates"
+        ],
+        "short_description": {
+          "text": "The city gates, which had been destroyed by fire.",
+          "claim_keys": [
+            "claim:gates-destroyed-by-fire"
+          ]
+        },
+        "extended_description": {
+          "text": "Jerusalem's gates are described as destroyed and burned by fire (2:3, 2:13, 2:17). Rebuilding them is part of the work Nehemiah and the people undertake.",
+          "claim_keys": [
+            "claim:gates-destroyed-by-fire"
           ]
         },
         "review_status": "draft"
@@ -723,7 +745,7 @@
               "claim:artaxerxes-grants-request",
               "claim:nehemiah-inspects-wall",
               "claim:people-agree-rebuild",
-              "claim:opponents-no-claim"
+              "claim:sanballat-no-claim"
             ],
             "open_question_key": null
           },
@@ -904,7 +926,8 @@
             "text": "Nehemiah secretly inspects the broken walls and burned gates, finding the damage so extensive that at the King's Pool his mount cannot pass through.",
             "claim_keys": [
               "claim:nehemiah-inspects-wall",
-              "claim:wall-destroyed-by-fire"
+              "claim:wall-broken-down",
+              "claim:gates-destroyed-by-fire"
             ],
             "open_question_key": null
           },
@@ -956,7 +979,8 @@
             "text": "Nehemiah tells the people of the city's ruin and disgrace, of the gracious hand of God and of the king's words, and they agree to start rebuilding.",
             "claim_keys": [
               "claim:people-agree-rebuild",
-              "claim:wall-destroyed-by-fire"
+              "claim:wall-broken-down",
+              "claim:gates-destroyed-by-fire"
             ],
             "open_question_key": null
           },
@@ -1001,7 +1025,7 @@
           "where": {
             "text": "Jerusalem.",
             "claim_keys": [
-              "claim:opponents-no-claim"
+              "claim:sanballat-no-claim"
             ],
             "open_question_key": null
           },
@@ -1013,8 +1037,10 @@
           "what": {
             "text": "The opponents mock the builders and accuse them of rebelling against the king. Nehemiah answers that the God of heaven will grant success, and that they have no portion, right or claim in Jerusalem.",
             "claim_keys": [
-              "claim:opponents-no-claim",
-              "claim:god-grants-success"
+              "claim:sanballat-no-claim",
+              "claim:tobiah-no-claim",
+              "claim:geshem-no-claim",
+              "claim:god-will-grant-success"
             ],
             "open_question_key": null
           },
@@ -1035,7 +1061,7 @@
           "immediate_summary": {
             "text": "Nehemiah answers the opponents' mockery with confidence in God.",
             "claim_keys": [
-              "claim:god-grants-success"
+              "claim:god-will-grant-success"
             ],
             "open_question_key": null
           }
@@ -1102,6 +1128,18 @@
         "role_text": "Jerusalem is the ruined ancestral city Nehemiah seeks to restore; the chapter does not name it directly but calls it the city where his fathers are buried.",
         "claim_keys": [
           "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-request-jerusalem-gates",
+        "relevance_key": "relevance:neh-2-request-jerusalem-gates",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:jerusalem-gates",
+        "language_tag": "en",
+        "role_text": "Jerusalem's gates had been destroyed by fire; rebuilding them is part of what Nehemiah asks to restore.",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -1351,10 +1389,22 @@
         "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
         "entity_key": "entity:jerusalem-wall",
         "language_tag": "en",
-        "role_text": "The broken wall and burned gates are the object of Nehemiah's inspection.",
+        "role_text": "The broken wall is the object of Nehemiah's inspection.",
         "claim_keys": [
           "claim:nehemiah-inspects-wall",
-          "claim:wall-destroyed-by-fire"
+          "claim:wall-broken-down"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:neh-2-inspection-jerusalem-gates",
+        "relevance_key": "relevance:neh-2-inspection-jerusalem-gates",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:jerusalem-gates",
+        "language_tag": "en",
+        "role_text": "The gates that had been destroyed by fire are part of the damage Nehemiah inspects.",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -1461,6 +1511,18 @@
         "review_status": "draft"
       },
       {
+        "localization_key": "relevance-localization:en:neh-2-rally-jerusalem-gates",
+        "relevance_key": "relevance:neh-2-rally-jerusalem-gates",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:jerusalem-gates",
+        "language_tag": "en",
+        "role_text": "The gates that had been burned down are named among the ruins the people commit to rebuild.",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
+        ],
+        "review_status": "draft"
+      },
+      {
         "localization_key": "relevance-localization:en:neh-2-rally-jerusalem",
         "relevance_key": "relevance:neh-2-rally-jerusalem",
         "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
@@ -1500,7 +1562,7 @@
         "language_tag": "en",
         "role_text": "Nehemiah answers mockery by trusting God for success and denying the opponents any claim in Jerusalem.",
         "claim_keys": [
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -1512,7 +1574,7 @@
         "language_tag": "en",
         "role_text": "Sanballat joins the mockery and the accusation of rebellion.",
         "claim_keys": [
-          "claim:opponents-no-claim"
+          "claim:sanballat-no-claim"
         ],
         "review_status": "draft"
       },
@@ -1558,7 +1620,7 @@
         "language_tag": "en",
         "role_text": "Nehemiah declares that the God of heaven will grant success.",
         "claim_keys": [
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -1570,7 +1632,9 @@
         "language_tag": "en",
         "role_text": "Nehemiah denies the opponents any portion, right or claim in Jerusalem.",
         "claim_keys": [
-          "claim:opponents-no-claim"
+          "claim:sanballat-no-claim",
+          "claim:tobiah-no-claim",
+          "claim:geshem-no-claim"
         ],
         "review_status": "draft"
       },

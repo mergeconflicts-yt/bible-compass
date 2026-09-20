@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Sync the Nehemiah 2 context draft into the mobile app bundle.
 
-Source of truth: content/nehemiah-2/context-draft.json (AI draft, UNREVIEWED).
+Source of truth: content/nehemiah-2/legacy/context-draft.json (AI draft, UNREVIEWED).
+(The legacy single-file draft is kept under legacy/ so glob-based importers of the
+CUR-01 *.v2.json packages beside it cannot pick it up by mistake.)
 Output: apps/mobile/assets/content/nehemiah-2.draft.json (verbatim copy).
 
 The app renders this only behind explicit DRAFT labeling — see
@@ -14,7 +16,7 @@ import json
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(ROOT, "content", "nehemiah-2", "context-draft.json")
+SRC = os.path.join(ROOT, "content", "nehemiah-2", "legacy", "context-draft.json")
 DST = os.path.join(ROOT, "apps", "mobile", "assets", "content", "nehemiah-2.draft.json")
 
 

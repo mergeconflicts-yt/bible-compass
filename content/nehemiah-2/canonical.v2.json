@@ -202,6 +202,15 @@
         "review_status": "draft"
       },
       {
+        "candidate_key": "candidate:neh2:jerusalem-gates",
+        "entity_type": "structure",
+        "proposed_label": "The gates of Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
         "candidate_key": "candidate:neh2:valley-gate",
         "entity_type": "structure",
         "proposed_label": "The Valley Gate",
@@ -634,22 +643,41 @@
         "review_status": "draft"
       },
       {
-        "claim_key": "claim:wall-destroyed-by-fire",
+        "claim_key": "claim:wall-broken-down",
         "subject": {
           "type": "entity",
           "key": "entity:jerusalem-wall"
         },
-        "predicate": "destroyed_by_fire",
+        "predicate": "broken_down",
         "object": {
           "type": "text",
-          "value": "the wall and gates of Jerusalem"
+          "value": "the wall of Jerusalem"
         },
         "evidence_status": "established",
         "textual_basis": "explicit",
         "citation_keys": [
-          "citation:wall-destroyed-by-fire-1",
-          "citation:wall-destroyed-by-fire-2",
-          "citation:wall-destroyed-by-fire-3"
+          "citation:wall-broken-down-1",
+          "citation:wall-broken-down-2"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "claim_key": "claim:gates-destroyed-by-fire",
+        "subject": {
+          "type": "entity",
+          "key": "entity:jerusalem-gates"
+        },
+        "predicate": "destroyed_by_fire",
+        "object": {
+          "type": "text",
+          "value": "the gates of Jerusalem"
+        },
+        "evidence_status": "established",
+        "textual_basis": "explicit",
+        "citation_keys": [
+          "citation:gates-destroyed-by-fire-1",
+          "citation:gates-destroyed-by-fire-2",
+          "citation:gates-destroyed-by-fire-3"
         ],
         "review_status": "draft"
       },
@@ -678,7 +706,7 @@
           "type": "entity",
           "key": "entity:judean-people"
         },
-        "predicate": "rebuilds",
+        "predicate": "agrees_to_rebuild",
         "object": {
           "type": "entity",
           "key": "entity:jerusalem-wall"
@@ -692,12 +720,12 @@
         "review_status": "draft"
       },
       {
-        "claim_key": "claim:god-grants-success",
+        "claim_key": "claim:god-will-grant-success",
         "subject": {
           "type": "entity",
           "key": "entity:god-of-heaven"
         },
-        "predicate": "grants_success",
+        "predicate": "will_grant_success",
         "object": {
           "type": "scope",
           "key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20"
@@ -705,12 +733,12 @@
         "evidence_status": "established",
         "textual_basis": "explicit",
         "citation_keys": [
-          "citation:god-grants-success"
+          "citation:god-will-grant-success"
         ],
         "review_status": "draft"
       },
       {
-        "claim_key": "claim:opponents-no-claim",
+        "claim_key": "claim:sanballat-no-claim",
         "subject": {
           "type": "entity",
           "key": "entity:sanballat-the-horonite"
@@ -720,10 +748,46 @@
           "type": "entity",
           "key": "entity:jerusalem"
         },
-        "evidence_status": "established",
+        "evidence_status": "probable",
         "textual_basis": "explicit",
         "citation_keys": [
-          "citation:opponents-no-claim"
+          "citation:sanballat-no-claim"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "claim_key": "claim:tobiah-no-claim",
+        "subject": {
+          "type": "entity",
+          "key": "entity:tobiah-ammonite"
+        },
+        "predicate": "has_no_claim_in",
+        "object": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "evidence_status": "probable",
+        "textual_basis": "explicit",
+        "citation_keys": [
+          "citation:tobiah-no-claim"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "claim_key": "claim:geshem-no-claim",
+        "subject": {
+          "type": "entity",
+          "key": "entity:geshem-arabian"
+        },
+        "predicate": "has_no_claim_in",
+        "object": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "evidence_status": "probable",
+        "textual_basis": "explicit",
+        "citation_keys": [
+          "citation:geshem-no-claim"
         ],
         "review_status": "draft"
       },
@@ -772,12 +836,13 @@
         "predicate": "preceded_by",
         "object": {
           "type": "text",
-          "value": "an imperial order that stopped the city's rebuilding by force"
+          "value": "an imperial order to stop the city's rebuilding, forcibly enforced"
         },
         "evidence_status": "probable",
         "textual_basis": "explicit",
         "citation_keys": [
-          "citation:prior-stop-order"
+          "citation:prior-stop-order-1",
+          "citation:prior-stop-order-2"
         ],
         "review_status": "draft"
       },
@@ -1213,19 +1278,9 @@
         "review_status": "draft"
       },
       {
-        "citation_key": "citation:wall-destroyed-by-fire-1",
+        "citation_key": "citation:wall-broken-down-1",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire"
-        ],
-        "evidence_item_key": "evidence:bsb:neh-2-3",
-        "stance": "supports",
-        "evidence_form": "direct",
-        "review_status": "draft"
-      },
-      {
-        "citation_key": "citation:wall-destroyed-by-fire-2",
-        "claim_keys": [
-          "claim:wall-destroyed-by-fire"
+          "claim:wall-broken-down"
         ],
         "evidence_item_key": "evidence:bsb:neh-2-13",
         "stance": "supports",
@@ -1233,9 +1288,39 @@
         "review_status": "draft"
       },
       {
-        "citation_key": "citation:wall-destroyed-by-fire-3",
+        "citation_key": "citation:wall-broken-down-2",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire"
+          "claim:wall-broken-down"
+        ],
+        "evidence_item_key": "evidence:bsb:neh-2-17",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      },
+      {
+        "citation_key": "citation:gates-destroyed-by-fire-1",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
+        ],
+        "evidence_item_key": "evidence:bsb:neh-2-3",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      },
+      {
+        "citation_key": "citation:gates-destroyed-by-fire-2",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
+        ],
+        "evidence_item_key": "evidence:bsb:neh-2-13",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      },
+      {
+        "citation_key": "citation:gates-destroyed-by-fire-3",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "evidence_item_key": "evidence:bsb:neh-2-17",
         "stance": "supports",
@@ -1283,9 +1368,9 @@
         "review_status": "draft"
       },
       {
-        "citation_key": "citation:god-grants-success",
+        "citation_key": "citation:god-will-grant-success",
         "claim_keys": [
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "evidence_item_key": "evidence:bsb:neh-2-20",
         "stance": "supports",
@@ -1293,9 +1378,29 @@
         "review_status": "draft"
       },
       {
-        "citation_key": "citation:opponents-no-claim",
+        "citation_key": "citation:sanballat-no-claim",
         "claim_keys": [
-          "claim:opponents-no-claim"
+          "claim:sanballat-no-claim"
+        ],
+        "evidence_item_key": "evidence:bsb:neh-2-20",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      },
+      {
+        "citation_key": "citation:tobiah-no-claim",
+        "claim_keys": [
+          "claim:tobiah-no-claim"
+        ],
+        "evidence_item_key": "evidence:bsb:neh-2-20",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      },
+      {
+        "citation_key": "citation:geshem-no-claim",
+        "claim_keys": [
+          "claim:geshem-no-claim"
         ],
         "evidence_item_key": "evidence:bsb:neh-2-20",
         "stance": "supports",
@@ -1323,11 +1428,21 @@
         "review_status": "draft"
       },
       {
-        "citation_key": "citation:prior-stop-order",
+        "citation_key": "citation:prior-stop-order-1",
         "claim_keys": [
           "claim:prior-stop-order"
         ],
-        "evidence_item_key": "evidence:bsb:ezra-4-17",
+        "evidence_item_key": "evidence:bsb:ezra-4-21",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      },
+      {
+        "citation_key": "citation:prior-stop-order-2",
+        "claim_keys": [
+          "claim:prior-stop-order"
+        ],
+        "evidence_item_key": "evidence:bsb:ezra-4-23",
         "stance": "supports",
         "evidence_form": "direct",
         "review_status": "draft"
@@ -1409,7 +1524,7 @@
         "reference_key": "verse:Neh.2.1",
         "entity_key": "entity:nehemiah-governor",
         "kind": "primary_subject",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1472,7 +1587,7 @@
         "reference_key": "verse:Neh.2.2",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1485,7 +1600,7 @@
         "reference_key": "verse:Neh.2.3",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1521,17 +1636,14 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:eng-v22-neh-2-3-jerusalem-wall-topic",
+        "attestation_key": "attestation:eng-v22-neh-2-3-jerusalem-gates-topic",
         "reference_key": "verse:Neh.2.3",
-        "entity_key": "entity:jerusalem-wall",
+        "entity_key": "entity:jerusalem-gates",
         "kind": "topic",
-        "textual_basis": "strongly_implied",
+        "textual_basis": "explicit",
         "identification_status": "established",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire",
-          "claim:jerusalem-wall-part-of-jerusalem",
-          "claim:nehemiah-inspects-wall",
-          "claim:people-agree-rebuild"
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -1554,7 +1666,7 @@
         "reference_key": "verse:Neh.2.4",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1571,7 +1683,7 @@
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-prays",
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -1592,7 +1704,7 @@
         "reference_key": "verse:Neh.2.5",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1671,7 +1783,7 @@
         "reference_key": "verse:Neh.2.6",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1684,7 +1796,7 @@
         "reference_key": "verse:Neh.2.7",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1754,6 +1866,19 @@
         "review_status": "draft"
       },
       {
+        "attestation_key": "attestation:eng-v22-neh-2-8-nehemiah-governor-participant",
+        "reference_key": "verse:Neh.2.8",
+        "entity_key": "entity:nehemiah-governor",
+        "kind": "participant",
+        "textual_basis": "strongly_implied",
+        "identification_status": "established",
+        "claim_keys": [
+          "claim:nehemiah-cupbearer",
+          "claim:nehemiah-serves-artaxerxes"
+        ],
+        "review_status": "draft"
+      },
+      {
         "attestation_key": "attestation:eng-v22-neh-2-8-artaxerxes-i-participant",
         "reference_key": "verse:Neh.2.8",
         "entity_key": "entity:artaxerxes-i",
@@ -1811,7 +1936,7 @@
         "textual_basis": "explicit",
         "identification_status": "established",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire",
+          "claim:wall-broken-down",
           "claim:jerusalem-wall-part-of-jerusalem",
           "claim:nehemiah-inspects-wall",
           "claim:people-agree-rebuild"
@@ -1836,7 +1961,7 @@
         "reference_key": "verse:Neh.2.9",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1905,6 +2030,19 @@
         "review_status": "draft"
       },
       {
+        "attestation_key": "attestation:eng-v22-neh-2-10-nehemiah-governor-implied-referent",
+        "reference_key": "verse:Neh.2.10",
+        "entity_key": "entity:nehemiah-governor",
+        "kind": "implied_referent",
+        "textual_basis": "strongly_implied",
+        "identification_status": "established",
+        "claim_keys": [
+          "claim:nehemiah-cupbearer",
+          "claim:nehemiah-serves-artaxerxes"
+        ],
+        "review_status": "draft"
+      },
+      {
         "attestation_key": "attestation:eng-v22-neh-2-10-sanballat-the-horonite-participant",
         "reference_key": "verse:Neh.2.10",
         "entity_key": "entity:sanballat-the-horonite",
@@ -1946,7 +2084,7 @@
         "reference_key": "verse:Neh.2.11",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -1972,7 +2110,7 @@
         "reference_key": "verse:Neh.2.12",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2002,7 +2140,7 @@
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-prays",
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -2011,7 +2149,7 @@
         "reference_key": "verse:Neh.2.13",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2061,10 +2199,22 @@
         "textual_basis": "explicit",
         "identification_status": "established",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire",
+          "claim:wall-broken-down",
           "claim:jerusalem-wall-part-of-jerusalem",
           "claim:nehemiah-inspects-wall",
           "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:eng-v22-neh-2-13-jerusalem-gates-topic",
+        "reference_key": "verse:Neh.2.13",
+        "entity_key": "entity:jerusalem-gates",
+        "kind": "topic",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -2086,7 +2236,7 @@
         "reference_key": "verse:Neh.2.14",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2124,7 +2274,7 @@
         "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire",
+          "claim:wall-broken-down",
           "claim:jerusalem-wall-part-of-jerusalem",
           "claim:nehemiah-inspects-wall",
           "claim:people-agree-rebuild"
@@ -2136,7 +2286,7 @@
         "reference_key": "verse:Neh.2.15",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2152,7 +2302,7 @@
         "textual_basis": "explicit",
         "identification_status": "established",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire",
+          "claim:wall-broken-down",
           "claim:jerusalem-wall-part-of-jerusalem",
           "claim:nehemiah-inspects-wall",
           "claim:people-agree-rebuild"
@@ -2176,7 +2326,7 @@
         "reference_key": "verse:Neh.2.16",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2201,7 +2351,7 @@
         "reference_key": "verse:Neh.2.17",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2217,10 +2367,22 @@
         "textual_basis": "explicit",
         "identification_status": "established",
         "claim_keys": [
-          "claim:wall-destroyed-by-fire",
+          "claim:wall-broken-down",
           "claim:jerusalem-wall-part-of-jerusalem",
           "claim:nehemiah-inspects-wall",
           "claim:people-agree-rebuild"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:eng-v22-neh-2-17-jerusalem-gates-topic",
+        "reference_key": "verse:Neh.2.17",
+        "entity_key": "entity:jerusalem-gates",
+        "kind": "topic",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -2254,7 +2416,7 @@
         "reference_key": "verse:Neh.2.18",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2329,7 +2491,7 @@
         "reference_key": "verse:Neh.2.19",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2356,7 +2518,7 @@
         "reference_key": "verse:Neh.2.20",
         "entity_key": "entity:nehemiah-governor",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-cupbearer",
@@ -2373,7 +2535,7 @@
         "identification_status": "established",
         "claim_keys": [
           "claim:nehemiah-prays",
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -2674,10 +2836,7 @@
           "entity:artaxerxes-i",
           "entity:queen"
         ],
-        "place_entity_keys": [
-          "entity:susa",
-          "entity:persian-empire"
-        ],
+        "place_entity_keys": [],
         "scripture_accounts": [
           {
             "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
@@ -2805,8 +2964,10 @@
           }
         ],
         "claim_keys": [
-          "claim:opponents-no-claim",
-          "claim:god-grants-success"
+          "claim:sanballat-no-claim",
+          "claim:tobiah-no-claim",
+          "claim:geshem-no-claim",
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       }
@@ -2977,7 +3138,7 @@
         "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
         "entity_key": "entity:cupbearer",
         "importance": "supporting",
-        "is_attested": false,
+        "is_attested": true,
         "claim_keys": [
           "claim:nehemiah-cupbearer"
         ],
@@ -2999,9 +3160,20 @@
         "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
         "entity_key": "entity:jerusalem",
         "importance": "central",
-        "is_attested": false,
+        "is_attested": true,
         "claim_keys": [
           "claim:jerusalem-ancestral-city"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:neh-2-request-jerusalem-gates",
+        "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
+        "entity_key": "entity:jerusalem-gates",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -3063,7 +3235,7 @@
         "scope_key": "scope:neh-2-request:refsys:eng-v22:Neh.2.1-Neh.2.8",
         "entity_key": "entity:kings-forest",
         "importance": "background",
-        "is_attested": false,
+        "is_attested": true,
         "claim_keys": [
           "claim:asaph-keeper-forest"
         ],
@@ -3232,7 +3404,18 @@
         "is_attested": true,
         "claim_keys": [
           "claim:nehemiah-inspects-wall",
-          "claim:wall-destroyed-by-fire"
+          "claim:wall-broken-down"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:neh-2-inspection-jerusalem-gates",
+        "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
+        "entity_key": "entity:jerusalem-gates",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
         ],
         "review_status": "draft"
       },
@@ -3294,7 +3477,7 @@
         "scope_key": "scope:neh-2-inspection:refsys:eng-v22:Neh.2.11-Neh.2.16",
         "entity_key": "entity:judean-people",
         "importance": "background",
-        "is_attested": false,
+        "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -3330,6 +3513,17 @@
         "review_status": "draft"
       },
       {
+        "relevance_key": "relevance:neh-2-rally-jerusalem-gates",
+        "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
+        "entity_key": "entity:jerusalem-gates",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [
+          "claim:gates-destroyed-by-fire"
+        ],
+        "review_status": "draft"
+      },
+      {
         "relevance_key": "relevance:neh-2-rally-jerusalem",
         "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
         "entity_key": "entity:jerusalem",
@@ -3352,7 +3546,7 @@
         "scope_key": "scope:neh-2-rally:refsys:eng-v22:Neh.2.17-Neh.2.18",
         "entity_key": "entity:artaxerxes-i",
         "importance": "background",
-        "is_attested": false,
+        "is_attested": true,
         "claim_keys": [
           "claim:artaxerxes-grants-request"
         ],
@@ -3365,7 +3559,7 @@
         "importance": "central",
         "is_attested": true,
         "claim_keys": [
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -3376,7 +3570,7 @@
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [
-          "claim:opponents-no-claim"
+          "claim:sanballat-no-claim"
         ],
         "review_status": "draft"
       },
@@ -3407,7 +3601,7 @@
         "scope_key": "scope:neh-2-answer:refsys:eng-v22:Neh.2.19-Neh.2.20",
         "entity_key": "entity:artaxerxes-i",
         "importance": "background",
-        "is_attested": false,
+        "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -3418,7 +3612,7 @@
         "importance": "central",
         "is_attested": true,
         "claim_keys": [
-          "claim:god-grants-success"
+          "claim:god-will-grant-success"
         ],
         "review_status": "draft"
       },
@@ -3429,7 +3623,9 @@
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [
-          "claim:opponents-no-claim"
+          "claim:sanballat-no-claim",
+          "claim:tobiah-no-claim",
+          "claim:geshem-no-claim"
         ],
         "review_status": "draft"
       },
@@ -3537,6 +3733,12 @@
       {
         "candidate_key": "candidate:neh2:jerusalem-wall",
         "canonical_entity_key": "entity:jerusalem-wall",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:neh2:jerusalem-gates",
+        "canonical_entity_key": "entity:jerusalem-gates",
         "resolution_status": "created_new_canonical",
         "review_status": "draft"
       },
@@ -3664,7 +3866,7 @@
             "attestation:eng-v22-neh-2-3-nehemiah-governor-participant",
             "attestation:eng-v22-neh-2-3-artaxerxes-i-participant",
             "attestation:eng-v22-neh-2-3-jerusalem-location",
-            "attestation:eng-v22-neh-2-3-jerusalem-wall-topic",
+            "attestation:eng-v22-neh-2-3-jerusalem-gates-topic",
             "attestation:eng-v22-neh-2-4-artaxerxes-i-participant",
             "attestation:eng-v22-neh-2-4-nehemiah-governor-participant",
             "attestation:eng-v22-neh-2-4-god-of-heaven-topic",
@@ -3682,6 +3884,7 @@
             "attestation:eng-v22-neh-2-7-governors-beyond-the-river-participant",
             "attestation:eng-v22-neh-2-7-beyond-the-river-location",
             "attestation:eng-v22-neh-2-7-judah-location",
+            "attestation:eng-v22-neh-2-8-nehemiah-governor-participant",
             "attestation:eng-v22-neh-2-8-artaxerxes-i-participant",
             "attestation:eng-v22-neh-2-8-asaph-royal-park-participant",
             "attestation:eng-v22-neh-2-8-timber-topic",
@@ -3694,6 +3897,7 @@
             "attestation:eng-v22-neh-2-9-royal-letters-topic",
             "attestation:eng-v22-neh-2-9-royal-escort-participant",
             "attestation:eng-v22-neh-2-9-artaxerxes-i-implied-referent",
+            "attestation:eng-v22-neh-2-10-nehemiah-governor-implied-referent",
             "attestation:eng-v22-neh-2-10-sanballat-the-horonite-participant",
             "attestation:eng-v22-neh-2-10-tobiah-ammonite-participant",
             "attestation:eng-v22-neh-2-10-israelites-participant",
@@ -3707,6 +3911,7 @@
             "attestation:eng-v22-neh-2-13-well-of-the-serpent-location",
             "attestation:eng-v22-neh-2-13-dung-gate-location",
             "attestation:eng-v22-neh-2-13-jerusalem-wall-topic",
+            "attestation:eng-v22-neh-2-13-jerusalem-gates-topic",
             "attestation:eng-v22-neh-2-13-jerusalem-location",
             "attestation:eng-v22-neh-2-14-nehemiah-governor-participant",
             "attestation:eng-v22-neh-2-14-fountain-gate-location",
@@ -3719,6 +3924,7 @@
             "attestation:eng-v22-neh-2-16-judean-people-participant",
             "attestation:eng-v22-neh-2-17-nehemiah-governor-participant",
             "attestation:eng-v22-neh-2-17-jerusalem-wall-topic",
+            "attestation:eng-v22-neh-2-17-jerusalem-gates-topic",
             "attestation:eng-v22-neh-2-17-jerusalem-location",
             "attestation:eng-v22-neh-2-17-judean-people-participant",
             "attestation:eng-v22-neh-2-18-nehemiah-governor-participant",

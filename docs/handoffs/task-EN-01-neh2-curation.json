@@ -1,0 +1,101 @@
+{
+  "attempt_id": "task:EN-01-neh2-curation:attempt-2",
+  "task_id": "EN-01",
+  "task_title": "Fix English Nehemiah 2 curation — three-package reference dataset",
+  "result": "PASS (draft content; not approved, verified or production-ready)",
+  "user_visible_outcome": "Nehemiah 2 now has an accurate, structurally valid three-layer curation dataset under content/nehemiah-2/: a translation-independent canonical package, an English locale package, and a BSB edition package, plus an evidence catalog. It covers all 20 verses with 31 entities, 33 claims, 85 attestations, 16 relationships, 6 events, 6 passage scopes, 31 English profiles, 6 passage contexts, 50 'In this passage' roles, and 76 BSB mentions.",
+  "read_first": [
+    "AGENTS.md",
+    "docs/CANONICAL_IDENTIFIERS.md",
+    "docs/AI_CURATION_CONTRACT.md",
+    "docs/CONTEXT_DATA_ARCHITECTURE.md",
+    "docs/adr/003-adapt-context-data-architecture.md",
+    "docs/WHOLE_BIBLE_CURATION_SPEC.md",
+    "packages/content-schema/src/packages.ts",
+    "packages/content-schema/src/validators.ts",
+    "content/nehemiah-2/legacy/context-draft.json"
+  ],
+  "files_changed": [
+    "content/nehemiah-2/canonical.v2.json (new; contract v2.0.0 canonical package)",
+    "content/nehemiah-2/locale-en.v2.json (new; English locale package)",
+    "content/nehemiah-2/edition-bsb.v2.json (new; BSB edition mentions + selectors)",
+    "content/nehemiah-2/evidence-catalog.json (new; lightweight source provenance)",
+    "content/nehemiah-2/legacy/context-draft.json (moved from content/nehemiah-2/context-draft.json)",
+    "tools/curate_neh2.py (new; deterministic generator)",
+    "packages/content-schema/tests/neh2-global.test.ts (new; global + invalid-mutation tests)",
+    "packages/content-schema/src/packages.ts (minimal key-grammar fixes for ratified identifiers)",
+    "tools/sync-context-draft.py (read the legacy draft from legacy/)",
+    ".prettierignore (ignore generated Nehemiah 2 package JSON)"
+  ],
+  "files_not_changed": [
+    "content/curated/** (whole-Bible generated corpus, including content/curated/*/Neh.v2.json)",
+    "content/curated/tel/** (Telugu files untouched, as required)",
+    "No app code, no database migrations, no publication/approval workflow",
+    "No new dependencies"
+  ],
+  "findings_addressed": [
+    "Nehemiah now has 20 edition mentions (first-person 'I'/'me'/'us' and 'someone'); his attestations use textual_basis strongly_implied, not explicit, because the chapter never names him; verses 8, 9 and 10 no longer omit him.",
+    "Wall/fire error corrected: claim:wall-broken-down ('broken_down') and claim:gates-destroyed-by-fire ('destroyed_by_fire') replace the single wrong wall-destroyed-by-fire claim; a new entity:jerusalem-gates separates the burned gates from the wall.",
+    "Overstated predicates corrected: people 'agrees_to_rebuild' (not rebuilds); God 'will_grant_success' (future, not completed); the no-claim statement is asserted for all three opponents (sanballat/tobiah/geshem-no-claim).",
+    "Stop-order citation corrected to Ezra 4:21 (the order) and 4:23 (forcible enforcement); Ezra 4:17 removed.",
+    "Six relevance records no longer contradict their attestations (cupbearer, Jerusalem, king's forest, Judean people, Artaxerxes in rally and answer scopes now is_attested: true; Susa remains false because it has no attestation).",
+    "Mention keys now include the immutable edition revision/digest: mention:bsb-20260912-sha-b2898c49-neh-2-<v>:<entity>.",
+    "Audience event no longer lists the Persian Empire as a place and no longer asserts Susa while the location is recorded as uncertain.",
+    "Tests now verify provenance locators against the underlying source files (bundled BSB verses and, when present, TIPNR/BibleData/OpenBible quarantine files).",
+    "Tests rewritten without any/ts-ignore; the test file uses explicit interfaces.",
+    "Legacy context-draft.json moved to content/nehemiah-2/legacy/ so glob-based importers of *.v2.json cannot pick it up.",
+    "This EN-01 handoff added."
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 tools/curate_neh2.py",
+      "exit_code": 0,
+      "output": "canonical entities=31 claims=33 attestations=85; edition mentions=76; locale profiles=31 contexts=6 localizations=50; digest emitted"
+    },
+    {
+      "command": "npm --prefix packages/content-schema test",
+      "exit_code": 0,
+      "output": "7 suites, 250 tests passed (11 Nehemiah 2 global/invalid tests)"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    },
+    {
+      "command": "npm run lint",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    },
+    {
+      "command": "npx prettier --check .",
+      "exit_code": 0,
+      "output": "only 3 pre-existing unrelated files warned (.claude/settings.local.json, AGENTS.md, apps/mobile/expo-env.d.ts)"
+    },
+    {
+      "command": "regeneration diff",
+      "exit_code": 0,
+      "output": "byte-identical canonical/edition/locale output (deterministic)"
+    }
+  ],
+  "schema_changes": [
+    "packages/content-schema/src/packages.ts scopeKeySchema now allows upper-case OSIS in the reference span so the ratified key scope:neh-2:refsys:eng-v22:Neh.2.1-Neh.2.20 validates (docs/CANONICAL_IDENTIFIERS.md §6).",
+    "packages/content-schema/src/packages.ts editionKeySchema now allows the optional :sha-<8hex> suffix so the ratified immutable edition key edition:bsb@20260912:sha-b2898c49 validates (docs/CANONICAL_IDENTIFIERS.md §7).",
+    "Both are loosenings; no existing fixture or test regressed."
+  ],
+  "known_limitations": [
+    "ADR-004 was referenced by the task but does not exist in docs/; ADR-003 / CONTEXT_DATA_ARCHITECTURE.md was used as the authoritative model. Owner confirmation requested.",
+    "The entity-type vocabulary has no deity type; 'God of heaven' is modelled as person and flagged in editorial_observations.",
+    "Mentions/attestations cover the curated entity catalog; pronouns and indirect references are not exhaustively resolved, so canonical and edition coverage honestly report 'incomplete'.",
+    "Some context is genuinely uncertain and is marked blocked: the court city (Susa), the regnal-year reckoning, and the Persian-period locations of the Valley Gate and King's Pool.",
+    "The bulk content/curated/Neh.v2.json (whole-book fixture) is unchanged and is not the reference dataset.",
+    "No human review, approval, publication, database import or app integration has occurred."
+  ],
+  "needs_from_owner": [
+    "Confirm or author ADR-004 and say what it should cover.",
+    "Review the draft context and resolve the three blocking open questions.",
+    "Decide whether the wall/gates and role modelling (including 'God of heaven' as person) should change the entity-type vocabulary."
+  ],
+  "scope_guard": "Nehemiah 2 English only. No other chapters/books, no Telugu/Tamil changes, no whole-Bible regeneration, no database/app integration, no approval or publication. All records are review_status draft.",
+  "no_content_approved_or_published_by_ai": true
+}
