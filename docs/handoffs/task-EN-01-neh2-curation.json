@@ -1,5 +1,5 @@
 {
-  "attempt_id": "task:EN-01-neh2-curation:attempt-5",
+  "attempt_id": "task:EN-01-neh2-curation:attempt-6",
   "task_id": "EN-01",
   "task_title": "Fix English Nehemiah 2 curation — three-package reference dataset",
   "result": "PASS (draft content; not approved, verified or production-ready)",
@@ -38,7 +38,9 @@
     "tools/supabase-ci-bootstrap.sql (auth.uid uuid cast; USAGE ON SCHEMA auth)",
     "supabase/migrations/20260915000003_knowledge_claim_context.sql (symmetric -> is_symmetric)",
     "supabase/tests/03_knowledge_claim_context_test.sql (anon unpublished-invisibility)",
-    "supabase/tests/06_bookmark_identity_test.sql (owner count)"
+    "supabase/tests/06_bookmark_identity_test.sql (owner count)",
+    "supabase/migrations/20260915000011_publication_rules.sql (new; explicit view columns, attestation published gate, aligned RLS)",
+    "supabase/tests/04_review_package_rls_test.sql (functional verses/attestations/column tests)"
   ],
   "files_not_changed": [
     "content/curated/** (whole-Bible generated corpus, including content/curated/*/Neh.v2.json)",
@@ -59,7 +61,10 @@
     "Legacy context-draft.json moved to content/nehemiah-2/legacy/ so glob-based importers of *.v2.json cannot pick it up.",
     "Deity data model: a canonical 'deity' entity type was added to the vocabulary and 'God of heaven' is now typed deity, not person.",
     "Neh.2.19 plural 'us' now targets the opposed collective entity:judean-people instead of Nehemiah; a judean-people attestation was added at v19. Plural first-person references are now checked so they can never target a singular person/deity.",
-    "This EN-01 handoff added."
+    "This EN-01 handoff added.",
+    "P1 untested views fixed: anon published-row policy added for translation_editions; attestations allow policies rewritten to join package_members directly (the old EXISTS over claims could never match) and to require review_state='published'. Tests now seed published+draft editions/verses and attestations and assert anon sees exactly the published rows.",
+    "P1 publication rules completed as far as the schema allows: published_entities gated on package published_at/date/locale; published_attestations additionally gated on attestation review_state='published'; published_verses gated on edition status='published'. Licensing, territory and effective-date windows are NOT enforceable: rights live in private_registry with no binding to packages/editions, so no view or policy can check them. Adding that binding is a product schema decision requiring its own migration, RLS and tests.",
+    "P2 SELECT * removed: all three public views now list explicit client-safe columns (entities: key/slug/type/identification_status; attestations: entity/scope/unit/kind/explicitness/review_state; verses: edition/unit/book/chapter/verse/text/sha). Internal ids, provenance, created_at and any future private column are excluded, and test 04 asserts the exact column allowlists."
   ],
   "commands_executed": [
     {
@@ -106,6 +111,16 @@
       "command": "DATABASE_URL=postgresql://theone@localhost:5434/postgres sh tools/verify-supabase.sh",
       "exit_code": 0,
       "output": "RUN 01..07, SUPABASE-TESTS-PASS (RLS allow/deny, deity/event constraints)"
+    },
+    {
+      "command": "fresh initdb (PG17.11 + PostGIS 3.6); bootstrap + migrations 01..11 in order, ON_ERROR_STOP=1",
+      "exit_code": 0,
+      "output": "all 11 migrations applied, no errors"
+    },
+    {
+      "command": "DATABASE_URL=postgresql://theone@localhost:5434/postgres sh tools/verify-supabase.sh",
+      "exit_code": 0,
+      "output": "RUN 01..07, SUPABASE-TESTS-PASS (incl. new verses/attestations/column assertions)"
     }
   ],
   "schema_changes": [
@@ -137,8 +152,8 @@
   "no_content_approved_or_published_by_ai": true,
   "database_validation": {
     "environment": "macOS arm64, PostgreSQL 17.11 + PostGIS 3.6 (CI uses postgis/postgis:16-3.4; PG15+ required for security_invoker, satisfied by PG17)",
-    "rebuild": "clean initdb cluster; bootstrap + migrations 20260914000001..20260915000010 in glob order, ON_ERROR_STOP=1, zero errors",
-    "tests": "verify-supabase.sh ran 01_private_registry_rls through 07_bookmark_tombstones; all passed, exit 0",
+    "rebuild": "clean initdb cluster; bootstrap + migrations 20260914000001..20260915000011 in glob order, ON_ERROR_STOP=1, zero errors",
+    "tests": "verify-supabase.sh ran 01..07; all passed, exit 0 (incl. anon published_verses/attestations counts, attestation published gate, exact view-column allowlists)",
     "defects_fixed": [
       "tools/supabase-ci-bootstrap.sql: auth.uid() now casts to uuid (was return-type mismatch, blocked every RLS policy)",
       "supabase/migrations/20260915000003: relationship_predicates.s.symmetric renamed to is_symmetric (reserved word, blocked the whole migration)",
