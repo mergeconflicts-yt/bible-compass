@@ -1,0 +1,3772 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-hos-canonical",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-hos-canonical:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-hos-canonical",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-hos:refsys:tel-v1:hos.1.1-hos.14.9",
+      "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+      "scope:wb-hos-2:refsys:tel-v1:hos.2.1-hos.2.23",
+      "scope:wb-hos-3:refsys:tel-v1:hos.3.1-hos.3.5",
+      "scope:wb-hos-4:refsys:tel-v1:hos.4.1-hos.4.19",
+      "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+      "scope:wb-hos-6:refsys:tel-v1:hos.6.1-hos.6.11",
+      "scope:wb-hos-7:refsys:tel-v1:hos.7.1-hos.7.16",
+      "scope:wb-hos-8:refsys:tel-v1:hos.8.1-hos.8.14",
+      "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+      "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+      "scope:wb-hos-11:refsys:tel-v1:hos.11.1-hos.11.12",
+      "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+      "scope:wb-hos-13:refsys:tel-v1:hos.13.1-hos.13.16",
+      "scope:wb-hos-14:refsys:tel-v1:hos.14.1-hos.14.9",
+      "scope:wb-hos-1-p1:refsys:tel-v1:hos.1.1-hos.1.1",
+      "scope:wb-hos-1-p2:refsys:tel-v1:hos.1.2-hos.1.11",
+      "scope:wb-hos-2-p1:refsys:tel-v1:hos.2.1-hos.2.1",
+      "scope:wb-hos-2-p2:refsys:tel-v1:hos.2.2-hos.2.23",
+      "scope:wb-hos-3-p1:refsys:tel-v1:hos.3.1-hos.3.5",
+      "scope:wb-hos-4-p1:refsys:tel-v1:hos.4.1-hos.4.19",
+      "scope:wb-hos-5-p1:refsys:tel-v1:hos.5.1-hos.5.15",
+      "scope:wb-hos-6-p1:refsys:tel-v1:hos.6.1-hos.6.3",
+      "scope:wb-hos-6-p2:refsys:tel-v1:hos.6.4-hos.6.11",
+      "scope:wb-hos-7-p1:refsys:tel-v1:hos.7.1-hos.7.16",
+      "scope:wb-hos-8-p1:refsys:tel-v1:hos.8.1-hos.8.14",
+      "scope:wb-hos-9-p1:refsys:tel-v1:hos.9.1-hos.9.17",
+      "scope:wb-hos-10-p1:refsys:tel-v1:hos.10.1-hos.10.15",
+      "scope:wb-hos-11-p1:refsys:tel-v1:hos.11.1-hos.11.11",
+      "scope:wb-hos-11-p2:refsys:tel-v1:hos.11.12-hos.11.12",
+      "scope:wb-hos-12-p1:refsys:tel-v1:hos.12.1-hos.12.14",
+      "scope:wb-hos-13-p1:refsys:tel-v1:hos.13.1-hos.13.16",
+      "scope:wb-hos-14-p1:refsys:tel-v1:hos.14.1-hos.14.9"
+    ],
+    "reference_keys": [
+      "verse:Hos.1.1",
+      "verse:Hos.1.2",
+      "verse:Hos.1.3",
+      "verse:Hos.1.4",
+      "verse:Hos.1.5",
+      "verse:Hos.1.6",
+      "verse:Hos.1.7",
+      "verse:Hos.1.8",
+      "verse:Hos.1.9",
+      "verse:Hos.1.10",
+      "verse:Hos.1.11",
+      "verse:Hos.2.1",
+      "verse:Hos.2.2",
+      "verse:Hos.2.3",
+      "verse:Hos.2.4",
+      "verse:Hos.2.5",
+      "verse:Hos.2.6",
+      "verse:Hos.2.7",
+      "verse:Hos.2.8",
+      "verse:Hos.2.9",
+      "verse:Hos.2.10",
+      "verse:Hos.2.11",
+      "verse:Hos.2.12",
+      "verse:Hos.2.13",
+      "verse:Hos.2.14",
+      "verse:Hos.2.15",
+      "verse:Hos.2.16",
+      "verse:Hos.2.17",
+      "verse:Hos.2.18",
+      "verse:Hos.2.19",
+      "verse:Hos.2.20",
+      "verse:Hos.2.21",
+      "verse:Hos.2.22",
+      "verse:Hos.2.23",
+      "verse:Hos.3.1",
+      "verse:Hos.3.2",
+      "verse:Hos.3.3",
+      "verse:Hos.3.4",
+      "verse:Hos.3.5",
+      "verse:Hos.4.1",
+      "verse:Hos.4.2",
+      "verse:Hos.4.3",
+      "verse:Hos.4.4",
+      "verse:Hos.4.5",
+      "verse:Hos.4.6",
+      "verse:Hos.4.7",
+      "verse:Hos.4.8",
+      "verse:Hos.4.9",
+      "verse:Hos.4.10",
+      "verse:Hos.4.11",
+      "verse:Hos.4.12",
+      "verse:Hos.4.13",
+      "verse:Hos.4.14",
+      "verse:Hos.4.15",
+      "verse:Hos.4.16",
+      "verse:Hos.4.17",
+      "verse:Hos.4.18",
+      "verse:Hos.4.19",
+      "verse:Hos.5.1",
+      "verse:Hos.5.2",
+      "verse:Hos.5.3",
+      "verse:Hos.5.4",
+      "verse:Hos.5.5",
+      "verse:Hos.5.6",
+      "verse:Hos.5.7",
+      "verse:Hos.5.8",
+      "verse:Hos.5.9",
+      "verse:Hos.5.10",
+      "verse:Hos.5.11",
+      "verse:Hos.5.12",
+      "verse:Hos.5.13",
+      "verse:Hos.5.14",
+      "verse:Hos.5.15",
+      "verse:Hos.6.1",
+      "verse:Hos.6.2",
+      "verse:Hos.6.3",
+      "verse:Hos.6.4",
+      "verse:Hos.6.5",
+      "verse:Hos.6.6",
+      "verse:Hos.6.7",
+      "verse:Hos.6.8",
+      "verse:Hos.6.9",
+      "verse:Hos.6.10",
+      "verse:Hos.6.11",
+      "verse:Hos.7.1",
+      "verse:Hos.7.2",
+      "verse:Hos.7.3",
+      "verse:Hos.7.4",
+      "verse:Hos.7.5",
+      "verse:Hos.7.6",
+      "verse:Hos.7.7",
+      "verse:Hos.7.8",
+      "verse:Hos.7.9",
+      "verse:Hos.7.10",
+      "verse:Hos.7.11",
+      "verse:Hos.7.12",
+      "verse:Hos.7.13",
+      "verse:Hos.7.14",
+      "verse:Hos.7.15",
+      "verse:Hos.7.16",
+      "verse:Hos.8.1",
+      "verse:Hos.8.2",
+      "verse:Hos.8.3",
+      "verse:Hos.8.4",
+      "verse:Hos.8.5",
+      "verse:Hos.8.6",
+      "verse:Hos.8.7",
+      "verse:Hos.8.8",
+      "verse:Hos.8.9",
+      "verse:Hos.8.10",
+      "verse:Hos.8.11",
+      "verse:Hos.8.12",
+      "verse:Hos.8.13",
+      "verse:Hos.8.14",
+      "verse:Hos.9.1",
+      "verse:Hos.9.2",
+      "verse:Hos.9.3",
+      "verse:Hos.9.4",
+      "verse:Hos.9.5",
+      "verse:Hos.9.6",
+      "verse:Hos.9.7",
+      "verse:Hos.9.8",
+      "verse:Hos.9.9",
+      "verse:Hos.9.10",
+      "verse:Hos.9.11",
+      "verse:Hos.9.12",
+      "verse:Hos.9.13",
+      "verse:Hos.9.14",
+      "verse:Hos.9.15",
+      "verse:Hos.9.16",
+      "verse:Hos.9.17",
+      "verse:Hos.10.1",
+      "verse:Hos.10.2",
+      "verse:Hos.10.3",
+      "verse:Hos.10.4",
+      "verse:Hos.10.5",
+      "verse:Hos.10.6",
+      "verse:Hos.10.7",
+      "verse:Hos.10.8",
+      "verse:Hos.10.9",
+      "verse:Hos.10.10",
+      "verse:Hos.10.11",
+      "verse:Hos.10.12",
+      "verse:Hos.10.13",
+      "verse:Hos.10.14",
+      "verse:Hos.10.15",
+      "verse:Hos.11.1",
+      "verse:Hos.11.2",
+      "verse:Hos.11.3",
+      "verse:Hos.11.4",
+      "verse:Hos.11.5",
+      "verse:Hos.11.6",
+      "verse:Hos.11.7",
+      "verse:Hos.11.8",
+      "verse:Hos.11.9",
+      "verse:Hos.11.10",
+      "verse:Hos.11.11",
+      "verse:Hos.11.12",
+      "verse:Hos.12.1",
+      "verse:Hos.12.2",
+      "verse:Hos.12.3",
+      "verse:Hos.12.4",
+      "verse:Hos.12.5",
+      "verse:Hos.12.6",
+      "verse:Hos.12.7",
+      "verse:Hos.12.8",
+      "verse:Hos.12.9",
+      "verse:Hos.12.10",
+      "verse:Hos.12.11",
+      "verse:Hos.12.12",
+      "verse:Hos.12.13",
+      "verse:Hos.12.14",
+      "verse:Hos.13.1",
+      "verse:Hos.13.2",
+      "verse:Hos.13.3",
+      "verse:Hos.13.4",
+      "verse:Hos.13.5",
+      "verse:Hos.13.6",
+      "verse:Hos.13.7",
+      "verse:Hos.13.8",
+      "verse:Hos.13.9",
+      "verse:Hos.13.10",
+      "verse:Hos.13.11",
+      "verse:Hos.13.12",
+      "verse:Hos.13.13",
+      "verse:Hos.13.14",
+      "verse:Hos.13.15",
+      "verse:Hos.13.16",
+      "verse:Hos.14.1",
+      "verse:Hos.14.2",
+      "verse:Hos.14.3",
+      "verse:Hos.14.4",
+      "verse:Hos.14.5",
+      "verse:Hos.14.6",
+      "verse:Hos.14.7",
+      "verse:Hos.14.8",
+      "verse:Hos.14.9"
+    ],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-adam-1",
+        "entity_type": "person",
+        "proposed_label": "Adam",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-aram-2",
+        "entity_type": "person",
+        "proposed_label": "Aram",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jacob-1",
+        "entity_type": "person",
+        "proposed_label": "Jacob",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-judah-1",
+        "entity_type": "person",
+        "proposed_label": "Judah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-david-1",
+        "entity_type": "person",
+        "proposed_label": "David",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jehu-2",
+        "entity_type": "person",
+        "proposed_label": "Jehu",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-joash-4",
+        "entity_type": "person",
+        "proposed_label": "Joash",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jeroboam-2",
+        "entity_type": "person",
+        "proposed_label": "Jeroboam",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-azariah-3",
+        "entity_type": "person",
+        "proposed_label": "Azariah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jotham-2",
+        "entity_type": "person",
+        "proposed_label": "Jotham",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hoshea-1",
+        "entity_type": "person",
+        "proposed_label": "Hoshea",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-ahaz-1",
+        "entity_type": "person",
+        "proposed_label": "Ahaz",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hezekiah-1",
+        "entity_type": "person",
+        "proposed_label": "Hezekiah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hosea-1",
+        "entity_type": "person",
+        "proposed_label": "Hosea",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-beeri-2",
+        "entity_type": "person",
+        "proposed_label": "Beeri",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-gomer-2",
+        "entity_type": "person",
+        "proposed_label": "Gomer",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-diblaim-1",
+        "entity_type": "person",
+        "proposed_label": "Diblaim",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jezreel-2",
+        "entity_type": "person",
+        "proposed_label": "Jezreel",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-lo-ruhamah-1",
+        "entity_type": "person",
+        "proposed_label": "Lo-ruhamah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-lo-ammi-1",
+        "entity_type": "person",
+        "proposed_label": "Lo-ammi",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-king-jareb-1",
+        "entity_type": "person",
+        "proposed_label": "King Jareb",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-admah-a41a054",
+        "entity_type": "place",
+        "proposed_label": "Admah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-aram-a3e66cd",
+        "entity_type": "place",
+        "proposed_label": "Aram",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-assyria-a3d1321",
+        "entity_type": "place",
+        "proposed_label": "Assyria",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-aven-af3ccdf",
+        "entity_type": "place",
+        "proposed_label": "Aven",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-baal-peor-a3d6e81",
+        "entity_type": "place",
+        "proposed_label": "Baal-peor",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-beth-arbel-a2da675",
+        "entity_type": "place",
+        "proposed_label": "Beth-arbel",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-beth-aven-2-a696a95",
+        "entity_type": "place",
+        "proposed_label": "Beth-aven 2",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bethel-1-a64f355",
+        "entity_type": "place",
+        "proposed_label": "Bethel 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-egypt-af301ca",
+        "entity_type": "place",
+        "proposed_label": "Egypt",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gibeah-1-ac24f5f",
+        "entity_type": "place",
+        "proposed_label": "Gibeah 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilead-1-ae73b90",
+        "entity_type": "place",
+        "proposed_label": "Gilead 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilead-2-a19ec8c",
+        "entity_type": "place",
+        "proposed_label": "Gilead 2",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilgal-1-ab94aea",
+        "entity_type": "place",
+        "proposed_label": "Gilgal 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-jezreel-2-ae0bf4a",
+        "entity_type": "place",
+        "proposed_label": "Jezreel 2",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lebanon-a730058",
+        "entity_type": "place",
+        "proposed_label": "Lebanon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-memphis-a8ec269",
+        "entity_type": "place",
+        "proposed_label": "Memphis",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mizpah-1-a0f8af9",
+        "entity_type": "place",
+        "proposed_label": "Mizpah 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-tabor-acd63ee",
+        "entity_type": "place",
+        "proposed_label": "Mount Tabor",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-ramah-1-a6d57ed",
+        "entity_type": "place",
+        "proposed_label": "Ramah 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-samaria-1-a041bb3",
+        "entity_type": "place",
+        "proposed_label": "Samaria 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-shechem-adf74d4",
+        "entity_type": "place",
+        "proposed_label": "Shechem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-shittim-af64fb3",
+        "entity_type": "place",
+        "proposed_label": "Shittim",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-tyre-a160272",
+        "entity_type": "place",
+        "proposed_label": "Tyre",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-valley-of-achor-a31492f",
+        "entity_type": "place",
+        "proposed_label": "Valley of Achor",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-valley-of-jezreel-aa516c2",
+        "entity_type": "place",
+        "proposed_label": "Valley of Jezreel",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zeboiim-abfbfb9",
+        "entity_type": "place",
+        "proposed_label": "Zeboiim",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [],
+    "citations": [],
+    "attestations": [
+      {
+        "attestation_key": "attestation:wb-p-adam-1-6-7",
+        "reference_key": "verse:Hos.6.7",
+        "entity_key": "entity:p-adam-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-aram-2-12-12",
+        "reference_key": "verse:Hos.12.12",
+        "entity_key": "entity:p-aram-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-1-6",
+        "reference_key": "verse:Hos.1.6",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-1-11",
+        "reference_key": "verse:Hos.1.11",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-3-4",
+        "reference_key": "verse:Hos.3.4",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-3-5",
+        "reference_key": "verse:Hos.3.5",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-4-1",
+        "reference_key": "verse:Hos.4.1",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-5-1",
+        "reference_key": "verse:Hos.5.1",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-8-14",
+        "reference_key": "verse:Hos.8.14",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-10-1",
+        "reference_key": "verse:Hos.10.1",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-12-12",
+        "reference_key": "verse:Hos.12.12",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jacob-1-12-13",
+        "reference_key": "verse:Hos.12.13",
+        "entity_key": "entity:p-jacob-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-judah-1-1-7",
+        "reference_key": "verse:Hos.1.7",
+        "entity_key": "entity:p-judah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-judah-1-1-11",
+        "reference_key": "verse:Hos.1.11",
+        "entity_key": "entity:p-judah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-judah-1-8-14",
+        "reference_key": "verse:Hos.8.14",
+        "entity_key": "entity:p-judah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-david-1-3-5",
+        "reference_key": "verse:Hos.3.5",
+        "entity_key": "entity:p-david-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jehu-2-1-4",
+        "reference_key": "verse:Hos.1.4",
+        "entity_key": "entity:p-jehu-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-joash-4-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-joash-4",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jeroboam-2-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-jeroboam-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-azariah-3-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-azariah-3",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jotham-2-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-jotham-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-hoshea-1-10-15",
+        "reference_key": "verse:Hos.10.15",
+        "entity_key": "entity:p-hoshea-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-ahaz-1-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-ahaz-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-hezekiah-1-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-hezekiah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-hosea-1-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-hosea-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-hosea-1-1-2",
+        "reference_key": "verse:Hos.1.2",
+        "entity_key": "entity:p-hosea-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-beeri-2-1-1",
+        "reference_key": "verse:Hos.1.1",
+        "entity_key": "entity:p-beeri-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-gomer-2-1-3",
+        "reference_key": "verse:Hos.1.3",
+        "entity_key": "entity:p-gomer-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-diblaim-1-1-3",
+        "reference_key": "verse:Hos.1.3",
+        "entity_key": "entity:p-diblaim-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jezreel-2-1-4",
+        "reference_key": "verse:Hos.1.4",
+        "entity_key": "entity:p-jezreel-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-lo-ruhamah-1-1-6",
+        "reference_key": "verse:Hos.1.6",
+        "entity_key": "entity:p-lo-ruhamah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-lo-ruhamah-1-1-8",
+        "reference_key": "verse:Hos.1.8",
+        "entity_key": "entity:p-lo-ruhamah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-lo-ammi-1-1-9",
+        "reference_key": "verse:Hos.1.9",
+        "entity_key": "entity:p-lo-ammi-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-king-jareb-1-5-13",
+        "reference_key": "verse:Hos.5.13",
+        "entity_key": "entity:p-king-jareb-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-king-jareb-1-10-6",
+        "reference_key": "verse:Hos.10.6",
+        "entity_key": "entity:p-king-jareb-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-admah-a41a054-11-8",
+        "reference_key": "verse:Hos.11.8",
+        "entity_key": "entity:pl-admah-a41a054",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-aram-a3e66cd-12-12",
+        "reference_key": "verse:Hos.12.12",
+        "entity_key": "entity:pl-aram-a3e66cd",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-5-13",
+        "reference_key": "verse:Hos.5.13",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-7-11",
+        "reference_key": "verse:Hos.7.11",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-8-9",
+        "reference_key": "verse:Hos.8.9",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-9-3",
+        "reference_key": "verse:Hos.9.3",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-9-6",
+        "reference_key": "verse:Hos.9.6",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-10-6",
+        "reference_key": "verse:Hos.10.6",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-11-5",
+        "reference_key": "verse:Hos.11.5",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-11-11",
+        "reference_key": "verse:Hos.11.11",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-12-1",
+        "reference_key": "verse:Hos.12.1",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-14-3",
+        "reference_key": "verse:Hos.14.3",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-aven-af3ccdf-10-8",
+        "reference_key": "verse:Hos.10.8",
+        "entity_key": "entity:pl-aven-af3ccdf",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-baal-peor-a3d6e81-9-10",
+        "reference_key": "verse:Hos.9.10",
+        "entity_key": "entity:pl-baal-peor-a3d6e81",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-beth-arbel-a2da675-10-14",
+        "reference_key": "verse:Hos.10.14",
+        "entity_key": "entity:pl-beth-arbel-a2da675",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-beth-aven-2-a696a95-4-15",
+        "reference_key": "verse:Hos.4.15",
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-beth-aven-2-a696a95-5-8",
+        "reference_key": "verse:Hos.5.8",
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-beth-aven-2-a696a95-10-5",
+        "reference_key": "verse:Hos.10.5",
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-bethel-1-a64f355-10-15",
+        "reference_key": "verse:Hos.10.15",
+        "entity_key": "entity:pl-bethel-1-a64f355",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-bethel-1-a64f355-12-4",
+        "reference_key": "verse:Hos.12.4",
+        "entity_key": "entity:pl-bethel-1-a64f355",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-2-15",
+        "reference_key": "verse:Hos.2.15",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-7-11",
+        "reference_key": "verse:Hos.7.11",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-7-16",
+        "reference_key": "verse:Hos.7.16",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-8-13",
+        "reference_key": "verse:Hos.8.13",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-3",
+        "reference_key": "verse:Hos.9.3",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-6",
+        "reference_key": "verse:Hos.9.6",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-1",
+        "reference_key": "verse:Hos.11.1",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-5",
+        "reference_key": "verse:Hos.11.5",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-11",
+        "reference_key": "verse:Hos.11.11",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-12-1",
+        "reference_key": "verse:Hos.12.1",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-12-9",
+        "reference_key": "verse:Hos.12.9",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-12-13",
+        "reference_key": "verse:Hos.12.13",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-13-4",
+        "reference_key": "verse:Hos.13.4",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gibeah-1-ac24f5f-5-8",
+        "reference_key": "verse:Hos.5.8",
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gibeah-1-ac24f5f-9-9",
+        "reference_key": "verse:Hos.9.9",
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gibeah-1-ac24f5f-10-9",
+        "reference_key": "verse:Hos.10.9",
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-12-11",
+        "reference_key": "verse:Hos.12.11",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilead-2-a19ec8c-6-8",
+        "reference_key": "verse:Hos.6.8",
+        "entity_key": "entity:pl-gilead-2-a19ec8c",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilgal-1-ab94aea-4-15",
+        "reference_key": "verse:Hos.4.15",
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilgal-1-ab94aea-9-15",
+        "reference_key": "verse:Hos.9.15",
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilgal-1-ab94aea-12-11",
+        "reference_key": "verse:Hos.12.11",
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jezreel-2-ae0bf4a-1-4",
+        "reference_key": "verse:Hos.1.4",
+        "entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jezreel-2-ae0bf4a-1-11",
+        "reference_key": "verse:Hos.1.11",
+        "entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jezreel-2-ae0bf4a-2-22",
+        "reference_key": "verse:Hos.2.22",
+        "entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-14-5",
+        "reference_key": "verse:Hos.14.5",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-14-6",
+        "reference_key": "verse:Hos.14.6",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-14-7",
+        "reference_key": "verse:Hos.14.7",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-memphis-a8ec269-9-6",
+        "reference_key": "verse:Hos.9.6",
+        "entity_key": "entity:pl-memphis-a8ec269",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-mizpah-1-a0f8af9-5-1",
+        "reference_key": "verse:Hos.5.1",
+        "entity_key": "entity:pl-mizpah-1-a0f8af9",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-mount-tabor-acd63ee-5-1",
+        "reference_key": "verse:Hos.5.1",
+        "entity_key": "entity:pl-mount-tabor-acd63ee",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-ramah-1-a6d57ed-5-8",
+        "reference_key": "verse:Hos.5.8",
+        "entity_key": "entity:pl-ramah-1-a6d57ed",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-7-1",
+        "reference_key": "verse:Hos.7.1",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-8-5",
+        "reference_key": "verse:Hos.8.5",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-8-6",
+        "reference_key": "verse:Hos.8.6",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-10-5",
+        "reference_key": "verse:Hos.10.5",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-10-7",
+        "reference_key": "verse:Hos.10.7",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-13-16",
+        "reference_key": "verse:Hos.13.16",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-shechem-adf74d4-6-9",
+        "reference_key": "verse:Hos.6.9",
+        "entity_key": "entity:pl-shechem-adf74d4",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-shittim-af64fb3-5-2",
+        "reference_key": "verse:Hos.5.2",
+        "entity_key": "entity:pl-shittim-af64fb3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-tyre-a160272-9-13",
+        "reference_key": "verse:Hos.9.13",
+        "entity_key": "entity:pl-tyre-a160272",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-valley-of-achor-a31492f-2-15",
+        "reference_key": "verse:Hos.2.15",
+        "entity_key": "entity:pl-valley-of-achor-a31492f",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-valley-of-jezreel-aa516c2-1-5",
+        "reference_key": "verse:Hos.1.5",
+        "entity_key": "entity:pl-valley-of-jezreel-aa516c2",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-zeboiim-abfbfb9-11-8",
+        "reference_key": "verse:Hos.11.8",
+        "entity_key": "entity:pl-zeboiim-abfbfb9",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [],
+    "events": [],
+    "places": [
+      {
+        "entity_key": "entity:pl-admah-a41a054",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-admah-a41a054",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-aram-a3e66cd",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-aram-a3e66cd",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-assyria-a3d1321",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-aven-af3ccdf",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-aven-af3ccdf",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-baal-peor-a3d6e81",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-baal-peor-a3d6e81",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-beth-arbel-a2da675",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-beth-arbel-a2da675",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-beth-aven-2-a696a95",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-bethel-1-a64f355",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-bethel-1-a64f355",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-egypt-af301ca",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-egypt-af301ca",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-gibeah-1-ac24f5f",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-gilead-1-ae73b90",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-gilead-2-a19ec8c",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-gilead-2-a19ec8c",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-gilgal-1-ab94aea",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jezreel-2-ae0bf4a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-lebanon-a730058",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-lebanon-a730058",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-memphis-a8ec269",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-memphis-a8ec269",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-mizpah-1-a0f8af9",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-mizpah-1-a0f8af9",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-mount-tabor-acd63ee",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-mount-tabor-acd63ee",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-ramah-1-a6d57ed",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-ramah-1-a6d57ed",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-samaria-1-a041bb3",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-shechem-adf74d4",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-shechem-adf74d4",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-shittim-af64fb3",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-shittim-af64fb3",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-tyre-a160272",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-tyre-a160272",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-valley-of-achor-a31492f",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-valley-of-achor-a31492f",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-valley-of-jezreel-aa516c2",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-valley-of-jezreel-aa516c2",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-zeboiim-abfbfb9",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-zeboiim-abfbfb9",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:wb-hos-6-p-adam-1",
+        "scope_key": "scope:wb-hos-6:refsys:tel-v1:hos.6.1-hos.6.11",
+        "entity_key": "entity:p-adam-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-p-aram-2",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:p-aram-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-jacob-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-3-p-jacob-1",
+        "scope_key": "scope:wb-hos-3:refsys:tel-v1:hos.3.1-hos.3.5",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-4-p-jacob-1",
+        "scope_key": "scope:wb-hos-4:refsys:tel-v1:hos.4.1-hos.4.19",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-p-jacob-1",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-8-p-jacob-1",
+        "scope_key": "scope:wb-hos-8:refsys:tel-v1:hos.8.1-hos.8.14",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-p-jacob-1",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-p-jacob-1",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:p-jacob-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-judah-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-judah-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-8-p-judah-1",
+        "scope_key": "scope:wb-hos-8:refsys:tel-v1:hos.8.1-hos.8.14",
+        "entity_key": "entity:p-judah-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-3-p-david-1",
+        "scope_key": "scope:wb-hos-3:refsys:tel-v1:hos.3.1-hos.3.5",
+        "entity_key": "entity:p-david-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-jehu-2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-jehu-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-joash-4",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-joash-4",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-jeroboam-2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-jeroboam-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-azariah-3",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-azariah-3",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-jotham-2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-jotham-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-p-hoshea-1",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:p-hoshea-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-ahaz-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-ahaz-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-hezekiah-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-hezekiah-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-hosea-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-hosea-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-beeri-2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-beeri-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-gomer-2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-gomer-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-diblaim-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-diblaim-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-jezreel-2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-jezreel-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-lo-ruhamah-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-lo-ruhamah-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-p-lo-ammi-1",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:p-lo-ammi-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-p-king-jareb-1",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:p-king-jareb-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-p-king-jareb-1",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:p-king-jareb-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-11-pl-admah-a41a054",
+        "scope_key": "scope:wb-hos-11:refsys:tel-v1:hos.11.1-hos.11.12",
+        "entity_key": "entity:pl-admah-a41a054",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-pl-aram-a3e66cd",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:pl-aram-a3e66cd",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-7-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-7:refsys:tel-v1:hos.7.1-hos.7.16",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-8-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-8:refsys:tel-v1:hos.8.1-hos.8.14",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-11-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-11:refsys:tel-v1:hos.11.1-hos.11.12",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-14-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-hos-14:refsys:tel-v1:hos.14.1-hos.14.9",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-aven-af3ccdf",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-aven-af3ccdf",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-baal-peor-a3d6e81",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-baal-peor-a3d6e81",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-beth-arbel-a2da675",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-beth-arbel-a2da675",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-4-pl-beth-aven-2-a696a95",
+        "scope_key": "scope:wb-hos-4:refsys:tel-v1:hos.4.1-hos.4.19",
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-beth-aven-2-a696a95",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-beth-aven-2-a696a95",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-beth-aven-2-a696a95",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-bethel-1-a64f355",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-bethel-1-a64f355",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-pl-bethel-1-a64f355",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:pl-bethel-1-a64f355",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-2-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-2:refsys:tel-v1:hos.2.1-hos.2.23",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-7-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-7:refsys:tel-v1:hos.7.1-hos.7.16",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-8-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-8:refsys:tel-v1:hos.8.1-hos.8.14",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-11-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-11:refsys:tel-v1:hos.11.1-hos.11.12",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-13-pl-egypt-af301ca",
+        "scope_key": "scope:wb-hos-13:refsys:tel-v1:hos.13.1-hos.13.16",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-gibeah-1-ac24f5f",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-gibeah-1-ac24f5f",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-gibeah-1-ac24f5f",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-pl-gilead-1-ae73b90",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-6-pl-gilead-2-a19ec8c",
+        "scope_key": "scope:wb-hos-6:refsys:tel-v1:hos.6.1-hos.6.11",
+        "entity_key": "entity:pl-gilead-2-a19ec8c",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-4-pl-gilgal-1-ab94aea",
+        "scope_key": "scope:wb-hos-4:refsys:tel-v1:hos.4.1-hos.4.19",
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-gilgal-1-ab94aea",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-12-pl-gilgal-1-ab94aea",
+        "scope_key": "scope:wb-hos-12:refsys:tel-v1:hos.12.1-hos.12.14",
+        "entity_key": "entity:pl-gilgal-1-ab94aea",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-pl-jezreel-2-ae0bf4a",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-2-pl-jezreel-2-ae0bf4a",
+        "scope_key": "scope:wb-hos-2:refsys:tel-v1:hos.2.1-hos.2.23",
+        "entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-14-pl-lebanon-a730058",
+        "scope_key": "scope:wb-hos-14:refsys:tel-v1:hos.14.1-hos.14.9",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-memphis-a8ec269",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-memphis-a8ec269",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-mizpah-1-a0f8af9",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-mizpah-1-a0f8af9",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-mount-tabor-acd63ee",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-mount-tabor-acd63ee",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-ramah-1-a6d57ed",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-ramah-1-a6d57ed",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-7-pl-samaria-1-a041bb3",
+        "scope_key": "scope:wb-hos-7:refsys:tel-v1:hos.7.1-hos.7.16",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-8-pl-samaria-1-a041bb3",
+        "scope_key": "scope:wb-hos-8:refsys:tel-v1:hos.8.1-hos.8.14",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-10-pl-samaria-1-a041bb3",
+        "scope_key": "scope:wb-hos-10:refsys:tel-v1:hos.10.1-hos.10.15",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-13-pl-samaria-1-a041bb3",
+        "scope_key": "scope:wb-hos-13:refsys:tel-v1:hos.13.1-hos.13.16",
+        "entity_key": "entity:pl-samaria-1-a041bb3",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-6-pl-shechem-adf74d4",
+        "scope_key": "scope:wb-hos-6:refsys:tel-v1:hos.6.1-hos.6.11",
+        "entity_key": "entity:pl-shechem-adf74d4",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-pl-shittim-af64fb3",
+        "scope_key": "scope:wb-hos-5:refsys:tel-v1:hos.5.1-hos.5.15",
+        "entity_key": "entity:pl-shittim-af64fb3",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-9-pl-tyre-a160272",
+        "scope_key": "scope:wb-hos-9:refsys:tel-v1:hos.9.1-hos.9.17",
+        "entity_key": "entity:pl-tyre-a160272",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-2-pl-valley-of-achor-a31492f",
+        "scope_key": "scope:wb-hos-2:refsys:tel-v1:hos.2.1-hos.2.23",
+        "entity_key": "entity:pl-valley-of-achor-a31492f",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-pl-valley-of-jezreel-aa516c2",
+        "scope_key": "scope:wb-hos-1:refsys:tel-v1:hos.1.1-hos.1.11",
+        "entity_key": "entity:pl-valley-of-jezreel-aa516c2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-11-pl-zeboiim-abfbfb9",
+        "scope_key": "scope:wb-hos-11:refsys:tel-v1:hos.11.1-hos.11.12",
+        "entity_key": "entity:pl-zeboiim-abfbfb9",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "reconciliation_records": [
+      {
+        "candidate_key": "candidate:wb:p-adam-1",
+        "canonical_entity_key": "entity:p-adam-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-aram-2",
+        "canonical_entity_key": "entity:p-aram-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jacob-1",
+        "canonical_entity_key": "entity:p-jacob-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-judah-1",
+        "canonical_entity_key": "entity:p-judah-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-david-1",
+        "canonical_entity_key": "entity:p-david-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jehu-2",
+        "canonical_entity_key": "entity:p-jehu-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-joash-4",
+        "canonical_entity_key": "entity:p-joash-4",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jeroboam-2",
+        "canonical_entity_key": "entity:p-jeroboam-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-azariah-3",
+        "canonical_entity_key": "entity:p-azariah-3",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jotham-2",
+        "canonical_entity_key": "entity:p-jotham-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hoshea-1",
+        "canonical_entity_key": "entity:p-hoshea-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-ahaz-1",
+        "canonical_entity_key": "entity:p-ahaz-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hezekiah-1",
+        "canonical_entity_key": "entity:p-hezekiah-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hosea-1",
+        "canonical_entity_key": "entity:p-hosea-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-beeri-2",
+        "canonical_entity_key": "entity:p-beeri-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-gomer-2",
+        "canonical_entity_key": "entity:p-gomer-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-diblaim-1",
+        "canonical_entity_key": "entity:p-diblaim-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jezreel-2",
+        "canonical_entity_key": "entity:p-jezreel-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-lo-ruhamah-1",
+        "canonical_entity_key": "entity:p-lo-ruhamah-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-lo-ammi-1",
+        "canonical_entity_key": "entity:p-lo-ammi-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-king-jareb-1",
+        "canonical_entity_key": "entity:p-king-jareb-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-admah-a41a054",
+        "canonical_entity_key": "entity:pl-admah-a41a054",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-aram-a3e66cd",
+        "canonical_entity_key": "entity:pl-aram-a3e66cd",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-assyria-a3d1321",
+        "canonical_entity_key": "entity:pl-assyria-a3d1321",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-aven-af3ccdf",
+        "canonical_entity_key": "entity:pl-aven-af3ccdf",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-baal-peor-a3d6e81",
+        "canonical_entity_key": "entity:pl-baal-peor-a3d6e81",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-beth-arbel-a2da675",
+        "canonical_entity_key": "entity:pl-beth-arbel-a2da675",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-beth-aven-2-a696a95",
+        "canonical_entity_key": "entity:pl-beth-aven-2-a696a95",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bethel-1-a64f355",
+        "canonical_entity_key": "entity:pl-bethel-1-a64f355",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-egypt-af301ca",
+        "canonical_entity_key": "entity:pl-egypt-af301ca",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gibeah-1-ac24f5f",
+        "canonical_entity_key": "entity:pl-gibeah-1-ac24f5f",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilead-1-ae73b90",
+        "canonical_entity_key": "entity:pl-gilead-1-ae73b90",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilead-2-a19ec8c",
+        "canonical_entity_key": "entity:pl-gilead-2-a19ec8c",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilgal-1-ab94aea",
+        "canonical_entity_key": "entity:pl-gilgal-1-ab94aea",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-jezreel-2-ae0bf4a",
+        "canonical_entity_key": "entity:pl-jezreel-2-ae0bf4a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lebanon-a730058",
+        "canonical_entity_key": "entity:pl-lebanon-a730058",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-memphis-a8ec269",
+        "canonical_entity_key": "entity:pl-memphis-a8ec269",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mizpah-1-a0f8af9",
+        "canonical_entity_key": "entity:pl-mizpah-1-a0f8af9",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-tabor-acd63ee",
+        "canonical_entity_key": "entity:pl-mount-tabor-acd63ee",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-ramah-1-a6d57ed",
+        "canonical_entity_key": "entity:pl-ramah-1-a6d57ed",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-samaria-1-a041bb3",
+        "canonical_entity_key": "entity:pl-samaria-1-a041bb3",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-shechem-adf74d4",
+        "canonical_entity_key": "entity:pl-shechem-adf74d4",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-shittim-af64fb3",
+        "canonical_entity_key": "entity:pl-shittim-af64fb3",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-tyre-a160272",
+        "canonical_entity_key": "entity:pl-tyre-a160272",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-valley-of-achor-a31492f",
+        "canonical_entity_key": "entity:pl-valley-of-achor-a31492f",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-valley-of-jezreel-aa516c2",
+        "canonical_entity_key": "entity:pl-valley-of-jezreel-aa516c2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zeboiim-abfbfb9",
+        "canonical_entity_key": "entity:pl-zeboiim-abfbfb9",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Hos.1.10",
+            "verse:Hos.10.10",
+            "verse:Hos.10.11",
+            "verse:Hos.10.12",
+            "verse:Hos.10.13",
+            "verse:Hos.10.2",
+            "verse:Hos.10.3",
+            "verse:Hos.10.4",
+            "verse:Hos.11.10",
+            "verse:Hos.11.12",
+            "verse:Hos.11.2",
+            "verse:Hos.11.3",
+            "verse:Hos.11.4",
+            "verse:Hos.11.6",
+            "verse:Hos.11.7",
+            "verse:Hos.11.9",
+            "verse:Hos.12.10",
+            "verse:Hos.12.14",
+            "verse:Hos.12.2",
+            "verse:Hos.12.3",
+            "verse:Hos.12.5",
+            "verse:Hos.12.6",
+            "verse:Hos.12.7",
+            "verse:Hos.12.8",
+            "verse:Hos.13.1",
+            "verse:Hos.13.10",
+            "verse:Hos.13.11",
+            "verse:Hos.13.12",
+            "verse:Hos.13.13",
+            "verse:Hos.13.14",
+            "verse:Hos.13.15",
+            "verse:Hos.13.2",
+            "verse:Hos.13.3",
+            "verse:Hos.13.5",
+            "verse:Hos.13.6",
+            "verse:Hos.13.7",
+            "verse:Hos.13.8",
+            "verse:Hos.13.9",
+            "verse:Hos.14.1",
+            "verse:Hos.14.2",
+            "verse:Hos.14.4",
+            "verse:Hos.14.8",
+            "verse:Hos.14.9",
+            "verse:Hos.2.1",
+            "verse:Hos.2.10",
+            "verse:Hos.2.11",
+            "verse:Hos.2.12",
+            "verse:Hos.2.13",
+            "verse:Hos.2.14",
+            "verse:Hos.2.16",
+            "verse:Hos.2.17",
+            "verse:Hos.2.18",
+            "verse:Hos.2.19",
+            "verse:Hos.2.2",
+            "verse:Hos.2.20",
+            "verse:Hos.2.21",
+            "verse:Hos.2.23",
+            "verse:Hos.2.3",
+            "verse:Hos.2.4",
+            "verse:Hos.2.5",
+            "verse:Hos.2.6",
+            "verse:Hos.2.7",
+            "verse:Hos.2.8",
+            "verse:Hos.2.9",
+            "verse:Hos.3.1",
+            "verse:Hos.3.2",
+            "verse:Hos.3.3",
+            "verse:Hos.4.10",
+            "verse:Hos.4.11",
+            "verse:Hos.4.12",
+            "verse:Hos.4.13",
+            "verse:Hos.4.14",
+            "verse:Hos.4.16",
+            "verse:Hos.4.17",
+            "verse:Hos.4.18",
+            "verse:Hos.4.19",
+            "verse:Hos.4.2",
+            "verse:Hos.4.3",
+            "verse:Hos.4.4",
+            "verse:Hos.4.5",
+            "verse:Hos.4.6",
+            "verse:Hos.4.7",
+            "verse:Hos.4.8",
+            "verse:Hos.4.9",
+            "verse:Hos.5.10",
+            "verse:Hos.5.11",
+            "verse:Hos.5.12",
+            "verse:Hos.5.14",
+            "verse:Hos.5.15",
+            "verse:Hos.5.3",
+            "verse:Hos.5.4",
+            "verse:Hos.5.5",
+            "verse:Hos.5.6",
+            "verse:Hos.5.7",
+            "verse:Hos.5.9",
+            "verse:Hos.6.1",
+            "verse:Hos.6.10",
+            "verse:Hos.6.11",
+            "verse:Hos.6.2",
+            "verse:Hos.6.3",
+            "verse:Hos.6.4",
+            "verse:Hos.6.5",
+            "verse:Hos.6.6",
+            "verse:Hos.7.10",
+            "verse:Hos.7.12",
+            "verse:Hos.7.13",
+            "verse:Hos.7.14",
+            "verse:Hos.7.15",
+            "verse:Hos.7.2",
+            "verse:Hos.7.3",
+            "verse:Hos.7.4",
+            "verse:Hos.7.5",
+            "verse:Hos.7.6",
+            "verse:Hos.7.7",
+            "verse:Hos.7.8",
+            "verse:Hos.7.9",
+            "verse:Hos.8.1",
+            "verse:Hos.8.10",
+            "verse:Hos.8.11",
+            "verse:Hos.8.12",
+            "verse:Hos.8.2",
+            "verse:Hos.8.3",
+            "verse:Hos.8.4",
+            "verse:Hos.8.7",
+            "verse:Hos.8.8",
+            "verse:Hos.9.1",
+            "verse:Hos.9.11",
+            "verse:Hos.9.12",
+            "verse:Hos.9.14",
+            "verse:Hos.9.16",
+            "verse:Hos.9.17",
+            "verse:Hos.9.2",
+            "verse:Hos.9.4",
+            "verse:Hos.9.5",
+            "verse:Hos.9.7",
+            "verse:Hos.9.8"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-ahaz-1-1-1",
+            "attestation:wb-p-azariah-3-1-1",
+            "attestation:wb-p-beeri-2-1-1",
+            "attestation:wb-p-hezekiah-1-1-1",
+            "attestation:wb-p-hosea-1-1-1",
+            "attestation:wb-p-jeroboam-2-1-1",
+            "attestation:wb-p-joash-4-1-1",
+            "attestation:wb-p-jotham-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.2"
+          ],
+          "record_keys": [
+            "attestation:wb-p-hosea-1-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.3"
+          ],
+          "record_keys": [
+            "attestation:wb-p-diblaim-1-1-3",
+            "attestation:wb-p-gomer-2-1-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.4"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jehu-2-1-4",
+            "attestation:wb-p-jezreel-2-1-4",
+            "attestation:wb-pl-jezreel-2-ae0bf4a-1-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-valley-of-jezreel-aa516c2-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-1-6",
+            "attestation:wb-p-lo-ruhamah-1-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.7"
+          ],
+          "record_keys": [
+            "attestation:wb-p-judah-1-1-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.8"
+          ],
+          "record_keys": [
+            "attestation:wb-p-lo-ruhamah-1-1-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.9"
+          ],
+          "record_keys": [
+            "attestation:wb-p-lo-ammi-1-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.11"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-1-11",
+            "attestation:wb-p-judah-1-1-11",
+            "attestation:wb-pl-jezreel-2-ae0bf4a-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.2.15"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-egypt-af301ca-2-15",
+            "attestation:wb-pl-valley-of-achor-a31492f-2-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.2.22"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jezreel-2-ae0bf4a-2-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.3.4"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-3-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.3.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-david-1-3-5",
+            "attestation:wb-p-jacob-1-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.4.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.4.15"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-beth-aven-2-a696a95-4-15",
+            "attestation:wb-pl-gilgal-1-ab94aea-4-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.5.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-5-1",
+            "attestation:wb-pl-mizpah-1-a0f8af9-5-1",
+            "attestation:wb-pl-mount-tabor-acd63ee-5-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.5.2"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-shittim-af64fb3-5-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.5.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-beth-aven-2-a696a95-5-8",
+            "attestation:wb-pl-gibeah-1-ac24f5f-5-8",
+            "attestation:wb-pl-ramah-1-a6d57ed-5-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.5.13"
+          ],
+          "record_keys": [
+            "attestation:wb-p-king-jareb-1-5-13",
+            "attestation:wb-pl-assyria-a3d1321-5-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.6.7"
+          ],
+          "record_keys": [
+            "attestation:wb-p-adam-1-6-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.6.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gilead-2-a19ec8c-6-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.6.9"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-shechem-adf74d4-6-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.7.1"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-samaria-1-a041bb3-7-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.7.11"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-7-11",
+            "attestation:wb-pl-egypt-af301ca-7-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.7.16"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-egypt-af301ca-7-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-samaria-1-a041bb3-8-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.6"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-samaria-1-a041bb3-8-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.9"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-8-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.13"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-egypt-af301ca-8-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.14"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-8-14",
+            "attestation:wb-p-judah-1-8-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.3"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-9-3",
+            "attestation:wb-pl-egypt-af301ca-9-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.6"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-9-6",
+            "attestation:wb-pl-egypt-af301ca-9-6",
+            "attestation:wb-pl-memphis-a8ec269-9-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.9"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gibeah-1-ac24f5f-9-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.10"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-baal-peor-a3d6e81-9-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.13"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-tyre-a160272-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.15"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gilgal-1-ab94aea-9-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-10-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-beth-aven-2-a696a95-10-5",
+            "attestation:wb-pl-samaria-1-a041bb3-10-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-king-jareb-1-10-6",
+            "attestation:wb-pl-assyria-a3d1321-10-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.7"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-samaria-1-a041bb3-10-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-aven-af3ccdf-10-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.9"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gibeah-1-ac24f5f-10-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.14"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-beth-arbel-a2da675-10-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.15"
+          ],
+          "record_keys": [
+            "attestation:wb-p-hoshea-1-10-15",
+            "attestation:wb-pl-bethel-1-a64f355-10-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.1"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-egypt-af301ca-11-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-11-5",
+            "attestation:wb-pl-egypt-af301ca-11-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-admah-a41a054-11-8",
+            "attestation:wb-pl-zeboiim-abfbfb9-11-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.11"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-11-11",
+            "attestation:wb-pl-egypt-af301ca-11-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.1"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-12-1",
+            "attestation:wb-pl-egypt-af301ca-12-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.4"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-bethel-1-a64f355-12-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.9"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-egypt-af301ca-12-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.11"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gilead-1-ae73b90-12-11",
+            "attestation:wb-pl-gilgal-1-ab94aea-12-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.12"
+          ],
+          "record_keys": [
+            "attestation:wb-p-aram-2-12-12",
+            "attestation:wb-p-jacob-1-12-12",
+            "attestation:wb-pl-aram-a3e66cd-12-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.13"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jacob-1-12-13",
+            "attestation:wb-pl-egypt-af301ca-12-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.13.4"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-egypt-af301ca-13-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.13.16"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-samaria-1-a041bb3-13-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.3"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-assyria-a3d1321-14-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-14-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.6"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-14-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.7"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-14-7"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "versification-alignment-unverified",
+      "note": "Attestation reference coordinates are aligned to this edition's canon skeleton. Where this edition's versification differs from the source reference system, exact alignment requires TVTMS verification, which has not yet been applied."
+    }
+  ]
+}

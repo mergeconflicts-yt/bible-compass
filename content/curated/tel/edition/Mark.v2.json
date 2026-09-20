@@ -1,0 +1,4413 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-mark-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-mark-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-mark-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-mark:refsys:tel-v1:mark.1.1-mark.16.20",
+      "scope:wb-mark-1:refsys:tel-v1:mark.1.1-mark.1.45",
+      "scope:wb-mark-2:refsys:tel-v1:mark.2.1-mark.2.28",
+      "scope:wb-mark-3:refsys:tel-v1:mark.3.1-mark.3.35",
+      "scope:wb-mark-4:refsys:tel-v1:mark.4.1-mark.4.41",
+      "scope:wb-mark-5:refsys:tel-v1:mark.5.1-mark.5.43",
+      "scope:wb-mark-6:refsys:tel-v1:mark.6.1-mark.6.56",
+      "scope:wb-mark-7:refsys:tel-v1:mark.7.1-mark.7.37",
+      "scope:wb-mark-8:refsys:tel-v1:mark.8.1-mark.8.38",
+      "scope:wb-mark-9:refsys:tel-v1:mark.9.1-mark.9.50",
+      "scope:wb-mark-10:refsys:tel-v1:mark.10.1-mark.10.52",
+      "scope:wb-mark-11:refsys:tel-v1:mark.11.1-mark.11.33",
+      "scope:wb-mark-12:refsys:tel-v1:mark.12.1-mark.12.44",
+      "scope:wb-mark-13:refsys:tel-v1:mark.13.1-mark.13.37",
+      "scope:wb-mark-14:refsys:tel-v1:mark.14.1-mark.14.72",
+      "scope:wb-mark-15:refsys:tel-v1:mark.15.1-mark.15.47",
+      "scope:wb-mark-16:refsys:tel-v1:mark.16.1-mark.16.20",
+      "scope:wb-mark-1-p1:refsys:tel-v1:mark.1.1-mark.1.11",
+      "scope:wb-mark-1-p2:refsys:tel-v1:mark.1.12-mark.1.13",
+      "scope:wb-mark-1-p3:refsys:tel-v1:mark.1.14-mark.1.18",
+      "scope:wb-mark-1-p4:refsys:tel-v1:mark.1.19-mark.1.20",
+      "scope:wb-mark-1-p5:refsys:tel-v1:mark.1.21-mark.1.28",
+      "scope:wb-mark-1-p6:refsys:tel-v1:mark.1.29-mark.1.31",
+      "scope:wb-mark-1-p7:refsys:tel-v1:mark.1.32-mark.1.34",
+      "scope:wb-mark-1-p8:refsys:tel-v1:mark.1.35-mark.1.39",
+      "scope:wb-mark-1-p9:refsys:tel-v1:mark.1.40-mark.1.45",
+      "scope:wb-mark-2-p1:refsys:tel-v1:mark.2.1-mark.2.12",
+      "scope:wb-mark-2-p2:refsys:tel-v1:mark.2.13-mark.2.20",
+      "scope:wb-mark-2-p3:refsys:tel-v1:mark.2.21-mark.2.22",
+      "scope:wb-mark-2-p4:refsys:tel-v1:mark.2.23-mark.2.28",
+      "scope:wb-mark-3-p1:refsys:tel-v1:mark.3.1-mark.3.6",
+      "scope:wb-mark-3-p2:refsys:tel-v1:mark.3.7-mark.3.12",
+      "scope:wb-mark-3-p3:refsys:tel-v1:mark.3.13-mark.3.21",
+      "scope:wb-mark-3-p4:refsys:tel-v1:mark.3.22-mark.3.30",
+      "scope:wb-mark-3-p5:refsys:tel-v1:mark.3.31-mark.3.35",
+      "scope:wb-mark-4-p1:refsys:tel-v1:mark.4.1-mark.4.12",
+      "scope:wb-mark-4-p2:refsys:tel-v1:mark.4.13-mark.4.20",
+      "scope:wb-mark-4-p3:refsys:tel-v1:mark.4.21-mark.4.25",
+      "scope:wb-mark-4-p4:refsys:tel-v1:mark.4.26-mark.4.29",
+      "scope:wb-mark-4-p5:refsys:tel-v1:mark.4.30-mark.4.41",
+      "scope:wb-mark-5-p1:refsys:tel-v1:mark.5.1-mark.5.20",
+      "scope:wb-mark-5-p2:refsys:tel-v1:mark.5.21-mark.5.43",
+      "scope:wb-mark-6-p1:refsys:tel-v1:mark.6.1-mark.6.6",
+      "scope:wb-mark-6-p2:refsys:tel-v1:mark.6.7-mark.6.13",
+      "scope:wb-mark-6-p3:refsys:tel-v1:mark.6.14-mark.6.29",
+      "scope:wb-mark-6-p4:refsys:tel-v1:mark.6.30-mark.6.30",
+      "scope:wb-mark-6-p5:refsys:tel-v1:mark.6.31-mark.6.44",
+      "scope:wb-mark-6-p6:refsys:tel-v1:mark.6.45-mark.6.52",
+      "scope:wb-mark-6-p7:refsys:tel-v1:mark.6.53-mark.6.56",
+      "scope:wb-mark-7-p1:refsys:tel-v1:mark.7.1-mark.7.23",
+      "scope:wb-mark-7-p2:refsys:tel-v1:mark.7.24-mark.7.30",
+      "scope:wb-mark-7-p3:refsys:tel-v1:mark.7.31-mark.7.37",
+      "scope:wb-mark-8-p1:refsys:tel-v1:mark.8.1-mark.8.10",
+      "scope:wb-mark-8-p2:refsys:tel-v1:mark.8.11-mark.8.21",
+      "scope:wb-mark-8-p3:refsys:tel-v1:mark.8.22-mark.8.26",
+      "scope:wb-mark-8-p4:refsys:tel-v1:mark.8.27-mark.8.33",
+      "scope:wb-mark-8-p5:refsys:tel-v1:mark.8.34-mark.8.38",
+      "scope:wb-mark-9-p1:refsys:tel-v1:mark.9.1-mark.9.13",
+      "scope:wb-mark-9-p2:refsys:tel-v1:mark.9.14-mark.9.29",
+      "scope:wb-mark-9-p3:refsys:tel-v1:mark.9.30-mark.9.32",
+      "scope:wb-mark-9-p4:refsys:tel-v1:mark.9.33-mark.9.37",
+      "scope:wb-mark-9-p5:refsys:tel-v1:mark.9.38-mark.9.41",
+      "scope:wb-mark-9-p6:refsys:tel-v1:mark.9.42-mark.9.50",
+      "scope:wb-mark-10-p1:refsys:tel-v1:mark.10.1-mark.10.12",
+      "scope:wb-mark-10-p2:refsys:tel-v1:mark.10.13-mark.10.16",
+      "scope:wb-mark-10-p3:refsys:tel-v1:mark.10.17-mark.10.22",
+      "scope:wb-mark-10-p4:refsys:tel-v1:mark.10.23-mark.10.31",
+      "scope:wb-mark-10-p5:refsys:tel-v1:mark.10.32-mark.10.34",
+      "scope:wb-mark-10-p6:refsys:tel-v1:mark.10.35-mark.10.45",
+      "scope:wb-mark-10-p7:refsys:tel-v1:mark.10.46-mark.10.52",
+      "scope:wb-mark-11-p1:refsys:tel-v1:mark.11.1-mark.11.11",
+      "scope:wb-mark-11-p2:refsys:tel-v1:mark.11.12-mark.11.14",
+      "scope:wb-mark-11-p3:refsys:tel-v1:mark.11.15-mark.11.21",
+      "scope:wb-mark-11-p4:refsys:tel-v1:mark.11.22-mark.11.26",
+      "scope:wb-mark-11-p5:refsys:tel-v1:mark.11.27-mark.11.33",
+      "scope:wb-mark-12-p1:refsys:tel-v1:mark.12.1-mark.12.12",
+      "scope:wb-mark-12-p2:refsys:tel-v1:mark.12.13-mark.12.17",
+      "scope:wb-mark-12-p3:refsys:tel-v1:mark.12.18-mark.12.27",
+      "scope:wb-mark-12-p4:refsys:tel-v1:mark.12.28-mark.12.34",
+      "scope:wb-mark-12-p5:refsys:tel-v1:mark.12.35-mark.12.40",
+      "scope:wb-mark-12-p6:refsys:tel-v1:mark.12.41-mark.12.44",
+      "scope:wb-mark-13-p1:refsys:tel-v1:mark.13.1-mark.13.4",
+      "scope:wb-mark-13-p2:refsys:tel-v1:mark.13.5-mark.13.13",
+      "scope:wb-mark-13-p3:refsys:tel-v1:mark.13.14-mark.13.23",
+      "scope:wb-mark-13-p4:refsys:tel-v1:mark.13.24-mark.13.27",
+      "scope:wb-mark-13-p5:refsys:tel-v1:mark.13.28-mark.13.33",
+      "scope:wb-mark-13-p6:refsys:tel-v1:mark.13.34-mark.13.37",
+      "scope:wb-mark-14-p1:refsys:tel-v1:mark.14.1-mark.14.2",
+      "scope:wb-mark-14-p2:refsys:tel-v1:mark.14.3-mark.14.9",
+      "scope:wb-mark-14-p3:refsys:tel-v1:mark.14.10-mark.14.11",
+      "scope:wb-mark-14-p4:refsys:tel-v1:mark.14.12-mark.14.16",
+      "scope:wb-mark-14-p5:refsys:tel-v1:mark.14.17-mark.14.21",
+      "scope:wb-mark-14-p6:refsys:tel-v1:mark.14.22-mark.14.26",
+      "scope:wb-mark-14-p7:refsys:tel-v1:mark.14.27-mark.14.31",
+      "scope:wb-mark-14-p8:refsys:tel-v1:mark.14.32-mark.14.38",
+      "scope:wb-mark-14-p9:refsys:tel-v1:mark.14.39-mark.14.40",
+      "scope:wb-mark-14-p10:refsys:tel-v1:mark.14.41-mark.14.42",
+      "scope:wb-mark-14-p11:refsys:tel-v1:mark.14.43-mark.14.46",
+      "scope:wb-mark-14-p12:refsys:tel-v1:mark.14.47-mark.14.52",
+      "scope:wb-mark-14-p13:refsys:tel-v1:mark.14.53-mark.14.65",
+      "scope:wb-mark-14-p14:refsys:tel-v1:mark.14.66-mark.14.72",
+      "scope:wb-mark-15-p1:refsys:tel-v1:mark.15.1-mark.15.5",
+      "scope:wb-mark-15-p2:refsys:tel-v1:mark.15.6-mark.15.15",
+      "scope:wb-mark-15-p3:refsys:tel-v1:mark.15.16-mark.15.23",
+      "scope:wb-mark-15-p4:refsys:tel-v1:mark.15.24-mark.15.41",
+      "scope:wb-mark-15-p5:refsys:tel-v1:mark.15.42-mark.15.47",
+      "scope:wb-mark-16-p1:refsys:tel-v1:mark.16.1-mark.16.20"
+    ],
+    "reference_keys": [
+      "verse:Mark.1.1",
+      "verse:Mark.1.2",
+      "verse:Mark.1.3",
+      "verse:Mark.1.4",
+      "verse:Mark.1.5",
+      "verse:Mark.1.6",
+      "verse:Mark.1.7",
+      "verse:Mark.1.8",
+      "verse:Mark.1.9",
+      "verse:Mark.1.10",
+      "verse:Mark.1.11",
+      "verse:Mark.1.12",
+      "verse:Mark.1.13",
+      "verse:Mark.1.14",
+      "verse:Mark.1.15",
+      "verse:Mark.1.16",
+      "verse:Mark.1.17",
+      "verse:Mark.1.18",
+      "verse:Mark.1.19",
+      "verse:Mark.1.20",
+      "verse:Mark.1.21",
+      "verse:Mark.1.22",
+      "verse:Mark.1.23",
+      "verse:Mark.1.24",
+      "verse:Mark.1.25",
+      "verse:Mark.1.26",
+      "verse:Mark.1.27",
+      "verse:Mark.1.28",
+      "verse:Mark.1.29",
+      "verse:Mark.1.30",
+      "verse:Mark.1.31",
+      "verse:Mark.1.32",
+      "verse:Mark.1.33",
+      "verse:Mark.1.34",
+      "verse:Mark.1.35",
+      "verse:Mark.1.36",
+      "verse:Mark.1.37",
+      "verse:Mark.1.38",
+      "verse:Mark.1.39",
+      "verse:Mark.1.40",
+      "verse:Mark.1.41",
+      "verse:Mark.1.42",
+      "verse:Mark.1.43",
+      "verse:Mark.1.44",
+      "verse:Mark.1.45",
+      "verse:Mark.2.1",
+      "verse:Mark.2.2",
+      "verse:Mark.2.3",
+      "verse:Mark.2.4",
+      "verse:Mark.2.5",
+      "verse:Mark.2.6",
+      "verse:Mark.2.7",
+      "verse:Mark.2.8",
+      "verse:Mark.2.9",
+      "verse:Mark.2.10",
+      "verse:Mark.2.11",
+      "verse:Mark.2.12",
+      "verse:Mark.2.13",
+      "verse:Mark.2.14",
+      "verse:Mark.2.15",
+      "verse:Mark.2.16",
+      "verse:Mark.2.17",
+      "verse:Mark.2.18",
+      "verse:Mark.2.19",
+      "verse:Mark.2.20",
+      "verse:Mark.2.21",
+      "verse:Mark.2.22",
+      "verse:Mark.2.23",
+      "verse:Mark.2.24",
+      "verse:Mark.2.25",
+      "verse:Mark.2.26",
+      "verse:Mark.2.27",
+      "verse:Mark.2.28",
+      "verse:Mark.3.1",
+      "verse:Mark.3.2",
+      "verse:Mark.3.3",
+      "verse:Mark.3.4",
+      "verse:Mark.3.5",
+      "verse:Mark.3.6",
+      "verse:Mark.3.7",
+      "verse:Mark.3.8",
+      "verse:Mark.3.9",
+      "verse:Mark.3.10",
+      "verse:Mark.3.11",
+      "verse:Mark.3.12",
+      "verse:Mark.3.13",
+      "verse:Mark.3.14",
+      "verse:Mark.3.15",
+      "verse:Mark.3.16",
+      "verse:Mark.3.17",
+      "verse:Mark.3.18",
+      "verse:Mark.3.19",
+      "verse:Mark.3.20",
+      "verse:Mark.3.21",
+      "verse:Mark.3.22",
+      "verse:Mark.3.23",
+      "verse:Mark.3.24",
+      "verse:Mark.3.25",
+      "verse:Mark.3.26",
+      "verse:Mark.3.27",
+      "verse:Mark.3.28",
+      "verse:Mark.3.29",
+      "verse:Mark.3.30",
+      "verse:Mark.3.31",
+      "verse:Mark.3.32",
+      "verse:Mark.3.33",
+      "verse:Mark.3.34",
+      "verse:Mark.3.35",
+      "verse:Mark.4.1",
+      "verse:Mark.4.2",
+      "verse:Mark.4.3",
+      "verse:Mark.4.4",
+      "verse:Mark.4.5",
+      "verse:Mark.4.6",
+      "verse:Mark.4.7",
+      "verse:Mark.4.8",
+      "verse:Mark.4.9",
+      "verse:Mark.4.10",
+      "verse:Mark.4.11",
+      "verse:Mark.4.12",
+      "verse:Mark.4.13",
+      "verse:Mark.4.14",
+      "verse:Mark.4.15",
+      "verse:Mark.4.16",
+      "verse:Mark.4.17",
+      "verse:Mark.4.18",
+      "verse:Mark.4.19",
+      "verse:Mark.4.20",
+      "verse:Mark.4.21",
+      "verse:Mark.4.22",
+      "verse:Mark.4.23",
+      "verse:Mark.4.24",
+      "verse:Mark.4.25",
+      "verse:Mark.4.26",
+      "verse:Mark.4.27",
+      "verse:Mark.4.28",
+      "verse:Mark.4.29",
+      "verse:Mark.4.30",
+      "verse:Mark.4.31",
+      "verse:Mark.4.32",
+      "verse:Mark.4.33",
+      "verse:Mark.4.34",
+      "verse:Mark.4.35",
+      "verse:Mark.4.36",
+      "verse:Mark.4.37",
+      "verse:Mark.4.38",
+      "verse:Mark.4.39",
+      "verse:Mark.4.40",
+      "verse:Mark.4.41",
+      "verse:Mark.5.1",
+      "verse:Mark.5.2",
+      "verse:Mark.5.3",
+      "verse:Mark.5.4",
+      "verse:Mark.5.5",
+      "verse:Mark.5.6",
+      "verse:Mark.5.7",
+      "verse:Mark.5.8",
+      "verse:Mark.5.9",
+      "verse:Mark.5.10",
+      "verse:Mark.5.11",
+      "verse:Mark.5.12",
+      "verse:Mark.5.13",
+      "verse:Mark.5.14",
+      "verse:Mark.5.15",
+      "verse:Mark.5.16",
+      "verse:Mark.5.17",
+      "verse:Mark.5.18",
+      "verse:Mark.5.19",
+      "verse:Mark.5.20",
+      "verse:Mark.5.21",
+      "verse:Mark.5.22",
+      "verse:Mark.5.23",
+      "verse:Mark.5.24",
+      "verse:Mark.5.25",
+      "verse:Mark.5.26",
+      "verse:Mark.5.27",
+      "verse:Mark.5.28",
+      "verse:Mark.5.29",
+      "verse:Mark.5.30",
+      "verse:Mark.5.31",
+      "verse:Mark.5.32",
+      "verse:Mark.5.33",
+      "verse:Mark.5.34",
+      "verse:Mark.5.35",
+      "verse:Mark.5.36",
+      "verse:Mark.5.37",
+      "verse:Mark.5.38",
+      "verse:Mark.5.39",
+      "verse:Mark.5.40",
+      "verse:Mark.5.41",
+      "verse:Mark.5.42",
+      "verse:Mark.5.43",
+      "verse:Mark.6.1",
+      "verse:Mark.6.2",
+      "verse:Mark.6.3",
+      "verse:Mark.6.4",
+      "verse:Mark.6.5",
+      "verse:Mark.6.6",
+      "verse:Mark.6.7",
+      "verse:Mark.6.8",
+      "verse:Mark.6.9",
+      "verse:Mark.6.10",
+      "verse:Mark.6.11",
+      "verse:Mark.6.12",
+      "verse:Mark.6.13",
+      "verse:Mark.6.14",
+      "verse:Mark.6.15",
+      "verse:Mark.6.16",
+      "verse:Mark.6.17",
+      "verse:Mark.6.18",
+      "verse:Mark.6.19",
+      "verse:Mark.6.20",
+      "verse:Mark.6.21",
+      "verse:Mark.6.22",
+      "verse:Mark.6.23",
+      "verse:Mark.6.24",
+      "verse:Mark.6.25",
+      "verse:Mark.6.26",
+      "verse:Mark.6.27",
+      "verse:Mark.6.28",
+      "verse:Mark.6.29",
+      "verse:Mark.6.30",
+      "verse:Mark.6.31",
+      "verse:Mark.6.32",
+      "verse:Mark.6.33",
+      "verse:Mark.6.34",
+      "verse:Mark.6.35",
+      "verse:Mark.6.36",
+      "verse:Mark.6.37",
+      "verse:Mark.6.38",
+      "verse:Mark.6.39",
+      "verse:Mark.6.40",
+      "verse:Mark.6.41",
+      "verse:Mark.6.42",
+      "verse:Mark.6.43",
+      "verse:Mark.6.44",
+      "verse:Mark.6.45",
+      "verse:Mark.6.46",
+      "verse:Mark.6.47",
+      "verse:Mark.6.48",
+      "verse:Mark.6.49",
+      "verse:Mark.6.50",
+      "verse:Mark.6.51",
+      "verse:Mark.6.52",
+      "verse:Mark.6.53",
+      "verse:Mark.6.54",
+      "verse:Mark.6.55",
+      "verse:Mark.6.56",
+      "verse:Mark.7.1",
+      "verse:Mark.7.2",
+      "verse:Mark.7.3",
+      "verse:Mark.7.4",
+      "verse:Mark.7.5",
+      "verse:Mark.7.6",
+      "verse:Mark.7.7",
+      "verse:Mark.7.8",
+      "verse:Mark.7.9",
+      "verse:Mark.7.10",
+      "verse:Mark.7.11",
+      "verse:Mark.7.12",
+      "verse:Mark.7.13",
+      "verse:Mark.7.14",
+      "verse:Mark.7.15",
+      "verse:Mark.7.16",
+      "verse:Mark.7.17",
+      "verse:Mark.7.18",
+      "verse:Mark.7.19",
+      "verse:Mark.7.20",
+      "verse:Mark.7.21",
+      "verse:Mark.7.22",
+      "verse:Mark.7.23",
+      "verse:Mark.7.24",
+      "verse:Mark.7.25",
+      "verse:Mark.7.26",
+      "verse:Mark.7.27",
+      "verse:Mark.7.28",
+      "verse:Mark.7.29",
+      "verse:Mark.7.30",
+      "verse:Mark.7.31",
+      "verse:Mark.7.32",
+      "verse:Mark.7.33",
+      "verse:Mark.7.34",
+      "verse:Mark.7.35",
+      "verse:Mark.7.36",
+      "verse:Mark.7.37",
+      "verse:Mark.8.1",
+      "verse:Mark.8.2",
+      "verse:Mark.8.3",
+      "verse:Mark.8.4",
+      "verse:Mark.8.5",
+      "verse:Mark.8.6",
+      "verse:Mark.8.7",
+      "verse:Mark.8.8",
+      "verse:Mark.8.9",
+      "verse:Mark.8.10",
+      "verse:Mark.8.11",
+      "verse:Mark.8.12",
+      "verse:Mark.8.13",
+      "verse:Mark.8.14",
+      "verse:Mark.8.15",
+      "verse:Mark.8.16",
+      "verse:Mark.8.17",
+      "verse:Mark.8.18",
+      "verse:Mark.8.19",
+      "verse:Mark.8.20",
+      "verse:Mark.8.21",
+      "verse:Mark.8.22",
+      "verse:Mark.8.23",
+      "verse:Mark.8.24",
+      "verse:Mark.8.25",
+      "verse:Mark.8.26",
+      "verse:Mark.8.27",
+      "verse:Mark.8.28",
+      "verse:Mark.8.29",
+      "verse:Mark.8.30",
+      "verse:Mark.8.31",
+      "verse:Mark.8.32",
+      "verse:Mark.8.33",
+      "verse:Mark.8.34",
+      "verse:Mark.8.35",
+      "verse:Mark.8.36",
+      "verse:Mark.8.37",
+      "verse:Mark.8.38",
+      "verse:Mark.9.1",
+      "verse:Mark.9.2",
+      "verse:Mark.9.3",
+      "verse:Mark.9.4",
+      "verse:Mark.9.5",
+      "verse:Mark.9.6",
+      "verse:Mark.9.7",
+      "verse:Mark.9.8",
+      "verse:Mark.9.9",
+      "verse:Mark.9.10",
+      "verse:Mark.9.11",
+      "verse:Mark.9.12",
+      "verse:Mark.9.13",
+      "verse:Mark.9.14",
+      "verse:Mark.9.15",
+      "verse:Mark.9.16",
+      "verse:Mark.9.17",
+      "verse:Mark.9.18",
+      "verse:Mark.9.19",
+      "verse:Mark.9.20",
+      "verse:Mark.9.21",
+      "verse:Mark.9.22",
+      "verse:Mark.9.23",
+      "verse:Mark.9.24",
+      "verse:Mark.9.25",
+      "verse:Mark.9.26",
+      "verse:Mark.9.27",
+      "verse:Mark.9.28",
+      "verse:Mark.9.29",
+      "verse:Mark.9.30",
+      "verse:Mark.9.31",
+      "verse:Mark.9.32",
+      "verse:Mark.9.33",
+      "verse:Mark.9.34",
+      "verse:Mark.9.35",
+      "verse:Mark.9.36",
+      "verse:Mark.9.37",
+      "verse:Mark.9.38",
+      "verse:Mark.9.39",
+      "verse:Mark.9.40",
+      "verse:Mark.9.41",
+      "verse:Mark.9.42",
+      "verse:Mark.9.43",
+      "verse:Mark.9.45",
+      "verse:Mark.9.47",
+      "verse:Mark.9.48",
+      "verse:Mark.9.49",
+      "verse:Mark.9.50",
+      "verse:Mark.10.1",
+      "verse:Mark.10.2",
+      "verse:Mark.10.3",
+      "verse:Mark.10.4",
+      "verse:Mark.10.5",
+      "verse:Mark.10.6",
+      "verse:Mark.10.7",
+      "verse:Mark.10.8",
+      "verse:Mark.10.9",
+      "verse:Mark.10.10",
+      "verse:Mark.10.11",
+      "verse:Mark.10.12",
+      "verse:Mark.10.13",
+      "verse:Mark.10.14",
+      "verse:Mark.10.15",
+      "verse:Mark.10.16",
+      "verse:Mark.10.17",
+      "verse:Mark.10.18",
+      "verse:Mark.10.19",
+      "verse:Mark.10.20",
+      "verse:Mark.10.21",
+      "verse:Mark.10.22",
+      "verse:Mark.10.23",
+      "verse:Mark.10.24",
+      "verse:Mark.10.25",
+      "verse:Mark.10.26",
+      "verse:Mark.10.27",
+      "verse:Mark.10.28",
+      "verse:Mark.10.29",
+      "verse:Mark.10.30",
+      "verse:Mark.10.31",
+      "verse:Mark.10.32",
+      "verse:Mark.10.33",
+      "verse:Mark.10.34",
+      "verse:Mark.10.35",
+      "verse:Mark.10.36",
+      "verse:Mark.10.37",
+      "verse:Mark.10.38",
+      "verse:Mark.10.39",
+      "verse:Mark.10.40",
+      "verse:Mark.10.41",
+      "verse:Mark.10.42",
+      "verse:Mark.10.43",
+      "verse:Mark.10.44",
+      "verse:Mark.10.45",
+      "verse:Mark.10.46",
+      "verse:Mark.10.47",
+      "verse:Mark.10.48",
+      "verse:Mark.10.49",
+      "verse:Mark.10.50",
+      "verse:Mark.10.51",
+      "verse:Mark.10.52",
+      "verse:Mark.11.1",
+      "verse:Mark.11.2",
+      "verse:Mark.11.3",
+      "verse:Mark.11.4",
+      "verse:Mark.11.5",
+      "verse:Mark.11.6",
+      "verse:Mark.11.7",
+      "verse:Mark.11.8",
+      "verse:Mark.11.9",
+      "verse:Mark.11.10",
+      "verse:Mark.11.11",
+      "verse:Mark.11.12",
+      "verse:Mark.11.13",
+      "verse:Mark.11.14",
+      "verse:Mark.11.15",
+      "verse:Mark.11.16",
+      "verse:Mark.11.17",
+      "verse:Mark.11.18",
+      "verse:Mark.11.19",
+      "verse:Mark.11.20",
+      "verse:Mark.11.21",
+      "verse:Mark.11.22",
+      "verse:Mark.11.23",
+      "verse:Mark.11.24",
+      "verse:Mark.11.25",
+      "verse:Mark.11.26",
+      "verse:Mark.11.27",
+      "verse:Mark.11.28",
+      "verse:Mark.11.29",
+      "verse:Mark.11.30",
+      "verse:Mark.11.31",
+      "verse:Mark.11.32",
+      "verse:Mark.11.33",
+      "verse:Mark.12.1",
+      "verse:Mark.12.2",
+      "verse:Mark.12.3",
+      "verse:Mark.12.4",
+      "verse:Mark.12.5",
+      "verse:Mark.12.6",
+      "verse:Mark.12.7",
+      "verse:Mark.12.8",
+      "verse:Mark.12.9",
+      "verse:Mark.12.10",
+      "verse:Mark.12.11",
+      "verse:Mark.12.12",
+      "verse:Mark.12.13",
+      "verse:Mark.12.14",
+      "verse:Mark.12.15",
+      "verse:Mark.12.16",
+      "verse:Mark.12.17",
+      "verse:Mark.12.18",
+      "verse:Mark.12.19",
+      "verse:Mark.12.20",
+      "verse:Mark.12.21",
+      "verse:Mark.12.22",
+      "verse:Mark.12.23",
+      "verse:Mark.12.24",
+      "verse:Mark.12.25",
+      "verse:Mark.12.26",
+      "verse:Mark.12.27",
+      "verse:Mark.12.28",
+      "verse:Mark.12.29",
+      "verse:Mark.12.30",
+      "verse:Mark.12.31",
+      "verse:Mark.12.32",
+      "verse:Mark.12.33",
+      "verse:Mark.12.34",
+      "verse:Mark.12.35",
+      "verse:Mark.12.36",
+      "verse:Mark.12.37",
+      "verse:Mark.12.38",
+      "verse:Mark.12.39",
+      "verse:Mark.12.40",
+      "verse:Mark.12.41",
+      "verse:Mark.12.42",
+      "verse:Mark.12.43",
+      "verse:Mark.12.44",
+      "verse:Mark.13.1",
+      "verse:Mark.13.2",
+      "verse:Mark.13.3",
+      "verse:Mark.13.4",
+      "verse:Mark.13.5",
+      "verse:Mark.13.6",
+      "verse:Mark.13.7",
+      "verse:Mark.13.8",
+      "verse:Mark.13.9",
+      "verse:Mark.13.10",
+      "verse:Mark.13.11",
+      "verse:Mark.13.12",
+      "verse:Mark.13.13",
+      "verse:Mark.13.14",
+      "verse:Mark.13.15",
+      "verse:Mark.13.16",
+      "verse:Mark.13.17",
+      "verse:Mark.13.18",
+      "verse:Mark.13.19",
+      "verse:Mark.13.20",
+      "verse:Mark.13.21",
+      "verse:Mark.13.22",
+      "verse:Mark.13.23",
+      "verse:Mark.13.24",
+      "verse:Mark.13.25",
+      "verse:Mark.13.26",
+      "verse:Mark.13.27",
+      "verse:Mark.13.28",
+      "verse:Mark.13.29",
+      "verse:Mark.13.30",
+      "verse:Mark.13.31",
+      "verse:Mark.13.32",
+      "verse:Mark.13.33",
+      "verse:Mark.13.34",
+      "verse:Mark.13.35",
+      "verse:Mark.13.36",
+      "verse:Mark.13.37",
+      "verse:Mark.14.1",
+      "verse:Mark.14.2",
+      "verse:Mark.14.3",
+      "verse:Mark.14.4",
+      "verse:Mark.14.5",
+      "verse:Mark.14.6",
+      "verse:Mark.14.7",
+      "verse:Mark.14.8",
+      "verse:Mark.14.9",
+      "verse:Mark.14.10",
+      "verse:Mark.14.11",
+      "verse:Mark.14.12",
+      "verse:Mark.14.13",
+      "verse:Mark.14.14",
+      "verse:Mark.14.15",
+      "verse:Mark.14.16",
+      "verse:Mark.14.17",
+      "verse:Mark.14.18",
+      "verse:Mark.14.19",
+      "verse:Mark.14.20",
+      "verse:Mark.14.21",
+      "verse:Mark.14.22",
+      "verse:Mark.14.23",
+      "verse:Mark.14.24",
+      "verse:Mark.14.25",
+      "verse:Mark.14.26",
+      "verse:Mark.14.27",
+      "verse:Mark.14.28",
+      "verse:Mark.14.29",
+      "verse:Mark.14.30",
+      "verse:Mark.14.31",
+      "verse:Mark.14.32",
+      "verse:Mark.14.33",
+      "verse:Mark.14.34",
+      "verse:Mark.14.35",
+      "verse:Mark.14.36",
+      "verse:Mark.14.37",
+      "verse:Mark.14.38",
+      "verse:Mark.14.39",
+      "verse:Mark.14.40",
+      "verse:Mark.14.41",
+      "verse:Mark.14.42",
+      "verse:Mark.14.43",
+      "verse:Mark.14.44",
+      "verse:Mark.14.45",
+      "verse:Mark.14.46",
+      "verse:Mark.14.47",
+      "verse:Mark.14.48",
+      "verse:Mark.14.49",
+      "verse:Mark.14.50",
+      "verse:Mark.14.51",
+      "verse:Mark.14.52",
+      "verse:Mark.14.53",
+      "verse:Mark.14.54",
+      "verse:Mark.14.55",
+      "verse:Mark.14.56",
+      "verse:Mark.14.57",
+      "verse:Mark.14.58",
+      "verse:Mark.14.59",
+      "verse:Mark.14.60",
+      "verse:Mark.14.61",
+      "verse:Mark.14.62",
+      "verse:Mark.14.63",
+      "verse:Mark.14.64",
+      "verse:Mark.14.65",
+      "verse:Mark.14.66",
+      "verse:Mark.14.67",
+      "verse:Mark.14.68",
+      "verse:Mark.14.69",
+      "verse:Mark.14.70",
+      "verse:Mark.14.71",
+      "verse:Mark.14.72",
+      "verse:Mark.15.1",
+      "verse:Mark.15.2",
+      "verse:Mark.15.3",
+      "verse:Mark.15.4",
+      "verse:Mark.15.5",
+      "verse:Mark.15.6",
+      "verse:Mark.15.7",
+      "verse:Mark.15.8",
+      "verse:Mark.15.9",
+      "verse:Mark.15.10",
+      "verse:Mark.15.11",
+      "verse:Mark.15.12",
+      "verse:Mark.15.13",
+      "verse:Mark.15.14",
+      "verse:Mark.15.15",
+      "verse:Mark.15.16",
+      "verse:Mark.15.17",
+      "verse:Mark.15.18",
+      "verse:Mark.15.19",
+      "verse:Mark.15.20",
+      "verse:Mark.15.21",
+      "verse:Mark.15.22",
+      "verse:Mark.15.23",
+      "verse:Mark.15.24",
+      "verse:Mark.15.25",
+      "verse:Mark.15.26",
+      "verse:Mark.15.27",
+      "verse:Mark.15.28",
+      "verse:Mark.15.29",
+      "verse:Mark.15.30",
+      "verse:Mark.15.31",
+      "verse:Mark.15.32",
+      "verse:Mark.15.33",
+      "verse:Mark.15.34",
+      "verse:Mark.15.35",
+      "verse:Mark.15.36",
+      "verse:Mark.15.37",
+      "verse:Mark.15.38",
+      "verse:Mark.15.39",
+      "verse:Mark.15.40",
+      "verse:Mark.15.41",
+      "verse:Mark.15.42",
+      "verse:Mark.15.43",
+      "verse:Mark.15.44",
+      "verse:Mark.15.45",
+      "verse:Mark.15.46",
+      "verse:Mark.15.47",
+      "verse:Mark.16.1",
+      "verse:Mark.16.2",
+      "verse:Mark.16.3",
+      "verse:Mark.16.4",
+      "verse:Mark.16.5",
+      "verse:Mark.16.6",
+      "verse:Mark.16.7",
+      "verse:Mark.16.8",
+      "verse:Mark.16.9",
+      "verse:Mark.16.10",
+      "verse:Mark.16.11",
+      "verse:Mark.16.12",
+      "verse:Mark.16.13",
+      "verse:Mark.16.14",
+      "verse:Mark.16.15",
+      "verse:Mark.16.16",
+      "verse:Mark.16.17",
+      "verse:Mark.16.18",
+      "verse:Mark.16.19",
+      "verse:Mark.16.20"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": "edition:tel-irv@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-moses-1-1-44",
+        "verse_key": "verse:Mark.1.44",
+        "attestation_key": "attestation:wb-p-moses-1-1-44",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": " యాజకునికి కనిపించి ",
+          "suffix": " ఆజ్ఞాపించిన ప్రకారం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-7-10",
+        "verse_key": "verse:Mark.7.10",
+        "attestation_key": "attestation:wb-p-moses-1-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", ‘మీ తల్లిదండ్రులను"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-9-4",
+        "verse_key": "verse:Mark.9.4",
+        "attestation_key": "attestation:wb-p-moses-1-9-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ఏలీయా, ",
+          "suffix": "లు అక్కడ ప్రత్యక్షమై"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-9-5",
+        "verse_key": "verse:Mark.9.5",
+        "attestation_key": "attestation:wb-p-moses-1-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "ాం, ఒకటి నీకు, ఒకటి ",
+          "suffix": "కి, ఒకటి ఏలీయాకి” అన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-10-3",
+        "verse_key": "verse:Mark.10.3",
+        "attestation_key": "attestation:wb-p-moses-1-10-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "యేసు,“",
+          "suffix": " మీకు ఏమని ఆజ్ఞాపించ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-10-4",
+        "verse_key": "verse:Mark.10.4",
+        "attestation_key": "attestation:wb-p-moses-1-10-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "ంపులు చేసుకోవడానికి ",
+          "suffix": " అనుమతి ఇచ్చాడు” అన్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-12-19",
+        "verse_key": "verse:Mark.12.19",
+        "attestation_key": "attestation:wb-p-moses-1-12-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "ం కలిగేలా చెయ్యాలని ",
+          "suffix": " మనకోసం ధర్మశాస్త్రం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-12-26",
+        "verse_key": "verse:Mark.12.26",
+        "attestation_key": "attestation:wb-p-moses-1-12-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "ు బ్రతకడం విషయమైతే, ",
+          "suffix": " తాను రాసిన గ్రంథంలో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-2-25",
+        "verse_key": "verse:Mark.2.25",
+        "attestation_key": "attestation:wb-p-david-1-2-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "వారితో ఇలా అన్నాడు,“",
+          "suffix": ", అతనితో ఉన్నవారు అవ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-11-10",
+        "verse_key": "verse:Mark.11.10",
+        "attestation_key": "attestation:wb-p-david-1-11-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "రానున్న మన తండ్రి ",
+          "suffix": " రాజ్యం ధన్యం. సర్వో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-36",
+        "verse_key": "verse:Mark.12.36",
+        "attestation_key": "attestation:wb-p-david-1-12-36",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", తానే పరిశుద్ధాత్మ "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-37",
+        "verse_key": "verse:Mark.12.37",
+        "attestation_key": "attestation:wb-p-david-1-12-37",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " స్వయంగా ఆయనను ‘ప్రభ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-6-15",
+        "verse_key": "verse:Mark.6.15",
+        "attestation_key": "attestation:wb-p-elijah-1-6-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "ఇతరులు, “ఈయన ",
+          "suffix": "” అన్నారు. ఇంకొందరు,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-8-28",
+        "verse_key": "verse:Mark.8.28",
+        "attestation_key": "attestation:wb-p-elijah-1-8-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "్చే యోహానని కొందరూ, ",
+          "suffix": " అని కొందరూ, ప్రవక్త"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-9-4",
+        "verse_key": "verse:Mark.9.4",
+        "attestation_key": "attestation:wb-p-elijah-1-9-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": ", మోషేలు అక్కడ ప్రత్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-9-5",
+        "verse_key": "verse:Mark.9.5",
+        "attestation_key": "attestation:wb-p-elijah-1-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": ", ఒకటి మోషేకి, ఒకటి ",
+          "suffix": "కి” అన్నాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-9-11",
+        "verse_key": "verse:Mark.9.11",
+        "attestation_key": "attestation:wb-p-elijah-1-9-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు వారు, “",
+          "suffix": " మొదట రావాలని ధర్మశా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-9-12",
+        "verse_key": "verse:Mark.9.12",
+        "attestation_key": "attestation:wb-p-elijah-1-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "యేసు జవాబు చెబుతూ,“",
+          "suffix": " మొదట వచ్చి అన్నిటిన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-9-13",
+        "verse_key": "verse:Mark.9.13",
+        "attestation_key": "attestation:wb-p-elijah-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": " మీతో చెప్పేదేమంటే, ",
+          "suffix": " వచ్చాడు, అతని గురిం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-15-35",
+        "verse_key": "verse:Mark.15.35",
+        "attestation_key": "attestation:wb-p-elijah-1-15-35",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": " విని, “ఇదిగో, ఇతడు ",
+          "suffix": "ను పిలుస్తున్నాడు” అ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-15-36",
+        "verse_key": "verse:Mark.15.36",
+        "attestation_key": "attestation:wb-p-elijah-1-15-36",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "గడానికి అందించాడు. “",
+          "suffix": " వచ్చి ఇతన్ని కిందిక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaiah-1-1-2",
+        "verse_key": "verse:Mark.1.2",
+        "attestation_key": "attestation:wb-p-isaiah-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యెషయా",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ప్రవక్త రాసిన గ్రంథ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mary-1-6-3",
+        "verse_key": "verse:Mark.6.3",
+        "attestation_key": "attestation:wb-p-mary-1-6-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మరియ",
+          "occurrence_ordinal": 1,
+          "prefix": "ఇతడు వడ్రంగి కదూ! ",
+          "suffix": " కొడుకు కదూ! యాకోబు,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mary-1-15-40",
+        "verse_key": "verse:Mark.15.40",
+        "attestation_key": "attestation:wb-p-mary-1-15-40",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మరియ",
+          "occurrence_ordinal": 1,
+          "prefix": "రు. వారిలో మగ్దలేనే ",
+          "suffix": ", చిన్న యాకోబు, యోసే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mary-1-15-47",
+        "verse_key": "verse:Mark.15.47",
+        "attestation_key": "attestation:wb-p-mary-1-15-47",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మరియ",
+          "occurrence_ordinal": 1,
+          "prefix": "మగ్దలేనే ",
+          "suffix": ", యేసు తల్లి అయిన మర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mary-1-16-1",
+        "verse_key": "verse:Mark.16.1",
+        "attestation_key": "attestation:wb-p-mary-1-16-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మరియ",
+          "occurrence_ordinal": 1,
+          "prefix": "అయిపోగానే, మగ్దలేనే ",
+          "suffix": ", యాకోబు తల్లి మరియ,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-1-4",
+        "verse_key": "verse:Mark.1.4",
+        "attestation_key": "attestation:wb-p-john-1-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " వచ్చినపుడు అరణ్య ప్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-1-6",
+        "verse_key": "verse:Mark.1.6",
+        "attestation_key": "attestation:wb-p-john-1-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఒంటె వెంట్రుకలతో చే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-1-14",
+        "verse_key": "verse:Mark.1.14",
+        "attestation_key": "attestation:wb-p-john-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "ను చెరసాలలో వేసిన తర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-2-18",
+        "verse_key": "verse:Mark.2.18",
+        "attestation_key": "attestation:wb-p-john-1-2-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " శిష్యులు, పరిసయ్యుల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-14",
+        "verse_key": "verse:Mark.6.14",
+        "attestation_key": "attestation:wb-p-john-1-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ంది. బాప్తిసం ఇచ్చే ",
+          "suffix": " బతికి వచ్చాడని, అంద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-16",
+        "verse_key": "verse:Mark.6.16",
+        "attestation_key": "attestation:wb-p-john-1-6-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": " “నేను తల నరికించిన ",
+          "suffix": " మళ్ళీ బతికి వచ్చాడు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-17",
+        "verse_key": "verse:Mark.6.17",
+        "attestation_key": "attestation:wb-p-john-1-6-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ుందు హేరోదు స్వయంగా ",
+          "suffix": "ను బంధించి, ఖైదులో వ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-18",
+        "verse_key": "verse:Mark.6.18",
+        "attestation_key": "attestation:wb-p-john-1-6-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఎందుకంటే ",
+          "suffix": " హేరోదుతో, “నీ సోదరు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-20",
+        "verse_key": "verse:Mark.6.20",
+        "attestation_key": "attestation:wb-p-john-1-6-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఎందుకంటే హేరోదు ",
+          "suffix": "కు భయపడేవాడు. యోహాను"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-24",
+        "verse_key": "verse:Mark.6.24",
+        "attestation_key": "attestation:wb-p-john-1-6-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "మె, “బాప్తిసం ఇచ్చే ",
+          "suffix": " తల కోరుకో” అని చెప్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-6-25",
+        "verse_key": "verse:Mark.6.25",
+        "attestation_key": "attestation:wb-p-john-1-6-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ళి, “బాప్తిసం ఇచ్చే ",
+          "suffix": " తలను పళ్ళెంలో పెట్ట"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-11-30",
+        "verse_key": "verse:Mark.11.30",
+        "attestation_key": "attestation:wb-p-john-1-11-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఇచ్చిన బాప్తిసం ఎక్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-1-11-32",
+        "verse_key": "verse:Mark.11.32",
+        "attestation_key": "attestation:wb-p-john-1-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "కున్నారు. ఎందుకంటే, ",
+          "suffix": " నిజంగా ఒక ప్రవక్త అ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-3-16",
+        "verse_key": "verse:Mark.3.16",
+        "attestation_key": "attestation:wb-p-simon-1-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": " సీమోను (ఇతనికి ఆయన ",
+          "suffix": " అనే పేరు పెట్టాడు),"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-5-37",
+        "verse_key": "verse:Mark.5.37",
+        "attestation_key": "attestation:wb-p-simon-1-5-37",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడాయన ",
+          "suffix": "ను, యాకోబును, యాకోబు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-8-29",
+        "verse_key": "verse:Mark.8.29",
+        "attestation_key": "attestation:wb-p-simon-1-8-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "ాడు. దానికి జవాబుగా ",
+          "suffix": ", “నీవు అభిషిక్తుడివ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-8-32",
+        "verse_key": "verse:Mark.8.32",
+        "attestation_key": "attestation:wb-p-simon-1-8-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "ానే చెప్పాడు. అయితే ",
+          "suffix": " ఆయన చెయ్యి పట్టుకున"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-8-33",
+        "verse_key": "verse:Mark.8.33",
+        "attestation_key": "attestation:wb-p-simon-1-8-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "ి తన శిష్యులను చూసి ",
+          "suffix": "తో,“సైతానూ! నా వెనక్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-9-2",
+        "verse_key": "verse:Mark.9.2",
+        "attestation_key": "attestation:wb-p-simon-1-9-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "రు రోజుల తరవాత యేసు ",
+          "suffix": ", యాకోబు, యోహానులను "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-9-5",
+        "verse_key": "verse:Mark.9.5",
+        "attestation_key": "attestation:wb-p-simon-1-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " యేసుతో, “రబ్బీ! మనం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-10-28",
+        "verse_key": "verse:Mark.10.28",
+        "attestation_key": "attestation:wb-p-simon-1-10-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఆయనతో, “ఇదిగో, మేము"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-11-21",
+        "verse_key": "verse:Mark.11.21",
+        "attestation_key": "attestation:wb-p-simon-1-11-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": "కు యేసు మాటలు జ్ఞాపక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-13-3",
+        "verse_key": "verse:Mark.13.3",
+        "attestation_key": "attestation:wb-p-simon-1-13-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "కూర్చుని ఉన్నప్పుడు ",
+          "suffix": ", యాకోబు, యోహాను, అం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-29",
+        "verse_key": "verse:Mark.14.29",
+        "attestation_key": "attestation:wb-p-simon-1-14-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "అయితే ",
+          "suffix": " ఆయనతో, “అందరూ అలా చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-31",
+        "verse_key": "verse:Mark.14.31",
+        "attestation_key": "attestation:wb-p-simon-1-14-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "ు తెలియదు అనను” అని ",
+          "suffix": " గట్టిగా చెప్పాడు. మ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-33",
+        "verse_key": "verse:Mark.14.33",
+        "attestation_key": "attestation:wb-p-simon-1-14-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడాయన ",
+          "suffix": ", యాకోబు, యోహానులను "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-54",
+        "verse_key": "verse:Mark.14.54",
+        "attestation_key": "attestation:wb-p-simon-1-14-54",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " యేసుకు దూరంగా ఉండి "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-66",
+        "verse_key": "verse:Mark.14.66",
+        "attestation_key": "attestation:wb-p-simon-1-14-66",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఇంటి లోగిట్లో ఉన్నా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-67",
+        "verse_key": "verse:Mark.14.67",
+        "attestation_key": "attestation:wb-p-simon-1-14-67",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " చలి కాచుకుంటూ అక్కడ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-70",
+        "verse_key": "verse:Mark.14.70",
+        "attestation_key": "attestation:wb-p-simon-1-14-70",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " మళ్ళీ కాదన్నాడు. కా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-14-72",
+        "verse_key": "verse:Mark.14.72",
+        "attestation_key": "attestation:wb-p-simon-1-14-72",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": " తనతో చెప్పిన మాటలు ",
+          "suffix": "కు జ్ఞాపకం వచ్చాయి. "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-16-7",
+        "verse_key": "verse:Mark.16.7",
+        "attestation_key": "attestation:wb-p-simon-1-16-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పేతురు",
+          "occurrence_ordinal": 1,
+          "prefix": "ళ్ళి ఆయన శిష్యులతో, ",
+          "suffix": "తో ఇలా చెప్పండి. “యే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-1-19",
+        "verse_key": "verse:Mark.1.19",
+        "attestation_key": "attestation:wb-p-james-1-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ోబునూ, అతని సోదరుడు ",
+          "suffix": "నూ చూశాడు. వారు పడవల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-1-29",
+        "verse_key": "verse:Mark.1.29",
+        "attestation_key": "attestation:wb-p-james-1-1-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "రవేశించారు. యాకోబు, ",
+          "suffix": " కూడా వారితో ఉన్నారు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-3-17",
+        "verse_key": "verse:Mark.3.17",
+        "attestation_key": "attestation:wb-p-james-1-3-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాకోబు, అతని సోదరుడు ",
+          "suffix": " (వీరికి ఆయన ‘బోయనేర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-5-37",
+        "verse_key": "verse:Mark.5.37",
+        "attestation_key": "attestation:wb-p-james-1-5-37",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ును, యాకోబు సోదరుడు ",
+          "suffix": "ను తప్ప ఎవ్వరినీ తన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-9-2",
+        "verse_key": "verse:Mark.9.2",
+        "attestation_key": "attestation:wb-p-james-1-9-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ేసు పేతురు, యాకోబు, ",
+          "suffix": "లను తీసుకుని ఏకాంతంగ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-10-35",
+        "verse_key": "verse:Mark.10.35",
+        "attestation_key": "attestation:wb-p-james-1-10-35",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "యి కుమారులు యాకోబు, ",
+          "suffix": " ఆయన దగ్గరికి వచ్చి,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-10-41",
+        "verse_key": "verse:Mark.10.41",
+        "attestation_key": "attestation:wb-p-james-1-10-41",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ా పదిమందికి యాకోబు, ",
+          "suffix": "ల మీద కోపం వచ్చింది."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-13-3",
+        "verse_key": "verse:Mark.13.3",
+        "attestation_key": "attestation:wb-p-james-1-13-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ుడు పేతురు, యాకోబు, ",
+          "suffix": ", అంద్రెయ ఏకాంతంగా ఆ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-james-1-14-33",
+        "verse_key": "verse:Mark.14.33",
+        "attestation_key": "attestation:wb-p-james-1-14-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాయన పేతురు, యాకోబు, ",
+          "suffix": "లను తన వెంట తీసుకు వ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-1-19",
+        "verse_key": "verse:Mark.1.19",
+        "attestation_key": "attestation:wb-p-john-2-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ోబునూ, అతని సోదరుడు ",
+          "suffix": "నూ చూశాడు. వారు పడవల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-1-29",
+        "verse_key": "verse:Mark.1.29",
+        "attestation_key": "attestation:wb-p-john-2-1-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "రవేశించారు. యాకోబు, ",
+          "suffix": " కూడా వారితో ఉన్నారు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-3-17",
+        "verse_key": "verse:Mark.3.17",
+        "attestation_key": "attestation:wb-p-john-2-3-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాకోబు, అతని సోదరుడు ",
+          "suffix": " (వీరికి ఆయన ‘బోయనేర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-5-37",
+        "verse_key": "verse:Mark.5.37",
+        "attestation_key": "attestation:wb-p-john-2-5-37",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ును, యాకోబు సోదరుడు ",
+          "suffix": "ను తప్ప ఎవ్వరినీ తన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-9-2",
+        "verse_key": "verse:Mark.9.2",
+        "attestation_key": "attestation:wb-p-john-2-9-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ేసు పేతురు, యాకోబు, ",
+          "suffix": "లను తీసుకుని ఏకాంతంగ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-9-38",
+        "verse_key": "verse:Mark.9.38",
+        "attestation_key": "attestation:wb-p-john-2-9-38",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఆయనతో, “బోధకా! ఒకడు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-10-35",
+        "verse_key": "verse:Mark.10.35",
+        "attestation_key": "attestation:wb-p-john-2-10-35",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "యి కుమారులు యాకోబు, ",
+          "suffix": " ఆయన దగ్గరికి వచ్చి,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-10-41",
+        "verse_key": "verse:Mark.10.41",
+        "attestation_key": "attestation:wb-p-john-2-10-41",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ా పదిమందికి యాకోబు, ",
+          "suffix": "ల మీద కోపం వచ్చింది."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-13-3",
+        "verse_key": "verse:Mark.13.3",
+        "attestation_key": "attestation:wb-p-john-2-13-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ుడు పేతురు, యాకోబు, ",
+          "suffix": ", అంద్రెయ ఏకాంతంగా ఆ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-14-33",
+        "verse_key": "verse:Mark.14.33",
+        "attestation_key": "attestation:wb-p-john-2-14-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోహాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాయన పేతురు, యాకోబు, ",
+          "suffix": "లను తన వెంట తీసుకు వ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-philip-1-3-18",
+        "verse_key": "verse:Mark.3.18",
+        "attestation_key": "attestation:wb-p-philip-1-3-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-philip-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఫిలిప్పు",
+          "occurrence_ordinal": 1,
+          "prefix": "అంద్రెయ, ",
+          "suffix": ", బర్తొలొమయి, మత్తయి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judas-1-3-19",
+        "verse_key": "verse:Mark.3.19",
+        "attestation_key": "attestation:wb-p-judas-1-3-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదా",
+          "occurrence_ordinal": 1,
+          "prefix": "ి ఇచ్చిన ఇస్కరియోతు ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judas-1-14-10",
+        "verse_key": "verse:Mark.14.10",
+        "attestation_key": "attestation:wb-p-judas-1-14-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదా",
+          "occurrence_ordinal": 1,
+          "prefix": "్నెండు మందిలో ఒకడైన ",
+          "suffix": " ఇస్కరియోతు యేసును ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judas-1-14-43",
+        "verse_key": "verse:Mark.14.43",
+        "attestation_key": "attestation:wb-p-judas-1-14-43",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదా",
+          "occurrence_ordinal": 1,
+          "prefix": "్నెండు మందిలో ఒకడైన ",
+          "suffix": " వచ్చాడు. ప్రధాన యాజ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-6-14",
+        "verse_key": "verse:Mark.6.14",
+        "attestation_key": "attestation:wb-p-herod-2-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": " కావడం వల్ల ఆ సంగతి ",
+          "suffix": " రాజుకు తెలిసింది. బ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-6-17",
+        "verse_key": "verse:Mark.6.17",
+        "attestation_key": "attestation:wb-p-herod-2-6-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఇంతకు ముందు ",
+          "suffix": " స్వయంగా యోహానును బం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-6-18",
+        "verse_key": "verse:Mark.6.18",
+        "attestation_key": "attestation:wb-p-herod-2-6-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఎందుకంటే యోహాను ",
+          "suffix": "తో, “నీ సోదరుని భార్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-6-20",
+        "verse_key": "verse:Mark.6.20",
+        "attestation_key": "attestation:wb-p-herod-2-6-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఎందుకంటే ",
+          "suffix": " యోహానుకు భయపడేవాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-6-21",
+        "verse_key": "verse:Mark.6.21",
+        "attestation_key": "attestation:wb-p-herod-2-6-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ు అవకాశం దొరికింది. ",
+          "suffix": " తన రాజ్యంలోని అధికా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-6-22",
+        "verse_key": "verse:Mark.6.22",
+        "attestation_key": "attestation:wb-p-herod-2-6-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": " వచ్చి నాట్యం చేసి, ",
+          "suffix": "ను అతని అతిధులను మెప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-herod-2-8-15",
+        "verse_key": "verse:Mark.8.15",
+        "attestation_key": "attestation:wb-p-herod-2-8-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హేరోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ారితో,“పరిసయ్యులకు, ",
+          "suffix": "కు సంబంధించిన పొంగజే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-1",
+        "verse_key": "verse:Mark.15.1",
+        "attestation_key": "attestation:wb-p-pilate-1-15-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "వెళ్ళి రోమా గవర్నర్ ",
+          "suffix": "కు అప్పగించారు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-2",
+        "verse_key": "verse:Mark.15.2",
+        "attestation_key": "attestation:wb-p-pilate-1-15-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " యేసును, “నీవు యూదుల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-4",
+        "verse_key": "verse:Mark.15.4",
+        "attestation_key": "attestation:wb-p-pilate-1-15-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "కనుక ",
+          "suffix": " మరొకసారి ఆయనను ప్రశ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-5",
+        "verse_key": "verse:Mark.15.5",
+        "attestation_key": "attestation:wb-p-pilate-1-15-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "ు పలకలేదు. ఇది చూసి ",
+          "suffix": "కు చాలా ఆశ్చర్యం వేస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-9",
+        "verse_key": "verse:Mark.15.9",
+        "attestation_key": "attestation:wb-p-pilate-1-15-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", “యూదుల రాజును మీకు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-12",
+        "verse_key": "verse:Mark.15.12",
+        "attestation_key": "attestation:wb-p-pilate-1-15-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", “అలాగైతే ‘యూదుల రా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-14",
+        "verse_key": "verse:Mark.15.14",
+        "attestation_key": "attestation:wb-p-pilate-1-15-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", “ఎందుకు? అతడు చేసి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-15",
+        "verse_key": "verse:Mark.15.15",
+        "attestation_key": "attestation:wb-p-pilate-1-15-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "న్ని సంతోషపెట్టాలని ",
+          "suffix": " వారు అడిగినట్టు బరబ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-43",
+        "verse_key": "verse:Mark.15.43",
+        "attestation_key": "attestation:wb-p-pilate-1-15-43",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "వాడు. అతడు ధైర్యంగా ",
+          "suffix": " దగ్గరికి వెళ్ళి యేస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-15-44",
+        "verse_key": "verse:Mark.15.44",
+        "attestation_key": "attestation:wb-p-pilate-1-15-44",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పిలాతు",
+          "occurrence_ordinal": 1,
+          "prefix": "త త్వరగా చనిపోయాడని ",
+          "suffix": " ఆశ్చర్యపోయి, శతాధిప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jordan-ae686c9-1-5",
+        "verse_key": "verse:Mark.1.5",
+        "attestation_key": "attestation:wb-pl-jordan-ae686c9-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jordan-ae686c9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యొర్దాను",
+          "occurrence_ordinal": 1,
+          "prefix": "మ పాపాలు ఒప్పుకుని, ",
+          "suffix": " నదిలో అతని చేత బాప్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jordan-ae686c9-1-9",
+        "verse_key": "verse:Mark.1.9",
+        "attestation_key": "attestation:wb-pl-jordan-ae686c9-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jordan-ae686c9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యొర్దాను",
+          "occurrence_ordinal": 1,
+          "prefix": "సు వచ్చి యోహాను చేత ",
+          "suffix": " నదిలో బాప్తిసం తీసు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jordan-ae686c9-3-8",
+        "verse_key": "verse:Mark.3.8",
+        "attestation_key": "attestation:wb-pl-jordan-ae686c9-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jordan-ae686c9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యొర్దాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ూమియ ప్రాంతాలనుండీ, ",
+          "suffix": " నది అవతలి నుండీ తూర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jordan-ae686c9-10-1",
+        "verse_key": "verse:Mark.10.1",
+        "attestation_key": "attestation:wb-pl-jordan-ae686c9-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jordan-ae686c9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యొర్దాను",
+          "occurrence_ordinal": 1,
+          "prefix": " వెళ్ళాడు. ఆ తరువాత ",
+          "suffix": " నదికి అవతల ఉన్న ప్ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-judea-1-a149f13-1-5",
+        "verse_key": "verse:Mark.1.5",
+        "attestation_key": "attestation:wb-pl-judea-1-a149f13-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-judea-1-a149f13"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదయ",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ప్రాంతం, యెరూషలేము "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-judea-1-a149f13-3-7",
+        "verse_key": "verse:Mark.3.7",
+        "attestation_key": "attestation:wb-pl-judea-1-a149f13-3-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-judea-1-a149f13"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదయ",
+          "occurrence_ordinal": 1,
+          "prefix": "్తూ ఉన్నాడు. గలిలయ, ",
+          "suffix": " ప్రాంతం నుండి వచ్చి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-judea-1-a149f13-10-1",
+        "verse_key": "verse:Mark.10.1",
+        "attestation_key": "attestation:wb-pl-judea-1-a149f13-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-judea-1-a149f13"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదయ",
+          "occurrence_ordinal": 1,
+          "prefix": "సు ఆ ప్రాంతం విడిచి ",
+          "suffix": " ప్రాంతానికి వెళ్ళాడ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-judea-1-a149f13-13-14",
+        "verse_key": "verse:Mark.13.14",
+        "attestation_key": "attestation:wb-pl-judea-1-a149f13-13-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-judea-1-a149f13"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదయ",
+          "occurrence_ordinal": 1,
+          "prefix": "డు గ్రహిస్తాడు గాక) ",
+          "suffix": "లో ఉన్నవారు కొండల్లో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-of-olives-ac2c4c5-11-1",
+        "verse_key": "verse:Mark.11.1",
+        "attestation_key": "attestation:wb-pl-mount-of-olives-ac2c4c5-11-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-of-olives-ac2c4c5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఒలీవ",
+          "occurrence_ordinal": 1,
+          "prefix": "టణాన్ని సమీపించారు. ",
+          "suffix": "ల కొండ దగ్గర ఉన్న బే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-of-olives-ac2c4c5-13-3",
+        "verse_key": "verse:Mark.13.3",
+        "attestation_key": "attestation:wb-pl-mount-of-olives-ac2c4c5-13-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-of-olives-ac2c4c5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఒలీవ",
+          "occurrence_ordinal": 1,
+          "prefix": "యానికి ఎదురుగా ఉన్న ",
+          "suffix": "ల కొండ మీద కూర్చుని "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-of-olives-ac2c4c5-14-26",
+        "verse_key": "verse:Mark.14.26",
+        "attestation_key": "attestation:wb-pl-mount-of-olives-ac2c4c5-14-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-of-olives-ac2c4c5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఒలీవ",
+          "occurrence_ordinal": 1,
+          "prefix": "వారు ఒక కీర్తన పాడి ",
+          "suffix": "ల కొండకి వెళ్ళారు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sidon-a98e4d7-3-8",
+        "verse_key": "verse:Mark.3.8",
+        "attestation_key": "attestation:wb-pl-sidon-a98e4d7-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sidon-a98e4d7"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీదోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ి అవతలి నుండీ తూరు, ",
+          "suffix": " ప్రాంతాలనుండీ ఆయన ద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sidon-a98e4d7-7-24",
+        "verse_key": "verse:Mark.7.24",
+        "attestation_key": "attestation:wb-pl-sidon-a98e4d7-7-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sidon-a98e4d7"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీదోను",
+          "occurrence_ordinal": 1,
+          "prefix": "్రాంతం విడిచి తూరు, ",
+          "suffix": " ప్రాంతంలోని ఒక ఇంటి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sidon-a98e4d7-7-31",
+        "verse_key": "verse:Mark.7.31",
+        "attestation_key": "attestation:wb-pl-sidon-a98e4d7-7-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sidon-a98e4d7"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీదోను",
+          "occurrence_ordinal": 1,
+          "prefix": "యేసు తూరు, ",
+          "suffix": " ప్రాంతం నుంచి బయలుద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-3-8",
+        "verse_key": "verse:Mark.3.8",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "తూరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ాను నది అవతలి నుండీ ",
+          "suffix": ", సీదోను ప్రాంతాలనుం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-7-24",
+        "verse_key": "verse:Mark.7.24",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-7-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "తూరు",
+          "occurrence_ordinal": 1,
+          "prefix": "సు ఆ ప్రాంతం విడిచి ",
+          "suffix": ", సీదోను ప్రాంతంలోని"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-7-31",
+        "verse_key": "verse:Mark.7.31",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-7-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "తూరు",
+          "occurrence_ordinal": 1,
+          "prefix": "యేసు ",
+          "suffix": ", సీదోను ప్రాంతం నుం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Mark.1.1",
+            "verse:Mark.1.10",
+            "verse:Mark.1.11",
+            "verse:Mark.1.12",
+            "verse:Mark.1.13",
+            "verse:Mark.1.15",
+            "verse:Mark.1.16",
+            "verse:Mark.1.17",
+            "verse:Mark.1.18",
+            "verse:Mark.1.20",
+            "verse:Mark.1.21",
+            "verse:Mark.1.22",
+            "verse:Mark.1.23",
+            "verse:Mark.1.24",
+            "verse:Mark.1.25",
+            "verse:Mark.1.26",
+            "verse:Mark.1.27",
+            "verse:Mark.1.28",
+            "verse:Mark.1.3",
+            "verse:Mark.1.30",
+            "verse:Mark.1.31",
+            "verse:Mark.1.32",
+            "verse:Mark.1.33",
+            "verse:Mark.1.34",
+            "verse:Mark.1.35",
+            "verse:Mark.1.36",
+            "verse:Mark.1.37",
+            "verse:Mark.1.38",
+            "verse:Mark.1.39",
+            "verse:Mark.1.40",
+            "verse:Mark.1.41",
+            "verse:Mark.1.42",
+            "verse:Mark.1.43",
+            "verse:Mark.1.45",
+            "verse:Mark.1.7",
+            "verse:Mark.1.8",
+            "verse:Mark.10.10",
+            "verse:Mark.10.11",
+            "verse:Mark.10.12",
+            "verse:Mark.10.13",
+            "verse:Mark.10.14",
+            "verse:Mark.10.15",
+            "verse:Mark.10.16",
+            "verse:Mark.10.17",
+            "verse:Mark.10.18",
+            "verse:Mark.10.19",
+            "verse:Mark.10.2",
+            "verse:Mark.10.20",
+            "verse:Mark.10.21",
+            "verse:Mark.10.22",
+            "verse:Mark.10.23",
+            "verse:Mark.10.24",
+            "verse:Mark.10.25",
+            "verse:Mark.10.26",
+            "verse:Mark.10.27",
+            "verse:Mark.10.29",
+            "verse:Mark.10.30",
+            "verse:Mark.10.31",
+            "verse:Mark.10.32",
+            "verse:Mark.10.33",
+            "verse:Mark.10.34",
+            "verse:Mark.10.36",
+            "verse:Mark.10.37",
+            "verse:Mark.10.38",
+            "verse:Mark.10.39",
+            "verse:Mark.10.40",
+            "verse:Mark.10.42",
+            "verse:Mark.10.43",
+            "verse:Mark.10.44",
+            "verse:Mark.10.45",
+            "verse:Mark.10.46",
+            "verse:Mark.10.47",
+            "verse:Mark.10.48",
+            "verse:Mark.10.49",
+            "verse:Mark.10.5",
+            "verse:Mark.10.50",
+            "verse:Mark.10.51",
+            "verse:Mark.10.52",
+            "verse:Mark.10.6",
+            "verse:Mark.10.7",
+            "verse:Mark.10.8",
+            "verse:Mark.10.9",
+            "verse:Mark.11.11",
+            "verse:Mark.11.12",
+            "verse:Mark.11.13",
+            "verse:Mark.11.14",
+            "verse:Mark.11.15",
+            "verse:Mark.11.16",
+            "verse:Mark.11.17",
+            "verse:Mark.11.18",
+            "verse:Mark.11.19",
+            "verse:Mark.11.2",
+            "verse:Mark.11.20",
+            "verse:Mark.11.22",
+            "verse:Mark.11.23",
+            "verse:Mark.11.24",
+            "verse:Mark.11.25",
+            "verse:Mark.11.26",
+            "verse:Mark.11.27",
+            "verse:Mark.11.28",
+            "verse:Mark.11.29",
+            "verse:Mark.11.3",
+            "verse:Mark.11.31",
+            "verse:Mark.11.33",
+            "verse:Mark.11.4",
+            "verse:Mark.11.5",
+            "verse:Mark.11.6",
+            "verse:Mark.11.7",
+            "verse:Mark.11.8",
+            "verse:Mark.11.9",
+            "verse:Mark.12.1",
+            "verse:Mark.12.10",
+            "verse:Mark.12.11",
+            "verse:Mark.12.12",
+            "verse:Mark.12.13",
+            "verse:Mark.12.14",
+            "verse:Mark.12.15",
+            "verse:Mark.12.16",
+            "verse:Mark.12.17",
+            "verse:Mark.12.18",
+            "verse:Mark.12.2",
+            "verse:Mark.12.20",
+            "verse:Mark.12.21",
+            "verse:Mark.12.22",
+            "verse:Mark.12.23",
+            "verse:Mark.12.24",
+            "verse:Mark.12.25",
+            "verse:Mark.12.27",
+            "verse:Mark.12.28",
+            "verse:Mark.12.29",
+            "verse:Mark.12.3",
+            "verse:Mark.12.30",
+            "verse:Mark.12.31",
+            "verse:Mark.12.32",
+            "verse:Mark.12.33",
+            "verse:Mark.12.34",
+            "verse:Mark.12.35",
+            "verse:Mark.12.38",
+            "verse:Mark.12.39",
+            "verse:Mark.12.4",
+            "verse:Mark.12.40",
+            "verse:Mark.12.41",
+            "verse:Mark.12.42",
+            "verse:Mark.12.43",
+            "verse:Mark.12.44",
+            "verse:Mark.12.5",
+            "verse:Mark.12.6",
+            "verse:Mark.12.7",
+            "verse:Mark.12.8",
+            "verse:Mark.12.9",
+            "verse:Mark.13.1",
+            "verse:Mark.13.10",
+            "verse:Mark.13.11",
+            "verse:Mark.13.12",
+            "verse:Mark.13.13",
+            "verse:Mark.13.15",
+            "verse:Mark.13.16",
+            "verse:Mark.13.17",
+            "verse:Mark.13.18",
+            "verse:Mark.13.19",
+            "verse:Mark.13.2",
+            "verse:Mark.13.20",
+            "verse:Mark.13.21",
+            "verse:Mark.13.22",
+            "verse:Mark.13.23",
+            "verse:Mark.13.24",
+            "verse:Mark.13.25",
+            "verse:Mark.13.26",
+            "verse:Mark.13.27",
+            "verse:Mark.13.28",
+            "verse:Mark.13.29",
+            "verse:Mark.13.30",
+            "verse:Mark.13.31",
+            "verse:Mark.13.32",
+            "verse:Mark.13.33",
+            "verse:Mark.13.34",
+            "verse:Mark.13.35",
+            "verse:Mark.13.36",
+            "verse:Mark.13.37",
+            "verse:Mark.13.4",
+            "verse:Mark.13.5",
+            "verse:Mark.13.6",
+            "verse:Mark.13.7",
+            "verse:Mark.13.8",
+            "verse:Mark.13.9",
+            "verse:Mark.14.1",
+            "verse:Mark.14.11",
+            "verse:Mark.14.12",
+            "verse:Mark.14.13",
+            "verse:Mark.14.14",
+            "verse:Mark.14.15",
+            "verse:Mark.14.16",
+            "verse:Mark.14.17",
+            "verse:Mark.14.18",
+            "verse:Mark.14.19",
+            "verse:Mark.14.2",
+            "verse:Mark.14.20",
+            "verse:Mark.14.21",
+            "verse:Mark.14.22",
+            "verse:Mark.14.23",
+            "verse:Mark.14.24",
+            "verse:Mark.14.25",
+            "verse:Mark.14.27",
+            "verse:Mark.14.28",
+            "verse:Mark.14.3",
+            "verse:Mark.14.30",
+            "verse:Mark.14.32",
+            "verse:Mark.14.34",
+            "verse:Mark.14.35",
+            "verse:Mark.14.36",
+            "verse:Mark.14.37",
+            "verse:Mark.14.38",
+            "verse:Mark.14.39",
+            "verse:Mark.14.4",
+            "verse:Mark.14.40",
+            "verse:Mark.14.41",
+            "verse:Mark.14.42",
+            "verse:Mark.14.44",
+            "verse:Mark.14.45",
+            "verse:Mark.14.46",
+            "verse:Mark.14.47",
+            "verse:Mark.14.48",
+            "verse:Mark.14.49",
+            "verse:Mark.14.5",
+            "verse:Mark.14.50",
+            "verse:Mark.14.51",
+            "verse:Mark.14.52",
+            "verse:Mark.14.53",
+            "verse:Mark.14.55",
+            "verse:Mark.14.56",
+            "verse:Mark.14.57",
+            "verse:Mark.14.58",
+            "verse:Mark.14.59",
+            "verse:Mark.14.6",
+            "verse:Mark.14.60",
+            "verse:Mark.14.61",
+            "verse:Mark.14.62",
+            "verse:Mark.14.63",
+            "verse:Mark.14.64",
+            "verse:Mark.14.65",
+            "verse:Mark.14.68",
+            "verse:Mark.14.69",
+            "verse:Mark.14.7",
+            "verse:Mark.14.71",
+            "verse:Mark.14.8",
+            "verse:Mark.14.9",
+            "verse:Mark.15.10",
+            "verse:Mark.15.11",
+            "verse:Mark.15.13",
+            "verse:Mark.15.16",
+            "verse:Mark.15.17",
+            "verse:Mark.15.18",
+            "verse:Mark.15.19",
+            "verse:Mark.15.20",
+            "verse:Mark.15.21",
+            "verse:Mark.15.22",
+            "verse:Mark.15.23",
+            "verse:Mark.15.24",
+            "verse:Mark.15.25",
+            "verse:Mark.15.26",
+            "verse:Mark.15.27",
+            "verse:Mark.15.28",
+            "verse:Mark.15.29",
+            "verse:Mark.15.3",
+            "verse:Mark.15.30",
+            "verse:Mark.15.31",
+            "verse:Mark.15.32",
+            "verse:Mark.15.33",
+            "verse:Mark.15.34",
+            "verse:Mark.15.37",
+            "verse:Mark.15.38",
+            "verse:Mark.15.39",
+            "verse:Mark.15.41",
+            "verse:Mark.15.42",
+            "verse:Mark.15.45",
+            "verse:Mark.15.46",
+            "verse:Mark.15.6",
+            "verse:Mark.15.7",
+            "verse:Mark.15.8",
+            "verse:Mark.16.10",
+            "verse:Mark.16.11",
+            "verse:Mark.16.12",
+            "verse:Mark.16.13",
+            "verse:Mark.16.14",
+            "verse:Mark.16.15",
+            "verse:Mark.16.16",
+            "verse:Mark.16.17",
+            "verse:Mark.16.18",
+            "verse:Mark.16.19",
+            "verse:Mark.16.2",
+            "verse:Mark.16.20",
+            "verse:Mark.16.3",
+            "verse:Mark.16.4",
+            "verse:Mark.16.5",
+            "verse:Mark.16.6",
+            "verse:Mark.16.8",
+            "verse:Mark.16.9",
+            "verse:Mark.2.1",
+            "verse:Mark.2.10",
+            "verse:Mark.2.11",
+            "verse:Mark.2.12",
+            "verse:Mark.2.13",
+            "verse:Mark.2.14",
+            "verse:Mark.2.15",
+            "verse:Mark.2.16",
+            "verse:Mark.2.17",
+            "verse:Mark.2.19",
+            "verse:Mark.2.2",
+            "verse:Mark.2.20",
+            "verse:Mark.2.21",
+            "verse:Mark.2.22",
+            "verse:Mark.2.23",
+            "verse:Mark.2.24",
+            "verse:Mark.2.26",
+            "verse:Mark.2.27",
+            "verse:Mark.2.28",
+            "verse:Mark.2.3",
+            "verse:Mark.2.4",
+            "verse:Mark.2.5",
+            "verse:Mark.2.6",
+            "verse:Mark.2.7",
+            "verse:Mark.2.8",
+            "verse:Mark.2.9",
+            "verse:Mark.3.1",
+            "verse:Mark.3.10",
+            "verse:Mark.3.11",
+            "verse:Mark.3.12",
+            "verse:Mark.3.13",
+            "verse:Mark.3.14",
+            "verse:Mark.3.15",
+            "verse:Mark.3.2",
+            "verse:Mark.3.20",
+            "verse:Mark.3.21",
+            "verse:Mark.3.22",
+            "verse:Mark.3.23",
+            "verse:Mark.3.24",
+            "verse:Mark.3.25",
+            "verse:Mark.3.26",
+            "verse:Mark.3.27",
+            "verse:Mark.3.28",
+            "verse:Mark.3.29",
+            "verse:Mark.3.3",
+            "verse:Mark.3.30",
+            "verse:Mark.3.31",
+            "verse:Mark.3.32",
+            "verse:Mark.3.33",
+            "verse:Mark.3.34",
+            "verse:Mark.3.35",
+            "verse:Mark.3.4",
+            "verse:Mark.3.5",
+            "verse:Mark.3.6",
+            "verse:Mark.3.9",
+            "verse:Mark.4.1",
+            "verse:Mark.4.10",
+            "verse:Mark.4.11",
+            "verse:Mark.4.12",
+            "verse:Mark.4.13",
+            "verse:Mark.4.14",
+            "verse:Mark.4.15",
+            "verse:Mark.4.16",
+            "verse:Mark.4.17",
+            "verse:Mark.4.18",
+            "verse:Mark.4.19",
+            "verse:Mark.4.2",
+            "verse:Mark.4.20",
+            "verse:Mark.4.21",
+            "verse:Mark.4.22",
+            "verse:Mark.4.23",
+            "verse:Mark.4.24",
+            "verse:Mark.4.25",
+            "verse:Mark.4.26",
+            "verse:Mark.4.27",
+            "verse:Mark.4.28",
+            "verse:Mark.4.29",
+            "verse:Mark.4.3",
+            "verse:Mark.4.30",
+            "verse:Mark.4.31",
+            "verse:Mark.4.32",
+            "verse:Mark.4.33",
+            "verse:Mark.4.34",
+            "verse:Mark.4.35",
+            "verse:Mark.4.36",
+            "verse:Mark.4.37",
+            "verse:Mark.4.38",
+            "verse:Mark.4.39",
+            "verse:Mark.4.4",
+            "verse:Mark.4.40",
+            "verse:Mark.4.41",
+            "verse:Mark.4.5",
+            "verse:Mark.4.6",
+            "verse:Mark.4.7",
+            "verse:Mark.4.8",
+            "verse:Mark.4.9",
+            "verse:Mark.5.1",
+            "verse:Mark.5.10",
+            "verse:Mark.5.11",
+            "verse:Mark.5.12",
+            "verse:Mark.5.13",
+            "verse:Mark.5.14",
+            "verse:Mark.5.15",
+            "verse:Mark.5.16",
+            "verse:Mark.5.17",
+            "verse:Mark.5.18",
+            "verse:Mark.5.19",
+            "verse:Mark.5.2",
+            "verse:Mark.5.20",
+            "verse:Mark.5.21",
+            "verse:Mark.5.22",
+            "verse:Mark.5.23",
+            "verse:Mark.5.24",
+            "verse:Mark.5.25",
+            "verse:Mark.5.26",
+            "verse:Mark.5.27",
+            "verse:Mark.5.28",
+            "verse:Mark.5.29",
+            "verse:Mark.5.3",
+            "verse:Mark.5.30",
+            "verse:Mark.5.31",
+            "verse:Mark.5.32",
+            "verse:Mark.5.33",
+            "verse:Mark.5.34",
+            "verse:Mark.5.35",
+            "verse:Mark.5.36",
+            "verse:Mark.5.38",
+            "verse:Mark.5.39",
+            "verse:Mark.5.4",
+            "verse:Mark.5.40",
+            "verse:Mark.5.41",
+            "verse:Mark.5.42",
+            "verse:Mark.5.43",
+            "verse:Mark.5.5",
+            "verse:Mark.5.6",
+            "verse:Mark.5.7",
+            "verse:Mark.5.8",
+            "verse:Mark.5.9",
+            "verse:Mark.6.1",
+            "verse:Mark.6.10",
+            "verse:Mark.6.11",
+            "verse:Mark.6.12",
+            "verse:Mark.6.13",
+            "verse:Mark.6.19",
+            "verse:Mark.6.2",
+            "verse:Mark.6.23",
+            "verse:Mark.6.26",
+            "verse:Mark.6.27",
+            "verse:Mark.6.28",
+            "verse:Mark.6.29",
+            "verse:Mark.6.30",
+            "verse:Mark.6.31",
+            "verse:Mark.6.32",
+            "verse:Mark.6.33",
+            "verse:Mark.6.34",
+            "verse:Mark.6.35",
+            "verse:Mark.6.36",
+            "verse:Mark.6.37",
+            "verse:Mark.6.38",
+            "verse:Mark.6.39",
+            "verse:Mark.6.4",
+            "verse:Mark.6.40",
+            "verse:Mark.6.41",
+            "verse:Mark.6.42",
+            "verse:Mark.6.43",
+            "verse:Mark.6.44",
+            "verse:Mark.6.45",
+            "verse:Mark.6.46",
+            "verse:Mark.6.47",
+            "verse:Mark.6.48",
+            "verse:Mark.6.49",
+            "verse:Mark.6.5",
+            "verse:Mark.6.50",
+            "verse:Mark.6.51",
+            "verse:Mark.6.52",
+            "verse:Mark.6.53",
+            "verse:Mark.6.54",
+            "verse:Mark.6.55",
+            "verse:Mark.6.56",
+            "verse:Mark.6.6",
+            "verse:Mark.6.7",
+            "verse:Mark.6.8",
+            "verse:Mark.6.9",
+            "verse:Mark.7.1",
+            "verse:Mark.7.11",
+            "verse:Mark.7.12",
+            "verse:Mark.7.13",
+            "verse:Mark.7.14",
+            "verse:Mark.7.15",
+            "verse:Mark.7.16",
+            "verse:Mark.7.17",
+            "verse:Mark.7.18",
+            "verse:Mark.7.19",
+            "verse:Mark.7.2",
+            "verse:Mark.7.20",
+            "verse:Mark.7.21",
+            "verse:Mark.7.22",
+            "verse:Mark.7.23",
+            "verse:Mark.7.25",
+            "verse:Mark.7.26",
+            "verse:Mark.7.27",
+            "verse:Mark.7.28",
+            "verse:Mark.7.29",
+            "verse:Mark.7.3",
+            "verse:Mark.7.30",
+            "verse:Mark.7.32",
+            "verse:Mark.7.33",
+            "verse:Mark.7.34",
+            "verse:Mark.7.35",
+            "verse:Mark.7.36",
+            "verse:Mark.7.37",
+            "verse:Mark.7.4",
+            "verse:Mark.7.5",
+            "verse:Mark.7.6",
+            "verse:Mark.7.7",
+            "verse:Mark.7.8",
+            "verse:Mark.7.9",
+            "verse:Mark.8.1",
+            "verse:Mark.8.10",
+            "verse:Mark.8.11",
+            "verse:Mark.8.12",
+            "verse:Mark.8.13",
+            "verse:Mark.8.14",
+            "verse:Mark.8.16",
+            "verse:Mark.8.17",
+            "verse:Mark.8.18",
+            "verse:Mark.8.19",
+            "verse:Mark.8.2",
+            "verse:Mark.8.20",
+            "verse:Mark.8.21",
+            "verse:Mark.8.22",
+            "verse:Mark.8.23",
+            "verse:Mark.8.24",
+            "verse:Mark.8.25",
+            "verse:Mark.8.26",
+            "verse:Mark.8.27",
+            "verse:Mark.8.3",
+            "verse:Mark.8.30",
+            "verse:Mark.8.31",
+            "verse:Mark.8.34",
+            "verse:Mark.8.35",
+            "verse:Mark.8.36",
+            "verse:Mark.8.37",
+            "verse:Mark.8.38",
+            "verse:Mark.8.4",
+            "verse:Mark.8.5",
+            "verse:Mark.8.6",
+            "verse:Mark.8.7",
+            "verse:Mark.8.8",
+            "verse:Mark.8.9",
+            "verse:Mark.9.1",
+            "verse:Mark.9.10",
+            "verse:Mark.9.14",
+            "verse:Mark.9.15",
+            "verse:Mark.9.16",
+            "verse:Mark.9.17",
+            "verse:Mark.9.18",
+            "verse:Mark.9.19",
+            "verse:Mark.9.20",
+            "verse:Mark.9.21",
+            "verse:Mark.9.22",
+            "verse:Mark.9.23",
+            "verse:Mark.9.24",
+            "verse:Mark.9.25",
+            "verse:Mark.9.26",
+            "verse:Mark.9.27",
+            "verse:Mark.9.28",
+            "verse:Mark.9.29",
+            "verse:Mark.9.3",
+            "verse:Mark.9.30",
+            "verse:Mark.9.31",
+            "verse:Mark.9.32",
+            "verse:Mark.9.33",
+            "verse:Mark.9.34",
+            "verse:Mark.9.35",
+            "verse:Mark.9.36",
+            "verse:Mark.9.37",
+            "verse:Mark.9.39",
+            "verse:Mark.9.40",
+            "verse:Mark.9.41",
+            "verse:Mark.9.42",
+            "verse:Mark.9.43",
+            "verse:Mark.9.45",
+            "verse:Mark.9.47",
+            "verse:Mark.9.48",
+            "verse:Mark.9.49",
+            "verse:Mark.9.50",
+            "verse:Mark.9.6",
+            "verse:Mark.9.7",
+            "verse:Mark.9.8",
+            "verse:Mark.9.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaiah-1-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-1-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jordan-ae686c9-1-5",
+            "mention:wb:pl-judea-1-a149f13-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jordan-ae686c9-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-1-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-1-19",
+            "mention:wb:p-john-2-1-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.29"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-1-29",
+            "mention:wb:p-john-2-1-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.1.44"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-1-44"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.2.18"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-2-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.2.25"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-2-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.3.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-judea-1-a149f13-3-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.3.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jordan-ae686c9-3-8",
+            "mention:wb:pl-sidon-a98e4d7-3-8",
+            "mention:wb:pl-tyre-a160272-3-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.3.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-3-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.3.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-3-17",
+            "mention:wb:p-john-2-3-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.3.18"
+          ],
+          "record_keys": [
+            "mention:wb:p-philip-1-3-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.3.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-judas-1-3-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.5.37"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-5-37",
+            "mention:wb:p-john-2-5-37",
+            "mention:wb:p-simon-1-5-37"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mary-1-6-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-6-14",
+            "mention:wb:p-john-1-6-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-6-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-6-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-6-17",
+            "mention:wb:p-john-1-6-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.18"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-6-18",
+            "mention:wb:p-john-1-6-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-6-20",
+            "mention:wb:p-john-1-6-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-6-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-6-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-6-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.6.25"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-6-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.7.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-7-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.7.24"
+          ],
+          "record_keys": [
+            "mention:wb:pl-sidon-a98e4d7-7-24",
+            "mention:wb:pl-tyre-a160272-7-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.7.31"
+          ],
+          "record_keys": [
+            "mention:wb:pl-sidon-a98e4d7-7-31",
+            "mention:wb:pl-tyre-a160272-7-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.8.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-herod-2-8-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.8.28"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-8-28"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.8.29"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-8-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.8.32"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-8-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.8.33"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-8-33"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-9-2",
+            "mention:wb:p-john-2-9-2",
+            "mention:wb:p-simon-1-9-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-9-4",
+            "mention:wb:p-moses-1-9-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-9-5",
+            "mention:wb:p-moses-1-9-5",
+            "mention:wb:p-simon-1-9-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-9-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-9-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.9.38"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-2-9-38"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.10.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jordan-ae686c9-10-1",
+            "mention:wb:pl-judea-1-a149f13-10-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.10.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-10-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.10.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-10-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.10.28"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-10-28"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.10.35"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-10-35",
+            "mention:wb:p-john-2-10-35"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.10.41"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-10-41",
+            "mention:wb:p-john-2-10-41"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.11.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-mount-of-olives-ac2c4c5-11-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.11.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-11-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.11.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-11-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.11.30"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-11-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.11.32"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-1-11-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.12.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-12-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.12.26"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-12-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.12.36"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-12-36"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.12.37"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-12-37"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.13.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-13-3",
+            "mention:wb:p-john-2-13-3",
+            "mention:wb:p-simon-1-13-3",
+            "mention:wb:pl-mount-of-olives-ac2c4c5-13-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.13.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-judea-1-a149f13-13-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-judas-1-14-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.26"
+          ],
+          "record_keys": [
+            "mention:wb:pl-mount-of-olives-ac2c4c5-14-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.29"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.31"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.33"
+          ],
+          "record_keys": [
+            "mention:wb:p-james-1-14-33",
+            "mention:wb:p-john-2-14-33",
+            "mention:wb:p-simon-1-14-33"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.43"
+          ],
+          "record_keys": [
+            "mention:wb:p-judas-1-14-43"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.54"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-54"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.66"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-66"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.67"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-67"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.70"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-70"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.14.72"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-14-72"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.35"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-15-35"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.36"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-15-36"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.40"
+          ],
+          "record_keys": [
+            "mention:wb:p-mary-1-15-40"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.43"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-43"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.44"
+          ],
+          "record_keys": [
+            "mention:wb:p-pilate-1-15-44"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.15.47"
+          ],
+          "record_keys": [
+            "mention:wb:p-mary-1-15-47"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.16.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-mary-1-16-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mark.16.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-16-7"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "translation-mention-coverage-limited",
+      "note": "Translation mentions are emitted only for entities whose name form was derived from this translation's own text; verses without such a form are reported complete_zero in this draft."
+    }
+  ]
+}

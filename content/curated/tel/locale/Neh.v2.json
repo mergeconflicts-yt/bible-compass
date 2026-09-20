@@ -1,0 +1,3857 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-neh-locale",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-neh-locale:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-neh-locale",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-neh:refsys:tel-v1:neh.1.1-neh.13.31",
+      "scope:wb-neh-1:refsys:tel-v1:neh.1.1-neh.1.11",
+      "scope:wb-neh-2:refsys:tel-v1:neh.2.1-neh.2.20",
+      "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+      "scope:wb-neh-4:refsys:tel-v1:neh.4.1-neh.4.23",
+      "scope:wb-neh-5:refsys:tel-v1:neh.5.1-neh.5.19",
+      "scope:wb-neh-6:refsys:tel-v1:neh.6.1-neh.6.19",
+      "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+      "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+      "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+      "scope:wb-neh-10:refsys:tel-v1:neh.10.1-neh.10.39",
+      "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+      "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+      "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+      "scope:wb-neh-1-p1:refsys:tel-v1:neh.1.1-neh.1.11",
+      "scope:wb-neh-2-p1:refsys:tel-v1:neh.2.1-neh.2.10",
+      "scope:wb-neh-2-p2:refsys:tel-v1:neh.2.11-neh.2.20",
+      "scope:wb-neh-3-p1:refsys:tel-v1:neh.3.1-neh.3.32",
+      "scope:wb-neh-4-p1:refsys:tel-v1:neh.4.1-neh.4.23",
+      "scope:wb-neh-5-p1:refsys:tel-v1:neh.5.1-neh.5.19",
+      "scope:wb-neh-6-p1:refsys:tel-v1:neh.6.1-neh.6.14",
+      "scope:wb-neh-6-p2:refsys:tel-v1:neh.6.15-neh.6.19",
+      "scope:wb-neh-7-p1:refsys:tel-v1:neh.7.1-neh.7.3",
+      "scope:wb-neh-7-p2:refsys:tel-v1:neh.7.4-neh.7.73",
+      "scope:wb-neh-8-p1:refsys:tel-v1:neh.8.1-neh.8.18",
+      "scope:wb-neh-9-p1:refsys:tel-v1:neh.9.1-neh.9.38",
+      "scope:wb-neh-10-p1:refsys:tel-v1:neh.10.1-neh.10.39",
+      "scope:wb-neh-11-p1:refsys:tel-v1:neh.11.1-neh.11.36",
+      "scope:wb-neh-12-p1:refsys:tel-v1:neh.12.1-neh.12.26",
+      "scope:wb-neh-12-p2:refsys:tel-v1:neh.12.27-neh.12.47",
+      "scope:wb-neh-13-p1:refsys:tel-v1:neh.13.1-neh.13.31"
+    ],
+    "reference_keys": [
+      "verse:Neh.1.1",
+      "verse:Neh.1.2",
+      "verse:Neh.1.3",
+      "verse:Neh.1.4",
+      "verse:Neh.1.5",
+      "verse:Neh.1.6",
+      "verse:Neh.1.7",
+      "verse:Neh.1.8",
+      "verse:Neh.1.9",
+      "verse:Neh.1.10",
+      "verse:Neh.1.11",
+      "verse:Neh.2.1",
+      "verse:Neh.2.2",
+      "verse:Neh.2.3",
+      "verse:Neh.2.4",
+      "verse:Neh.2.5",
+      "verse:Neh.2.6",
+      "verse:Neh.2.7",
+      "verse:Neh.2.8",
+      "verse:Neh.2.9",
+      "verse:Neh.2.10",
+      "verse:Neh.2.11",
+      "verse:Neh.2.12",
+      "verse:Neh.2.13",
+      "verse:Neh.2.14",
+      "verse:Neh.2.15",
+      "verse:Neh.2.16",
+      "verse:Neh.2.17",
+      "verse:Neh.2.18",
+      "verse:Neh.2.19",
+      "verse:Neh.2.20",
+      "verse:Neh.3.1",
+      "verse:Neh.3.2",
+      "verse:Neh.3.3",
+      "verse:Neh.3.4",
+      "verse:Neh.3.5",
+      "verse:Neh.3.6",
+      "verse:Neh.3.7",
+      "verse:Neh.3.8",
+      "verse:Neh.3.9",
+      "verse:Neh.3.10",
+      "verse:Neh.3.11",
+      "verse:Neh.3.12",
+      "verse:Neh.3.13",
+      "verse:Neh.3.14",
+      "verse:Neh.3.15",
+      "verse:Neh.3.16",
+      "verse:Neh.3.17",
+      "verse:Neh.3.18",
+      "verse:Neh.3.19",
+      "verse:Neh.3.20",
+      "verse:Neh.3.21",
+      "verse:Neh.3.22",
+      "verse:Neh.3.23",
+      "verse:Neh.3.24",
+      "verse:Neh.3.25",
+      "verse:Neh.3.26",
+      "verse:Neh.3.27",
+      "verse:Neh.3.28",
+      "verse:Neh.3.29",
+      "verse:Neh.3.30",
+      "verse:Neh.3.31",
+      "verse:Neh.3.32",
+      "verse:Neh.4.1",
+      "verse:Neh.4.2",
+      "verse:Neh.4.3",
+      "verse:Neh.4.4",
+      "verse:Neh.4.5",
+      "verse:Neh.4.6",
+      "verse:Neh.4.7",
+      "verse:Neh.4.8",
+      "verse:Neh.4.9",
+      "verse:Neh.4.10",
+      "verse:Neh.4.11",
+      "verse:Neh.4.12",
+      "verse:Neh.4.13",
+      "verse:Neh.4.14",
+      "verse:Neh.4.15",
+      "verse:Neh.4.16",
+      "verse:Neh.4.17",
+      "verse:Neh.4.18",
+      "verse:Neh.4.19",
+      "verse:Neh.4.20",
+      "verse:Neh.4.21",
+      "verse:Neh.4.22",
+      "verse:Neh.4.23",
+      "verse:Neh.5.1",
+      "verse:Neh.5.2",
+      "verse:Neh.5.3",
+      "verse:Neh.5.4",
+      "verse:Neh.5.5",
+      "verse:Neh.5.6",
+      "verse:Neh.5.7",
+      "verse:Neh.5.8",
+      "verse:Neh.5.9",
+      "verse:Neh.5.10",
+      "verse:Neh.5.11",
+      "verse:Neh.5.12",
+      "verse:Neh.5.13",
+      "verse:Neh.5.14",
+      "verse:Neh.5.15",
+      "verse:Neh.5.16",
+      "verse:Neh.5.17",
+      "verse:Neh.5.18",
+      "verse:Neh.5.19",
+      "verse:Neh.6.1",
+      "verse:Neh.6.2",
+      "verse:Neh.6.3",
+      "verse:Neh.6.4",
+      "verse:Neh.6.5",
+      "verse:Neh.6.6",
+      "verse:Neh.6.7",
+      "verse:Neh.6.8",
+      "verse:Neh.6.9",
+      "verse:Neh.6.10",
+      "verse:Neh.6.11",
+      "verse:Neh.6.12",
+      "verse:Neh.6.13",
+      "verse:Neh.6.14",
+      "verse:Neh.6.15",
+      "verse:Neh.6.16",
+      "verse:Neh.6.17",
+      "verse:Neh.6.18",
+      "verse:Neh.6.19",
+      "verse:Neh.7.1",
+      "verse:Neh.7.2",
+      "verse:Neh.7.3",
+      "verse:Neh.7.4",
+      "verse:Neh.7.5",
+      "verse:Neh.7.6",
+      "verse:Neh.7.7",
+      "verse:Neh.7.8",
+      "verse:Neh.7.9",
+      "verse:Neh.7.10",
+      "verse:Neh.7.11",
+      "verse:Neh.7.12",
+      "verse:Neh.7.13",
+      "verse:Neh.7.14",
+      "verse:Neh.7.15",
+      "verse:Neh.7.16",
+      "verse:Neh.7.17",
+      "verse:Neh.7.18",
+      "verse:Neh.7.19",
+      "verse:Neh.7.20",
+      "verse:Neh.7.21",
+      "verse:Neh.7.22",
+      "verse:Neh.7.23",
+      "verse:Neh.7.24",
+      "verse:Neh.7.25",
+      "verse:Neh.7.26",
+      "verse:Neh.7.27",
+      "verse:Neh.7.28",
+      "verse:Neh.7.29",
+      "verse:Neh.7.30",
+      "verse:Neh.7.31",
+      "verse:Neh.7.32",
+      "verse:Neh.7.33",
+      "verse:Neh.7.34",
+      "verse:Neh.7.35",
+      "verse:Neh.7.36",
+      "verse:Neh.7.37",
+      "verse:Neh.7.38",
+      "verse:Neh.7.39",
+      "verse:Neh.7.40",
+      "verse:Neh.7.41",
+      "verse:Neh.7.42",
+      "verse:Neh.7.43",
+      "verse:Neh.7.44",
+      "verse:Neh.7.45",
+      "verse:Neh.7.46",
+      "verse:Neh.7.47",
+      "verse:Neh.7.48",
+      "verse:Neh.7.49",
+      "verse:Neh.7.50",
+      "verse:Neh.7.51",
+      "verse:Neh.7.52",
+      "verse:Neh.7.53",
+      "verse:Neh.7.54",
+      "verse:Neh.7.55",
+      "verse:Neh.7.56",
+      "verse:Neh.7.57",
+      "verse:Neh.7.58",
+      "verse:Neh.7.59",
+      "verse:Neh.7.60",
+      "verse:Neh.7.61",
+      "verse:Neh.7.62",
+      "verse:Neh.7.63",
+      "verse:Neh.7.64",
+      "verse:Neh.7.65",
+      "verse:Neh.7.66",
+      "verse:Neh.7.67",
+      "verse:Neh.7.68",
+      "verse:Neh.7.69",
+      "verse:Neh.7.70",
+      "verse:Neh.7.71",
+      "verse:Neh.7.72",
+      "verse:Neh.7.73",
+      "verse:Neh.8.1",
+      "verse:Neh.8.2",
+      "verse:Neh.8.3",
+      "verse:Neh.8.4",
+      "verse:Neh.8.5",
+      "verse:Neh.8.6",
+      "verse:Neh.8.7",
+      "verse:Neh.8.8",
+      "verse:Neh.8.9",
+      "verse:Neh.8.10",
+      "verse:Neh.8.11",
+      "verse:Neh.8.12",
+      "verse:Neh.8.13",
+      "verse:Neh.8.14",
+      "verse:Neh.8.15",
+      "verse:Neh.8.16",
+      "verse:Neh.8.17",
+      "verse:Neh.8.18",
+      "verse:Neh.9.1",
+      "verse:Neh.9.2",
+      "verse:Neh.9.3",
+      "verse:Neh.9.4",
+      "verse:Neh.9.5",
+      "verse:Neh.9.6",
+      "verse:Neh.9.7",
+      "verse:Neh.9.8",
+      "verse:Neh.9.9",
+      "verse:Neh.9.10",
+      "verse:Neh.9.11",
+      "verse:Neh.9.12",
+      "verse:Neh.9.13",
+      "verse:Neh.9.14",
+      "verse:Neh.9.15",
+      "verse:Neh.9.16",
+      "verse:Neh.9.17",
+      "verse:Neh.9.18",
+      "verse:Neh.9.19",
+      "verse:Neh.9.20",
+      "verse:Neh.9.21",
+      "verse:Neh.9.22",
+      "verse:Neh.9.23",
+      "verse:Neh.9.24",
+      "verse:Neh.9.25",
+      "verse:Neh.9.26",
+      "verse:Neh.9.27",
+      "verse:Neh.9.28",
+      "verse:Neh.9.29",
+      "verse:Neh.9.30",
+      "verse:Neh.9.31",
+      "verse:Neh.9.32",
+      "verse:Neh.9.33",
+      "verse:Neh.9.34",
+      "verse:Neh.9.35",
+      "verse:Neh.9.36",
+      "verse:Neh.9.37",
+      "verse:Neh.9.38",
+      "verse:Neh.10.1",
+      "verse:Neh.10.2",
+      "verse:Neh.10.3",
+      "verse:Neh.10.4",
+      "verse:Neh.10.5",
+      "verse:Neh.10.6",
+      "verse:Neh.10.7",
+      "verse:Neh.10.8",
+      "verse:Neh.10.9",
+      "verse:Neh.10.10",
+      "verse:Neh.10.11",
+      "verse:Neh.10.12",
+      "verse:Neh.10.13",
+      "verse:Neh.10.14",
+      "verse:Neh.10.15",
+      "verse:Neh.10.16",
+      "verse:Neh.10.17",
+      "verse:Neh.10.18",
+      "verse:Neh.10.19",
+      "verse:Neh.10.20",
+      "verse:Neh.10.21",
+      "verse:Neh.10.22",
+      "verse:Neh.10.23",
+      "verse:Neh.10.24",
+      "verse:Neh.10.25",
+      "verse:Neh.10.26",
+      "verse:Neh.10.27",
+      "verse:Neh.10.28",
+      "verse:Neh.10.29",
+      "verse:Neh.10.30",
+      "verse:Neh.10.31",
+      "verse:Neh.10.32",
+      "verse:Neh.10.33",
+      "verse:Neh.10.34",
+      "verse:Neh.10.35",
+      "verse:Neh.10.36",
+      "verse:Neh.10.37",
+      "verse:Neh.10.38",
+      "verse:Neh.10.39",
+      "verse:Neh.11.1",
+      "verse:Neh.11.2",
+      "verse:Neh.11.3",
+      "verse:Neh.11.4",
+      "verse:Neh.11.5",
+      "verse:Neh.11.6",
+      "verse:Neh.11.7",
+      "verse:Neh.11.8",
+      "verse:Neh.11.9",
+      "verse:Neh.11.10",
+      "verse:Neh.11.11",
+      "verse:Neh.11.12",
+      "verse:Neh.11.13",
+      "verse:Neh.11.14",
+      "verse:Neh.11.15",
+      "verse:Neh.11.16",
+      "verse:Neh.11.17",
+      "verse:Neh.11.18",
+      "verse:Neh.11.19",
+      "verse:Neh.11.20",
+      "verse:Neh.11.21",
+      "verse:Neh.11.22",
+      "verse:Neh.11.23",
+      "verse:Neh.11.24",
+      "verse:Neh.11.25",
+      "verse:Neh.11.26",
+      "verse:Neh.11.27",
+      "verse:Neh.11.28",
+      "verse:Neh.11.29",
+      "verse:Neh.11.30",
+      "verse:Neh.11.31",
+      "verse:Neh.11.32",
+      "verse:Neh.11.33",
+      "verse:Neh.11.34",
+      "verse:Neh.11.35",
+      "verse:Neh.11.36",
+      "verse:Neh.12.1",
+      "verse:Neh.12.2",
+      "verse:Neh.12.3",
+      "verse:Neh.12.4",
+      "verse:Neh.12.5",
+      "verse:Neh.12.6",
+      "verse:Neh.12.7",
+      "verse:Neh.12.8",
+      "verse:Neh.12.9",
+      "verse:Neh.12.10",
+      "verse:Neh.12.11",
+      "verse:Neh.12.12",
+      "verse:Neh.12.13",
+      "verse:Neh.12.14",
+      "verse:Neh.12.15",
+      "verse:Neh.12.16",
+      "verse:Neh.12.17",
+      "verse:Neh.12.18",
+      "verse:Neh.12.19",
+      "verse:Neh.12.20",
+      "verse:Neh.12.21",
+      "verse:Neh.12.22",
+      "verse:Neh.12.23",
+      "verse:Neh.12.24",
+      "verse:Neh.12.25",
+      "verse:Neh.12.26",
+      "verse:Neh.12.27",
+      "verse:Neh.12.28",
+      "verse:Neh.12.29",
+      "verse:Neh.12.30",
+      "verse:Neh.12.31",
+      "verse:Neh.12.32",
+      "verse:Neh.12.33",
+      "verse:Neh.12.34",
+      "verse:Neh.12.35",
+      "verse:Neh.12.36",
+      "verse:Neh.12.37",
+      "verse:Neh.12.38",
+      "verse:Neh.12.39",
+      "verse:Neh.12.40",
+      "verse:Neh.12.41",
+      "verse:Neh.12.42",
+      "verse:Neh.12.43",
+      "verse:Neh.12.44",
+      "verse:Neh.12.45",
+      "verse:Neh.12.46",
+      "verse:Neh.12.47",
+      "verse:Neh.13.1",
+      "verse:Neh.13.2",
+      "verse:Neh.13.3",
+      "verse:Neh.13.4",
+      "verse:Neh.13.5",
+      "verse:Neh.13.6",
+      "verse:Neh.13.7",
+      "verse:Neh.13.8",
+      "verse:Neh.13.9",
+      "verse:Neh.13.10",
+      "verse:Neh.13.11",
+      "verse:Neh.13.12",
+      "verse:Neh.13.13",
+      "verse:Neh.13.14",
+      "verse:Neh.13.15",
+      "verse:Neh.13.16",
+      "verse:Neh.13.17",
+      "verse:Neh.13.18",
+      "verse:Neh.13.19",
+      "verse:Neh.13.20",
+      "verse:Neh.13.21",
+      "verse:Neh.13.22",
+      "verse:Neh.13.23",
+      "verse:Neh.13.24",
+      "verse:Neh.13.25",
+      "verse:Neh.13.26",
+      "verse:Neh.13.27",
+      "verse:Neh.13.28",
+      "verse:Neh.13.29",
+      "verse:Neh.13.30",
+      "verse:Neh.13.31"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:te:p-abram-1",
+        "entity_key": "entity:p-abram-1",
+        "language_tag": "te",
+        "preferred_name": "అబ్రాహాము",
+        "aliases": [],
+        "short_description": {
+          "text": "అబ్రాహాము, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-judah-1",
+        "entity_key": "entity:p-judah-1",
+        "language_tag": "te",
+        "preferred_name": "యూదా",
+        "aliases": [],
+        "short_description": {
+          "text": "యూదా, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-benjamin-1",
+        "entity_key": "entity:p-benjamin-1",
+        "language_tag": "te",
+        "preferred_name": "బెన్యామీను",
+        "aliases": [],
+        "short_description": {
+          "text": "బెన్యామీను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-perez-1",
+        "entity_key": "entity:p-perez-1",
+        "language_tag": "te",
+        "preferred_name": "పెరెసు",
+        "aliases": [],
+        "short_description": {
+          "text": "పెరెసు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-moses-1",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "preferred_name": "మోషే",
+        "aliases": [],
+        "short_description": {
+          "text": "మోషే, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-pharaoh-4",
+        "entity_key": "entity:p-pharaoh-4",
+        "language_tag": "te",
+        "preferred_name": "ఫరో",
+        "aliases": [],
+        "short_description": {
+          "text": "ఫరో, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-aaron-1",
+        "entity_key": "entity:p-aaron-1",
+        "language_tag": "te",
+        "preferred_name": "అహరోను",
+        "aliases": [],
+        "short_description": {
+          "text": "అహరోను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-joshua-1",
+        "entity_key": "entity:p-joshua-1",
+        "language_tag": "te",
+        "preferred_name": "యెహోషువ",
+        "aliases": [],
+        "short_description": {
+          "text": "యెహోషువ, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-nun-1",
+        "entity_key": "entity:p-nun-1",
+        "language_tag": "te",
+        "preferred_name": "నూను",
+        "aliases": [],
+        "short_description": {
+          "text": "నూను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-sihon-1",
+        "entity_key": "entity:p-sihon-1",
+        "language_tag": "te",
+        "preferred_name": "సీహోను",
+        "aliases": [],
+        "short_description": {
+          "text": "సీహోను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-og-1",
+        "entity_key": "entity:p-og-1",
+        "language_tag": "te",
+        "preferred_name": "ఓగు",
+        "aliases": [],
+        "short_description": {
+          "text": "ఓగు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-balaam-1",
+        "entity_key": "entity:p-balaam-1",
+        "language_tag": "te",
+        "preferred_name": "బిలాము",
+        "aliases": [],
+        "short_description": {
+          "text": "బిలాము, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-david-1",
+        "entity_key": "entity:p-david-1",
+        "language_tag": "te",
+        "preferred_name": "దావీదు",
+        "aliases": [],
+        "short_description": {
+          "text": "దావీదు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-ahijah-1",
+        "entity_key": "entity:p-ahijah-1",
+        "language_tag": "te",
+        "preferred_name": "అహీయా",
+        "aliases": [],
+        "short_description": {
+          "text": "అహీయా, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-solomon-1",
+        "entity_key": "entity:p-solomon-1",
+        "language_tag": "te",
+        "preferred_name": "సొలొమోను",
+        "aliases": [],
+        "short_description": {
+          "text": "సొలొమోను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-nebuchadnezzar-1",
+        "entity_key": "entity:p-nebuchadnezzar-1",
+        "language_tag": "te",
+        "preferred_name": "బబులోను",
+        "aliases": [],
+        "short_description": {
+          "text": "బబులోను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-asaph-2",
+        "entity_key": "entity:p-asaph-2",
+        "language_tag": "te",
+        "preferred_name": "ఆసాపు",
+        "aliases": [],
+        "short_description": {
+          "text": "ఆసాపు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-zerubbabel-2",
+        "entity_key": "entity:p-zerubbabel-2",
+        "language_tag": "te",
+        "preferred_name": "జెరుబ్బాబెలు",
+        "aliases": [],
+        "short_description": {
+          "text": "జెరుబ్బాబెలు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-darius-1",
+        "entity_key": "entity:p-darius-1",
+        "language_tag": "te",
+        "preferred_name": "దర్యావేషు",
+        "aliases": [],
+        "short_description": {
+          "text": "దర్యావేషు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-ezra-1",
+        "entity_key": "entity:p-ezra-1",
+        "language_tag": "te",
+        "preferred_name": "ఎజ్రా",
+        "aliases": [],
+        "short_description": {
+          "text": "ఎజ్రా, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-ashdod-a30c937",
+        "entity_key": "entity:pl-ashdod-a30c937",
+        "language_tag": "te",
+        "preferred_name": "అష్డోదు",
+        "aliases": [],
+        "short_description": {
+          "text": "అష్డోదు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-assyria-a3d1321",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "language_tag": "te",
+        "preferred_name": "అష్షూరు",
+        "aliases": [],
+        "short_description": {
+          "text": "అష్షూరు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-babylon-1-a217d18",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "preferred_name": "బబులోను",
+        "aliases": [],
+        "short_description": {
+          "text": "బబులోను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-bashan-aa7a40a",
+        "entity_key": "entity:pl-bashan-aa7a40a",
+        "language_tag": "te",
+        "preferred_name": "బాషాను",
+        "aliases": [],
+        "short_description": {
+          "text": "బాషాను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-beersheba-1-ad2f6c2",
+        "entity_key": "entity:pl-beersheba-1-ad2f6c2",
+        "language_tag": "te",
+        "preferred_name": "బెయేర్షెబా",
+        "aliases": [],
+        "short_description": {
+          "text": "బెయేర్షెబా, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-bethlehem-1-a112427",
+        "entity_key": "entity:pl-bethlehem-1-a112427",
+        "language_tag": "te",
+        "preferred_name": "బేత్లెహేము",
+        "aliases": [],
+        "short_description": {
+          "text": "బేత్లెహేము, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-beyond-the-river-a88310a",
+        "entity_key": "entity:pl-beyond-the-river-a88310a",
+        "language_tag": "te",
+        "preferred_name": "నది",
+        "aliases": [],
+        "short_description": {
+          "text": "నది, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-city-of-david-a84f426",
+        "entity_key": "entity:pl-city-of-david-a84f426",
+        "language_tag": "te",
+        "preferred_name": "పట్టణంలో",
+        "aliases": [],
+        "short_description": {
+          "text": "పట్టణంలో, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-egypt-af301ca",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "language_tag": "te",
+        "preferred_name": "ఐగుప్తు",
+        "aliases": [],
+        "short_description": {
+          "text": "ఐగుప్తు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-gilead-1-ae73b90",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "language_tag": "te",
+        "preferred_name": "గిలాదు",
+        "aliases": [],
+        "short_description": {
+          "text": "గిలాదు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-heshbon-abf2fc1",
+        "entity_key": "entity:pl-heshbon-abf2fc1",
+        "language_tag": "te",
+        "preferred_name": "హెష్బోను",
+        "aliases": [],
+        "short_description": {
+          "text": "హెష్బోను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-jericho-1-a231f80",
+        "entity_key": "entity:pl-jericho-1-a231f80",
+        "language_tag": "te",
+        "preferred_name": "యెరికో",
+        "aliases": [],
+        "short_description": {
+          "text": "యెరికో, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-keilah-ad9df93",
+        "entity_key": "entity:pl-keilah-ad9df93",
+        "language_tag": "te",
+        "preferred_name": "దావీదు",
+        "aliases": [],
+        "short_description": {
+          "text": "దావీదు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-kiriath-jearim-a9bba61",
+        "entity_key": "entity:pl-kiriath-jearim-a9bba61",
+        "language_tag": "te",
+        "preferred_name": "కిర్యత్యారీము",
+        "aliases": [],
+        "short_description": {
+          "text": "కిర్యత్యారీము, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-lachish-a3cc590",
+        "entity_key": "entity:pl-lachish-a3cc590",
+        "language_tag": "te",
+        "preferred_name": "లాకీషు",
+        "aliases": [],
+        "short_description": {
+          "text": "లాకీషు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-mizpah-3-a736f6c",
+        "entity_key": "entity:pl-mizpah-3-a736f6c",
+        "language_tag": "te",
+        "preferred_name": "మిస్పాలో",
+        "aliases": [],
+        "short_description": {
+          "text": "మిస్పాలో, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-moab-1-aa0b1d6",
+        "entity_key": "entity:pl-moab-1-aa0b1d6",
+        "language_tag": "te",
+        "preferred_name": "మోయాబు",
+        "aliases": [],
+        "short_description": {
+          "text": "మోయాబు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-mount-sinai-abfba2a",
+        "entity_key": "entity:pl-mount-sinai-abfba2a",
+        "language_tag": "te",
+        "preferred_name": "సీనాయి",
+        "aliases": [],
+        "short_description": {
+          "text": "సీనాయి, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-ramah-1-a6d57ed",
+        "entity_key": "entity:pl-ramah-1-a6d57ed",
+        "language_tag": "te",
+        "preferred_name": "రమా",
+        "aliases": [],
+        "short_description": {
+          "text": "రమా, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-susa-a033b84",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "preferred_name": "షూషను",
+        "aliases": [],
+        "short_description": {
+          "text": "షూషను, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-tyre-a160272",
+        "entity_key": "entity:pl-tyre-a160272",
+        "language_tag": "te",
+        "preferred_name": "తూరు",
+        "aliases": [],
+        "short_description": {
+          "text": "తూరు, నెహెమ్యా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:te:wb-neh",
+        "scope_key": "scope:wb-neh:refsys:tel-v1:neh.1.1-neh.13.31",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "దేవుడు, నెహెమ్యా, అర్తహషస్త, సన్బల్లటు, తోబీయా, ఎజ్రా.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "సూసా, యూదా మార్గం, యెరూషలేము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "క్రీ.పూ. ఐదవ శతాబ్ది, అర్తహషస్త మొదటి పరిపాలనలో.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "నెహెమ్యా యెరూషలేము కోటలను పునర్నిర్మించి, సంస్కరణలు నడిపించి, సమాజం దేవునితో నిబంధనను నవీకరిస్తుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "ఎజ్రాలో ప్రారంభమైన పునరుద్ధరణ కొనసాగుతుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "పునర్నిర్మిత నగరానికి భద్రత, ఆరాధన, నిబంధన విశ్వసనీయత.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా యెరూషలేము కోటలను పునర్నిర్మించి, సంస్కరణలు నడిపించి, సమాజం దేవునితో నిబంధనను నవీకరిస్తుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-1",
+        "scope_key": "scope:wb-neh-1:refsys:tel-v1:neh.1.1-neh.1.11",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Hacaliah, Hanani, Jacob, Nehemiah, మోషే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Jerusalem, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-1-when"
+          },
+          "what": {
+            "text": "This chapter: నెహెమ్యా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-1-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నెహెమ్యా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-2",
+        "scope_key": "scope:wb-neh-2:refsys:tel-v1:neh.2.1-neh.2.20",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Artaxerxes, Asaph, Geshem, Sanballat, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Dragon Spring, Dung Gate, Fountain Gate, Jerusalem, Kidron, Siloam, Valley Gate, నది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-when"
+          },
+          "what": {
+            "text": "This chapter: రాజుకి నెహెమ్యా విజ్ఞాప్తి; నెహెమ్యా యెరూషలేం సరిహద్దు గోడలను పరీక్షించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: రాజుకి నెహెమ్యా విజ్ఞాప్తి; నెహెమ్యా యెరూషలేం సరిహద్దు గోడలను పరీక్షించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-3",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Ananiah, Azariah, Azbuk, Baana, Bani, Baruch, Bavvai, Benjamin.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Angle, Beth-haccherem, Beth-zur, Broad Wall, Dung Gate, East Gate, Fish Gate, Fountain Gate.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-3-when"
+          },
+          "what": {
+            "text": "This chapter: గోడలు, తలుపుల కట్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-3-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: గోడలు, తలుపుల కట్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-4",
+        "scope_key": "scope:wb-neh-4:refsys:tel-v1:neh.4.1-neh.4.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Sanballat, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Jerusalem, Samaria 1, అష్డోదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-4-when"
+          },
+          "what": {
+            "text": "This chapter: నెహెమ్యా కుట్రను ఎదుర్కొవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-4-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నెహెమ్యా కుట్రను ఎదుర్కొవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-5",
+        "scope_key": "scope:wb-neh-5:refsys:tel-v1:neh.5.1-neh.5.19",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Artaxerxes.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-when"
+          },
+          "what": {
+            "text": "This chapter: పేదలకు నెహెమ్యా సహాయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: పేదలకు నెహెమ్యా సహాయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-6",
+        "scope_key": "scope:wb-neh-6:refsys:tel-v1:neh.6.1-neh.6.19",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Arah, Berechiah, Delaiah, Geshem, Jehohanan, Mehetabel, Meshullam, Noadiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Hakkephirim, Jerusalem, Ono.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-when"
+          },
+          "what": {
+            "text": "This chapter: నెహెమ్యా మీద అసత్య ప్రచారం; గోడలు కట్టడం పూర్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నెహెమ్యా మీద అసత్య ప్రచారం; గోడలు కట్టడం పూర్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-7",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Adin, Adonikam, Akkub, Ami, Arah, Asaph, Ater, Azgad.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Addon, Ai 3, Anathoth, Azmaveth, Beeroth, Bethel 1, Chephirah, Cherub.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-when"
+          },
+          "what": {
+            "text": "This chapter: తిరిగి వచ్చిన వారి జాబితా.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: తిరిగి వచ్చిన వారి జాబితా.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-8",
+        "scope_key": "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Akkub, Anaiah, Azariah, Bani, Hanan, Hashbaddanah, Hashum, Hilkiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Ephraim Gate, Jerusalem, Water Gate.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-8-when"
+          },
+          "what": {
+            "text": "This chapter: ధర్మశాస్త్ర గ్రంథాన్ని ఎజ్రా చదివి వినిపించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-8-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-8-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ధర్మశాస్త్ర గ్రంథాన్ని ఎజ్రా చదివి వినిపించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-9",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Bani, Bunni, Chenani, Hashabneiah, Hodiah, Jacob, Jeshua, Kadmiel.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Chaldea, Red Sea 1, Ur 1, అష్షూరు, ఐగుప్తు, బాషాను, సీనాయి, హెష్బోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-9-when"
+          },
+          "what": {
+            "text": "This chapter: ఎజ్రా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-9-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-9-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ఎజ్రా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-10",
+        "scope_key": "scope:wb-neh-10:refsys:tel-v1:neh.10.1-neh.10.39",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Abijah, Adin, Adonijah, Ahiah, Amariah, Anaiah, Anan, Anathoth.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Harim.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-10-when"
+          },
+          "what": {
+            "text": "This chapter: నిబంధన పై సంతకాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-10-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-10-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నిబంధన పై సంతకాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-11",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Adaiah, Ahitub, Ahzai, Akkub, Amariah, Amashsai, Amzi, Asaph.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Adullam, Aija, Ananiah, Anathoth, Azekah, Beth-pelet, Bethel 1, Dibon 2.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-11-when"
+          },
+          "what": {
+            "text": "This chapter: యెరూషలేంలో తిరి జన నివాసం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-11-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-11-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: యెరూషలేంలో తిరి జన నివాసం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-12",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Abijah, Adna, Akkub, Amariah, Amok, Azarel, Bakbukiah, Benjamin.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Azmaveth, Beth-gilgal, Broad Wall, Dung Gate, Ephraim Gate, Fish Gate, Fountain Gate, Gate of Yeshanah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-when"
+          },
+          "what": {
+            "text": "This chapter: యాజకులు, లేవీయులు; యెరూషలేం గోడలను ప్రతిష్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: యాజకులు, లేవీయులు; యెరూషలేం గోడలను ప్రతిష్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-13",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Artaxerxes, Eliashib, Hanan, Jacob, Joiada, Mattaniah, Pedaiah, Sanballat.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Ammon, Jerusalem, అష్డోదు, తూరు, బబులోను, మోయాబు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-13-when"
+          },
+          "what": {
+            "text": "This chapter: నెహెమ్యా సంస్కరణలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-13-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-13-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నెహెమ్యా సంస్కరణలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-1-p1",
+        "scope_key": "scope:wb-neh-1-p1:refsys:tel-v1:neh.1.1-neh.1.11",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Hacaliah, Hanani, Jacob, Nehemiah, మోషే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-1-p1-when"
+          },
+          "what": {
+            "text": "నెహెమ్యా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-1-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-1-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-2-p1",
+        "scope_key": "scope:wb-neh-2-p1:refsys:tel-v1:neh.2.1-neh.2.10",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Artaxerxes, Asaph, Sanballat, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: నది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-p1-when"
+          },
+          "what": {
+            "text": "రాజుకి నెహెమ్యా విజ్ఞాప్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "రాజుకి నెహెమ్యా విజ్ఞాప్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-2-p2",
+        "scope_key": "scope:wb-neh-2-p2:refsys:tel-v1:neh.2.11-neh.2.20",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Geshem, Sanballat, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Dragon Spring, Dung Gate, Fountain Gate, Jerusalem, Kidron, Siloam, Valley Gate.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-p2-when"
+          },
+          "what": {
+            "text": "నెహెమ్యా యెరూషలేం సరిహద్దు గోడలను పరీక్షించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-2-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా యెరూషలేం సరిహద్దు గోడలను పరీక్షించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-3-p1",
+        "scope_key": "scope:wb-neh-3-p1:refsys:tel-v1:neh.3.1-neh.3.32",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Ananiah, Azariah, Azbuk, Baana, Bani, Baruch, Bavvai, Benjamin.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Angle, Beth-haccherem, Beth-zur, Broad Wall, Dung Gate, East Gate, Fish Gate, Fountain Gate.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-3-p1-when"
+          },
+          "what": {
+            "text": "గోడలు, తలుపుల కట్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-3-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-3-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "గోడలు, తలుపుల కట్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-4-p1",
+        "scope_key": "scope:wb-neh-4-p1:refsys:tel-v1:neh.4.1-neh.4.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Sanballat, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, Samaria 1, అష్డోదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-4-p1-when"
+          },
+          "what": {
+            "text": "నెహెమ్యా కుట్రను ఎదుర్కొవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-4-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-4-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా కుట్రను ఎదుర్కొవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-5-p1",
+        "scope_key": "scope:wb-neh-5-p1:refsys:tel-v1:neh.5.1-neh.5.19",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Artaxerxes.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-p1-when"
+          },
+          "what": {
+            "text": "పేదలకు నెహెమ్యా సహాయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-5-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "పేదలకు నెహెమ్యా సహాయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-6-p1",
+        "scope_key": "scope:wb-neh-6-p1:refsys:tel-v1:neh.6.1-neh.6.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Delaiah, Geshem, Mehetabel, Noadiah, Sanballat, Shemaiah, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Hakkephirim, Jerusalem, Ono.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p1-when"
+          },
+          "what": {
+            "text": "నెహెమ్యా మీద అసత్య ప్రచారం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా మీద అసత్య ప్రచారం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-6-p2",
+        "scope_key": "scope:wb-neh-6-p2:refsys:tel-v1:neh.6.15-neh.6.19",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Arah, Berechiah, Jehohanan, Meshullam, Shecaniah, Tobiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p2-when"
+          },
+          "what": {
+            "text": "గోడలు కట్టడం పూర్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-6-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "గోడలు కట్టడం పూర్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-7-p1",
+        "scope_key": "scope:wb-neh-7-p1:refsys:tel-v1:neh.7.1-neh.7.3",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Hanani, Hananiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-p1-when"
+          },
+          "what": {
+            "text": "నెహెమ్యా 7:1-3.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా 7:1-3.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-7-p2",
+        "scope_key": "scope:wb-neh-7-p2:refsys:tel-v1:neh.7.4-neh.7.73",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Adin, Adonikam, Akkub, Ami, Arah, Asaph, Ater, Azgad.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Addon, Ai 3, Anathoth, Azmaveth, Beeroth, Bethel 1, Chephirah, Cherub.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-p2-when"
+          },
+          "what": {
+            "text": "తిరిగి వచ్చిన వారి జాబితా.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-7-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "తిరిగి వచ్చిన వారి జాబితా.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-8-p1",
+        "scope_key": "scope:wb-neh-8-p1:refsys:tel-v1:neh.8.1-neh.8.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Akkub, Anaiah, Azariah, Bani, Hanan, Hashbaddanah, Hashum, Hilkiah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Ephraim Gate, Jerusalem, Water Gate.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-8-p1-when"
+          },
+          "what": {
+            "text": "ధర్మశాస్త్ర గ్రంథాన్ని ఎజ్రా చదివి వినిపించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-8-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-8-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధర్మశాస్త్ర గ్రంథాన్ని ఎజ్రా చదివి వినిపించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-9-p1",
+        "scope_key": "scope:wb-neh-9-p1:refsys:tel-v1:neh.9.1-neh.9.38",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Bani, Bunni, Chenani, Hashabneiah, Hodiah, Jacob, Jeshua, Kadmiel.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Chaldea, Red Sea 1, Ur 1, అష్షూరు, ఐగుప్తు, బాషాను, సీనాయి, హెష్బోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-9-p1-when"
+          },
+          "what": {
+            "text": "ఎజ్రా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-9-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-9-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఎజ్రా ప్రార్థన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-10-p1",
+        "scope_key": "scope:wb-neh-10-p1:refsys:tel-v1:neh.10.1-neh.10.39",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Abijah, Adin, Adonijah, Ahiah, Amariah, Anaiah, Anan, Anathoth.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Harim.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-10-p1-when"
+          },
+          "what": {
+            "text": "నిబంధన పై సంతకాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-10-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-10-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నిబంధన పై సంతకాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-11-p1",
+        "scope_key": "scope:wb-neh-11-p1:refsys:tel-v1:neh.11.1-neh.11.36",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Adaiah, Ahitub, Ahzai, Akkub, Amariah, Amashsai, Amzi, Asaph.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Adullam, Aija, Ananiah, Anathoth, Azekah, Beth-pelet, Bethel 1, Dibon 2.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-11-p1-when"
+          },
+          "what": {
+            "text": "యెరూషలేంలో తిరి జన నివాసం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-11-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-11-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "యెరూషలేంలో తిరి జన నివాసం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-12-p1",
+        "scope_key": "scope:wb-neh-12-p1:refsys:tel-v1:neh.12.1-neh.12.26",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Abijah, Adna, Akkub, Amariah, Amok, Bakbukiah, Bilgah, Binnui.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p1-when"
+          },
+          "what": {
+            "text": "యాజకులు, లేవీయులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "యాజకులు, లేవీయులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-12-p2",
+        "scope_key": "scope:wb-neh-12-p2:refsys:tel-v1:neh.12.27-neh.12.47",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Azarel, Benjamin, Elam, Eleazar, Eliakim, Elioenai, Ezer, Gilalai.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Azmaveth, Beth-gilgal, Broad Wall, Dung Gate, Ephraim Gate, Fish Gate, Fountain Gate, Gate of Yeshanah.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p2-when"
+          },
+          "what": {
+            "text": "యెరూషలేం గోడలను ప్రతిష్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-12-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "యెరూషలేం గోడలను ప్రతిష్టించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-neh-13-p1",
+        "scope_key": "scope:wb-neh-13-p1:refsys:tel-v1:neh.13.1-neh.13.31",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Artaxerxes, Eliashib, Hanan, Jacob, Joiada, Mattaniah, Pedaiah, Sanballat.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Ammon, Jerusalem, అష్డోదు, తూరు, బబులోను, మోయాబు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-13-p1-when"
+          },
+          "what": {
+            "text": "నెహెమ్యా సంస్కరణలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-13-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-neh-13-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నెహెమ్యా సంస్కరణలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-p-abram-1",
+        "relevance_key": "relevance:wb-neh-9-p-abram-1",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:p-abram-1",
+        "language_tag": "te",
+        "role_text": "అబ్రాహాము — నెహెమ్యా 9: 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-p-judah-1",
+        "relevance_key": "relevance:wb-neh-11-p-judah-1",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:p-judah-1",
+        "language_tag": "te",
+        "role_text": "యూదా — నెహెమ్యా 11: 4, 24, 25.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-p-benjamin-1",
+        "relevance_key": "relevance:wb-neh-11-p-benjamin-1",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:p-benjamin-1",
+        "language_tag": "te",
+        "role_text": "బెన్యామీను — నెహెమ్యా 11: 4, 7, 31.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-p-perez-1",
+        "relevance_key": "relevance:wb-neh-11-p-perez-1",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:p-perez-1",
+        "language_tag": "te",
+        "role_text": "పెరెసు — నెహెమ్యా 11: 4, 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-1-p-moses-1",
+        "relevance_key": "relevance:wb-neh-1-p-moses-1",
+        "scope_key": "scope:wb-neh-1:refsys:tel-v1:neh.1.1-neh.1.11",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "role_text": "మోషే — నెహెమ్యా 1: 7, 8.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-8-p-moses-1",
+        "relevance_key": "relevance:wb-neh-8-p-moses-1",
+        "scope_key": "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "role_text": "మోషే — నెహెమ్యా 8: 1, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-p-moses-1",
+        "relevance_key": "relevance:wb-neh-9-p-moses-1",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "role_text": "మోషే — నెహెమ్యా 9: 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-10-p-moses-1",
+        "relevance_key": "relevance:wb-neh-10-p-moses-1",
+        "scope_key": "scope:wb-neh-10:refsys:tel-v1:neh.10.1-neh.10.39",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "role_text": "మోషే — నెహెమ్యా 10: 29.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-p-moses-1",
+        "relevance_key": "relevance:wb-neh-13-p-moses-1",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "role_text": "మోషే — నెహెమ్యా 13: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-p-pharaoh-4",
+        "relevance_key": "relevance:wb-neh-9-p-pharaoh-4",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:p-pharaoh-4",
+        "language_tag": "te",
+        "role_text": "ఫరో — నెహెమ్యా 9: 10.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-10-p-aaron-1",
+        "relevance_key": "relevance:wb-neh-10-p-aaron-1",
+        "scope_key": "scope:wb-neh-10:refsys:tel-v1:neh.10.1-neh.10.39",
+        "entity_key": "entity:p-aaron-1",
+        "language_tag": "te",
+        "role_text": "అహరోను — నెహెమ్యా 10: 38.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-aaron-1",
+        "relevance_key": "relevance:wb-neh-12-p-aaron-1",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-aaron-1",
+        "language_tag": "te",
+        "role_text": "అహరోను — నెహెమ్యా 12: 47.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-8-p-joshua-1",
+        "relevance_key": "relevance:wb-neh-8-p-joshua-1",
+        "scope_key": "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+        "entity_key": "entity:p-joshua-1",
+        "language_tag": "te",
+        "role_text": "యెహోషువ — నెహెమ్యా 8: 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-8-p-nun-1",
+        "relevance_key": "relevance:wb-neh-8-p-nun-1",
+        "scope_key": "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+        "entity_key": "entity:p-nun-1",
+        "language_tag": "te",
+        "role_text": "నూను — నెహెమ్యా 8: 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-p-sihon-1",
+        "relevance_key": "relevance:wb-neh-9-p-sihon-1",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:p-sihon-1",
+        "language_tag": "te",
+        "role_text": "సీహోను — నెహెమ్యా 9: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-p-og-1",
+        "relevance_key": "relevance:wb-neh-9-p-og-1",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:p-og-1",
+        "language_tag": "te",
+        "role_text": "ఓగు — నెహెమ్యా 9: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-p-balaam-1",
+        "relevance_key": "relevance:wb-neh-13-p-balaam-1",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:p-balaam-1",
+        "language_tag": "te",
+        "role_text": "బిలాము — నెహెమ్యా 13: 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-3-p-david-1",
+        "relevance_key": "relevance:wb-neh-3-p-david-1",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "entity_key": "entity:p-david-1",
+        "language_tag": "te",
+        "role_text": "దావీదు — నెహెమ్యా 3: 15, 16.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-david-1",
+        "relevance_key": "relevance:wb-neh-12-p-david-1",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-david-1",
+        "language_tag": "te",
+        "role_text": "దావీదు — నెహెమ్యా 12: 24, 36, 37, 45, 46.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-p-ahijah-1",
+        "relevance_key": "relevance:wb-neh-11-p-ahijah-1",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:p-ahijah-1",
+        "language_tag": "te",
+        "role_text": "అహీయా — నెహెమ్యా 11: 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-p-solomon-1",
+        "relevance_key": "relevance:wb-neh-7-p-solomon-1",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:p-solomon-1",
+        "language_tag": "te",
+        "role_text": "సొలొమోను — నెహెమ్యా 7: 57, 60.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-p-solomon-1",
+        "relevance_key": "relevance:wb-neh-11-p-solomon-1",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:p-solomon-1",
+        "language_tag": "te",
+        "role_text": "సొలొమోను — నెహెమ్యా 11: 3.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-solomon-1",
+        "relevance_key": "relevance:wb-neh-12-p-solomon-1",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-solomon-1",
+        "language_tag": "te",
+        "role_text": "సొలొమోను — నెహెమ్యా 12: 45.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-p-solomon-1",
+        "relevance_key": "relevance:wb-neh-13-p-solomon-1",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:p-solomon-1",
+        "language_tag": "te",
+        "role_text": "సొలొమోను — నెహెమ్యా 13: 26.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-p-nebuchadnezzar-1",
+        "relevance_key": "relevance:wb-neh-7-p-nebuchadnezzar-1",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:p-nebuchadnezzar-1",
+        "language_tag": "te",
+        "role_text": "బబులోను — నెహెమ్యా 7: 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-asaph-2",
+        "relevance_key": "relevance:wb-neh-12-p-asaph-2",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-asaph-2",
+        "language_tag": "te",
+        "role_text": "ఆసాపు — నెహెమ్యా 12: 35, 46.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-p-zerubbabel-2",
+        "relevance_key": "relevance:wb-neh-7-p-zerubbabel-2",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:p-zerubbabel-2",
+        "language_tag": "te",
+        "role_text": "జెరుబ్బాబెలు — నెహెమ్యా 7: 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-zerubbabel-2",
+        "relevance_key": "relevance:wb-neh-12-p-zerubbabel-2",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-zerubbabel-2",
+        "language_tag": "te",
+        "role_text": "జెరుబ్బాబెలు — నెహెమ్యా 12: 1, 47.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-darius-1",
+        "relevance_key": "relevance:wb-neh-12-p-darius-1",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-darius-1",
+        "language_tag": "te",
+        "role_text": "దర్యావేషు — నెహెమ్యా 12: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-8-p-ezra-1",
+        "relevance_key": "relevance:wb-neh-8-p-ezra-1",
+        "scope_key": "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+        "entity_key": "entity:p-ezra-1",
+        "language_tag": "te",
+        "role_text": "ఎజ్రా — నెహెమ్యా 8: 1, 2, 4, 5, 6, 9, 13.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-p-ezra-1",
+        "relevance_key": "relevance:wb-neh-12-p-ezra-1",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:p-ezra-1",
+        "language_tag": "te",
+        "role_text": "ఎజ్రా — నెహెమ్యా 12: 1, 13, 26, 33, 36.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-4-pl-ashdod-a30c937",
+        "relevance_key": "relevance:wb-neh-4-pl-ashdod-a30c937",
+        "scope_key": "scope:wb-neh-4:refsys:tel-v1:neh.4.1-neh.4.23",
+        "entity_key": "entity:pl-ashdod-a30c937",
+        "language_tag": "te",
+        "role_text": "అష్డోదు — నెహెమ్యా 4: 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-pl-ashdod-a30c937",
+        "relevance_key": "relevance:wb-neh-13-pl-ashdod-a30c937",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:pl-ashdod-a30c937",
+        "language_tag": "te",
+        "role_text": "అష్డోదు — నెహెమ్యా 13: 23, 24.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-pl-assyria-a3d1321",
+        "relevance_key": "relevance:wb-neh-9-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "language_tag": "te",
+        "role_text": "అష్షూరు — నెహెమ్యా 9: 32.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-pl-babylon-1-a217d18",
+        "relevance_key": "relevance:wb-neh-7-pl-babylon-1-a217d18",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "role_text": "బబులోను — నెహెమ్యా 7: 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-pl-babylon-1-a217d18",
+        "relevance_key": "relevance:wb-neh-13-pl-babylon-1-a217d18",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "role_text": "బబులోను — నెహెమ్యా 13: 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-pl-bashan-aa7a40a",
+        "relevance_key": "relevance:wb-neh-9-pl-bashan-aa7a40a",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:pl-bashan-aa7a40a",
+        "language_tag": "te",
+        "role_text": "బాషాను — నెహెమ్యా 9: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-pl-beersheba-1-ad2f6c2",
+        "relevance_key": "relevance:wb-neh-11-pl-beersheba-1-ad2f6c2",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:pl-beersheba-1-ad2f6c2",
+        "language_tag": "te",
+        "role_text": "బెయేర్షెబా — నెహెమ్యా 11: 27, 30.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-pl-bethlehem-1-a112427",
+        "relevance_key": "relevance:wb-neh-7-pl-bethlehem-1-a112427",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:pl-bethlehem-1-a112427",
+        "language_tag": "te",
+        "role_text": "బేత్లెహేము — నెహెమ్యా 7: 26.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-2-pl-beyond-the-river-a88310a",
+        "relevance_key": "relevance:wb-neh-2-pl-beyond-the-river-a88310a",
+        "scope_key": "scope:wb-neh-2:refsys:tel-v1:neh.2.1-neh.2.20",
+        "entity_key": "entity:pl-beyond-the-river-a88310a",
+        "language_tag": "te",
+        "role_text": "నది — నెహెమ్యా 2: 7, 9.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-3-pl-beyond-the-river-a88310a",
+        "relevance_key": "relevance:wb-neh-3-pl-beyond-the-river-a88310a",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "entity_key": "entity:pl-beyond-the-river-a88310a",
+        "language_tag": "te",
+        "role_text": "నది — నెహెమ్యా 3: 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-3-pl-city-of-david-a84f426",
+        "relevance_key": "relevance:wb-neh-3-pl-city-of-david-a84f426",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "entity_key": "entity:pl-city-of-david-a84f426",
+        "language_tag": "te",
+        "role_text": "పట్టణంలో — నెహెమ్యా 3: 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-12-pl-city-of-david-a84f426",
+        "relevance_key": "relevance:wb-neh-12-pl-city-of-david-a84f426",
+        "scope_key": "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+        "entity_key": "entity:pl-city-of-david-a84f426",
+        "language_tag": "te",
+        "role_text": "పట్టణంలో — నెహెమ్యా 12: 37.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-pl-egypt-af301ca",
+        "relevance_key": "relevance:wb-neh-9-pl-egypt-af301ca",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "language_tag": "te",
+        "role_text": "ఐగుప్తు — నెహెమ్యా 9: 9, 17, 18.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-pl-gilead-1-ae73b90",
+        "relevance_key": "relevance:wb-neh-7-pl-gilead-1-ae73b90",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "language_tag": "te",
+        "role_text": "గిలాదు — నెహెమ్యా 7: 63.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-pl-heshbon-abf2fc1",
+        "relevance_key": "relevance:wb-neh-9-pl-heshbon-abf2fc1",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:pl-heshbon-abf2fc1",
+        "language_tag": "te",
+        "role_text": "హెష్బోను — నెహెమ్యా 9: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-3-pl-jericho-1-a231f80",
+        "relevance_key": "relevance:wb-neh-3-pl-jericho-1-a231f80",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "entity_key": "entity:pl-jericho-1-a231f80",
+        "language_tag": "te",
+        "role_text": "యెరికో — నెహెమ్యా 3: 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-pl-jericho-1-a231f80",
+        "relevance_key": "relevance:wb-neh-7-pl-jericho-1-a231f80",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:pl-jericho-1-a231f80",
+        "language_tag": "te",
+        "role_text": "యెరికో — నెహెమ్యా 7: 36.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-3-pl-keilah-ad9df93",
+        "relevance_key": "relevance:wb-neh-3-pl-keilah-ad9df93",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "entity_key": "entity:pl-keilah-ad9df93",
+        "language_tag": "te",
+        "role_text": "దావీదు — నెహెమ్యా 3: 17, 18.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-pl-kiriath-jearim-a9bba61",
+        "relevance_key": "relevance:wb-neh-7-pl-kiriath-jearim-a9bba61",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:pl-kiriath-jearim-a9bba61",
+        "language_tag": "te",
+        "role_text": "కిర్యత్యారీము — నెహెమ్యా 7: 29.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-11-pl-lachish-a3cc590",
+        "relevance_key": "relevance:wb-neh-11-pl-lachish-a3cc590",
+        "scope_key": "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+        "entity_key": "entity:pl-lachish-a3cc590",
+        "language_tag": "te",
+        "role_text": "లాకీషు — నెహెమ్యా 11: 30.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-3-pl-mizpah-3-a736f6c",
+        "relevance_key": "relevance:wb-neh-3-pl-mizpah-3-a736f6c",
+        "scope_key": "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+        "entity_key": "entity:pl-mizpah-3-a736f6c",
+        "language_tag": "te",
+        "role_text": "మిస్పాలో — నెహెమ్యా 3: 7, 15, 19.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-pl-moab-1-aa0b1d6",
+        "relevance_key": "relevance:wb-neh-13-pl-moab-1-aa0b1d6",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:pl-moab-1-aa0b1d6",
+        "language_tag": "te",
+        "role_text": "మోయాబు — నెహెమ్యా 13: 23.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-9-pl-mount-sinai-abfba2a",
+        "relevance_key": "relevance:wb-neh-9-pl-mount-sinai-abfba2a",
+        "scope_key": "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+        "entity_key": "entity:pl-mount-sinai-abfba2a",
+        "language_tag": "te",
+        "role_text": "సీనాయి — నెహెమ్యా 9: 13.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-7-pl-ramah-1-a6d57ed",
+        "relevance_key": "relevance:wb-neh-7-pl-ramah-1-a6d57ed",
+        "scope_key": "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+        "entity_key": "entity:pl-ramah-1-a6d57ed",
+        "language_tag": "te",
+        "role_text": "రమా — నెహెమ్యా 7: 30.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-1-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-neh-1-pl-susa-a033b84",
+        "scope_key": "scope:wb-neh-1:refsys:tel-v1:neh.1.1-neh.1.11",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — నెహెమ్యా 1: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-neh-13-pl-tyre-a160272",
+        "relevance_key": "relevance:wb-neh-13-pl-tyre-a160272",
+        "scope_key": "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+        "entity_key": "entity:pl-tyre-a160272",
+        "language_tag": "te",
+        "role_text": "తూరు — నెహెమ్యా 13: 16.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:wb-neh:refsys:tel-v1:neh.1.1-neh.13.31"
+          ],
+          "record_keys": [
+            "context:te:wb-neh"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:wb-neh-1:refsys:tel-v1:neh.1.1-neh.1.11",
+            "scope:wb-neh-2:refsys:tel-v1:neh.2.1-neh.2.20",
+            "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+            "scope:wb-neh-4:refsys:tel-v1:neh.4.1-neh.4.23",
+            "scope:wb-neh-5:refsys:tel-v1:neh.5.1-neh.5.19",
+            "scope:wb-neh-6:refsys:tel-v1:neh.6.1-neh.6.19",
+            "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+            "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+            "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+            "scope:wb-neh-10:refsys:tel-v1:neh.10.1-neh.10.39",
+            "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+            "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+            "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+            "scope:wb-neh-1-p1:refsys:tel-v1:neh.1.1-neh.1.11",
+            "scope:wb-neh-2-p1:refsys:tel-v1:neh.2.1-neh.2.10",
+            "scope:wb-neh-2-p2:refsys:tel-v1:neh.2.11-neh.2.20",
+            "scope:wb-neh-3-p1:refsys:tel-v1:neh.3.1-neh.3.32",
+            "scope:wb-neh-4-p1:refsys:tel-v1:neh.4.1-neh.4.23",
+            "scope:wb-neh-5-p1:refsys:tel-v1:neh.5.1-neh.5.19",
+            "scope:wb-neh-6-p1:refsys:tel-v1:neh.6.1-neh.6.14",
+            "scope:wb-neh-6-p2:refsys:tel-v1:neh.6.15-neh.6.19",
+            "scope:wb-neh-7-p1:refsys:tel-v1:neh.7.1-neh.7.3",
+            "scope:wb-neh-7-p2:refsys:tel-v1:neh.7.4-neh.7.73",
+            "scope:wb-neh-8-p1:refsys:tel-v1:neh.8.1-neh.8.18",
+            "scope:wb-neh-9-p1:refsys:tel-v1:neh.9.1-neh.9.38",
+            "scope:wb-neh-10-p1:refsys:tel-v1:neh.10.1-neh.10.39",
+            "scope:wb-neh-11-p1:refsys:tel-v1:neh.11.1-neh.11.36",
+            "scope:wb-neh-12-p1:refsys:tel-v1:neh.12.1-neh.12.26",
+            "scope:wb-neh-12-p2:refsys:tel-v1:neh.12.27-neh.12.47",
+            "scope:wb-neh-13-p1:refsys:tel-v1:neh.13.1-neh.13.31"
+          ],
+          "record_keys": [
+            "context:te:wb-neh-1",
+            "context:te:wb-neh-2",
+            "context:te:wb-neh-3",
+            "context:te:wb-neh-4",
+            "context:te:wb-neh-5",
+            "context:te:wb-neh-6",
+            "context:te:wb-neh-7",
+            "context:te:wb-neh-8",
+            "context:te:wb-neh-9",
+            "context:te:wb-neh-10",
+            "context:te:wb-neh-11",
+            "context:te:wb-neh-12",
+            "context:te:wb-neh-13",
+            "context:te:wb-neh-1-p1",
+            "context:te:wb-neh-2-p1",
+            "context:te:wb-neh-2-p2",
+            "context:te:wb-neh-3-p1",
+            "context:te:wb-neh-4-p1",
+            "context:te:wb-neh-5-p1",
+            "context:te:wb-neh-6-p1",
+            "context:te:wb-neh-6-p2",
+            "context:te:wb-neh-7-p1",
+            "context:te:wb-neh-7-p2",
+            "context:te:wb-neh-8-p1",
+            "context:te:wb-neh-9-p1",
+            "context:te:wb-neh-10-p1",
+            "context:te:wb-neh-11-p1",
+            "context:te:wb-neh-12-p1",
+            "context:te:wb-neh-12-p2",
+            "context:te:wb-neh-13-p1"
+          ],
+          "blocker_question_keys": [
+            "question:wb-context-te-wb-neh-1-before",
+            "question:wb-context-te-wb-neh-1-p1-before",
+            "question:wb-context-te-wb-neh-1-p1-stakes",
+            "question:wb-context-te-wb-neh-1-p1-when",
+            "question:wb-context-te-wb-neh-1-stakes",
+            "question:wb-context-te-wb-neh-1-when",
+            "question:wb-context-te-wb-neh-10-before",
+            "question:wb-context-te-wb-neh-10-p1-before",
+            "question:wb-context-te-wb-neh-10-p1-stakes",
+            "question:wb-context-te-wb-neh-10-p1-when",
+            "question:wb-context-te-wb-neh-10-stakes",
+            "question:wb-context-te-wb-neh-10-when",
+            "question:wb-context-te-wb-neh-11-before",
+            "question:wb-context-te-wb-neh-11-p1-before",
+            "question:wb-context-te-wb-neh-11-p1-stakes",
+            "question:wb-context-te-wb-neh-11-p1-when",
+            "question:wb-context-te-wb-neh-11-stakes",
+            "question:wb-context-te-wb-neh-11-when",
+            "question:wb-context-te-wb-neh-12-before",
+            "question:wb-context-te-wb-neh-12-p1-before",
+            "question:wb-context-te-wb-neh-12-p1-stakes",
+            "question:wb-context-te-wb-neh-12-p1-when",
+            "question:wb-context-te-wb-neh-12-p1-where",
+            "question:wb-context-te-wb-neh-12-p2-before",
+            "question:wb-context-te-wb-neh-12-p2-stakes",
+            "question:wb-context-te-wb-neh-12-p2-when",
+            "question:wb-context-te-wb-neh-12-stakes",
+            "question:wb-context-te-wb-neh-12-when",
+            "question:wb-context-te-wb-neh-13-before",
+            "question:wb-context-te-wb-neh-13-p1-before",
+            "question:wb-context-te-wb-neh-13-p1-stakes",
+            "question:wb-context-te-wb-neh-13-p1-when",
+            "question:wb-context-te-wb-neh-13-stakes",
+            "question:wb-context-te-wb-neh-13-when",
+            "question:wb-context-te-wb-neh-2-before",
+            "question:wb-context-te-wb-neh-2-p1-before",
+            "question:wb-context-te-wb-neh-2-p1-stakes",
+            "question:wb-context-te-wb-neh-2-p1-when",
+            "question:wb-context-te-wb-neh-2-p2-before",
+            "question:wb-context-te-wb-neh-2-p2-stakes",
+            "question:wb-context-te-wb-neh-2-p2-when",
+            "question:wb-context-te-wb-neh-2-stakes",
+            "question:wb-context-te-wb-neh-2-when",
+            "question:wb-context-te-wb-neh-3-before",
+            "question:wb-context-te-wb-neh-3-p1-before",
+            "question:wb-context-te-wb-neh-3-p1-stakes",
+            "question:wb-context-te-wb-neh-3-p1-when",
+            "question:wb-context-te-wb-neh-3-stakes",
+            "question:wb-context-te-wb-neh-3-when",
+            "question:wb-context-te-wb-neh-4-before",
+            "question:wb-context-te-wb-neh-4-p1-before",
+            "question:wb-context-te-wb-neh-4-p1-stakes",
+            "question:wb-context-te-wb-neh-4-p1-when",
+            "question:wb-context-te-wb-neh-4-stakes",
+            "question:wb-context-te-wb-neh-4-when",
+            "question:wb-context-te-wb-neh-5-before",
+            "question:wb-context-te-wb-neh-5-p1-before",
+            "question:wb-context-te-wb-neh-5-p1-stakes",
+            "question:wb-context-te-wb-neh-5-p1-when",
+            "question:wb-context-te-wb-neh-5-p1-where",
+            "question:wb-context-te-wb-neh-5-stakes",
+            "question:wb-context-te-wb-neh-5-when",
+            "question:wb-context-te-wb-neh-5-where",
+            "question:wb-context-te-wb-neh-6-before",
+            "question:wb-context-te-wb-neh-6-p1-before",
+            "question:wb-context-te-wb-neh-6-p1-stakes",
+            "question:wb-context-te-wb-neh-6-p1-when",
+            "question:wb-context-te-wb-neh-6-p2-before",
+            "question:wb-context-te-wb-neh-6-p2-stakes",
+            "question:wb-context-te-wb-neh-6-p2-when",
+            "question:wb-context-te-wb-neh-6-p2-where",
+            "question:wb-context-te-wb-neh-6-stakes",
+            "question:wb-context-te-wb-neh-6-when",
+            "question:wb-context-te-wb-neh-7-before",
+            "question:wb-context-te-wb-neh-7-p1-before",
+            "question:wb-context-te-wb-neh-7-p1-stakes",
+            "question:wb-context-te-wb-neh-7-p1-when",
+            "question:wb-context-te-wb-neh-7-p2-before",
+            "question:wb-context-te-wb-neh-7-p2-stakes",
+            "question:wb-context-te-wb-neh-7-p2-when",
+            "question:wb-context-te-wb-neh-7-stakes",
+            "question:wb-context-te-wb-neh-7-when",
+            "question:wb-context-te-wb-neh-8-before",
+            "question:wb-context-te-wb-neh-8-p1-before",
+            "question:wb-context-te-wb-neh-8-p1-stakes",
+            "question:wb-context-te-wb-neh-8-p1-when",
+            "question:wb-context-te-wb-neh-8-stakes",
+            "question:wb-context-te-wb-neh-8-when",
+            "question:wb-context-te-wb-neh-9-before",
+            "question:wb-context-te-wb-neh-9-p1-before",
+            "question:wb-context-te-wb-neh-9-p1-stakes",
+            "question:wb-context-te-wb-neh-9-p1-when",
+            "question:wb-context-te-wb-neh-9-stakes",
+            "question:wb-context-te-wb-neh-9-when"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:wb-context-te-wb-neh-1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-7",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-7",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-7",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-8-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-8",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-8-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-8",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-8-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-8",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-9-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-9",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-9-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-9",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-9-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-9",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-10-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-10",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-10-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-10",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-10-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-10",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-11-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-11",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-11-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-11",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-11-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-11",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-12",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-13-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-13",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-13-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-13",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-13-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-13",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-1-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-1-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-1-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-1-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-1-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-1-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-2-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-2-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-2-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-2-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-2-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-2-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-2-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-3-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-3-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-3-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-3-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-3-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-3-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-4-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-4-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-4-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-4-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-4-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-4-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-5-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-5-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-5-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-5-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-5-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-6-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-6-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-6-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-6-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-7-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-7-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-7-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-7-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-7-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-7-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-7-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-8-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-8-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-8-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-8-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-8-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-8-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-9-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-9-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-9-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-9-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-9-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-9-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-10-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-10-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-10-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-10-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-10-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-10-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-11-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-11-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-11-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-11-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-11-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-11-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-12-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-12-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-12-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-12-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-13-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-neh-13-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-13-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-13-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-neh-13-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-neh-13-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

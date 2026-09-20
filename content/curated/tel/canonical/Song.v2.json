@@ -1,0 +1,1796 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-song-canonical",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-song-canonical:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-song-canonical",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-song:refsys:tel-v1:song.1.1-song.8.14",
+      "scope:wb-song-1:refsys:tel-v1:song.1.1-song.1.17",
+      "scope:wb-song-2:refsys:tel-v1:song.2.1-song.2.17",
+      "scope:wb-song-3:refsys:tel-v1:song.3.1-song.3.11",
+      "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+      "scope:wb-song-5:refsys:tel-v1:song.5.1-song.5.16",
+      "scope:wb-song-6:refsys:tel-v1:song.6.1-song.6.13",
+      "scope:wb-song-7:refsys:tel-v1:song.7.1-song.7.13",
+      "scope:wb-song-8:refsys:tel-v1:song.8.1-song.8.14",
+      "scope:wb-song-1-p1:refsys:tel-v1:song.1.1-song.1.1",
+      "scope:wb-song-1-p2:refsys:tel-v1:song.1.2-song.1.17",
+      "scope:wb-song-2-p1:refsys:tel-v1:song.2.1-song.2.17",
+      "scope:wb-song-3-p1:refsys:tel-v1:song.3.1-song.3.11",
+      "scope:wb-song-4-p1:refsys:tel-v1:song.4.1-song.4.16",
+      "scope:wb-song-5-p1:refsys:tel-v1:song.5.1-song.5.1",
+      "scope:wb-song-5-p2:refsys:tel-v1:song.5.2-song.5.16",
+      "scope:wb-song-6-p1:refsys:tel-v1:song.6.1-song.6.13",
+      "scope:wb-song-7-p1:refsys:tel-v1:song.7.1-song.7.9",
+      "scope:wb-song-7-p2:refsys:tel-v1:song.7.10-song.7.13",
+      "scope:wb-song-8-p1:refsys:tel-v1:song.8.1-song.8.14"
+    ],
+    "reference_keys": [
+      "verse:Song.1.1",
+      "verse:Song.1.2",
+      "verse:Song.1.3",
+      "verse:Song.1.4",
+      "verse:Song.1.5",
+      "verse:Song.1.6",
+      "verse:Song.1.7",
+      "verse:Song.1.8",
+      "verse:Song.1.9",
+      "verse:Song.1.10",
+      "verse:Song.1.11",
+      "verse:Song.1.12",
+      "verse:Song.1.13",
+      "verse:Song.1.14",
+      "verse:Song.1.15",
+      "verse:Song.1.16",
+      "verse:Song.1.17",
+      "verse:Song.2.1",
+      "verse:Song.2.2",
+      "verse:Song.2.3",
+      "verse:Song.2.4",
+      "verse:Song.2.5",
+      "verse:Song.2.6",
+      "verse:Song.2.7",
+      "verse:Song.2.8",
+      "verse:Song.2.9",
+      "verse:Song.2.10",
+      "verse:Song.2.11",
+      "verse:Song.2.12",
+      "verse:Song.2.13",
+      "verse:Song.2.14",
+      "verse:Song.2.15",
+      "verse:Song.2.16",
+      "verse:Song.2.17",
+      "verse:Song.3.1",
+      "verse:Song.3.2",
+      "verse:Song.3.3",
+      "verse:Song.3.4",
+      "verse:Song.3.5",
+      "verse:Song.3.6",
+      "verse:Song.3.7",
+      "verse:Song.3.8",
+      "verse:Song.3.9",
+      "verse:Song.3.10",
+      "verse:Song.3.11",
+      "verse:Song.4.1",
+      "verse:Song.4.2",
+      "verse:Song.4.3",
+      "verse:Song.4.4",
+      "verse:Song.4.5",
+      "verse:Song.4.6",
+      "verse:Song.4.7",
+      "verse:Song.4.8",
+      "verse:Song.4.9",
+      "verse:Song.4.10",
+      "verse:Song.4.11",
+      "verse:Song.4.12",
+      "verse:Song.4.13",
+      "verse:Song.4.14",
+      "verse:Song.4.15",
+      "verse:Song.4.16",
+      "verse:Song.5.1",
+      "verse:Song.5.2",
+      "verse:Song.5.3",
+      "verse:Song.5.4",
+      "verse:Song.5.5",
+      "verse:Song.5.6",
+      "verse:Song.5.7",
+      "verse:Song.5.8",
+      "verse:Song.5.9",
+      "verse:Song.5.10",
+      "verse:Song.5.11",
+      "verse:Song.5.12",
+      "verse:Song.5.13",
+      "verse:Song.5.14",
+      "verse:Song.5.15",
+      "verse:Song.5.16",
+      "verse:Song.6.1",
+      "verse:Song.6.2",
+      "verse:Song.6.3",
+      "verse:Song.6.4",
+      "verse:Song.6.5",
+      "verse:Song.6.6",
+      "verse:Song.6.7",
+      "verse:Song.6.8",
+      "verse:Song.6.9",
+      "verse:Song.6.10",
+      "verse:Song.6.11",
+      "verse:Song.6.12",
+      "verse:Song.6.13",
+      "verse:Song.7.1",
+      "verse:Song.7.2",
+      "verse:Song.7.3",
+      "verse:Song.7.4",
+      "verse:Song.7.5",
+      "verse:Song.7.6",
+      "verse:Song.7.7",
+      "verse:Song.7.8",
+      "verse:Song.7.9",
+      "verse:Song.7.10",
+      "verse:Song.7.11",
+      "verse:Song.7.12",
+      "verse:Song.7.13",
+      "verse:Song.8.1",
+      "verse:Song.8.2",
+      "verse:Song.8.3",
+      "verse:Song.8.4",
+      "verse:Song.8.5",
+      "verse:Song.8.6",
+      "verse:Song.8.7",
+      "verse:Song.8.8",
+      "verse:Song.8.9",
+      "verse:Song.8.10",
+      "verse:Song.8.11",
+      "verse:Song.8.12",
+      "verse:Song.8.13",
+      "verse:Song.8.14"
+    ],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-pharaoh-4",
+        "entity_type": "person",
+        "proposed_label": "Pharaoh",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-david-1",
+        "entity_type": "person",
+        "proposed_label": "David",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-solomon-1",
+        "entity_type": "person",
+        "proposed_label": "Solomon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-amana-ab428de",
+        "entity_type": "place",
+        "proposed_label": "Amana",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-baal-hamon-a304bb7",
+        "entity_type": "place",
+        "proposed_label": "Baal-hamon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bath-rabbim-abaa030",
+        "entity_type": "place",
+        "proposed_label": "Bath-rabbim",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bether-1-ac9fb6d",
+        "entity_type": "place",
+        "proposed_label": "Bether 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-damascus-a69c1d4",
+        "entity_type": "place",
+        "proposed_label": "Damascus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-engedi-a51df0e",
+        "entity_type": "place",
+        "proposed_label": "Engedi",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilead-1-ae73b90",
+        "entity_type": "place",
+        "proposed_label": "Gilead 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-heshbon-abf2fc1",
+        "entity_type": "place",
+        "proposed_label": "Heshbon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-kedar-a68d1a9",
+        "entity_type": "place",
+        "proposed_label": "Kedar",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lebanon-a730058",
+        "entity_type": "place",
+        "proposed_label": "Lebanon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mahanaim-ae5bfe9",
+        "entity_type": "place",
+        "proposed_label": "Mahanaim",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-carmel-a3e21c6",
+        "entity_type": "place",
+        "proposed_label": "Mount Carmel",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-hermon-a341fe8",
+        "entity_type": "place",
+        "proposed_label": "Mount Hermon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-senir-ad27e17",
+        "entity_type": "place",
+        "proposed_label": "Senir",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-sharon-1-a83fd43",
+        "entity_type": "place",
+        "proposed_label": "Sharon 1",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-tirzah-a80d317",
+        "entity_type": "place",
+        "proposed_label": "Tirzah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zion-af20c46",
+        "entity_type": "place",
+        "proposed_label": "Zion",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [],
+    "citations": [],
+    "attestations": [
+      {
+        "attestation_key": "attestation:wb-p-pharaoh-4-1-9",
+        "reference_key": "verse:Song.1.9",
+        "entity_key": "entity:p-pharaoh-4",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-david-1-4-4",
+        "reference_key": "verse:Song.4.4",
+        "entity_key": "entity:p-david-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-1-1",
+        "reference_key": "verse:Song.1.1",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-1-5",
+        "reference_key": "verse:Song.1.5",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-3-7",
+        "reference_key": "verse:Song.3.7",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-3-9",
+        "reference_key": "verse:Song.3.9",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-3-11",
+        "reference_key": "verse:Song.3.11",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-8-11",
+        "reference_key": "verse:Song.8.11",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-solomon-1-8-12",
+        "reference_key": "verse:Song.8.12",
+        "entity_key": "entity:p-solomon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-amana-ab428de-4-8",
+        "reference_key": "verse:Song.4.8",
+        "entity_key": "entity:pl-amana-ab428de",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-baal-hamon-a304bb7-8-11",
+        "reference_key": "verse:Song.8.11",
+        "entity_key": "entity:pl-baal-hamon-a304bb7",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-bath-rabbim-abaa030-7-4",
+        "reference_key": "verse:Song.7.4",
+        "entity_key": "entity:pl-bath-rabbim-abaa030",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-bether-1-ac9fb6d-2-17",
+        "reference_key": "verse:Song.2.17",
+        "entity_key": "entity:pl-bether-1-ac9fb6d",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-damascus-a69c1d4-7-4",
+        "reference_key": "verse:Song.7.4",
+        "entity_key": "entity:pl-damascus-a69c1d4",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-engedi-a51df0e-1-14",
+        "reference_key": "verse:Song.1.14",
+        "entity_key": "entity:pl-engedi-a51df0e",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-4-1",
+        "reference_key": "verse:Song.4.1",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-6-5",
+        "reference_key": "verse:Song.6.5",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-heshbon-abf2fc1-7-4",
+        "reference_key": "verse:Song.7.4",
+        "entity_key": "entity:pl-heshbon-abf2fc1",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-5",
+        "reference_key": "verse:Song.1.5",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-7",
+        "reference_key": "verse:Song.2.7",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-5",
+        "reference_key": "verse:Song.3.5",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-10",
+        "reference_key": "verse:Song.3.10",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-8",
+        "reference_key": "verse:Song.5.8",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-16",
+        "reference_key": "verse:Song.5.16",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-6-4",
+        "reference_key": "verse:Song.6.4",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-8-4",
+        "reference_key": "verse:Song.8.4",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-kedar-a68d1a9-1-5",
+        "reference_key": "verse:Song.1.5",
+        "entity_key": "entity:pl-kedar-a68d1a9",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-3-9",
+        "reference_key": "verse:Song.3.9",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-8",
+        "reference_key": "verse:Song.4.8",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-11",
+        "reference_key": "verse:Song.4.11",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-15",
+        "reference_key": "verse:Song.4.15",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-5-15",
+        "reference_key": "verse:Song.5.15",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-7-4",
+        "reference_key": "verse:Song.7.4",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-mahanaim-ae5bfe9-6-13",
+        "reference_key": "verse:Song.6.13",
+        "entity_key": "entity:pl-mahanaim-ae5bfe9",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-mount-carmel-a3e21c6-7-5",
+        "reference_key": "verse:Song.7.5",
+        "entity_key": "entity:pl-mount-carmel-a3e21c6",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-mount-hermon-a341fe8-4-8",
+        "reference_key": "verse:Song.4.8",
+        "entity_key": "entity:pl-mount-hermon-a341fe8",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-senir-ad27e17-4-8",
+        "reference_key": "verse:Song.4.8",
+        "entity_key": "entity:pl-senir-ad27e17",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-sharon-1-a83fd43-2-1",
+        "reference_key": "verse:Song.2.1",
+        "entity_key": "entity:pl-sharon-1-a83fd43",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-tirzah-a80d317-6-4",
+        "reference_key": "verse:Song.6.4",
+        "entity_key": "entity:pl-tirzah-a80d317",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-zion-af20c46-3-11",
+        "reference_key": "verse:Song.3.11",
+        "entity_key": "entity:pl-zion-af20c46",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [],
+    "events": [],
+    "places": [
+      {
+        "entity_key": "entity:pl-amana-ab428de",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-amana-ab428de",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-baal-hamon-a304bb7",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-baal-hamon-a304bb7",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-bath-rabbim-abaa030",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-bath-rabbim-abaa030",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-bether-1-ac9fb6d",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-bether-1-ac9fb6d",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-damascus-a69c1d4",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-damascus-a69c1d4",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-engedi-a51df0e",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-engedi-a51df0e",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-gilead-1-ae73b90",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-heshbon-abf2fc1",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-heshbon-abf2fc1",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-kedar-a68d1a9",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-kedar-a68d1a9",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-lebanon-a730058",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-lebanon-a730058",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-mahanaim-ae5bfe9",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-mahanaim-ae5bfe9",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-mount-carmel-a3e21c6",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-mount-carmel-a3e21c6",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-mount-hermon-a341fe8",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-mount-hermon-a341fe8",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-senir-ad27e17",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-senir-ad27e17",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-sharon-1-a83fd43",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-sharon-1-a83fd43",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-tirzah-a80d317",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-tirzah-a80d317",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-zion-af20c46",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:wb-song-1-p-pharaoh-4",
+        "scope_key": "scope:wb-song-1:refsys:tel-v1:song.1.1-song.1.17",
+        "entity_key": "entity:p-pharaoh-4",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-4-p-david-1",
+        "scope_key": "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+        "entity_key": "entity:p-david-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-1-p-solomon-1",
+        "scope_key": "scope:wb-song-1:refsys:tel-v1:song.1.1-song.1.17",
+        "entity_key": "entity:p-solomon-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-3-p-solomon-1",
+        "scope_key": "scope:wb-song-3:refsys:tel-v1:song.3.1-song.3.11",
+        "entity_key": "entity:p-solomon-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-8-p-solomon-1",
+        "scope_key": "scope:wb-song-8:refsys:tel-v1:song.8.1-song.8.14",
+        "entity_key": "entity:p-solomon-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-4-pl-amana-ab428de",
+        "scope_key": "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+        "entity_key": "entity:pl-amana-ab428de",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-8-pl-baal-hamon-a304bb7",
+        "scope_key": "scope:wb-song-8:refsys:tel-v1:song.8.1-song.8.14",
+        "entity_key": "entity:pl-baal-hamon-a304bb7",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-7-pl-bath-rabbim-abaa030",
+        "scope_key": "scope:wb-song-7:refsys:tel-v1:song.7.1-song.7.13",
+        "entity_key": "entity:pl-bath-rabbim-abaa030",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-2-pl-bether-1-ac9fb6d",
+        "scope_key": "scope:wb-song-2:refsys:tel-v1:song.2.1-song.2.17",
+        "entity_key": "entity:pl-bether-1-ac9fb6d",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-7-pl-damascus-a69c1d4",
+        "scope_key": "scope:wb-song-7:refsys:tel-v1:song.7.1-song.7.13",
+        "entity_key": "entity:pl-damascus-a69c1d4",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-1-pl-engedi-a51df0e",
+        "scope_key": "scope:wb-song-1:refsys:tel-v1:song.1.1-song.1.17",
+        "entity_key": "entity:pl-engedi-a51df0e",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-4-pl-gilead-1-ae73b90",
+        "scope_key": "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-6-pl-gilead-1-ae73b90",
+        "scope_key": "scope:wb-song-6:refsys:tel-v1:song.6.1-song.6.13",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-7-pl-heshbon-abf2fc1",
+        "scope_key": "scope:wb-song-7:refsys:tel-v1:song.7.1-song.7.13",
+        "entity_key": "entity:pl-heshbon-abf2fc1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-1-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-song-1:refsys:tel-v1:song.1.1-song.1.17",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-2-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-song-2:refsys:tel-v1:song.2.1-song.2.17",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-3-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-song-3:refsys:tel-v1:song.3.1-song.3.11",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-5-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-song-5:refsys:tel-v1:song.5.1-song.5.16",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-6-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-song-6:refsys:tel-v1:song.6.1-song.6.13",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-8-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-song-8:refsys:tel-v1:song.8.1-song.8.14",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-1-pl-kedar-a68d1a9",
+        "scope_key": "scope:wb-song-1:refsys:tel-v1:song.1.1-song.1.17",
+        "entity_key": "entity:pl-kedar-a68d1a9",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-3-pl-lebanon-a730058",
+        "scope_key": "scope:wb-song-3:refsys:tel-v1:song.3.1-song.3.11",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-4-pl-lebanon-a730058",
+        "scope_key": "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-5-pl-lebanon-a730058",
+        "scope_key": "scope:wb-song-5:refsys:tel-v1:song.5.1-song.5.16",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-7-pl-lebanon-a730058",
+        "scope_key": "scope:wb-song-7:refsys:tel-v1:song.7.1-song.7.13",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-6-pl-mahanaim-ae5bfe9",
+        "scope_key": "scope:wb-song-6:refsys:tel-v1:song.6.1-song.6.13",
+        "entity_key": "entity:pl-mahanaim-ae5bfe9",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-7-pl-mount-carmel-a3e21c6",
+        "scope_key": "scope:wb-song-7:refsys:tel-v1:song.7.1-song.7.13",
+        "entity_key": "entity:pl-mount-carmel-a3e21c6",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-4-pl-mount-hermon-a341fe8",
+        "scope_key": "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+        "entity_key": "entity:pl-mount-hermon-a341fe8",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-4-pl-senir-ad27e17",
+        "scope_key": "scope:wb-song-4:refsys:tel-v1:song.4.1-song.4.16",
+        "entity_key": "entity:pl-senir-ad27e17",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-2-pl-sharon-1-a83fd43",
+        "scope_key": "scope:wb-song-2:refsys:tel-v1:song.2.1-song.2.17",
+        "entity_key": "entity:pl-sharon-1-a83fd43",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-6-pl-tirzah-a80d317",
+        "scope_key": "scope:wb-song-6:refsys:tel-v1:song.6.1-song.6.13",
+        "entity_key": "entity:pl-tirzah-a80d317",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-3-pl-zion-af20c46",
+        "scope_key": "scope:wb-song-3:refsys:tel-v1:song.3.1-song.3.11",
+        "entity_key": "entity:pl-zion-af20c46",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "reconciliation_records": [
+      {
+        "candidate_key": "candidate:wb:p-pharaoh-4",
+        "canonical_entity_key": "entity:p-pharaoh-4",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-david-1",
+        "canonical_entity_key": "entity:p-david-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-solomon-1",
+        "canonical_entity_key": "entity:p-solomon-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-amana-ab428de",
+        "canonical_entity_key": "entity:pl-amana-ab428de",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-baal-hamon-a304bb7",
+        "canonical_entity_key": "entity:pl-baal-hamon-a304bb7",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bath-rabbim-abaa030",
+        "canonical_entity_key": "entity:pl-bath-rabbim-abaa030",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bether-1-ac9fb6d",
+        "canonical_entity_key": "entity:pl-bether-1-ac9fb6d",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-damascus-a69c1d4",
+        "canonical_entity_key": "entity:pl-damascus-a69c1d4",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-engedi-a51df0e",
+        "canonical_entity_key": "entity:pl-engedi-a51df0e",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-gilead-1-ae73b90",
+        "canonical_entity_key": "entity:pl-gilead-1-ae73b90",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-heshbon-abf2fc1",
+        "canonical_entity_key": "entity:pl-heshbon-abf2fc1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
+        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-kedar-a68d1a9",
+        "canonical_entity_key": "entity:pl-kedar-a68d1a9",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lebanon-a730058",
+        "canonical_entity_key": "entity:pl-lebanon-a730058",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mahanaim-ae5bfe9",
+        "canonical_entity_key": "entity:pl-mahanaim-ae5bfe9",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-carmel-a3e21c6",
+        "canonical_entity_key": "entity:pl-mount-carmel-a3e21c6",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-hermon-a341fe8",
+        "canonical_entity_key": "entity:pl-mount-hermon-a341fe8",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-senir-ad27e17",
+        "canonical_entity_key": "entity:pl-senir-ad27e17",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-sharon-1-a83fd43",
+        "canonical_entity_key": "entity:pl-sharon-1-a83fd43",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-tirzah-a80d317",
+        "canonical_entity_key": "entity:pl-tirzah-a80d317",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zion-af20c46",
+        "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Song.1.10",
+            "verse:Song.1.11",
+            "verse:Song.1.12",
+            "verse:Song.1.13",
+            "verse:Song.1.15",
+            "verse:Song.1.16",
+            "verse:Song.1.17",
+            "verse:Song.1.2",
+            "verse:Song.1.3",
+            "verse:Song.1.4",
+            "verse:Song.1.6",
+            "verse:Song.1.7",
+            "verse:Song.1.8",
+            "verse:Song.2.10",
+            "verse:Song.2.11",
+            "verse:Song.2.12",
+            "verse:Song.2.13",
+            "verse:Song.2.14",
+            "verse:Song.2.15",
+            "verse:Song.2.16",
+            "verse:Song.2.2",
+            "verse:Song.2.3",
+            "verse:Song.2.4",
+            "verse:Song.2.5",
+            "verse:Song.2.6",
+            "verse:Song.2.8",
+            "verse:Song.2.9",
+            "verse:Song.3.1",
+            "verse:Song.3.2",
+            "verse:Song.3.3",
+            "verse:Song.3.4",
+            "verse:Song.3.6",
+            "verse:Song.3.8",
+            "verse:Song.4.10",
+            "verse:Song.4.12",
+            "verse:Song.4.13",
+            "verse:Song.4.14",
+            "verse:Song.4.16",
+            "verse:Song.4.2",
+            "verse:Song.4.3",
+            "verse:Song.4.5",
+            "verse:Song.4.6",
+            "verse:Song.4.7",
+            "verse:Song.4.9",
+            "verse:Song.5.1",
+            "verse:Song.5.10",
+            "verse:Song.5.11",
+            "verse:Song.5.12",
+            "verse:Song.5.13",
+            "verse:Song.5.14",
+            "verse:Song.5.2",
+            "verse:Song.5.3",
+            "verse:Song.5.4",
+            "verse:Song.5.5",
+            "verse:Song.5.6",
+            "verse:Song.5.7",
+            "verse:Song.5.9",
+            "verse:Song.6.1",
+            "verse:Song.6.10",
+            "verse:Song.6.11",
+            "verse:Song.6.12",
+            "verse:Song.6.2",
+            "verse:Song.6.3",
+            "verse:Song.6.6",
+            "verse:Song.6.7",
+            "verse:Song.6.8",
+            "verse:Song.6.9",
+            "verse:Song.7.1",
+            "verse:Song.7.10",
+            "verse:Song.7.11",
+            "verse:Song.7.12",
+            "verse:Song.7.13",
+            "verse:Song.7.2",
+            "verse:Song.7.3",
+            "verse:Song.7.6",
+            "verse:Song.7.7",
+            "verse:Song.7.8",
+            "verse:Song.7.9",
+            "verse:Song.8.1",
+            "verse:Song.8.10",
+            "verse:Song.8.13",
+            "verse:Song.8.14",
+            "verse:Song.8.2",
+            "verse:Song.8.3",
+            "verse:Song.8.5",
+            "verse:Song.8.6",
+            "verse:Song.8.7",
+            "verse:Song.8.8",
+            "verse:Song.8.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.1.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.1.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-1-5",
+            "attestation:wb-pl-jerusalem-a15257a-1-5",
+            "attestation:wb-pl-kedar-a68d1a9-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.1.9"
+          ],
+          "record_keys": [
+            "attestation:wb-p-pharaoh-4-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.1.14"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-engedi-a51df0e-1-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.2.1"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-sharon-1-a83fd43-2-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.2.7"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-2-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.2.17"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-bether-1-ac9fb6d-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.3.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.3.7"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-3-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.3.9"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-3-9",
+            "attestation:wb-pl-lebanon-a730058-3-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.3.10"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-3-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.3.11"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-3-11",
+            "attestation:wb-pl-zion-af20c46-3-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.4.1"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gilead-1-ae73b90-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.4.4"
+          ],
+          "record_keys": [
+            "attestation:wb-p-david-1-4-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.4.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-amana-ab428de-4-8",
+            "attestation:wb-pl-lebanon-a730058-4-8",
+            "attestation:wb-pl-mount-hermon-a341fe8-4-8",
+            "attestation:wb-pl-senir-ad27e17-4-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.4.11"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-4-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.4.15"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-4-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.5.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-5-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.5.15"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-5-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.5.16"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-5-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.6.4"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-6-4",
+            "attestation:wb-pl-tirzah-a80d317-6-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.6.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-gilead-1-ae73b90-6-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.6.13"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-mahanaim-ae5bfe9-6-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.7.4"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-bath-rabbim-abaa030-7-4",
+            "attestation:wb-pl-damascus-a69c1d4-7-4",
+            "attestation:wb-pl-heshbon-abf2fc1-7-4",
+            "attestation:wb-pl-lebanon-a730058-7-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.7.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-mount-carmel-a3e21c6-7-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.8.4"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-8-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.8.11"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-8-11",
+            "attestation:wb-pl-baal-hamon-a304bb7-8-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Song.8.12"
+          ],
+          "record_keys": [
+            "attestation:wb-p-solomon-1-8-12"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "versification-alignment-unverified",
+      "note": "Attestation reference coordinates are aligned to this edition's canon skeleton. Where this edition's versification differs from the source reference system, exact alignment requires TVTMS verification, which has not yet been applied."
+    }
+  ]
+}

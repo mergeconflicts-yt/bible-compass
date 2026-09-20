@@ -1,0 +1,2650 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-esth-locale",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-esth-locale:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-esth-locale",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-esth:refsys:tel-v1:esth.1.1-esth.10.3",
+      "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+      "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+      "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+      "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+      "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+      "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+      "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+      "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+      "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+      "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+      "scope:wb-esth-1-p1:refsys:tel-v1:esth.1.1-esth.1.22",
+      "scope:wb-esth-2-p1:refsys:tel-v1:esth.2.1-esth.2.18",
+      "scope:wb-esth-2-p2:refsys:tel-v1:esth.2.19-esth.2.23",
+      "scope:wb-esth-3-p1:refsys:tel-v1:esth.3.1-esth.3.15",
+      "scope:wb-esth-4-p1:refsys:tel-v1:esth.4.1-esth.4.17",
+      "scope:wb-esth-5-p1:refsys:tel-v1:esth.5.1-esth.5.8",
+      "scope:wb-esth-5-p2:refsys:tel-v1:esth.5.9-esth.5.14",
+      "scope:wb-esth-6-p1:refsys:tel-v1:esth.6.1-esth.6.14",
+      "scope:wb-esth-7-p1:refsys:tel-v1:esth.7.1-esth.7.10",
+      "scope:wb-esth-8-p1:refsys:tel-v1:esth.8.1-esth.8.14",
+      "scope:wb-esth-8-p2:refsys:tel-v1:esth.8.15-esth.8.17",
+      "scope:wb-esth-9-p1:refsys:tel-v1:esth.9.1-esth.9.17",
+      "scope:wb-esth-9-p2:refsys:tel-v1:esth.9.18-esth.9.32",
+      "scope:wb-esth-10-p1:refsys:tel-v1:esth.10.1-esth.10.3"
+    ],
+    "reference_keys": [
+      "verse:Esth.1.1",
+      "verse:Esth.1.2",
+      "verse:Esth.1.3",
+      "verse:Esth.1.4",
+      "verse:Esth.1.5",
+      "verse:Esth.1.6",
+      "verse:Esth.1.7",
+      "verse:Esth.1.8",
+      "verse:Esth.1.9",
+      "verse:Esth.1.10",
+      "verse:Esth.1.11",
+      "verse:Esth.1.12",
+      "verse:Esth.1.13",
+      "verse:Esth.1.14",
+      "verse:Esth.1.15",
+      "verse:Esth.1.16",
+      "verse:Esth.1.17",
+      "verse:Esth.1.18",
+      "verse:Esth.1.19",
+      "verse:Esth.1.20",
+      "verse:Esth.1.21",
+      "verse:Esth.1.22",
+      "verse:Esth.2.1",
+      "verse:Esth.2.2",
+      "verse:Esth.2.3",
+      "verse:Esth.2.4",
+      "verse:Esth.2.5",
+      "verse:Esth.2.6",
+      "verse:Esth.2.7",
+      "verse:Esth.2.8",
+      "verse:Esth.2.9",
+      "verse:Esth.2.10",
+      "verse:Esth.2.11",
+      "verse:Esth.2.12",
+      "verse:Esth.2.13",
+      "verse:Esth.2.14",
+      "verse:Esth.2.15",
+      "verse:Esth.2.16",
+      "verse:Esth.2.17",
+      "verse:Esth.2.18",
+      "verse:Esth.2.19",
+      "verse:Esth.2.20",
+      "verse:Esth.2.21",
+      "verse:Esth.2.22",
+      "verse:Esth.2.23",
+      "verse:Esth.3.1",
+      "verse:Esth.3.2",
+      "verse:Esth.3.3",
+      "verse:Esth.3.4",
+      "verse:Esth.3.5",
+      "verse:Esth.3.6",
+      "verse:Esth.3.7",
+      "verse:Esth.3.8",
+      "verse:Esth.3.9",
+      "verse:Esth.3.10",
+      "verse:Esth.3.11",
+      "verse:Esth.3.12",
+      "verse:Esth.3.13",
+      "verse:Esth.3.14",
+      "verse:Esth.3.15",
+      "verse:Esth.4.1",
+      "verse:Esth.4.2",
+      "verse:Esth.4.3",
+      "verse:Esth.4.4",
+      "verse:Esth.4.5",
+      "verse:Esth.4.6",
+      "verse:Esth.4.7",
+      "verse:Esth.4.8",
+      "verse:Esth.4.9",
+      "verse:Esth.4.10",
+      "verse:Esth.4.11",
+      "verse:Esth.4.12",
+      "verse:Esth.4.13",
+      "verse:Esth.4.14",
+      "verse:Esth.4.15",
+      "verse:Esth.4.16",
+      "verse:Esth.4.17",
+      "verse:Esth.5.1",
+      "verse:Esth.5.2",
+      "verse:Esth.5.3",
+      "verse:Esth.5.4",
+      "verse:Esth.5.5",
+      "verse:Esth.5.6",
+      "verse:Esth.5.7",
+      "verse:Esth.5.8",
+      "verse:Esth.5.9",
+      "verse:Esth.5.10",
+      "verse:Esth.5.11",
+      "verse:Esth.5.12",
+      "verse:Esth.5.13",
+      "verse:Esth.5.14",
+      "verse:Esth.6.1",
+      "verse:Esth.6.2",
+      "verse:Esth.6.3",
+      "verse:Esth.6.4",
+      "verse:Esth.6.5",
+      "verse:Esth.6.6",
+      "verse:Esth.6.7",
+      "verse:Esth.6.8",
+      "verse:Esth.6.9",
+      "verse:Esth.6.10",
+      "verse:Esth.6.11",
+      "verse:Esth.6.12",
+      "verse:Esth.6.13",
+      "verse:Esth.6.14",
+      "verse:Esth.7.1",
+      "verse:Esth.7.2",
+      "verse:Esth.7.3",
+      "verse:Esth.7.4",
+      "verse:Esth.7.5",
+      "verse:Esth.7.6",
+      "verse:Esth.7.7",
+      "verse:Esth.7.8",
+      "verse:Esth.7.9",
+      "verse:Esth.7.10",
+      "verse:Esth.8.1",
+      "verse:Esth.8.2",
+      "verse:Esth.8.3",
+      "verse:Esth.8.4",
+      "verse:Esth.8.5",
+      "verse:Esth.8.6",
+      "verse:Esth.8.7",
+      "verse:Esth.8.8",
+      "verse:Esth.8.9",
+      "verse:Esth.8.10",
+      "verse:Esth.8.11",
+      "verse:Esth.8.12",
+      "verse:Esth.8.13",
+      "verse:Esth.8.14",
+      "verse:Esth.8.15",
+      "verse:Esth.8.16",
+      "verse:Esth.8.17",
+      "verse:Esth.9.1",
+      "verse:Esth.9.2",
+      "verse:Esth.9.3",
+      "verse:Esth.9.4",
+      "verse:Esth.9.5",
+      "verse:Esth.9.6",
+      "verse:Esth.9.7",
+      "verse:Esth.9.8",
+      "verse:Esth.9.9",
+      "verse:Esth.9.10",
+      "verse:Esth.9.11",
+      "verse:Esth.9.12",
+      "verse:Esth.9.13",
+      "verse:Esth.9.14",
+      "verse:Esth.9.15",
+      "verse:Esth.9.16",
+      "verse:Esth.9.17",
+      "verse:Esth.9.18",
+      "verse:Esth.9.19",
+      "verse:Esth.9.20",
+      "verse:Esth.9.21",
+      "verse:Esth.9.22",
+      "verse:Esth.9.23",
+      "verse:Esth.9.24",
+      "verse:Esth.9.25",
+      "verse:Esth.9.26",
+      "verse:Esth.9.27",
+      "verse:Esth.9.28",
+      "verse:Esth.9.29",
+      "verse:Esth.9.30",
+      "verse:Esth.9.31",
+      "verse:Esth.9.32",
+      "verse:Esth.10.1",
+      "verse:Esth.10.2",
+      "verse:Esth.10.3"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:te:p-nebuchadnezzar-1",
+        "entity_key": "entity:p-nebuchadnezzar-1",
+        "language_tag": "te",
+        "preferred_name": "బబులోను",
+        "aliases": [],
+        "short_description": {
+          "text": "బబులోను, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-jehoiachin-1",
+        "entity_key": "entity:p-jehoiachin-1",
+        "language_tag": "te",
+        "preferred_name": "యెహోయాకీను",
+        "aliases": [],
+        "short_description": {
+          "text": "యెహోయాకీను, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-ahasuerus-1",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "preferred_name": "అహష్వేరోషు",
+        "aliases": [],
+        "short_description": {
+          "text": "అహష్వేరోషు, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-mordecai-2",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "preferred_name": "మొర్దెకై",
+        "aliases": [],
+        "short_description": {
+          "text": "మొర్దెకై, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-hadassah-1",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "preferred_name": "ఎస్తేరు",
+        "aliases": [],
+        "short_description": {
+          "text": "ఎస్తేరు, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-haman-1",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "preferred_name": "హామాను",
+        "aliases": [],
+        "short_description": {
+          "text": "హామాను, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-babylon-1-a217d18",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "preferred_name": "బబులోను",
+        "aliases": [],
+        "short_description": {
+          "text": "బబులోను, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-persia-ab9696f",
+        "entity_key": "entity:pl-persia-ab9696f",
+        "language_tag": "te",
+        "preferred_name": "రాజు",
+        "aliases": [],
+        "short_description": {
+          "text": "రాజు, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-susa-a033b84",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "preferred_name": "షూషను",
+        "aliases": [],
+        "short_description": {
+          "text": "షూషను, ఎస్తేరు గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:te:wb-esth",
+        "scope_key": "scope:wb-esth:refsys:tel-v1:esth.1.1-esth.10.3",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "ఎస్తేరు, మొర్దెకై, అహష్వేరోషు (క్షయక్సెస్), హామాను, వష్తి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "సూసా మరియు పర్షియా రాజసభ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "పర్షియా కాలం, సుమారు క్రీ.పూ. ఐదవ శతాబ్ది; కొందరు ఆలస్య తేదీని సూచిస్తారు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "పర్షియాలో ఎస్తేరు మరియు మొర్దెకై హామాను కుట్ర నుండి యూదులను రక్షించడానికి ప్రాణాలను పణంగా పెట్టి, పూరీము పండుగ స్థాపించబడుతుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "చెర తర్వాత పర్షియా పరిపాలనలో సంభవిస్తుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "యూదుల మనుగడ మరియు దేవుని గూఢ సంరక్షణ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "పర్షియాలో ఎస్తేరు మరియు మొర్దెకై హామాను కుట్ర నుండి యూదులను రక్షించడానికి ప్రాణాలను పణంగా పెట్టి, పూరీము పండుగ స్థాపించబడుతుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-1",
+        "scope_key": "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Abagtha, Admatha, Bigtha, Biztha, Carkas, Carshena, Harbona, Marsena.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Ethiopia, India, Media, రాజు, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-1-when"
+          },
+          "what": {
+            "text": "This chapter: వష్తి రాణి పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-1-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: వష్తి రాణి పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-2",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Abihail, Bigthan, Hegai, Jair, Kish, Shaashgaz, Shimei, Teresh.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Jerusalem, బబులోను, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-when"
+          },
+          "what": {
+            "text": "This chapter: ఎస్తేరు రాణిగా ఎంపిక; అహష్వేరోషు రాజు పై కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ఎస్తేరు రాణిగా ఎంపిక; అహష్వేరోషు రాజు పై కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-3",
+        "scope_key": "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Hammedatha, అహష్వేరోషు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-3-when"
+          },
+          "what": {
+            "text": "This chapter: యూదుల పై హామాను కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-3-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: యూదుల పై హామాను కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-4",
+        "scope_key": "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Hathach, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-4-when"
+          },
+          "what": {
+            "text": "This chapter: మొర్దెకై ఎస్తేరును సహాయం కోరడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-4-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: మొర్దెకై ఎస్తేరును సహాయం కోరడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-5",
+        "scope_key": "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Zeresh, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-when"
+          },
+          "what": {
+            "text": "This chapter: రాజుకు ఎస్తేరు విన్నపం; మొర్దెకైను చంపించడానికి హామాను ఏర్పాటు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: రాజుకు ఎస్తేరు విన్నపం; మొర్దెకైను చంపించడానికి హామాను ఏర్పాటు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-6",
+        "scope_key": "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Bigthan, Teresh, Zeresh, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-when"
+          },
+          "what": {
+            "text": "This chapter: మొర్దెకైకు సత్కరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: మొర్దెకైకు సత్కరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-7",
+        "scope_key": "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Harbona, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-when"
+          },
+          "what": {
+            "text": "This chapter: హామాను పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: హామాను పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-8",
+        "scope_key": "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Hammedatha, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Ethiopia, India, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-when"
+          },
+          "what": {
+            "text": "This chapter: అతి ఉన్నతమైన స్థానాన్ని రాజు మొర్దెకైకి అప్పగించడం; యూదుల విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: అతి ఉన్నతమైన స్థానాన్ని రాజు మొర్దెకైకి అప్పగించడం; యూదుల విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-9",
+        "scope_key": "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Abihail, Adalia, Aridai, Aridatha, Arisai, Aspatha, Dalphon, Hammedatha.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-when"
+          },
+          "what": {
+            "text": "This chapter: పూరీము పండుగ స్థాపన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: పూరీము పండుగ స్థాపన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-10",
+        "scope_key": "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: అహష్వేరోషు, మొర్దెకై.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Media, రాజు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-10-when"
+          },
+          "what": {
+            "text": "This chapter: మొర్దెకై గొప్పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-10-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-10-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: మొర్దెకై గొప్పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-1-p1",
+        "scope_key": "scope:wb-esth-1-p1:refsys:tel-v1:esth.1.1-esth.1.22",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Abagtha, Admatha, Bigtha, Biztha, Carkas, Carshena, Harbona, Marsena.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Ethiopia, India, Media, రాజు, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-1-p1-when"
+          },
+          "what": {
+            "text": "వష్తి రాణి పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-1-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-1-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "వష్తి రాణి పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-2-p1",
+        "scope_key": "scope:wb-esth-2-p1:refsys:tel-v1:esth.2.1-esth.2.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Abihail, Hegai, Jair, Kish, Shaashgaz, Shimei, Vashti, అహష్వేరోషు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, బబులోను, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p1-when"
+          },
+          "what": {
+            "text": "ఎస్తేరు రాణిగా ఎంపిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఎస్తేరు రాణిగా ఎంపిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-2-p2",
+        "scope_key": "scope:wb-esth-2-p2:refsys:tel-v1:esth.2.19-esth.2.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Bigthan, Teresh, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p2-when"
+          },
+          "what": {
+            "text": "అహష్వేరోషు రాజు పై కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-2-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "అహష్వేరోషు రాజు పై కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-3-p1",
+        "scope_key": "scope:wb-esth-3-p1:refsys:tel-v1:esth.3.1-esth.3.15",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Hammedatha, అహష్వేరోషు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-3-p1-when"
+          },
+          "what": {
+            "text": "యూదుల పై హామాను కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-3-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-3-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "యూదుల పై హామాను కుట్ర.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-4-p1",
+        "scope_key": "scope:wb-esth-4-p1:refsys:tel-v1:esth.4.1-esth.4.17",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Hathach, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-4-p1-when"
+          },
+          "what": {
+            "text": "మొర్దెకై ఎస్తేరును సహాయం కోరడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-4-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-4-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "మొర్దెకై ఎస్తేరును సహాయం కోరడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-5-p1",
+        "scope_key": "scope:wb-esth-5-p1:refsys:tel-v1:esth.5.1-esth.5.8",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: ఎస్తేరు, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p1-when"
+          },
+          "what": {
+            "text": "రాజుకు ఎస్తేరు విన్నపం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "రాజుకు ఎస్తేరు విన్నపం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-5-p2",
+        "scope_key": "scope:wb-esth-5-p2:refsys:tel-v1:esth.5.9-esth.5.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Zeresh, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p2-when"
+          },
+          "what": {
+            "text": "మొర్దెకైను చంపించడానికి హామాను ఏర్పాటు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-5-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "మొర్దెకైను చంపించడానికి హామాను ఏర్పాటు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-6-p1",
+        "scope_key": "scope:wb-esth-6-p1:refsys:tel-v1:esth.6.1-esth.6.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Bigthan, Teresh, Zeresh, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-p1-when"
+          },
+          "what": {
+            "text": "మొర్దెకైకు సత్కరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-6-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "మొర్దెకైకు సత్కరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-7-p1",
+        "scope_key": "scope:wb-esth-7-p1:refsys:tel-v1:esth.7.1-esth.7.10",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Harbona, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-p1-when"
+          },
+          "what": {
+            "text": "హామాను పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-7-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "హామాను పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-8-p1",
+        "scope_key": "scope:wb-esth-8-p1:refsys:tel-v1:esth.8.1-esth.8.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Hammedatha, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Ethiopia, India, షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-p1-when"
+          },
+          "what": {
+            "text": "అతి ఉన్నతమైన స్థానాన్ని రాజు మొర్దెకైకి అప్పగించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "అతి ఉన్నతమైన స్థానాన్ని రాజు మొర్దెకైకి అప్పగించడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-8-p2",
+        "scope_key": "scope:wb-esth-8-p2:refsys:tel-v1:esth.8.15-esth.8.17",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: మొర్దెకై.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-p2-when"
+          },
+          "what": {
+            "text": "యూదుల విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-8-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "యూదుల విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-9-p1",
+        "scope_key": "scope:wb-esth-9-p1:refsys:tel-v1:esth.9.1-esth.9.17",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Adalia, Aridai, Aridatha, Arisai, Aspatha, Dalphon, Hammedatha, Parmashta.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-p1-when"
+          },
+          "what": {
+            "text": "ఎస్తేరు 9:1-17.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఎస్తేరు 9:1-17.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-9-p2",
+        "scope_key": "scope:wb-esth-9-p2:refsys:tel-v1:esth.9.18-esth.9.32",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Abihail, Hammedatha, అహష్వేరోషు, ఎస్తేరు, మొర్దెకై, హామాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: షూషను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-p2-when"
+          },
+          "what": {
+            "text": "పూరీము పండుగ స్థాపన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-9-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "పూరీము పండుగ స్థాపన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-esth-10-p1",
+        "scope_key": "scope:wb-esth-10-p1:refsys:tel-v1:esth.10.1-esth.10.3",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: అహష్వేరోషు, మొర్దెకై.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Media, రాజు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-10-p1-when"
+          },
+          "what": {
+            "text": "మొర్దెకై గొప్పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-10-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-esth-10-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "మొర్దెకై గొప్పతనం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-p-nebuchadnezzar-1",
+        "relevance_key": "relevance:wb-esth-2-p-nebuchadnezzar-1",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:p-nebuchadnezzar-1",
+        "language_tag": "te",
+        "role_text": "బబులోను — ఎస్తేరు 2: 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-p-jehoiachin-1",
+        "relevance_key": "relevance:wb-esth-2-p-jehoiachin-1",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:p-jehoiachin-1",
+        "language_tag": "te",
+        "role_text": "యెహోయాకీను — ఎస్తేరు 2: 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-1-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-1-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 1: 1, 2, 9, 10, 15, 16, 17, 19.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-2-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 2: 1, 12, 16, 21.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-3-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-3-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 3: 1, 6, 7, 8, 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-6-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-6-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 6: 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-7-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-7-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 7: 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-8-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-8-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 8: 1, 7, 10, 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-9-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-9-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 9: 2, 20, 30.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-10-p-ahasuerus-1",
+        "relevance_key": "relevance:wb-esth-10-p-ahasuerus-1",
+        "scope_key": "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+        "entity_key": "entity:p-ahasuerus-1",
+        "language_tag": "te",
+        "role_text": "అహష్వేరోషు — ఎస్తేరు 10: 1, 3.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-2-p-mordecai-2",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 2: 5, 7, 10, 11, 15, 19, 20, 21, 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-3-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-3-p-mordecai-2",
+        "scope_key": "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 3: 2, 3, 4, 5, 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-4-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-4-p-mordecai-2",
+        "scope_key": "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 4: 1, 4, 5, 6, 7, 9, 10, 12, 13, 15, 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-5-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-5-p-mordecai-2",
+        "scope_key": "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 5: 9, 13, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-6-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-6-p-mordecai-2",
+        "scope_key": "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 6: 2, 3, 4, 10, 11, 12, 13.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-7-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-7-p-mordecai-2",
+        "scope_key": "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 7: 9, 10.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-8-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-8-p-mordecai-2",
+        "scope_key": "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 8: 1, 2, 7, 9, 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-9-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-9-p-mordecai-2",
+        "scope_key": "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 9: 3, 4, 20, 23, 29, 31.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-10-p-mordecai-2",
+        "relevance_key": "relevance:wb-esth-10-p-mordecai-2",
+        "scope_key": "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+        "entity_key": "entity:p-mordecai-2",
+        "language_tag": "te",
+        "role_text": "మొర్దెకై — ఎస్తేరు 10: 2, 3.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-2-p-hadassah-1",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 2: 7, 8, 10, 11, 15, 16, 17, 18, 20, 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-4-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-4-p-hadassah-1",
+        "scope_key": "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 4: 4, 5, 8, 9, 10, 12, 13, 15, 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-5-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-5-p-hadassah-1",
+        "scope_key": "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 5: 1, 2, 3, 4, 5, 6, 7, 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-6-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-6-p-hadassah-1",
+        "scope_key": "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 6: 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-7-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-7-p-hadassah-1",
+        "scope_key": "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 7: 1, 2, 3, 5, 6, 7, 8.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-8-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-8-p-hadassah-1",
+        "scope_key": "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 8: 1, 2, 3, 4, 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-9-p-hadassah-1",
+        "relevance_key": "relevance:wb-esth-9-p-hadassah-1",
+        "scope_key": "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+        "entity_key": "entity:p-hadassah-1",
+        "language_tag": "te",
+        "role_text": "ఎస్తేరు — ఎస్తేరు 9: 12, 13, 29, 31, 32.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-3-p-haman-1",
+        "relevance_key": "relevance:wb-esth-3-p-haman-1",
+        "scope_key": "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 3: 1, 2, 4, 5, 6, 7, 8, 10, 11, 12, 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-4-p-haman-1",
+        "relevance_key": "relevance:wb-esth-4-p-haman-1",
+        "scope_key": "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 4: 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-5-p-haman-1",
+        "relevance_key": "relevance:wb-esth-5-p-haman-1",
+        "scope_key": "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 5: 4, 5, 8, 9, 10, 11, 12, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-6-p-haman-1",
+        "relevance_key": "relevance:wb-esth-6-p-haman-1",
+        "scope_key": "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 6: 4, 5, 6, 7, 10, 11, 12, 13, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-7-p-haman-1",
+        "relevance_key": "relevance:wb-esth-7-p-haman-1",
+        "scope_key": "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 7: 1, 6, 7, 8, 9, 10.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-8-p-haman-1",
+        "relevance_key": "relevance:wb-esth-8-p-haman-1",
+        "scope_key": "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 8: 1, 2, 3, 5, 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-9-p-haman-1",
+        "relevance_key": "relevance:wb-esth-9-p-haman-1",
+        "scope_key": "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+        "entity_key": "entity:p-haman-1",
+        "language_tag": "te",
+        "role_text": "హామాను — ఎస్తేరు 9: 10, 12, 13, 14, 24.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-pl-babylon-1-a217d18",
+        "relevance_key": "relevance:wb-esth-2-pl-babylon-1-a217d18",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "role_text": "బబులోను — ఎస్తేరు 2: 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-1-pl-persia-ab9696f",
+        "relevance_key": "relevance:wb-esth-1-pl-persia-ab9696f",
+        "scope_key": "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+        "entity_key": "entity:pl-persia-ab9696f",
+        "language_tag": "te",
+        "role_text": "రాజు — ఎస్తేరు 1: 3, 14, 18, 19.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-10-pl-persia-ab9696f",
+        "relevance_key": "relevance:wb-esth-10-pl-persia-ab9696f",
+        "scope_key": "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+        "entity_key": "entity:pl-persia-ab9696f",
+        "language_tag": "te",
+        "role_text": "రాజు — ఎస్తేరు 10: 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-1-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-1-pl-susa-a033b84",
+        "scope_key": "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — ఎస్తేరు 1: 2, 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-2-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-2-pl-susa-a033b84",
+        "scope_key": "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — ఎస్తేరు 2: 3, 5, 8.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-3-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-3-pl-susa-a033b84",
+        "scope_key": "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — ఎస్తేరు 3: 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-4-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-4-pl-susa-a033b84",
+        "scope_key": "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — ఎస్తేరు 4: 8, 16.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-8-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-8-pl-susa-a033b84",
+        "scope_key": "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — ఎస్తేరు 8: 14, 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-esth-9-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-9-pl-susa-a033b84",
+        "scope_key": "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+        "entity_key": "entity:pl-susa-a033b84",
+        "language_tag": "te",
+        "role_text": "షూషను — ఎస్తేరు 9: 6, 11, 12, 13, 14, 15, 18.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:wb-esth:refsys:tel-v1:esth.1.1-esth.10.3"
+          ],
+          "record_keys": [
+            "context:te:wb-esth"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+            "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+            "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+            "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+            "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+            "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+            "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+            "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+            "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+            "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+            "scope:wb-esth-1-p1:refsys:tel-v1:esth.1.1-esth.1.22",
+            "scope:wb-esth-2-p1:refsys:tel-v1:esth.2.1-esth.2.18",
+            "scope:wb-esth-2-p2:refsys:tel-v1:esth.2.19-esth.2.23",
+            "scope:wb-esth-3-p1:refsys:tel-v1:esth.3.1-esth.3.15",
+            "scope:wb-esth-4-p1:refsys:tel-v1:esth.4.1-esth.4.17",
+            "scope:wb-esth-5-p1:refsys:tel-v1:esth.5.1-esth.5.8",
+            "scope:wb-esth-5-p2:refsys:tel-v1:esth.5.9-esth.5.14",
+            "scope:wb-esth-6-p1:refsys:tel-v1:esth.6.1-esth.6.14",
+            "scope:wb-esth-7-p1:refsys:tel-v1:esth.7.1-esth.7.10",
+            "scope:wb-esth-8-p1:refsys:tel-v1:esth.8.1-esth.8.14",
+            "scope:wb-esth-8-p2:refsys:tel-v1:esth.8.15-esth.8.17",
+            "scope:wb-esth-9-p1:refsys:tel-v1:esth.9.1-esth.9.17",
+            "scope:wb-esth-9-p2:refsys:tel-v1:esth.9.18-esth.9.32",
+            "scope:wb-esth-10-p1:refsys:tel-v1:esth.10.1-esth.10.3"
+          ],
+          "record_keys": [
+            "context:te:wb-esth-1",
+            "context:te:wb-esth-2",
+            "context:te:wb-esth-3",
+            "context:te:wb-esth-4",
+            "context:te:wb-esth-5",
+            "context:te:wb-esth-6",
+            "context:te:wb-esth-7",
+            "context:te:wb-esth-8",
+            "context:te:wb-esth-9",
+            "context:te:wb-esth-10",
+            "context:te:wb-esth-1-p1",
+            "context:te:wb-esth-2-p1",
+            "context:te:wb-esth-2-p2",
+            "context:te:wb-esth-3-p1",
+            "context:te:wb-esth-4-p1",
+            "context:te:wb-esth-5-p1",
+            "context:te:wb-esth-5-p2",
+            "context:te:wb-esth-6-p1",
+            "context:te:wb-esth-7-p1",
+            "context:te:wb-esth-8-p1",
+            "context:te:wb-esth-8-p2",
+            "context:te:wb-esth-9-p1",
+            "context:te:wb-esth-9-p2",
+            "context:te:wb-esth-10-p1"
+          ],
+          "blocker_question_keys": [
+            "question:wb-context-te-wb-esth-1-before",
+            "question:wb-context-te-wb-esth-1-p1-before",
+            "question:wb-context-te-wb-esth-1-p1-stakes",
+            "question:wb-context-te-wb-esth-1-p1-when",
+            "question:wb-context-te-wb-esth-1-stakes",
+            "question:wb-context-te-wb-esth-1-when",
+            "question:wb-context-te-wb-esth-10-before",
+            "question:wb-context-te-wb-esth-10-p1-before",
+            "question:wb-context-te-wb-esth-10-p1-stakes",
+            "question:wb-context-te-wb-esth-10-p1-when",
+            "question:wb-context-te-wb-esth-10-stakes",
+            "question:wb-context-te-wb-esth-10-when",
+            "question:wb-context-te-wb-esth-2-before",
+            "question:wb-context-te-wb-esth-2-p1-before",
+            "question:wb-context-te-wb-esth-2-p1-stakes",
+            "question:wb-context-te-wb-esth-2-p1-when",
+            "question:wb-context-te-wb-esth-2-p2-before",
+            "question:wb-context-te-wb-esth-2-p2-stakes",
+            "question:wb-context-te-wb-esth-2-p2-when",
+            "question:wb-context-te-wb-esth-2-p2-where",
+            "question:wb-context-te-wb-esth-2-stakes",
+            "question:wb-context-te-wb-esth-2-when",
+            "question:wb-context-te-wb-esth-3-before",
+            "question:wb-context-te-wb-esth-3-p1-before",
+            "question:wb-context-te-wb-esth-3-p1-stakes",
+            "question:wb-context-te-wb-esth-3-p1-when",
+            "question:wb-context-te-wb-esth-3-stakes",
+            "question:wb-context-te-wb-esth-3-when",
+            "question:wb-context-te-wb-esth-4-before",
+            "question:wb-context-te-wb-esth-4-p1-before",
+            "question:wb-context-te-wb-esth-4-p1-stakes",
+            "question:wb-context-te-wb-esth-4-p1-when",
+            "question:wb-context-te-wb-esth-4-stakes",
+            "question:wb-context-te-wb-esth-4-when",
+            "question:wb-context-te-wb-esth-5-before",
+            "question:wb-context-te-wb-esth-5-p1-before",
+            "question:wb-context-te-wb-esth-5-p1-stakes",
+            "question:wb-context-te-wb-esth-5-p1-when",
+            "question:wb-context-te-wb-esth-5-p1-where",
+            "question:wb-context-te-wb-esth-5-p2-before",
+            "question:wb-context-te-wb-esth-5-p2-stakes",
+            "question:wb-context-te-wb-esth-5-p2-when",
+            "question:wb-context-te-wb-esth-5-p2-where",
+            "question:wb-context-te-wb-esth-5-stakes",
+            "question:wb-context-te-wb-esth-5-when",
+            "question:wb-context-te-wb-esth-5-where",
+            "question:wb-context-te-wb-esth-6-before",
+            "question:wb-context-te-wb-esth-6-p1-before",
+            "question:wb-context-te-wb-esth-6-p1-stakes",
+            "question:wb-context-te-wb-esth-6-p1-when",
+            "question:wb-context-te-wb-esth-6-p1-where",
+            "question:wb-context-te-wb-esth-6-stakes",
+            "question:wb-context-te-wb-esth-6-when",
+            "question:wb-context-te-wb-esth-6-where",
+            "question:wb-context-te-wb-esth-7-before",
+            "question:wb-context-te-wb-esth-7-p1-before",
+            "question:wb-context-te-wb-esth-7-p1-stakes",
+            "question:wb-context-te-wb-esth-7-p1-when",
+            "question:wb-context-te-wb-esth-7-p1-where",
+            "question:wb-context-te-wb-esth-7-stakes",
+            "question:wb-context-te-wb-esth-7-when",
+            "question:wb-context-te-wb-esth-7-where",
+            "question:wb-context-te-wb-esth-8-before",
+            "question:wb-context-te-wb-esth-8-p1-before",
+            "question:wb-context-te-wb-esth-8-p1-stakes",
+            "question:wb-context-te-wb-esth-8-p1-when",
+            "question:wb-context-te-wb-esth-8-p2-before",
+            "question:wb-context-te-wb-esth-8-p2-stakes",
+            "question:wb-context-te-wb-esth-8-p2-when",
+            "question:wb-context-te-wb-esth-8-stakes",
+            "question:wb-context-te-wb-esth-8-when",
+            "question:wb-context-te-wb-esth-9-before",
+            "question:wb-context-te-wb-esth-9-p1-before",
+            "question:wb-context-te-wb-esth-9-p1-stakes",
+            "question:wb-context-te-wb-esth-9-p1-when",
+            "question:wb-context-te-wb-esth-9-p2-before",
+            "question:wb-context-te-wb-esth-9-p2-stakes",
+            "question:wb-context-te-wb-esth-9-p2-when",
+            "question:wb-context-te-wb-esth-9-stakes",
+            "question:wb-context-te-wb-esth-9-when"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:wb-context-te-wb-esth-1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-6",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-7",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-7",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-7",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-7",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-8",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-8",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-8",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-9",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-9",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-9",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-10-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-10",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-10-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-10",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-10-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-10",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-1-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-1-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-1-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-1-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-1-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-1-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-2-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-2-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-2-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-2-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-3-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-3-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-3-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-3-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-3-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-3-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-4-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-4-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-4-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-4-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-4-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-4-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-5-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-5-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-5-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-5-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-6-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-6-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-6-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-6-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-6-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-7-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-7-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-7-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-7-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-7-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-8-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-8-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-8-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-8-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-8-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-8-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-8-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-9-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-9-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-9-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-9-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-9-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-9-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-9-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-10-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-esth-10-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-10-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-10-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-esth-10-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-esth-10-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

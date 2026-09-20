@@ -1,0 +1,2802 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-neh-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-neh-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-neh-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-neh:refsys:tel-v1:neh.1.1-neh.13.31",
+      "scope:wb-neh-1:refsys:tel-v1:neh.1.1-neh.1.11",
+      "scope:wb-neh-2:refsys:tel-v1:neh.2.1-neh.2.20",
+      "scope:wb-neh-3:refsys:tel-v1:neh.3.1-neh.3.32",
+      "scope:wb-neh-4:refsys:tel-v1:neh.4.1-neh.4.23",
+      "scope:wb-neh-5:refsys:tel-v1:neh.5.1-neh.5.19",
+      "scope:wb-neh-6:refsys:tel-v1:neh.6.1-neh.6.19",
+      "scope:wb-neh-7:refsys:tel-v1:neh.7.1-neh.7.73",
+      "scope:wb-neh-8:refsys:tel-v1:neh.8.1-neh.8.18",
+      "scope:wb-neh-9:refsys:tel-v1:neh.9.1-neh.9.38",
+      "scope:wb-neh-10:refsys:tel-v1:neh.10.1-neh.10.39",
+      "scope:wb-neh-11:refsys:tel-v1:neh.11.1-neh.11.36",
+      "scope:wb-neh-12:refsys:tel-v1:neh.12.1-neh.12.47",
+      "scope:wb-neh-13:refsys:tel-v1:neh.13.1-neh.13.31",
+      "scope:wb-neh-1-p1:refsys:tel-v1:neh.1.1-neh.1.11",
+      "scope:wb-neh-2-p1:refsys:tel-v1:neh.2.1-neh.2.10",
+      "scope:wb-neh-2-p2:refsys:tel-v1:neh.2.11-neh.2.20",
+      "scope:wb-neh-3-p1:refsys:tel-v1:neh.3.1-neh.3.32",
+      "scope:wb-neh-4-p1:refsys:tel-v1:neh.4.1-neh.4.23",
+      "scope:wb-neh-5-p1:refsys:tel-v1:neh.5.1-neh.5.19",
+      "scope:wb-neh-6-p1:refsys:tel-v1:neh.6.1-neh.6.14",
+      "scope:wb-neh-6-p2:refsys:tel-v1:neh.6.15-neh.6.19",
+      "scope:wb-neh-7-p1:refsys:tel-v1:neh.7.1-neh.7.3",
+      "scope:wb-neh-7-p2:refsys:tel-v1:neh.7.4-neh.7.73",
+      "scope:wb-neh-8-p1:refsys:tel-v1:neh.8.1-neh.8.18",
+      "scope:wb-neh-9-p1:refsys:tel-v1:neh.9.1-neh.9.38",
+      "scope:wb-neh-10-p1:refsys:tel-v1:neh.10.1-neh.10.39",
+      "scope:wb-neh-11-p1:refsys:tel-v1:neh.11.1-neh.11.36",
+      "scope:wb-neh-12-p1:refsys:tel-v1:neh.12.1-neh.12.26",
+      "scope:wb-neh-12-p2:refsys:tel-v1:neh.12.27-neh.12.47",
+      "scope:wb-neh-13-p1:refsys:tel-v1:neh.13.1-neh.13.31"
+    ],
+    "reference_keys": [
+      "verse:Neh.1.1",
+      "verse:Neh.1.2",
+      "verse:Neh.1.3",
+      "verse:Neh.1.4",
+      "verse:Neh.1.5",
+      "verse:Neh.1.6",
+      "verse:Neh.1.7",
+      "verse:Neh.1.8",
+      "verse:Neh.1.9",
+      "verse:Neh.1.10",
+      "verse:Neh.1.11",
+      "verse:Neh.2.1",
+      "verse:Neh.2.2",
+      "verse:Neh.2.3",
+      "verse:Neh.2.4",
+      "verse:Neh.2.5",
+      "verse:Neh.2.6",
+      "verse:Neh.2.7",
+      "verse:Neh.2.8",
+      "verse:Neh.2.9",
+      "verse:Neh.2.10",
+      "verse:Neh.2.11",
+      "verse:Neh.2.12",
+      "verse:Neh.2.13",
+      "verse:Neh.2.14",
+      "verse:Neh.2.15",
+      "verse:Neh.2.16",
+      "verse:Neh.2.17",
+      "verse:Neh.2.18",
+      "verse:Neh.2.19",
+      "verse:Neh.2.20",
+      "verse:Neh.3.1",
+      "verse:Neh.3.2",
+      "verse:Neh.3.3",
+      "verse:Neh.3.4",
+      "verse:Neh.3.5",
+      "verse:Neh.3.6",
+      "verse:Neh.3.7",
+      "verse:Neh.3.8",
+      "verse:Neh.3.9",
+      "verse:Neh.3.10",
+      "verse:Neh.3.11",
+      "verse:Neh.3.12",
+      "verse:Neh.3.13",
+      "verse:Neh.3.14",
+      "verse:Neh.3.15",
+      "verse:Neh.3.16",
+      "verse:Neh.3.17",
+      "verse:Neh.3.18",
+      "verse:Neh.3.19",
+      "verse:Neh.3.20",
+      "verse:Neh.3.21",
+      "verse:Neh.3.22",
+      "verse:Neh.3.23",
+      "verse:Neh.3.24",
+      "verse:Neh.3.25",
+      "verse:Neh.3.26",
+      "verse:Neh.3.27",
+      "verse:Neh.3.28",
+      "verse:Neh.3.29",
+      "verse:Neh.3.30",
+      "verse:Neh.3.31",
+      "verse:Neh.3.32",
+      "verse:Neh.4.1",
+      "verse:Neh.4.2",
+      "verse:Neh.4.3",
+      "verse:Neh.4.4",
+      "verse:Neh.4.5",
+      "verse:Neh.4.6",
+      "verse:Neh.4.7",
+      "verse:Neh.4.8",
+      "verse:Neh.4.9",
+      "verse:Neh.4.10",
+      "verse:Neh.4.11",
+      "verse:Neh.4.12",
+      "verse:Neh.4.13",
+      "verse:Neh.4.14",
+      "verse:Neh.4.15",
+      "verse:Neh.4.16",
+      "verse:Neh.4.17",
+      "verse:Neh.4.18",
+      "verse:Neh.4.19",
+      "verse:Neh.4.20",
+      "verse:Neh.4.21",
+      "verse:Neh.4.22",
+      "verse:Neh.4.23",
+      "verse:Neh.5.1",
+      "verse:Neh.5.2",
+      "verse:Neh.5.3",
+      "verse:Neh.5.4",
+      "verse:Neh.5.5",
+      "verse:Neh.5.6",
+      "verse:Neh.5.7",
+      "verse:Neh.5.8",
+      "verse:Neh.5.9",
+      "verse:Neh.5.10",
+      "verse:Neh.5.11",
+      "verse:Neh.5.12",
+      "verse:Neh.5.13",
+      "verse:Neh.5.14",
+      "verse:Neh.5.15",
+      "verse:Neh.5.16",
+      "verse:Neh.5.17",
+      "verse:Neh.5.18",
+      "verse:Neh.5.19",
+      "verse:Neh.6.1",
+      "verse:Neh.6.2",
+      "verse:Neh.6.3",
+      "verse:Neh.6.4",
+      "verse:Neh.6.5",
+      "verse:Neh.6.6",
+      "verse:Neh.6.7",
+      "verse:Neh.6.8",
+      "verse:Neh.6.9",
+      "verse:Neh.6.10",
+      "verse:Neh.6.11",
+      "verse:Neh.6.12",
+      "verse:Neh.6.13",
+      "verse:Neh.6.14",
+      "verse:Neh.6.15",
+      "verse:Neh.6.16",
+      "verse:Neh.6.17",
+      "verse:Neh.6.18",
+      "verse:Neh.6.19",
+      "verse:Neh.7.1",
+      "verse:Neh.7.2",
+      "verse:Neh.7.3",
+      "verse:Neh.7.4",
+      "verse:Neh.7.5",
+      "verse:Neh.7.6",
+      "verse:Neh.7.7",
+      "verse:Neh.7.8",
+      "verse:Neh.7.9",
+      "verse:Neh.7.10",
+      "verse:Neh.7.11",
+      "verse:Neh.7.12",
+      "verse:Neh.7.13",
+      "verse:Neh.7.14",
+      "verse:Neh.7.15",
+      "verse:Neh.7.16",
+      "verse:Neh.7.17",
+      "verse:Neh.7.18",
+      "verse:Neh.7.19",
+      "verse:Neh.7.20",
+      "verse:Neh.7.21",
+      "verse:Neh.7.22",
+      "verse:Neh.7.23",
+      "verse:Neh.7.24",
+      "verse:Neh.7.25",
+      "verse:Neh.7.26",
+      "verse:Neh.7.27",
+      "verse:Neh.7.28",
+      "verse:Neh.7.29",
+      "verse:Neh.7.30",
+      "verse:Neh.7.31",
+      "verse:Neh.7.32",
+      "verse:Neh.7.33",
+      "verse:Neh.7.34",
+      "verse:Neh.7.35",
+      "verse:Neh.7.36",
+      "verse:Neh.7.37",
+      "verse:Neh.7.38",
+      "verse:Neh.7.39",
+      "verse:Neh.7.40",
+      "verse:Neh.7.41",
+      "verse:Neh.7.42",
+      "verse:Neh.7.43",
+      "verse:Neh.7.44",
+      "verse:Neh.7.45",
+      "verse:Neh.7.46",
+      "verse:Neh.7.47",
+      "verse:Neh.7.48",
+      "verse:Neh.7.49",
+      "verse:Neh.7.50",
+      "verse:Neh.7.51",
+      "verse:Neh.7.52",
+      "verse:Neh.7.53",
+      "verse:Neh.7.54",
+      "verse:Neh.7.55",
+      "verse:Neh.7.56",
+      "verse:Neh.7.57",
+      "verse:Neh.7.58",
+      "verse:Neh.7.59",
+      "verse:Neh.7.60",
+      "verse:Neh.7.61",
+      "verse:Neh.7.62",
+      "verse:Neh.7.63",
+      "verse:Neh.7.64",
+      "verse:Neh.7.65",
+      "verse:Neh.7.66",
+      "verse:Neh.7.67",
+      "verse:Neh.7.68",
+      "verse:Neh.7.69",
+      "verse:Neh.7.70",
+      "verse:Neh.7.71",
+      "verse:Neh.7.72",
+      "verse:Neh.7.73",
+      "verse:Neh.8.1",
+      "verse:Neh.8.2",
+      "verse:Neh.8.3",
+      "verse:Neh.8.4",
+      "verse:Neh.8.5",
+      "verse:Neh.8.6",
+      "verse:Neh.8.7",
+      "verse:Neh.8.8",
+      "verse:Neh.8.9",
+      "verse:Neh.8.10",
+      "verse:Neh.8.11",
+      "verse:Neh.8.12",
+      "verse:Neh.8.13",
+      "verse:Neh.8.14",
+      "verse:Neh.8.15",
+      "verse:Neh.8.16",
+      "verse:Neh.8.17",
+      "verse:Neh.8.18",
+      "verse:Neh.9.1",
+      "verse:Neh.9.2",
+      "verse:Neh.9.3",
+      "verse:Neh.9.4",
+      "verse:Neh.9.5",
+      "verse:Neh.9.6",
+      "verse:Neh.9.7",
+      "verse:Neh.9.8",
+      "verse:Neh.9.9",
+      "verse:Neh.9.10",
+      "verse:Neh.9.11",
+      "verse:Neh.9.12",
+      "verse:Neh.9.13",
+      "verse:Neh.9.14",
+      "verse:Neh.9.15",
+      "verse:Neh.9.16",
+      "verse:Neh.9.17",
+      "verse:Neh.9.18",
+      "verse:Neh.9.19",
+      "verse:Neh.9.20",
+      "verse:Neh.9.21",
+      "verse:Neh.9.22",
+      "verse:Neh.9.23",
+      "verse:Neh.9.24",
+      "verse:Neh.9.25",
+      "verse:Neh.9.26",
+      "verse:Neh.9.27",
+      "verse:Neh.9.28",
+      "verse:Neh.9.29",
+      "verse:Neh.9.30",
+      "verse:Neh.9.31",
+      "verse:Neh.9.32",
+      "verse:Neh.9.33",
+      "verse:Neh.9.34",
+      "verse:Neh.9.35",
+      "verse:Neh.9.36",
+      "verse:Neh.9.37",
+      "verse:Neh.9.38",
+      "verse:Neh.10.1",
+      "verse:Neh.10.2",
+      "verse:Neh.10.3",
+      "verse:Neh.10.4",
+      "verse:Neh.10.5",
+      "verse:Neh.10.6",
+      "verse:Neh.10.7",
+      "verse:Neh.10.8",
+      "verse:Neh.10.9",
+      "verse:Neh.10.10",
+      "verse:Neh.10.11",
+      "verse:Neh.10.12",
+      "verse:Neh.10.13",
+      "verse:Neh.10.14",
+      "verse:Neh.10.15",
+      "verse:Neh.10.16",
+      "verse:Neh.10.17",
+      "verse:Neh.10.18",
+      "verse:Neh.10.19",
+      "verse:Neh.10.20",
+      "verse:Neh.10.21",
+      "verse:Neh.10.22",
+      "verse:Neh.10.23",
+      "verse:Neh.10.24",
+      "verse:Neh.10.25",
+      "verse:Neh.10.26",
+      "verse:Neh.10.27",
+      "verse:Neh.10.28",
+      "verse:Neh.10.29",
+      "verse:Neh.10.30",
+      "verse:Neh.10.31",
+      "verse:Neh.10.32",
+      "verse:Neh.10.33",
+      "verse:Neh.10.34",
+      "verse:Neh.10.35",
+      "verse:Neh.10.36",
+      "verse:Neh.10.37",
+      "verse:Neh.10.38",
+      "verse:Neh.10.39",
+      "verse:Neh.11.1",
+      "verse:Neh.11.2",
+      "verse:Neh.11.3",
+      "verse:Neh.11.4",
+      "verse:Neh.11.5",
+      "verse:Neh.11.6",
+      "verse:Neh.11.7",
+      "verse:Neh.11.8",
+      "verse:Neh.11.9",
+      "verse:Neh.11.10",
+      "verse:Neh.11.11",
+      "verse:Neh.11.12",
+      "verse:Neh.11.13",
+      "verse:Neh.11.14",
+      "verse:Neh.11.15",
+      "verse:Neh.11.16",
+      "verse:Neh.11.17",
+      "verse:Neh.11.18",
+      "verse:Neh.11.19",
+      "verse:Neh.11.20",
+      "verse:Neh.11.21",
+      "verse:Neh.11.22",
+      "verse:Neh.11.23",
+      "verse:Neh.11.24",
+      "verse:Neh.11.25",
+      "verse:Neh.11.26",
+      "verse:Neh.11.27",
+      "verse:Neh.11.28",
+      "verse:Neh.11.29",
+      "verse:Neh.11.30",
+      "verse:Neh.11.31",
+      "verse:Neh.11.32",
+      "verse:Neh.11.33",
+      "verse:Neh.11.34",
+      "verse:Neh.11.35",
+      "verse:Neh.11.36",
+      "verse:Neh.12.1",
+      "verse:Neh.12.2",
+      "verse:Neh.12.3",
+      "verse:Neh.12.4",
+      "verse:Neh.12.5",
+      "verse:Neh.12.6",
+      "verse:Neh.12.7",
+      "verse:Neh.12.8",
+      "verse:Neh.12.9",
+      "verse:Neh.12.10",
+      "verse:Neh.12.11",
+      "verse:Neh.12.12",
+      "verse:Neh.12.13",
+      "verse:Neh.12.14",
+      "verse:Neh.12.15",
+      "verse:Neh.12.16",
+      "verse:Neh.12.17",
+      "verse:Neh.12.18",
+      "verse:Neh.12.19",
+      "verse:Neh.12.20",
+      "verse:Neh.12.21",
+      "verse:Neh.12.22",
+      "verse:Neh.12.23",
+      "verse:Neh.12.24",
+      "verse:Neh.12.25",
+      "verse:Neh.12.26",
+      "verse:Neh.12.27",
+      "verse:Neh.12.28",
+      "verse:Neh.12.29",
+      "verse:Neh.12.30",
+      "verse:Neh.12.31",
+      "verse:Neh.12.32",
+      "verse:Neh.12.33",
+      "verse:Neh.12.34",
+      "verse:Neh.12.35",
+      "verse:Neh.12.36",
+      "verse:Neh.12.37",
+      "verse:Neh.12.38",
+      "verse:Neh.12.39",
+      "verse:Neh.12.40",
+      "verse:Neh.12.41",
+      "verse:Neh.12.42",
+      "verse:Neh.12.43",
+      "verse:Neh.12.44",
+      "verse:Neh.12.45",
+      "verse:Neh.12.46",
+      "verse:Neh.12.47",
+      "verse:Neh.13.1",
+      "verse:Neh.13.2",
+      "verse:Neh.13.3",
+      "verse:Neh.13.4",
+      "verse:Neh.13.5",
+      "verse:Neh.13.6",
+      "verse:Neh.13.7",
+      "verse:Neh.13.8",
+      "verse:Neh.13.9",
+      "verse:Neh.13.10",
+      "verse:Neh.13.11",
+      "verse:Neh.13.12",
+      "verse:Neh.13.13",
+      "verse:Neh.13.14",
+      "verse:Neh.13.15",
+      "verse:Neh.13.16",
+      "verse:Neh.13.17",
+      "verse:Neh.13.18",
+      "verse:Neh.13.19",
+      "verse:Neh.13.20",
+      "verse:Neh.13.21",
+      "verse:Neh.13.22",
+      "verse:Neh.13.23",
+      "verse:Neh.13.24",
+      "verse:Neh.13.25",
+      "verse:Neh.13.26",
+      "verse:Neh.13.27",
+      "verse:Neh.13.28",
+      "verse:Neh.13.29",
+      "verse:Neh.13.30",
+      "verse:Neh.13.31"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": "edition:tel-irv@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-abram-1-9-7",
+        "verse_key": "verse:Neh.9.7",
+        "attestation_key": "attestation:wb-p-abram-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అబ్రాహాము",
+          "occurrence_ordinal": 1,
+          "prefix": "టకు రప్పించి అతనికి ",
+          "suffix": " అనే పేరు పెట్టినవాడ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-11-24",
+        "verse_key": "verse:Neh.11.24",
+        "attestation_key": "attestation:wb-p-judah-1-11-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదా",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " గోత్రం వాడైన జెరహు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-11-25",
+        "verse_key": "verse:Neh.11.25",
+        "attestation_key": "attestation:wb-p-judah-1-11-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూదా",
+          "occurrence_ordinal": 1,
+          "prefix": "మాల, పొలాల విషయంలో, ",
+          "suffix": " వంశం వారిలో కొందరు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-perez-1-11-4",
+        "verse_key": "verse:Neh.11.4",
+        "attestation_key": "attestation:wb-p-perez-1-11-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-perez-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పెరెసు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఫట్య, షెఫట్య తండ్రి ",
+          "suffix": " వంశీకుడైన మహలలేలు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-perez-1-11-6",
+        "verse_key": "verse:Neh.11.6",
+        "attestation_key": "attestation:wb-p-perez-1-11-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-perez-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "పెరెసు",
+          "occurrence_ordinal": 1,
+          "prefix": "ెరూషలేంలో నివసించిన ",
+          "suffix": " వంశంవారు పరాక్రమవంత"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-1-7",
+        "verse_key": "verse:Neh.1.7",
+        "attestation_key": "attestation:wb-p-moses-1-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "్తించాం. నీ సేవకుడు ",
+          "suffix": " ద్వారా నీవు నియమించ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-1-8",
+        "verse_key": "verse:Neh.1.8",
+        "attestation_key": "attestation:wb-p-moses-1-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "నీ సేవకుడైన ",
+          "suffix": "కు నీవు చెప్పిన మాట "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-8-1",
+        "verse_key": "verse:Neh.8.1",
+        "attestation_key": "attestation:wb-p-moses-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "లీయులకు ఆజ్ఞాపించిన ",
+          "suffix": " ధర్మశాస్త్ర గ్రంథాన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-8-14",
+        "verse_key": "verse:Neh.8.14",
+        "attestation_key": "attestation:wb-p-moses-1-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "యెహోవా ",
+          "suffix": "కు అనుగ్రహించిన గ్రం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-9-14",
+        "verse_key": "verse:Neh.9.14",
+        "attestation_key": "attestation:wb-p-moses-1-9-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "నీ సేవకుడు ",
+          "suffix": " ద్వారా వాళ్లకు ఆజ్ఞ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-13-1",
+        "verse_key": "verse:Neh.13.1",
+        "attestation_key": "attestation:wb-p-moses-1-13-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజు వాళ్ళు ",
+          "suffix": " గ్రంథం ప్రజలకు చదివ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pharaoh-4-9-10",
+        "verse_key": "verse:Neh.9.10",
+        "attestation_key": "attestation:wb-p-pharaoh-4-9-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pharaoh-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఫరో",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", అతని పరివారం, అతని"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aaron-1-10-38",
+        "verse_key": "verse:Neh.10.38",
+        "attestation_key": "attestation:wb-p-aaron-1-10-38",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aaron-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహరోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ంతును తెచ్చినప్పుడు ",
+          "suffix": " సంతానం వాడైన ఒక యాజ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aaron-1-12-47",
+        "verse_key": "verse:Neh.12.47",
+        "attestation_key": "attestation:wb-p-aaron-1-12-47",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aaron-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహరోను",
+          "occurrence_ordinal": 1,
+          "prefix": "టాయించారు. లేవీయులు ",
+          "suffix": " వంశంవారి కోసం ఒక భా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joshua-1-8-17",
+        "verse_key": "verse:Neh.8.17",
+        "attestation_key": "attestation:wb-p-joshua-1-8-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joshua-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యెహోషువ",
+          "occurrence_ordinal": 1,
+          "prefix": "ించారు. నూను కొడుకు ",
+          "suffix": " జీవిత కాలం తరువాత న"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-nun-1-8-17",
+        "verse_key": "verse:Neh.8.17",
+        "attestation_key": "attestation:wb-p-nun-1-8-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nun-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "నూను",
+          "occurrence_ordinal": 1,
+          "prefix": ". అందరూ ఆనందించారు. ",
+          "suffix": " కొడుకు యెహోషువ జీవి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sihon-1-9-22",
+        "verse_key": "verse:Neh.9.22",
+        "attestation_key": "attestation:wb-p-sihon-1-9-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sihon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీహోను",
+          "occurrence_ordinal": 1,
+          "prefix": " వారు హెష్బోను రాజు ",
+          "suffix": " దేశాన్నీ, బాషాను రా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-og-1-9-22",
+        "verse_key": "verse:Neh.9.22",
+        "attestation_key": "attestation:wb-p-og-1-9-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-og-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఓగు",
+          "occurrence_ordinal": 1,
+          "prefix": "శాన్నీ, బాషాను రాజు ",
+          "suffix": " దేశాన్నీ ఆక్రమించుక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-balaam-1-13-2",
+        "verse_key": "verse:Neh.13.2",
+        "attestation_key": "attestation:wb-p-balaam-1-13-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-balaam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బిలాము",
+          "occurrence_ordinal": 1,
+          "prefix": "ైగా వారిని శపించమని ",
+          "suffix": " ప్రవక్తకు లంచమిచ్చి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-3-15",
+        "verse_key": "verse:Neh.3.15",
+        "attestation_key": "attestation:wb-p-david-1-3-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": " అమర్చాడు. ఇంతేకాక, ",
+          "suffix": " నగరు నుండి దిగువకు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-3-16",
+        "verse_key": "verse:Neh.3.16",
+        "attestation_key": "attestation:wb-p-david-1-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ా బాగు చేశాడు. అతడు ",
+          "suffix": " సమాధులకు ఎదురుగా ఉన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-24",
+        "verse_key": "verse:Neh.12.24",
+        "attestation_key": "attestation:wb-p-david-1-12-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "దేవుని సేవకుడైన ",
+          "suffix": " ఆజ్ఞ ప్రకారం స్తుతి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-36",
+        "verse_key": "verse:Neh.12.36",
+        "attestation_key": "attestation:wb-p-david-1-12-36",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": " వీళ్ళు దైవ సేవకుడు ",
+          "suffix": " నియమించిన వాయిద్యాల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-37",
+        "verse_key": "verse:Neh.12.37",
+        "attestation_key": "attestation:wb-p-david-1-12-37",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "న్న ఊట ద్వారం దగ్గర ",
+          "suffix": " పట్టణం మెట్లపై నుండ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-45",
+        "verse_key": "verse:Neh.12.45",
+        "attestation_key": "attestation:wb-p-david-1-12-45",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", అతని కొడుకు సొలొమో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-12-46",
+        "verse_key": "verse:Neh.12.46",
+        "attestation_key": "attestation:wb-p-david-1-12-46",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దావీదు",
+          "occurrence_ordinal": 1,
+          "prefix": "పూర్వం ",
+          "suffix": " జీవించిన కాలంలో ఆసా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-solomon-1-7-57",
+        "verse_key": "verse:Neh.7.57",
+        "attestation_key": "attestation:wb-p-solomon-1-7-57",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సొలొమోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " సేవకుల, దాసుల వంశాల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-solomon-1-7-60",
+        "verse_key": "verse:Neh.7.60",
+        "attestation_key": "attestation:wb-p-solomon-1-7-60",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సొలొమోను",
+          "occurrence_ordinal": 1,
+          "prefix": "దేవాలయ సేవకులందరూ, ",
+          "suffix": " దాసుల వంశాల వారు 39"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-solomon-1-11-3",
+        "verse_key": "verse:Neh.11.3",
+        "attestation_key": "attestation:wb-p-solomon-1-11-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సొలొమోను",
+          "occurrence_ordinal": 1,
+          "prefix": "లు, దేవాలయ సేవకులు, ",
+          "suffix": " సేవకుల వంశాలవారు, ద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-solomon-1-12-45",
+        "verse_key": "verse:Neh.12.45",
+        "attestation_key": "attestation:wb-p-solomon-1-12-45",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సొలొమోను",
+          "occurrence_ordinal": 1,
+          "prefix": "దావీదు, అతని కొడుకు ",
+          "suffix": " ఆదేశించినట్టు గాయకు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-solomon-1-13-26",
+        "verse_key": "verse:Neh.13.26",
+        "attestation_key": "attestation:wb-p-solomon-1-13-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సొలొమోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ి ఇశ్రాయేలీయుల రాజు ",
+          "suffix": " పాపం చేసాడు కదా. లో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-nebuchadnezzar-1-7-6",
+        "verse_key": "verse:Neh.7.6",
+        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nebuchadnezzar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు నెబుకద్నెజరు చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-asaph-2-12-35",
+        "verse_key": "verse:Neh.12.35",
+        "attestation_key": "attestation:wb-p-asaph-2-12-35",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-asaph-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఆసాపు",
+          "occurrence_ordinal": 1,
+          "prefix": "ాలు ఊదుతూ వెళ్ళారు. ",
+          "suffix": " కొడుకు జక్కూరు, జక్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-asaph-2-12-46",
+        "verse_key": "verse:Neh.12.46",
+        "attestation_key": "attestation:wb-p-asaph-2-12-46",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-asaph-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఆసాపు",
+          "occurrence_ordinal": 1,
+          "prefix": "ీదు జీవించిన కాలంలో ",
+          "suffix": " పర్యవేక్షణలో గాయకుల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zerubbabel-2-12-1",
+        "verse_key": "verse:Neh.12.1",
+        "attestation_key": "attestation:wb-p-zerubbabel-2-12-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zerubbabel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "జెరుబ్బాబెలు",
+          "occurrence_ordinal": 1,
+          "prefix": "షయల్తీయేలు కొడుకు ",
+          "suffix": "తో వచ్చిన యాజకులు, ల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zerubbabel-2-12-47",
+        "verse_key": "verse:Neh.12.47",
+        "attestation_key": "attestation:wb-p-zerubbabel-2-12-47",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zerubbabel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "జెరుబ్బాబెలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " కాలంలో, నెహెమ్యా కా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-12-22",
+        "verse_key": "verse:Neh.12.22",
+        "attestation_key": "attestation:wb-p-darius-1-12-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": "య్యారు. పారసీక రాజు ",
+          "suffix": " పాలన కాలంలో కూడా వీ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-1",
+        "verse_key": "verse:Neh.8.1",
+        "attestation_key": "attestation:wb-p-ezra-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "ాన్ని తీసుకు రమ్మని ",
+          "suffix": "శాస్త్రితో చెప్పారు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-2",
+        "verse_key": "verse:Neh.8.2",
+        "attestation_key": "attestation:wb-p-ezra-1-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఏడవ నెల మొదటి రోజున"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-4",
+        "verse_key": "verse:Neh.8.4",
+        "attestation_key": "attestation:wb-p-ezra-1-8-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "న ఎత్తయిన వేదిక మీద ",
+          "suffix": " నిలబడ్డాడు. అతని కు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-5",
+        "verse_key": "verse:Neh.8.5",
+        "attestation_key": "attestation:wb-p-ezra-1-8-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "ంటే ఎత్తయిన వేదికపై ",
+          "suffix": " నిలబడి ప్రజలంతా చూస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-6",
+        "verse_key": "verse:Neh.8.6",
+        "attestation_key": "attestation:wb-p-ezra-1-8-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " గొప్ప దేవుడైన యెహోవ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-9",
+        "verse_key": "verse:Neh.8.9",
+        "attestation_key": "attestation:wb-p-ezra-1-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "కుడు, శాస్త్రి అయిన ",
+          "suffix": ", ప్రజలకు వివరించే ల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-8-13",
+        "verse_key": "verse:Neh.8.13",
+        "attestation_key": "attestation:wb-p-ezra-1-8-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "సుకోవాలని ఆచార్యుడు ",
+          "suffix": " దగ్గర సమకూడారు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-12-1",
+        "verse_key": "verse:Neh.12.1",
+        "attestation_key": "attestation:wb-p-ezra-1-12-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": ", శెరాయా, యిర్మీయా, ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-12-13",
+        "verse_key": "verse:Neh.12.13",
+        "attestation_key": "attestation:wb-p-ezra-1-12-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " కుటుంబానికి మెషుల్ల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-12-26",
+        "verse_key": "verse:Neh.12.26",
+        "attestation_key": "attestation:wb-p-ezra-1-12-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "కుడు, శాస్త్రి అయిన ",
+          "suffix": " రోజుల్లోనూ వీరు ఆ ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-12-33",
+        "verse_key": "verse:Neh.12.33",
+        "attestation_key": "attestation:wb-p-ezra-1-12-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "ఇంకా అజర్యా, ",
+          "suffix": ", మెషుల్లాము,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ezra-1-12-36",
+        "verse_key": "verse:Neh.12.36",
+        "attestation_key": "attestation:wb-p-ezra-1-12-36",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎజ్రా",
+          "occurrence_ordinal": 1,
+          "prefix": "ెళ్ళారు. ఆచార్యుడైన ",
+          "suffix": " వారికి ముందుగా నడిచ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ashdod-a30c937-4-7",
+        "verse_key": "verse:Neh.4.7",
+        "attestation_key": "attestation:wb-pl-ashdod-a30c937-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashdod-a30c937"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అష్డోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "బులు, అమ్మోను వారు, ",
+          "suffix": " వారు తెలుసుకుని మండ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ashdod-a30c937-13-23",
+        "verse_key": "verse:Neh.13.23",
+        "attestation_key": "attestation:wb-pl-ashdod-a30c937-13-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashdod-a30c937"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అష్డోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ుల్లో కొందరు యూదులు ",
+          "suffix": ", అమ్మోను, మోయాబు పట"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ashdod-a30c937-13-24",
+        "verse_key": "verse:Neh.13.24",
+        "attestation_key": "attestation:wb-pl-ashdod-a30c937-13-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashdod-a30c937"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అష్డోదు",
+          "occurrence_ordinal": 1,
+          "prefix": "కొడుకుల్లో సగం మంది ",
+          "suffix": " భాష మాట్లాడుతున్నార"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-9-32",
+        "verse_key": "verse:Neh.9.32",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-9-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అష్షూరు",
+          "occurrence_ordinal": 1,
+          "prefix": ", కృప చూపుతున్నావు. ",
+          "suffix": " రాజుల కాలం నుండి ఈన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-7-6",
+        "verse_key": "verse:Neh.7.6",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు నెబుకద్నెజరు చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-13-6",
+        "verse_key": "verse:Neh.13.6",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-13-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ంలో లేను. ఎందుకంటే, ",
+          "suffix": " దేశపు రాజు అర్తహషస్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-bashan-aa7a40a-9-22",
+        "verse_key": "verse:Neh.9.22",
+        "attestation_key": "attestation:wb-pl-bashan-aa7a40a-9-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-bashan-aa7a40a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బాషాను",
+          "occurrence_ordinal": 1,
+          "prefix": "జు సీహోను దేశాన్నీ, ",
+          "suffix": " రాజు ఓగు దేశాన్నీ ఆ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beersheba-1-ad2f6c2-11-27",
+        "verse_key": "verse:Neh.11.27",
+        "attestation_key": "attestation:wb-pl-beersheba-1-ad2f6c2-11-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beersheba-1-ad2f6c2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బెయేర్షెబా",
+          "occurrence_ordinal": 1,
+          "prefix": "హజర్షువలు, ",
+          "suffix": " దానికి చెందిన ఊళ్లల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beersheba-1-ad2f6c2-11-30",
+        "verse_key": "verse:Neh.11.30",
+        "attestation_key": "attestation:wb-pl-beersheba-1-ad2f6c2-11-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beersheba-1-ad2f6c2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బెయేర్షెబా",
+          "occurrence_ordinal": 1,
+          "prefix": "లలో నివాసం ఉన్నారు. ",
+          "suffix": " నుండి హిన్నోము లోయ "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-bethlehem-1-a112427-7-26",
+        "verse_key": "verse:Neh.7.26",
+        "attestation_key": "attestation:wb-pl-bethlehem-1-a112427-7-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-bethlehem-1-a112427"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బేత్లెహేము",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "కు చెందిన నెటోపా వంశ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beyond-the-river-a88310a-2-7",
+        "verse_key": "verse:Neh.2.7",
+        "attestation_key": "attestation:wb-pl-beyond-the-river-a88310a-2-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beyond-the-river-a88310a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "నది",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదా దేశం చేరే దాకా ",
+          "suffix": " అవతల ప్రాంతాల్లో ప్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beyond-the-river-a88310a-2-9",
+        "verse_key": "verse:Neh.2.9",
+        "attestation_key": "attestation:wb-pl-beyond-the-river-a88310a-2-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beyond-the-river-a88310a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "నది",
+          "occurrence_ordinal": 1,
+          "prefix": "తరువాత నేను ",
+          "suffix": " అవతల ఉన్న అధికారుల "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beyond-the-river-a88310a-3-7",
+        "verse_key": "verse:Neh.3.7",
+        "attestation_key": "attestation:wb-pl-beyond-the-river-a88310a-3-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beyond-the-river-a88310a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "నది",
+          "occurrence_ordinal": 1,
+          "prefix": " పట్టణాల ప్రముఖులు. ",
+          "suffix": " అవతలి ప్రాంతం గవర్న"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-9",
+        "verse_key": "verse:Neh.9.9",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "ప్రకారం జరిగించావు. ",
+          "suffix": "లో మా పూర్వికులు అను"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-18",
+        "verse_key": "verse:Neh.9.18",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "న దూడను తయారు చేసి, ",
+          "suffix": " నుండి మమ్మల్ని రప్ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-heshbon-abf2fc1-9-22",
+        "verse_key": "verse:Neh.9.22",
+        "attestation_key": "attestation:wb-pl-heshbon-abf2fc1-9-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-heshbon-abf2fc1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హెష్బోను",
+          "occurrence_ordinal": 1,
+          "prefix": "చ్చేలా చేశావు. వారు ",
+          "suffix": " రాజు సీహోను దేశాన్న"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jericho-1-a231f80-3-2",
+        "verse_key": "verse:Neh.3.2",
+        "attestation_key": "attestation:wb-pl-jericho-1-a231f80-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jericho-1-a231f80"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యెరికో",
+          "occurrence_ordinal": 1,
+          "prefix": "వారిని ఆనుకుని ",
+          "suffix": " పట్టణం వారు కట్టారు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jericho-1-a231f80-7-36",
+        "verse_key": "verse:Neh.7.36",
+        "attestation_key": "attestation:wb-pl-jericho-1-a231f80-7-36",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jericho-1-a231f80"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యెరికో",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " వంశం వారు 345 మంది."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-kiriath-jearim-a9bba61-7-29",
+        "verse_key": "verse:Neh.7.29",
+        "attestation_key": "attestation:wb-pl-kiriath-jearim-a9bba61-7-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-kiriath-jearim-a9bba61"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "కిర్యత్యారీము",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", కెఫీరా, బెయేరోతు గ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lachish-a3cc590-11-30",
+        "verse_key": "verse:Neh.11.30",
+        "attestation_key": "attestation:wb-pl-lachish-a3cc590-11-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lachish-a3cc590"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "లాకీషు",
+          "occurrence_ordinal": 1,
+          "prefix": "టికి చెందిన ఊళ్లలో, ",
+          "suffix": "లో ఉన్న పొలంలో, అజేక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-moab-1-aa0b1d6-13-23",
+        "verse_key": "verse:Neh.13.23",
+        "attestation_key": "attestation:wb-pl-moab-1-aa0b1d6-13-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-moab-1-aa0b1d6"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోయాబు",
+          "occurrence_ordinal": 1,
+          "prefix": "ు అష్డోదు, అమ్మోను, ",
+          "suffix": " పట్టణాల స్త్రీలను ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-sinai-abfba2a-9-13",
+        "verse_key": "verse:Neh.9.13",
+        "attestation_key": "attestation:wb-pl-mount-sinai-abfba2a-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-sinai-abfba2a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీనాయి",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " కొండ పైకి దిగి వచ్చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ramah-1-a6d57ed-7-30",
+        "verse_key": "verse:Neh.7.30",
+        "attestation_key": "attestation:wb-pl-ramah-1-a6d57ed-7-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ramah-1-a6d57ed"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రమా",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", గెబ గ్రామాల వారు 6"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-1-1",
+        "verse_key": "verse:Neh.1.1",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "్సరం కిస్లేవు నెలలో ",
+          "suffix": " కోటలో ఉన్న సమయంలో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-13-16",
+        "verse_key": "verse:Neh.13.16",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-13-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "తూరు",
+          "occurrence_ordinal": 1,
+          "prefix": "యెరూషలేంలో ఉంటున్న ",
+          "suffix": " దేశస్థులు విశ్రాంతి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Neh.1.10",
+            "verse:Neh.1.11",
+            "verse:Neh.1.2",
+            "verse:Neh.1.3",
+            "verse:Neh.1.4",
+            "verse:Neh.1.5",
+            "verse:Neh.1.6",
+            "verse:Neh.1.9",
+            "verse:Neh.10.1",
+            "verse:Neh.10.10",
+            "verse:Neh.10.11",
+            "verse:Neh.10.12",
+            "verse:Neh.10.13",
+            "verse:Neh.10.14",
+            "verse:Neh.10.15",
+            "verse:Neh.10.16",
+            "verse:Neh.10.17",
+            "verse:Neh.10.18",
+            "verse:Neh.10.19",
+            "verse:Neh.10.2",
+            "verse:Neh.10.20",
+            "verse:Neh.10.21",
+            "verse:Neh.10.22",
+            "verse:Neh.10.23",
+            "verse:Neh.10.24",
+            "verse:Neh.10.25",
+            "verse:Neh.10.26",
+            "verse:Neh.10.27",
+            "verse:Neh.10.28",
+            "verse:Neh.10.29",
+            "verse:Neh.10.3",
+            "verse:Neh.10.30",
+            "verse:Neh.10.31",
+            "verse:Neh.10.32",
+            "verse:Neh.10.33",
+            "verse:Neh.10.34",
+            "verse:Neh.10.35",
+            "verse:Neh.10.36",
+            "verse:Neh.10.37",
+            "verse:Neh.10.39",
+            "verse:Neh.10.4",
+            "verse:Neh.10.5",
+            "verse:Neh.10.6",
+            "verse:Neh.10.7",
+            "verse:Neh.10.8",
+            "verse:Neh.10.9",
+            "verse:Neh.11.1",
+            "verse:Neh.11.10",
+            "verse:Neh.11.11",
+            "verse:Neh.11.12",
+            "verse:Neh.11.13",
+            "verse:Neh.11.14",
+            "verse:Neh.11.15",
+            "verse:Neh.11.16",
+            "verse:Neh.11.17",
+            "verse:Neh.11.18",
+            "verse:Neh.11.19",
+            "verse:Neh.11.2",
+            "verse:Neh.11.20",
+            "verse:Neh.11.21",
+            "verse:Neh.11.22",
+            "verse:Neh.11.23",
+            "verse:Neh.11.26",
+            "verse:Neh.11.28",
+            "verse:Neh.11.29",
+            "verse:Neh.11.31",
+            "verse:Neh.11.32",
+            "verse:Neh.11.33",
+            "verse:Neh.11.34",
+            "verse:Neh.11.35",
+            "verse:Neh.11.36",
+            "verse:Neh.11.5",
+            "verse:Neh.11.7",
+            "verse:Neh.11.8",
+            "verse:Neh.11.9",
+            "verse:Neh.12.10",
+            "verse:Neh.12.11",
+            "verse:Neh.12.12",
+            "verse:Neh.12.14",
+            "verse:Neh.12.15",
+            "verse:Neh.12.16",
+            "verse:Neh.12.17",
+            "verse:Neh.12.18",
+            "verse:Neh.12.19",
+            "verse:Neh.12.2",
+            "verse:Neh.12.20",
+            "verse:Neh.12.21",
+            "verse:Neh.12.23",
+            "verse:Neh.12.25",
+            "verse:Neh.12.27",
+            "verse:Neh.12.28",
+            "verse:Neh.12.29",
+            "verse:Neh.12.3",
+            "verse:Neh.12.30",
+            "verse:Neh.12.31",
+            "verse:Neh.12.32",
+            "verse:Neh.12.34",
+            "verse:Neh.12.38",
+            "verse:Neh.12.39",
+            "verse:Neh.12.4",
+            "verse:Neh.12.40",
+            "verse:Neh.12.41",
+            "verse:Neh.12.42",
+            "verse:Neh.12.43",
+            "verse:Neh.12.44",
+            "verse:Neh.12.5",
+            "verse:Neh.12.6",
+            "verse:Neh.12.7",
+            "verse:Neh.12.8",
+            "verse:Neh.12.9",
+            "verse:Neh.13.10",
+            "verse:Neh.13.11",
+            "verse:Neh.13.12",
+            "verse:Neh.13.13",
+            "verse:Neh.13.14",
+            "verse:Neh.13.15",
+            "verse:Neh.13.17",
+            "verse:Neh.13.18",
+            "verse:Neh.13.19",
+            "verse:Neh.13.20",
+            "verse:Neh.13.21",
+            "verse:Neh.13.22",
+            "verse:Neh.13.25",
+            "verse:Neh.13.27",
+            "verse:Neh.13.28",
+            "verse:Neh.13.29",
+            "verse:Neh.13.3",
+            "verse:Neh.13.30",
+            "verse:Neh.13.31",
+            "verse:Neh.13.4",
+            "verse:Neh.13.5",
+            "verse:Neh.13.7",
+            "verse:Neh.13.8",
+            "verse:Neh.13.9",
+            "verse:Neh.2.1",
+            "verse:Neh.2.10",
+            "verse:Neh.2.11",
+            "verse:Neh.2.12",
+            "verse:Neh.2.13",
+            "verse:Neh.2.14",
+            "verse:Neh.2.15",
+            "verse:Neh.2.16",
+            "verse:Neh.2.17",
+            "verse:Neh.2.18",
+            "verse:Neh.2.19",
+            "verse:Neh.2.2",
+            "verse:Neh.2.20",
+            "verse:Neh.2.3",
+            "verse:Neh.2.4",
+            "verse:Neh.2.5",
+            "verse:Neh.2.6",
+            "verse:Neh.2.8",
+            "verse:Neh.3.1",
+            "verse:Neh.3.10",
+            "verse:Neh.3.11",
+            "verse:Neh.3.12",
+            "verse:Neh.3.13",
+            "verse:Neh.3.14",
+            "verse:Neh.3.17",
+            "verse:Neh.3.18",
+            "verse:Neh.3.19",
+            "verse:Neh.3.20",
+            "verse:Neh.3.21",
+            "verse:Neh.3.22",
+            "verse:Neh.3.23",
+            "verse:Neh.3.24",
+            "verse:Neh.3.25",
+            "verse:Neh.3.26",
+            "verse:Neh.3.27",
+            "verse:Neh.3.28",
+            "verse:Neh.3.29",
+            "verse:Neh.3.3",
+            "verse:Neh.3.30",
+            "verse:Neh.3.31",
+            "verse:Neh.3.32",
+            "verse:Neh.3.4",
+            "verse:Neh.3.5",
+            "verse:Neh.3.6",
+            "verse:Neh.3.8",
+            "verse:Neh.3.9",
+            "verse:Neh.4.1",
+            "verse:Neh.4.10",
+            "verse:Neh.4.11",
+            "verse:Neh.4.12",
+            "verse:Neh.4.13",
+            "verse:Neh.4.14",
+            "verse:Neh.4.15",
+            "verse:Neh.4.16",
+            "verse:Neh.4.17",
+            "verse:Neh.4.18",
+            "verse:Neh.4.19",
+            "verse:Neh.4.2",
+            "verse:Neh.4.20",
+            "verse:Neh.4.21",
+            "verse:Neh.4.22",
+            "verse:Neh.4.23",
+            "verse:Neh.4.3",
+            "verse:Neh.4.4",
+            "verse:Neh.4.5",
+            "verse:Neh.4.6",
+            "verse:Neh.4.8",
+            "verse:Neh.4.9",
+            "verse:Neh.5.1",
+            "verse:Neh.5.10",
+            "verse:Neh.5.11",
+            "verse:Neh.5.12",
+            "verse:Neh.5.13",
+            "verse:Neh.5.14",
+            "verse:Neh.5.15",
+            "verse:Neh.5.16",
+            "verse:Neh.5.17",
+            "verse:Neh.5.18",
+            "verse:Neh.5.19",
+            "verse:Neh.5.2",
+            "verse:Neh.5.3",
+            "verse:Neh.5.4",
+            "verse:Neh.5.5",
+            "verse:Neh.5.6",
+            "verse:Neh.5.7",
+            "verse:Neh.5.8",
+            "verse:Neh.5.9",
+            "verse:Neh.6.1",
+            "verse:Neh.6.10",
+            "verse:Neh.6.11",
+            "verse:Neh.6.12",
+            "verse:Neh.6.13",
+            "verse:Neh.6.14",
+            "verse:Neh.6.15",
+            "verse:Neh.6.16",
+            "verse:Neh.6.17",
+            "verse:Neh.6.18",
+            "verse:Neh.6.19",
+            "verse:Neh.6.2",
+            "verse:Neh.6.3",
+            "verse:Neh.6.4",
+            "verse:Neh.6.5",
+            "verse:Neh.6.6",
+            "verse:Neh.6.7",
+            "verse:Neh.6.8",
+            "verse:Neh.6.9",
+            "verse:Neh.7.1",
+            "verse:Neh.7.10",
+            "verse:Neh.7.11",
+            "verse:Neh.7.12",
+            "verse:Neh.7.13",
+            "verse:Neh.7.14",
+            "verse:Neh.7.15",
+            "verse:Neh.7.16",
+            "verse:Neh.7.17",
+            "verse:Neh.7.18",
+            "verse:Neh.7.19",
+            "verse:Neh.7.2",
+            "verse:Neh.7.20",
+            "verse:Neh.7.21",
+            "verse:Neh.7.22",
+            "verse:Neh.7.23",
+            "verse:Neh.7.24",
+            "verse:Neh.7.25",
+            "verse:Neh.7.27",
+            "verse:Neh.7.28",
+            "verse:Neh.7.3",
+            "verse:Neh.7.31",
+            "verse:Neh.7.32",
+            "verse:Neh.7.33",
+            "verse:Neh.7.34",
+            "verse:Neh.7.35",
+            "verse:Neh.7.37",
+            "verse:Neh.7.38",
+            "verse:Neh.7.39",
+            "verse:Neh.7.4",
+            "verse:Neh.7.40",
+            "verse:Neh.7.41",
+            "verse:Neh.7.42",
+            "verse:Neh.7.43",
+            "verse:Neh.7.44",
+            "verse:Neh.7.45",
+            "verse:Neh.7.46",
+            "verse:Neh.7.47",
+            "verse:Neh.7.48",
+            "verse:Neh.7.49",
+            "verse:Neh.7.5",
+            "verse:Neh.7.50",
+            "verse:Neh.7.51",
+            "verse:Neh.7.52",
+            "verse:Neh.7.53",
+            "verse:Neh.7.54",
+            "verse:Neh.7.55",
+            "verse:Neh.7.56",
+            "verse:Neh.7.58",
+            "verse:Neh.7.59",
+            "verse:Neh.7.61",
+            "verse:Neh.7.62",
+            "verse:Neh.7.63",
+            "verse:Neh.7.64",
+            "verse:Neh.7.65",
+            "verse:Neh.7.66",
+            "verse:Neh.7.67",
+            "verse:Neh.7.68",
+            "verse:Neh.7.69",
+            "verse:Neh.7.7",
+            "verse:Neh.7.70",
+            "verse:Neh.7.71",
+            "verse:Neh.7.72",
+            "verse:Neh.7.73",
+            "verse:Neh.7.8",
+            "verse:Neh.7.9",
+            "verse:Neh.8.10",
+            "verse:Neh.8.11",
+            "verse:Neh.8.12",
+            "verse:Neh.8.15",
+            "verse:Neh.8.16",
+            "verse:Neh.8.18",
+            "verse:Neh.8.3",
+            "verse:Neh.8.7",
+            "verse:Neh.8.8",
+            "verse:Neh.9.1",
+            "verse:Neh.9.11",
+            "verse:Neh.9.12",
+            "verse:Neh.9.15",
+            "verse:Neh.9.16",
+            "verse:Neh.9.17",
+            "verse:Neh.9.19",
+            "verse:Neh.9.2",
+            "verse:Neh.9.20",
+            "verse:Neh.9.21",
+            "verse:Neh.9.23",
+            "verse:Neh.9.24",
+            "verse:Neh.9.25",
+            "verse:Neh.9.26",
+            "verse:Neh.9.27",
+            "verse:Neh.9.28",
+            "verse:Neh.9.29",
+            "verse:Neh.9.3",
+            "verse:Neh.9.30",
+            "verse:Neh.9.31",
+            "verse:Neh.9.33",
+            "verse:Neh.9.34",
+            "verse:Neh.9.35",
+            "verse:Neh.9.36",
+            "verse:Neh.9.37",
+            "verse:Neh.9.38",
+            "verse:Neh.9.4",
+            "verse:Neh.9.5",
+            "verse:Neh.9.6",
+            "verse:Neh.9.8"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.1.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-1-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.1.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-1-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.2.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beyond-the-river-a88310a-2-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.2.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beyond-the-river-a88310a-2-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.3.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jericho-1-a231f80-3-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.3.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beyond-the-river-a88310a-3-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.3.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-3-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.3.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-3-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.4.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ashdod-a30c937-4-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-nebuchadnezzar-1-7-6",
+            "mention:wb:pl-babylon-1-a217d18-7-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.26"
+          ],
+          "record_keys": [
+            "mention:wb:pl-bethlehem-1-a112427-7-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.29"
+          ],
+          "record_keys": [
+            "mention:wb:pl-kiriath-jearim-a9bba61-7-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.30"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ramah-1-a6d57ed-7-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.36"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jericho-1-a231f80-7-36"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.57"
+          ],
+          "record_keys": [
+            "mention:wb:p-solomon-1-7-57"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.7.60"
+          ],
+          "record_keys": [
+            "mention:wb:p-solomon-1-7-60"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-1",
+            "mention:wb:p-moses-1-8-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-8-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-8-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.8.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-joshua-1-8-17",
+            "mention:wb:p-nun-1-8-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-9-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-9-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-pharaoh-4-9-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-mount-sinai-abfba2a-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-9-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-9-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-og-1-9-22",
+            "mention:wb:p-sihon-1-9-22",
+            "mention:wb:pl-bashan-aa7a40a-9-22",
+            "mention:wb:pl-heshbon-abf2fc1-9-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.9.32"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-9-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.10.38"
+          ],
+          "record_keys": [
+            "mention:wb:p-aaron-1-10-38"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-solomon-1-11-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-perez-1-11-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-perez-1-11-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-judah-1-11-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.25"
+          ],
+          "record_keys": [
+            "mention:wb:p-judah-1-11-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.27"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beersheba-1-ad2f6c2-11-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.30"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beersheba-1-ad2f6c2-11-30",
+            "mention:wb:pl-lachish-a3cc590-11-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-12-1",
+            "mention:wb:p-zerubbabel-2-12-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-12-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-darius-1-12-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-12-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.26"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-12-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.33"
+          ],
+          "record_keys": [
+            "mention:wb:p-ezra-1-12-33"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.35"
+          ],
+          "record_keys": [
+            "mention:wb:p-asaph-2-12-35"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.36"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-12-36",
+            "mention:wb:p-ezra-1-12-36"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.37"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-12-37"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.45"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-12-45",
+            "mention:wb:p-solomon-1-12-45"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.46"
+          ],
+          "record_keys": [
+            "mention:wb:p-asaph-2-12-46",
+            "mention:wb:p-david-1-12-46"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.12.47"
+          ],
+          "record_keys": [
+            "mention:wb:p-aaron-1-12-47",
+            "mention:wb:p-zerubbabel-2-12-47"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-13-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-balaam-1-13-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-13-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.16"
+          ],
+          "record_keys": [
+            "mention:wb:pl-tyre-a160272-13-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.23"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ashdod-a30c937-13-23",
+            "mention:wb:pl-moab-1-aa0b1d6-13-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.24"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ashdod-a30c937-13-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.13.26"
+          ],
+          "record_keys": [
+            "mention:wb:p-solomon-1-13-26"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "translation-mention-coverage-limited",
+      "note": "Translation mentions are emitted only for entities whose name form was derived from this translation's own text; verses without such a form are reported complete_zero in this draft."
+    }
+  ]
+}

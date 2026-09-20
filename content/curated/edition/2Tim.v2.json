@@ -1,0 +1,1228 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-2tim-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-2tim-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-2tim-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-2tim:refsys:eng-v22:2tim.1.1-2tim.4.22",
+      "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+      "scope:wb-2tim-2:refsys:eng-v22:2tim.2.1-2tim.2.26",
+      "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+      "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+      "scope:wb-2tim-1-p1:refsys:eng-v22:2tim.1.1-2tim.1.2",
+      "scope:wb-2tim-1-p2:refsys:eng-v22:2tim.1.3-2tim.1.12",
+      "scope:wb-2tim-1-p3:refsys:eng-v22:2tim.1.13-2tim.1.18",
+      "scope:wb-2tim-2-p1:refsys:eng-v22:2tim.2.1-2tim.2.13",
+      "scope:wb-2tim-2-p2:refsys:eng-v22:2tim.2.14-2tim.2.26",
+      "scope:wb-2tim-3-p1:refsys:eng-v22:2tim.3.1-2tim.3.9",
+      "scope:wb-2tim-3-p2:refsys:eng-v22:2tim.3.10-2tim.3.17",
+      "scope:wb-2tim-4-p1:refsys:eng-v22:2tim.4.1-2tim.4.8",
+      "scope:wb-2tim-4-p2:refsys:eng-v22:2tim.4.9-2tim.4.15",
+      "scope:wb-2tim-4-p3:refsys:eng-v22:2tim.4.16-2tim.4.18",
+      "scope:wb-2tim-4-p4:refsys:eng-v22:2tim.4.19-2tim.4.22"
+    ],
+    "reference_keys": [
+      "verse:2Tim.1.1",
+      "verse:2Tim.1.2",
+      "verse:2Tim.1.3",
+      "verse:2Tim.1.4",
+      "verse:2Tim.1.5",
+      "verse:2Tim.1.6",
+      "verse:2Tim.1.7",
+      "verse:2Tim.1.8",
+      "verse:2Tim.1.9",
+      "verse:2Tim.1.10",
+      "verse:2Tim.1.11",
+      "verse:2Tim.1.12",
+      "verse:2Tim.1.13",
+      "verse:2Tim.1.14",
+      "verse:2Tim.1.15",
+      "verse:2Tim.1.16",
+      "verse:2Tim.1.17",
+      "verse:2Tim.1.18",
+      "verse:2Tim.2.1",
+      "verse:2Tim.2.2",
+      "verse:2Tim.2.3",
+      "verse:2Tim.2.4",
+      "verse:2Tim.2.5",
+      "verse:2Tim.2.6",
+      "verse:2Tim.2.7",
+      "verse:2Tim.2.8",
+      "verse:2Tim.2.9",
+      "verse:2Tim.2.10",
+      "verse:2Tim.2.11",
+      "verse:2Tim.2.12",
+      "verse:2Tim.2.13",
+      "verse:2Tim.2.14",
+      "verse:2Tim.2.15",
+      "verse:2Tim.2.16",
+      "verse:2Tim.2.17",
+      "verse:2Tim.2.18",
+      "verse:2Tim.2.19",
+      "verse:2Tim.2.20",
+      "verse:2Tim.2.21",
+      "verse:2Tim.2.22",
+      "verse:2Tim.2.23",
+      "verse:2Tim.2.24",
+      "verse:2Tim.2.25",
+      "verse:2Tim.2.26",
+      "verse:2Tim.3.1",
+      "verse:2Tim.3.2",
+      "verse:2Tim.3.3",
+      "verse:2Tim.3.4",
+      "verse:2Tim.3.5",
+      "verse:2Tim.3.6",
+      "verse:2Tim.3.7",
+      "verse:2Tim.3.8",
+      "verse:2Tim.3.9",
+      "verse:2Tim.3.10",
+      "verse:2Tim.3.11",
+      "verse:2Tim.3.12",
+      "verse:2Tim.3.13",
+      "verse:2Tim.3.14",
+      "verse:2Tim.3.15",
+      "verse:2Tim.3.16",
+      "verse:2Tim.3.17",
+      "verse:2Tim.4.1",
+      "verse:2Tim.4.2",
+      "verse:2Tim.4.3",
+      "verse:2Tim.4.4",
+      "verse:2Tim.4.5",
+      "verse:2Tim.4.6",
+      "verse:2Tim.4.7",
+      "verse:2Tim.4.8",
+      "verse:2Tim.4.9",
+      "verse:2Tim.4.10",
+      "verse:2Tim.4.11",
+      "verse:2Tim.4.12",
+      "verse:2Tim.4.13",
+      "verse:2Tim.4.14",
+      "verse:2Tim.4.15",
+      "verse:2Tim.4.16",
+      "verse:2Tim.4.17",
+      "verse:2Tim.4.18",
+      "verse:2Tim.4.19",
+      "verse:2Tim.4.20",
+      "verse:2Tim.4.21",
+      "verse:2Tim.4.22"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-moses-1-3-8",
+        "verse_key": "verse:2Tim.3.8",
+        "attestation_key": "attestation:wb-p-moses-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "and Jambres opposed ",
+          "suffix": ", so also these men "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-2-8",
+        "verse_key": "verse:2Tim.2.8",
+        "attestation_key": "attestation:wb-p-david-1-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "ead, descended from ",
+          "suffix": ", as proclaimed by m"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-2-26",
+        "verse_key": "verse:2Tim.2.26",
+        "attestation_key": "attestation:wb-p-satan-1-2-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 1,
+          "prefix": "escape the snare of ",
+          "suffix": ", who has taken them"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-saul-2-1-1",
+        "verse_key": "verse:2Tim.1.1",
+        "attestation_key": "attestation:wb-p-saul-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-saul-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Paul",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", an apostle of Chri"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-5-4-11",
+        "verse_key": "verse:2Tim.4.11",
+        "attestation_key": "attestation:wb-p-john-5-4-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mark",
+          "occurrence_ordinal": 1,
+          "prefix": "uke is with me. Get ",
+          "suffix": " and bring him with "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-timothy-1-1-2",
+        "verse_key": "verse:2Tim.1.2",
+        "attestation_key": "attestation:wb-p-timothy-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-timothy-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Timothy",
+          "occurrence_ordinal": 1,
+          "prefix": "To ",
+          "suffix": ", my beloved child: "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aquila-1-4-19",
+        "verse_key": "verse:2Tim.4.19",
+        "attestation_key": "attestation:wb-p-aquila-1-4-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aquila-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aquila",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet Prisca and ",
+          "suffix": ", as well as the hou"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-priscilla-1-4-19",
+        "verse_key": "verse:2Tim.4.19",
+        "attestation_key": "attestation:wb-p-priscilla-1-4-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-priscilla-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Prisca",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": " and Aquila, as well"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-tychicus-1-4-12",
+        "verse_key": "verse:2Tim.4.12",
+        "attestation_key": "attestation:wb-p-tychicus-1-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-tychicus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tychicus",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", however, I have se"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-trophimus-1-4-20",
+        "verse_key": "verse:2Tim.4.20",
+        "attestation_key": "attestation:wb-p-trophimus-1-4-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-trophimus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Trophimus",
+          "occurrence_ordinal": 1,
+          "prefix": "ned at Corinth, and ",
+          "suffix": " I left sick in Mile"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-erastus-2-4-20",
+        "verse_key": "verse:2Tim.4.20",
+        "attestation_key": "attestation:wb-p-erastus-2-4-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-erastus-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Erastus",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " has remained at Cor"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-titus-1-4-10",
+        "verse_key": "verse:2Tim.4.10",
+        "attestation_key": "attestation:wb-p-titus-1-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-titus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Titus",
+          "occurrence_ordinal": 1,
+          "prefix": "one to Galatia, and ",
+          "suffix": " to Dalmatia."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-luke-1-4-11",
+        "verse_key": "verse:2Tim.4.11",
+        "attestation_key": "attestation:wb-p-luke-1-4-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-luke-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Luke",
+          "occurrence_ordinal": 1,
+          "prefix": "Only ",
+          "suffix": " is with me. Get Mar"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-demas-1-4-10",
+        "verse_key": "verse:2Tim.4.10",
+        "attestation_key": "attestation:wb-p-demas-1-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-demas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Demas",
+          "occurrence_ordinal": 1,
+          "prefix": "because ",
+          "suffix": ", in his love of thi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hymenaeus-1-2-17",
+        "verse_key": "verse:2Tim.2.17",
+        "attestation_key": "attestation:wb-p-hymenaeus-1-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hymenaeus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hymenaeus",
+          "occurrence_ordinal": 1,
+          "prefix": "ene. Among them are ",
+          "suffix": " and Philetus,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-alexander-4-4-14",
+        "verse_key": "verse:2Tim.4.14",
+        "attestation_key": "attestation:wb-p-alexander-4-4-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-alexander-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Alexander",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " the coppersmith did"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-lois-1-1-5",
+        "verse_key": "verse:2Tim.1.5",
+        "attestation_key": "attestation:wb-p-lois-1-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-lois-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lois",
+          "occurrence_ordinal": 1,
+          "prefix": "in your grandmother ",
+          "suffix": " and your mother Eun"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-phygelus-1-1-15",
+        "verse_key": "verse:2Tim.1.15",
+        "attestation_key": "attestation:wb-p-phygelus-1-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-phygelus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Phygelus",
+          "occurrence_ordinal": 1,
+          "prefix": "erted me, including ",
+          "suffix": " and Hermogenes."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hermogenes-1-1-15",
+        "verse_key": "verse:2Tim.1.15",
+        "attestation_key": "attestation:wb-p-hermogenes-1-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hermogenes-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hermogenes",
+          "occurrence_ordinal": 1,
+          "prefix": "luding Phygelus and ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-onesiphorus-1-1-16",
+        "verse_key": "verse:2Tim.1.16",
+        "attestation_key": "attestation:wb-p-onesiphorus-1-1-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-onesiphorus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Onesiphorus",
+          "occurrence_ordinal": 1,
+          "prefix": "to the household of ",
+          "suffix": ", because he has oft"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-onesiphorus-1-4-19",
+        "verse_key": "verse:2Tim.4.19",
+        "attestation_key": "attestation:wb-p-onesiphorus-1-4-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-onesiphorus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Onesiphorus",
+          "occurrence_ordinal": 1,
+          "prefix": "as the household of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-philetus-1-2-17",
+        "verse_key": "verse:2Tim.2.17",
+        "attestation_key": "attestation:wb-p-philetus-1-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-philetus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Philetus",
+          "occurrence_ordinal": 1,
+          "prefix": "m are Hymenaeus and ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jannes-1-3-8",
+        "verse_key": "verse:2Tim.3.8",
+        "attestation_key": "attestation:wb-p-jannes-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jannes-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jannes",
+          "occurrence_ordinal": 1,
+          "prefix": "Just as ",
+          "suffix": " and Jambres opposed"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jannes-1-3-9",
+        "verse_key": "verse:2Tim.3.9",
+        "attestation_key": "attestation:wb-p-jannes-1-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jannes-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jannes",
+          "occurrence_ordinal": 1,
+          "prefix": "ther. For just like ",
+          "suffix": " and Jambres, their "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jambres-1-3-8",
+        "verse_key": "verse:2Tim.3.8",
+        "attestation_key": "attestation:wb-p-jambres-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jambres-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jambres",
+          "occurrence_ordinal": 1,
+          "prefix": "Just as Jannes and ",
+          "suffix": " opposed Moses, so a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jambres-1-3-9",
+        "verse_key": "verse:2Tim.3.9",
+        "attestation_key": "attestation:wb-p-jambres-1-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jambres-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jambres",
+          "occurrence_ordinal": 1,
+          "prefix": "ust like Jannes and ",
+          "suffix": ", their folly will b"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-crescens-1-4-10",
+        "verse_key": "verse:2Tim.4.10",
+        "attestation_key": "attestation:wb-p-crescens-1-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-crescens-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Crescens",
+          "occurrence_ordinal": 1,
+          "prefix": "ne to Thessalonica. ",
+          "suffix": " has gone to Galatia"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-eubulus-1-4-21",
+        "verse_key": "verse:2Tim.4.21",
+        "attestation_key": "attestation:wb-p-eubulus-1-4-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-eubulus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Eubulus",
+          "occurrence_ordinal": 1,
+          "prefix": "o me before winter. ",
+          "suffix": " sends you greetings"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pudens-1-4-21",
+        "verse_key": "verse:2Tim.4.21",
+        "attestation_key": "attestation:wb-p-pudens-1-4-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pudens-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pudens",
+          "occurrence_ordinal": 1,
+          "prefix": "ou greetings, as do ",
+          "suffix": ", Linus, Claudia, an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-linus-1-4-21",
+        "verse_key": "verse:2Tim.4.21",
+        "attestation_key": "attestation:wb-p-linus-1-4-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-linus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Linus",
+          "occurrence_ordinal": 1,
+          "prefix": "ings, as do Pudens, ",
+          "suffix": ", Claudia, and all t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-claudia-1-4-21",
+        "verse_key": "verse:2Tim.4.21",
+        "attestation_key": "attestation:wb-p-claudia-1-4-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-claudia-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Claudia",
+          "occurrence_ordinal": 1,
+          "prefix": "s do Pudens, Linus, ",
+          "suffix": ", and all the brothe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-asia-a197f19-1-15",
+        "verse_key": "verse:2Tim.1.15",
+        "attestation_key": "attestation:wb-pl-asia-a197f19-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-asia-a197f19"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Asia",
+          "occurrence_ordinal": 1,
+          "prefix": " in the Province of ",
+          "suffix": " has deserted me, in"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-corinth-a6f437a-4-20",
+        "verse_key": "verse:2Tim.4.20",
+        "attestation_key": "attestation:wb-pl-corinth-a6f437a-4-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-corinth-a6f437a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Corinth",
+          "occurrence_ordinal": 1,
+          "prefix": "tus has remained at ",
+          "suffix": ", and Trophimus I le"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-dalmatia-ae86cd7-4-10",
+        "verse_key": "verse:2Tim.4.10",
+        "attestation_key": "attestation:wb-pl-dalmatia-ae86cd7-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-dalmatia-ae86cd7"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Dalmatia",
+          "occurrence_ordinal": 1,
+          "prefix": "latia, and Titus to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ephesus-a5feb15-1-18",
+        "verse_key": "verse:2Tim.1.18",
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-1-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ephesus-a5feb15"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ephesus",
+          "occurrence_ordinal": 1,
+          "prefix": "ministered to me in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ephesus-a5feb15-4-12",
+        "verse_key": "verse:2Tim.4.12",
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ephesus-a5feb15"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ephesus",
+          "occurrence_ordinal": 1,
+          "prefix": "ver, I have sent to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-galatia-a0f440a-4-10",
+        "verse_key": "verse:2Tim.4.10",
+        "attestation_key": "attestation:wb-pl-galatia-a0f440a-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-galatia-a0f440a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Galatia",
+          "occurrence_ordinal": 1,
+          "prefix": "rescens has gone to ",
+          "suffix": ", and Titus to Dalma"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-iconium-ae425aa-3-11",
+        "verse_key": "verse:2Tim.3.11",
+        "attestation_key": "attestation:wb-pl-iconium-ae425aa-3-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-iconium-ae425aa"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Iconium",
+          "occurrence_ordinal": 1,
+          "prefix": "upon me in Antioch, ",
+          "suffix": ", and Lystra. What p"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lystra-af0719d-3-11",
+        "verse_key": "verse:2Tim.3.11",
+        "attestation_key": "attestation:wb-pl-lystra-af0719d-3-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lystra-af0719d"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lystra",
+          "occurrence_ordinal": 1,
+          "prefix": "tioch, Iconium, and ",
+          "suffix": ". What persecutions "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-miletus-a55027d-4-20",
+        "verse_key": "verse:2Tim.4.20",
+        "attestation_key": "attestation:wb-pl-miletus-a55027d-4-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-miletus-a55027d"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Miletus",
+          "occurrence_ordinal": 1,
+          "prefix": "imus I left sick in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-rome-afc8e7a-1-17",
+        "verse_key": "verse:2Tim.1.17",
+        "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-rome-afc8e7a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rome",
+          "occurrence_ordinal": 1,
+          "prefix": " when he arrived in ",
+          "suffix": ", he searched dilige"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-thessalonica-afa9d8e-4-10",
+        "verse_key": "verse:2Tim.4.10",
+        "attestation_key": "attestation:wb-pl-thessalonica-afa9d8e-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-thessalonica-afa9d8e"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Thessalonica",
+          "occurrence_ordinal": 1,
+          "prefix": "rted me and gone to ",
+          "suffix": ". Crescens has gone "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-troas-a91c509-4-13",
+        "verse_key": "verse:2Tim.4.13",
+        "attestation_key": "attestation:wb-pl-troas-a91c509-4-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-troas-a91c509"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Troas",
+          "occurrence_ordinal": 1,
+          "prefix": "left with Carpus at ",
+          "suffix": ", and my scrolls, es"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:2Tim.1.10",
+            "verse:2Tim.1.11",
+            "verse:2Tim.1.12",
+            "verse:2Tim.1.13",
+            "verse:2Tim.1.14",
+            "verse:2Tim.1.3",
+            "verse:2Tim.1.4",
+            "verse:2Tim.1.6",
+            "verse:2Tim.1.7",
+            "verse:2Tim.1.8",
+            "verse:2Tim.1.9",
+            "verse:2Tim.2.1",
+            "verse:2Tim.2.10",
+            "verse:2Tim.2.11",
+            "verse:2Tim.2.12",
+            "verse:2Tim.2.13",
+            "verse:2Tim.2.14",
+            "verse:2Tim.2.15",
+            "verse:2Tim.2.16",
+            "verse:2Tim.2.18",
+            "verse:2Tim.2.19",
+            "verse:2Tim.2.2",
+            "verse:2Tim.2.20",
+            "verse:2Tim.2.21",
+            "verse:2Tim.2.22",
+            "verse:2Tim.2.23",
+            "verse:2Tim.2.24",
+            "verse:2Tim.2.25",
+            "verse:2Tim.2.3",
+            "verse:2Tim.2.4",
+            "verse:2Tim.2.5",
+            "verse:2Tim.2.6",
+            "verse:2Tim.2.7",
+            "verse:2Tim.2.9",
+            "verse:2Tim.3.1",
+            "verse:2Tim.3.10",
+            "verse:2Tim.3.12",
+            "verse:2Tim.3.13",
+            "verse:2Tim.3.14",
+            "verse:2Tim.3.15",
+            "verse:2Tim.3.16",
+            "verse:2Tim.3.17",
+            "verse:2Tim.3.2",
+            "verse:2Tim.3.3",
+            "verse:2Tim.3.4",
+            "verse:2Tim.3.5",
+            "verse:2Tim.3.6",
+            "verse:2Tim.3.7",
+            "verse:2Tim.4.1",
+            "verse:2Tim.4.15",
+            "verse:2Tim.4.16",
+            "verse:2Tim.4.17",
+            "verse:2Tim.4.18",
+            "verse:2Tim.4.2",
+            "verse:2Tim.4.22",
+            "verse:2Tim.4.3",
+            "verse:2Tim.4.4",
+            "verse:2Tim.4.5",
+            "verse:2Tim.4.6",
+            "verse:2Tim.4.7",
+            "verse:2Tim.4.8",
+            "verse:2Tim.4.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-saul-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-timothy-1-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-lois-1-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-hermogenes-1-1-15",
+            "mention:wb:p-phygelus-1-1-15",
+            "mention:wb:pl-asia-a197f19-1-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-onesiphorus-1-1-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.17"
+          ],
+          "record_keys": [
+            "mention:wb:pl-rome-afc8e7a-1-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ephesus-a5feb15-1-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.2.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-2-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.2.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-hymenaeus-1-2-17",
+            "mention:wb:p-philetus-1-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.2.26"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-2-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-jambres-1-3-8",
+            "mention:wb:p-jannes-1-3-8",
+            "mention:wb:p-moses-1-3-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-jambres-1-3-9",
+            "mention:wb:p-jannes-1-3-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-iconium-ae425aa-3-11",
+            "mention:wb:pl-lystra-af0719d-3-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-crescens-1-4-10",
+            "mention:wb:p-demas-1-4-10",
+            "mention:wb:p-titus-1-4-10",
+            "mention:wb:pl-dalmatia-ae86cd7-4-10",
+            "mention:wb:pl-galatia-a0f440a-4-10",
+            "mention:wb:pl-thessalonica-afa9d8e-4-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-5-4-11",
+            "mention:wb:p-luke-1-4-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-tychicus-1-4-12",
+            "mention:wb:pl-ephesus-a5feb15-4-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-troas-a91c509-4-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-alexander-4-4-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-aquila-1-4-19",
+            "mention:wb:p-onesiphorus-1-4-19",
+            "mention:wb:p-priscilla-1-4-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-erastus-2-4-20",
+            "mention:wb:p-trophimus-1-4-20",
+            "mention:wb:pl-corinth-a6f437a-4-20",
+            "mention:wb:pl-miletus-a55027d-4-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-claudia-1-4-21",
+            "mention:wb:p-eubulus-1-4-21",
+            "mention:wb:p-linus-1-4-21",
+            "mention:wb:p-pudens-1-4-21"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

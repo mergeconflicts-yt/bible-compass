@@ -1,0 +1,176 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-3john-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-3john-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-3john-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-3john:refsys:eng-v22:3john.1.1-3john.1.14",
+      "scope:wb-3john-1:refsys:eng-v22:3john.1.1-3john.1.14",
+      "scope:wb-3john-1-p1:refsys:eng-v22:3john.1.1-3john.1.4",
+      "scope:wb-3john-1-p2:refsys:eng-v22:3john.1.5-3john.1.8",
+      "scope:wb-3john-1-p3:refsys:eng-v22:3john.1.9-3john.1.12",
+      "scope:wb-3john-1-p4:refsys:eng-v22:3john.1.13-3john.1.14"
+    ],
+    "reference_keys": [
+      "verse:3John.1.1",
+      "verse:3John.1.2",
+      "verse:3John.1.3",
+      "verse:3John.1.4",
+      "verse:3John.1.5",
+      "verse:3John.1.6",
+      "verse:3John.1.7",
+      "verse:3John.1.8",
+      "verse:3John.1.9",
+      "verse:3John.1.10",
+      "verse:3John.1.11",
+      "verse:3John.1.12",
+      "verse:3John.1.13",
+      "verse:3John.1.14"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-gaius-1-1-1",
+        "verse_key": "verse:3John.1.1",
+        "attestation_key": "attestation:wb-p-gaius-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-gaius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gaius",
+          "occurrence_ordinal": 1,
+          "prefix": "der, To the beloved ",
+          "suffix": ", whom I love in the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-diotrephes-1-1-9",
+        "verse_key": "verse:3John.1.9",
+        "attestation_key": "attestation:wb-p-diotrephes-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-diotrephes-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Diotrephes",
+          "occurrence_ordinal": 1,
+          "prefix": "rch about this, but ",
+          "suffix": ", who loves to be fi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-demetrius-2-1-12",
+        "verse_key": "verse:3John.1.12",
+        "attestation_key": "attestation:wb-p-demetrius-2-1-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-demetrius-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Demetrius",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " has received a good"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:3John.1.10",
+            "verse:3John.1.11",
+            "verse:3John.1.13",
+            "verse:3John.1.14",
+            "verse:3John.1.2",
+            "verse:3John.1.3",
+            "verse:3John.1.4",
+            "verse:3John.1.5",
+            "verse:3John.1.6",
+            "verse:3John.1.7",
+            "verse:3John.1.8"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:3John.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-gaius-1-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:3John.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-diotrephes-1-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:3John.1.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-demetrius-2-1-12"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

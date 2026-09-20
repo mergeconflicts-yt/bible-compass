@@ -1,0 +1,2088 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-2tim-canonical",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-2tim-canonical:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-2tim-canonical",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-2tim:refsys:eng-v22:2tim.1.1-2tim.4.22",
+      "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+      "scope:wb-2tim-2:refsys:eng-v22:2tim.2.1-2tim.2.26",
+      "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+      "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+      "scope:wb-2tim-1-p1:refsys:eng-v22:2tim.1.1-2tim.1.2",
+      "scope:wb-2tim-1-p2:refsys:eng-v22:2tim.1.3-2tim.1.12",
+      "scope:wb-2tim-1-p3:refsys:eng-v22:2tim.1.13-2tim.1.18",
+      "scope:wb-2tim-2-p1:refsys:eng-v22:2tim.2.1-2tim.2.13",
+      "scope:wb-2tim-2-p2:refsys:eng-v22:2tim.2.14-2tim.2.26",
+      "scope:wb-2tim-3-p1:refsys:eng-v22:2tim.3.1-2tim.3.9",
+      "scope:wb-2tim-3-p2:refsys:eng-v22:2tim.3.10-2tim.3.17",
+      "scope:wb-2tim-4-p1:refsys:eng-v22:2tim.4.1-2tim.4.8",
+      "scope:wb-2tim-4-p2:refsys:eng-v22:2tim.4.9-2tim.4.15",
+      "scope:wb-2tim-4-p3:refsys:eng-v22:2tim.4.16-2tim.4.18",
+      "scope:wb-2tim-4-p4:refsys:eng-v22:2tim.4.19-2tim.4.22"
+    ],
+    "reference_keys": [
+      "verse:2Tim.1.1",
+      "verse:2Tim.1.2",
+      "verse:2Tim.1.3",
+      "verse:2Tim.1.4",
+      "verse:2Tim.1.5",
+      "verse:2Tim.1.6",
+      "verse:2Tim.1.7",
+      "verse:2Tim.1.8",
+      "verse:2Tim.1.9",
+      "verse:2Tim.1.10",
+      "verse:2Tim.1.11",
+      "verse:2Tim.1.12",
+      "verse:2Tim.1.13",
+      "verse:2Tim.1.14",
+      "verse:2Tim.1.15",
+      "verse:2Tim.1.16",
+      "verse:2Tim.1.17",
+      "verse:2Tim.1.18",
+      "verse:2Tim.2.1",
+      "verse:2Tim.2.2",
+      "verse:2Tim.2.3",
+      "verse:2Tim.2.4",
+      "verse:2Tim.2.5",
+      "verse:2Tim.2.6",
+      "verse:2Tim.2.7",
+      "verse:2Tim.2.8",
+      "verse:2Tim.2.9",
+      "verse:2Tim.2.10",
+      "verse:2Tim.2.11",
+      "verse:2Tim.2.12",
+      "verse:2Tim.2.13",
+      "verse:2Tim.2.14",
+      "verse:2Tim.2.15",
+      "verse:2Tim.2.16",
+      "verse:2Tim.2.17",
+      "verse:2Tim.2.18",
+      "verse:2Tim.2.19",
+      "verse:2Tim.2.20",
+      "verse:2Tim.2.21",
+      "verse:2Tim.2.22",
+      "verse:2Tim.2.23",
+      "verse:2Tim.2.24",
+      "verse:2Tim.2.25",
+      "verse:2Tim.2.26",
+      "verse:2Tim.3.1",
+      "verse:2Tim.3.2",
+      "verse:2Tim.3.3",
+      "verse:2Tim.3.4",
+      "verse:2Tim.3.5",
+      "verse:2Tim.3.6",
+      "verse:2Tim.3.7",
+      "verse:2Tim.3.8",
+      "verse:2Tim.3.9",
+      "verse:2Tim.3.10",
+      "verse:2Tim.3.11",
+      "verse:2Tim.3.12",
+      "verse:2Tim.3.13",
+      "verse:2Tim.3.14",
+      "verse:2Tim.3.15",
+      "verse:2Tim.3.16",
+      "verse:2Tim.3.17",
+      "verse:2Tim.4.1",
+      "verse:2Tim.4.2",
+      "verse:2Tim.4.3",
+      "verse:2Tim.4.4",
+      "verse:2Tim.4.5",
+      "verse:2Tim.4.6",
+      "verse:2Tim.4.7",
+      "verse:2Tim.4.8",
+      "verse:2Tim.4.9",
+      "verse:2Tim.4.10",
+      "verse:2Tim.4.11",
+      "verse:2Tim.4.12",
+      "verse:2Tim.4.13",
+      "verse:2Tim.4.14",
+      "verse:2Tim.4.15",
+      "verse:2Tim.4.16",
+      "verse:2Tim.4.17",
+      "verse:2Tim.4.18",
+      "verse:2Tim.4.19",
+      "verse:2Tim.4.20",
+      "verse:2Tim.4.21",
+      "verse:2Tim.4.22"
+    ],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-moses-1",
+        "entity_type": "person",
+        "proposed_label": "Moses",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-david-1",
+        "entity_type": "person",
+        "proposed_label": "David",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-satan-1",
+        "entity_type": "person",
+        "proposed_label": "Satan",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-saul-2",
+        "entity_type": "person",
+        "proposed_label": "Saul",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-john-5",
+        "entity_type": "person",
+        "proposed_label": "John",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-timothy-1",
+        "entity_type": "person",
+        "proposed_label": "Timothy",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-aquila-1",
+        "entity_type": "person",
+        "proposed_label": "Aquila",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-priscilla-1",
+        "entity_type": "person",
+        "proposed_label": "Priscilla",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-tychicus-1",
+        "entity_type": "person",
+        "proposed_label": "Tychicus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-trophimus-1",
+        "entity_type": "person",
+        "proposed_label": "Trophimus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-erastus-2",
+        "entity_type": "person",
+        "proposed_label": "Erastus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-titus-1",
+        "entity_type": "person",
+        "proposed_label": "Titus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-luke-1",
+        "entity_type": "person",
+        "proposed_label": "Luke",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-demas-1",
+        "entity_type": "person",
+        "proposed_label": "Demas",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hymenaeus-1",
+        "entity_type": "person",
+        "proposed_label": "Hymenaeus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-alexander-4",
+        "entity_type": "person",
+        "proposed_label": "Alexander",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-lois-1",
+        "entity_type": "person",
+        "proposed_label": "Lois",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-eunice-1",
+        "entity_type": "person",
+        "proposed_label": "Eunice",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-phygelus-1",
+        "entity_type": "person",
+        "proposed_label": "Phygelus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hermogenes-1",
+        "entity_type": "person",
+        "proposed_label": "Hermogenes",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-onesiphorus-1",
+        "entity_type": "person",
+        "proposed_label": "Onesiphorus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-philetus-1",
+        "entity_type": "person",
+        "proposed_label": "Philetus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jannes-1",
+        "entity_type": "person",
+        "proposed_label": "Jannes",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jambres-1",
+        "entity_type": "person",
+        "proposed_label": "Jambres",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-crescens-1",
+        "entity_type": "person",
+        "proposed_label": "Crescens",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-eubulus-1",
+        "entity_type": "person",
+        "proposed_label": "Eubulus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-pudens-1",
+        "entity_type": "person",
+        "proposed_label": "Pudens",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-linus-1",
+        "entity_type": "person",
+        "proposed_label": "Linus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-claudia-1",
+        "entity_type": "person",
+        "proposed_label": "Claudia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-antioch-2-a6c704a",
+        "entity_type": "place",
+        "proposed_label": "Antioch 2",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "entity_type": "place",
+        "proposed_label": "Asia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-corinth-a6f437a",
+        "entity_type": "place",
+        "proposed_label": "Corinth",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-dalmatia-ae86cd7",
+        "entity_type": "place",
+        "proposed_label": "Dalmatia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
+        "entity_type": "place",
+        "proposed_label": "Ephesus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
+        "entity_type": "place",
+        "proposed_label": "Galatia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-iconium-ae425aa",
+        "entity_type": "place",
+        "proposed_label": "Iconium",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lystra-af0719d",
+        "entity_type": "place",
+        "proposed_label": "Lystra",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-miletus-a55027d",
+        "entity_type": "place",
+        "proposed_label": "Miletus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-rome-afc8e7a",
+        "entity_type": "place",
+        "proposed_label": "Rome",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-thessalonica-afa9d8e",
+        "entity_type": "place",
+        "proposed_label": "Thessalonica",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-troas-a91c509",
+        "entity_type": "place",
+        "proposed_label": "Troas",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [],
+    "citations": [],
+    "attestations": [
+      {
+        "attestation_key": "attestation:wb-p-moses-1-3-8",
+        "reference_key": "verse:2Tim.3.8",
+        "entity_key": "entity:p-moses-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-david-1-2-8",
+        "reference_key": "verse:2Tim.2.8",
+        "entity_key": "entity:p-david-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-satan-1-2-26",
+        "reference_key": "verse:2Tim.2.26",
+        "entity_key": "entity:p-satan-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-1-1",
+        "reference_key": "verse:2Tim.1.1",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-john-5-4-11",
+        "reference_key": "verse:2Tim.4.11",
+        "entity_key": "entity:p-john-5",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-timothy-1-1-2",
+        "reference_key": "verse:2Tim.1.2",
+        "entity_key": "entity:p-timothy-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-timothy-1-3-17",
+        "reference_key": "verse:2Tim.3.17",
+        "entity_key": "entity:p-timothy-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-aquila-1-4-19",
+        "reference_key": "verse:2Tim.4.19",
+        "entity_key": "entity:p-aquila-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-priscilla-1-4-19",
+        "reference_key": "verse:2Tim.4.19",
+        "entity_key": "entity:p-priscilla-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-tychicus-1-4-12",
+        "reference_key": "verse:2Tim.4.12",
+        "entity_key": "entity:p-tychicus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-trophimus-1-4-20",
+        "reference_key": "verse:2Tim.4.20",
+        "entity_key": "entity:p-trophimus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-erastus-2-4-20",
+        "reference_key": "verse:2Tim.4.20",
+        "entity_key": "entity:p-erastus-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-titus-1-4-10",
+        "reference_key": "verse:2Tim.4.10",
+        "entity_key": "entity:p-titus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-luke-1-4-11",
+        "reference_key": "verse:2Tim.4.11",
+        "entity_key": "entity:p-luke-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-demas-1-4-10",
+        "reference_key": "verse:2Tim.4.10",
+        "entity_key": "entity:p-demas-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-hymenaeus-1-2-17",
+        "reference_key": "verse:2Tim.2.17",
+        "entity_key": "entity:p-hymenaeus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-alexander-4-4-14",
+        "reference_key": "verse:2Tim.4.14",
+        "entity_key": "entity:p-alexander-4",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-lois-1-1-5",
+        "reference_key": "verse:2Tim.1.5",
+        "entity_key": "entity:p-lois-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-eunice-1-1-6",
+        "reference_key": "verse:2Tim.1.6",
+        "entity_key": "entity:p-eunice-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-phygelus-1-1-15",
+        "reference_key": "verse:2Tim.1.15",
+        "entity_key": "entity:p-phygelus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-hermogenes-1-1-15",
+        "reference_key": "verse:2Tim.1.15",
+        "entity_key": "entity:p-hermogenes-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-onesiphorus-1-1-16",
+        "reference_key": "verse:2Tim.1.16",
+        "entity_key": "entity:p-onesiphorus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-onesiphorus-1-4-19",
+        "reference_key": "verse:2Tim.4.19",
+        "entity_key": "entity:p-onesiphorus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-philetus-1-2-17",
+        "reference_key": "verse:2Tim.2.17",
+        "entity_key": "entity:p-philetus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jannes-1-3-8",
+        "reference_key": "verse:2Tim.3.8",
+        "entity_key": "entity:p-jannes-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jannes-1-3-9",
+        "reference_key": "verse:2Tim.3.9",
+        "entity_key": "entity:p-jannes-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jambres-1-3-8",
+        "reference_key": "verse:2Tim.3.8",
+        "entity_key": "entity:p-jambres-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-jambres-1-3-9",
+        "reference_key": "verse:2Tim.3.9",
+        "entity_key": "entity:p-jambres-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-crescens-1-4-10",
+        "reference_key": "verse:2Tim.4.10",
+        "entity_key": "entity:p-crescens-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-eubulus-1-4-21",
+        "reference_key": "verse:2Tim.4.21",
+        "entity_key": "entity:p-eubulus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-pudens-1-4-21",
+        "reference_key": "verse:2Tim.4.21",
+        "entity_key": "entity:p-pudens-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-linus-1-4-21",
+        "reference_key": "verse:2Tim.4.21",
+        "entity_key": "entity:p-linus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-claudia-1-4-21",
+        "reference_key": "verse:2Tim.4.21",
+        "entity_key": "entity:p-claudia-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-antioch-2-a6c704a-3-11",
+        "reference_key": "verse:2Tim.3.11",
+        "entity_key": "entity:pl-antioch-2-a6c704a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-asia-a197f19-1-15",
+        "reference_key": "verse:2Tim.1.15",
+        "entity_key": "entity:pl-asia-a197f19",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-corinth-a6f437a-4-20",
+        "reference_key": "verse:2Tim.4.20",
+        "entity_key": "entity:pl-corinth-a6f437a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-dalmatia-ae86cd7-4-10",
+        "reference_key": "verse:2Tim.4.10",
+        "entity_key": "entity:pl-dalmatia-ae86cd7",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-1-18",
+        "reference_key": "verse:2Tim.1.18",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-4-12",
+        "reference_key": "verse:2Tim.4.12",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-galatia-a0f440a-4-10",
+        "reference_key": "verse:2Tim.4.10",
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-iconium-ae425aa-3-11",
+        "reference_key": "verse:2Tim.3.11",
+        "entity_key": "entity:pl-iconium-ae425aa",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lystra-af0719d-3-11",
+        "reference_key": "verse:2Tim.3.11",
+        "entity_key": "entity:pl-lystra-af0719d",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-miletus-a55027d-4-20",
+        "reference_key": "verse:2Tim.4.20",
+        "entity_key": "entity:pl-miletus-a55027d",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-17",
+        "reference_key": "verse:2Tim.1.17",
+        "entity_key": "entity:pl-rome-afc8e7a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-thessalonica-afa9d8e-4-10",
+        "reference_key": "verse:2Tim.4.10",
+        "entity_key": "entity:pl-thessalonica-afa9d8e",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-troas-a91c509-4-13",
+        "reference_key": "verse:2Tim.4.13",
+        "entity_key": "entity:pl-troas-a91c509",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [],
+    "events": [],
+    "places": [
+      {
+        "entity_key": "entity:pl-antioch-2-a6c704a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-antioch-2-a6c704a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-asia-a197f19",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-asia-a197f19",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-corinth-a6f437a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-corinth-a6f437a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-dalmatia-ae86cd7",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-dalmatia-ae86cd7",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-ephesus-a5feb15",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-galatia-a0f440a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-iconium-ae425aa",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-iconium-ae425aa",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-lystra-af0719d",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-lystra-af0719d",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-miletus-a55027d",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-miletus-a55027d",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-rome-afc8e7a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-rome-afc8e7a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-thessalonica-afa9d8e",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-thessalonica-afa9d8e",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-troas-a91c509",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-troas-a91c509",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:wb-2tim-3-p-moses-1",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:p-moses-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-2-p-david-1",
+        "scope_key": "scope:wb-2tim-2:refsys:eng-v22:2tim.2.1-2tim.2.26",
+        "entity_key": "entity:p-david-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-2-p-satan-1",
+        "scope_key": "scope:wb-2tim-2:refsys:eng-v22:2tim.2.1-2tim.2.26",
+        "entity_key": "entity:p-satan-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-saul-2",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-saul-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-john-5",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-john-5",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-timothy-1",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-timothy-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-3-p-timothy-1",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:p-timothy-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-aquila-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-aquila-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-priscilla-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-priscilla-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-tychicus-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-tychicus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-trophimus-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-trophimus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-erastus-2",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-erastus-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-titus-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-titus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-luke-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-luke-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-demas-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-demas-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-2-p-hymenaeus-1",
+        "scope_key": "scope:wb-2tim-2:refsys:eng-v22:2tim.2.1-2tim.2.26",
+        "entity_key": "entity:p-hymenaeus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-alexander-4",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-alexander-4",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-lois-1",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-lois-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-eunice-1",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-eunice-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-phygelus-1",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-phygelus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-hermogenes-1",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-hermogenes-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-p-onesiphorus-1",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:p-onesiphorus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-onesiphorus-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-onesiphorus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-2-p-philetus-1",
+        "scope_key": "scope:wb-2tim-2:refsys:eng-v22:2tim.2.1-2tim.2.26",
+        "entity_key": "entity:p-philetus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-3-p-jannes-1",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:p-jannes-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-3-p-jambres-1",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:p-jambres-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-crescens-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-crescens-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-eubulus-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-eubulus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-pudens-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-pudens-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-linus-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-linus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-p-claudia-1",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:p-claudia-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-3-pl-antioch-2-a6c704a",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:pl-antioch-2-a6c704a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-pl-asia-a197f19",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:pl-asia-a197f19",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-corinth-a6f437a",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-corinth-a6f437a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-dalmatia-ae86cd7",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-dalmatia-ae86cd7",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-pl-ephesus-a5feb15",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-ephesus-a5feb15",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-galatia-a0f440a",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-3-pl-iconium-ae425aa",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:pl-iconium-ae425aa",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-3-pl-lystra-af0719d",
+        "scope_key": "scope:wb-2tim-3:refsys:eng-v22:2tim.3.1-2tim.3.17",
+        "entity_key": "entity:pl-lystra-af0719d",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-miletus-a55027d",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-miletus-a55027d",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-1-pl-rome-afc8e7a",
+        "scope_key": "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18",
+        "entity_key": "entity:pl-rome-afc8e7a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-thessalonica-afa9d8e",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-thessalonica-afa9d8e",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2tim-4-pl-troas-a91c509",
+        "scope_key": "scope:wb-2tim-4:refsys:eng-v22:2tim.4.1-2tim.4.22",
+        "entity_key": "entity:pl-troas-a91c509",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "reconciliation_records": [
+      {
+        "candidate_key": "candidate:wb:p-moses-1",
+        "canonical_entity_key": "entity:p-moses-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-david-1",
+        "canonical_entity_key": "entity:p-david-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-satan-1",
+        "canonical_entity_key": "entity:p-satan-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-saul-2",
+        "canonical_entity_key": "entity:p-saul-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-john-5",
+        "canonical_entity_key": "entity:p-john-5",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-timothy-1",
+        "canonical_entity_key": "entity:p-timothy-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-aquila-1",
+        "canonical_entity_key": "entity:p-aquila-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-priscilla-1",
+        "canonical_entity_key": "entity:p-priscilla-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-tychicus-1",
+        "canonical_entity_key": "entity:p-tychicus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-trophimus-1",
+        "canonical_entity_key": "entity:p-trophimus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-erastus-2",
+        "canonical_entity_key": "entity:p-erastus-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-titus-1",
+        "canonical_entity_key": "entity:p-titus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-luke-1",
+        "canonical_entity_key": "entity:p-luke-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-demas-1",
+        "canonical_entity_key": "entity:p-demas-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hymenaeus-1",
+        "canonical_entity_key": "entity:p-hymenaeus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-alexander-4",
+        "canonical_entity_key": "entity:p-alexander-4",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-lois-1",
+        "canonical_entity_key": "entity:p-lois-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-eunice-1",
+        "canonical_entity_key": "entity:p-eunice-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-phygelus-1",
+        "canonical_entity_key": "entity:p-phygelus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-hermogenes-1",
+        "canonical_entity_key": "entity:p-hermogenes-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-onesiphorus-1",
+        "canonical_entity_key": "entity:p-onesiphorus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-philetus-1",
+        "canonical_entity_key": "entity:p-philetus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jannes-1",
+        "canonical_entity_key": "entity:p-jannes-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-jambres-1",
+        "canonical_entity_key": "entity:p-jambres-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-crescens-1",
+        "canonical_entity_key": "entity:p-crescens-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-eubulus-1",
+        "canonical_entity_key": "entity:p-eubulus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-pudens-1",
+        "canonical_entity_key": "entity:p-pudens-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-linus-1",
+        "canonical_entity_key": "entity:p-linus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-claudia-1",
+        "canonical_entity_key": "entity:p-claudia-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-antioch-2-a6c704a",
+        "canonical_entity_key": "entity:pl-antioch-2-a6c704a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "canonical_entity_key": "entity:pl-asia-a197f19",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-corinth-a6f437a",
+        "canonical_entity_key": "entity:pl-corinth-a6f437a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-dalmatia-ae86cd7",
+        "canonical_entity_key": "entity:pl-dalmatia-ae86cd7",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
+        "canonical_entity_key": "entity:pl-ephesus-a5feb15",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
+        "canonical_entity_key": "entity:pl-galatia-a0f440a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-iconium-ae425aa",
+        "canonical_entity_key": "entity:pl-iconium-ae425aa",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lystra-af0719d",
+        "canonical_entity_key": "entity:pl-lystra-af0719d",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-miletus-a55027d",
+        "canonical_entity_key": "entity:pl-miletus-a55027d",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-rome-afc8e7a",
+        "canonical_entity_key": "entity:pl-rome-afc8e7a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-thessalonica-afa9d8e",
+        "canonical_entity_key": "entity:pl-thessalonica-afa9d8e",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-troas-a91c509",
+        "canonical_entity_key": "entity:pl-troas-a91c509",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:2Tim.1.10",
+            "verse:2Tim.1.11",
+            "verse:2Tim.1.12",
+            "verse:2Tim.1.13",
+            "verse:2Tim.1.14",
+            "verse:2Tim.1.3",
+            "verse:2Tim.1.4",
+            "verse:2Tim.1.7",
+            "verse:2Tim.1.8",
+            "verse:2Tim.1.9",
+            "verse:2Tim.2.1",
+            "verse:2Tim.2.10",
+            "verse:2Tim.2.11",
+            "verse:2Tim.2.12",
+            "verse:2Tim.2.13",
+            "verse:2Tim.2.14",
+            "verse:2Tim.2.15",
+            "verse:2Tim.2.16",
+            "verse:2Tim.2.18",
+            "verse:2Tim.2.19",
+            "verse:2Tim.2.2",
+            "verse:2Tim.2.20",
+            "verse:2Tim.2.21",
+            "verse:2Tim.2.22",
+            "verse:2Tim.2.23",
+            "verse:2Tim.2.24",
+            "verse:2Tim.2.25",
+            "verse:2Tim.2.3",
+            "verse:2Tim.2.4",
+            "verse:2Tim.2.5",
+            "verse:2Tim.2.6",
+            "verse:2Tim.2.7",
+            "verse:2Tim.2.9",
+            "verse:2Tim.3.1",
+            "verse:2Tim.3.10",
+            "verse:2Tim.3.12",
+            "verse:2Tim.3.13",
+            "verse:2Tim.3.14",
+            "verse:2Tim.3.15",
+            "verse:2Tim.3.16",
+            "verse:2Tim.3.2",
+            "verse:2Tim.3.3",
+            "verse:2Tim.3.4",
+            "verse:2Tim.3.5",
+            "verse:2Tim.3.6",
+            "verse:2Tim.3.7",
+            "verse:2Tim.4.1",
+            "verse:2Tim.4.15",
+            "verse:2Tim.4.16",
+            "verse:2Tim.4.17",
+            "verse:2Tim.4.18",
+            "verse:2Tim.4.2",
+            "verse:2Tim.4.22",
+            "verse:2Tim.4.3",
+            "verse:2Tim.4.4",
+            "verse:2Tim.4.5",
+            "verse:2Tim.4.6",
+            "verse:2Tim.4.7",
+            "verse:2Tim.4.8",
+            "verse:2Tim.4.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-saul-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.2"
+          ],
+          "record_keys": [
+            "attestation:wb-p-timothy-1-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-lois-1-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-eunice-1-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.15"
+          ],
+          "record_keys": [
+            "attestation:wb-p-hermogenes-1-1-15",
+            "attestation:wb-p-phygelus-1-1-15",
+            "attestation:wb-pl-asia-a197f19-1-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.16"
+          ],
+          "record_keys": [
+            "attestation:wb-p-onesiphorus-1-1-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.17"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-rome-afc8e7a-1-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.1.18"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-ephesus-a5feb15-1-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.2.8"
+          ],
+          "record_keys": [
+            "attestation:wb-p-david-1-2-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.2.17"
+          ],
+          "record_keys": [
+            "attestation:wb-p-hymenaeus-1-2-17",
+            "attestation:wb-p-philetus-1-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.2.26"
+          ],
+          "record_keys": [
+            "attestation:wb-p-satan-1-2-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.8"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jambres-1-3-8",
+            "attestation:wb-p-jannes-1-3-8",
+            "attestation:wb-p-moses-1-3-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.9"
+          ],
+          "record_keys": [
+            "attestation:wb-p-jambres-1-3-9",
+            "attestation:wb-p-jannes-1-3-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.11"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-antioch-2-a6c704a-3-11",
+            "attestation:wb-pl-iconium-ae425aa-3-11",
+            "attestation:wb-pl-lystra-af0719d-3-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.3.17"
+          ],
+          "record_keys": [
+            "attestation:wb-p-timothy-1-3-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.10"
+          ],
+          "record_keys": [
+            "attestation:wb-p-crescens-1-4-10",
+            "attestation:wb-p-demas-1-4-10",
+            "attestation:wb-p-titus-1-4-10",
+            "attestation:wb-pl-dalmatia-ae86cd7-4-10",
+            "attestation:wb-pl-galatia-a0f440a-4-10",
+            "attestation:wb-pl-thessalonica-afa9d8e-4-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.11"
+          ],
+          "record_keys": [
+            "attestation:wb-p-john-5-4-11",
+            "attestation:wb-p-luke-1-4-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.12"
+          ],
+          "record_keys": [
+            "attestation:wb-p-tychicus-1-4-12",
+            "attestation:wb-pl-ephesus-a5feb15-4-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.13"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-troas-a91c509-4-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.14"
+          ],
+          "record_keys": [
+            "attestation:wb-p-alexander-4-4-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.19"
+          ],
+          "record_keys": [
+            "attestation:wb-p-aquila-1-4-19",
+            "attestation:wb-p-onesiphorus-1-4-19",
+            "attestation:wb-p-priscilla-1-4-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.20"
+          ],
+          "record_keys": [
+            "attestation:wb-p-erastus-2-4-20",
+            "attestation:wb-p-trophimus-1-4-20",
+            "attestation:wb-pl-corinth-a6f437a-4-20",
+            "attestation:wb-pl-miletus-a55027d-4-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Tim.4.21"
+          ],
+          "record_keys": [
+            "attestation:wb-p-claudia-1-4-21",
+            "attestation:wb-p-eubulus-1-4-21",
+            "attestation:wb-p-linus-1-4-21",
+            "attestation:wb-p-pudens-1-4-21"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

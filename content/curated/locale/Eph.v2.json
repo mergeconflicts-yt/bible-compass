@@ -1,0 +1,2385 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-eph-locale",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-eph-locale:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-eph-locale",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-eph:refsys:eng-v22:eph.1.1-eph.6.24",
+      "scope:wb-eph-1:refsys:eng-v22:eph.1.1-eph.1.23",
+      "scope:wb-eph-2:refsys:eng-v22:eph.2.1-eph.2.22",
+      "scope:wb-eph-3:refsys:eng-v22:eph.3.1-eph.3.21",
+      "scope:wb-eph-4:refsys:eng-v22:eph.4.1-eph.4.32",
+      "scope:wb-eph-5:refsys:eng-v22:eph.5.1-eph.5.33",
+      "scope:wb-eph-6:refsys:eng-v22:eph.6.1-eph.6.24",
+      "scope:wb-eph-1-p1:refsys:eng-v22:eph.1.1-eph.1.2",
+      "scope:wb-eph-1-p2:refsys:eng-v22:eph.1.3-eph.1.14",
+      "scope:wb-eph-1-p3:refsys:eng-v22:eph.1.15-eph.1.23",
+      "scope:wb-eph-2-p1:refsys:eng-v22:eph.2.1-eph.2.10",
+      "scope:wb-eph-2-p2:refsys:eng-v22:eph.2.11-eph.2.18",
+      "scope:wb-eph-2-p3:refsys:eng-v22:eph.2.19-eph.2.22",
+      "scope:wb-eph-3-p1:refsys:eng-v22:eph.3.1-eph.3.13",
+      "scope:wb-eph-3-p2:refsys:eng-v22:eph.3.14-eph.3.21",
+      "scope:wb-eph-4-p1:refsys:eng-v22:eph.4.1-eph.4.16",
+      "scope:wb-eph-4-p2:refsys:eng-v22:eph.4.17-eph.4.32",
+      "scope:wb-eph-5-p1:refsys:eng-v22:eph.5.1-eph.5.7",
+      "scope:wb-eph-5-p2:refsys:eng-v22:eph.5.8-eph.5.20",
+      "scope:wb-eph-5-p3:refsys:eng-v22:eph.5.21-eph.5.33",
+      "scope:wb-eph-6-p1:refsys:eng-v22:eph.6.1-eph.6.4",
+      "scope:wb-eph-6-p2:refsys:eng-v22:eph.6.5-eph.6.9",
+      "scope:wb-eph-6-p3:refsys:eng-v22:eph.6.10-eph.6.20",
+      "scope:wb-eph-6-p4:refsys:eng-v22:eph.6.21-eph.6.24"
+    ],
+    "reference_keys": [
+      "verse:Eph.1.1",
+      "verse:Eph.1.2",
+      "verse:Eph.1.3",
+      "verse:Eph.1.4",
+      "verse:Eph.1.5",
+      "verse:Eph.1.6",
+      "verse:Eph.1.7",
+      "verse:Eph.1.8",
+      "verse:Eph.1.9",
+      "verse:Eph.1.10",
+      "verse:Eph.1.11",
+      "verse:Eph.1.12",
+      "verse:Eph.1.13",
+      "verse:Eph.1.14",
+      "verse:Eph.1.15",
+      "verse:Eph.1.16",
+      "verse:Eph.1.17",
+      "verse:Eph.1.18",
+      "verse:Eph.1.19",
+      "verse:Eph.1.20",
+      "verse:Eph.1.21",
+      "verse:Eph.1.22",
+      "verse:Eph.1.23",
+      "verse:Eph.2.1",
+      "verse:Eph.2.2",
+      "verse:Eph.2.3",
+      "verse:Eph.2.4",
+      "verse:Eph.2.5",
+      "verse:Eph.2.6",
+      "verse:Eph.2.7",
+      "verse:Eph.2.8",
+      "verse:Eph.2.9",
+      "verse:Eph.2.10",
+      "verse:Eph.2.11",
+      "verse:Eph.2.12",
+      "verse:Eph.2.13",
+      "verse:Eph.2.14",
+      "verse:Eph.2.15",
+      "verse:Eph.2.16",
+      "verse:Eph.2.17",
+      "verse:Eph.2.18",
+      "verse:Eph.2.19",
+      "verse:Eph.2.20",
+      "verse:Eph.2.21",
+      "verse:Eph.2.22",
+      "verse:Eph.3.1",
+      "verse:Eph.3.2",
+      "verse:Eph.3.3",
+      "verse:Eph.3.4",
+      "verse:Eph.3.5",
+      "verse:Eph.3.6",
+      "verse:Eph.3.7",
+      "verse:Eph.3.8",
+      "verse:Eph.3.9",
+      "verse:Eph.3.10",
+      "verse:Eph.3.11",
+      "verse:Eph.3.12",
+      "verse:Eph.3.13",
+      "verse:Eph.3.14",
+      "verse:Eph.3.15",
+      "verse:Eph.3.16",
+      "verse:Eph.3.17",
+      "verse:Eph.3.18",
+      "verse:Eph.3.19",
+      "verse:Eph.3.20",
+      "verse:Eph.3.21",
+      "verse:Eph.4.1",
+      "verse:Eph.4.2",
+      "verse:Eph.4.3",
+      "verse:Eph.4.4",
+      "verse:Eph.4.5",
+      "verse:Eph.4.6",
+      "verse:Eph.4.7",
+      "verse:Eph.4.8",
+      "verse:Eph.4.9",
+      "verse:Eph.4.10",
+      "verse:Eph.4.11",
+      "verse:Eph.4.12",
+      "verse:Eph.4.13",
+      "verse:Eph.4.14",
+      "verse:Eph.4.15",
+      "verse:Eph.4.16",
+      "verse:Eph.4.17",
+      "verse:Eph.4.18",
+      "verse:Eph.4.19",
+      "verse:Eph.4.20",
+      "verse:Eph.4.21",
+      "verse:Eph.4.22",
+      "verse:Eph.4.23",
+      "verse:Eph.4.24",
+      "verse:Eph.4.25",
+      "verse:Eph.4.26",
+      "verse:Eph.4.27",
+      "verse:Eph.4.28",
+      "verse:Eph.4.29",
+      "verse:Eph.4.30",
+      "verse:Eph.4.31",
+      "verse:Eph.4.32",
+      "verse:Eph.5.1",
+      "verse:Eph.5.2",
+      "verse:Eph.5.3",
+      "verse:Eph.5.4",
+      "verse:Eph.5.5",
+      "verse:Eph.5.6",
+      "verse:Eph.5.7",
+      "verse:Eph.5.8",
+      "verse:Eph.5.9",
+      "verse:Eph.5.10",
+      "verse:Eph.5.11",
+      "verse:Eph.5.12",
+      "verse:Eph.5.13",
+      "verse:Eph.5.14",
+      "verse:Eph.5.15",
+      "verse:Eph.5.16",
+      "verse:Eph.5.17",
+      "verse:Eph.5.18",
+      "verse:Eph.5.19",
+      "verse:Eph.5.20",
+      "verse:Eph.5.21",
+      "verse:Eph.5.22",
+      "verse:Eph.5.23",
+      "verse:Eph.5.24",
+      "verse:Eph.5.25",
+      "verse:Eph.5.26",
+      "verse:Eph.5.27",
+      "verse:Eph.5.28",
+      "verse:Eph.5.29",
+      "verse:Eph.5.30",
+      "verse:Eph.5.31",
+      "verse:Eph.5.32",
+      "verse:Eph.5.33",
+      "verse:Eph.6.1",
+      "verse:Eph.6.2",
+      "verse:Eph.6.3",
+      "verse:Eph.6.4",
+      "verse:Eph.6.5",
+      "verse:Eph.6.6",
+      "verse:Eph.6.7",
+      "verse:Eph.6.8",
+      "verse:Eph.6.9",
+      "verse:Eph.6.10",
+      "verse:Eph.6.11",
+      "verse:Eph.6.12",
+      "verse:Eph.6.13",
+      "verse:Eph.6.14",
+      "verse:Eph.6.15",
+      "verse:Eph.6.16",
+      "verse:Eph.6.17",
+      "verse:Eph.6.18",
+      "verse:Eph.6.19",
+      "verse:Eph.6.20",
+      "verse:Eph.6.21",
+      "verse:Eph.6.22",
+      "verse:Eph.6.23",
+      "verse:Eph.6.24"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:en:p-satan-1",
+        "entity_key": "entity:p-satan-1",
+        "language_tag": "en",
+        "preferred_name": "Satan",
+        "aliases": [],
+        "short_description": {
+          "text": "Satan is a person named in the book of Ephesians.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-saul-2",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "en",
+        "preferred_name": "Saul",
+        "aliases": [],
+        "short_description": {
+          "text": "Saul is a person named in the book of Ephesians.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tychicus-1",
+        "entity_key": "entity:p-tychicus-1",
+        "language_tag": "en",
+        "preferred_name": "Tychicus",
+        "aliases": [],
+        "short_description": {
+          "text": "Tychicus is a person named in the book of Ephesians.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-ephesus-a5feb15",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "language_tag": "en",
+        "preferred_name": "Ephesus",
+        "aliases": [
+          "m84025e"
+        ],
+        "short_description": {
+          "text": "Ephesus is a place named in the book of Ephesians.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:en:wb-eph",
+        "scope_key": "scope:wb-eph:refsys:eng-v22:eph.1.1-eph.6.24",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "God, Paul, Jesus, the church and the powers.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Written from imprisonment.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "Commonly dated around AD 60-62.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "Paul describes the church's riches in Christ, its unity as one body, and the new life and armour that follow.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "Reflects the church's growth among Gentiles.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "Believers' identity in Christ and their unity and conduct.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "Paul describes the church's riches in Christ, its unity as one body, and the new life and armour that follow.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-1",
+        "scope_key": "scope:wb-eph-1:refsys:eng-v22:eph.1.1-eph.1.23",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Saul.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Ephesus.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-when"
+          },
+          "what": {
+            "text": "This chapter: Paul’s Greeting to the Ephesians; Spiritual Blessings; Spiritual Wisdom.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: Paul’s Greeting to the Ephesians; Spiritual Blessings; Spiritual Wisdom.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-2",
+        "scope_key": "scope:wb-eph-2:refsys:eng-v22:eph.2.1-eph.2.22",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-when"
+          },
+          "what": {
+            "text": "This chapter: Alive with Christ; One in Christ; Christ Our Cornerstone.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: Alive with Christ; One in Christ; Christ Our Cornerstone.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-3",
+        "scope_key": "scope:wb-eph-3:refsys:eng-v22:eph.3.1-eph.3.21",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Saul.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-when"
+          },
+          "what": {
+            "text": "This chapter: The Mystery of the Gospel; Paul’s Prayer for the Ephesians.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: The Mystery of the Gospel; Paul’s Prayer for the Ephesians.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-4",
+        "scope_key": "scope:wb-eph-4:refsys:eng-v22:eph.4.1-eph.4.32",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Satan.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-when"
+          },
+          "what": {
+            "text": "This chapter: Unity in the Body; New Life in Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: Unity in the Body; New Life in Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-5",
+        "scope_key": "scope:wb-eph-5:refsys:eng-v22:eph.5.1-eph.5.33",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-when"
+          },
+          "what": {
+            "text": "This chapter: Imitators of God; Children of Light; Wives and Husbands.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: Imitators of God; Children of Light; Wives and Husbands.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-6",
+        "scope_key": "scope:wb-eph-6:refsys:eng-v22:eph.6.1-eph.6.24",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Satan, Tychicus.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-when"
+          },
+          "what": {
+            "text": "This chapter: Children and Parents; Serving with Honor; The Full Armor of God; Final Greetings.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: Children and Parents; Serving with Honor; The Full Armor of God; Final Greetings.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-1-p1",
+        "scope_key": "scope:wb-eph-1-p1:refsys:eng-v22:eph.1.1-eph.1.2",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Saul.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Ephesus.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p1-when"
+          },
+          "what": {
+            "text": "Paul’s Greeting to the Ephesians.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "Paul’s Greeting to the Ephesians.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-1-p2",
+        "scope_key": "scope:wb-eph-1-p2:refsys:eng-v22:eph.1.3-eph.1.14",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p2-when"
+          },
+          "what": {
+            "text": "Spiritual Blessings.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "Spiritual Blessings.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-1-p3",
+        "scope_key": "scope:wb-eph-1-p3:refsys:eng-v22:eph.1.15-eph.1.23",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p3-when"
+          },
+          "what": {
+            "text": "Spiritual Wisdom.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-1-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "Spiritual Wisdom.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-2-p1",
+        "scope_key": "scope:wb-eph-2-p1:refsys:eng-v22:eph.2.1-eph.2.10",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p1-when"
+          },
+          "what": {
+            "text": "Alive with Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "Alive with Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-2-p2",
+        "scope_key": "scope:wb-eph-2-p2:refsys:eng-v22:eph.2.11-eph.2.18",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p2-when"
+          },
+          "what": {
+            "text": "One in Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "One in Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-2-p3",
+        "scope_key": "scope:wb-eph-2-p3:refsys:eng-v22:eph.2.19-eph.2.22",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p3-when"
+          },
+          "what": {
+            "text": "Christ Our Cornerstone.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-2-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "Christ Our Cornerstone.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-3-p1",
+        "scope_key": "scope:wb-eph-3-p1:refsys:eng-v22:eph.3.1-eph.3.13",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Saul.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p1-when"
+          },
+          "what": {
+            "text": "The Mystery of the Gospel.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "The Mystery of the Gospel.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-3-p2",
+        "scope_key": "scope:wb-eph-3-p2:refsys:eng-v22:eph.3.14-eph.3.21",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p2-when"
+          },
+          "what": {
+            "text": "Paul’s Prayer for the Ephesians.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-3-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "Paul’s Prayer for the Ephesians.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-4-p1",
+        "scope_key": "scope:wb-eph-4-p1:refsys:eng-v22:eph.4.1-eph.4.16",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p1-when"
+          },
+          "what": {
+            "text": "Unity in the Body.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "Unity in the Body.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-4-p2",
+        "scope_key": "scope:wb-eph-4-p2:refsys:eng-v22:eph.4.17-eph.4.32",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Satan.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p2-when"
+          },
+          "what": {
+            "text": "New Life in Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-4-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "New Life in Christ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-5-p1",
+        "scope_key": "scope:wb-eph-5-p1:refsys:eng-v22:eph.5.1-eph.5.7",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p1-when"
+          },
+          "what": {
+            "text": "Imitators of God.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "Imitators of God.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-5-p2",
+        "scope_key": "scope:wb-eph-5-p2:refsys:eng-v22:eph.5.8-eph.5.20",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p2-when"
+          },
+          "what": {
+            "text": "Children of Light.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "Children of Light.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-5-p3",
+        "scope_key": "scope:wb-eph-5-p3:refsys:eng-v22:eph.5.21-eph.5.33",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p3-when"
+          },
+          "what": {
+            "text": "Wives and Husbands.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-5-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "Wives and Husbands.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-6-p1",
+        "scope_key": "scope:wb-eph-6-p1:refsys:eng-v22:eph.6.1-eph.6.4",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p1-when"
+          },
+          "what": {
+            "text": "Children and Parents.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "Children and Parents.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-6-p2",
+        "scope_key": "scope:wb-eph-6-p2:refsys:eng-v22:eph.6.5-eph.6.9",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p2-when"
+          },
+          "what": {
+            "text": "Serving with Honor.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "Serving with Honor.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-6-p3",
+        "scope_key": "scope:wb-eph-6-p3:refsys:eng-v22:eph.6.10-eph.6.20",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Satan.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p3-when"
+          },
+          "what": {
+            "text": "The Full Armor of God.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "The Full Armor of God.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:en:wb-eph-6-p4",
+        "scope_key": "scope:wb-eph-6-p4:refsys:eng-v22:eph.6.21-eph.6.24",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Tychicus.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p4-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p4-when"
+          },
+          "what": {
+            "text": "Final Greetings.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-en-wb-eph-6-p4-stakes"
+          },
+          "immediate_summary": {
+            "text": "Final Greetings.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:en:wb-eph-4-p-satan-1",
+        "relevance_key": "relevance:wb-eph-4-p-satan-1",
+        "scope_key": "scope:wb-eph-4:refsys:eng-v22:eph.4.1-eph.4.32",
+        "entity_key": "entity:p-satan-1",
+        "language_tag": "en",
+        "role_text": "Named in Ephesians 4 at verse(s) 27.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-eph-6-p-satan-1",
+        "relevance_key": "relevance:wb-eph-6-p-satan-1",
+        "scope_key": "scope:wb-eph-6:refsys:eng-v22:eph.6.1-eph.6.24",
+        "entity_key": "entity:p-satan-1",
+        "language_tag": "en",
+        "role_text": "Named in Ephesians 6 at verse(s) 11.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-eph-1-p-saul-2",
+        "relevance_key": "relevance:wb-eph-1-p-saul-2",
+        "scope_key": "scope:wb-eph-1:refsys:eng-v22:eph.1.1-eph.1.23",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "en",
+        "role_text": "Named in Ephesians 1 at verse(s) 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-eph-3-p-saul-2",
+        "relevance_key": "relevance:wb-eph-3-p-saul-2",
+        "scope_key": "scope:wb-eph-3:refsys:eng-v22:eph.3.1-eph.3.21",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "en",
+        "role_text": "Named in Ephesians 3 at verse(s) 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-eph-6-p-tychicus-1",
+        "relevance_key": "relevance:wb-eph-6-p-tychicus-1",
+        "scope_key": "scope:wb-eph-6:refsys:eng-v22:eph.6.1-eph.6.24",
+        "entity_key": "entity:p-tychicus-1",
+        "language_tag": "en",
+        "role_text": "Named in Ephesians 6 at verse(s) 21.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-eph-1-pl-ephesus-a5feb15",
+        "relevance_key": "relevance:wb-eph-1-pl-ephesus-a5feb15",
+        "scope_key": "scope:wb-eph-1:refsys:eng-v22:eph.1.1-eph.1.23",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "language_tag": "en",
+        "role_text": "Named in Ephesians 1 at verse(s) 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:wb-eph:refsys:eng-v22:eph.1.1-eph.6.24"
+          ],
+          "record_keys": [
+            "context:en:wb-eph"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:wb-eph-1:refsys:eng-v22:eph.1.1-eph.1.23",
+            "scope:wb-eph-2:refsys:eng-v22:eph.2.1-eph.2.22",
+            "scope:wb-eph-3:refsys:eng-v22:eph.3.1-eph.3.21",
+            "scope:wb-eph-4:refsys:eng-v22:eph.4.1-eph.4.32",
+            "scope:wb-eph-5:refsys:eng-v22:eph.5.1-eph.5.33",
+            "scope:wb-eph-6:refsys:eng-v22:eph.6.1-eph.6.24",
+            "scope:wb-eph-1-p1:refsys:eng-v22:eph.1.1-eph.1.2",
+            "scope:wb-eph-1-p2:refsys:eng-v22:eph.1.3-eph.1.14",
+            "scope:wb-eph-1-p3:refsys:eng-v22:eph.1.15-eph.1.23",
+            "scope:wb-eph-2-p1:refsys:eng-v22:eph.2.1-eph.2.10",
+            "scope:wb-eph-2-p2:refsys:eng-v22:eph.2.11-eph.2.18",
+            "scope:wb-eph-2-p3:refsys:eng-v22:eph.2.19-eph.2.22",
+            "scope:wb-eph-3-p1:refsys:eng-v22:eph.3.1-eph.3.13",
+            "scope:wb-eph-3-p2:refsys:eng-v22:eph.3.14-eph.3.21",
+            "scope:wb-eph-4-p1:refsys:eng-v22:eph.4.1-eph.4.16",
+            "scope:wb-eph-4-p2:refsys:eng-v22:eph.4.17-eph.4.32",
+            "scope:wb-eph-5-p1:refsys:eng-v22:eph.5.1-eph.5.7",
+            "scope:wb-eph-5-p2:refsys:eng-v22:eph.5.8-eph.5.20",
+            "scope:wb-eph-5-p3:refsys:eng-v22:eph.5.21-eph.5.33",
+            "scope:wb-eph-6-p1:refsys:eng-v22:eph.6.1-eph.6.4",
+            "scope:wb-eph-6-p2:refsys:eng-v22:eph.6.5-eph.6.9",
+            "scope:wb-eph-6-p3:refsys:eng-v22:eph.6.10-eph.6.20",
+            "scope:wb-eph-6-p4:refsys:eng-v22:eph.6.21-eph.6.24"
+          ],
+          "record_keys": [
+            "context:en:wb-eph-1",
+            "context:en:wb-eph-2",
+            "context:en:wb-eph-3",
+            "context:en:wb-eph-4",
+            "context:en:wb-eph-5",
+            "context:en:wb-eph-6",
+            "context:en:wb-eph-1-p1",
+            "context:en:wb-eph-1-p2",
+            "context:en:wb-eph-1-p3",
+            "context:en:wb-eph-2-p1",
+            "context:en:wb-eph-2-p2",
+            "context:en:wb-eph-2-p3",
+            "context:en:wb-eph-3-p1",
+            "context:en:wb-eph-3-p2",
+            "context:en:wb-eph-4-p1",
+            "context:en:wb-eph-4-p2",
+            "context:en:wb-eph-5-p1",
+            "context:en:wb-eph-5-p2",
+            "context:en:wb-eph-5-p3",
+            "context:en:wb-eph-6-p1",
+            "context:en:wb-eph-6-p2",
+            "context:en:wb-eph-6-p3",
+            "context:en:wb-eph-6-p4"
+          ],
+          "blocker_question_keys": [
+            "question:wb-context-en-wb-eph-1-before",
+            "question:wb-context-en-wb-eph-1-p1-before",
+            "question:wb-context-en-wb-eph-1-p1-stakes",
+            "question:wb-context-en-wb-eph-1-p1-when",
+            "question:wb-context-en-wb-eph-1-p2-before",
+            "question:wb-context-en-wb-eph-1-p2-stakes",
+            "question:wb-context-en-wb-eph-1-p2-when",
+            "question:wb-context-en-wb-eph-1-p2-where",
+            "question:wb-context-en-wb-eph-1-p2-who",
+            "question:wb-context-en-wb-eph-1-p3-before",
+            "question:wb-context-en-wb-eph-1-p3-stakes",
+            "question:wb-context-en-wb-eph-1-p3-when",
+            "question:wb-context-en-wb-eph-1-p3-where",
+            "question:wb-context-en-wb-eph-1-p3-who",
+            "question:wb-context-en-wb-eph-1-stakes",
+            "question:wb-context-en-wb-eph-1-when",
+            "question:wb-context-en-wb-eph-2-before",
+            "question:wb-context-en-wb-eph-2-p1-before",
+            "question:wb-context-en-wb-eph-2-p1-stakes",
+            "question:wb-context-en-wb-eph-2-p1-when",
+            "question:wb-context-en-wb-eph-2-p1-where",
+            "question:wb-context-en-wb-eph-2-p1-who",
+            "question:wb-context-en-wb-eph-2-p2-before",
+            "question:wb-context-en-wb-eph-2-p2-stakes",
+            "question:wb-context-en-wb-eph-2-p2-when",
+            "question:wb-context-en-wb-eph-2-p2-where",
+            "question:wb-context-en-wb-eph-2-p2-who",
+            "question:wb-context-en-wb-eph-2-p3-before",
+            "question:wb-context-en-wb-eph-2-p3-stakes",
+            "question:wb-context-en-wb-eph-2-p3-when",
+            "question:wb-context-en-wb-eph-2-p3-where",
+            "question:wb-context-en-wb-eph-2-p3-who",
+            "question:wb-context-en-wb-eph-2-stakes",
+            "question:wb-context-en-wb-eph-2-when",
+            "question:wb-context-en-wb-eph-2-where",
+            "question:wb-context-en-wb-eph-2-who",
+            "question:wb-context-en-wb-eph-3-before",
+            "question:wb-context-en-wb-eph-3-p1-before",
+            "question:wb-context-en-wb-eph-3-p1-stakes",
+            "question:wb-context-en-wb-eph-3-p1-when",
+            "question:wb-context-en-wb-eph-3-p1-where",
+            "question:wb-context-en-wb-eph-3-p2-before",
+            "question:wb-context-en-wb-eph-3-p2-stakes",
+            "question:wb-context-en-wb-eph-3-p2-when",
+            "question:wb-context-en-wb-eph-3-p2-where",
+            "question:wb-context-en-wb-eph-3-p2-who",
+            "question:wb-context-en-wb-eph-3-stakes",
+            "question:wb-context-en-wb-eph-3-when",
+            "question:wb-context-en-wb-eph-3-where",
+            "question:wb-context-en-wb-eph-4-before",
+            "question:wb-context-en-wb-eph-4-p1-before",
+            "question:wb-context-en-wb-eph-4-p1-stakes",
+            "question:wb-context-en-wb-eph-4-p1-when",
+            "question:wb-context-en-wb-eph-4-p1-where",
+            "question:wb-context-en-wb-eph-4-p1-who",
+            "question:wb-context-en-wb-eph-4-p2-before",
+            "question:wb-context-en-wb-eph-4-p2-stakes",
+            "question:wb-context-en-wb-eph-4-p2-when",
+            "question:wb-context-en-wb-eph-4-p2-where",
+            "question:wb-context-en-wb-eph-4-stakes",
+            "question:wb-context-en-wb-eph-4-when",
+            "question:wb-context-en-wb-eph-4-where",
+            "question:wb-context-en-wb-eph-5-before",
+            "question:wb-context-en-wb-eph-5-p1-before",
+            "question:wb-context-en-wb-eph-5-p1-stakes",
+            "question:wb-context-en-wb-eph-5-p1-when",
+            "question:wb-context-en-wb-eph-5-p1-where",
+            "question:wb-context-en-wb-eph-5-p1-who",
+            "question:wb-context-en-wb-eph-5-p2-before",
+            "question:wb-context-en-wb-eph-5-p2-stakes",
+            "question:wb-context-en-wb-eph-5-p2-when",
+            "question:wb-context-en-wb-eph-5-p2-where",
+            "question:wb-context-en-wb-eph-5-p2-who",
+            "question:wb-context-en-wb-eph-5-p3-before",
+            "question:wb-context-en-wb-eph-5-p3-stakes",
+            "question:wb-context-en-wb-eph-5-p3-when",
+            "question:wb-context-en-wb-eph-5-p3-where",
+            "question:wb-context-en-wb-eph-5-p3-who",
+            "question:wb-context-en-wb-eph-5-stakes",
+            "question:wb-context-en-wb-eph-5-when",
+            "question:wb-context-en-wb-eph-5-where",
+            "question:wb-context-en-wb-eph-5-who",
+            "question:wb-context-en-wb-eph-6-before",
+            "question:wb-context-en-wb-eph-6-p1-before",
+            "question:wb-context-en-wb-eph-6-p1-stakes",
+            "question:wb-context-en-wb-eph-6-p1-when",
+            "question:wb-context-en-wb-eph-6-p1-where",
+            "question:wb-context-en-wb-eph-6-p1-who",
+            "question:wb-context-en-wb-eph-6-p2-before",
+            "question:wb-context-en-wb-eph-6-p2-stakes",
+            "question:wb-context-en-wb-eph-6-p2-when",
+            "question:wb-context-en-wb-eph-6-p2-where",
+            "question:wb-context-en-wb-eph-6-p2-who",
+            "question:wb-context-en-wb-eph-6-p3-before",
+            "question:wb-context-en-wb-eph-6-p3-stakes",
+            "question:wb-context-en-wb-eph-6-p3-when",
+            "question:wb-context-en-wb-eph-6-p3-where",
+            "question:wb-context-en-wb-eph-6-p4-before",
+            "question:wb-context-en-wb-eph-6-p4-stakes",
+            "question:wb-context-en-wb-eph-6-p4-when",
+            "question:wb-context-en-wb-eph-6-p4-where",
+            "question:wb-context-en-wb-eph-6-stakes",
+            "question:wb-context-en-wb-eph-6-when",
+            "question:wb-context-en-wb-eph-6-where"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-1-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-1-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-1-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-1-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-1-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-2-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-2-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-2-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-2-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-2-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-3-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-3-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-3-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-3-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-4-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-4-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-4-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-4-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-5-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-5-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-5-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-5-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-5-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-6-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-6-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-6-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p4-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p4",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:wb-eph-6-p4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-eph-6-p4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-eph-6-p4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

@@ -1,0 +1,2175 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-phil-locale",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-phil-locale:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-phil-locale",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-phil:refsys:tel-v1:phil.1.1-phil.4.23",
+      "scope:wb-phil-1:refsys:tel-v1:phil.1.1-phil.1.29",
+      "scope:wb-phil-2:refsys:tel-v1:phil.2.1-phil.2.30",
+      "scope:wb-phil-3:refsys:tel-v1:phil.3.1-phil.3.21",
+      "scope:wb-phil-4:refsys:tel-v1:phil.4.1-phil.4.23",
+      "scope:wb-phil-1-p1:refsys:tel-v1:phil.1.1-phil.1.8",
+      "scope:wb-phil-1-p2:refsys:tel-v1:phil.1.9-phil.1.29",
+      "scope:wb-phil-2-p1:refsys:tel-v1:phil.2.1-phil.2.5",
+      "scope:wb-phil-2-p2:refsys:tel-v1:phil.2.6-phil.2.8",
+      "scope:wb-phil-2-p3:refsys:tel-v1:phil.2.9-phil.2.9",
+      "scope:wb-phil-2-p4:refsys:tel-v1:phil.2.12-phil.2.16",
+      "scope:wb-phil-2-p5:refsys:tel-v1:phil.2.17-phil.2.30",
+      "scope:wb-phil-3-p1:refsys:tel-v1:phil.3.1-phil.3.3",
+      "scope:wb-phil-3-p2:refsys:tel-v1:phil.3.4-phil.3.6",
+      "scope:wb-phil-3-p3:refsys:tel-v1:phil.3.7-phil.3.9",
+      "scope:wb-phil-3-p4:refsys:tel-v1:phil.3.10-phil.3.14",
+      "scope:wb-phil-3-p5:refsys:tel-v1:phil.3.15-phil.3.16",
+      "scope:wb-phil-3-p6:refsys:tel-v1:phil.3.17-phil.3.19",
+      "scope:wb-phil-3-p7:refsys:tel-v1:phil.3.20-phil.3.21",
+      "scope:wb-phil-4-p1:refsys:tel-v1:phil.4.1-phil.4.4",
+      "scope:wb-phil-4-p2:refsys:tel-v1:phil.4.5-phil.4.7",
+      "scope:wb-phil-4-p3:refsys:tel-v1:phil.4.8-phil.4.9",
+      "scope:wb-phil-4-p4:refsys:tel-v1:phil.4.10-phil.4.23"
+    ],
+    "reference_keys": [
+      "verse:Phil.1.1",
+      "verse:Phil.1.2",
+      "verse:Phil.1.3",
+      "verse:Phil.1.4",
+      "verse:Phil.1.5",
+      "verse:Phil.1.6",
+      "verse:Phil.1.7",
+      "verse:Phil.1.8",
+      "verse:Phil.1.9",
+      "verse:Phil.1.10",
+      "verse:Phil.1.11",
+      "verse:Phil.1.12",
+      "verse:Phil.1.13",
+      "verse:Phil.1.14",
+      "verse:Phil.1.15",
+      "verse:Phil.1.16",
+      "verse:Phil.1.17",
+      "verse:Phil.1.18",
+      "verse:Phil.1.19",
+      "verse:Phil.1.20",
+      "verse:Phil.1.21",
+      "verse:Phil.1.22",
+      "verse:Phil.1.23",
+      "verse:Phil.1.24",
+      "verse:Phil.1.25",
+      "verse:Phil.1.27",
+      "verse:Phil.1.28",
+      "verse:Phil.1.29",
+      "verse:Phil.2.1",
+      "verse:Phil.2.2",
+      "verse:Phil.2.3",
+      "verse:Phil.2.4",
+      "verse:Phil.2.5",
+      "verse:Phil.2.6",
+      "verse:Phil.2.7",
+      "verse:Phil.2.8",
+      "verse:Phil.2.9",
+      "verse:Phil.2.12",
+      "verse:Phil.2.13",
+      "verse:Phil.2.14",
+      "verse:Phil.2.15",
+      "verse:Phil.2.16",
+      "verse:Phil.2.17",
+      "verse:Phil.2.18",
+      "verse:Phil.2.19",
+      "verse:Phil.2.20",
+      "verse:Phil.2.21",
+      "verse:Phil.2.22",
+      "verse:Phil.2.23",
+      "verse:Phil.2.24",
+      "verse:Phil.2.25",
+      "verse:Phil.2.26",
+      "verse:Phil.2.27",
+      "verse:Phil.2.28",
+      "verse:Phil.2.29",
+      "verse:Phil.2.30",
+      "verse:Phil.3.1",
+      "verse:Phil.3.2",
+      "verse:Phil.3.3",
+      "verse:Phil.3.4",
+      "verse:Phil.3.5",
+      "verse:Phil.3.6",
+      "verse:Phil.3.7",
+      "verse:Phil.3.8",
+      "verse:Phil.3.9",
+      "verse:Phil.3.10",
+      "verse:Phil.3.12",
+      "verse:Phil.3.13",
+      "verse:Phil.3.14",
+      "verse:Phil.3.15",
+      "verse:Phil.3.16",
+      "verse:Phil.3.17",
+      "verse:Phil.3.18",
+      "verse:Phil.3.19",
+      "verse:Phil.3.20",
+      "verse:Phil.3.21",
+      "verse:Phil.4.1",
+      "verse:Phil.4.2",
+      "verse:Phil.4.3",
+      "verse:Phil.4.4",
+      "verse:Phil.4.5",
+      "verse:Phil.4.6",
+      "verse:Phil.4.7",
+      "verse:Phil.4.8",
+      "verse:Phil.4.9",
+      "verse:Phil.4.10",
+      "verse:Phil.4.11",
+      "verse:Phil.4.12",
+      "verse:Phil.4.13",
+      "verse:Phil.4.14",
+      "verse:Phil.4.15",
+      "verse:Phil.4.16",
+      "verse:Phil.4.17",
+      "verse:Phil.4.18",
+      "verse:Phil.4.19",
+      "verse:Phil.4.20",
+      "verse:Phil.4.21",
+      "verse:Phil.4.22",
+      "verse:Phil.4.23"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:te:p-benjamin-1",
+        "entity_key": "entity:p-benjamin-1",
+        "language_tag": "te",
+        "preferred_name": "బెన్యామీను",
+        "aliases": [],
+        "short_description": {
+          "text": "బెన్యామీను, ఫిలిప్పీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-saul-2",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "te",
+        "preferred_name": "పౌలు",
+        "aliases": [],
+        "short_description": {
+          "text": "పౌలు, ఫిలిప్పీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-macedonia-a69e1b8",
+        "entity_key": "entity:pl-macedonia-a69e1b8",
+        "language_tag": "te",
+        "preferred_name": "మాసిదోనియ",
+        "aliases": [],
+        "short_description": {
+          "text": "మాసిదోనియ, ఫిలిప్పీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:te:wb-phil",
+        "scope_key": "scope:wb-phil:refsys:tel-v1:phil.1.1-phil.4.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "దేవుడు, పౌలు, యేసు, తిమోతి, ఎపఫ్రొదితు, ఫిలిప్పీయులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "చెర నుండి రాయబడింది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "సాధారణంగా క్రీ.శ. 60-62.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "పౌలు ఫిలిప్పీయులకు కృతజ్ఞత చెప్పి, శ్రమలో సంతోషించి, వినయం, ఐక్యతకు పిలిచి, క్రీస్తు వైపు సాగుతాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "అపొస్తలుల కార్యాల్లో ఫిలిప్పీ సంఘ స్థాపన తర్వాత.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "శ్రమలోనూ క్రీస్తులో సంతోషం, వినయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "పౌలు ఫిలిప్పీయులకు కృతజ్ఞత చెప్పి, శ్రమలో సంతోషించి, వినయం, ఐక్యతకు పిలిచి, క్రీస్తు వైపు సాగుతాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-1",
+        "scope_key": "scope:wb-phil-1:refsys:tel-v1:phil.1.1-phil.1.29",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Timothy, పౌలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Philippi.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-when"
+          },
+          "what": {
+            "text": "This chapter: విశ్వాసికి జీవం క్రీస్తే; హింసలపై విజయం సాధించిన ఆనందం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: విశ్వాసికి జీవం క్రీస్తే; హింసలపై విజయం సాధించిన ఆనందం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-2",
+        "scope_key": "scope:wb-phil-2:refsys:tel-v1:phil.2.1-phil.2.30",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Epaphroditus, Timothy.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-when"
+          },
+          "what": {
+            "text": "This chapter: విశ్వాసికి ఆదర్శం క్రీస్తే (1) ఐక్యత, సాత్వికం కలిగి ఉండాలని హెచ్చరిక; క్రీస్తు ఏడు విధాలుగా విధేయత కనుపరచడం; యేసుకు ఘనత; అంతరంగంలోని రక్షణకు బాహ్య గురుతులు; అపొస్తలుని ఆదర్శం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: విశ్వాసికి ఆదర్శం క్రీస్తే (1) ఐక్యత, సాత్వికం కలిగి ఉండాలని హెచ్చరిక; క్రీస్తు ఏడు విధాలుగా విధేయత కనుపరచడం; యేసుకు ఘనత; అంతరంగంలోని రక్షణకు బాహ్య గురుతులు; అపొస్తలుని ఆదర్శం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3",
+        "scope_key": "scope:wb-phil-3:refsys:tel-v1:phil.3.1-phil.3.21",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Jacob, బెన్యామీను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-when"
+          },
+          "what": {
+            "text": "This chapter: విశ్వాసి నమ్మకానికీ, అభిలాషలకీ, ఎదురు చూపులకీ నమూనా; (1) క్రైస్తవులను యూదు మతంలోకి మార్చాలని చూసే వారి విషయం హెచ్చరిక; (2) చట్టసంబంధమైన నీతిని నమ్ముకోవడం; (3) నీతి కలిగేలా విశ్వాసికి ఉండే నమ్మకానికి ఆధారం; (4) పునరుత్థాన శక్తితో సహవాసానికై విశ్వాసికి ఆధారం క్రీస్తు; (5) ప్రవర్తనలో ఐక్యతకై హెచ్చరిక; (6) అయితే ఐక్యత కోసమని సత్యాన్ని నిర్లక్షానికి గురి చేయకూడదు; (7) విశ్వాసి నిరీక్షణకు ఆధారం క్రీస్తు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: విశ్వాసి నమ్మకానికీ, అభిలాషలకీ, ఎదురు చూపులకీ నమూనా; (1) క్రైస్తవులను యూదు మతంలోకి మార్చాలని చూసే వారి విషయం హెచ్చరిక; (2) చట్టసంబంధమైన నీతిని నమ్ముకోవడం; (3) నీతి కలిగేలా విశ్వాసికి ఉండే నమ్మకానికి ఆధారం; (4) పునరుత్థాన శక్తితో సహవాసానికై విశ్వాసికి ఆధారం క్రీస్తు; (5) ప్రవర్తనలో ఐక్యతకై హెచ్చరిక; (6) అయితే ఐక్యత కోసమని సత్యాన్ని నిర్లక్షానికి గురి చేయకూడదు; (7) విశ్వాసి నిరీక్షణకు ఆధారం క్రీస్తు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-4",
+        "scope_key": "scope:wb-phil-4:refsys:tel-v1:phil.4.1-phil.4.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Caesar, Clement, Epaphroditus, Euodia, Syntyche.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Thessalonica, మాసిదోనియ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-when"
+          },
+          "what": {
+            "text": "This chapter: ఆందోళనలో విశ్వాసి ఆనందించడానికి బలం క్రీస్తు; (1) ఐక్యత, ఆనందాలకై హెచ్చరిక; (2) దేవుని శాంతి రహస్యం; (3) శాంతి ప్రదాత దేవుని సన్నిధి; (4) ఆందోళనలపై విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ఆందోళనలో విశ్వాసి ఆనందించడానికి బలం క్రీస్తు; (1) ఐక్యత, ఆనందాలకై హెచ్చరిక; (2) దేవుని శాంతి రహస్యం; (3) శాంతి ప్రదాత దేవుని సన్నిధి; (4) ఆందోళనలపై విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-1-p1",
+        "scope_key": "scope:wb-phil-1-p1:refsys:tel-v1:phil.1.1-phil.1.8",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Timothy, పౌలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Philippi.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p1-when"
+          },
+          "what": {
+            "text": "విశ్వాసికి జీవం క్రీస్తే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "విశ్వాసికి జీవం క్రీస్తే.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-1-p2",
+        "scope_key": "scope:wb-phil-1-p2:refsys:tel-v1:phil.1.9-phil.1.29",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p2-when"
+          },
+          "what": {
+            "text": "హింసలపై విజయం సాధించిన ఆనందం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-1-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "హింసలపై విజయం సాధించిన ఆనందం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-2-p1",
+        "scope_key": "scope:wb-phil-2-p1:refsys:tel-v1:phil.2.1-phil.2.5",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p1-when"
+          },
+          "what": {
+            "text": "విశ్వాసికి ఆదర్శం క్రీస్తే (1) ఐక్యత, సాత్వికం కలిగి ఉండాలని హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "విశ్వాసికి ఆదర్శం క్రీస్తే (1) ఐక్యత, సాత్వికం కలిగి ఉండాలని హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-2-p2",
+        "scope_key": "scope:wb-phil-2-p2:refsys:tel-v1:phil.2.6-phil.2.8",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p2-when"
+          },
+          "what": {
+            "text": "క్రీస్తు ఏడు విధాలుగా విధేయత కనుపరచడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "క్రీస్తు ఏడు విధాలుగా విధేయత కనుపరచడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-2-p3",
+        "scope_key": "scope:wb-phil-2-p3:refsys:tel-v1:phil.2.9-phil.2.9",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p3-when"
+          },
+          "what": {
+            "text": "యేసుకు ఘనత.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "యేసుకు ఘనత.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-2-p4",
+        "scope_key": "scope:wb-phil-2-p4:refsys:tel-v1:phil.2.12-phil.2.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p4-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p4-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p4-when"
+          },
+          "what": {
+            "text": "అంతరంగంలోని రక్షణకు బాహ్య గురుతులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p4-stakes"
+          },
+          "immediate_summary": {
+            "text": "అంతరంగంలోని రక్షణకు బాహ్య గురుతులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-2-p5",
+        "scope_key": "scope:wb-phil-2-p5:refsys:tel-v1:phil.2.17-phil.2.30",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Epaphroditus, Timothy.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p5-when"
+          },
+          "what": {
+            "text": "అపొస్తలుని ఆదర్శం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-2-p5-stakes"
+          },
+          "immediate_summary": {
+            "text": "అపొస్తలుని ఆదర్శం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p1",
+        "scope_key": "scope:wb-phil-3-p1:refsys:tel-v1:phil.3.1-phil.3.3",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p1-when"
+          },
+          "what": {
+            "text": "(1) క్రైస్తవులను యూదు మతంలోకి మార్చాలని చూసే వారి విషయం హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "(1) క్రైస్తవులను యూదు మతంలోకి మార్చాలని చూసే వారి విషయం హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p2",
+        "scope_key": "scope:wb-phil-3-p2:refsys:tel-v1:phil.3.4-phil.3.6",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Jacob, బెన్యామీను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p2-when"
+          },
+          "what": {
+            "text": "(2) చట్టసంబంధమైన నీతిని నమ్ముకోవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "(2) చట్టసంబంధమైన నీతిని నమ్ముకోవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p3",
+        "scope_key": "scope:wb-phil-3-p3:refsys:tel-v1:phil.3.7-phil.3.9",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p3-when"
+          },
+          "what": {
+            "text": "(3) నీతి కలిగేలా విశ్వాసికి ఉండే నమ్మకానికి ఆధారం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "(3) నీతి కలిగేలా విశ్వాసికి ఉండే నమ్మకానికి ఆధారం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p4",
+        "scope_key": "scope:wb-phil-3-p4:refsys:tel-v1:phil.3.10-phil.3.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p4-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p4-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p4-when"
+          },
+          "what": {
+            "text": "(4) పునరుత్థాన శక్తితో సహవాసానికై విశ్వాసికి ఆధారం క్రీస్తు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p4-stakes"
+          },
+          "immediate_summary": {
+            "text": "(4) పునరుత్థాన శక్తితో సహవాసానికై విశ్వాసికి ఆధారం క్రీస్తు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p5",
+        "scope_key": "scope:wb-phil-3-p5:refsys:tel-v1:phil.3.15-phil.3.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p5-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p5-when"
+          },
+          "what": {
+            "text": "(5) ప్రవర్తనలో ఐక్యతకై హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p5-stakes"
+          },
+          "immediate_summary": {
+            "text": "(5) ప్రవర్తనలో ఐక్యతకై హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p6",
+        "scope_key": "scope:wb-phil-3-p6:refsys:tel-v1:phil.3.17-phil.3.19",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p6-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p6-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p6-when"
+          },
+          "what": {
+            "text": "(6) అయితే ఐక్యత కోసమని సత్యాన్ని నిర్లక్షానికి గురి చేయకూడదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p6-stakes"
+          },
+          "immediate_summary": {
+            "text": "(6) అయితే ఐక్యత కోసమని సత్యాన్ని నిర్లక్షానికి గురి చేయకూడదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-3-p7",
+        "scope_key": "scope:wb-phil-3-p7:refsys:tel-v1:phil.3.20-phil.3.21",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p7-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p7-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p7-when"
+          },
+          "what": {
+            "text": "(7) విశ్వాసి నిరీక్షణకు ఆధారం క్రీస్తు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p7-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-3-p7-stakes"
+          },
+          "immediate_summary": {
+            "text": "(7) విశ్వాసి నిరీక్షణకు ఆధారం క్రీస్తు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-4-p1",
+        "scope_key": "scope:wb-phil-4-p1:refsys:tel-v1:phil.4.1-phil.4.4",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Clement, Euodia, Syntyche.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p1-when"
+          },
+          "what": {
+            "text": "(1) ఐక్యత, ఆనందాలకై హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "(1) ఐక్యత, ఆనందాలకై హెచ్చరిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-4-p2",
+        "scope_key": "scope:wb-phil-4-p2:refsys:tel-v1:phil.4.5-phil.4.7",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p2-when"
+          },
+          "what": {
+            "text": "(2) దేవుని శాంతి రహస్యం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "(2) దేవుని శాంతి రహస్యం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-4-p3",
+        "scope_key": "scope:wb-phil-4-p3:refsys:tel-v1:phil.4.8-phil.4.9",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p3-when"
+          },
+          "what": {
+            "text": "(3) శాంతి ప్రదాత దేవుని సన్నిధి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "(3) శాంతి ప్రదాత దేవుని సన్నిధి.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-phil-4-p4",
+        "scope_key": "scope:wb-phil-4-p4:refsys:tel-v1:phil.4.10-phil.4.23",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Caesar, Epaphroditus.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Thessalonica, మాసిదోనియ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p4-when"
+          },
+          "what": {
+            "text": "(4) ఆందోళనలపై విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-phil-4-p4-stakes"
+          },
+          "immediate_summary": {
+            "text": "(4) ఆందోళనలపై విజయం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:te:wb-phil-3-p-benjamin-1",
+        "relevance_key": "relevance:wb-phil-3-p-benjamin-1",
+        "scope_key": "scope:wb-phil-3:refsys:tel-v1:phil.3.1-phil.3.21",
+        "entity_key": "entity:p-benjamin-1",
+        "language_tag": "te",
+        "role_text": "బెన్యామీను — ఫిలిప్పీయులకు రాసిన పత్రిక 3: 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-phil-1-p-saul-2",
+        "relevance_key": "relevance:wb-phil-1-p-saul-2",
+        "scope_key": "scope:wb-phil-1:refsys:tel-v1:phil.1.1-phil.1.29",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "te",
+        "role_text": "పౌలు — ఫిలిప్పీయులకు రాసిన పత్రిక 1: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-phil-4-pl-macedonia-a69e1b8",
+        "relevance_key": "relevance:wb-phil-4-pl-macedonia-a69e1b8",
+        "scope_key": "scope:wb-phil-4:refsys:tel-v1:phil.4.1-phil.4.23",
+        "entity_key": "entity:pl-macedonia-a69e1b8",
+        "language_tag": "te",
+        "role_text": "మాసిదోనియ — ఫిలిప్పీయులకు రాసిన పత్రిక 4: 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:wb-phil:refsys:tel-v1:phil.1.1-phil.4.23"
+          ],
+          "record_keys": [
+            "context:te:wb-phil"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:wb-phil-1:refsys:tel-v1:phil.1.1-phil.1.29",
+            "scope:wb-phil-2:refsys:tel-v1:phil.2.1-phil.2.30",
+            "scope:wb-phil-3:refsys:tel-v1:phil.3.1-phil.3.21",
+            "scope:wb-phil-4:refsys:tel-v1:phil.4.1-phil.4.23",
+            "scope:wb-phil-1-p1:refsys:tel-v1:phil.1.1-phil.1.8",
+            "scope:wb-phil-1-p2:refsys:tel-v1:phil.1.9-phil.1.29",
+            "scope:wb-phil-2-p1:refsys:tel-v1:phil.2.1-phil.2.5",
+            "scope:wb-phil-2-p2:refsys:tel-v1:phil.2.6-phil.2.8",
+            "scope:wb-phil-2-p3:refsys:tel-v1:phil.2.9-phil.2.9",
+            "scope:wb-phil-2-p4:refsys:tel-v1:phil.2.12-phil.2.16",
+            "scope:wb-phil-2-p5:refsys:tel-v1:phil.2.17-phil.2.30",
+            "scope:wb-phil-3-p1:refsys:tel-v1:phil.3.1-phil.3.3",
+            "scope:wb-phil-3-p2:refsys:tel-v1:phil.3.4-phil.3.6",
+            "scope:wb-phil-3-p3:refsys:tel-v1:phil.3.7-phil.3.9",
+            "scope:wb-phil-3-p4:refsys:tel-v1:phil.3.10-phil.3.14",
+            "scope:wb-phil-3-p5:refsys:tel-v1:phil.3.15-phil.3.16",
+            "scope:wb-phil-3-p6:refsys:tel-v1:phil.3.17-phil.3.19",
+            "scope:wb-phil-3-p7:refsys:tel-v1:phil.3.20-phil.3.21",
+            "scope:wb-phil-4-p1:refsys:tel-v1:phil.4.1-phil.4.4",
+            "scope:wb-phil-4-p2:refsys:tel-v1:phil.4.5-phil.4.7",
+            "scope:wb-phil-4-p3:refsys:tel-v1:phil.4.8-phil.4.9",
+            "scope:wb-phil-4-p4:refsys:tel-v1:phil.4.10-phil.4.23"
+          ],
+          "record_keys": [
+            "context:te:wb-phil-1",
+            "context:te:wb-phil-2",
+            "context:te:wb-phil-3",
+            "context:te:wb-phil-4",
+            "context:te:wb-phil-1-p1",
+            "context:te:wb-phil-1-p2",
+            "context:te:wb-phil-2-p1",
+            "context:te:wb-phil-2-p2",
+            "context:te:wb-phil-2-p3",
+            "context:te:wb-phil-2-p4",
+            "context:te:wb-phil-2-p5",
+            "context:te:wb-phil-3-p1",
+            "context:te:wb-phil-3-p2",
+            "context:te:wb-phil-3-p3",
+            "context:te:wb-phil-3-p4",
+            "context:te:wb-phil-3-p5",
+            "context:te:wb-phil-3-p6",
+            "context:te:wb-phil-3-p7",
+            "context:te:wb-phil-4-p1",
+            "context:te:wb-phil-4-p2",
+            "context:te:wb-phil-4-p3",
+            "context:te:wb-phil-4-p4"
+          ],
+          "blocker_question_keys": [
+            "question:wb-context-te-wb-phil-1-before",
+            "question:wb-context-te-wb-phil-1-p1-before",
+            "question:wb-context-te-wb-phil-1-p1-stakes",
+            "question:wb-context-te-wb-phil-1-p1-when",
+            "question:wb-context-te-wb-phil-1-p2-before",
+            "question:wb-context-te-wb-phil-1-p2-stakes",
+            "question:wb-context-te-wb-phil-1-p2-when",
+            "question:wb-context-te-wb-phil-1-p2-where",
+            "question:wb-context-te-wb-phil-1-p2-who",
+            "question:wb-context-te-wb-phil-1-stakes",
+            "question:wb-context-te-wb-phil-1-when",
+            "question:wb-context-te-wb-phil-2-before",
+            "question:wb-context-te-wb-phil-2-p1-before",
+            "question:wb-context-te-wb-phil-2-p1-stakes",
+            "question:wb-context-te-wb-phil-2-p1-when",
+            "question:wb-context-te-wb-phil-2-p1-where",
+            "question:wb-context-te-wb-phil-2-p1-who",
+            "question:wb-context-te-wb-phil-2-p2-before",
+            "question:wb-context-te-wb-phil-2-p2-stakes",
+            "question:wb-context-te-wb-phil-2-p2-when",
+            "question:wb-context-te-wb-phil-2-p2-where",
+            "question:wb-context-te-wb-phil-2-p2-who",
+            "question:wb-context-te-wb-phil-2-p3-before",
+            "question:wb-context-te-wb-phil-2-p3-stakes",
+            "question:wb-context-te-wb-phil-2-p3-when",
+            "question:wb-context-te-wb-phil-2-p3-where",
+            "question:wb-context-te-wb-phil-2-p3-who",
+            "question:wb-context-te-wb-phil-2-p4-before",
+            "question:wb-context-te-wb-phil-2-p4-stakes",
+            "question:wb-context-te-wb-phil-2-p4-when",
+            "question:wb-context-te-wb-phil-2-p4-where",
+            "question:wb-context-te-wb-phil-2-p4-who",
+            "question:wb-context-te-wb-phil-2-p5-before",
+            "question:wb-context-te-wb-phil-2-p5-stakes",
+            "question:wb-context-te-wb-phil-2-p5-when",
+            "question:wb-context-te-wb-phil-2-p5-where",
+            "question:wb-context-te-wb-phil-2-stakes",
+            "question:wb-context-te-wb-phil-2-when",
+            "question:wb-context-te-wb-phil-2-where",
+            "question:wb-context-te-wb-phil-3-before",
+            "question:wb-context-te-wb-phil-3-p1-before",
+            "question:wb-context-te-wb-phil-3-p1-stakes",
+            "question:wb-context-te-wb-phil-3-p1-when",
+            "question:wb-context-te-wb-phil-3-p1-where",
+            "question:wb-context-te-wb-phil-3-p1-who",
+            "question:wb-context-te-wb-phil-3-p2-before",
+            "question:wb-context-te-wb-phil-3-p2-stakes",
+            "question:wb-context-te-wb-phil-3-p2-when",
+            "question:wb-context-te-wb-phil-3-p2-where",
+            "question:wb-context-te-wb-phil-3-p3-before",
+            "question:wb-context-te-wb-phil-3-p3-stakes",
+            "question:wb-context-te-wb-phil-3-p3-when",
+            "question:wb-context-te-wb-phil-3-p3-where",
+            "question:wb-context-te-wb-phil-3-p3-who",
+            "question:wb-context-te-wb-phil-3-p4-before",
+            "question:wb-context-te-wb-phil-3-p4-stakes",
+            "question:wb-context-te-wb-phil-3-p4-when",
+            "question:wb-context-te-wb-phil-3-p4-where",
+            "question:wb-context-te-wb-phil-3-p4-who",
+            "question:wb-context-te-wb-phil-3-p5-before",
+            "question:wb-context-te-wb-phil-3-p5-stakes",
+            "question:wb-context-te-wb-phil-3-p5-when",
+            "question:wb-context-te-wb-phil-3-p5-where",
+            "question:wb-context-te-wb-phil-3-p5-who",
+            "question:wb-context-te-wb-phil-3-p6-before",
+            "question:wb-context-te-wb-phil-3-p6-stakes",
+            "question:wb-context-te-wb-phil-3-p6-when",
+            "question:wb-context-te-wb-phil-3-p6-where",
+            "question:wb-context-te-wb-phil-3-p6-who",
+            "question:wb-context-te-wb-phil-3-p7-before",
+            "question:wb-context-te-wb-phil-3-p7-stakes",
+            "question:wb-context-te-wb-phil-3-p7-when",
+            "question:wb-context-te-wb-phil-3-p7-where",
+            "question:wb-context-te-wb-phil-3-p7-who",
+            "question:wb-context-te-wb-phil-3-stakes",
+            "question:wb-context-te-wb-phil-3-when",
+            "question:wb-context-te-wb-phil-3-where",
+            "question:wb-context-te-wb-phil-4-before",
+            "question:wb-context-te-wb-phil-4-p1-before",
+            "question:wb-context-te-wb-phil-4-p1-stakes",
+            "question:wb-context-te-wb-phil-4-p1-when",
+            "question:wb-context-te-wb-phil-4-p1-where",
+            "question:wb-context-te-wb-phil-4-p2-before",
+            "question:wb-context-te-wb-phil-4-p2-stakes",
+            "question:wb-context-te-wb-phil-4-p2-when",
+            "question:wb-context-te-wb-phil-4-p2-where",
+            "question:wb-context-te-wb-phil-4-p2-who",
+            "question:wb-context-te-wb-phil-4-p3-before",
+            "question:wb-context-te-wb-phil-4-p3-stakes",
+            "question:wb-context-te-wb-phil-4-p3-when",
+            "question:wb-context-te-wb-phil-4-p3-where",
+            "question:wb-context-te-wb-phil-4-p3-who",
+            "question:wb-context-te-wb-phil-4-p4-before",
+            "question:wb-context-te-wb-phil-4-p4-stakes",
+            "question:wb-context-te-wb-phil-4-p4-when",
+            "question:wb-context-te-wb-phil-4-stakes",
+            "question:wb-context-te-wb-phil-4-when"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-1-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-1-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-1-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-1-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-2-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-2-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-2-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p4-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p4",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p4-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p4",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-2-p4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-2-p5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-2-p5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-2-p5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p4-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p4",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p4-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p4",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p5-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p5",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p6-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p6",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p6-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p6",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p7-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p7",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p7-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p7",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p7-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-3-p7",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p7-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p7",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-3-p7-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-3-p7",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-4-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-4-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-4-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-phil-4-p4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-phil-4-p4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-phil-4-p4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

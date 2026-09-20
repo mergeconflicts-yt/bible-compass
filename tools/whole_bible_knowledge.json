@@ -1,0 +1,1891 @@
+{
+  "revision": 1,
+  "purpose": "Authored, source-grounded book-level context used by tools/curate_whole_bible.py to build draft canonical/edition/locale packages for the whole English (BSB) Bible.",
+  "data_classification": "draft_curation_input",
+  "attribution": "Book summaries authored for Bible Compass; entity names and Scripture references derived from the Berean Standard Bible (BSB), STEPBible TIPNR/TVTMS, BibleData and OpenBible datasets under their respective CC BY 4.0 terms. Every record is a draft and is not approved or published.",
+  "uncertainty_policy": "Authorship, dating and disputed settings are recorded as positions, not settled facts. Generated records that depend on unsupported evidence carry open questions.",
+  "books": {
+    "Gen": {
+      "genre": "Narrative (primeval history and ancestral narratives)",
+      "overview": "God creates the world, humanity falls, and God begins a covenant family through Abraham, Isaac, Jacob and Joseph, ending with Israel in Egypt.",
+      "authorship": "Mosaic authorship is the traditional position; the text itself is anonymous and later editorial shaping is widely discussed.",
+      "date": "Date of composition is disputed; traditional dates place it in the second millennium BC, while many scholars propose later formation.",
+      "audience": "The people of Israel, especially the exodus generation and later exilic and post-exilic communities.",
+      "setting": "From Eden and Mesopotamia through Canaan, ending in Egypt.",
+      "who": "God, Adam and Eve, Noah, Abraham, Sarah, Isaac, Rebekah, Jacob, Rachel, Leah and Joseph.",
+      "before": "Begins the biblical story with no prior Scripture; assumes God as creator.",
+      "stakes": "Establishes creation, human rebellion, judgment, promise and covenant that the rest of the Bible assumes.",
+      "themes": [
+        "creation",
+        "covenant",
+        "promise",
+        "sin and judgment",
+        "providence"
+      ],
+      "outline": [
+        "Primeval history (1-11)",
+        "Abraham (12-25)",
+        "Isaac and Jacob (25-36)",
+        "Joseph (37-50)"
+      ]
+    },
+    "Exod": {
+      "genre": "Narrative and law",
+      "overview": "God rescues Israel from slavery in Egypt through Moses, forms them as a covenant people at Sinai, and gives the tabernacle and its laws.",
+      "authorship": "Mosaic authorship is traditional; the text is anonymous and composite formation is widely debated.",
+      "date": "The exodus is commonly dated around the thirteenth to fifteenth centuries BC; the dating is disputed.",
+      "audience": "Israel, especially the generation that received the law and later readers.",
+      "setting": "Egypt, the wilderness of Sinai, and Mount Sinai.",
+      "who": "God, Moses, Aaron, Pharaoh, Miriam and the Israelites.",
+      "before": "Continues Genesis, where Jacob's family settled in Egypt.",
+      "stakes": "Defines God's redemption of Israel, the covenant, the law and God's dwelling with his people.",
+      "themes": ["redemption", "covenant", "law", "God's presence", "worship"],
+      "outline": [
+        "Oppression and deliverer (1-6)",
+        "Plagues and passover (7-13)",
+        "Sea crossing and journey (14-18)",
+        "Law and covenant (19-24)",
+        "Tabernacle (25-40)"
+      ]
+    },
+    "Lev": {
+      "genre": "Law and ritual instruction",
+      "overview": "Instructions for sacrifice, priesthood, purity, holiness and the Day of Atonement, calling Israel to be holy as God is holy.",
+      "authorship": "Mosaic authorship is traditional; priestly composition and editing are widely discussed.",
+      "date": "Traditionally set at Sinai in the second millennium BC; modern dating proposals vary.",
+      "audience": "Israel, especially the priests and the worshipping community.",
+      "setting": "At Mount Sinai and the tabernacle.",
+      "who": "God, Moses, Aaron and the priests.",
+      "before": "Follows the tabernacle being set up at the end of Exodus.",
+      "stakes": "Explains how a holy God may dwell among an unholy people.",
+      "themes": ["holiness", "atonement", "sacrifice", "purity", "priesthood"],
+      "outline": [
+        "Offerings (1-7)",
+        "Priesthood and consecration (8-10)",
+        "Clean and unclean (11-16)",
+        "Holiness code (17-27)"
+      ]
+    },
+    "Num": {
+      "genre": "Narrative and law",
+      "overview": "Israel is numbered and organized at Sinai, rebels in the wilderness and is judged to wander, with a new generation prepared to enter the land.",
+      "authorship": "Mosaic authorship is traditional; the text is anonymous and its formation is debated.",
+      "date": "Traditionally set in the wilderness period; dating is disputed.",
+      "audience": "Israel on the plains of Moab and later readers.",
+      "setting": "Sinai, the wilderness, and the plains of Moab.",
+      "who": "God, Moses, Aaron, Miriam, Joshua, Caleb and Israel.",
+      "before": "Follows the covenant and tabernacle of Exodus and Leviticus.",
+      "stakes": "Shows the cost of unbelief and God's faithfulness to his promise across generations.",
+      "themes": [
+        "wilderness",
+        "faithfulness",
+        "rebellion",
+        "judgment",
+        "inheritance"
+      ],
+      "outline": [
+        "Census and camp (1-10)",
+        "Wilderness rebellion (11-25)",
+        "New generation (26-36)"
+      ]
+    },
+    "Deut": {
+      "genre": "Covenant sermons (farewell addresses and law)",
+      "overview": "Moses renews the covenant with Israel on the plains of Moab, recounting God's acts, restating the law and setting blessing and curse before the people.",
+      "authorship": "Mosaic authorship is traditional; the book is anonymous and its formation, including a later frame, is widely discussed.",
+      "date": "Traditonally near the end of Moses' life; compositional dating is disputed.",
+      "audience": "Israel about to enter the promised land.",
+      "setting": "The plains of Moab across the Jordan from Canaan.",
+      "who": "God, Moses and Israel.",
+      "before": "Concludes the wilderness period narrated in Numbers.",
+      "stakes": "Calls a new generation to covenant loyalty as they enter the land.",
+      "themes": [
+        "covenant renewal",
+        "love and obedience",
+        "blessing and curse",
+        "remembrance"
+      ],
+      "outline": [
+        "Historical review (1-4)",
+        "Covenant law (5-26)",
+        "Blessings and curses (27-30)",
+        "Moses' farewell (31-34)"
+      ]
+    },
+    "Josh": {
+      "genre": "Narrative",
+      "overview": "Joshua leads Israel into Canaan, the land is conquered and divided among the tribes, and Israel is called to covenant faithfulness.",
+      "authorship": "Joshua is traditionally associated with the book; the text is anonymous and shows later editing.",
+      "date": "Set in the period of Israel's entry into Canaan; composition is debated.",
+      "audience": "Israel settled in the land.",
+      "setting": "Canaan, the Jordan crossing, and the tribal territories.",
+      "who": "God, Joshua, Rahab, the priests and the tribes of Israel.",
+      "before": "Follows Moses' death at the end of Deuteronomy.",
+      "stakes": "Shows God giving the land he promised and calls Israel to serve him there.",
+      "themes": [
+        "promise fulfilled",
+        "conquest",
+        "obedience",
+        "covenant",
+        "rest"
+      ],
+      "outline": [
+        "Entering the land (1-5)",
+        "Conquest (6-12)",
+        "Division of the land (13-21)",
+        "Farewell and covenant (22-24)"
+      ]
+    },
+    "Judg": {
+      "genre": "Narrative",
+      "overview": "After Joshua, Israel repeatedly turns from God, is oppressed, cries out, and is delivered by judges, spiraling into disorder.",
+      "authorship": "Anonymous; traditional associations vary.",
+      "date": "Set in the pre-monarchic period; composition is debated.",
+      "audience": "Israel reflecting on a turbulent era before the monarchy.",
+      "setting": "The tribal territories of Canaan.",
+      "who": "God, Gideon, Deborah, Samson and the tribes.",
+      "before": "Follows the settlement under Joshua.",
+      "stakes": "Uncovers the cycle of sin and the need for faithful leadership.",
+      "themes": [
+        "cycle of sin",
+        "deliverance",
+        "leadership",
+        "faithlessness",
+        "grace"
+      ],
+      "outline": [
+        "Conquest incomplete (1)",
+        "Cycles of judges (2-16)",
+        "Disorder and civil war (17-21)"
+      ]
+    },
+    "Ruth": {
+      "genre": "Narrative (short story)",
+      "overview": "Ruth, a Moabite widow, loyally joins Israel, gleans in Boaz's field, and becomes an ancestor of David through redemption.",
+      "authorship": "Anonymous.",
+      "date": "Set in the days of the judges; composition is debated.",
+      "audience": "Israel, especially those tracing David's line.",
+      "setting": "Moab and Bethlehem in Judah.",
+      "who": "Ruth, Naomi, Boaz, and God.",
+      "before": "Set during the period of the judges.",
+      "stakes": "Shows covenant loyalty and God's providence reaching beyond ethnic boundaries toward David's line.",
+      "themes": [
+        "loyalty",
+        "redemption",
+        "providence",
+        "kinship",
+        "foreigner included"
+      ],
+      "outline": ["Naomi's return (1)", "Ruth gleans (2)", "Boaz redeems (3-4)"]
+    },
+    "1Sam": {
+      "genre": "Narrative",
+      "overview": "Israel receives kingship: Samuel's ministry, Saul's rise and fall, and David's rise as the anointed future king.",
+      "authorship": "Anonymous; the book is named for Samuel but covers more than his life.",
+      "date": "Set in the eleventh century BC transition to monarchy; composition is debated.",
+      "audience": "Israel reflecting on the monarchy.",
+      "setting": "Israel's towns and battlefields, from Shiloh to the wilderness.",
+      "who": "God, Samuel, Saul, David, Jonathan and Hannah.",
+      "before": "Follows the period of the judges.",
+      "stakes": "Explores faithful leadership, obedience and God's choice of David.",
+      "themes": [
+        "kingship",
+        "obedience",
+        "anointing",
+        "judgment",
+        "friendship"
+      ],
+      "outline": ["Samuel (1-7)", "Saul (8-15)", "Saul and David (16-31)"]
+    },
+    "2Sam": {
+      "genre": "Narrative",
+      "overview": "David reigns over Israel, unites the kingdom, receives a covenant promise, and is tested by sin, family tragedy and rebellion.",
+      "authorship": "Anonymous.",
+      "date": "Set in the tenth century BC; composition is debated.",
+      "audience": "Israel reflecting on David's reign.",
+      "setting": "Hebron, Jerusalem and the territories of Israel and Judah.",
+      "who": "God, David, Bathsheba, Absalom, Nathan and Joab.",
+      "before": "Continues from Saul's death in 1 Samuel.",
+      "stakes": "Shows both David's covenant promise and the consequences of his failures.",
+      "themes": [
+        "covenant",
+        "repentance",
+        "kingship",
+        "sin's consequences",
+        "loyalty"
+      ],
+      "outline": [
+        "David's reign established (1-10)",
+        "David's sin and its cost (11-20)",
+        "Closing reflections (21-24)"
+      ]
+    },
+    "1Kgs": {
+      "genre": "Narrative",
+      "overview": "Solomon's reign and temple, the kingdom's division, and the prophetic ministries of Elijah and others against royal unfaithfulness.",
+      "authorship": "Anonymous; traditionally associated with disynchronic history.",
+      "date": "Covers roughly the tenth to ninth centuries BC; composition is debated.",
+      "audience": "Israel and Judah, including exilic readers.",
+      "setting": "Israel and Judah from Jerusalem to Samaria.",
+      "who": "God, Solomon, Jeroboam, Ahab, Jezebel and Elijah.",
+      "before": "Follows David's reign.",
+      "stakes": "Shows that covenant faithfulness, not royal power, secures God's blessing.",
+      "themes": ["temple", "division", "idolatry", "prophecy", "covenant"],
+      "outline": ["Solomon (1-11)", "Divided kingdom (12-16)", "Elijah (17-22)"]
+    },
+    "2Kgs": {
+      "genre": "Narrative",
+      "overview": "The divided kingdoms decline through idolatry, prophets like Elisha minister, and first Israel then Judah fall into exile.",
+      "authorship": "Anonymous.",
+      "date": "Covers roughly the ninth to sixth centuries BC; composition is debated.",
+      "audience": "Exilic and post-exilic readers.",
+      "setting": "Israel, Judah, Samaria, Jerusalem and exile.",
+      "who": "God, Elisha, Hezekiah, Josiah, Jehu and foreign kings.",
+      "before": "Continues 1 Kings' account of the divided monarchy.",
+      "stakes": "Explains the exiles as covenant judgment while preserving hope.",
+      "themes": ["judgment", "prophecy", "reform", "exile", "faithfulness"],
+      "outline": [
+        "Elisha (1-8)",
+        "Kings of Israel and Judah (9-17)",
+        "Judah to exile (18-25)"
+      ]
+    },
+    "1Chr": {
+      "genre": "Narrative and genealogy",
+      "overview": "Genealogies from Adam to Israel are followed by David's reign, with emphasis on worship, the ark and preparation for the temple.",
+      "authorship": "Anonymous; often associated with the Chronicler.",
+      "date": "Composed after the exile, likely in the Persian period (approx. fifth to fourth centuries BC).",
+      "audience": "Post-exilic Judah rebuilding around temple and Davidic hope.",
+      "setting": "Israel's ancestral line and David's Jerusalem.",
+      "who": "God, David, the Levites and the tribes.",
+      "before": "Retells the story from a post-exilic vantage.",
+      "stakes": "Grounds the restored community in Davidic worship and covenant.",
+      "themes": [
+        "genealogy",
+        "worship",
+        "Davidic covenant",
+        "temple",
+        "restoration"
+      ],
+      "outline": [
+        "Genealogies (1-9)",
+        "David's rise and ark (10-16)",
+        "Davidic covenant and temple prep (17-29)"
+      ]
+    },
+    "2Chr": {
+      "genre": "Narrative",
+      "overview": "Solomon's temple, the kings of Judah, reforms and failures, ending with the exile and Cyrus's decree to rebuild.",
+      "authorship": "Anonymous; associated with the Chronicler.",
+      "date": "Post-exilic composition (approx. Persian period).",
+      "audience": "Post-exilic Judah.",
+      "setting": "Jerusalem and Judah, with the temple at the center.",
+      "who": "God, Solomon, Hezekiah, Josiah and the kings of Judah.",
+      "before": "Continues the Chronicler's account begun in 1 Chronicles.",
+      "stakes": "Calls the restored community to temple worship and covenant obedience.",
+      "themes": ["temple", "reform", "worship", "repentance", "restoration"],
+      "outline": [
+        "Solomon and the temple (1-9)",
+        "Kings of Judah (10-28)",
+        "Hezekiah and Josiah (29-36)"
+      ]
+    },
+    "Ezra": {
+      "genre": "Narrative (with documents)",
+      "overview": "The exiles return from Babylon, the temple is rebuilt, and Ezra reforms the community around the law.",
+      "authorship": "Anonymous; Ezra is traditionally associated with the book.",
+      "date": "Set in the Persian period, sixth to fifth centuries BC.",
+      "audience": "Post-exilic Judah.",
+      "setting": "Persia and Jerusalem.",
+      "who": "God, Zerubbabel, Ezra, Cyrus, Artaxerxes and the returned exiles.",
+      "before": "Follows the exile and Cyrus's decree.",
+      "stakes": "Shows God restoring worship and covenant identity after exile.",
+      "themes": ["return", "temple", "law", "reform", "providence"],
+      "outline": [
+        "First return and temple (1-6)",
+        "Ezra's return and reform (7-10)"
+      ]
+    },
+    "Neh": {
+      "genre": "Narrative and memoir",
+      "overview": "Nehemiah returns to rebuild Jerusalem's walls, leads reform, and the community renews covenant with God.",
+      "authorship": "Anonymous; portions are first-person memoir of Nehemiah.",
+      "date": "Set in the fifth century BC under Artaxerxes I.",
+      "audience": "Post-exilic Judah.",
+      "setting": "Susa, the route to Judah, and Jerusalem.",
+      "who": "God, Nehemiah, Artaxerxes, Sanballat, Tobiah and Ezra.",
+      "before": "Continues the restoration begun in Ezra.",
+      "stakes": "Security, worship and covenant faithfulness for the restored city.",
+      "themes": ["rebuilding", "prayer", "opposition", "reform", "covenant"],
+      "outline": [
+        "Nehemiah's commission (1-2)",
+        "Wall rebuilt (3-7)",
+        "Revival and covenant (8-10)",
+        "Dedication and reforms (11-13)"
+      ]
+    },
+    "Esth": {
+      "genre": "Narrative",
+      "overview": "In Persia, Esther and Mordecai risk their lives to save the Jewish people from Haman's plot, and Purim is established.",
+      "authorship": "Anonymous.",
+      "date": "Set in the Persian period, likely fifth century BC; some scholars propose a later date.",
+      "audience": "Jews in the diaspora and later readers.",
+      "setting": "Susa and the Persian court.",
+      "who": "Esther, Mordecai, Ahasuerus (Xerxes), Haman and Vashti.",
+      "before": "Set within Persian rule after the exile.",
+      "stakes": "Survival of the Jewish people and God's hidden providence.",
+      "themes": [
+        "providence",
+        "courage",
+        "deliverance",
+        "identity",
+        "reversal"
+      ],
+      "outline": [
+        "Esther becomes queen (1-2)",
+        "Haman's plot (3-5)",
+        "Deliverance (6-10)"
+      ]
+    },
+    "Job": {
+      "genre": "Wisdom poetry with prose frame",
+      "overview": "Job, a righteous man, suffers deeply and debates God's justice with friends, and God answers from the whirlwind.",
+      "authorship": "Anonymous.",
+      "date": "Dating of the events and composition is disputed; the book may be set in an ancient patriarchal era.",
+      "audience": "Those wrestling with suffering and faith.",
+      "setting": "The land of Uz and the heavenly court.",
+      "who": "God, Job, Eliphaz, Bildad, Zophar, Elihu and the accuser.",
+      "before": "Stands among wisdom literature with no clear historical anchor.",
+      "stakes": "Explores innocent suffering, divine justice and honest faith.",
+      "themes": [
+        "suffering",
+        "justice",
+        "faith",
+        "wisdom",
+        "God's sovereignty"
+      ],
+      "outline": [
+        "Prologue (1-2)",
+        "Dialogue (3-31)",
+        "Elihu (32-37)",
+        "God answers (38-42)"
+      ]
+    },
+    "Ps": {
+      "genre": "Poetry and song (prayer, praise, lament, wisdom)",
+      "overview": "A collection of prayers and songs spanning praise, lament, thanksgiving, royal and wisdom themes, used in Israel's worship.",
+      "authorship": "Many psalms are associated with David; others with Asaph, the sons of Korah, Solomon, Moses and anonymous authors.",
+      "date": "Composed and collected across many centuries, from the monarchy to the post-exilic period.",
+      "audience": "Israel's worshipping community and later readers.",
+      "setting": "Temple and communal worship, and personal devotion.",
+      "who": "God, David, Asaph, the sons of Korah and Israel.",
+      "before": "Draws on Israel's history and worship traditions.",
+      "stakes": "Gives language for praise, repentance, lament and trust before God.",
+      "themes": ["praise", "lament", "trust", "repentance", "worship"],
+      "outline": [
+        "Book I (1-41)",
+        "Book II (42-72)",
+        "Book III (73-89)",
+        "Book IV (90-106)",
+        "Book V (107-150)"
+      ]
+    },
+    "Prov": {
+      "genre": "Wisdom sayings and instructions",
+      "overview": "Practical wisdom for living in the fear of the LORD, contrasting the wise and the foolish across speech, work, relationships and desire.",
+      "authorship": "Attributed largely to Solomon, with sections attributed to other sages; compilation is anonymous.",
+      "date": "Material from the monarchy, collected into its final form later (possibly Persian period).",
+      "audience": "Youth and all seeking wisdom.",
+      "setting": "Everyday life in Israel's towns and courts.",
+      "who": "God, Solomon, the wise and the simple.",
+      "before": "Follows Israel's wisdom tradition.",
+      "stakes": "Shapes character and choices toward life rather than ruin.",
+      "themes": [
+        "wisdom",
+        "fear of the LORD",
+        "speech",
+        "discipline",
+        "diligence"
+      ],
+      "outline": [
+        "Proverbs of Solomon (1-22)",
+        "Sayings of the wise (22-24)",
+        "Hezekiah's collection (25-29)",
+        "Agur and Lemuel (30-31)"
+      ]
+    },
+    "Eccl": {
+      "genre": "Wisdom reflection",
+      "overview": "The Teacher examines life 'under the sun', finds much vanity, and counsels reverent enjoyment of God's gifts.",
+      "authorship": "Traditionally associated with Solomon, though the speaker is called the Teacher/Preacher and authorship is debated.",
+      "date": "Composition is disputed, often placed in the Persian or Hellenistic period.",
+      "audience": "Those questioning the meaning of life and work.",
+      "setting": "Life in the world, viewed through the royal court.",
+      "who": "God, the Teacher and humanity.",
+      "before": "Stands within Israel's wisdom literature.",
+      "stakes": "Faces mortality and futility while calling for reverent trust in God.",
+      "themes": ["vanity", "mortality", "enjoyment", "wisdom", "fear of God"],
+      "outline": [
+        "The problem of vanity (1-2)",
+        "Observations on time and toil (3-6)",
+        "Wisdom and limits (7-11)",
+        "Conclusion (12)"
+      ]
+    },
+    "Song": {
+      "genre": "Poetry (love song)",
+      "overview": "A cycle of love poems celebrating desire, beauty, devotion and covenant-like love between a bride and groom.",
+      "authorship": "Traditionally associated with Solomon; authorship and interpretation are debated.",
+      "date": "Dating is disputed.",
+      "audience": "Israel and later readers; often read as wisdom and as a picture of divine love.",
+      "setting": "Gardens, vineyards, the city and the countryside.",
+      "who": "The beloved, her lover and the daughters of Jerusalem.",
+      "before": "Stands among the wisdom and poetic books.",
+      "stakes": "Honors human love and, in later reading, God's covenant love for his people.",
+      "themes": ["love", "desire", "devotion", "beauty", "covenant love"],
+      "outline": [
+        "Mutual longing (1-3)",
+        "Union and praise (4-7)",
+        "Renewed devotion (8)"
+      ]
+    },
+    "Isa": {
+      "genre": "Prophecy (oracles, visions and songs)",
+      "overview": "Isaiah confronts Judah's sin, announces judgment on nations, then foresees comfort, a suffering servant and restoration.",
+      "authorship": "The book is associated with Isaiah; many scholars see later authors/editors in chapters 40-66, while others maintain unity.",
+      "date": "Set in the eighth century BC; composition and unity are disputed.",
+      "audience": "Judah, Jerusalem and exiles.",
+      "setting": "Jerusalem, the nations and the coming restoration.",
+      "who": "God, Isaiah, kings of Judah, the servant and the nations.",
+      "before": "Addresses the Assyrian crisis and later exile.",
+      "stakes": "Calls for trust in God, not alliances, and promises comfort and a servant who bears sin.",
+      "themes": ["judgment", "comfort", "holiness", "servant", "restoration"],
+      "outline": [
+        "Judgment and Immanuel (1-12)",
+        "Oracles against nations (13-27)",
+        "Woes and Assyria (28-39)",
+        "Comfort and servant (40-55)",
+        "New heavens and earth (56-66)"
+      ]
+    },
+    "Jer": {
+      "genre": "Prophecy (oracles, sermons and laments)",
+      "overview": "Jeremiah warns Judah of coming judgment by Babylon, calls for repentance, suffers rejection, and announces a new covenant.",
+      "authorship": "Associated with Jeremiah and his scribe Baruch; the book shows editorial shaping.",
+      "date": "Late seventh to early sixth century BC, across the fall of Jerusalem.",
+      "audience": "Judah before and during the exile, and exiles in Babylon.",
+      "setting": "Jerusalem, Judah, Egypt and Babylon.",
+      "who": "God, Jeremiah, Josiah, Zedekiah, Baruch and Nebuchadnezzar.",
+      "before": "Follows the reforms of Josiah and the Assyrian decline.",
+      "stakes": "Explains the exile and holds out a new covenant and return.",
+      "themes": [
+        "judgment",
+        "repentance",
+        "new covenant",
+        "suffering prophet",
+        "restoration"
+      ],
+      "outline": [
+        "Call and early oracles (1-20)",
+        "Judgment of kings and nations (21-39)",
+        "After the fall (40-52)"
+      ]
+    },
+    "Lam": {
+      "genre": "Poetry (acrostic laments)",
+      "overview": "Five laments mourn the destruction of Jerusalem, confess sin, and reach toward God's steadfast love.",
+      "authorship": "Traditionally associated with Jeremiah; anonymous and disputed.",
+      "date": "Composed after the destruction of Jerusalem in 586 BC.",
+      "audience": "Survivors of the fall of Jerusalem.",
+      "setting": "The ruined city of Jerusalem.",
+      "who": "God, the mourner and the daughter of Zion.",
+      "before": "Follows the Babylonian destruction.",
+      "stakes": "Gives voice to grief while clinging to mercy.",
+      "themes": ["lament", "judgment", "mercy", "grief", "hope"],
+      "outline": [
+        "Jerusalem abandoned (1)",
+        "God's wrath (2)",
+        "Afflicted man's hope (3)",
+        "Siege and plea (4-5)"
+      ]
+    },
+    "Ezek": {
+      "genre": "Prophecy (visions and symbolic acts)",
+      "overview": "Ezekiel, a priest among the exiles, sees God's glory, announces judgment on Judah and nations, and envisions a restored temple and people.",
+      "authorship": "Associated with Ezekiel; the book is largely first-person.",
+      "date": "Sixth century BC during the Babylonian exile.",
+      "audience": "Judean exiles in Babylon.",
+      "setting": "Babylon, visions of Jerusalem, and a restored land.",
+      "who": "God, Ezekiel, the exiles and the nations.",
+      "before": "Follows the exile begun under Nebuchadnezzar.",
+      "stakes": "Assures exiles of God's presence, judgment and future restoration.",
+      "themes": [
+        "God's glory",
+        "judgment",
+        "new heart",
+        "restoration",
+        "temple"
+      ],
+      "outline": [
+        "Call and visions (1-3)",
+        "Judgment on Jerusalem (4-24)",
+        "Nations (25-32)",
+        "Restoration and temple (33-48)"
+      ]
+    },
+    "Dan": {
+      "genre": "Narrative and apocalyptic visions",
+      "overview": "Daniel and friends remain faithful in Babylon, and visions reveal God's rule over kingdoms and the coming end.",
+      "authorship": "The book is associated with Daniel; many scholars date its final form to the second century BC, while others defend an earlier date.",
+      "date": "Set in the sixth century BC exile; composition is disputed.",
+      "audience": "Jews under exile and later under persecution.",
+      "setting": "Babylon, Persia and visionary heaven.",
+      "who": "God, Daniel, Nebuchadnezzar, Belshazzar, Darius and the son of man.",
+      "before": "Set during and after the fall of Jerusalem.",
+      "stakes": "Encourages faithfulness under empire and trust in God's sovereign plan.",
+      "themes": [
+        "faithfulness",
+        "sovereignty",
+        "apocalyptic",
+        "empires",
+        "hope"
+      ],
+      "outline": ["Stories of faith (1-6)", "Visions (7-12)"]
+    },
+    "Hos": {
+      "genre": "Prophecy",
+      "overview": "Hosea's marriage to Gomer pictures God's faithful love for unfaithful Israel, with calls to return and warnings of judgment.",
+      "authorship": "Hosea son of Beeri.",
+      "date": "Eighth century BC in the northern kingdom.",
+      "audience": "Northern Israel.",
+      "setting": "The northern kingdom amid prosperity and idolatry.",
+      "who": "God, Hosea, Gomer and Israel.",
+      "before": "Addresses the fall of Samaria and Assyrian threat.",
+      "stakes": "God's covenant love endures despite Israel's betrayal.",
+      "themes": [
+        "covenant love",
+        "unfaithfulness",
+        "repentance",
+        "judgment",
+        "mercy"
+      ],
+      "outline": [
+        "Hosea's marriage (1-3)",
+        "Israel's guilt and calls to return (4-11)",
+        "Final indictment and promise (12-14)"
+      ]
+    },
+    "Joel": {
+      "genre": "Prophecy",
+      "overview": "A locust plague becomes a call to repentance and a promise of restoration, including the outpouring of God's Spirit.",
+      "authorship": "Joel son of Pethuel; dating is disputed.",
+      "date": "Dating is uncertain, with proposals from the ninth to the fifth centuries BC.",
+      "audience": "Judah and Jerusalem.",
+      "setting": "Zion and the land of Judah.",
+      "who": "God, Joel and the people of Judah.",
+      "before": "Addresses a national crisis of locusts and drought.",
+      "stakes": "Calls for repentance and hope in God's restoration and Spirit.",
+      "themes": [
+        "repentance",
+        "day of the LORD",
+        "restoration",
+        "Spirit",
+        "judgment"
+      ],
+      "outline": [
+        "Locust plague and lament (1)",
+        "Call to repentance (2:1-17)",
+        "Restoration and Spirit (2:18-3:21)"
+      ]
+    },
+    "Amos": {
+      "genre": "Prophecy",
+      "overview": "Amos denounces injustice and empty religion in Israel and announces judgment, ending with a promise of restoration.",
+      "authorship": "Amos, a shepherd from Tekoa.",
+      "date": "Eighth century BC.",
+      "audience": "Northern Israel.",
+      "setting": "Bethel, Samaria and the northern kingdom.",
+      "who": "God, Amos, Jeroboam II and the powerful of Israel.",
+      "before": "Addresses a time of prosperity and complacency.",
+      "stakes": "God's justice demands righteousness, not ritual alone.",
+      "themes": [
+        "justice",
+        "judgment",
+        "social righteousness",
+        "day of the LORD",
+        "restoration"
+      ],
+      "outline": [
+        "Oracles against nations and Israel (1-2)",
+        "Judgment sermons (3-6)",
+        "Visions (7-9)",
+        "Restoration promise (9:11-15)"
+      ]
+    },
+    "Obad": {
+      "genre": "Prophecy",
+      "overview": "Obadiah announces judgment on Edom for its violence against Jacob and promises deliverance on Mount Zion.",
+      "authorship": "Obadiah; identity and date are disputed.",
+      "date": "Possibly shortly after the fall of Jerusalem (586 BC) or earlier.",
+      "audience": "Judah and Edom.",
+      "setting": "Edom and Zion.",
+      "who": "God, Obadiah, Edom and Jacob.",
+      "before": "Addresses Edom's role during Jerusalem's crisis.",
+      "stakes": "God defends his people and judges their oppressors.",
+      "themes": [
+        "judgment",
+        "pride",
+        "brotherhood betrayed",
+        "deliverance",
+        "day of the LORD"
+      ],
+      "outline": ["Judgment on Edom (1-14)", "The day of the LORD (15-21)"]
+    },
+    "Jon": {
+      "genre": "Narrative (prophetic story)",
+      "overview": "Jonah flees God's call, is swallowed by a great fish, preaches to Nineveh, and resents God's mercy.",
+      "authorship": "Anonymous.",
+      "date": "Set in the eighth century BC; composition is disputed.",
+      "audience": "Israel, challenged about God's mercy to outsiders.",
+      "setting": "Joppa, the sea, the fish, and Nineveh.",
+      "who": "God, Jonah, the sailors and Nineveh.",
+      "before": "Set during Assyrian power.",
+      "stakes": "Shows God's concern for all nations and Jonah's reluctant heart.",
+      "themes": [
+        "mercy",
+        "repentance",
+        "missions",
+        "reluctance",
+        "God's compassion"
+      ],
+      "outline": [
+        "Flight (1)",
+        "Prayer and deliverance (2)",
+        "Nineveh repents (3)",
+        "Jonah's anger (4)"
+      ]
+    },
+    "Mic": {
+      "genre": "Prophecy",
+      "overview": "Micah indicts injustice and false prophecy in Judah and Israel, announces judgment, and promises a coming ruler from Bethlehem.",
+      "authorship": "Micah of Moresheth.",
+      "date": "Eighth century BC.",
+      "audience": "Judah and Israel.",
+      "setting": "Samaria, Jerusalem and the towns of Judah.",
+      "who": "God, Micah, the leaders and the people.",
+      "before": "Addresses Assyrian pressure and social injustice.",
+      "stakes": "God requires justice, mercy and humility, and will restore.",
+      "themes": ["justice", "judgment", "mercy", "Messiah", "covenant"],
+      "outline": [
+        "Judgment on Samaria and Judah (1-3)",
+        "Hope and the coming ruler (4-5)",
+        "God's case and mercy (6-7)"
+      ]
+    },
+    "Nah": {
+      "genre": "Prophecy",
+      "overview": "Nahum announces the fall of Nineveh, declaring God's vengeance on the violent empire and good news for his people.",
+      "authorship": "Nahum the Elkoshite.",
+      "date": "Seventh century BC, before Nineveh's fall in 612 BC.",
+      "audience": "Judah and Nineveh.",
+      "setting": "Nineveh, the Assyrian capital.",
+      "who": "God, Nahum and Nineveh.",
+      "before": "Follows Assyrian oppression of Judah.",
+      "stakes": "God is a refuge for his people and judges ruthless power.",
+      "themes": [
+        "God's judgment",
+        "vengeance",
+        "refuge",
+        "empire's fall",
+        "good news"
+      ],
+      "outline": [
+        "God's character and judgment (1)",
+        "Siege of Nineveh (2)",
+        "Nineveh's doom (3)"
+      ]
+    },
+    "Hab": {
+      "genre": "Prophecy (dialogue and psalm)",
+      "overview": "Habakkuk questions God about violence and injustice, receives the answer that the righteous live by faith, and ends in trust.",
+      "authorship": "Habakkuk the prophet.",
+      "date": "Late seventh century BC, before the Babylonian invasion.",
+      "audience": "Judah facing Babylonian threat.",
+      "setting": "Judah and the rise of Babylon.",
+      "who": "God and Habakkuk.",
+      "before": "Addresses the collapse of justice before Babylon's rise.",
+      "stakes": "Faith trusts God's justice even when its timing is unclear.",
+      "themes": ["theodicy", "faith", "justice", "sovereignty", "trust"],
+      "outline": [
+        "Habakkuk's complaint (1)",
+        "God's answer (2)",
+        "Psalm of trust (3)"
+      ]
+    },
+    "Zeph": {
+      "genre": "Prophecy",
+      "overview": "Zephaniah announces the coming day of the LORD against Judah and the nations, then promises a humble remnant and restoration.",
+      "authorship": "Zephaniah son of Cushi.",
+      "date": "Seventh century BC, during Josiah's reign.",
+      "audience": "Judah and Jerusalem.",
+      "setting": "Judah, Jerusalem and the nations.",
+      "who": "God, Zephaniah, Josiah and the remnant.",
+      "before": "Precedes or accompanies Josiah's reforms.",
+      "stakes": "Confronts complacency with judgment and offers hope to the humble.",
+      "themes": [
+        "day of the LORD",
+        "judgment",
+        "repentance",
+        "remnant",
+        "restoration"
+      ],
+      "outline": [
+        "Judgment on Judah (1)",
+        "Judgment on nations (2)",
+        "Jerusalem's restoration (3)"
+      ]
+    },
+    "Hag": {
+      "genre": "Prophecy",
+      "overview": "Haggai calls the returned exiles to rebuild the temple, promising God's presence and blessing.",
+      "authorship": "Haggai the prophet.",
+      "date": "520 BC, second year of Darius.",
+      "audience": "Returned exiles in Jerusalem.",
+      "setting": "Post-exilic Jerusalem.",
+      "who": "God, Haggai, Zerubbabel and Joshua.",
+      "before": "Follows the return from exile and temple work stalled.",
+      "stakes": "Prioritizing God's house brings covenant blessing.",
+      "themes": ["temple", "obedience", "blessing", "presence", "restoration"],
+      "outline": [
+        "Call to rebuild (1)",
+        "Promise of glory (2:1-9)",
+        "Blessing and Zerubbabel (2:10-23)"
+      ]
+    },
+    "Zech": {
+      "genre": "Prophecy (visions and oracles)",
+      "overview": "Zechariah encourages the temple rebuild with night visions, calls for repentance, and foretells a humble king and the LORD's reign.",
+      "authorship": "Zechariah son of Berechiah; chapters 9-14 are often seen as distinct, though unity is defended.",
+      "date": "520-518 BC and later.",
+      "audience": "Post-exilic Jerusalem.",
+      "setting": "Jerusalem and visionary scenes.",
+      "who": "God, Zechariah, Zerubbabel, Joshua and the coming king.",
+      "before": "Runs alongside Haggai's ministry.",
+      "stakes": "God will dwell among his people and bring his king.",
+      "themes": ["visions", "repentance", "Messiah", "Zion", "restoration"],
+      "outline": [
+        "Night visions (1-6)",
+        "Fasts and restoration (7-8)",
+        "The coming king (9-14)"
+      ]
+    },
+    "Mal": {
+      "genre": "Prophecy (disputation)",
+      "overview": "Malachi confronts half-hearted worship and unfaithfulness, and promises the messenger and the coming day of the LORD.",
+      "authorship": "Anonymous, ascribed to Malachi (possibly a title meaning 'my messenger').",
+      "date": "Persian period, likely fifth century BC.",
+      "audience": "Post-exilic Judah.",
+      "setting": "Jerusalem and its temple.",
+      "who": "God, the prophet, the priests and the people.",
+      "before": "Closes the prophetic era following the restoration.",
+      "stakes": "Calls for genuine worship and prepares for the LORD's messenger.",
+      "themes": [
+        "covenant",
+        "worship",
+        "faithfulness",
+        "messenger",
+        "day of the LORD"
+      ],
+      "outline": [
+        "God's love and Israel's unfaithfulness (1-2)",
+        "The coming messenger (3)",
+        "The day of the LORD (4)"
+      ]
+    },
+    "Matt": {
+      "genre": "Gospel",
+      "overview": "Matthew presents Jesus as the Messiah and greater Moses, fulfilling Scripture through his birth, teaching, death and resurrection.",
+      "authorship": "Traditionally attributed to the apostle Matthew; the text is anonymous and authorship is discussed.",
+      "date": "Commonly dated in the second half of the first century (approx. AD 60-90).",
+      "audience": "Jewish-Christian readers and the wider church.",
+      "setting": "Judea, Galilee and Jerusalem.",
+      "who": "Jesus, the disciples, the religious leaders, Herod and John the Baptist.",
+      "before": "Opens the New Testament with fulfilment of Israel's Scriptures.",
+      "stakes": "Jesus is the promised king who saves his people and commissions the church.",
+      "themes": [
+        "fulfilment",
+        "kingdom",
+        "discipleship",
+        "Messiah",
+        "Great Commission"
+      ],
+      "outline": [
+        "Birth and beginnings (1-4)",
+        "Teaching and miracles (5-13)",
+        "Journey to Jerusalem (14-20)",
+        "Cross and resurrection (21-28)"
+      ]
+    },
+    "Mark": {
+      "genre": "Gospel",
+      "overview": "Mark tells the fast-paced story of Jesus as the powerful Son of God who suffers, calling disciples to follow him.",
+      "authorship": "Traditionally associated with John Mark and Peter's testimony; the text is anonymous.",
+      "date": "Commonly dated around AD 65-70, possibly earlier.",
+      "audience": "Likely Gentile Roman Christians.",
+      "setting": "Galilee, the road and Jerusalem.",
+      "who": "Jesus, the disciples, Peter, the crowds and Roman authorities.",
+      "before": "Presents Jesus as the beginning of the gospel.",
+      "stakes": "Jesus is the suffering Son of God; following him means the cross.",
+      "themes": [
+        "Messiah",
+        "suffering servant",
+        "discipleship",
+        "kingdom",
+        "faith"
+      ],
+      "outline": [
+        "Ministry in Galilee (1-8)",
+        "Journey to Jerusalem (8-10)",
+        "Cross and resurrection (11-16)"
+      ]
+    },
+    "Luke": {
+      "genre": "Gospel (orderly account)",
+      "overview": "Luke presents an orderly account of Jesus' life, emphasising salvation for the poor, outcasts, women and Gentiles.",
+      "authorship": "Associated with Luke, a companion of Paul; the text is anonymous.",
+      "date": "Commonly dated around AD 60-85.",
+      "audience": "Theophilus and Gentile believers.",
+      "setting": "Judea, Galilee, Samaria and Jerusalem.",
+      "who": "Jesus, Mary, John the Baptist, the disciples and the religious leaders.",
+      "before": "Precedes Acts, which continues the story to the nations.",
+      "stakes": "Jesus is the Saviour of all people, fulfilling Israel's hope.",
+      "themes": ["salvation", "compassion", "outsiders", "Spirit", "prayer"],
+      "outline": [
+        "Birth and preparation (1-4)",
+        "Ministry in Galilee (4-9)",
+        "Journey to Jerusalem (9-19)",
+        "Cross and resurrection (19-24)"
+      ]
+    },
+    "John": {
+      "genre": "Gospel",
+      "overview": "John presents Jesus as the eternal Word and Son of God, with seven signs and long discourses, so that readers may believe and have life.",
+      "authorship": "Associated with John the disciple; the text is anonymous and authorship is discussed.",
+      "date": "Commonly dated around AD 80-100.",
+      "audience": "Believers and seekers among Jews and Greeks.",
+      "setting": "Judea, Galilee and Jerusalem.",
+      "who": "Jesus, John the Baptist, Mary, Thomas, Peter and the Father.",
+      "before": "Reflects deeply on the meaning of Jesus' life.",
+      "stakes": "Jesus is God's Son who gives eternal life.",
+      "themes": ["incarnation", "eternal life", "signs", "belief", "love"],
+      "outline": [
+        "The Word and signs (1-12)",
+        "Farewell discourses (13-17)",
+        "Passion and resurrection (18-21)"
+      ]
+    },
+    "Acts": {
+      "genre": "Narrative history",
+      "overview": "The risen Jesus sends the Spirit, the church is born in Jerusalem, and the gospel spreads through persecution to the Gentile world.",
+      "authorship": "Associated with Luke, companion of Paul; the text is anonymous.",
+      "date": "Commonly dated around AD 60-90, describing events to about AD 62.",
+      "audience": "Theophilus and the early church.",
+      "setting": "Jerusalem, Judea, Samaria, Asia Minor, Greece and Rome.",
+      "who": "God, the Spirit, Peter, Paul, Barnabas, Stephen and the churches.",
+      "before": "Continues the Gospel of Luke.",
+      "stakes": "The gospel advances to the nations, and the Spirit empowers the church.",
+      "themes": [
+        "Spirit",
+        "mission",
+        "church growth",
+        "persecution",
+        "providence"
+      ],
+      "outline": [
+        "Church born in Jerusalem (1-7)",
+        "Gospel to Judea and Samaria (8-12)",
+        "Paul's missionary journeys (13-21)",
+        "Trial and Rome (22-28)"
+      ]
+    },
+    "Rom": {
+      "genre": "Epistle (letter)",
+      "overview": "Paul sets out the gospel: all are sinners, God justifies by faith in Christ, and believers live transformed in Jew-Gentile unity.",
+      "authorship": "Paul the apostle, written to the church in Rome.",
+      "date": "Commonly dated around AD 57.",
+      "audience": "Christians in Rome, Jews and Gentiles.",
+      "setting": "Written from Greece during Paul's later ministry.",
+      "who": "God, Paul, Jesus, Adam, Abraham and Israel.",
+      "before": "Placed among Paul's letters after his missionary work.",
+      "stakes": "Shows God's righteousness in justifying sinners and uniting Jews and Gentiles.",
+      "themes": ["justification", "faith", "grace", "sin", "sanctification"],
+      "outline": [
+        "Sin and justification (1-5)",
+        "Sanctification and Israel (6-11)",
+        "Christian living (12-16)"
+      ]
+    },
+    "1Cor": {
+      "genre": "Epistle",
+      "overview": "Paul addresses divisions, immorality, lawsuits, marriage, freedom, worship and resurrection in a divided Corinthian church.",
+      "authorship": "Paul the apostle.",
+      "date": "Commonly dated around AD 54-55.",
+      "audience": "The church in Corinth.",
+      "setting": "Written from Ephesus to a wealthy port city.",
+      "who": "God, Paul, Jesus, the Corinthians and Apollos.",
+      "before": "Written during Paul's third journey.",
+      "stakes": "The gospel must reshape a church's life and unity.",
+      "themes": [
+        "unity",
+        "holiness",
+        "love",
+        "resurrection",
+        "spiritual gifts"
+      ],
+      "outline": [
+        "Divisions and wisdom (1-4)",
+        "Discipline and courts (5-6)",
+        "Marriage and freedom (7-11)",
+        "Gifts and love (12-14)",
+        "Resurrection and giving (15-16)"
+      ]
+    },
+    "2Cor": {
+      "genre": "Epistle",
+      "overview": "Paul defends his apostleship, explains suffering and comfort, and appeals for generous giving and reconciliation.",
+      "authorship": "Paul the apostle.",
+      "date": "Commonly dated around AD 55-57.",
+      "audience": "The church in Corinth and Achaia.",
+      "setting": "Written after a painful visit and confrontation.",
+      "who": "God, Paul, the Corinthians and false apostles.",
+      "before": "Follows 1 Corinthians and Paul's changed plans.",
+      "stakes": "Reconciliation and a proper view of apostolic weakness.",
+      "themes": [
+        "comfort",
+        "weakness",
+        "reconciliation",
+        "generosity",
+        "ministry"
+      ],
+      "outline": [
+        "Paul's comfort and ministry (1-7)",
+        "Giving (8-9)",
+        "Defence of apostleship (10-13)"
+      ]
+    },
+    "Gal": {
+      "genre": "Epistle",
+      "overview": "Paul defends justification by faith apart from works of the law against teachers demanding Gentile circumcision.",
+      "authorship": "Paul the apostle.",
+      "date": "Commonly dated around AD 48-55.",
+      "audience": "The churches of Galatia.",
+      "setting": "Written amid conflict over Gentile inclusion.",
+      "who": "God, Paul, Jesus, Peter, the Galatians and the Judaizers.",
+      "before": "Reflects the early church debate over the law.",
+      "stakes": "The gospel of grace must not be mixed with law-keeping.",
+      "themes": ["justification", "freedom", "law", "grace", "Spirit"],
+      "outline": [
+        "Paul's defence of the gospel (1-2)",
+        "Justification by faith (3-4)",
+        "Freedom and the Spirit (5-6)"
+      ]
+    },
+    "Eph": {
+      "genre": "Epistle",
+      "overview": "Paul describes the church's riches in Christ, its unity as one body, and the new life and armour that follow.",
+      "authorship": "Attributed to Paul; some scholars question direct authorship.",
+      "date": "Commonly dated around AD 60-62.",
+      "audience": "Believers in Asia Minor, possibly circulated.",
+      "setting": "Written from imprisonment.",
+      "who": "God, Paul, Jesus, the church and the powers.",
+      "before": "Reflects the church's growth among Gentiles.",
+      "stakes": "Believers' identity in Christ and their unity and conduct.",
+      "themes": [
+        "grace",
+        "union with Christ",
+        "church",
+        "unity",
+        "spiritual warfare"
+      ],
+      "outline": ["Blessings in Christ (1-3)", "New life and unity (4-6)"]
+    },
+    "Phil": {
+      "genre": "Epistle",
+      "overview": "Paul thanks the Philippians, rejoices in hardship, appeals for humility and unity, and presses toward Christ.",
+      "authorship": "Paul the apostle.",
+      "date": "Commonly dated around AD 60-62.",
+      "audience": "The church in Philippi.",
+      "setting": "Written from imprisonment.",
+      "who": "God, Paul, Jesus, Timothy, Epaphroditus and the Philippians.",
+      "before": "Follows the founding of the Philippian church in Acts 16.",
+      "stakes": "Joy and humility in Christ despite suffering.",
+      "themes": [
+        "joy",
+        "humility",
+        "Christlikeness",
+        "suffering",
+        "contentment"
+      ],
+      "outline": [
+        "Joy in hardship (1)",
+        "Christ's humility (2)",
+        "Press on (3)",
+        "Peace and provision (4)"
+      ]
+    },
+    "Col": {
+      "genre": "Epistle",
+      "overview": "Paul presents the supremacy of Christ over all powers and calls believers to put off the old life and live in him.",
+      "authorship": "Attributed to Paul; authorship is debated by some.",
+      "date": "Commonly dated around AD 60-62.",
+      "audience": "The church in Colossae.",
+      "setting": "Written from imprisonment against false teaching.",
+      "who": "God, Paul, Jesus, Epaphras and the Colossian church.",
+      "before": "Addresses a new church facing rival philosophies.",
+      "stakes": "Christ is sufficient; believers are complete in him.",
+      "themes": [
+        "Christ's supremacy",
+        "false teaching",
+        "new life",
+        "mystery",
+        "reconciliation"
+      ],
+      "outline": ["Supremacy of Christ (1-2)", "New life in Christ (3-4)"]
+    },
+    "1Thess": {
+      "genre": "Epistle",
+      "overview": "Paul encourages a young church, commends their faith, and answers questions about the return of Christ and holy living.",
+      "authorship": "Paul, with Silas and Timothy.",
+      "date": "Commonly dated around AD 50-51, likely Paul's earliest letter.",
+      "audience": "The church in Thessalonica.",
+      "setting": "Written after Paul's hurried departure from the city.",
+      "who": "God, Paul, Silvanus, Timothy and the Thessalonians.",
+      "before": "Follows the founding of the church in Acts 17.",
+      "stakes": "The church stands firm in hope as it awaits Christ.",
+      "themes": ["hope", "Christ's return", "faith", "love", "holiness"],
+      "outline": [
+        "Thanksgiving for faith (1-3)",
+        "Holy living (4-5:11)",
+        "Final exhortations (5:12-28)"
+      ]
+    },
+    "2Thess": {
+      "genre": "Epistle",
+      "overview": "Paul reassures the Thessalonians about the coming day of the Lord and calls them to steady, orderly life.",
+      "authorship": "Attributed to Paul with Silas and Timothy; authorship is discussed.",
+      "date": "Commonly dated around AD 51-52.",
+      "audience": "The church in Thessalonica.",
+      "setting": "Written soon after 1 Thessalonians.",
+      "who": "God, Paul, the Thessalonians and the man of lawlessness.",
+      "before": "Corrects misunderstanding of Christ's return.",
+      "stakes": "Patient faithfulness while awaiting the Lord.",
+      "themes": [
+        "Christ's return",
+        "perseverance",
+        "warning",
+        "work",
+        "comfort"
+      ],
+      "outline": [
+        "Comfort and judgment (1)",
+        "Day of the Lord (2)",
+        "Exhortations (3)"
+      ]
+    },
+    "1Tim": {
+      "genre": "Epistle (pastoral letter)",
+      "overview": "Paul instructs Timothy on sound teaching, order in the church, leadership qualifications and godliness.",
+      "authorship": "Paul the apostle; some scholars question direct authorship.",
+      "date": "Commonly dated around AD 62-66.",
+      "audience": "Timothy and the church in Ephesus.",
+      "setting": "Written for the ongoing life of the church.",
+      "who": "God, Paul, Timothy and the Ephesian church.",
+      "before": "Follows Paul's missionary work and Timothy's role.",
+      "stakes": "The church needs faithful teaching and qualified leaders.",
+      "themes": [
+        "sound doctrine",
+        "leadership",
+        "godliness",
+        "false teaching",
+        "money"
+      ],
+      "outline": [
+        "Sound doctrine and prayer (1-2)",
+        "Overseers and deacons (3)",
+        "Teaching and godliness (4-6)"
+      ]
+    },
+    "2Tim": {
+      "genre": "Epistle (pastoral letter)",
+      "overview": "Paul's final letter urges Timothy to guard the gospel, endure suffering and preach the word faithfully.",
+      "authorship": "Paul the apostle; authorship is discussed.",
+      "date": "Commonly dated around AD 64-67, near Paul's death.",
+      "audience": "Timothy and the church.",
+      "setting": "Written from imprisonment in Rome.",
+      "who": "God, Paul, Timothy, Onesiphorus and the churches.",
+      "before": "Presages Paul's martyrdom.",
+      "stakes": "The gospel must be passed on and defended to the end.",
+      "themes": [
+        "endurance",
+        "Scripture",
+        "faithful teaching",
+        "suffering",
+        "legacy"
+      ],
+      "outline": [
+        "Guard the gospel (1)",
+        "Endure and teach (2)",
+        "Last days and Paul's farewell (3-4)"
+      ]
+    },
+    "Titus": {
+      "genre": "Epistle (pastoral letter)",
+      "overview": "Paul instructs Titus to appoint elders, teach sound doctrine and promote good works in Crete.",
+      "authorship": "Attributed to Paul; authorship is debated.",
+      "date": "Commonly dated around AD 62-64.",
+      "audience": "Titus and the churches in Crete.",
+      "setting": "The island of Crete.",
+      "who": "God, Paul, Titus and the Cretan churches.",
+      "before": "Follows Paul's missionary work in Crete.",
+      "stakes": "Healthy churches require good leadership and godly living.",
+      "themes": [
+        "sound doctrine",
+        "elders",
+        "good works",
+        "grace",
+        "godliness"
+      ],
+      "outline": [
+        "Elders and false teachers (1)",
+        "Teaching by group (2)",
+        "Good works (3)"
+      ]
+    },
+    "Phlm": {
+      "genre": "Epistle",
+      "overview": "Paul appeals to Philemon to receive his runaway slave Onesimus back as a beloved brother.",
+      "authorship": "Paul the apostle.",
+      "date": "Commonly dated around AD 60-62.",
+      "audience": "Philemon, Apphia, Archippus and the house church.",
+      "setting": "Written from imprisonment.",
+      "who": "God, Paul, Philemon, Onesimus and Timothy.",
+      "before": "Connects with Paul's imprisonment and the Colossian church.",
+      "stakes": "The gospel transforms relationships and ownership.",
+      "themes": [
+        "forgiveness",
+        "reconciliation",
+        "brotherhood",
+        "grace",
+        "appeal"
+      ],
+      "outline": [
+        "Thanksgiving (1-7)",
+        "Appeal for Onesimus (8-21)",
+        "Closing (22-25)"
+      ]
+    },
+    "Heb": {
+      "genre": "Sermon/letter (discourse)",
+      "overview": "Hebrews argues that Jesus is God's supreme revelation, a better priest and sacrifice, and calls believers to persevere in faith.",
+      "authorship": "Anonymous; proposed authors include Paul, Barnabas, Apollos and others.",
+      "date": "Likely before AD 70, though dating is debated.",
+      "audience": "Jewish-Christian believers tempted to drift back.",
+      "setting": "A community facing pressure and potential persecution.",
+      "who": "God, Jesus, Moses, Abraham, Melchizedek and the community.",
+      "before": "Builds on Israel's sacrificial and priestly system.",
+      "stakes": "Christ's once-for-all sacrifice secures a better covenant.",
+      "themes": [
+        "Christ's priesthood",
+        "covenant",
+        "faith",
+        "perseverance",
+        "sacrifice"
+      ],
+      "outline": [
+        "Christ superior (1-4)",
+        "Better priest and covenant (5-10)",
+        "Faith and endurance (11-13)"
+      ]
+    },
+    "Jas": {
+      "genre": "Epistle (wisdom instruction)",
+      "overview": "James calls believers to practical faith shown in trials, speech, actions, humility and prayer.",
+      "authorship": "Attributed to James, likely the brother of Jesus; some question the identification.",
+      "date": "Commonly dated around AD 45-60, though disputed.",
+      "audience": "Jewish-Christian believers scattered abroad.",
+      "setting": "Diaspora communities facing trials and inequality.",
+      "who": "God, James, the rich, the poor and the community.",
+      "before": "Stands close to the wisdom tradition and Jesus' teaching.",
+      "stakes": "Faith without works is dead; true religion is lived.",
+      "themes": ["faith and works", "wisdom", "speech", "partiality", "prayer"],
+      "outline": [
+        "Trials and temptation (1)",
+        "Faith and works (2)",
+        "Speech and wisdom (3)",
+        "Humility and prayer (4-5)"
+      ]
+    },
+    "1Pet": {
+      "genre": "Epistle",
+      "overview": "Peter encourages suffering believers as exiles, grounding their hope in Christ's resurrection and calling them to holy conduct.",
+      "authorship": "Attributed to the apostle Peter, written with Silvanus; authorship is debated.",
+      "date": "Commonly dated around AD 60-65.",
+      "audience": "Believers scattered across Asia Minor facing hostility.",
+      "setting": "Communities under social pressure.",
+      "who": "God, Peter, Jesus and the elect exiles.",
+      "before": "Addresses growing persecution.",
+      "stakes": "Suffering for Christ is joined to his glory and hope.",
+      "themes": ["suffering", "hope", "holiness", "grace", "witness"],
+      "outline": [
+        "Living hope and holiness (1)",
+        "Identity and conduct (2)",
+        "Suffering well (3-5)"
+      ]
+    },
+    "2Pet": {
+      "genre": "Epistle",
+      "overview": "Peter urges growth in Christ, warns against false teachers, and affirms the certainty of Christ's return.",
+      "authorship": "Attributed to Peter; many scholars question direct authorship.",
+      "date": "Composition is debated, possibly late first or early second century.",
+      "audience": "Believers facing false teaching and doubt about the Lord's return.",
+      "setting": "Communities troubled by scoffers.",
+      "who": "God, Peter, Jesus and false teachers.",
+      "before": "Follows 1 Peter and a probable earlier letter.",
+      "stakes": "Immoral false teaching threatens the church; Scripture is trustworthy.",
+      "themes": [
+        "false teaching",
+        "knowledge",
+        "judgment",
+        "Scripture",
+        "Christ's return"
+      ],
+      "outline": [
+        "Growth and true knowledge (1)",
+        "False teachers (2)",
+        "Day of the Lord (3)"
+      ]
+    },
+    "1John": {
+      "genre": "Epistle",
+      "overview": "John assures believers of eternal life and gives tests of genuine faith: love, obedience and right belief about Jesus.",
+      "authorship": "Anonymous; associated with the author of the Fourth Gospel.",
+      "date": "Commonly dated around AD 85-100.",
+      "audience": "Believers confronted by false teaching and division.",
+      "setting": "A community debating the incarnation and love.",
+      "who": "God, Jesus, the community and false teachers.",
+      "before": "Complements the Gospel of John.",
+      "stakes": "Assurance and love distinguish true faith from error.",
+      "themes": ["assurance", "love", "obedience", "truth", "incarnation"],
+      "outline": [
+        "Light and fellowship (1-2)",
+        "Children of God (3)",
+        "Love and faith (4-5)"
+      ]
+    },
+    "2John": {
+      "genre": "Epistle",
+      "overview": "John writes to a chosen lady and her children, urging love and truth and warning against deceivers.",
+      "authorship": "Anonymous; associated with John the elder.",
+      "date": "Commonly dated around AD 85-100.",
+      "audience": "A local church and its members.",
+      "setting": "A community facing travelling false teachers.",
+      "who": "God, Jesus, the elder, the elect lady and the church.",
+      "before": "Related to 1 and 3 John.",
+      "stakes": "Truth and love must be guarded together.",
+      "themes": ["truth", "love", "hospitality", "false teaching", "obedience"],
+      "outline": [
+        "Greeting (1-3)",
+        "Love and truth (4-6)",
+        "Warning about deceivers (7-13)"
+      ]
+    },
+    "3John": {
+      "genre": "Epistle",
+      "overview": "John commends Gaius for hospitality and faithfulness, rebukes Diotrephes, and commends Demetrius.",
+      "authorship": "Anonymous; associated with John the elder.",
+      "date": "Commonly dated around AD 85-100.",
+      "audience": "Gaius and the circle of churches.",
+      "setting": "Church networks and travelling missionaries.",
+      "who": "God, the elder, Gaius, Diotrephes and Demetrius.",
+      "before": "Related to 1 and 2 John.",
+      "stakes": "Faithful hospitality supports the truth; pride harms the church.",
+      "themes": ["hospitality", "truth", "leadership", "imitation", "support"],
+      "outline": [
+        "Greeting and commendation (1-8)",
+        "Diotrephes and Demetrius (9-14)"
+      ]
+    },
+    "Jude": {
+      "genre": "Epistle",
+      "overview": "Jude urges believers to contend for the faith against immoral false teachers and to keep themselves in God's love.",
+      "authorship": "Jude, brother of James; identity is debated.",
+      "date": "Composition is debated, perhaps mid to late first century.",
+      "audience": "Believers troubled by false teachers.",
+      "setting": "A church infiltrated by corrupt teachers.",
+      "who": "God, Jesus, Jude and the false teachers.",
+      "before": "Shares material and concerns with 2 Peter.",
+      "stakes": "The faith must be defended and believers kept in mercy.",
+      "themes": [
+        "contending for the faith",
+        "judgment",
+        "false teaching",
+        "mercy",
+        "perseverance"
+      ],
+      "outline": [
+        "Contend for the faith (1-4)",
+        "Judgment on false teachers (5-16)",
+        "Exhortation and doxology (17-25)"
+      ]
+    },
+    "Rev": {
+      "genre": "Apocalyptic prophecy",
+      "overview": "John receives visions of the risen Christ, letters to churches, cosmic judgment, the defeat of evil, and a new heaven and earth.",
+      "authorship": "John, traditionally the apostle or a John of the churches; authorship is discussed.",
+      "date": "Commonly dated around AD 95 under Domitian, though an earlier date is proposed by some.",
+      "audience": "Seven churches of Asia and believers under persecution.",
+      "setting": "Patmos and visionary heaven and earth.",
+      "who": "God, Jesus, John, the churches, angels and the Lamb.",
+      "before": "Concludes the New Testament with the consummation of the story.",
+      "stakes": "Christ is victorious, evil is judged, and God dwells with his people.",
+      "themes": ["Lamb", "judgment", "kingdom", "worship", "new creation"],
+      "outline": [
+        "Vision of Christ and churches (1-3)",
+        "Throne and seals (4-7)",
+        "Trumpets (8-11)",
+        "Conflict and judgment (12-20)",
+        "New creation (21-22)"
+      ]
+    }
+  },
+  "books_te": {
+    "Gen": {
+      "overview": "దేవుడు లోకాన్ని సృష్టించి, మానవులు పతనమైన తర్వాత అబ్రాహాము, ఇస్సాకు, యాకోబు, యోసేపు ద్వారా నిబంధన ప్రజలను ప్రారంభించి, ఇశ్రాయేలు ఐగుప్తులో ఉండటంతో ముగుస్తుంది.",
+      "who": "దేవుడు, ఆదాము హవ్వ, నోవహు, అబ్రాహాము, సారా, ఇస్సాకు, రిబ్కా, యాకోబు, రాహేలు, లేయా, యోసేపు.",
+      "setting": "ఏదెను, మెసొపొటేమియా, కనాను మరియు ఐగుప్తు.",
+      "date": "రచనా కాలం వివాదాస్పదం; సంప్రదాయంగా రెండవ సహస్రాబ్ది క్రీ.పూ. అని భావిస్తారు.",
+      "before": "ఇదే బైబిలు కథకు ఆరంభం.",
+      "stakes": "సృష్టి, పతనం, తీర్పు, వాగ్దానం, నిబంధన అనే అంశాలు తరువాతి బైబిలు మొత్తానికి పునాది."
+    },
+    "Exod": {
+      "overview": "దేవుడు మోషే ద్వారా ఇశ్రాయేలును ఐగుప్తు దాస్యం నుండి విడిపించి, సీనాయి వద్ద నిబంధన ప్రజలుగా చేసి, పరిశుద్ధ గుడారం మరియు ధర్మశాస్త్రాన్ని ఇస్తాడు.",
+      "who": "దేవుడు, మోషే, అహరోను, ఫరో, మిర్యాము, ఇశ్రాయేలీయులు.",
+      "setting": "ఐగుప్తు, సీనాయి అరణ్యం, సీనాయి కొండ.",
+      "date": "నిష్క్రమణ సాధారణంగా క్రీ.పూ. పదమూడు నుండి పదిహేను శతాబ్దుల మధ్య అని భావిస్తారు; కాల నిర్ణయం వివాదాస్పదం.",
+      "before": "యాకోబు కుటుంబం ఐగుప్తులో స్థిరపడిన ఆదికాండం కథ కొనసాగుతుంది.",
+      "stakes": "దేవుని విమోచన, నిబంధన, ధర్మశాస్త్రం మరియు దేవుని సన్నిధి నిర్వచించబడతాయి."
+    },
+    "Lev": {
+      "overview": "బలులు, యాజకత్వం, పవిత్రత, పరిశుద్ధత మరియు ప్రాయశ్చిత్త దినం గురించిన ఆజ్ఞలు, దేవుడు పరిశుద్ధుడు గనుక ప్రజలు పరిశుద్ధులుగా ఉండాలని పిలుపు.",
+      "who": "దేవుడు, మోషే, అహరోను, యాజకులు.",
+      "setting": "సీనాయి కొండ మరియు పరిశుద్ధ గుడారం.",
+      "date": "సంప్రదాయంగా సీనాయి వద్ద క్రీ.పూ. రెండవ సహస్రాబ్దిలో; ఆధునిక కాల నిర్ణయాలు భిన్నం.",
+      "before": "నిర్గమకాండం చివరిలో గుడారం నిర్మించిన సంఘటనల తరువాత.",
+      "stakes": "పరిశుద్ధుడైన దేవుడు అపవిత్ర ప్రజల మధ్య ఎలా నివసించగలడో వివరించబడుతుంది."
+    },
+    "Num": {
+      "overview": "ఇశ్రాయేలు సీనాయి వద్ద లెక్కించబడి ఏర్పాటు చేయబడి, అరణ్యంలో తిరుగుబాటు చేసి శిక్షింపబడి, కొత్త తరం దేశంలో ప్రవేశించడానికి సిద్ధమవుతుంది.",
+      "who": "దేవుడు, మోషే, అహరోను, మిర్యాము, యెహోషువ, కాలేబు, ఇశ్రాయేలు.",
+      "setting": "సీనాయి, అరణ్యం, మోయాబు మైదానాలు.",
+      "date": "సంప్రదాయంగా అరణ్య కాలం; కాల నిర్ణయం వివాదాస్పదం.",
+      "before": "నిర్గమకాండం మరియు లేవీకాండం నిబంధన, గుడారం తరువాత.",
+      "stakes": "అవిశ్వాసం ఫలితం మరియు తరతరాల్లో దేవుని విశ్వసనీయత చూపబడతాయి."
+    },
+    "Deut": {
+      "overview": "మోషే మోయాబు మైదానాల్లో ఇశ్రాయేలుతో నిబంధనను నవీకరించి, దేవుని కార్యాలను గుర్తుచేసి, ధర్మశాస్త్రాన్ని పునరుద్ఘాటించి, ఆశీర్వాద శాపాలను ఉంచుతాడు.",
+      "who": "దేవుడు, మోషే, ఇశ్రాయేలు.",
+      "setting": "యొర్దాను ఎదురుగా మోయాబు మైదానాలు.",
+      "date": "సంప్రదాయంగా మోషే జీవిత చివర; రచనా కాలం వివాదాస్పదం.",
+      "before": "సంఖ్యాకాండంలోని అరణ్య కాలం ముగుస్తుంది.",
+      "stakes": "దేశంలో ప్రవేశించే కొత్త తరాన్ని నిబంధన విధేయతకు పిలుపు."
+    },
+    "Josh": {
+      "overview": "యెహోషువ ఇశ్రాయేలును కనానులోనికి నడిపించి, దేశం జయించబడి గోత్రాల మధ్య పంచబడి, ప్రజలు నిబంధన విధేయతకు పిలువబడతారు.",
+      "who": "దేవుడు, యెహోషువ, రాహాబు, యాజకులు, ఇశ్రాయేలీయులు.",
+      "setting": "కనాను, యొర్దాను దాటుట, గోత్ర ప్రాంతాలు.",
+      "date": "కనానులో ప్రవేశ కాలం; రచనా కాలం వివాదాస్పదం.",
+      "before": "ద్వితీయోపదేశం చివరిలో మోషే మరణం తరువాత.",
+      "stakes": "దేవుడు వాగ్దాన దేశాన్ని ఇచ్చి, అక్కడ సేవ చేయమని పిలుస్తాడు."
+    },
+    "Judg": {
+      "overview": "యెహోషువ తరువాత ఇశ్రాయేలు పదేపదే దేవుని నుండి తిరిగి, అణచివేయబడి, మొరపెట్టుకొని, న్యాయాధిపతుల ద్వారా విడుదల పొంది, అరాచకంలో పడిపోతుంది.",
+      "who": "దేవుడు, గిద్యోను, దెబోరా, సంసోను, గోత్రాలు.",
+      "setting": "కనాను గోత్ర ప్రాంతాలు.",
+      "date": "రాజ్యానికి పూర్వ కాలం; రచనా కాలం వివాదాస్పదం.",
+      "before": "యెహోషువ క్రింద స్థిరపడిన తరువాత.",
+      "stakes": "పాప చక్రం మరియు విశ్వాసపాత్ర నాయకత్వ అవసరం తెలుపబడతాయి."
+    },
+    "Ruth": {
+      "overview": "మోయాబు విధవరాలు రూతు నమ్మకంగా ఇశ్రాయేలులో చేరి, బోయజు పొలంలో మెలకువోడి, విమోచన ద్వారా దావీదు పూర్వికురాలవుతుంది.",
+      "who": "రూతు, నయోమి, బోయజు, దేవుడు.",
+      "setting": "మోయాబు మరియు యూదాలోని బెత్లెహేము.",
+      "date": "న్యాయాధిపతుల కాలంలో; రచనా కాలం వివాదాస్పదం.",
+      "before": "న్యాయాధిపతుల కాలంలో సంభవిస్తుంది.",
+      "stakes": "నిబంధన విశ్వసనీయత మరియు జాతి హద్దులను దాటే దేవుని సంరక్షణ."
+    },
+    "1Sam": {
+      "overview": "ఇశ్రాయేలు రాజ్యాన్ని పొందుతుంది: సమూయేలు పరిచర్య, సౌలు ఉదయం మరియు పతనం, అభిషిక్త భావి రాజు దావీదు ఉదయం.",
+      "who": "దేవుడు, సమూయేలు, సౌలు, దావీదు, యోనాతాను, హన్నా.",
+      "setting": "షిలో నుండి అరణ్యం వరకు ఇశ్రాయేలు పట్టణాలు, యుద్ధ భూములు.",
+      "date": "క్రీ.పూ. పదకొండవ శతాబ్ది రాజ్య పరివర్తన; రచనా కాలం వివాదాస్పదం.",
+      "before": "న్యాయాధిపతుల కాలం తరువాత.",
+      "stakes": "విశ్వాసపాత్ర నాయకత్వం, విధేయత మరియు దావీదును దేవుడు ఎన్నుకోవడం చర్చించబడతాయి."
+    },
+    "2Sam": {
+      "overview": "దావీదు ఇశ్రాయేలుపై పరిపాలించి, రాజ్యాన్ని ఏకం చేసి, నిబంధన వాగ్దానం పొంది, పాపం, కుటుంబ విషాదం, తిరుగుబాటులతో పరీక్షించబడతాడు.",
+      "who": "దేవుడు, దావీదు, బత్షెబా, అబ్షాలోము, నాతాను, యోవాబు.",
+      "setting": "హెబ్రోను, యెరూషలేము, ఇశ్రాయేలు యూదా ప్రాంతాలు.",
+      "date": "క్రీ.పూ. పదవ శతాబ్ది; రచనా కాలం వివాదాస్పదం.",
+      "before": "సమూయేలు మొదటి గ్రంథంలో సౌలు మరణం నుండి కొనసాగుతుంది.",
+      "stakes": "దావీదు నిబంధన వాగ్దానం మరియు అతని వైఫల్యాల ఫలితాలు."
+    },
+    "1Kgs": {
+      "overview": "సొలొమోను పరిపాలన, ఆలయం, రాజ్య విభజన, మరియు ఏలీయా ప్రవక్త పరిచర్య దుష్ట రాజులకు వ్యతిరేకంగా.",
+      "who": "దేవుడు, సొలొమోను, యరొబాము, అహాబు, యెజెబెలు, ఏలీయా.",
+      "setting": "యెరూషలేము నుండి సమరియ వరకు ఇశ్రాయేలు యూదా.",
+      "date": "సుమారు క్రీ.పూ. పదవ నుండి తొమ్మిదవ శతాబ్దాలు; రచనా కాలం వివాదాస్పదం.",
+      "before": "దావీదు పరిపాలన తరువాత.",
+      "stakes": "రాజ అధికారం కాదు, నిబంధన విధేయతయే దేవుని ఆశీర్వాదాన్ని నిలిపిస్తుంది."
+    },
+    "2Kgs": {
+      "overview": "విభజిత రాజ్యాలు విగ్రహారాధనతో క్షీణించి, ఎలీషా వంటి ప్రవక్తలు పరిచర్య చేసి, మొదట ఇశ్రాయేలు తర్వాత యూదా చెరలో పడతాయి.",
+      "who": "దేవుడు, ఎలీషా, హిజ్కియా, యోషీయా, యెహూ, పరదేశ రాజులు.",
+      "setting": "ఇశ్రాయేలు, యూదా, సమరియ, యెరూషలేము, చెర.",
+      "date": "సుమారు క్రీ.పూ. తొమ్మిదవ నుండి ఆరవ శతాబ్దాలు; రచనా కాలం వివాదాస్పదం.",
+      "before": "రాజుల మొదటి గ్రంథం విభజిత రాజ్య వృత్తాంతం కొనసాగుతుంది.",
+      "stakes": "చెరను నిబంధన తీర్పుగా వివరించి, నిరీక్షణను నిలిపిస్తుంది."
+    },
+    "1Chr": {
+      "overview": "ఆదాము నుండి ఇశ్రాయేలు వరకు వంశావళులు, తర్వాత దావీదు పరిపాలన, ఆరాధన, మందసం మరియు ఆలయ సిద్ధతపై దృష్టి.",
+      "who": "దేవుడు, దావీదు, లేవీయులు, గోత్రాలు.",
+      "setting": "ఇశ్రాయేలు పూర్వీక వంశం మరియు దావీదు యెరూషలేము.",
+      "date": "చెర తర్వాత, సుమారు పర్షియా కాలం (క్రీ.పూ. ఐదు-నాలుగు శతాబ్దాలు).",
+      "before": "చెర అనంతర దృక్కోణం నుండి కథను తిరిగి చెబుతుంది.",
+      "stakes": "పునర్నిర్మిత సమాజాన్ని దావీదు ఆరాధన, నిబంధనలో నిలుపుతుంది."
+    },
+    "2Chr": {
+      "overview": "సొలొమోను ఆలయం, యూదా రాజులు, సంస్కరణలు, వైఫల్యాలు, చెరతో ముగుస్తూ కోరెషు పునర్నిర్మాణ ఆజ్ఞ.",
+      "who": "దేవుడు, సొలొమోను, హిజ్కియా, యోషీయా, యూదా రాజులు.",
+      "setting": "యెరూషలేము, యూదా; ఆలయం కేంద్రంగా.",
+      "date": "చెర అనంతర రచన (సుమారు పర్షియా కాలం).",
+      "before": "దినవృత్తాంతాలు మొదటి గ్రంథం కొనసాగుతుంది.",
+      "stakes": "పునర్నిర్మిత సమాజాన్ని ఆలయ ఆరాధన, నిబంధన విధేయతకు పిలుపు."
+    },
+    "Ezra": {
+      "overview": "చెర నుండి ప్రజలు తిరిగి వచ్చి, ఆలయం పునర్నిర్మించబడి, ఎజ్రా సమాజాన్ని ధర్మశాస్త్రం చుట్టూ సంస్కరిస్తాడు.",
+      "who": "దేవుడు, జెరుబ్బాబెలు, ఎజ్రా, కోరెషు, అర్తహషస్త, తిరిగివచ్చిన ప్రజలు.",
+      "setting": "పర్షియా మరియు యెరూషలేము.",
+      "date": "పర్షియా కాలం, క్రీ.పూ. ఆరు-ఐదు శతాబ్దాలు.",
+      "before": "చెర మరియు కోరెషు ఆజ్ఞ తరువాత.",
+      "stakes": "చెర తర్వాత దేవుడు ఆరాధనను, నిబంధన గుర్తింపును పునరుద్ధరిస్తాడు."
+    },
+    "Neh": {
+      "overview": "నెహెమ్యా యెరూషలేము కోటలను పునర్నిర్మించి, సంస్కరణలు నడిపించి, సమాజం దేవునితో నిబంధనను నవీకరిస్తుంది.",
+      "who": "దేవుడు, నెహెమ్యా, అర్తహషస్త, సన్బల్లటు, తోబీయా, ఎజ్రా.",
+      "setting": "సూసా, యూదా మార్గం, యెరూషలేము.",
+      "date": "క్రీ.పూ. ఐదవ శతాబ్ది, అర్తహషస్త మొదటి పరిపాలనలో.",
+      "before": "ఎజ్రాలో ప్రారంభమైన పునరుద్ధరణ కొనసాగుతుంది.",
+      "stakes": "పునర్నిర్మిత నగరానికి భద్రత, ఆరాధన, నిబంధన విశ్వసనీయత."
+    },
+    "Esth": {
+      "overview": "పర్షియాలో ఎస్తేరు మరియు మొర్దెకై హామాను కుట్ర నుండి యూదులను రక్షించడానికి ప్రాణాలను పణంగా పెట్టి, పూరీము పండుగ స్థాపించబడుతుంది.",
+      "who": "ఎస్తేరు, మొర్దెకై, అహష్వేరోషు (క్షయక్సెస్), హామాను, వష్తి.",
+      "setting": "సూసా మరియు పర్షియా రాజసభ.",
+      "date": "పర్షియా కాలం, సుమారు క్రీ.పూ. ఐదవ శతాబ్ది; కొందరు ఆలస్య తేదీని సూచిస్తారు.",
+      "before": "చెర తర్వాత పర్షియా పరిపాలనలో సంభవిస్తుంది.",
+      "stakes": "యూదుల మనుగడ మరియు దేవుని గూఢ సంరక్షణ."
+    },
+    "Job": {
+      "overview": "నీతిమంతుడైన యోబు తీవ్రంగా శ్రమపడి, స్నేహితులతో దేవుని న్యాయం గురించి వాదించగా, దేవుడు సుడిగాలి నుండి జవాబిస్తాడు.",
+      "who": "దేవుడు, యోబు, ఎలీఫజు, బిల్దదు, సోఫరు, ఎలీహు.",
+      "setting": "ఊజు దేశం మరియు పరలోక సభ.",
+      "date": "సంఘటనలు మరియు రచనా కాలం వివాదాస్పదం; ప్రాచీన పితరుల కాలం కావచ్చు.",
+      "before": "స్పష్ట చారిత్రక ఆధారం లేకుండా జ్ఞాన సాహిత్యంలో నిలుస్తుంది.",
+      "stakes": "నిర్దోష శ్రమ, దైవ న్యాయం మరియు నిజాయితీ విశ్వాసం పరిశీలించబడతాయి."
+    },
+    "Ps": {
+      "overview": "స్తుతి, విలాపం, కృతజ్ఞత, రాజకీయ మరియు జ్ఞాన అంశాలతో కూడిన ప్రార్థనలు మరియు గీతాల సంకలనం, ఇశ్రాయేలు ఆరాధనలో ఉపయోగించబడింది.",
+      "who": "దేవుడు, దావీదు, ఆసాఫు, కోరహు కుమారులు, ఇశ్రాయేలు.",
+      "setting": "ఆలయ, సామూహిక ఆరాధన మరియు వ్యక్తిగత భక్తి.",
+      "date": "రాజ్య కాలం నుండి చెర అనంతర కాలం వరకు అనేక శతాబ్దాలలో రచించి సేకరించారు.",
+      "before": "ఇశ్రాయేలు చరిత్ర మరియు ఆరాధన సంప్రదాయాలపై ఆధారపడుతుంది.",
+      "stakes": "దేవుని ముందు స్తుతి, పశ్చాత్తాపం, విలాపం, నమ్మకానికి భాషను ఇస్తుంది."
+    },
+    "Prov": {
+      "overview": "యెహోవా భయంలో జీవించడానికి ఆచరణాత్మక జ్ఞానం, మాట, పని, సంబంధాలు, కోరికల్లో జ్ఞాని మూర్ఖులను వ్యతిరేకించి చూపబడతారు.",
+      "who": "దేవుడు, సొలొమోను, జ్ఞానులు, అజ్ఞానులు.",
+      "setting": "ఇశ్రాయేలు పట్టణాలు, ఆస్థానాలు; దైనందిన జీవితం.",
+      "date": "రాజ్య కాలపు పదార్థం; తుది సంకలనం ఆలస్యం (పర్షియా కాలం కావచ్చు).",
+      "before": "ఇశ్రాయేలు జ్ఞాన సంప్రదాయం తరువాత.",
+      "stakes": "జీవం వైపు, నాశనం వైపు ఎంపికలను, స్వభావాన్ని రూపొందిస్తుంది."
+    },
+    "Eccl": {
+      "overview": "ఉపదేశకుడు సూర్యుని క్రింద జీవితాన్ని పరిశీలించి, ఎన్నో వ్యర్థతలు కనుగొని, దేవుని కృపాదానాలను భక్తితో అనుభవించమని సలహా ఇస్తాడు.",
+      "who": "దేవుడు, ఉపదేశకుడు, మానవత్వం.",
+      "setting": "రాజసభ దృక్కోణం నుండి లోక జీవితం.",
+      "date": "రచనా కాలం వివాదాస్పదం; తరచుగా పర్షియా లేదా గ్రీకు కాలం.",
+      "before": "ఇశ్రాయేలు జ్ఞాన సాహిత్యంలో నిలుస్తుంది.",
+      "stakes": "మరణం, వ్యర్థతను ఎదుర్కొంటూ దేవునిపై భక్తిగల నమ్మకానికి పిలుపు."
+    },
+    "Song": {
+      "overview": "వధూవరుల మధ్య కోరిక, సౌందర్యం, భక్తి, నిబంధన వంటి ప్రేమను జరుపుకునే ప్రేమ గీతాల చక్రం.",
+      "who": "ప్రియురాలు, ఆమె ప్రియుడు, యెరూషలేము కుమార్తెలు.",
+      "setting": "ఉద్యానవనాలు, ద్రాక్షతోటలు, నగరం, పల్లె.",
+      "date": "కాల నిర్ణయం వివాదాస్పదం.",
+      "before": "జ్ఞాన మరియు కావ్య గ్రంథాల మధ్య నిలుస్తుంది.",
+      "stakes": "మానవ ప్రేమను గౌరవించి, తరువాతి పఠనంలో దేవుని నిబంధన ప్రేమకు చిత్రంగా చూడబడుతుంది."
+    },
+    "Isa": {
+      "overview": "యెషయా యూదా పాపాన్ని ఎదిరించి, జాతులపై తీర్పు ప్రకటించి, ఆదరణ, శ్రమించు సేవకుడు, పునరుద్ధరణను ముందుగా చూపుతాడు.",
+      "who": "దేవుడు, యెషయా, యూదా రాజులు, సేవకుడు, జాతులు.",
+      "setting": "యెరూషలేము, జాతులు, రాబోయే పునరుద్ధరణ.",
+      "date": "క్రీ.పూ. ఎనిమిదవ శతాబ్ది; రచన మరియు ఐక్యత వివాదాస్పదం.",
+      "before": "అష్షూరు సంక్షోభాన్ని, తరువాత చెరను ఉద్దేశిస్తుంది.",
+      "stakes": "పొత్తులపై కాక దేవునిపై నమ్మకం, ఆదరణ, పాపాన్ని భరించు సేవకుని వాగ్దానం."
+    },
+    "Jer": {
+      "overview": "యిర్మీయా యూదాకు బబులోను తీర్పు రాబోతుందని హెచ్చరించి, పశ్చాత్తాపానికి పిలిచి, తిరస్కరింపబడి, కొత్త నిబంధనను ప్రకటిస్తాడు.",
+      "who": "దేవుడు, యిర్మీయా, యోషీయా, సిద్కియా, బారూకు, నెబుకద్నెజరు.",
+      "setting": "యెరూషలేము, యూదా, ఐగుప్తు, బబులోను.",
+      "date": "క్రీ.పూ. ఏడవ శతాబ్ది చివర నుండి ఆరవ శతాబ్ది ఆరంభం, యెరూషలేము పతనం.",
+      "before": "యోషీయా సంస్కరణలు, అష్షూరు క్షీణత తరువాత.",
+      "stakes": "చెరను వివరించి, కొత్త నిబంధన, తిరిగి రావడం ఆశను ఉంచుతుంది."
+    },
+    "Lam": {
+      "overview": "యెరూషలేము నాశనాన్ని ఐదు విలాపాలు స్మరించి, పాపాన్ని అంగీకరించి, దేవుని స్థిరమైన ప్రేమ వైపు చేరుతాయి.",
+      "who": "దేవుడు, విలాపకుడు, సీయోను కుమార్తె.",
+      "setting": "శిథిలమైన యెరూషలేము.",
+      "date": "క్రీ.పూ. 586లో యెరూషలేము నాశనం తర్వాత.",
+      "before": "బబులోను నాశనం తరువాత.",
+      "stakes": "కృపను పట్టుకుంటూ దుఃఖానికి స్వరం ఇస్తుంది."
+    },
+    "Ezek": {
+      "overview": "చెరలోని యాజకుడు యెహెజ్కేలు దేవుని మహిమను చూసి, యూదా, జాతులపై తీర్పు ప్రకటించి, పునరుద్ధరించిన ఆలయం, ప్రజలను దర్శనంలో చూస్తాడు.",
+      "who": "దేవుడు, యెహెజ్కేలు, చెరలోని ప్రజలు, జాతులు.",
+      "setting": "బబులోను, యెరూషలేము దర్శనాలు, పునరుద్ధరించిన దేశం.",
+      "date": "క్రీ.పూ. ఆరవ శతాబ్ది, బబులోను చెరలో.",
+      "before": "నెబుకద్నెజరు క్రింద ప్రారంభమైన చెర తరువాత.",
+      "stakes": "చెరలోని ప్రజలకు దేవుని సన్నిధి, తీర్పు, భావి పునరుద్ధరణ భరోసా."
+    },
+    "Dan": {
+      "overview": "దానియేలు, స్నేహితులు బబులోనులో నమ్మకంగా ఉండగా, దర్శనాలు రాజ్యాలపై దేవుని పరిపాలనను, రాబోయే అంతాన్ని బయలుపరుస్తాయి.",
+      "who": "దేవుడు, దానియేలు, నెబుకద్నెజరు, బెల్షజరు, దర్యావేషు, మనుష్యకుమారుడు.",
+      "setting": "బబులోను, పర్షియా, దర్శన పరలోకం.",
+      "date": "క్రీ.పూ. ఆరవ శతాబ్ది చెరలో సంభవిస్తుంది; రచనా కాలం వివాదాస్పదం.",
+      "before": "యెరూషలేము పతనం తర్వాత మరియు సమయంలో.",
+      "stakes": "సామ్రాజ్యాల క్రింద నమ్మకత్వాన్ని, దేవుని సార్వభౌమ ప్రణాళికపై నమ్మకాన్ని ప్రోత్సహిస్తుంది."
+    },
+    "Hos": {
+      "overview": "హోషేయ గోమెరును పెళ్లాడటం దేవుడు అవిధేయ ఇశ్రాయేలుపై చూపే విశ్వసనీయ ప్రేమకు చిత్రం; తిరిగి రమ్మని పిలుపు, తీర్పు హెచ్చరికలు.",
+      "who": "దేవుడు, హోషేయ, గోమెరు, ఇశ్రాయేలు.",
+      "setting": "ఉత్తర రాజ్యం, సమృద్ధి మరియు విగ్రహారాధన మధ్య.",
+      "date": "క్రీ.పూ. ఎనిమిదవ శతాబ్ది.",
+      "before": "సమరియ పతనం, అష్షూరు ముప్పును ఉద్దేశిస్తుంది.",
+      "stakes": "ఇశ్రాయేలు ద్రోహం ఉన్నా దేవుని నిబంధన ప్రేమ నిలుస్తుంది."
+    },
+    "Joel": {
+      "overview": "మిడతల బాధ పశ్చాత్తాపానికి పిలుపుగా మారి, పునరుద్ధరణ వాగ్దానంగా, దేవుని ఆత్మ కుమ్మరింపుగా మారుతుంది.",
+      "who": "దేవుడు, యోవేలు, యూదా ప్రజలు.",
+      "setting": "సీయోను, యూదా దేశం.",
+      "date": "కాల నిర్ణయం అనిశ్చితం; క్రీ.పూ. తొమ్మిది నుండి ఐదు శతాబ్దాల వరకు ప్రతిపాదనలు.",
+      "before": "జాతీయ మిడతలు, కరువు సంక్షోభాన్ని ఉద్దేశిస్తుంది.",
+      "stakes": "పశ్చాత్తాపానికి, దేవుని పునరుద్ధరణ, ఆత్మ నిరీక్షణకు పిలుపు."
+    },
+    "Amos": {
+      "overview": "ఆమోసు ఇశ్రాయేలులో అన్యాయాన్ని, శూన్య మతాచారాన్ని ఖండించి తీర్పు ప్రకటించి, పునరుద్ధరణ వాగ్దానంతో ముగుస్తాడు.",
+      "who": "దేవుడు, ఆమోసు, యరొబాము రెండవ, ఇశ్రాయేలు బలవంతులు.",
+      "setting": "బేతేలు, సమరియ, ఉత్తర రాజ్యం.",
+      "date": "క్రీ.పూ. ఎనిమిదవ శతాబ్ది.",
+      "before": "సమృద్ధి, నిర్లక్ష్య కాలాన్ని ఉద్దేశిస్తుంది.",
+      "stakes": "దేవుని న్యాయం కేవలం ఆచారం కాదు, నీతిని కోరుతుంది."
+    },
+    "Obad": {
+      "overview": "ఓబద్యా యాకోబుపై ఎదోమును హింసించినందుకు తీర్పును, సీయోను కొండపై విడుదలను ప్రకటిస్తాడు.",
+      "who": "దేవుడు, ఓబద్యా, ఎదోము, యాకోబు.",
+      "setting": "ఎదోము మరియు సీయోను.",
+      "date": "సుమారు యెరూషలేము పతనం (క్రీ.పూ. 586) తర్వాత లేదా ముందు.",
+      "before": "యెరూషలేము సంక్షోభంలో ఎదోము పాత్రను ఉద్దేశిస్తుంది.",
+      "stakes": "దేవుడు తన ప్రజలను కాపాడి, హింసకులను తీర్చుతాడు."
+    },
+    "Jon": {
+      "overview": "యోనా దేవుని పిలుపు నుండి పారిపోయి, గొప్ప చేప మింగగా, నీనెవెకు ప్రకటించి, దేవుని కరుణకు కోపగించుకుంటాడు.",
+      "who": "దేవుడు, యోనా, నావికులు, నీనెవె.",
+      "setting": "యొప్పా, సముద్రం, చేప, నీనెవె.",
+      "date": "క్రీ.పూ. ఎనిమిదవ శతాబ్ది; రచనా కాలం వివాదాస్పదం.",
+      "before": "అష్షూరు శక్తి కాలంలో సంభవిస్తుంది.",
+      "stakes": "దేవుడు సమస్త జాతులపై చూపే శ్రద్ధ, యోనా అయిష్ట హృదయం."
+    },
+    "Mic": {
+      "overview": "మీకా యూదా, ఇశ్రాయేలులో అన్యాయాన్ని, అబద్ధ ప్రవచనాన్ని ఖండించి, తీర్పు ప్రకటించి, బెత్లెహేమునుండి రాబోయే అధిపతిని వాగ్దానం చేస్తాడు.",
+      "who": "దేవుడు, మీకా, నాయకులు, ప్రజలు.",
+      "setting": "సమరియ, యెరూషలేము, యూదా పట్టణాలు.",
+      "date": "క్రీ.పూ. ఎనిమిదవ శతాబ్ది.",
+      "before": "అష్షూరు ఒత్తిడి, సామాజిక అన్యాయాన్ని ఉద్దేశిస్తుంది.",
+      "stakes": "దేవుడు న్యాయం, కరుణ, వినయం కోరి, పునరుద్ధరిస్తాడు."
+    },
+    "Nah": {
+      "overview": "నహూము నీనెవె పతనాన్ని ప్రకటించి, హింసాత్మక సామ్రాజ్యంపై దేవుని ప్రతిక్రియను, తన ప్రజలకు సువార్తను తెలుపుతాడు.",
+      "who": "దేవుడు, నహూము, నీనెవె.",
+      "setting": "అష్షూరు రాజధాని నీనెవె.",
+      "date": "క్రీ.పూ. ఏడవ శతాబ్ది, నీనెవె పతనం (612 క్రీ.పూ.) కి ముందు.",
+      "before": "అష్షూరు యూదాపై చూపిన అణచివేత తరువాత.",
+      "stakes": "దేవుడు తన ప్రజలకు ఆశ్రయం, క్రూర అధికారానికి తీర్పు."
+    },
+    "Hab": {
+      "overview": "హబక్కూకు అన్యాయం, హింస గురించి దేవుడిని ప్రశ్నించగా, నీతిమంతుడు విశ్వాసంతో జీవిస్తాడని జవాబు పొంది, నమ్మకంతో ముగిస్తాడు.",
+      "who": "దేవుడు, హబక్కూకు.",
+      "setting": "యూదా మరియు బబులోను ఉదయం.",
+      "date": "క్రీ.పూ. ఏడవ శతాబ్ది చివర, బబులోను దాడికి ముందు.",
+      "before": "బబులోను ఉదయానికి ముందు న్యాయ క్షీణతను ఉద్దేశిస్తుంది.",
+      "stakes": "సమయం స్పష్టం కానప్పుడు కూడా విశ్వాసం దేవుని న్యాయాన్ని నమ్ముతుంది."
+    },
+    "Zeph": {
+      "overview": "జెఫన్యా యూదా, జాతులపై యెహోవా దినాన్ని ప్రకటించి, తర్వాత వినయశీల అవశిష్టులకు, పునరుద్ధరణకు వాగ్దానం చేస్తాడు.",
+      "who": "దేవుడు, జెఫన్యా, యోషీయా, అవశిష్టులు.",
+      "setting": "యూదా, యెరూషలేము, జాతులు.",
+      "date": "క్రీ.పూ. ఏడవ శతాబ్ది, యోషీయా పరిపాలన.",
+      "before": "యోషీయా సంస్కరణలకు ముందు లేదా పాటు.",
+      "stakes": "ఆత్మసంతృప్తిని తీర్పుతో ఎదుర్కొని, వినయులకు ఆశ ఇస్తుంది."
+    },
+    "Hag": {
+      "overview": "హగ్గయి తిరిగివచ్చిన ప్రజలను ఆలయాన్ని పునర్నిర్మించమని పిలిచి, దేవుని సన్నిధి, ఆశీర్వాదాన్ని వాగ్దానం చేస్తాడు.",
+      "who": "దేవుడు, హగ్గయి, జెరుబ్బాబెలు, యెహోషువ.",
+      "setting": "చెర అనంతర యెరూషలేము.",
+      "date": "క్రీ.పూ. 520, దర్యావేషు రెండవ సంవత్సరం.",
+      "before": "చెర నుండి తిరిగి వచ్చి ఆలయ పని ఆగిన తరువాత.",
+      "stakes": "దేవుని ఇంటికి ప్రాధాన్యం ఇవ్వడం నిబంధన ఆశీర్వాదాన్ని తెస్తుంది."
+    },
+    "Zech": {
+      "overview": "జెకర్యా రాత్రి దర్శనాలతో ఆలయ పునర్నిర్మాణాన్ని ప్రోత్సహించి, పశ్చాత్తాపానికి పిలిచి, వినయ రాజు, యెహోవా పరిపాలనను ముందుగా చెబుతాడు.",
+      "who": "దేవుడు, జెకర్యా, జెరుబ్బాబెలు, యెహోషువ, రాబోయే రాజు.",
+      "setting": "యెరూషలేము మరియు దర్శన దృశ్యాలు.",
+      "date": "క్రీ.పూ. 520-518 మరియు తరువాత.",
+      "before": "హగ్గయి పరిచర్యతో పాటు జరుగుతుంది.",
+      "stakes": "దేవుడు తన ప్రజల మధ్య నివసించి, తన రాజును తెస్తాడు."
+    },
+    "Mal": {
+      "overview": "మలాకీ అర్ధహృదయ ఆరాధనను, అవిశ్వసనీయతను ఎదిరించి, దూతను, యెహోవా దినాన్ని వాగ్దానం చేస్తాడు.",
+      "who": "దేవుడు, ప్రవక్త, యాజకులు, ప్రజలు.",
+      "setting": "యెరూషలేము మరియు దాని ఆలయం.",
+      "date": "పర్షియా కాలం, సుమారు క్రీ.పూ. ఐదవ శతాబ్ది.",
+      "before": "పునరుద్ధరణ తర్వాత ప్రవచన యుగాన్ని ముగిస్తుంది.",
+      "stakes": "నిజ ఆరాధనకు పిలుపు, యెహోవా దూతకు సిద్ధత."
+    },
+    "Matt": {
+      "overview": "మత్తయి యేసును మెస్సీయగా, మోషే కంటే గొప్పవాడుగా చూపి, జననం, బోధ, మరణం, పునరుత్థానం ద్వారా లేఖనాలు నెరవేర్చాడని తెలుపుతాడు.",
+      "who": "యేసు, శిష్యులు, మత నాయకులు, హేరోదు, యోహాను బప్తిస్తా.",
+      "setting": "యూదా, గలిలయ, యెరూషలేము.",
+      "date": "సాధారణంగా క్రీ.శ. 60-90 మధ్య.",
+      "before": "ఇశ్రాయేలు లేఖనాల నెరవేర్పుతో కొత్త నిబంధనను ఆరంభిస్తుంది.",
+      "stakes": "యేసు వాగ్దాన రాజు, తన ప్రజలను రక్షించి సంఘాన్ని పంపుతాడు."
+    },
+    "Mark": {
+      "overview": "మార్కు యేసును శక్తివంతుడైన దేవుని కుమారుడిగా, శ్రమించేవాడిగా వేగవంతంగా చెబుతూ, శిష్యులను అనుసరించమని పిలుస్తాడు.",
+      "who": "యేసు, శిష్యులు, పేతురు, సమూహాలు, రోమా అధికారులు.",
+      "setting": "గలిలయ, మార్గం, యెరూషలేము.",
+      "date": "సాధారణంగా క్రీ.శ. 65-70, లేదా అంతకుముందు.",
+      "before": "యేసును సువార్త ఆరంభంగా చూపుతుంది.",
+      "stakes": "యేసు శ్రమించు దేవుని కుమారుడు; అనుసరించడం అంటే సిలువ."
+    },
+    "Luke": {
+      "overview": "లూకా యేసు జీవితాన్ని క్రమబద్ధంగా చెబుతూ, పేదలు, బహిష్కృతులు, స్త్రీలు, అన్యజాతులకు రక్షణపై దృష్టి పెడతాడు.",
+      "who": "యేసు, మరియ, యోహాను బప్తిస్తా, శిష్యులు, మత నాయకులు.",
+      "setting": "యూదా, గలిలయ, సమరియ, యెరూషలేము.",
+      "date": "సాధారణంగా క్రీ.శ. 60-85.",
+      "before": "అపొస్తలుల కార్యాలకు ముందు, కథను జాతుల వరకు కొనసాగిస్తుంది.",
+      "stakes": "యేసు సమస్త మానవులకు రక్షకుడు, ఇశ్రాయేలు ఆశను నెరవేర్చువాడు."
+    },
+    "John": {
+      "overview": "యోహాను యేసును నిత్య వాక్యంగా, దేవుని కుమారుడిగా ఏడు సూచనలు, సుదీర్ఘ ప్రసంగాలతో చూపి, చదువరులు విశ్వసించి జీవం పొందాలని రాస్తాడు.",
+      "who": "యేసు, యోహాను బప్తిస్తా, మరియ, తోమా, పేతురు, తండ్రి.",
+      "setting": "యూదా, గలిలయ, యెరూషలేము.",
+      "date": "సాధారణంగా క్రీ.శ. 80-100.",
+      "before": "యేసు జీవిత అర్థంపై లోతైన ఆలోచన.",
+      "stakes": "యేసు దేవుని కుమారుడు, నిత్యజీవాన్ని ఇస్తాడు."
+    },
+    "Acts": {
+      "overview": "పునరుత్థాన యేసు ఆత్మను పంపగా, యెరూషలేములో సంఘం పుట్టి, హింసలో పరిచర్య ద్వారా సువార్త అన్యజాతులకు వ్యాపిస్తుంది.",
+      "who": "దేవుడు, పరిశుద్ధాత్మ, పేతురు, పౌలు, బర్నబా, స్తెఫను, సంఘాలు.",
+      "setting": "యెరూషలేము, యూదా, సమరియ, ఆసియా మైనరు, గ్రీసు, రోము.",
+      "date": "సాధారణంగా క్రీ.శ. 60-90; క్రీ.శ. 62 వరకు సంఘటనలు.",
+      "before": "లూకా సువార్త కొనసాగుతుంది.",
+      "stakes": "సువార్త జాతులకు వ్యాపించి, ఆత్మ సంఘాన్ని బలపరుస్తాడు."
+    },
+    "Rom": {
+      "overview": "పౌలు సువార్తను వివరిస్తాడు: అందరూ పాపులు, దేవుడు క్రీస్తులో విశ్వాసం ద్వారా నీతిమంతులుగా చేసి, విశ్వాసులు యూదా-అన్యజాతి ఐక్యతలో మార్పు చెందుతారు.",
+      "who": "దేవుడు, పౌలు, యేసు, ఆదాము, అబ్రాహాము, ఇశ్రాయేలు.",
+      "setting": "పౌలు పరిచర్య చివరిలో గ్రీసు నుండి రోమా సంఘానికి రాస్తాడు.",
+      "date": "సాధారణంగా క్రీ.శ. 57.",
+      "before": "పౌలు లేఖలలో అతని మిషనరీ పని తర్వాత.",
+      "stakes": "దేవుని నీతి పాపులను నీతిమంతులుగా చేసి యూదా-అన్యజాతులను ఏకం చేస్తుంది."
+    },
+    "1Cor": {
+      "overview": "పౌలు విభజనలు, అనైతికత, వ్యాజ్యాలు, వివాహం, స్వాతంత్ర్యం, ఆరాధన, పునరుత్థానం విభజిత కొరింథు సంఘంలో పరిష్కరిస్తాడు.",
+      "who": "దేవుడు, పౌలు, యేసు, కొరింథీయులు, అపొల్లోసు.",
+      "setting": "ఎఫెసు నుండి సంపన్న ఓడరేవు నగరం కొరింథుకు.",
+      "date": "సాధారణంగా క్రీ.శ. 54-55.",
+      "before": "పౌలు మూడవ ప్రయాణ కాలంలో రాయబడింది.",
+      "stakes": "సువార్త సంఘ జీవితాన్ని, ఐక్యతను రూపొందించాలి."
+    },
+    "2Cor": {
+      "overview": "పౌలు తన అపొస్తలత్వాన్ని సమర్థించి, శ్రమ, ఆదరణ వివరించి, ఉదార దానానికి, సమాధానానికి విజ్ఞప్తి చేస్తాడు.",
+      "who": "దేవుడు, పౌలు, కొరింథీయులు, అబద్ధ అపొస్తలులు.",
+      "setting": "బాధాకర సందర్శన, ఎదురుదెబ్బ తర్వాత రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 55-57.",
+      "before": "1 కొరింథీయుల తర్వాత, పౌలు ప్రణాళికల మార్పు.",
+      "stakes": "సమాధానం, అపొస్తల బలహీనత గురించి సరైన దృష్టి."
+    },
+    "Gal": {
+      "overview": "అన్యజాతుల సున్నతి కోరే ఉపదేశకులకు వ్యతిరేకంగా పౌలు ధర్మశాస్త్ర క్రియలు లేకుండా విశ్వాసం ద్వారా నీతీకరణను సమర్థిస్తాడు.",
+      "who": "దేవుడు, పౌలు, యేసు, పేతురు, గలతీయులు, యూదా ఉపదేశకులు.",
+      "setting": "అన్యజాతుల చేరికపై వివాద మధ్య.",
+      "date": "సాధారణంగా క్రీ.శ. 48-55.",
+      "before": "ధర్మశాస్త్రం గురించి ప్రారంభ సంఘ చర్చను ప్రతిబింబిస్తుంది.",
+      "stakes": "కృప సువార్త ధర్మ క్రియలతో కలపకూడదు."
+    },
+    "Eph": {
+      "overview": "పౌలు క్రీస్తులో సంఘ సంపదలను, ఒకే శరీరంగా ఐక్యతను, దాని నుండి వచ్చే నూతన జీవితాన్ని, ఆత్మ కవచాన్ని వివరిస్తాడు.",
+      "who": "దేవుడు, పౌలు, యేసు, సంఘం, శక్తులు.",
+      "setting": "చెర నుండి రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 60-62.",
+      "before": "అన్యజాతుల మధ్య సంఘ వృద్ధిని ప్రతిబింబిస్తుంది.",
+      "stakes": "క్రీస్తులో విశ్వాసుల గుర్తింపు, ఐక్యత, ప్రవర్తన."
+    },
+    "Phil": {
+      "overview": "పౌలు ఫిలిప్పీయులకు కృతజ్ఞత చెప్పి, శ్రమలో సంతోషించి, వినయం, ఐక్యతకు పిలిచి, క్రీస్తు వైపు సాగుతాడు.",
+      "who": "దేవుడు, పౌలు, యేసు, తిమోతి, ఎపఫ్రొదితు, ఫిలిప్పీయులు.",
+      "setting": "చెర నుండి రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 60-62.",
+      "before": "అపొస్తలుల కార్యాల్లో ఫిలిప్పీ సంఘ స్థాపన తర్వాత.",
+      "stakes": "శ్రమలోనూ క్రీస్తులో సంతోషం, వినయం."
+    },
+    "Col": {
+      "overview": "పౌలు అన్ని శక్తులపై క్రీస్తు శ్రేష్ఠతను చూపి, విశ్వాసులు పాత జీవితాన్ని విడిచి ఆయనలో జీవించాలని పిలుస్తాడు.",
+      "who": "దేవుడు, పౌలు, యేసు, ఎపఫ్రా, కొలస్సీ సంఘం.",
+      "setting": "అబద్ధ బోధలకు వ్యతిరేకంగా చెర నుండి రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 60-62.",
+      "before": "ప్రత్యర్థి తత్వాలను ఎదుర్కొంటున్న కొత్త సంఘాన్ని ఉద్దేశిస్తుంది.",
+      "stakes": "క్రీస్తు సరిపోతాడు; విశ్వాసులు ఆయనలో పరిపూర్ణులు."
+    },
+    "1Thess": {
+      "overview": "పౌలు చిన్న సంఘాన్ని ప్రోత్సహించి, వారి విశ్వాసాన్ని మెచ్చుకొని, క్రీస్తు తిరిగి రావడం, పరిశుద్ధ జీవితం గురించి జవాబిస్తాడు.",
+      "who": "దేవుడు, పౌలు, సీల్వాను, తిమోతి, థెస్సలొనీకయులు.",
+      "setting": "పౌలు తొందరగా నగరం విడిచిన తర్వాత రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 50-51, పౌలు తొలి లేఖ కావచ్చు.",
+      "before": "అపొస్తలుల కార్యాల్లో సంఘ స్థాపన తర్వాత.",
+      "stakes": "సంఘం క్రీస్తు కోసం నిరీక్షణలో నిలిచి ఉండాలి."
+    },
+    "2Thess": {
+      "overview": "పౌలు థెస్సలొనీకయులకు ప్రభువు దినం గురించి భరోసా ఇచ్చి, స్థిరమైన, క్రమబద్ధ జీవితానికి పిలుస్తాడు.",
+      "who": "దేవుడు, పౌలు, థెస్సలొనీకయులు, అధర్మ మనుష్యుడు.",
+      "setting": "1 థెస్సలొనీకయుల తర్వాత కొద్దికాలానికి రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 51-52.",
+      "before": "క్రీస్తు తిరిగి రావడం గురించి అపార్థాన్ని సరిదిద్దుతుంది.",
+      "stakes": "ప్రభువు కోసం నిరీక్షిస్తూ ఓపికగా విశ్వసనీయత."
+    },
+    "1Tim": {
+      "overview": "పౌలు తిమోతికి స్వస్థ బోధ, సంఘ క్రమం, నాయకత్వ అర్హతలు, భక్తి గురించి సూచనలు ఇస్తాడు.",
+      "who": "దేవుడు, పౌలు, తిమోతి, ఎఫెసు సంఘం.",
+      "setting": "సంఘ నిరంతర జీవితం కోసం రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 62-66.",
+      "before": "పౌలు పరిచర్య, తిమోతి పాత్ర తర్వాత.",
+      "stakes": "సంఘానికి విశ్వాసపాత్ర బోధ, అర్హ నాయకులు అవసరం."
+    },
+    "2Tim": {
+      "overview": "పౌలు తుది లేఖ తిమోతిని సువార్తను కాపాడి, శ్రమలను భరించి, వాక్యాన్ని విశ్వాసంగా ప్రకటించమని కోరుతుంది.",
+      "who": "దేవుడు, పౌలు, తిమోతి, ఒనేసిఫోరు, సంఘాలు.",
+      "setting": "రోమాలో చెర నుండి రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 64-67, పౌలు మరణానికి దగ్గరగా.",
+      "before": "పౌలు హత్యను ముందుగా సూచిస్తుంది.",
+      "stakes": "సువార్త చివరి వరకు అప్పగించబడాలి, రక్షించబడాలి."
+    },
+    "Titus": {
+      "overview": "పౌలు తీతును పెద్దలను నియమించి, స్వస్థ బోధ నేర్పి, క్రేతులో సత్క్రియలను పెంచమని ఆదేశిస్తాడు.",
+      "who": "దేవుడు, పౌలు, తీతు, క్రేతు సంఘాలు.",
+      "setting": "క్రేతు ద్వీపం.",
+      "date": "సాధారణంగా క్రీ.శ. 62-64.",
+      "before": "క్రేతులో పౌలు పరిచర్య తర్వాత.",
+      "stakes": "ఆరోగ్యకర సంఘాలకు మంచి నాయకత్వం, భక్తిగల జీవితం అవసరం."
+    },
+    "Phlm": {
+      "overview": "పౌలు ఫిలేమోనును పారిపోయిన బానిస ఒనేసిమును ప్రియ సోదరునిగా స్వీకరించమని విజ్ఞప్తి చేస్తాడు.",
+      "who": "దేవుడు, పౌలు, ఫిలేమోను, ఒనేసిము, తిమోతి.",
+      "setting": "చెర నుండి రాయబడింది.",
+      "date": "సాధారణంగా క్రీ.శ. 60-62.",
+      "before": "పౌలు చెర, కొలస్సీ సంఘంతో సంబంధం.",
+      "stakes": "సువార్త సంబంధాలను, యాజమాన్యాన్ని మారుస్తుంది."
+    },
+    "Heb": {
+      "overview": "హెబ్రీయులు యేసు దేవుని ఉన్నత ప్రకటన, శ్రేష్ఠ యాజకుడు, బలి అని వాదించి, విశ్వాసంలో నిలిచి ఉండమని పిలుస్తుంది.",
+      "who": "దేవుడు, యేసు, మోషే, అబ్రాహాము, మెల్కీసెదెకు, సమాజం.",
+      "setting": "ఒత్తిడి, హింసను ఎదుర్కొంటున్న సమాజం.",
+      "date": "సుమారు క్రీ.శ. 70 కి ముందు; కాలం వివాదాస్పదం.",
+      "before": "ఇశ్రాయేలు బలి, యాజక వ్యవస్థపై నిర్మిస్తుంది.",
+      "stakes": "క్రీస్తు ఒకసారి చేసిన బలి శ్రేష్ఠ నిబంధనను స్థాపిస్తుంది."
+    },
+    "Jas": {
+      "overview": "యాకోబు విశ్వాసులు శ్రమలు, మాట, క్రియలు, వినయం, ప్రార్థనలో ఆచరణాత్మక విశ్వాసం చూపాలని పిలుస్తాడు.",
+      "who": "దేవుడు, యాకోబు, ధనవంతులు, పేదలు, సమాజం.",
+      "setting": "చెదరగొట్టబడిన యూదా-క్రైస్తవ విశ్వాసులు.",
+      "date": "సాధారణంగా క్రీ.శ. 45-60; వివాదాస్పదం.",
+      "before": "జ్ఞాన సంప్రదాయం, యేసు బోధకు దగ్గరగా.",
+      "stakes": "క్రియలు లేని విశ్వాసం చనిపోయినది; నిజ మతం జీవించబడుతుంది."
+    },
+    "1Pet": {
+      "overview": "పేతురు శ్రమపడుతున్న విశ్వాసులను పరదేశులుగా ప్రోత్సహించి, క్రీస్తు పునరుత్థాన నిరీక్షణపై ఆధారపడి పరిశుద్ధ ప్రవర్తనకు పిలుస్తాడు.",
+      "who": "దేవుడు, పేతురు, యేసు, ఎన్నుకోబడిన పరదేశులు.",
+      "setting": "సామాజిక ఒత్తిడిలోని సమాజాలు.",
+      "date": "సాధారణంగా క్రీ.శ. 60-65.",
+      "before": "పెరుగుతున్న హింసను ఉద్దేశిస్తుంది.",
+      "stakes": "క్రీస్తు కోసం శ్రమ ఆయన మహిమ, నిరీక్షణతో కలుపబడుతుంది."
+    },
+    "2Pet": {
+      "overview": "పేతురు క్రీస్తులో వృద్ధిని కోరి, అబద్ధ ఉపదేశకులను హెచ్చరించి, క్రీస్తు తిరిగి రావడం నిశ్చయమని ధ్రువపరుస్తాడు.",
+      "who": "దేవుడు, పేతురు, యేసు, అబద్ధ ఉపదేశకులు.",
+      "setting": "అబద్ధ బోధ, ప్రభువు రాకడపై సందేహంతో కలత చెందిన సమాజాలు.",
+      "date": "రచనా కాలం వివాదాస్పదం; ఆలస్య మొదటి లేదా ఆరంభ రెండవ శతాబ్ది.",
+      "before": "1 పేతురు, ముందు లేఖను అనుసరిస్తుంది.",
+      "stakes": "అనైతిక అబద్ధ బోధ సంఘానికి ముప్పు; లేఖనాలు విశ్వసనీయం."
+    },
+    "1John": {
+      "overview": "యోహాను విశ్వాసులకు నిత్యజీవ భరోసా ఇచ్చి, నిజ విశ్వాసానికి ప్రేమ, విధేయత, యేసు గురించి సరైన విశ్వాసం పరీక్షలు ఇస్తాడు.",
+      "who": "దేవుడు, యేసు, సమాజం, అబద్ధ ఉపదేశకులు.",
+      "setting": "అవతారం, ప్రేమను చర్చించే సమాజం.",
+      "date": "సాధారణంగా క్రీ.శ. 85-100.",
+      "before": "యోహాను సువార్తను పూరిస్తుంది.",
+      "stakes": "భరోసా, ప్రేమ నిజ విశ్వాసాన్ని అబద్ధం నుండి వేరుచేస్తాయి."
+    },
+    "2John": {
+      "overview": "యోహాను ఎన్నుకోబడిన అమ్మగారికి, ఆమె పిల్లలకు ప్రేమ, సత్యం ప్రోత్సహించి, మోసగాళ్లపై హెచ్చరిస్తాడు.",
+      "who": "దేవుడు, యేసు, పెద్ద, ఎన్నుకోబడిన అమ్మగారు, సంఘం.",
+      "setting": "ప్రయాణ అబద్ధ ఉపదేశకులను ఎదుర్కొంటున్న సమాజం.",
+      "date": "సాధారణంగా క్రీ.శ. 85-100.",
+      "before": "1, 3 యోహానులతో సంబంధం.",
+      "stakes": "సత్యం, ప్రేమ కలిసి కాపాడబడాలి."
+    },
+    "3John": {
+      "overview": "యోహాను గాయును ఆతిథ్యం, విశ్వసనీయతకు మెచ్చుకొని, దియొత్రెఫెసును గద్దించి, దెమేత్రియును మెచ్చుకుంటాడు.",
+      "who": "దేవుడు, పెద్ద, గాయును, దియొత్రెఫెసు, దెమేత్రియు.",
+      "setting": "సంఘ వలయాలు, ప్రయాణ మిషనరీలు.",
+      "date": "సాధారణంగా క్రీ.శ. 85-100.",
+      "before": "1, 2 యోహానులతో సంబంధం.",
+      "stakes": "విశ్వసనీయ ఆతిథ్యం సత్యాన్ని ఆదుకుంటుంది; అహంకారం సంఘానికి హాని."
+    },
+    "Jude": {
+      "overview": "యూదా విశ్వాసులు విశ్వాసం కోసం పోరాడి, అనైతిక అబద్ధ ఉపదేశకులను ఎదిరించి, దేవుని ప్రేమలో నిలిచి ఉండమని కోరుతాడు.",
+      "who": "దేవుడు, యేసు, యూదా, అబద్ధ ఉపదేశకులు.",
+      "setting": "కలుషిత ఉపదేశకులతో నిండిన సంఘం.",
+      "date": "రచనా కాలం వివాదాస్పదం; మొదటి శతాబ్ది మధ్య లేదా చివర.",
+      "before": "2 పేతురుతో పదార్థం, ఆందోళనలు పంచుకుంటుంది.",
+      "stakes": "విశ్వాసం రక్షించబడాలి, విశ్వాసులు కృపలో నిలపబడాలి."
+    },
+    "Rev": {
+      "overview": "యోహాను పునరుత్థాన క్రీస్తు, సంఘాలకు లేఖలు, విశ్వ తీర్పు, చెడు ఓటమి, కొత్త ఆకాశం భూమి దర్శనాలు పొందుతాడు.",
+      "who": "దేవుడు, యేసు, యోహాను, సంఘాలు, దేవదూతలు, గొర్రెపిల్ల.",
+      "setting": "పత్మోసు, దర్శన పరలోకం, భూమి.",
+      "date": "సాధారణంగా క్రీ.శ. 95, దొమిషియను కాలంలో; కొందరు ఆరంభ తేదీని ప్రతిపాదిస్తారు.",
+      "before": "కొత్త నిబంధనను కథా పరిసమాప్తితో ముగిస్తుంది.",
+      "stakes": "క్రీస్తు విజయుడు, చెడు తీర్పు పొందుతుంది, దేవుడు తన ప్రజలతో నివసిస్తాడు."
+    }
+  }
+}

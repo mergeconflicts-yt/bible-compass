@@ -1,0 +1,2995 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-rom-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-rom-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-rom-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-rom:refsys:eng-v22:rom.1.1-rom.16.27",
+      "scope:wb-rom-1:refsys:eng-v22:rom.1.1-rom.1.32",
+      "scope:wb-rom-2:refsys:eng-v22:rom.2.1-rom.2.29",
+      "scope:wb-rom-3:refsys:eng-v22:rom.3.1-rom.3.31",
+      "scope:wb-rom-4:refsys:eng-v22:rom.4.1-rom.4.25",
+      "scope:wb-rom-5:refsys:eng-v22:rom.5.1-rom.5.21",
+      "scope:wb-rom-6:refsys:eng-v22:rom.6.1-rom.6.23",
+      "scope:wb-rom-7:refsys:eng-v22:rom.7.1-rom.7.25",
+      "scope:wb-rom-8:refsys:eng-v22:rom.8.1-rom.8.39",
+      "scope:wb-rom-9:refsys:eng-v22:rom.9.1-rom.9.33",
+      "scope:wb-rom-10:refsys:eng-v22:rom.10.1-rom.10.21",
+      "scope:wb-rom-11:refsys:eng-v22:rom.11.1-rom.11.36",
+      "scope:wb-rom-12:refsys:eng-v22:rom.12.1-rom.12.21",
+      "scope:wb-rom-13:refsys:eng-v22:rom.13.1-rom.13.14",
+      "scope:wb-rom-14:refsys:eng-v22:rom.14.1-rom.14.23",
+      "scope:wb-rom-15:refsys:eng-v22:rom.15.1-rom.15.33",
+      "scope:wb-rom-16:refsys:eng-v22:rom.16.1-rom.16.27",
+      "scope:wb-rom-1-p1:refsys:eng-v22:rom.1.1-rom.1.7",
+      "scope:wb-rom-1-p2:refsys:eng-v22:rom.1.8-rom.1.17",
+      "scope:wb-rom-1-p3:refsys:eng-v22:rom.1.18-rom.1.32",
+      "scope:wb-rom-2-p1:refsys:eng-v22:rom.2.1-rom.2.16",
+      "scope:wb-rom-2-p2:refsys:eng-v22:rom.2.17-rom.2.29",
+      "scope:wb-rom-3-p1:refsys:eng-v22:rom.3.1-rom.3.8",
+      "scope:wb-rom-3-p2:refsys:eng-v22:rom.3.9-rom.3.20",
+      "scope:wb-rom-3-p3:refsys:eng-v22:rom.3.21-rom.3.31",
+      "scope:wb-rom-4-p1:refsys:eng-v22:rom.4.1-rom.4.12",
+      "scope:wb-rom-4-p2:refsys:eng-v22:rom.4.13-rom.4.25",
+      "scope:wb-rom-5-p1:refsys:eng-v22:rom.5.1-rom.5.5",
+      "scope:wb-rom-5-p2:refsys:eng-v22:rom.5.6-rom.5.11",
+      "scope:wb-rom-5-p3:refsys:eng-v22:rom.5.12-rom.5.21",
+      "scope:wb-rom-6-p1:refsys:eng-v22:rom.6.1-rom.6.14",
+      "scope:wb-rom-6-p2:refsys:eng-v22:rom.6.15-rom.6.23",
+      "scope:wb-rom-7-p1:refsys:eng-v22:rom.7.1-rom.7.6",
+      "scope:wb-rom-7-p2:refsys:eng-v22:rom.7.7-rom.7.12",
+      "scope:wb-rom-7-p3:refsys:eng-v22:rom.7.13-rom.7.25",
+      "scope:wb-rom-8-p1:refsys:eng-v22:rom.8.1-rom.8.11",
+      "scope:wb-rom-8-p2:refsys:eng-v22:rom.8.12-rom.8.17",
+      "scope:wb-rom-8-p3:refsys:eng-v22:rom.8.18-rom.8.27",
+      "scope:wb-rom-8-p4:refsys:eng-v22:rom.8.28-rom.8.34",
+      "scope:wb-rom-8-p5:refsys:eng-v22:rom.8.35-rom.8.39",
+      "scope:wb-rom-9-p1:refsys:eng-v22:rom.9.1-rom.9.5",
+      "scope:wb-rom-9-p2:refsys:eng-v22:rom.9.6-rom.9.29",
+      "scope:wb-rom-9-p3:refsys:eng-v22:rom.9.30-rom.9.33",
+      "scope:wb-rom-10-p1:refsys:eng-v22:rom.10.1-rom.10.21",
+      "scope:wb-rom-11-p1:refsys:eng-v22:rom.11.1-rom.11.10",
+      "scope:wb-rom-11-p2:refsys:eng-v22:rom.11.11-rom.11.24",
+      "scope:wb-rom-11-p3:refsys:eng-v22:rom.11.25-rom.11.32",
+      "scope:wb-rom-11-p4:refsys:eng-v22:rom.11.33-rom.11.36",
+      "scope:wb-rom-12-p1:refsys:eng-v22:rom.12.1-rom.12.8",
+      "scope:wb-rom-12-p2:refsys:eng-v22:rom.12.9-rom.12.13",
+      "scope:wb-rom-12-p3:refsys:eng-v22:rom.12.14-rom.12.21",
+      "scope:wb-rom-13-p1:refsys:eng-v22:rom.13.1-rom.13.7",
+      "scope:wb-rom-13-p2:refsys:eng-v22:rom.13.8-rom.13.10",
+      "scope:wb-rom-13-p3:refsys:eng-v22:rom.13.11-rom.13.14",
+      "scope:wb-rom-14-p1:refsys:eng-v22:rom.14.1-rom.14.12",
+      "scope:wb-rom-14-p2:refsys:eng-v22:rom.14.13-rom.14.23",
+      "scope:wb-rom-15-p1:refsys:eng-v22:rom.15.1-rom.15.6",
+      "scope:wb-rom-15-p2:refsys:eng-v22:rom.15.7-rom.15.13",
+      "scope:wb-rom-15-p3:refsys:eng-v22:rom.15.14-rom.15.22",
+      "scope:wb-rom-15-p4:refsys:eng-v22:rom.15.23-rom.15.33",
+      "scope:wb-rom-16-p1:refsys:eng-v22:rom.16.1-rom.16.16",
+      "scope:wb-rom-16-p2:refsys:eng-v22:rom.16.17-rom.16.20",
+      "scope:wb-rom-16-p3:refsys:eng-v22:rom.16.21-rom.16.23",
+      "scope:wb-rom-16-p4:refsys:eng-v22:rom.16.25-rom.16.27"
+    ],
+    "reference_keys": [
+      "verse:Rom.1.1",
+      "verse:Rom.1.2",
+      "verse:Rom.1.3",
+      "verse:Rom.1.4",
+      "verse:Rom.1.5",
+      "verse:Rom.1.6",
+      "verse:Rom.1.7",
+      "verse:Rom.1.8",
+      "verse:Rom.1.9",
+      "verse:Rom.1.10",
+      "verse:Rom.1.11",
+      "verse:Rom.1.12",
+      "verse:Rom.1.13",
+      "verse:Rom.1.14",
+      "verse:Rom.1.15",
+      "verse:Rom.1.16",
+      "verse:Rom.1.17",
+      "verse:Rom.1.18",
+      "verse:Rom.1.19",
+      "verse:Rom.1.20",
+      "verse:Rom.1.21",
+      "verse:Rom.1.22",
+      "verse:Rom.1.23",
+      "verse:Rom.1.24",
+      "verse:Rom.1.25",
+      "verse:Rom.1.26",
+      "verse:Rom.1.27",
+      "verse:Rom.1.28",
+      "verse:Rom.1.29",
+      "verse:Rom.1.30",
+      "verse:Rom.1.31",
+      "verse:Rom.1.32",
+      "verse:Rom.2.1",
+      "verse:Rom.2.2",
+      "verse:Rom.2.3",
+      "verse:Rom.2.4",
+      "verse:Rom.2.5",
+      "verse:Rom.2.6",
+      "verse:Rom.2.7",
+      "verse:Rom.2.8",
+      "verse:Rom.2.9",
+      "verse:Rom.2.10",
+      "verse:Rom.2.11",
+      "verse:Rom.2.12",
+      "verse:Rom.2.13",
+      "verse:Rom.2.14",
+      "verse:Rom.2.15",
+      "verse:Rom.2.16",
+      "verse:Rom.2.17",
+      "verse:Rom.2.18",
+      "verse:Rom.2.19",
+      "verse:Rom.2.20",
+      "verse:Rom.2.21",
+      "verse:Rom.2.22",
+      "verse:Rom.2.23",
+      "verse:Rom.2.24",
+      "verse:Rom.2.25",
+      "verse:Rom.2.26",
+      "verse:Rom.2.27",
+      "verse:Rom.2.28",
+      "verse:Rom.2.29",
+      "verse:Rom.3.1",
+      "verse:Rom.3.2",
+      "verse:Rom.3.3",
+      "verse:Rom.3.4",
+      "verse:Rom.3.5",
+      "verse:Rom.3.6",
+      "verse:Rom.3.7",
+      "verse:Rom.3.8",
+      "verse:Rom.3.9",
+      "verse:Rom.3.10",
+      "verse:Rom.3.11",
+      "verse:Rom.3.12",
+      "verse:Rom.3.13",
+      "verse:Rom.3.14",
+      "verse:Rom.3.15",
+      "verse:Rom.3.16",
+      "verse:Rom.3.17",
+      "verse:Rom.3.18",
+      "verse:Rom.3.19",
+      "verse:Rom.3.20",
+      "verse:Rom.3.21",
+      "verse:Rom.3.22",
+      "verse:Rom.3.23",
+      "verse:Rom.3.24",
+      "verse:Rom.3.25",
+      "verse:Rom.3.26",
+      "verse:Rom.3.27",
+      "verse:Rom.3.28",
+      "verse:Rom.3.29",
+      "verse:Rom.3.30",
+      "verse:Rom.3.31",
+      "verse:Rom.4.1",
+      "verse:Rom.4.2",
+      "verse:Rom.4.3",
+      "verse:Rom.4.4",
+      "verse:Rom.4.5",
+      "verse:Rom.4.6",
+      "verse:Rom.4.7",
+      "verse:Rom.4.8",
+      "verse:Rom.4.9",
+      "verse:Rom.4.10",
+      "verse:Rom.4.11",
+      "verse:Rom.4.12",
+      "verse:Rom.4.13",
+      "verse:Rom.4.14",
+      "verse:Rom.4.15",
+      "verse:Rom.4.16",
+      "verse:Rom.4.17",
+      "verse:Rom.4.18",
+      "verse:Rom.4.19",
+      "verse:Rom.4.20",
+      "verse:Rom.4.21",
+      "verse:Rom.4.22",
+      "verse:Rom.4.23",
+      "verse:Rom.4.24",
+      "verse:Rom.4.25",
+      "verse:Rom.5.1",
+      "verse:Rom.5.2",
+      "verse:Rom.5.3",
+      "verse:Rom.5.4",
+      "verse:Rom.5.5",
+      "verse:Rom.5.6",
+      "verse:Rom.5.7",
+      "verse:Rom.5.8",
+      "verse:Rom.5.9",
+      "verse:Rom.5.10",
+      "verse:Rom.5.11",
+      "verse:Rom.5.12",
+      "verse:Rom.5.13",
+      "verse:Rom.5.14",
+      "verse:Rom.5.15",
+      "verse:Rom.5.16",
+      "verse:Rom.5.17",
+      "verse:Rom.5.18",
+      "verse:Rom.5.19",
+      "verse:Rom.5.20",
+      "verse:Rom.5.21",
+      "verse:Rom.6.1",
+      "verse:Rom.6.2",
+      "verse:Rom.6.3",
+      "verse:Rom.6.4",
+      "verse:Rom.6.5",
+      "verse:Rom.6.6",
+      "verse:Rom.6.7",
+      "verse:Rom.6.8",
+      "verse:Rom.6.9",
+      "verse:Rom.6.10",
+      "verse:Rom.6.11",
+      "verse:Rom.6.12",
+      "verse:Rom.6.13",
+      "verse:Rom.6.14",
+      "verse:Rom.6.15",
+      "verse:Rom.6.16",
+      "verse:Rom.6.17",
+      "verse:Rom.6.18",
+      "verse:Rom.6.19",
+      "verse:Rom.6.20",
+      "verse:Rom.6.21",
+      "verse:Rom.6.22",
+      "verse:Rom.6.23",
+      "verse:Rom.7.1",
+      "verse:Rom.7.2",
+      "verse:Rom.7.3",
+      "verse:Rom.7.4",
+      "verse:Rom.7.5",
+      "verse:Rom.7.6",
+      "verse:Rom.7.7",
+      "verse:Rom.7.8",
+      "verse:Rom.7.9",
+      "verse:Rom.7.10",
+      "verse:Rom.7.11",
+      "verse:Rom.7.12",
+      "verse:Rom.7.13",
+      "verse:Rom.7.14",
+      "verse:Rom.7.15",
+      "verse:Rom.7.16",
+      "verse:Rom.7.17",
+      "verse:Rom.7.18",
+      "verse:Rom.7.19",
+      "verse:Rom.7.20",
+      "verse:Rom.7.21",
+      "verse:Rom.7.22",
+      "verse:Rom.7.23",
+      "verse:Rom.7.24",
+      "verse:Rom.7.25",
+      "verse:Rom.8.1",
+      "verse:Rom.8.2",
+      "verse:Rom.8.3",
+      "verse:Rom.8.4",
+      "verse:Rom.8.5",
+      "verse:Rom.8.6",
+      "verse:Rom.8.7",
+      "verse:Rom.8.8",
+      "verse:Rom.8.9",
+      "verse:Rom.8.10",
+      "verse:Rom.8.11",
+      "verse:Rom.8.12",
+      "verse:Rom.8.13",
+      "verse:Rom.8.14",
+      "verse:Rom.8.15",
+      "verse:Rom.8.16",
+      "verse:Rom.8.17",
+      "verse:Rom.8.18",
+      "verse:Rom.8.19",
+      "verse:Rom.8.20",
+      "verse:Rom.8.21",
+      "verse:Rom.8.22",
+      "verse:Rom.8.23",
+      "verse:Rom.8.24",
+      "verse:Rom.8.25",
+      "verse:Rom.8.26",
+      "verse:Rom.8.27",
+      "verse:Rom.8.28",
+      "verse:Rom.8.29",
+      "verse:Rom.8.30",
+      "verse:Rom.8.31",
+      "verse:Rom.8.32",
+      "verse:Rom.8.33",
+      "verse:Rom.8.34",
+      "verse:Rom.8.35",
+      "verse:Rom.8.36",
+      "verse:Rom.8.37",
+      "verse:Rom.8.38",
+      "verse:Rom.8.39",
+      "verse:Rom.9.1",
+      "verse:Rom.9.2",
+      "verse:Rom.9.3",
+      "verse:Rom.9.4",
+      "verse:Rom.9.5",
+      "verse:Rom.9.6",
+      "verse:Rom.9.7",
+      "verse:Rom.9.8",
+      "verse:Rom.9.9",
+      "verse:Rom.9.10",
+      "verse:Rom.9.11",
+      "verse:Rom.9.12",
+      "verse:Rom.9.13",
+      "verse:Rom.9.14",
+      "verse:Rom.9.15",
+      "verse:Rom.9.16",
+      "verse:Rom.9.17",
+      "verse:Rom.9.18",
+      "verse:Rom.9.19",
+      "verse:Rom.9.20",
+      "verse:Rom.9.21",
+      "verse:Rom.9.22",
+      "verse:Rom.9.23",
+      "verse:Rom.9.24",
+      "verse:Rom.9.25",
+      "verse:Rom.9.26",
+      "verse:Rom.9.27",
+      "verse:Rom.9.28",
+      "verse:Rom.9.29",
+      "verse:Rom.9.30",
+      "verse:Rom.9.31",
+      "verse:Rom.9.32",
+      "verse:Rom.9.33",
+      "verse:Rom.10.1",
+      "verse:Rom.10.2",
+      "verse:Rom.10.3",
+      "verse:Rom.10.4",
+      "verse:Rom.10.5",
+      "verse:Rom.10.6",
+      "verse:Rom.10.7",
+      "verse:Rom.10.8",
+      "verse:Rom.10.9",
+      "verse:Rom.10.10",
+      "verse:Rom.10.11",
+      "verse:Rom.10.12",
+      "verse:Rom.10.13",
+      "verse:Rom.10.14",
+      "verse:Rom.10.15",
+      "verse:Rom.10.16",
+      "verse:Rom.10.17",
+      "verse:Rom.10.18",
+      "verse:Rom.10.19",
+      "verse:Rom.10.20",
+      "verse:Rom.10.21",
+      "verse:Rom.11.1",
+      "verse:Rom.11.2",
+      "verse:Rom.11.3",
+      "verse:Rom.11.4",
+      "verse:Rom.11.5",
+      "verse:Rom.11.6",
+      "verse:Rom.11.7",
+      "verse:Rom.11.8",
+      "verse:Rom.11.9",
+      "verse:Rom.11.10",
+      "verse:Rom.11.11",
+      "verse:Rom.11.12",
+      "verse:Rom.11.13",
+      "verse:Rom.11.14",
+      "verse:Rom.11.15",
+      "verse:Rom.11.16",
+      "verse:Rom.11.17",
+      "verse:Rom.11.18",
+      "verse:Rom.11.19",
+      "verse:Rom.11.20",
+      "verse:Rom.11.21",
+      "verse:Rom.11.22",
+      "verse:Rom.11.23",
+      "verse:Rom.11.24",
+      "verse:Rom.11.25",
+      "verse:Rom.11.26",
+      "verse:Rom.11.27",
+      "verse:Rom.11.28",
+      "verse:Rom.11.29",
+      "verse:Rom.11.30",
+      "verse:Rom.11.31",
+      "verse:Rom.11.32",
+      "verse:Rom.11.33",
+      "verse:Rom.11.34",
+      "verse:Rom.11.35",
+      "verse:Rom.11.36",
+      "verse:Rom.12.1",
+      "verse:Rom.12.2",
+      "verse:Rom.12.3",
+      "verse:Rom.12.4",
+      "verse:Rom.12.5",
+      "verse:Rom.12.6",
+      "verse:Rom.12.7",
+      "verse:Rom.12.8",
+      "verse:Rom.12.9",
+      "verse:Rom.12.10",
+      "verse:Rom.12.11",
+      "verse:Rom.12.12",
+      "verse:Rom.12.13",
+      "verse:Rom.12.14",
+      "verse:Rom.12.15",
+      "verse:Rom.12.16",
+      "verse:Rom.12.17",
+      "verse:Rom.12.18",
+      "verse:Rom.12.19",
+      "verse:Rom.12.20",
+      "verse:Rom.12.21",
+      "verse:Rom.13.1",
+      "verse:Rom.13.2",
+      "verse:Rom.13.3",
+      "verse:Rom.13.4",
+      "verse:Rom.13.5",
+      "verse:Rom.13.6",
+      "verse:Rom.13.7",
+      "verse:Rom.13.8",
+      "verse:Rom.13.9",
+      "verse:Rom.13.10",
+      "verse:Rom.13.11",
+      "verse:Rom.13.12",
+      "verse:Rom.13.13",
+      "verse:Rom.13.14",
+      "verse:Rom.14.1",
+      "verse:Rom.14.2",
+      "verse:Rom.14.3",
+      "verse:Rom.14.4",
+      "verse:Rom.14.5",
+      "verse:Rom.14.6",
+      "verse:Rom.14.7",
+      "verse:Rom.14.8",
+      "verse:Rom.14.9",
+      "verse:Rom.14.10",
+      "verse:Rom.14.11",
+      "verse:Rom.14.12",
+      "verse:Rom.14.13",
+      "verse:Rom.14.14",
+      "verse:Rom.14.15",
+      "verse:Rom.14.16",
+      "verse:Rom.14.17",
+      "verse:Rom.14.18",
+      "verse:Rom.14.19",
+      "verse:Rom.14.20",
+      "verse:Rom.14.21",
+      "verse:Rom.14.22",
+      "verse:Rom.14.23",
+      "verse:Rom.15.1",
+      "verse:Rom.15.2",
+      "verse:Rom.15.3",
+      "verse:Rom.15.4",
+      "verse:Rom.15.5",
+      "verse:Rom.15.6",
+      "verse:Rom.15.7",
+      "verse:Rom.15.8",
+      "verse:Rom.15.9",
+      "verse:Rom.15.10",
+      "verse:Rom.15.11",
+      "verse:Rom.15.12",
+      "verse:Rom.15.13",
+      "verse:Rom.15.14",
+      "verse:Rom.15.15",
+      "verse:Rom.15.16",
+      "verse:Rom.15.17",
+      "verse:Rom.15.18",
+      "verse:Rom.15.19",
+      "verse:Rom.15.20",
+      "verse:Rom.15.21",
+      "verse:Rom.15.22",
+      "verse:Rom.15.23",
+      "verse:Rom.15.24",
+      "verse:Rom.15.25",
+      "verse:Rom.15.26",
+      "verse:Rom.15.27",
+      "verse:Rom.15.28",
+      "verse:Rom.15.29",
+      "verse:Rom.15.30",
+      "verse:Rom.15.31",
+      "verse:Rom.15.32",
+      "verse:Rom.15.33",
+      "verse:Rom.16.1",
+      "verse:Rom.16.2",
+      "verse:Rom.16.3",
+      "verse:Rom.16.4",
+      "verse:Rom.16.5",
+      "verse:Rom.16.6",
+      "verse:Rom.16.7",
+      "verse:Rom.16.8",
+      "verse:Rom.16.9",
+      "verse:Rom.16.10",
+      "verse:Rom.16.11",
+      "verse:Rom.16.12",
+      "verse:Rom.16.13",
+      "verse:Rom.16.14",
+      "verse:Rom.16.15",
+      "verse:Rom.16.16",
+      "verse:Rom.16.17",
+      "verse:Rom.16.18",
+      "verse:Rom.16.19",
+      "verse:Rom.16.20",
+      "verse:Rom.16.21",
+      "verse:Rom.16.22",
+      "verse:Rom.16.23",
+      "verse:Rom.16.25",
+      "verse:Rom.16.26",
+      "verse:Rom.16.27"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-adam-1-5-14",
+        "verse_key": "verse:Rom.5.14",
+        "attestation_key": "attestation:wb-p-adam-1-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-adam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Adam",
+          "occurrence_ordinal": 1,
+          "prefix": " death reigned from ",
+          "suffix": " until Moses, even o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-1",
+        "verse_key": "verse:Rom.4.1",
+        "attestation_key": "attestation:wb-p-abram-1-4-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "n shall we say that ",
+          "suffix": ", our forefather, ha"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-2",
+        "verse_key": "verse:Rom.4.2",
+        "attestation_key": "attestation:wb-p-abram-1-4-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "If ",
+          "suffix": " was indeed justifie"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-3",
+        "verse_key": "verse:Rom.4.3",
+        "attestation_key": "attestation:wb-p-abram-1-4-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "the Scripture say? “",
+          "suffix": " believed God, and i"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-9",
+        "verse_key": "verse:Rom.4.9",
+        "attestation_key": "attestation:wb-p-abram-1-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "ve been saying that ",
+          "suffix": "’s faith was credite"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-12",
+        "verse_key": "verse:Rom.4.12",
+        "attestation_key": "attestation:wb-p-abram-1-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "ith that our father ",
+          "suffix": " had before he was c"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-13",
+        "verse_key": "verse:Rom.4.13",
+        "attestation_key": "attestation:wb-p-abram-1-4-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "For the promise to ",
+          "suffix": " and his offspring t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-16",
+        "verse_key": "verse:Rom.4.16",
+        "attestation_key": "attestation:wb-p-abram-1-4-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "e guaranteed to all ",
+          "suffix": "’s offspring—not onl"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-9-7",
+        "verse_key": "verse:Rom.9.7",
+        "attestation_key": "attestation:wb-p-abram-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "or because they are ",
+          "suffix": "’s descendants are t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-11-1",
+        "verse_key": "verse:Rom.11.1",
+        "attestation_key": "attestation:wb-p-abram-1-11-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "lf, a descendant of ",
+          "suffix": ", from the tribe of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sarai-1-4-19",
+        "verse_key": "verse:Rom.4.19",
+        "attestation_key": "attestation:wb-p-sarai-1-4-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sarai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sarah",
+          "occurrence_ordinal": 1,
+          "prefix": "the lifelessness of ",
+          "suffix": "’s womb."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sarai-1-9-9",
+        "verse_key": "verse:Rom.9.9",
+        "attestation_key": "attestation:wb-p-sarai-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sarai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sarah",
+          "occurrence_ordinal": 1,
+          "prefix": " I will return, and ",
+          "suffix": " will have a son.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-9-7",
+        "verse_key": "verse:Rom.9.7",
+        "attestation_key": "attestation:wb-p-isaac-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": " contrary, “Through ",
+          "suffix": " your offspring will"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-9-10",
+        "verse_key": "verse:Rom.9.10",
+        "attestation_key": "attestation:wb-p-isaac-1-9-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": "one man, our father ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-esau-1-9-13",
+        "verse_key": "verse:Rom.9.13",
+        "attestation_key": "attestation:wb-p-esau-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-esau-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esau",
+          "occurrence_ordinal": 1,
+          "prefix": "“Jacob I loved, but ",
+          "suffix": " I hated.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-6",
+        "verse_key": "verse:Rom.9.6",
+        "attestation_key": "attestation:wb-p-jacob-1-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": " are descended from ",
+          "suffix": " are Israel."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-13",
+        "verse_key": "verse:Rom.9.13",
+        "attestation_key": "attestation:wb-p-jacob-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "So it is written: “",
+          "suffix": " I loved, but Esau I"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-27",
+        "verse_key": "verse:Rom.9.27",
+        "attestation_key": "attestation:wb-p-jacob-1-9-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ries out concerning ",
+          "suffix": ": “Though the number"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-benjamin-1-11-1",
+        "verse_key": "verse:Rom.11.1",
+        "attestation_key": "attestation:wb-p-benjamin-1-11-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-benjamin-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-5-14",
+        "verse_key": "verse:Rom.5.14",
+        "attestation_key": "attestation:wb-p-moses-1-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "ned from Adam until ",
+          "suffix": ", even over those wh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-9-15",
+        "verse_key": "verse:Rom.9.15",
+        "attestation_key": "attestation:wb-p-moses-1-9-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "For He says to ",
+          "suffix": ": “I will have mercy"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-10-5",
+        "verse_key": "verse:Rom.10.5",
+        "attestation_key": "attestation:wb-p-moses-1-10-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "that is by the law, ",
+          "suffix": " writes: “The man wh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-10-19",
+        "verse_key": "verse:Rom.10.19",
+        "attestation_key": "attestation:wb-p-moses-1-10-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": " understand? First, ",
+          "suffix": " says: “I will make "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pharaoh-4-9-17",
+        "verse_key": "verse:Rom.9.17",
+        "attestation_key": "attestation:wb-p-pharaoh-4-9-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pharaoh-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pharaoh",
+          "occurrence_ordinal": 1,
+          "prefix": "e Scripture says to ",
+          "suffix": ": “I raised you up f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jesse-1-15-12",
+        "verse_key": "verse:Rom.15.12",
+        "attestation_key": "attestation:wb-p-jesse-1-15-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jesse-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jesse",
+          "occurrence_ordinal": 1,
+          "prefix": " says: “The Root of ",
+          "suffix": " will appear, One wh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-1-3",
+        "verse_key": "verse:Rom.1.3",
+        "attestation_key": "attestation:wb-p-david-1-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "was a descendant of ",
+          "suffix": " according to the fl"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-4-6",
+        "verse_key": "verse:Rom.4.6",
+        "attestation_key": "attestation:wb-p-david-1-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " speaks likewise of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-11-9",
+        "verse_key": "verse:Rom.11.9",
+        "attestation_key": "attestation:wb-p-david-1-11-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " says: “May their ta"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-elijah-1-11-2",
+        "verse_key": "verse:Rom.11.2",
+        "attestation_key": "attestation:wb-p-elijah-1-11-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Elijah",
+          "occurrence_ordinal": 1,
+          "prefix": "cripture says about ",
+          "suffix": ", how he appealed to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaiah-1-9-27",
+        "verse_key": "verse:Rom.9.27",
+        "attestation_key": "attestation:wb-p-isaiah-1-9-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaiah",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " cries out concernin"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaiah-1-9-29",
+        "verse_key": "verse:Rom.9.29",
+        "attestation_key": "attestation:wb-p-isaiah-1-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaiah",
+          "occurrence_ordinal": 1,
+          "prefix": "It is just as ",
+          "suffix": " foretold: “Unless t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaiah-1-10-20",
+        "verse_key": "verse:Rom.10.20",
+        "attestation_key": "attestation:wb-p-isaiah-1-10-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaiah",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " boldly says: “I was"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaiah-1-15-12",
+        "verse_key": "verse:Rom.15.12",
+        "attestation_key": "attestation:wb-p-isaiah-1-15-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaiah",
+          "occurrence_ordinal": 1,
+          "prefix": "And once more, ",
+          "suffix": " says: “The Root of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-16-20",
+        "verse_key": "verse:Rom.16.20",
+        "attestation_key": "attestation:wb-p-satan-1-16-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "ace will soon crush ",
+          "suffix": " under your feet. Th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hosea-1-9-25",
+        "verse_key": "verse:Rom.9.25",
+        "attestation_key": "attestation:wb-p-hosea-1-9-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hosea-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hosea",
+          "occurrence_ordinal": 1,
+          "prefix": "As He says in ",
+          "suffix": ": “I will call them "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-rufus-1-16-13",
+        "verse_key": "verse:Rom.16.13",
+        "attestation_key": "attestation:wb-p-rufus-1-16-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-rufus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rufus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", chosen in the Lord"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-saul-2-1-1",
+        "verse_key": "verse:Rom.1.1",
+        "attestation_key": "attestation:wb-p-saul-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-saul-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Paul",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", a servant of Chris"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-timothy-1-16-21",
+        "verse_key": "verse:Rom.16.21",
+        "attestation_key": "attestation:wb-p-timothy-1-16-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-timothy-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Timothy",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", my fellow worker, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jason-1-16-21",
+        "verse_key": "verse:Rom.16.21",
+        "attestation_key": "attestation:wb-p-jason-1-16-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jason-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jason",
+          "occurrence_ordinal": 1,
+          "prefix": "ings, as do Lucius, ",
+          "suffix": ", and Sosipater, my "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aquila-1-16-3",
+        "verse_key": "verse:Rom.16.3",
+        "attestation_key": "attestation:wb-p-aquila-1-16-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aquila-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aquila",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet Prisca and ",
+          "suffix": ", my fellow workers "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-priscilla-1-16-3",
+        "verse_key": "verse:Rom.16.3",
+        "attestation_key": "attestation:wb-p-priscilla-1-16-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-priscilla-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Prisca",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": " and Aquila, my fell"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-gaius-1-16-23",
+        "verse_key": "verse:Rom.16.23",
+        "attestation_key": "attestation:wb-p-gaius-1-16-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-gaius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gaius",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", who has hosted me "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-phoebe-1-16-1",
+        "verse_key": "verse:Rom.16.1",
+        "attestation_key": "attestation:wb-p-phoebe-1-16-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-phoebe-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Phoebe",
+          "occurrence_ordinal": 1,
+          "prefix": "d to you our sister ",
+          "suffix": ", a servant of the c"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mary-6-16-6",
+        "verse_key": "verse:Rom.16.6",
+        "attestation_key": "attestation:wb-p-mary-6-16-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-6"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mary",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", who has worked ver"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-andronicus-1-16-7",
+        "verse_key": "verse:Rom.16.7",
+        "attestation_key": "attestation:wb-p-andronicus-1-16-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-andronicus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Andronicus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": " and Junia, my fello"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ampliatus-1-16-8",
+        "verse_key": "verse:Rom.16.8",
+        "attestation_key": "attestation:wb-p-ampliatus-1-16-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ampliatus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ampliatus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", my beloved in the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-urbanus-1-16-9",
+        "verse_key": "verse:Rom.16.9",
+        "attestation_key": "attestation:wb-p-urbanus-1-16-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-urbanus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Urbanus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", our fellow worker "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-stachys-1-16-9",
+        "verse_key": "verse:Rom.16.9",
+        "attestation_key": "attestation:wb-p-stachys-1-16-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-stachys-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Stachys",
+          "occurrence_ordinal": 1,
+          "prefix": "ist, and my beloved ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-apelles-1-16-10",
+        "verse_key": "verse:Rom.16.10",
+        "attestation_key": "attestation:wb-p-apelles-1-16-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-apelles-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Apelles",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", who is approved in"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aristobulus-1-16-10",
+        "verse_key": "verse:Rom.16.10",
+        "attestation_key": "attestation:wb-p-aristobulus-1-16-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aristobulus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aristobulus",
+          "occurrence_ordinal": 1,
+          "prefix": "to the household of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-narcissus-1-16-11",
+        "verse_key": "verse:Rom.16.11",
+        "attestation_key": "attestation:wb-p-narcissus-1-16-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-narcissus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Narcissus",
+          "occurrence_ordinal": 1,
+          "prefix": "om the household of ",
+          "suffix": " who are in the Lord"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-tryphosa-1-16-12",
+        "verse_key": "verse:Rom.16.12",
+        "attestation_key": "attestation:wb-p-tryphosa-1-16-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-tryphosa-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tryphosa",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet Tryphena and ",
+          "suffix": ", women who have wor"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-persis-1-16-12",
+        "verse_key": "verse:Rom.16.12",
+        "attestation_key": "attestation:wb-p-persis-1-16-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-persis-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persis",
+          "occurrence_ordinal": 1,
+          "prefix": "d. Greet my beloved ",
+          "suffix": ", who has worked ver"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-phlegon-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-phlegon-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-phlegon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Phlegon",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet Asyncritus, ",
+          "suffix": ", Hermes, Patrobas, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hermes-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-hermes-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hermes-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hermes",
+          "occurrence_ordinal": 1,
+          "prefix": "syncritus, Phlegon, ",
+          "suffix": ", Patrobas, Hermas, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-patrobas-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-patrobas-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-patrobas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Patrobas",
+          "occurrence_ordinal": 1,
+          "prefix": "s, Phlegon, Hermes, ",
+          "suffix": ", Hermas, and the br"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hermas-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-hermas-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hermas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hermas",
+          "occurrence_ordinal": 1,
+          "prefix": ", Hermes, Patrobas, ",
+          "suffix": ", and the brothers w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-philologus-1-16-15",
+        "verse_key": "verse:Rom.16.15",
+        "attestation_key": "attestation:wb-p-philologus-1-16-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-philologus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Philologus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": " and Julia, Nereus a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-julia-1-16-15",
+        "verse_key": "verse:Rom.16.15",
+        "attestation_key": "attestation:wb-p-julia-1-16-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-julia-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Julia",
+          "occurrence_ordinal": 1,
+          "prefix": "reet Philologus and ",
+          "suffix": ", Nereus and his sis"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-nereus-1-16-15",
+        "verse_key": "verse:Rom.16.15",
+        "attestation_key": "attestation:wb-p-nereus-1-16-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nereus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Nereus",
+          "occurrence_ordinal": 1,
+          "prefix": "ilologus and Julia, ",
+          "suffix": " and his sister, and"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-olympas-1-16-15",
+        "verse_key": "verse:Rom.16.15",
+        "attestation_key": "attestation:wb-p-olympas-1-16-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-olympas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Olympas",
+          "occurrence_ordinal": 1,
+          "prefix": "and his sister, and ",
+          "suffix": " and all the saints "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-lucius-2-16-21",
+        "verse_key": "verse:Rom.16.21",
+        "attestation_key": "attestation:wb-p-lucius-2-16-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-lucius-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lucius",
+          "occurrence_ordinal": 1,
+          "prefix": "ou greetings, as do ",
+          "suffix": ", Jason, and Sosipat"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sosipater-1-16-21",
+        "verse_key": "verse:Rom.16.21",
+        "attestation_key": "attestation:wb-p-sosipater-1-16-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sosipater-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sosipater",
+          "occurrence_ordinal": 1,
+          "prefix": " Lucius, Jason, and ",
+          "suffix": ", my fellow countrym"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-tertius-1-16-22",
+        "verse_key": "verse:Rom.16.22",
+        "attestation_key": "attestation:wb-p-tertius-1-16-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-tertius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tertius",
+          "occurrence_ordinal": 1,
+          "prefix": "I, ",
+          "suffix": ", who wrote down thi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-erastus-2-16-23",
+        "verse_key": "verse:Rom.16.23",
+        "attestation_key": "attestation:wb-p-erastus-2-16-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-erastus-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Erastus",
+          "occurrence_ordinal": 1,
+          "prefix": "ends you greetings. ",
+          "suffix": ", the city treasurer"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-quartus-1-16-23",
+        "verse_key": "verse:Rom.16.23",
+        "attestation_key": "attestation:wb-p-quartus-1-16-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-quartus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Quartus",
+          "occurrence_ordinal": 1,
+          "prefix": "as does our brother ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-achaia-aef4242-15-26",
+        "verse_key": "verse:Rom.15.26",
+        "attestation_key": "attestation:wb-pl-achaia-aef4242-15-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-achaia-aef4242"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Achaia",
+          "occurrence_ordinal": 1,
+          "prefix": "For Macedonia and ",
+          "suffix": " were pleased to mak"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-asia-a197f19-16-5",
+        "verse_key": "verse:Rom.16.5",
+        "attestation_key": "attestation:wb-pl-asia-a197f19-16-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-asia-a197f19"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Asia",
+          "occurrence_ordinal": 1,
+          "prefix": " in the province of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-gomorrah-aa572e2-9-29",
+        "verse_key": "verse:Rom.9.29",
+        "attestation_key": "attestation:wb-pl-gomorrah-aa572e2-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gomorrah-aa572e2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gomorrah",
+          "occurrence_ordinal": 1,
+          "prefix": "ould have resembled ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-illyricum-ac405c0-15-19",
+        "verse_key": "verse:Rom.15.19",
+        "attestation_key": "attestation:wb-pl-illyricum-ac405c0-15-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-illyricum-ac405c0"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Illyricum",
+          "occurrence_ordinal": 1,
+          "prefix": "l the way around to ",
+          "suffix": ", I have fully procl"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-15-19",
+        "verse_key": "verse:Rom.15.19",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-15-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "rit of God. So from ",
+          "suffix": " all the way around "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-15-25",
+        "verse_key": "verse:Rom.15.25",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-15-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": ", I am on my way to ",
+          "suffix": " to serve the saints"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-15-26",
+        "verse_key": "verse:Rom.15.26",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-15-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "among the saints in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-15-31",
+        "verse_key": "verse:Rom.15.31",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-15-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": " that my service in ",
+          "suffix": " may be acceptable t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-macedonia-a69e1b8-15-26",
+        "verse_key": "verse:Rom.15.26",
+        "attestation_key": "attestation:wb-pl-macedonia-a69e1b8-15-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-macedonia-a69e1b8"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Macedonia",
+          "occurrence_ordinal": 1,
+          "prefix": "For ",
+          "suffix": " and Achaia were ple"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-rome-afc8e7a-1-7",
+        "verse_key": "verse:Rom.1.7",
+        "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-rome-afc8e7a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rome",
+          "occurrence_ordinal": 1,
+          "prefix": "To all in ",
+          "suffix": " who are loved by Go"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-rome-afc8e7a-1-15",
+        "verse_key": "verse:Rom.1.15",
+        "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-rome-afc8e7a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rome",
+          "occurrence_ordinal": 1,
+          "prefix": "o to you who are in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sodom-a0aa664-9-29",
+        "verse_key": "verse:Rom.9.29",
+        "attestation_key": "attestation:wb-pl-sodom-a0aa664-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sodom-a0aa664"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sodom",
+          "occurrence_ordinal": 1,
+          "prefix": "ld have become like ",
+          "suffix": ", we would have rese"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-spain-a3f0f69-15-24",
+        "verse_key": "verse:Rom.15.24",
+        "attestation_key": "attestation:wb-pl-spain-a3f0f69-15-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-spain-a3f0f69"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Spain",
+          "occurrence_ordinal": 1,
+          "prefix": "ee you on my way to ",
+          "suffix": ". And after I have e"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-spain-a3f0f69-15-28",
+        "verse_key": "verse:Rom.15.28",
+        "attestation_key": "attestation:wb-pl-spain-a3f0f69-15-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-spain-a3f0f69"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Spain",
+          "occurrence_ordinal": 1,
+          "prefix": ", I will set off to ",
+          "suffix": " by way of you."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zion-af20c46-9-33",
+        "verse_key": "verse:Rom.9.33",
+        "attestation_key": "attestation:wb-pl-zion-af20c46-9-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zion-af20c46"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "ten: “See, I lay in ",
+          "suffix": " a stone of stumblin"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zion-af20c46-11-26",
+        "verse_key": "verse:Rom.11.26",
+        "attestation_key": "attestation:wb-pl-zion-af20c46-11-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zion-af20c46"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "erer will come from ",
+          "suffix": "; He will remove god"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Rom.1.10",
+            "verse:Rom.1.11",
+            "verse:Rom.1.12",
+            "verse:Rom.1.13",
+            "verse:Rom.1.14",
+            "verse:Rom.1.16",
+            "verse:Rom.1.17",
+            "verse:Rom.1.18",
+            "verse:Rom.1.19",
+            "verse:Rom.1.2",
+            "verse:Rom.1.20",
+            "verse:Rom.1.21",
+            "verse:Rom.1.22",
+            "verse:Rom.1.23",
+            "verse:Rom.1.24",
+            "verse:Rom.1.25",
+            "verse:Rom.1.26",
+            "verse:Rom.1.27",
+            "verse:Rom.1.28",
+            "verse:Rom.1.29",
+            "verse:Rom.1.30",
+            "verse:Rom.1.31",
+            "verse:Rom.1.32",
+            "verse:Rom.1.4",
+            "verse:Rom.1.5",
+            "verse:Rom.1.6",
+            "verse:Rom.1.8",
+            "verse:Rom.1.9",
+            "verse:Rom.10.1",
+            "verse:Rom.10.10",
+            "verse:Rom.10.11",
+            "verse:Rom.10.12",
+            "verse:Rom.10.13",
+            "verse:Rom.10.14",
+            "verse:Rom.10.15",
+            "verse:Rom.10.16",
+            "verse:Rom.10.17",
+            "verse:Rom.10.18",
+            "verse:Rom.10.2",
+            "verse:Rom.10.21",
+            "verse:Rom.10.3",
+            "verse:Rom.10.4",
+            "verse:Rom.10.6",
+            "verse:Rom.10.7",
+            "verse:Rom.10.8",
+            "verse:Rom.10.9",
+            "verse:Rom.11.10",
+            "verse:Rom.11.11",
+            "verse:Rom.11.12",
+            "verse:Rom.11.13",
+            "verse:Rom.11.14",
+            "verse:Rom.11.15",
+            "verse:Rom.11.16",
+            "verse:Rom.11.17",
+            "verse:Rom.11.18",
+            "verse:Rom.11.19",
+            "verse:Rom.11.20",
+            "verse:Rom.11.21",
+            "verse:Rom.11.22",
+            "verse:Rom.11.23",
+            "verse:Rom.11.24",
+            "verse:Rom.11.25",
+            "verse:Rom.11.27",
+            "verse:Rom.11.28",
+            "verse:Rom.11.29",
+            "verse:Rom.11.3",
+            "verse:Rom.11.30",
+            "verse:Rom.11.31",
+            "verse:Rom.11.32",
+            "verse:Rom.11.33",
+            "verse:Rom.11.34",
+            "verse:Rom.11.35",
+            "verse:Rom.11.36",
+            "verse:Rom.11.4",
+            "verse:Rom.11.5",
+            "verse:Rom.11.6",
+            "verse:Rom.11.7",
+            "verse:Rom.11.8",
+            "verse:Rom.12.1",
+            "verse:Rom.12.10",
+            "verse:Rom.12.11",
+            "verse:Rom.12.12",
+            "verse:Rom.12.13",
+            "verse:Rom.12.14",
+            "verse:Rom.12.15",
+            "verse:Rom.12.16",
+            "verse:Rom.12.17",
+            "verse:Rom.12.18",
+            "verse:Rom.12.19",
+            "verse:Rom.12.2",
+            "verse:Rom.12.20",
+            "verse:Rom.12.21",
+            "verse:Rom.12.3",
+            "verse:Rom.12.4",
+            "verse:Rom.12.5",
+            "verse:Rom.12.6",
+            "verse:Rom.12.7",
+            "verse:Rom.12.8",
+            "verse:Rom.12.9",
+            "verse:Rom.13.1",
+            "verse:Rom.13.10",
+            "verse:Rom.13.11",
+            "verse:Rom.13.12",
+            "verse:Rom.13.13",
+            "verse:Rom.13.14",
+            "verse:Rom.13.2",
+            "verse:Rom.13.3",
+            "verse:Rom.13.4",
+            "verse:Rom.13.5",
+            "verse:Rom.13.6",
+            "verse:Rom.13.7",
+            "verse:Rom.13.8",
+            "verse:Rom.13.9",
+            "verse:Rom.14.1",
+            "verse:Rom.14.10",
+            "verse:Rom.14.11",
+            "verse:Rom.14.12",
+            "verse:Rom.14.13",
+            "verse:Rom.14.14",
+            "verse:Rom.14.15",
+            "verse:Rom.14.16",
+            "verse:Rom.14.17",
+            "verse:Rom.14.18",
+            "verse:Rom.14.19",
+            "verse:Rom.14.2",
+            "verse:Rom.14.20",
+            "verse:Rom.14.21",
+            "verse:Rom.14.22",
+            "verse:Rom.14.23",
+            "verse:Rom.14.3",
+            "verse:Rom.14.4",
+            "verse:Rom.14.5",
+            "verse:Rom.14.6",
+            "verse:Rom.14.7",
+            "verse:Rom.14.8",
+            "verse:Rom.14.9",
+            "verse:Rom.15.1",
+            "verse:Rom.15.10",
+            "verse:Rom.15.11",
+            "verse:Rom.15.13",
+            "verse:Rom.15.14",
+            "verse:Rom.15.15",
+            "verse:Rom.15.16",
+            "verse:Rom.15.17",
+            "verse:Rom.15.18",
+            "verse:Rom.15.2",
+            "verse:Rom.15.20",
+            "verse:Rom.15.21",
+            "verse:Rom.15.22",
+            "verse:Rom.15.23",
+            "verse:Rom.15.27",
+            "verse:Rom.15.29",
+            "verse:Rom.15.3",
+            "verse:Rom.15.30",
+            "verse:Rom.15.32",
+            "verse:Rom.15.33",
+            "verse:Rom.15.4",
+            "verse:Rom.15.5",
+            "verse:Rom.15.6",
+            "verse:Rom.15.7",
+            "verse:Rom.15.8",
+            "verse:Rom.15.9",
+            "verse:Rom.16.16",
+            "verse:Rom.16.17",
+            "verse:Rom.16.18",
+            "verse:Rom.16.19",
+            "verse:Rom.16.2",
+            "verse:Rom.16.25",
+            "verse:Rom.16.26",
+            "verse:Rom.16.27",
+            "verse:Rom.16.4",
+            "verse:Rom.2.1",
+            "verse:Rom.2.10",
+            "verse:Rom.2.11",
+            "verse:Rom.2.12",
+            "verse:Rom.2.13",
+            "verse:Rom.2.14",
+            "verse:Rom.2.15",
+            "verse:Rom.2.16",
+            "verse:Rom.2.17",
+            "verse:Rom.2.18",
+            "verse:Rom.2.19",
+            "verse:Rom.2.2",
+            "verse:Rom.2.20",
+            "verse:Rom.2.21",
+            "verse:Rom.2.22",
+            "verse:Rom.2.23",
+            "verse:Rom.2.24",
+            "verse:Rom.2.25",
+            "verse:Rom.2.26",
+            "verse:Rom.2.27",
+            "verse:Rom.2.28",
+            "verse:Rom.2.29",
+            "verse:Rom.2.3",
+            "verse:Rom.2.4",
+            "verse:Rom.2.5",
+            "verse:Rom.2.6",
+            "verse:Rom.2.7",
+            "verse:Rom.2.8",
+            "verse:Rom.2.9",
+            "verse:Rom.3.1",
+            "verse:Rom.3.10",
+            "verse:Rom.3.11",
+            "verse:Rom.3.12",
+            "verse:Rom.3.13",
+            "verse:Rom.3.14",
+            "verse:Rom.3.15",
+            "verse:Rom.3.16",
+            "verse:Rom.3.17",
+            "verse:Rom.3.18",
+            "verse:Rom.3.19",
+            "verse:Rom.3.2",
+            "verse:Rom.3.20",
+            "verse:Rom.3.21",
+            "verse:Rom.3.22",
+            "verse:Rom.3.23",
+            "verse:Rom.3.24",
+            "verse:Rom.3.25",
+            "verse:Rom.3.26",
+            "verse:Rom.3.27",
+            "verse:Rom.3.28",
+            "verse:Rom.3.29",
+            "verse:Rom.3.3",
+            "verse:Rom.3.30",
+            "verse:Rom.3.31",
+            "verse:Rom.3.4",
+            "verse:Rom.3.5",
+            "verse:Rom.3.6",
+            "verse:Rom.3.7",
+            "verse:Rom.3.8",
+            "verse:Rom.3.9",
+            "verse:Rom.4.10",
+            "verse:Rom.4.11",
+            "verse:Rom.4.14",
+            "verse:Rom.4.15",
+            "verse:Rom.4.17",
+            "verse:Rom.4.18",
+            "verse:Rom.4.20",
+            "verse:Rom.4.21",
+            "verse:Rom.4.22",
+            "verse:Rom.4.23",
+            "verse:Rom.4.24",
+            "verse:Rom.4.25",
+            "verse:Rom.4.4",
+            "verse:Rom.4.5",
+            "verse:Rom.4.7",
+            "verse:Rom.4.8",
+            "verse:Rom.5.1",
+            "verse:Rom.5.10",
+            "verse:Rom.5.11",
+            "verse:Rom.5.12",
+            "verse:Rom.5.13",
+            "verse:Rom.5.15",
+            "verse:Rom.5.16",
+            "verse:Rom.5.17",
+            "verse:Rom.5.18",
+            "verse:Rom.5.19",
+            "verse:Rom.5.2",
+            "verse:Rom.5.20",
+            "verse:Rom.5.21",
+            "verse:Rom.5.3",
+            "verse:Rom.5.4",
+            "verse:Rom.5.5",
+            "verse:Rom.5.6",
+            "verse:Rom.5.7",
+            "verse:Rom.5.8",
+            "verse:Rom.5.9",
+            "verse:Rom.6.1",
+            "verse:Rom.6.10",
+            "verse:Rom.6.11",
+            "verse:Rom.6.12",
+            "verse:Rom.6.13",
+            "verse:Rom.6.14",
+            "verse:Rom.6.15",
+            "verse:Rom.6.16",
+            "verse:Rom.6.17",
+            "verse:Rom.6.18",
+            "verse:Rom.6.19",
+            "verse:Rom.6.2",
+            "verse:Rom.6.20",
+            "verse:Rom.6.21",
+            "verse:Rom.6.22",
+            "verse:Rom.6.23",
+            "verse:Rom.6.3",
+            "verse:Rom.6.4",
+            "verse:Rom.6.5",
+            "verse:Rom.6.6",
+            "verse:Rom.6.7",
+            "verse:Rom.6.8",
+            "verse:Rom.6.9",
+            "verse:Rom.7.1",
+            "verse:Rom.7.10",
+            "verse:Rom.7.11",
+            "verse:Rom.7.12",
+            "verse:Rom.7.13",
+            "verse:Rom.7.14",
+            "verse:Rom.7.15",
+            "verse:Rom.7.16",
+            "verse:Rom.7.17",
+            "verse:Rom.7.18",
+            "verse:Rom.7.19",
+            "verse:Rom.7.2",
+            "verse:Rom.7.20",
+            "verse:Rom.7.21",
+            "verse:Rom.7.22",
+            "verse:Rom.7.23",
+            "verse:Rom.7.24",
+            "verse:Rom.7.25",
+            "verse:Rom.7.3",
+            "verse:Rom.7.4",
+            "verse:Rom.7.5",
+            "verse:Rom.7.6",
+            "verse:Rom.7.7",
+            "verse:Rom.7.8",
+            "verse:Rom.7.9",
+            "verse:Rom.8.1",
+            "verse:Rom.8.10",
+            "verse:Rom.8.11",
+            "verse:Rom.8.12",
+            "verse:Rom.8.13",
+            "verse:Rom.8.14",
+            "verse:Rom.8.15",
+            "verse:Rom.8.16",
+            "verse:Rom.8.17",
+            "verse:Rom.8.18",
+            "verse:Rom.8.19",
+            "verse:Rom.8.2",
+            "verse:Rom.8.20",
+            "verse:Rom.8.21",
+            "verse:Rom.8.22",
+            "verse:Rom.8.23",
+            "verse:Rom.8.24",
+            "verse:Rom.8.25",
+            "verse:Rom.8.26",
+            "verse:Rom.8.27",
+            "verse:Rom.8.28",
+            "verse:Rom.8.29",
+            "verse:Rom.8.3",
+            "verse:Rom.8.30",
+            "verse:Rom.8.31",
+            "verse:Rom.8.32",
+            "verse:Rom.8.33",
+            "verse:Rom.8.34",
+            "verse:Rom.8.35",
+            "verse:Rom.8.36",
+            "verse:Rom.8.37",
+            "verse:Rom.8.38",
+            "verse:Rom.8.39",
+            "verse:Rom.8.4",
+            "verse:Rom.8.5",
+            "verse:Rom.8.6",
+            "verse:Rom.8.7",
+            "verse:Rom.8.8",
+            "verse:Rom.8.9",
+            "verse:Rom.9.1",
+            "verse:Rom.9.11",
+            "verse:Rom.9.12",
+            "verse:Rom.9.14",
+            "verse:Rom.9.16",
+            "verse:Rom.9.18",
+            "verse:Rom.9.19",
+            "verse:Rom.9.2",
+            "verse:Rom.9.20",
+            "verse:Rom.9.21",
+            "verse:Rom.9.22",
+            "verse:Rom.9.23",
+            "verse:Rom.9.24",
+            "verse:Rom.9.26",
+            "verse:Rom.9.28",
+            "verse:Rom.9.3",
+            "verse:Rom.9.30",
+            "verse:Rom.9.31",
+            "verse:Rom.9.32",
+            "verse:Rom.9.4",
+            "verse:Rom.9.5",
+            "verse:Rom.9.8"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-saul-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.1.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-1-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.1.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-rome-afc8e7a-1-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.1.15"
+          ],
+          "record_keys": [
+            "mention:wb:pl-rome-afc8e7a-1-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-4-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-4-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.4.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-sarai-1-4-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.5.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-adam-1-5-14",
+            "mention:wb:p-moses-1-5-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-9-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-9-7",
+            "mention:wb:p-isaac-1-9-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-sarai-1-9-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaac-1-9-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-esau-1-9-13",
+            "mention:wb:p-jacob-1-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-9-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-pharaoh-4-9-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.25"
+          ],
+          "record_keys": [
+            "mention:wb:p-hosea-1-9-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.27"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaiah-1-9-27",
+            "mention:wb:p-jacob-1-9-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.29"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaiah-1-9-29",
+            "mention:wb:pl-gomorrah-aa572e2-9-29",
+            "mention:wb:pl-sodom-a0aa664-9-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.9.33"
+          ],
+          "record_keys": [
+            "mention:wb:pl-zion-af20c46-9-33"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.10.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-10-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.10.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-10-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.10.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaiah-1-10-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.11.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-11-1",
+            "mention:wb:p-benjamin-1-11-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.11.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-elijah-1-11-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.11.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-11-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.11.26"
+          ],
+          "record_keys": [
+            "mention:wb:pl-zion-af20c46-11-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaiah-1-15-12",
+            "mention:wb:p-jesse-1-15-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.19"
+          ],
+          "record_keys": [
+            "mention:wb:pl-illyricum-ac405c0-15-19",
+            "mention:wb:pl-jerusalem-a15257a-15-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.24"
+          ],
+          "record_keys": [
+            "mention:wb:pl-spain-a3f0f69-15-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.25"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-15-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.26"
+          ],
+          "record_keys": [
+            "mention:wb:pl-achaia-aef4242-15-26",
+            "mention:wb:pl-jerusalem-a15257a-15-26",
+            "mention:wb:pl-macedonia-a69e1b8-15-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.28"
+          ],
+          "record_keys": [
+            "mention:wb:pl-spain-a3f0f69-15-28"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.15.31"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-15-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-phoebe-1-16-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-aquila-1-16-3",
+            "mention:wb:p-priscilla-1-16-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-asia-a197f19-16-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-mary-6-16-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-andronicus-1-16-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-ampliatus-1-16-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-stachys-1-16-9",
+            "mention:wb:p-urbanus-1-16-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-apelles-1-16-10",
+            "mention:wb:p-aristobulus-1-16-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-narcissus-1-16-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-persis-1-16-12",
+            "mention:wb:p-tryphosa-1-16-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-rufus-1-16-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-hermas-1-16-14",
+            "mention:wb:p-hermes-1-16-14",
+            "mention:wb:p-patrobas-1-16-14",
+            "mention:wb:p-phlegon-1-16-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-julia-1-16-15",
+            "mention:wb:p-nereus-1-16-15",
+            "mention:wb:p-olympas-1-16-15",
+            "mention:wb:p-philologus-1-16-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-16-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-jason-1-16-21",
+            "mention:wb:p-lucius-2-16-21",
+            "mention:wb:p-sosipater-1-16-21",
+            "mention:wb:p-timothy-1-16-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-tertius-1-16-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rom.16.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-erastus-2-16-23",
+            "mention:wb:p-gaius-1-16-23",
+            "mention:wb:p-quartus-1-16-23"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

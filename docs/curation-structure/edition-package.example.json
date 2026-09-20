@@ -1,0 +1,73 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:fixture:edition-synthetic-en:neh-2-1-2",
+  "package_revision": 1,
+  "submission_id": "submission:fixture-edition-001:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:fixture-edition-001",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": ["scope:fixture-neh-2-1-2"],
+    "reference_keys": ["verse:Neh.2.1", "verse:Neh.2.2"],
+    "language_tag": "en",
+    "translation_edition_key": "edition:synthetic-en@fixture-1"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "approved:fixture:canonical:neh-2-1-2",
+      "revision": 1,
+      "digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:fixture-edition:neh-2-1-person",
+        "verse_key": "verse:Neh.2.1",
+        "attestation_key": "attestation:fixture-neh-2-1-person",
+        "target": {
+          "type": "entity",
+          "key": "entity:fixture-person"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Synthetic Person",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ""
+        },
+        "claim_keys": ["claim:fixture-person-has-role"],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "reference_keys": ["verse:Neh.2.1"],
+          "record_keys": ["mention:fixture-edition:neh-2-1-person"],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_zero",
+          "reference_keys": ["verse:Neh.2.2"],
+          "record_keys": [],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": []
+}

@@ -1,0 +1,2106 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-hos-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-hos-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-hos-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-hos:refsys:eng-v22:hos.1.1-hos.14.9",
+      "scope:wb-hos-1:refsys:eng-v22:hos.1.1-hos.1.11",
+      "scope:wb-hos-2:refsys:eng-v22:hos.2.1-hos.2.23",
+      "scope:wb-hos-3:refsys:eng-v22:hos.3.1-hos.3.5",
+      "scope:wb-hos-4:refsys:eng-v22:hos.4.1-hos.4.19",
+      "scope:wb-hos-5:refsys:eng-v22:hos.5.1-hos.5.15",
+      "scope:wb-hos-6:refsys:eng-v22:hos.6.1-hos.6.11",
+      "scope:wb-hos-7:refsys:eng-v22:hos.7.1-hos.7.16",
+      "scope:wb-hos-8:refsys:eng-v22:hos.8.1-hos.8.14",
+      "scope:wb-hos-9:refsys:eng-v22:hos.9.1-hos.9.17",
+      "scope:wb-hos-10:refsys:eng-v22:hos.10.1-hos.10.15",
+      "scope:wb-hos-11:refsys:eng-v22:hos.11.1-hos.11.12",
+      "scope:wb-hos-12:refsys:eng-v22:hos.12.1-hos.12.14",
+      "scope:wb-hos-13:refsys:eng-v22:hos.13.1-hos.13.16",
+      "scope:wb-hos-14:refsys:eng-v22:hos.14.1-hos.14.9",
+      "scope:wb-hos-1-p1:refsys:eng-v22:hos.1.1-hos.1.11",
+      "scope:wb-hos-2-p1:refsys:eng-v22:hos.2.1-hos.2.13",
+      "scope:wb-hos-2-p2:refsys:eng-v22:hos.2.14-hos.2.23",
+      "scope:wb-hos-3-p1:refsys:eng-v22:hos.3.1-hos.3.5",
+      "scope:wb-hos-4-p1:refsys:eng-v22:hos.4.1-hos.4.19",
+      "scope:wb-hos-5-p1:refsys:eng-v22:hos.5.1-hos.5.15",
+      "scope:wb-hos-6-p1:refsys:eng-v22:hos.6.1-hos.6.11",
+      "scope:wb-hos-7-p1:refsys:eng-v22:hos.7.1-hos.7.16",
+      "scope:wb-hos-8-p1:refsys:eng-v22:hos.8.1-hos.8.14",
+      "scope:wb-hos-9-p1:refsys:eng-v22:hos.9.1-hos.9.17",
+      "scope:wb-hos-10-p1:refsys:eng-v22:hos.10.1-hos.10.15",
+      "scope:wb-hos-11-p1:refsys:eng-v22:hos.11.1-hos.11.7",
+      "scope:wb-hos-11-p2:refsys:eng-v22:hos.11.8-hos.11.12",
+      "scope:wb-hos-12-p1:refsys:eng-v22:hos.12.1-hos.12.14",
+      "scope:wb-hos-13-p1:refsys:eng-v22:hos.13.1-hos.13.8",
+      "scope:wb-hos-13-p2:refsys:eng-v22:hos.13.9-hos.13.14",
+      "scope:wb-hos-13-p3:refsys:eng-v22:hos.13.15-hos.13.16",
+      "scope:wb-hos-14-p1:refsys:eng-v22:hos.14.1-hos.14.3",
+      "scope:wb-hos-14-p2:refsys:eng-v22:hos.14.4-hos.14.9"
+    ],
+    "reference_keys": [
+      "verse:Hos.1.1",
+      "verse:Hos.1.2",
+      "verse:Hos.1.3",
+      "verse:Hos.1.4",
+      "verse:Hos.1.5",
+      "verse:Hos.1.6",
+      "verse:Hos.1.7",
+      "verse:Hos.1.8",
+      "verse:Hos.1.9",
+      "verse:Hos.1.10",
+      "verse:Hos.1.11",
+      "verse:Hos.2.1",
+      "verse:Hos.2.2",
+      "verse:Hos.2.3",
+      "verse:Hos.2.4",
+      "verse:Hos.2.5",
+      "verse:Hos.2.6",
+      "verse:Hos.2.7",
+      "verse:Hos.2.8",
+      "verse:Hos.2.9",
+      "verse:Hos.2.10",
+      "verse:Hos.2.11",
+      "verse:Hos.2.12",
+      "verse:Hos.2.13",
+      "verse:Hos.2.14",
+      "verse:Hos.2.15",
+      "verse:Hos.2.16",
+      "verse:Hos.2.17",
+      "verse:Hos.2.18",
+      "verse:Hos.2.19",
+      "verse:Hos.2.20",
+      "verse:Hos.2.21",
+      "verse:Hos.2.22",
+      "verse:Hos.2.23",
+      "verse:Hos.3.1",
+      "verse:Hos.3.2",
+      "verse:Hos.3.3",
+      "verse:Hos.3.4",
+      "verse:Hos.3.5",
+      "verse:Hos.4.1",
+      "verse:Hos.4.2",
+      "verse:Hos.4.3",
+      "verse:Hos.4.4",
+      "verse:Hos.4.5",
+      "verse:Hos.4.6",
+      "verse:Hos.4.7",
+      "verse:Hos.4.8",
+      "verse:Hos.4.9",
+      "verse:Hos.4.10",
+      "verse:Hos.4.11",
+      "verse:Hos.4.12",
+      "verse:Hos.4.13",
+      "verse:Hos.4.14",
+      "verse:Hos.4.15",
+      "verse:Hos.4.16",
+      "verse:Hos.4.17",
+      "verse:Hos.4.18",
+      "verse:Hos.4.19",
+      "verse:Hos.5.1",
+      "verse:Hos.5.2",
+      "verse:Hos.5.3",
+      "verse:Hos.5.4",
+      "verse:Hos.5.5",
+      "verse:Hos.5.6",
+      "verse:Hos.5.7",
+      "verse:Hos.5.8",
+      "verse:Hos.5.9",
+      "verse:Hos.5.10",
+      "verse:Hos.5.11",
+      "verse:Hos.5.12",
+      "verse:Hos.5.13",
+      "verse:Hos.5.14",
+      "verse:Hos.5.15",
+      "verse:Hos.6.1",
+      "verse:Hos.6.2",
+      "verse:Hos.6.3",
+      "verse:Hos.6.4",
+      "verse:Hos.6.5",
+      "verse:Hos.6.6",
+      "verse:Hos.6.7",
+      "verse:Hos.6.8",
+      "verse:Hos.6.9",
+      "verse:Hos.6.10",
+      "verse:Hos.6.11",
+      "verse:Hos.7.1",
+      "verse:Hos.7.2",
+      "verse:Hos.7.3",
+      "verse:Hos.7.4",
+      "verse:Hos.7.5",
+      "verse:Hos.7.6",
+      "verse:Hos.7.7",
+      "verse:Hos.7.8",
+      "verse:Hos.7.9",
+      "verse:Hos.7.10",
+      "verse:Hos.7.11",
+      "verse:Hos.7.12",
+      "verse:Hos.7.13",
+      "verse:Hos.7.14",
+      "verse:Hos.7.15",
+      "verse:Hos.7.16",
+      "verse:Hos.8.1",
+      "verse:Hos.8.2",
+      "verse:Hos.8.3",
+      "verse:Hos.8.4",
+      "verse:Hos.8.5",
+      "verse:Hos.8.6",
+      "verse:Hos.8.7",
+      "verse:Hos.8.8",
+      "verse:Hos.8.9",
+      "verse:Hos.8.10",
+      "verse:Hos.8.11",
+      "verse:Hos.8.12",
+      "verse:Hos.8.13",
+      "verse:Hos.8.14",
+      "verse:Hos.9.1",
+      "verse:Hos.9.2",
+      "verse:Hos.9.3",
+      "verse:Hos.9.4",
+      "verse:Hos.9.5",
+      "verse:Hos.9.6",
+      "verse:Hos.9.7",
+      "verse:Hos.9.8",
+      "verse:Hos.9.9",
+      "verse:Hos.9.10",
+      "verse:Hos.9.11",
+      "verse:Hos.9.12",
+      "verse:Hos.9.13",
+      "verse:Hos.9.14",
+      "verse:Hos.9.15",
+      "verse:Hos.9.16",
+      "verse:Hos.9.17",
+      "verse:Hos.10.1",
+      "verse:Hos.10.2",
+      "verse:Hos.10.3",
+      "verse:Hos.10.4",
+      "verse:Hos.10.5",
+      "verse:Hos.10.6",
+      "verse:Hos.10.7",
+      "verse:Hos.10.8",
+      "verse:Hos.10.9",
+      "verse:Hos.10.10",
+      "verse:Hos.10.11",
+      "verse:Hos.10.12",
+      "verse:Hos.10.13",
+      "verse:Hos.10.14",
+      "verse:Hos.10.15",
+      "verse:Hos.11.1",
+      "verse:Hos.11.2",
+      "verse:Hos.11.3",
+      "verse:Hos.11.4",
+      "verse:Hos.11.5",
+      "verse:Hos.11.6",
+      "verse:Hos.11.7",
+      "verse:Hos.11.8",
+      "verse:Hos.11.9",
+      "verse:Hos.11.10",
+      "verse:Hos.11.11",
+      "verse:Hos.11.12",
+      "verse:Hos.12.1",
+      "verse:Hos.12.2",
+      "verse:Hos.12.3",
+      "verse:Hos.12.4",
+      "verse:Hos.12.5",
+      "verse:Hos.12.6",
+      "verse:Hos.12.7",
+      "verse:Hos.12.8",
+      "verse:Hos.12.9",
+      "verse:Hos.12.10",
+      "verse:Hos.12.11",
+      "verse:Hos.12.12",
+      "verse:Hos.12.13",
+      "verse:Hos.12.14",
+      "verse:Hos.13.1",
+      "verse:Hos.13.2",
+      "verse:Hos.13.3",
+      "verse:Hos.13.4",
+      "verse:Hos.13.5",
+      "verse:Hos.13.6",
+      "verse:Hos.13.7",
+      "verse:Hos.13.8",
+      "verse:Hos.13.9",
+      "verse:Hos.13.10",
+      "verse:Hos.13.11",
+      "verse:Hos.13.12",
+      "verse:Hos.13.13",
+      "verse:Hos.13.14",
+      "verse:Hos.13.15",
+      "verse:Hos.13.16",
+      "verse:Hos.14.1",
+      "verse:Hos.14.2",
+      "verse:Hos.14.3",
+      "verse:Hos.14.4",
+      "verse:Hos.14.5",
+      "verse:Hos.14.6",
+      "verse:Hos.14.7",
+      "verse:Hos.14.8",
+      "verse:Hos.14.9"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-adam-1-6-7",
+        "verse_key": "verse:Hos.6.7",
+        "attestation_key": "attestation:wb-p-adam-1-6-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-adam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Adam",
+          "occurrence_ordinal": 1,
+          "prefix": "But they, like ",
+          "suffix": ", have transgressed "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aram-2-12-12",
+        "verse_key": "verse:Hos.12.12",
+        "attestation_key": "attestation:wb-p-aram-2-12-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aram-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aram",
+          "occurrence_ordinal": 1,
+          "prefix": "fled to the land of ",
+          "suffix": " and Israel worked f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-1-6",
+        "verse_key": "verse:Hos.1.6",
+        "attestation_key": "attestation:wb-p-jacob-1-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ion on the house of ",
+          "suffix": ", that I should ever"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-1-11",
+        "verse_key": "verse:Hos.1.11",
+        "attestation_key": "attestation:wb-p-jacob-1-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ple of Judah and of ",
+          "suffix": " will be gathered to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-3-5",
+        "verse_key": "verse:Hos.3.5",
+        "attestation_key": "attestation:wb-p-jacob-1-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ward, the people of ",
+          "suffix": " will return and see"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-4-1",
+        "verse_key": "verse:Hos.4.1",
+        "attestation_key": "attestation:wb-p-jacob-1-4-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "LORD, O children of ",
+          "suffix": ", for the LORD has a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-5-1",
+        "verse_key": "verse:Hos.5.1",
+        "attestation_key": "attestation:wb-p-jacob-1-5-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ke heed, O house of ",
+          "suffix": "! Give ear, O royal "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-8-14",
+        "verse_key": "verse:Hos.8.14",
+        "attestation_key": "attestation:wb-p-jacob-1-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " has forgotten his M"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-10-1",
+        "verse_key": "verse:Hos.10.1",
+        "attestation_key": "attestation:wb-p-jacob-1-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " was a luxuriant vin"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-12-12",
+        "verse_key": "verse:Hos.12.12",
+        "attestation_key": "attestation:wb-p-jacob-1-12-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " fled to the land of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-12-13",
+        "verse_key": "verse:Hos.12.13",
+        "attestation_key": "attestation:wb-p-jacob-1-12-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "et the LORD brought ",
+          "suffix": " out of Egypt, and b"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-1-7",
+        "verse_key": "verse:Hos.1.7",
+        "attestation_key": "attestation:wb-p-judah-1-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "ion on the house of ",
+          "suffix": ", and I will save th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-1-11",
+        "verse_key": "verse:Hos.1.11",
+        "attestation_key": "attestation:wb-p-judah-1-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "Then the people of ",
+          "suffix": " and of Israel will "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-8-14",
+        "verse_key": "verse:Hos.8.14",
+        "attestation_key": "attestation:wb-p-judah-1-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": " and built palaces; ",
+          "suffix": " has multiplied its "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-3-5",
+        "verse_key": "verse:Hos.3.5",
+        "attestation_key": "attestation:wb-p-david-1-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": " LORD their God and ",
+          "suffix": " their king. They wi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jehu-2-1-4",
+        "verse_key": "verse:Hos.1.4",
+        "attestation_key": "attestation:wb-p-jehu-2-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jehu-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jehu",
+          "occurrence_ordinal": 1,
+          "prefix": "l upon the house of ",
+          "suffix": ", and I will put an "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joash-4-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-joash-4-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joash-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jehoash",
+          "occurrence_ordinal": 1,
+          "prefix": " of Jeroboam son of ",
+          "suffix": ", king of Israel."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jeroboam-2-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-jeroboam-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jeroboam-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jeroboam",
+          "occurrence_ordinal": 1,
+          "prefix": "gs of Judah, and of ",
+          "suffix": " son of Jehoash, kin"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-3-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-azariah-3-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Uzziah",
+          "occurrence_ordinal": 1,
+          "prefix": "eeri in the days of ",
+          "suffix": ", Jotham, Ahaz, and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jotham-2-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-jotham-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jotham-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jotham",
+          "occurrence_ordinal": 1,
+          "prefix": "the days of Uzziah, ",
+          "suffix": ", Ahaz, and Hezekiah"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahaz-1-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-ahaz-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahaz-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ahaz",
+          "occurrence_ordinal": 1,
+          "prefix": " of Uzziah, Jotham, ",
+          "suffix": ", and Hezekiah, king"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hezekiah-1-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-hezekiah-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hezekiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hezekiah",
+          "occurrence_ordinal": 1,
+          "prefix": ", Jotham, Ahaz, and ",
+          "suffix": ", kings of Judah, an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hosea-1-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-hosea-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hosea-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hosea",
+          "occurrence_ordinal": 1,
+          "prefix": "e LORD that came to ",
+          "suffix": " son of Beeri in the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hosea-1-1-2",
+        "verse_key": "verse:Hos.1.2",
+        "attestation_key": "attestation:wb-p-hosea-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hosea-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hosea",
+          "occurrence_ordinal": 1,
+          "prefix": "first spoke through ",
+          "suffix": ", He told him, “Go, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-beeri-2-1-1",
+        "verse_key": "verse:Hos.1.1",
+        "attestation_key": "attestation:wb-p-beeri-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-beeri-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Beeri",
+          "occurrence_ordinal": 1,
+          "prefix": "ame to Hosea son of ",
+          "suffix": " in the days of Uzzi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-gomer-2-1-3",
+        "verse_key": "verse:Hos.1.3",
+        "attestation_key": "attestation:wb-p-gomer-2-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-gomer-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gomer",
+          "occurrence_ordinal": 1,
+          "prefix": "ea went and married ",
+          "suffix": " daughter of Diblaim"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-diblaim-1-1-3",
+        "verse_key": "verse:Hos.1.3",
+        "attestation_key": "attestation:wb-p-diblaim-1-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-diblaim-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Diblaim",
+          "occurrence_ordinal": 1,
+          "prefix": "d Gomer daughter of ",
+          "suffix": ", and she conceived "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jezreel-2-1-4",
+        "verse_key": "verse:Hos.1.4",
+        "attestation_key": "attestation:wb-p-jezreel-2-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jezreel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jezreel",
+          "occurrence_ordinal": 1,
+          "prefix": "to Hosea, “Name him ",
+          "suffix": ", for soon I will br"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-lo-ruhamah-1-1-6",
+        "verse_key": "verse:Hos.1.6",
+        "attestation_key": "attestation:wb-p-lo-ruhamah-1-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-lo-ruhamah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lo-ruhamah",
+          "occurrence_ordinal": 1,
+          "prefix": "to Hosea, “Name her ",
+          "suffix": ", for I will no long"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-lo-ruhamah-1-1-8",
+        "verse_key": "verse:Hos.1.8",
+        "attestation_key": "attestation:wb-p-lo-ruhamah-1-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-lo-ruhamah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lo-ruhamah",
+          "occurrence_ordinal": 1,
+          "prefix": "fter she had weaned ",
+          "suffix": ", Gomer conceived an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-lo-ammi-1-1-9",
+        "verse_key": "verse:Hos.1.9",
+        "attestation_key": "attestation:wb-p-lo-ammi-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-lo-ammi-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lo-ammi",
+          "occurrence_ordinal": 1,
+          "prefix": "ORD said, “Name him ",
+          "suffix": ", for you are not My"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-admah-a41a054-11-8",
+        "verse_key": "verse:Hos.11.8",
+        "attestation_key": "attestation:wb-pl-admah-a41a054-11-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-admah-a41a054"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Admah",
+          "occurrence_ordinal": 1,
+          "prefix": "uld I make you like ",
+          "suffix": "? How could I treat "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-aram-a3e66cd-12-12",
+        "verse_key": "verse:Hos.12.12",
+        "attestation_key": "attestation:wb-pl-aram-a3e66cd-12-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-aram-a3e66cd"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aram",
+          "occurrence_ordinal": 1,
+          "prefix": "fled to the land of ",
+          "suffix": " and Israel worked f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-5-13",
+        "verse_key": "verse:Hos.5.13",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-5-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "n Ephraim turned to ",
+          "suffix": " and sent to the gre"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-7-11",
+        "verse_key": "verse:Hos.7.11",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-7-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "pt, then turning to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-8-9",
+        "verse_key": "verse:Hos.8.9",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "hey have gone up to ",
+          "suffix": " like a wild donkey "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-9-3",
+        "verse_key": "verse:Hos.9.3",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-9-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "eat unclean food in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-10-6",
+        "verse_key": "verse:Hos.10.6",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-10-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": " will be carried to ",
+          "suffix": " as tribute to the g"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-11-5",
+        "verse_key": "verse:Hos.11.5",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-11-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "ypt and be ruled by ",
+          "suffix": " because they refuse"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-11-11",
+        "verse_key": "verse:Hos.11.11",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-11-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "es from the land of ",
+          "suffix": ". Then I will settle"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-12-1",
+        "verse_key": "verse:Hos.12.1",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-12-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "kes a covenant with ",
+          "suffix": " and sends olive oil"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-14-3",
+        "verse_key": "verse:Hos.14.3",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-14-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Assyria",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " will not save us, n"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-aven-af3ccdf-10-8",
+        "verse_key": "verse:Hos.10.8",
+        "attestation_key": "attestation:wb-pl-aven-af3ccdf-10-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-aven-af3ccdf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aven",
+          "occurrence_ordinal": 1,
+          "prefix": "The high places of ",
+          "suffix": " will be destroyed— "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-baal-peor-a3d6e81-9-10",
+        "verse_key": "verse:Hos.9.10",
+        "attestation_key": "attestation:wb-pl-baal-peor-a3d6e81-9-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-baal-peor-a3d6e81"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Baal-peor",
+          "occurrence_ordinal": 1,
+          "prefix": "n. But they went to ",
+          "suffix": ", and consecrated th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beth-arbel-a2da675-10-14",
+        "verse_key": "verse:Hos.10.14",
+        "attestation_key": "attestation:wb-pl-beth-arbel-a2da675-10-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beth-arbel-a2da675"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Beth-arbel",
+          "occurrence_ordinal": 1,
+          "prefix": " Shalman devastated ",
+          "suffix": " in the day of battl"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-2-15",
+        "verse_key": "verse:Hos.2.15",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": " she came up out of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-7-11",
+        "verse_key": "verse:Hos.7.11",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-7-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "ove— calling out to ",
+          "suffix": ", then turning to As"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-7-16",
+        "verse_key": "verse:Hos.7.16",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-7-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "uled in the land of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-8-13",
+        "verse_key": "verse:Hos.8.13",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-8-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "They will return to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-3",
+        "verse_key": "verse:Hos.9.3",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "raim will return to ",
+          "suffix": " and eat unclean foo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-6",
+        "verse_key": "verse:Hos.9.6",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "y flee destruction, ",
+          "suffix": " will gather them an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-1",
+        "verse_key": "verse:Hos.11.1",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "ved him, and out of ",
+          "suffix": " I called My son."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-5",
+        "verse_key": "verse:Hos.11.5",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "turn to the land of ",
+          "suffix": " and be ruled by Ass"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-11",
+        "verse_key": "verse:Hos.11.11",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "ing like birds from ",
+          "suffix": " and like doves from"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-12-1",
+        "verse_key": "verse:Hos.12.1",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-12-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": " sends olive oil to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-12-9",
+        "verse_key": "verse:Hos.12.9",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-12-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "r since the land of ",
+          "suffix": ". I will again make "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-12-13",
+        "verse_key": "verse:Hos.12.13",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-12-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "ought Israel out of ",
+          "suffix": ", and by a prophet h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-13-4",
+        "verse_key": "verse:Hos.13.4",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-13-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "r since the land of ",
+          "suffix": "; you know no God bu"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lebanon-a730058-14-5",
+        "verse_key": "verse:Hos.14.5",
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-14-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lebanon-a730058"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lebanon",
+          "occurrence_ordinal": 1,
+          "prefix": " like the cedars of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lebanon-a730058-14-6",
+        "verse_key": "verse:Hos.14.6",
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-14-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lebanon-a730058"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lebanon",
+          "occurrence_ordinal": 1,
+          "prefix": " like the cedars of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lebanon-a730058-14-7",
+        "verse_key": "verse:Hos.14.7",
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-14-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lebanon-a730058"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lebanon",
+          "occurrence_ordinal": 1,
+          "prefix": "be like the wine of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-memphis-a8ec269-9-6",
+        "verse_key": "verse:Hos.9.6",
+        "attestation_key": "attestation:wb-pl-memphis-a8ec269-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-memphis-a8ec269"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Memphis",
+          "occurrence_ordinal": 1,
+          "prefix": "ill gather them and ",
+          "suffix": " will bury them. The"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-shechem-adf74d4-6-9",
+        "verse_key": "verse:Hos.6.9",
+        "attestation_key": "attestation:wb-pl-shechem-adf74d4-6-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-shechem-adf74d4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Shechem",
+          "occurrence_ordinal": 1,
+          "prefix": "urder on the way to ",
+          "suffix": "; surely they have c"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-9-13",
+        "verse_key": "verse:Hos.9.13",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tyre",
+          "occurrence_ordinal": 1,
+          "prefix": " seen Ephraim, like ",
+          "suffix": ", planted in a meado"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-valley-of-achor-a31492f-2-15",
+        "verse_key": "verse:Hos.2.15",
+        "attestation_key": "attestation:wb-pl-valley-of-achor-a31492f-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-valley-of-achor-a31492f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Valley of Achor",
+          "occurrence_ordinal": 1,
+          "prefix": "eyards and make the ",
+          "suffix": " into a gateway of h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-valley-of-jezreel-aa516c2-1-5",
+        "verse_key": "verse:Hos.1.5",
+        "attestation_key": "attestation:wb-pl-valley-of-jezreel-aa516c2-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-valley-of-jezreel-aa516c2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Valley of Jezreel",
+          "occurrence_ordinal": 1,
+          "prefix": "ow of Israel in the ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zeboiim-abfbfb9-11-8",
+        "verse_key": "verse:Hos.11.8",
+        "attestation_key": "attestation:wb-pl-zeboiim-abfbfb9-11-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zeboiim-abfbfb9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zeboiim",
+          "occurrence_ordinal": 1,
+          "prefix": "ld I treat you like ",
+          "suffix": "? My heart is turned"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Hos.1.10",
+            "verse:Hos.10.10",
+            "verse:Hos.10.11",
+            "verse:Hos.10.12",
+            "verse:Hos.10.13",
+            "verse:Hos.10.15",
+            "verse:Hos.10.2",
+            "verse:Hos.10.3",
+            "verse:Hos.10.4",
+            "verse:Hos.10.5",
+            "verse:Hos.10.7",
+            "verse:Hos.10.9",
+            "verse:Hos.11.10",
+            "verse:Hos.11.12",
+            "verse:Hos.11.2",
+            "verse:Hos.11.3",
+            "verse:Hos.11.4",
+            "verse:Hos.11.6",
+            "verse:Hos.11.7",
+            "verse:Hos.11.9",
+            "verse:Hos.12.10",
+            "verse:Hos.12.11",
+            "verse:Hos.12.14",
+            "verse:Hos.12.2",
+            "verse:Hos.12.3",
+            "verse:Hos.12.4",
+            "verse:Hos.12.5",
+            "verse:Hos.12.6",
+            "verse:Hos.12.7",
+            "verse:Hos.12.8",
+            "verse:Hos.13.1",
+            "verse:Hos.13.10",
+            "verse:Hos.13.11",
+            "verse:Hos.13.12",
+            "verse:Hos.13.13",
+            "verse:Hos.13.14",
+            "verse:Hos.13.15",
+            "verse:Hos.13.16",
+            "verse:Hos.13.2",
+            "verse:Hos.13.3",
+            "verse:Hos.13.5",
+            "verse:Hos.13.6",
+            "verse:Hos.13.7",
+            "verse:Hos.13.8",
+            "verse:Hos.13.9",
+            "verse:Hos.14.1",
+            "verse:Hos.14.2",
+            "verse:Hos.14.4",
+            "verse:Hos.14.8",
+            "verse:Hos.14.9",
+            "verse:Hos.2.1",
+            "verse:Hos.2.10",
+            "verse:Hos.2.11",
+            "verse:Hos.2.12",
+            "verse:Hos.2.13",
+            "verse:Hos.2.14",
+            "verse:Hos.2.16",
+            "verse:Hos.2.17",
+            "verse:Hos.2.18",
+            "verse:Hos.2.19",
+            "verse:Hos.2.2",
+            "verse:Hos.2.20",
+            "verse:Hos.2.21",
+            "verse:Hos.2.22",
+            "verse:Hos.2.23",
+            "verse:Hos.2.3",
+            "verse:Hos.2.4",
+            "verse:Hos.2.5",
+            "verse:Hos.2.6",
+            "verse:Hos.2.7",
+            "verse:Hos.2.8",
+            "verse:Hos.2.9",
+            "verse:Hos.3.1",
+            "verse:Hos.3.2",
+            "verse:Hos.3.3",
+            "verse:Hos.3.4",
+            "verse:Hos.4.10",
+            "verse:Hos.4.11",
+            "verse:Hos.4.12",
+            "verse:Hos.4.13",
+            "verse:Hos.4.14",
+            "verse:Hos.4.15",
+            "verse:Hos.4.16",
+            "verse:Hos.4.17",
+            "verse:Hos.4.18",
+            "verse:Hos.4.19",
+            "verse:Hos.4.2",
+            "verse:Hos.4.3",
+            "verse:Hos.4.4",
+            "verse:Hos.4.5",
+            "verse:Hos.4.6",
+            "verse:Hos.4.7",
+            "verse:Hos.4.8",
+            "verse:Hos.4.9",
+            "verse:Hos.5.10",
+            "verse:Hos.5.11",
+            "verse:Hos.5.12",
+            "verse:Hos.5.14",
+            "verse:Hos.5.15",
+            "verse:Hos.5.2",
+            "verse:Hos.5.3",
+            "verse:Hos.5.4",
+            "verse:Hos.5.5",
+            "verse:Hos.5.6",
+            "verse:Hos.5.7",
+            "verse:Hos.5.8",
+            "verse:Hos.5.9",
+            "verse:Hos.6.1",
+            "verse:Hos.6.10",
+            "verse:Hos.6.11",
+            "verse:Hos.6.2",
+            "verse:Hos.6.3",
+            "verse:Hos.6.4",
+            "verse:Hos.6.5",
+            "verse:Hos.6.6",
+            "verse:Hos.6.8",
+            "verse:Hos.7.1",
+            "verse:Hos.7.10",
+            "verse:Hos.7.12",
+            "verse:Hos.7.13",
+            "verse:Hos.7.14",
+            "verse:Hos.7.15",
+            "verse:Hos.7.2",
+            "verse:Hos.7.3",
+            "verse:Hos.7.4",
+            "verse:Hos.7.5",
+            "verse:Hos.7.6",
+            "verse:Hos.7.7",
+            "verse:Hos.7.8",
+            "verse:Hos.7.9",
+            "verse:Hos.8.1",
+            "verse:Hos.8.10",
+            "verse:Hos.8.11",
+            "verse:Hos.8.12",
+            "verse:Hos.8.2",
+            "verse:Hos.8.3",
+            "verse:Hos.8.4",
+            "verse:Hos.8.5",
+            "verse:Hos.8.6",
+            "verse:Hos.8.7",
+            "verse:Hos.8.8",
+            "verse:Hos.9.1",
+            "verse:Hos.9.11",
+            "verse:Hos.9.12",
+            "verse:Hos.9.14",
+            "verse:Hos.9.15",
+            "verse:Hos.9.16",
+            "verse:Hos.9.17",
+            "verse:Hos.9.2",
+            "verse:Hos.9.4",
+            "verse:Hos.9.5",
+            "verse:Hos.9.7",
+            "verse:Hos.9.8",
+            "verse:Hos.9.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahaz-1-1-1",
+            "mention:wb:p-azariah-3-1-1",
+            "mention:wb:p-beeri-2-1-1",
+            "mention:wb:p-hezekiah-1-1-1",
+            "mention:wb:p-hosea-1-1-1",
+            "mention:wb:p-jeroboam-2-1-1",
+            "mention:wb:p-joash-4-1-1",
+            "mention:wb:p-jotham-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hosea-1-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-diblaim-1-1-3",
+            "mention:wb:p-gomer-2-1-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-jehu-2-1-4",
+            "mention:wb:p-jezreel-2-1-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-valley-of-jezreel-aa516c2-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-1-6",
+            "mention:wb:p-lo-ruhamah-1-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-judah-1-1-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-lo-ruhamah-1-1-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-lo-ammi-1-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.1.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-1-11",
+            "mention:wb:p-judah-1-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.2.15"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-2-15",
+            "mention:wb:pl-valley-of-achor-a31492f-2-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.3.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-3-5",
+            "mention:wb:p-jacob-1-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.4.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.5.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-5-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.5.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-5-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.6.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-adam-1-6-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.6.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-shechem-adf74d4-6-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.7.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-7-11",
+            "mention:wb:pl-egypt-af301ca-7-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.7.16"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-7-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-8-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-8-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.8.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-8-14",
+            "mention:wb:p-judah-1-8-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.3"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-9-3",
+            "mention:wb:pl-egypt-af301ca-9-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-9-6",
+            "mention:wb:pl-memphis-a8ec269-9-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.10"
+          ],
+          "record_keys": [
+            "mention:wb:pl-baal-peor-a3d6e81-9-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-tyre-a160272-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-10-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-10-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-aven-af3ccdf-10-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.10.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beth-arbel-a2da675-10-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-11-5",
+            "mention:wb:pl-egypt-af301ca-11-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-admah-a41a054-11-8",
+            "mention:wb:pl-zeboiim-abfbfb9-11-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.11.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-11-11",
+            "mention:wb:pl-egypt-af301ca-11-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-12-1",
+            "mention:wb:pl-egypt-af301ca-12-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-12-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-aram-2-12-12",
+            "mention:wb:p-jacob-1-12-12",
+            "mention:wb:pl-aram-a3e66cd-12-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.12.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-12-13",
+            "mention:wb:pl-egypt-af301ca-12-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.13.4"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-13-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.3"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-14-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-lebanon-a730058-14-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-lebanon-a730058-14-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hos.14.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-lebanon-a730058-14-7"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

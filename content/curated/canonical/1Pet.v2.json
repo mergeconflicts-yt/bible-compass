@@ -1,0 +1,884 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-1pet-canonical",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-1pet-canonical:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-1pet-canonical",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-1pet:refsys:eng-v22:1pet.1.1-1pet.5.14",
+      "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+      "scope:wb-1pet-2:refsys:eng-v22:1pet.2.1-1pet.2.25",
+      "scope:wb-1pet-3:refsys:eng-v22:1pet.3.1-1pet.3.22",
+      "scope:wb-1pet-4:refsys:eng-v22:1pet.4.1-1pet.4.19",
+      "scope:wb-1pet-5:refsys:eng-v22:1pet.5.1-1pet.5.14",
+      "scope:wb-1pet-1-p1:refsys:eng-v22:1pet.1.1-1pet.1.2",
+      "scope:wb-1pet-1-p2:refsys:eng-v22:1pet.1.3-1pet.1.12",
+      "scope:wb-1pet-1-p3:refsys:eng-v22:1pet.1.13-1pet.1.21",
+      "scope:wb-1pet-1-p4:refsys:eng-v22:1pet.1.22-1pet.1.25",
+      "scope:wb-1pet-2-p1:refsys:eng-v22:1pet.2.1-1pet.2.12",
+      "scope:wb-1pet-2-p2:refsys:eng-v22:1pet.2.13-1pet.2.20",
+      "scope:wb-1pet-2-p3:refsys:eng-v22:1pet.2.21-1pet.2.25",
+      "scope:wb-1pet-3-p1:refsys:eng-v22:1pet.3.1-1pet.3.7",
+      "scope:wb-1pet-3-p2:refsys:eng-v22:1pet.3.8-1pet.3.13",
+      "scope:wb-1pet-3-p3:refsys:eng-v22:1pet.3.14-1pet.3.22",
+      "scope:wb-1pet-4-p1:refsys:eng-v22:1pet.4.1-1pet.4.11",
+      "scope:wb-1pet-4-p2:refsys:eng-v22:1pet.4.12-1pet.4.19",
+      "scope:wb-1pet-5-p1:refsys:eng-v22:1pet.5.1-1pet.5.4",
+      "scope:wb-1pet-5-p2:refsys:eng-v22:1pet.5.5-1pet.5.9",
+      "scope:wb-1pet-5-p3:refsys:eng-v22:1pet.5.10-1pet.5.14"
+    ],
+    "reference_keys": [
+      "verse:1Pet.1.1",
+      "verse:1Pet.1.2",
+      "verse:1Pet.1.3",
+      "verse:1Pet.1.4",
+      "verse:1Pet.1.5",
+      "verse:1Pet.1.6",
+      "verse:1Pet.1.7",
+      "verse:1Pet.1.8",
+      "verse:1Pet.1.9",
+      "verse:1Pet.1.10",
+      "verse:1Pet.1.11",
+      "verse:1Pet.1.12",
+      "verse:1Pet.1.13",
+      "verse:1Pet.1.14",
+      "verse:1Pet.1.15",
+      "verse:1Pet.1.16",
+      "verse:1Pet.1.17",
+      "verse:1Pet.1.18",
+      "verse:1Pet.1.19",
+      "verse:1Pet.1.20",
+      "verse:1Pet.1.21",
+      "verse:1Pet.1.22",
+      "verse:1Pet.1.23",
+      "verse:1Pet.1.24",
+      "verse:1Pet.1.25",
+      "verse:1Pet.2.1",
+      "verse:1Pet.2.2",
+      "verse:1Pet.2.3",
+      "verse:1Pet.2.4",
+      "verse:1Pet.2.5",
+      "verse:1Pet.2.6",
+      "verse:1Pet.2.7",
+      "verse:1Pet.2.8",
+      "verse:1Pet.2.9",
+      "verse:1Pet.2.10",
+      "verse:1Pet.2.11",
+      "verse:1Pet.2.12",
+      "verse:1Pet.2.13",
+      "verse:1Pet.2.14",
+      "verse:1Pet.2.15",
+      "verse:1Pet.2.16",
+      "verse:1Pet.2.17",
+      "verse:1Pet.2.18",
+      "verse:1Pet.2.19",
+      "verse:1Pet.2.20",
+      "verse:1Pet.2.21",
+      "verse:1Pet.2.22",
+      "verse:1Pet.2.23",
+      "verse:1Pet.2.24",
+      "verse:1Pet.2.25",
+      "verse:1Pet.3.1",
+      "verse:1Pet.3.2",
+      "verse:1Pet.3.3",
+      "verse:1Pet.3.4",
+      "verse:1Pet.3.5",
+      "verse:1Pet.3.6",
+      "verse:1Pet.3.7",
+      "verse:1Pet.3.8",
+      "verse:1Pet.3.9",
+      "verse:1Pet.3.10",
+      "verse:1Pet.3.11",
+      "verse:1Pet.3.12",
+      "verse:1Pet.3.13",
+      "verse:1Pet.3.14",
+      "verse:1Pet.3.15",
+      "verse:1Pet.3.16",
+      "verse:1Pet.3.17",
+      "verse:1Pet.3.18",
+      "verse:1Pet.3.19",
+      "verse:1Pet.3.20",
+      "verse:1Pet.3.21",
+      "verse:1Pet.3.22",
+      "verse:1Pet.4.1",
+      "verse:1Pet.4.2",
+      "verse:1Pet.4.3",
+      "verse:1Pet.4.4",
+      "verse:1Pet.4.5",
+      "verse:1Pet.4.6",
+      "verse:1Pet.4.7",
+      "verse:1Pet.4.8",
+      "verse:1Pet.4.9",
+      "verse:1Pet.4.10",
+      "verse:1Pet.4.11",
+      "verse:1Pet.4.12",
+      "verse:1Pet.4.13",
+      "verse:1Pet.4.14",
+      "verse:1Pet.4.15",
+      "verse:1Pet.4.16",
+      "verse:1Pet.4.17",
+      "verse:1Pet.4.18",
+      "verse:1Pet.4.19",
+      "verse:1Pet.5.1",
+      "verse:1Pet.5.2",
+      "verse:1Pet.5.3",
+      "verse:1Pet.5.4",
+      "verse:1Pet.5.5",
+      "verse:1Pet.5.6",
+      "verse:1Pet.5.7",
+      "verse:1Pet.5.8",
+      "verse:1Pet.5.9",
+      "verse:1Pet.5.10",
+      "verse:1Pet.5.11",
+      "verse:1Pet.5.12",
+      "verse:1Pet.5.13",
+      "verse:1Pet.5.14"
+    ],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-noah-1",
+        "entity_type": "person",
+        "proposed_label": "Noah",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-abram-1",
+        "entity_type": "person",
+        "proposed_label": "Abram",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-sarai-1",
+        "entity_type": "person",
+        "proposed_label": "Sarai",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-simon-1",
+        "entity_type": "person",
+        "proposed_label": "Simon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-john-5",
+        "entity_type": "person",
+        "proposed_label": "John",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-silas-1",
+        "entity_type": "person",
+        "proposed_label": "Silas",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "entity_type": "place",
+        "proposed_label": "Asia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-babylon-2-ae5ede9",
+        "entity_type": "place",
+        "proposed_label": "Babylon 2",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bithynia-a5c0cb0",
+        "entity_type": "place",
+        "proposed_label": "Bithynia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-cappadocia-a33fbde",
+        "entity_type": "place",
+        "proposed_label": "Cappadocia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
+        "entity_type": "place",
+        "proposed_label": "Galatia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-pontus-a83a43e",
+        "entity_type": "place",
+        "proposed_label": "Pontus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zion-af20c46",
+        "entity_type": "place",
+        "proposed_label": "Zion",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [],
+    "citations": [],
+    "attestations": [
+      {
+        "attestation_key": "attestation:wb-p-noah-1-3-20",
+        "reference_key": "verse:1Pet.3.20",
+        "entity_key": "entity:p-noah-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-abram-1-3-6",
+        "reference_key": "verse:1Pet.3.6",
+        "entity_key": "entity:p-abram-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-sarai-1-3-6",
+        "reference_key": "verse:1Pet.3.6",
+        "entity_key": "entity:p-sarai-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-simon-1-1-1",
+        "reference_key": "verse:1Pet.1.1",
+        "entity_key": "entity:p-simon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-john-5-5-13",
+        "reference_key": "verse:1Pet.5.13",
+        "entity_key": "entity:p-john-5",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-silas-1-5-12",
+        "reference_key": "verse:1Pet.5.12",
+        "entity_key": "entity:p-silas-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-asia-a197f19-1-1",
+        "reference_key": "verse:1Pet.1.1",
+        "entity_key": "entity:pl-asia-a197f19",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-babylon-2-ae5ede9-5-13",
+        "reference_key": "verse:1Pet.5.13",
+        "entity_key": "entity:pl-babylon-2-ae5ede9",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-bithynia-a5c0cb0-1-1",
+        "reference_key": "verse:1Pet.1.1",
+        "entity_key": "entity:pl-bithynia-a5c0cb0",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-cappadocia-a33fbde-1-1",
+        "reference_key": "verse:1Pet.1.1",
+        "entity_key": "entity:pl-cappadocia-a33fbde",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-galatia-a0f440a-1-1",
+        "reference_key": "verse:1Pet.1.1",
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-pontus-a83a43e-1-1",
+        "reference_key": "verse:1Pet.1.1",
+        "entity_key": "entity:pl-pontus-a83a43e",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-zion-af20c46-2-6",
+        "reference_key": "verse:1Pet.2.6",
+        "entity_key": "entity:pl-zion-af20c46",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [],
+    "events": [],
+    "places": [
+      {
+        "entity_key": "entity:pl-asia-a197f19",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-asia-a197f19",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-babylon-2-ae5ede9",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-babylon-2-ae5ede9",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-bithynia-a5c0cb0",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-bithynia-a5c0cb0",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-cappadocia-a33fbde",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-cappadocia-a33fbde",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-galatia-a0f440a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-pontus-a83a43e",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-pontus-a83a43e",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-zion-af20c46",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:wb-1pet-3-p-noah-1",
+        "scope_key": "scope:wb-1pet-3:refsys:eng-v22:1pet.3.1-1pet.3.22",
+        "entity_key": "entity:p-noah-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-3-p-abram-1",
+        "scope_key": "scope:wb-1pet-3:refsys:eng-v22:1pet.3.1-1pet.3.22",
+        "entity_key": "entity:p-abram-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-3-p-sarai-1",
+        "scope_key": "scope:wb-1pet-3:refsys:eng-v22:1pet.3.1-1pet.3.22",
+        "entity_key": "entity:p-sarai-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-1-p-simon-1",
+        "scope_key": "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+        "entity_key": "entity:p-simon-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-5-p-john-5",
+        "scope_key": "scope:wb-1pet-5:refsys:eng-v22:1pet.5.1-1pet.5.14",
+        "entity_key": "entity:p-john-5",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-5-p-silas-1",
+        "scope_key": "scope:wb-1pet-5:refsys:eng-v22:1pet.5.1-1pet.5.14",
+        "entity_key": "entity:p-silas-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-1-pl-asia-a197f19",
+        "scope_key": "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+        "entity_key": "entity:pl-asia-a197f19",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-5-pl-babylon-2-ae5ede9",
+        "scope_key": "scope:wb-1pet-5:refsys:eng-v22:1pet.5.1-1pet.5.14",
+        "entity_key": "entity:pl-babylon-2-ae5ede9",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-1-pl-bithynia-a5c0cb0",
+        "scope_key": "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+        "entity_key": "entity:pl-bithynia-a5c0cb0",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-1-pl-cappadocia-a33fbde",
+        "scope_key": "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+        "entity_key": "entity:pl-cappadocia-a33fbde",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-1-pl-galatia-a0f440a",
+        "scope_key": "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-1-pl-pontus-a83a43e",
+        "scope_key": "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+        "entity_key": "entity:pl-pontus-a83a43e",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1pet-2-pl-zion-af20c46",
+        "scope_key": "scope:wb-1pet-2:refsys:eng-v22:1pet.2.1-1pet.2.25",
+        "entity_key": "entity:pl-zion-af20c46",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "reconciliation_records": [
+      {
+        "candidate_key": "candidate:wb:p-noah-1",
+        "canonical_entity_key": "entity:p-noah-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-abram-1",
+        "canonical_entity_key": "entity:p-abram-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-sarai-1",
+        "canonical_entity_key": "entity:p-sarai-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-simon-1",
+        "canonical_entity_key": "entity:p-simon-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-john-5",
+        "canonical_entity_key": "entity:p-john-5",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-silas-1",
+        "canonical_entity_key": "entity:p-silas-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "canonical_entity_key": "entity:pl-asia-a197f19",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-babylon-2-ae5ede9",
+        "canonical_entity_key": "entity:pl-babylon-2-ae5ede9",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-bithynia-a5c0cb0",
+        "canonical_entity_key": "entity:pl-bithynia-a5c0cb0",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-cappadocia-a33fbde",
+        "canonical_entity_key": "entity:pl-cappadocia-a33fbde",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
+        "canonical_entity_key": "entity:pl-galatia-a0f440a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-pontus-a83a43e",
+        "canonical_entity_key": "entity:pl-pontus-a83a43e",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zion-af20c46",
+        "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:1Pet.1.10",
+            "verse:1Pet.1.11",
+            "verse:1Pet.1.12",
+            "verse:1Pet.1.13",
+            "verse:1Pet.1.14",
+            "verse:1Pet.1.15",
+            "verse:1Pet.1.16",
+            "verse:1Pet.1.17",
+            "verse:1Pet.1.18",
+            "verse:1Pet.1.19",
+            "verse:1Pet.1.2",
+            "verse:1Pet.1.20",
+            "verse:1Pet.1.21",
+            "verse:1Pet.1.22",
+            "verse:1Pet.1.23",
+            "verse:1Pet.1.24",
+            "verse:1Pet.1.25",
+            "verse:1Pet.1.3",
+            "verse:1Pet.1.4",
+            "verse:1Pet.1.5",
+            "verse:1Pet.1.6",
+            "verse:1Pet.1.7",
+            "verse:1Pet.1.8",
+            "verse:1Pet.1.9",
+            "verse:1Pet.2.1",
+            "verse:1Pet.2.10",
+            "verse:1Pet.2.11",
+            "verse:1Pet.2.12",
+            "verse:1Pet.2.13",
+            "verse:1Pet.2.14",
+            "verse:1Pet.2.15",
+            "verse:1Pet.2.16",
+            "verse:1Pet.2.17",
+            "verse:1Pet.2.18",
+            "verse:1Pet.2.19",
+            "verse:1Pet.2.2",
+            "verse:1Pet.2.20",
+            "verse:1Pet.2.21",
+            "verse:1Pet.2.22",
+            "verse:1Pet.2.23",
+            "verse:1Pet.2.24",
+            "verse:1Pet.2.25",
+            "verse:1Pet.2.3",
+            "verse:1Pet.2.4",
+            "verse:1Pet.2.5",
+            "verse:1Pet.2.7",
+            "verse:1Pet.2.8",
+            "verse:1Pet.2.9",
+            "verse:1Pet.3.1",
+            "verse:1Pet.3.10",
+            "verse:1Pet.3.11",
+            "verse:1Pet.3.12",
+            "verse:1Pet.3.13",
+            "verse:1Pet.3.14",
+            "verse:1Pet.3.15",
+            "verse:1Pet.3.16",
+            "verse:1Pet.3.17",
+            "verse:1Pet.3.18",
+            "verse:1Pet.3.19",
+            "verse:1Pet.3.2",
+            "verse:1Pet.3.21",
+            "verse:1Pet.3.22",
+            "verse:1Pet.3.3",
+            "verse:1Pet.3.4",
+            "verse:1Pet.3.5",
+            "verse:1Pet.3.7",
+            "verse:1Pet.3.8",
+            "verse:1Pet.3.9",
+            "verse:1Pet.4.1",
+            "verse:1Pet.4.10",
+            "verse:1Pet.4.11",
+            "verse:1Pet.4.12",
+            "verse:1Pet.4.13",
+            "verse:1Pet.4.14",
+            "verse:1Pet.4.15",
+            "verse:1Pet.4.16",
+            "verse:1Pet.4.17",
+            "verse:1Pet.4.18",
+            "verse:1Pet.4.19",
+            "verse:1Pet.4.2",
+            "verse:1Pet.4.3",
+            "verse:1Pet.4.4",
+            "verse:1Pet.4.5",
+            "verse:1Pet.4.6",
+            "verse:1Pet.4.7",
+            "verse:1Pet.4.8",
+            "verse:1Pet.4.9",
+            "verse:1Pet.5.1",
+            "verse:1Pet.5.10",
+            "verse:1Pet.5.11",
+            "verse:1Pet.5.14",
+            "verse:1Pet.5.2",
+            "verse:1Pet.5.3",
+            "verse:1Pet.5.4",
+            "verse:1Pet.5.5",
+            "verse:1Pet.5.6",
+            "verse:1Pet.5.7",
+            "verse:1Pet.5.8",
+            "verse:1Pet.5.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.1.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-simon-1-1-1",
+            "attestation:wb-pl-asia-a197f19-1-1",
+            "attestation:wb-pl-bithynia-a5c0cb0-1-1",
+            "attestation:wb-pl-cappadocia-a33fbde-1-1",
+            "attestation:wb-pl-galatia-a0f440a-1-1",
+            "attestation:wb-pl-pontus-a83a43e-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.2.6"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-zion-af20c46-2-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.3.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-abram-1-3-6",
+            "attestation:wb-p-sarai-1-3-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.3.20"
+          ],
+          "record_keys": [
+            "attestation:wb-p-noah-1-3-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.5.12"
+          ],
+          "record_keys": [
+            "attestation:wb-p-silas-1-5-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.5.13"
+          ],
+          "record_keys": [
+            "attestation:wb-p-john-5-5-13",
+            "attestation:wb-pl-babylon-2-ae5ede9-5-13"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

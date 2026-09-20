@@ -1,0 +1,155 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:fixture:canonical:neh-2-1-2",
+  "package_revision": 1,
+  "submission_id": "submission:fixture-canonical-001:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:fixture-canonical-001",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": ["scope:fixture-neh-2-1-2"],
+    "reference_keys": ["verse:Neh.2.1", "verse:Neh.2.2"],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:fixture:entities",
+      "revision": 1,
+      "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:fixture-canonical-001:entity-001",
+        "entity_type": "person",
+        "proposed_label": "Synthetic unresolved person",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [
+      {
+        "claim_key": "claim:fixture-person-has-role",
+        "subject": {
+          "type": "entity",
+          "key": "entity:fixture-person"
+        },
+        "predicate": "has_role",
+        "object": {
+          "type": "entity",
+          "key": "entity:fixture-role"
+        },
+        "evidence_status": "established",
+        "textual_basis": "explicit",
+        "citation_keys": ["citation:fixture-person-has-role-1"],
+        "review_status": "draft"
+      }
+    ],
+    "citations": [
+      {
+        "citation_key": "citation:fixture-person-has-role-1",
+        "claim_keys": ["claim:fixture-person-has-role"],
+        "evidence_item_key": "evidence:fixture-source:item-001",
+        "stance": "supports",
+        "evidence_form": "direct",
+        "review_status": "draft"
+      }
+    ],
+    "attestations": [
+      {
+        "attestation_key": "attestation:fixture-neh-2-1-person",
+        "reference_key": "verse:Neh.2.1",
+        "entity_key": "entity:fixture-person",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": ["claim:fixture-person-has-role"],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [
+      {
+        "relationship_key": "relationship:fixture-person-holds-role",
+        "subject_entity_key": "entity:fixture-person",
+        "predicate_key": "relationship:holds-role",
+        "object_entity_key": "entity:fixture-role",
+        "applicable_scope_keys": ["scope:fixture-neh-2-1-2"],
+        "claim_keys": ["claim:fixture-person-has-role"],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:fixture-event",
+        "event_type": "fixture-event-type",
+        "participant_entity_keys": ["entity:fixture-person"],
+        "place_entity_keys": ["entity:fixture-place"],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:fixture-neh-2-1-2",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "places": [
+      {
+        "entity_key": "entity:fixture-place",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:fixture-geography:item-001",
+            "precision": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:fixture-scope-person",
+        "scope_key": "scope:fixture-neh-2-1-2",
+        "entity_key": "entity:fixture-person",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": ["claim:fixture-person-has-role"],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "reference_keys": ["verse:Neh.2.1"],
+          "record_keys": ["attestation:fixture-neh-2-1-person"],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_zero",
+          "reference_keys": ["verse:Neh.2.2"],
+          "record_keys": [],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": []
+}

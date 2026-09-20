@@ -1,0 +1,575 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-hab-canonical",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-hab-canonical:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-hab-canonical",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-hab:refsys:eng-v22:hab.1.1-hab.3.19",
+      "scope:wb-hab-1:refsys:eng-v22:hab.1.1-hab.1.17",
+      "scope:wb-hab-2:refsys:eng-v22:hab.2.1-hab.2.20",
+      "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+      "scope:wb-hab-1-p1:refsys:eng-v22:hab.1.1-hab.1.4",
+      "scope:wb-hab-1-p2:refsys:eng-v22:hab.1.5-hab.1.11",
+      "scope:wb-hab-1-p3:refsys:eng-v22:hab.1.12-hab.1.17",
+      "scope:wb-hab-2-p1:refsys:eng-v22:hab.2.1-hab.2.5",
+      "scope:wb-hab-2-p2:refsys:eng-v22:hab.2.6-hab.2.20",
+      "scope:wb-hab-3-p1:refsys:eng-v22:hab.3.1-hab.3.16",
+      "scope:wb-hab-3-p2:refsys:eng-v22:hab.3.17-hab.3.19"
+    ],
+    "reference_keys": [
+      "verse:Hab.1.1",
+      "verse:Hab.1.2",
+      "verse:Hab.1.3",
+      "verse:Hab.1.4",
+      "verse:Hab.1.5",
+      "verse:Hab.1.6",
+      "verse:Hab.1.7",
+      "verse:Hab.1.8",
+      "verse:Hab.1.9",
+      "verse:Hab.1.10",
+      "verse:Hab.1.11",
+      "verse:Hab.1.12",
+      "verse:Hab.1.13",
+      "verse:Hab.1.14",
+      "verse:Hab.1.15",
+      "verse:Hab.1.16",
+      "verse:Hab.1.17",
+      "verse:Hab.2.1",
+      "verse:Hab.2.2",
+      "verse:Hab.2.3",
+      "verse:Hab.2.4",
+      "verse:Hab.2.5",
+      "verse:Hab.2.6",
+      "verse:Hab.2.7",
+      "verse:Hab.2.8",
+      "verse:Hab.2.9",
+      "verse:Hab.2.10",
+      "verse:Hab.2.11",
+      "verse:Hab.2.12",
+      "verse:Hab.2.13",
+      "verse:Hab.2.14",
+      "verse:Hab.2.15",
+      "verse:Hab.2.16",
+      "verse:Hab.2.17",
+      "verse:Hab.2.18",
+      "verse:Hab.2.19",
+      "verse:Hab.2.20",
+      "verse:Hab.3.1",
+      "verse:Hab.3.2",
+      "verse:Hab.3.3",
+      "verse:Hab.3.4",
+      "verse:Hab.3.5",
+      "verse:Hab.3.6",
+      "verse:Hab.3.7",
+      "verse:Hab.3.8",
+      "verse:Hab.3.9",
+      "verse:Hab.3.10",
+      "verse:Hab.3.11",
+      "verse:Hab.3.12",
+      "verse:Hab.3.13",
+      "verse:Hab.3.14",
+      "verse:Hab.3.15",
+      "verse:Hab.3.16",
+      "verse:Hab.3.17",
+      "verse:Hab.3.18",
+      "verse:Hab.3.19"
+    ],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-habakkuk-1",
+        "entity_type": "person",
+        "proposed_label": "Habakkuk",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
+        "entity_type": "place",
+        "proposed_label": "Chaldea",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-cushan-a567e0e",
+        "entity_type": "place",
+        "proposed_label": "Cushan",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lebanon-a730058",
+        "entity_type": "place",
+        "proposed_label": "Lebanon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-midian-acc6d8e",
+        "entity_type": "place",
+        "proposed_label": "Midian",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-paran-af693b8",
+        "entity_type": "place",
+        "proposed_label": "Mount Paran",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-teman-a831506",
+        "entity_type": "place",
+        "proposed_label": "Teman",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [],
+    "citations": [],
+    "attestations": [
+      {
+        "attestation_key": "attestation:wb-p-habakkuk-1-1-1",
+        "reference_key": "verse:Hab.1.1",
+        "entity_key": "entity:p-habakkuk-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-habakkuk-1-3-1",
+        "reference_key": "verse:Hab.3.1",
+        "entity_key": "entity:p-habakkuk-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-1-6",
+        "reference_key": "verse:Hab.1.6",
+        "entity_key": "entity:pl-chaldea-a32a4f8",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-cushan-a567e0e-3-7",
+        "reference_key": "verse:Hab.3.7",
+        "entity_key": "entity:pl-cushan-a567e0e",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-2-17",
+        "reference_key": "verse:Hab.2.17",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-midian-acc6d8e-3-7",
+        "reference_key": "verse:Hab.3.7",
+        "entity_key": "entity:pl-midian-acc6d8e",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-mount-paran-af693b8-3-3",
+        "reference_key": "verse:Hab.3.3",
+        "entity_key": "entity:pl-mount-paran-af693b8",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-teman-a831506-3-3",
+        "reference_key": "verse:Hab.3.3",
+        "entity_key": "entity:pl-teman-a831506",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [],
+    "events": [],
+    "places": [
+      {
+        "entity_key": "entity:pl-chaldea-a32a4f8",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-chaldea-a32a4f8",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-cushan-a567e0e",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-cushan-a567e0e",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-lebanon-a730058",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-lebanon-a730058",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-midian-acc6d8e",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-midian-acc6d8e",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-mount-paran-af693b8",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-mount-paran-af693b8",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-teman-a831506",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-teman-a831506",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:wb-hab-1-p-habakkuk-1",
+        "scope_key": "scope:wb-hab-1:refsys:eng-v22:hab.1.1-hab.1.17",
+        "entity_key": "entity:p-habakkuk-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-3-p-habakkuk-1",
+        "scope_key": "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+        "entity_key": "entity:p-habakkuk-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-1-pl-chaldea-a32a4f8",
+        "scope_key": "scope:wb-hab-1:refsys:eng-v22:hab.1.1-hab.1.17",
+        "entity_key": "entity:pl-chaldea-a32a4f8",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-3-pl-cushan-a567e0e",
+        "scope_key": "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+        "entity_key": "entity:pl-cushan-a567e0e",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-2-pl-lebanon-a730058",
+        "scope_key": "scope:wb-hab-2:refsys:eng-v22:hab.2.1-hab.2.20",
+        "entity_key": "entity:pl-lebanon-a730058",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-3-pl-midian-acc6d8e",
+        "scope_key": "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+        "entity_key": "entity:pl-midian-acc6d8e",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-3-pl-mount-paran-af693b8",
+        "scope_key": "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+        "entity_key": "entity:pl-mount-paran-af693b8",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-3-pl-teman-a831506",
+        "scope_key": "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+        "entity_key": "entity:pl-teman-a831506",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "reconciliation_records": [
+      {
+        "candidate_key": "candidate:wb:p-habakkuk-1",
+        "canonical_entity_key": "entity:p-habakkuk-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
+        "canonical_entity_key": "entity:pl-chaldea-a32a4f8",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-cushan-a567e0e",
+        "canonical_entity_key": "entity:pl-cushan-a567e0e",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-lebanon-a730058",
+        "canonical_entity_key": "entity:pl-lebanon-a730058",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-midian-acc6d8e",
+        "canonical_entity_key": "entity:pl-midian-acc6d8e",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-mount-paran-af693b8",
+        "canonical_entity_key": "entity:pl-mount-paran-af693b8",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-teman-a831506",
+        "canonical_entity_key": "entity:pl-teman-a831506",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Hab.1.10",
+            "verse:Hab.1.11",
+            "verse:Hab.1.12",
+            "verse:Hab.1.13",
+            "verse:Hab.1.14",
+            "verse:Hab.1.15",
+            "verse:Hab.1.16",
+            "verse:Hab.1.17",
+            "verse:Hab.1.2",
+            "verse:Hab.1.3",
+            "verse:Hab.1.4",
+            "verse:Hab.1.5",
+            "verse:Hab.1.7",
+            "verse:Hab.1.8",
+            "verse:Hab.1.9",
+            "verse:Hab.2.1",
+            "verse:Hab.2.10",
+            "verse:Hab.2.11",
+            "verse:Hab.2.12",
+            "verse:Hab.2.13",
+            "verse:Hab.2.14",
+            "verse:Hab.2.15",
+            "verse:Hab.2.16",
+            "verse:Hab.2.18",
+            "verse:Hab.2.19",
+            "verse:Hab.2.2",
+            "verse:Hab.2.20",
+            "verse:Hab.2.3",
+            "verse:Hab.2.4",
+            "verse:Hab.2.5",
+            "verse:Hab.2.6",
+            "verse:Hab.2.7",
+            "verse:Hab.2.8",
+            "verse:Hab.2.9",
+            "verse:Hab.3.10",
+            "verse:Hab.3.11",
+            "verse:Hab.3.12",
+            "verse:Hab.3.13",
+            "verse:Hab.3.14",
+            "verse:Hab.3.15",
+            "verse:Hab.3.16",
+            "verse:Hab.3.17",
+            "verse:Hab.3.18",
+            "verse:Hab.3.19",
+            "verse:Hab.3.2",
+            "verse:Hab.3.4",
+            "verse:Hab.3.5",
+            "verse:Hab.3.6",
+            "verse:Hab.3.8",
+            "verse:Hab.3.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.1.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-habakkuk-1-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.1.6"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-chaldea-a32a4f8-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.2.17"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-lebanon-a730058-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.3.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-habakkuk-1-3-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.3.3"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-mount-paran-af693b8-3-3",
+            "attestation:wb-pl-teman-a831506-3-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.3.7"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-cushan-a567e0e-3-7",
+            "attestation:wb-pl-midian-acc6d8e-3-7"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

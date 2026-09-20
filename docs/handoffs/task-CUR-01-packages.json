@@ -1,0 +1,75 @@
+{
+  "attempt_id": "task:cur-01-packages:attempt-1",
+  "task_id": "CUR-01",
+  "task_title": "Strict executable schemas + validators for canonical/edition/locale layers",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. The three package layers from docs/curation-structure now have machine-enforced Zod schemas and cross-record validators: any malformed, mislayered, undrafted, unprovenanced, or uncovered package fails with a pointer to the exact cause.",
+  "assumptions_authorized": "Owner authorized proceeding without the missing blueprint/prompt (2026-09-18): job authority = scope block + dependencies[]; reconciliation = new canonical-layer record kind defined here; snapshot = PackageJobContext interface with test fakes; claim subject/object discriminators derived from the examples + DATA_MODEL object kinds.",
+  "files_changed": [
+    "packages/content-schema/src/packages.ts (new: 3 layer envelopes with version/family/layer literals, scope nullability rules per layer, 15 record schemas with review_status draft literals and unresolved-only candidates, PackageJobContext)",
+    "packages/content-schema/src/validators.ts (additive: validateCanonicalPackage/validateEditionPackage/validateLocalePackage — snapshot checks, reconciliation-gated entity resolution with labels never consulted, claim/citation/attestation/relationship/event/place/relevance/question resolution, grouped coverage battery with gap/overlap/contradiction/missing/blocked rules, collect-all error reporting)",
+    "packages/content-schema/src/index.ts (additive export line)",
+    "packages/content-schema/tests/fixtures/packageV2Fixtures.ts (new: synthetic positive fixtures mirroring the examples)",
+    "packages/content-schema/tests/packages.test.ts (new: 26 tests — positives, envelope/version/draft rules, claims/citations/labels, cross-record battery incl. legacy-20F pattern, coverage battery, snapshot battery)"
+  ],
+  "files_not_changed": [
+    "docs/curation-structure/*.example.json (validated read-only; zero corrections needed)",
+    "content/pilot/** (untouched; real 20A/20F judged only in a deleted scratch proof)",
+    "Existing schemas, validators, tests (T-CUR-01 track intact; full suite green)",
+    "Mobile app, migrations, rights, approvals, gates, publication, dependencies, lockfiles"
+  ],
+  "commands_executed": [
+    {
+      "command": "jest (content-schema)",
+      "exit_code": 0,
+      "output": "105 passed (79 prior + 26 new)"
+    },
+    {
+      "command": "deleted scratch proof against the three real example files",
+      "exit_code": 0,
+      "output": "canonical, edition, and locale examples each validate under fixture job contexts"
+    },
+    {
+      "command": "tsc + eslint (package)",
+      "exit_code": 0,
+      "output": "0 errors; 0 warnings"
+    },
+    {
+      "command": "prettier --check . (repo root)",
+      "exit_code": 1,
+      "output": "single pre-existing flag on apps/mobile/expo-env.d.ts (generated, git-ignored, untouched by this task)"
+    },
+    {
+      "command": "git status --short",
+      "exit_code": 0,
+      "output": "only intended files: packages.ts, validators.ts, index.ts, fixtures, tests, plus prior untracked curation items; content/pilot/** untouched"
+    }
+  ],
+  "implement_rule_disposition": [
+    "Envelope versions/job/submission/layer/family/scope/dependencies validated with per-layer scope nullability rules.",
+    "Canonical/edition/locale schemas reject wrong-layer fields via strict records objects.",
+    "review_status draft literals on package and every record; candidates literal unresolved.",
+    "Claim subjects/objects are closed discriminators (entity/scope/text/number/date_range/geometry/controlled) — no unknown anywhere.",
+    "Every claim requires >=1 citation resolving to a defined citation record.",
+    "Citations carry only evidence_item_key checked against the injected job set; url/path/locator/rights/digest fields cannot exist (strict rejection proven by test).",
+    "proposed_label never consulted by the resolver (proven by test); candidates stay unresolved without a trusted reconciliation record.",
+    "Full cross-record battery with pointers for all 13 key families.",
+    "Grouped coverage enforced against injected authority: gaps, overlaps, contradictory complete_zero, missing records, blocked-without-questions all rejected.",
+    "Language/canon/refsys/edition validated against injected snapshots only; zero hard-coded registries in code.",
+    "Legacy 20F dangling pattern proven unpassable with the offending keys named."
+  ],
+  "judgment_calls": [
+    "Two-tier resolution: references resolve to same-package definitions or injected approved sets; unresolved-at-draft is an error (not a pending list), keeping the gate binary and fail-closed.",
+    "Reconciliation records live in canonical packages as optional (examples carry none); decided statuses require the key, undecided forbid it.",
+    "Empty record groups allowed structurally; coverage membership makes emptiness claims honest.",
+    "Attestation/mention/context/profile/localization links across layers resolve only through injected approved sets — enforcing the dependency chain by construction."
+  ],
+  "needs_from_owner": [
+    "Still missing: docs/CURATION_STORAGE_BLUEPRINT.md and CUR_01_AGENT_PROMPT.md with its required-reading list (confirm the assumptions above or supply the docs).",
+    "Suggested next: mention-draft record schema + selector-to-span derivation with grapheme validation (G3), the last blocker before approved content can reach the reader."
+  ],
+  "scope_guard": "Schemas, validation, fixtures, tests only. No content generated, approved, or published; no example corrections.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:cur-01-packages:attempt-1",
+  "data_kind": "code+tests only; synthetic fixtures; real example files read, never written"
+}

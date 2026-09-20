@@ -1,0 +1,157 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:fixture:locale-en:neh-2-1-2",
+  "package_revision": 1,
+  "submission_id": "submission:fixture-locale-en-001:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:fixture-locale-en-001",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": ["scope:fixture-neh-2-1-2"],
+    "reference_keys": ["verse:Neh.2.1", "verse:Neh.2.2"],
+    "language_tag": "en",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "approved:fixture:canonical:neh-2-1-2",
+      "revision": 1,
+      "digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:en:fixture-person",
+        "entity_key": "entity:fixture-person",
+        "language_tag": "en",
+        "preferred_name": "Synthetic Person",
+        "aliases": [],
+        "short_description": {
+          "text": "Synthetic fixture description.",
+          "claim_keys": ["claim:fixture-person-has-role"]
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:en:fixture-neh-2-1-2",
+        "scope_key": "scope:fixture-neh-2-1-2",
+        "language_tag": "en",
+        "orientation": {
+          "who": {
+            "text": "Synthetic fixture text.",
+            "claim_keys": ["claim:fixture-person-has-role"],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:fixture-location"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:fixture-date"
+          },
+          "what": {
+            "text": "Synthetic fixture text.",
+            "claim_keys": ["claim:fixture-person-has-role"],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:fixture-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:fixture-stakes"
+          },
+          "immediate_summary": {
+            "text": "Synthetic fixture text.",
+            "claim_keys": ["claim:fixture-person-has-role"],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:en:fixture-scope-person",
+        "relevance_key": "relevance:fixture-scope-person",
+        "scope_key": "scope:fixture-neh-2-1-2",
+        "entity_key": "entity:fixture-person",
+        "language_tag": "en",
+        "role_text": "Synthetic explanation of why the entity matters.",
+        "claim_keys": ["claim:fixture-person-has-role"],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "blocked",
+          "scope_keys": ["scope:fixture-neh-2-1-2"],
+          "record_keys": ["context:en:fixture-neh-2-1-2"],
+          "blocker_question_keys": [
+            "question:fixture-location",
+            "question:fixture-date",
+            "question:fixture-before",
+            "question:fixture-stakes"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:fixture-location",
+      "question_type": "uncertain_location",
+      "record_key": "context:en:fixture-neh-2-1-2",
+      "field_path": "/records/passage_contexts/0/orientation/where",
+      "question": "Synthetic fixture question.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:fixture-date",
+      "question_type": "uncertain_date",
+      "record_key": "context:en:fixture-neh-2-1-2",
+      "field_path": "/records/passage_contexts/0/orientation/when",
+      "question": "Synthetic fixture question.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:fixture-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:fixture-neh-2-1-2",
+      "field_path": "/records/passage_contexts/0/orientation/before",
+      "question": "Synthetic fixture question.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:fixture-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:fixture-neh-2-1-2",
+      "field_path": "/records/passage_contexts/0/orientation/stakes",
+      "question": "Synthetic fixture question.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": []
+}

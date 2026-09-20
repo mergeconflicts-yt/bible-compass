@@ -1,0 +1,38 @@
+{
+  "attempt_id": "task:curation-examples:attempt-1",
+  "task_id": "CUR-examples",
+  "task_title": "Transcribe canonical/edition/locale example packages",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. The three layered example packages from the editor drafts now exist as validated JSON files under docs/curation-structure/.",
+  "files_changed": [
+    "docs/curation-structure/canonical-package.example.json (filled the empty placeholder: canonical-context-draft with grouped records, coverage, envelope)",
+    "docs/curation-structure/edition-package.example.json (new: translation-mention-draft depending on the approved canonical package)",
+    "docs/curation-structure/locale-package.example.json (new: locale-context-draft with profiles, passage contexts, relevance localizations, blocking questions)"
+  ],
+  "files_not_changed": [
+    "docs/curation-structure/CUR_01_AGENT_PROMPT.md was open in the editor but is absent from the repo — not created (markdown prompt, not JSON; say the word if wanted)",
+    "No schemas, validators, app code, migrations, or pilot drafts touched"
+  ],
+  "commands_executed": [
+    {
+      "command": "python structural verification over the three files",
+      "exit_code": 0,
+      "output": "all parse; identical 19-key envelopes; layers canonical/edition/locale; all dependency digests 64-hex; null-text iff open-question-key holds; edition mention links the canonical attestation; locale blockers ⊆ defined questions"
+    },
+    {
+      "command": "prettier --check docs/curation-structure/*.json",
+      "exit_code": 0,
+      "output": "clean"
+    }
+  ],
+  "divergences_flagged_not_changed": [
+    "Key grammar: fixture:/question:/scope:fixture-*/edition:synthetic-en@fixture-1 namespaces and contract/schema 2.0.0 do not match the ratified Gate A1/A2 identifiers or the implemented 1.0.0 draft-package schemas from T-CUR-01. Transcribed faithfully; reconciling the two models (mapping table or schema extension) is a separate tasked decision.",
+    "question_key uses a question: prefix here vs bare slugs in the 20x pilot drafts and the new openQuestionSchema — same reconciliation as above.",
+    "Locale coverage groups key on scope_keys while canonical/edition groups key on reference_keys — preserved as shown; confirm intentional in the CUR_01 prompt.",
+    "These examples carry no claim records backing their claim_keys (same dangling pattern as the 20x pilot set) — consistent with synthetic-fixture status, nothing approved."
+  ],
+  "scope_guard": "Faithful transcription only. No content approved, no schemas altered, no curation generated.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:curation-examples:attempt-1",
+  "data_kind": "synthetic fixture docs only; no production data"
+}

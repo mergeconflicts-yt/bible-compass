@@ -1,0 +1,5756 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-esth-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-esth-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-esth-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-esth:refsys:eng-v22:esth.1.1-esth.10.3",
+      "scope:wb-esth-1:refsys:eng-v22:esth.1.1-esth.1.22",
+      "scope:wb-esth-2:refsys:eng-v22:esth.2.1-esth.2.23",
+      "scope:wb-esth-3:refsys:eng-v22:esth.3.1-esth.3.15",
+      "scope:wb-esth-4:refsys:eng-v22:esth.4.1-esth.4.17",
+      "scope:wb-esth-5:refsys:eng-v22:esth.5.1-esth.5.14",
+      "scope:wb-esth-6:refsys:eng-v22:esth.6.1-esth.6.14",
+      "scope:wb-esth-7:refsys:eng-v22:esth.7.1-esth.7.10",
+      "scope:wb-esth-8:refsys:eng-v22:esth.8.1-esth.8.17",
+      "scope:wb-esth-9:refsys:eng-v22:esth.9.1-esth.9.32",
+      "scope:wb-esth-10:refsys:eng-v22:esth.10.1-esth.10.3",
+      "scope:wb-esth-1-p1:refsys:eng-v22:esth.1.1-esth.1.8",
+      "scope:wb-esth-1-p2:refsys:eng-v22:esth.1.9-esth.1.12",
+      "scope:wb-esth-1-p3:refsys:eng-v22:esth.1.13-esth.1.22",
+      "scope:wb-esth-2-p1:refsys:eng-v22:esth.2.1-esth.2.4",
+      "scope:wb-esth-2-p2:refsys:eng-v22:esth.2.5-esth.2.16",
+      "scope:wb-esth-2-p3:refsys:eng-v22:esth.2.17-esth.2.20",
+      "scope:wb-esth-2-p4:refsys:eng-v22:esth.2.21-esth.2.23",
+      "scope:wb-esth-3-p1:refsys:eng-v22:esth.3.1-esth.3.15",
+      "scope:wb-esth-4-p1:refsys:eng-v22:esth.4.1-esth.4.17",
+      "scope:wb-esth-5-p1:refsys:eng-v22:esth.5.1-esth.5.8",
+      "scope:wb-esth-5-p2:refsys:eng-v22:esth.5.9-esth.5.14",
+      "scope:wb-esth-6-p1:refsys:eng-v22:esth.6.1-esth.6.14",
+      "scope:wb-esth-7-p1:refsys:eng-v22:esth.7.1-esth.7.6",
+      "scope:wb-esth-7-p2:refsys:eng-v22:esth.7.7-esth.7.10",
+      "scope:wb-esth-8-p1:refsys:eng-v22:esth.8.1-esth.8.6",
+      "scope:wb-esth-8-p2:refsys:eng-v22:esth.8.7-esth.8.17",
+      "scope:wb-esth-9-p1:refsys:eng-v22:esth.9.1-esth.9.10",
+      "scope:wb-esth-9-p2:refsys:eng-v22:esth.9.11-esth.9.17",
+      "scope:wb-esth-9-p3:refsys:eng-v22:esth.9.18-esth.9.32",
+      "scope:wb-esth-10-p1:refsys:eng-v22:esth.10.1-esth.10.3"
+    ],
+    "reference_keys": [
+      "verse:Esth.1.1",
+      "verse:Esth.1.2",
+      "verse:Esth.1.3",
+      "verse:Esth.1.4",
+      "verse:Esth.1.5",
+      "verse:Esth.1.6",
+      "verse:Esth.1.7",
+      "verse:Esth.1.8",
+      "verse:Esth.1.9",
+      "verse:Esth.1.10",
+      "verse:Esth.1.11",
+      "verse:Esth.1.12",
+      "verse:Esth.1.13",
+      "verse:Esth.1.14",
+      "verse:Esth.1.15",
+      "verse:Esth.1.16",
+      "verse:Esth.1.17",
+      "verse:Esth.1.18",
+      "verse:Esth.1.19",
+      "verse:Esth.1.20",
+      "verse:Esth.1.21",
+      "verse:Esth.1.22",
+      "verse:Esth.2.1",
+      "verse:Esth.2.2",
+      "verse:Esth.2.3",
+      "verse:Esth.2.4",
+      "verse:Esth.2.5",
+      "verse:Esth.2.6",
+      "verse:Esth.2.7",
+      "verse:Esth.2.8",
+      "verse:Esth.2.9",
+      "verse:Esth.2.10",
+      "verse:Esth.2.11",
+      "verse:Esth.2.12",
+      "verse:Esth.2.13",
+      "verse:Esth.2.14",
+      "verse:Esth.2.15",
+      "verse:Esth.2.16",
+      "verse:Esth.2.17",
+      "verse:Esth.2.18",
+      "verse:Esth.2.19",
+      "verse:Esth.2.20",
+      "verse:Esth.2.21",
+      "verse:Esth.2.22",
+      "verse:Esth.2.23",
+      "verse:Esth.3.1",
+      "verse:Esth.3.2",
+      "verse:Esth.3.3",
+      "verse:Esth.3.4",
+      "verse:Esth.3.5",
+      "verse:Esth.3.6",
+      "verse:Esth.3.7",
+      "verse:Esth.3.8",
+      "verse:Esth.3.9",
+      "verse:Esth.3.10",
+      "verse:Esth.3.11",
+      "verse:Esth.3.12",
+      "verse:Esth.3.13",
+      "verse:Esth.3.14",
+      "verse:Esth.3.15",
+      "verse:Esth.4.1",
+      "verse:Esth.4.2",
+      "verse:Esth.4.3",
+      "verse:Esth.4.4",
+      "verse:Esth.4.5",
+      "verse:Esth.4.6",
+      "verse:Esth.4.7",
+      "verse:Esth.4.8",
+      "verse:Esth.4.9",
+      "verse:Esth.4.10",
+      "verse:Esth.4.11",
+      "verse:Esth.4.12",
+      "verse:Esth.4.13",
+      "verse:Esth.4.14",
+      "verse:Esth.4.15",
+      "verse:Esth.4.16",
+      "verse:Esth.4.17",
+      "verse:Esth.5.1",
+      "verse:Esth.5.2",
+      "verse:Esth.5.3",
+      "verse:Esth.5.4",
+      "verse:Esth.5.5",
+      "verse:Esth.5.6",
+      "verse:Esth.5.7",
+      "verse:Esth.5.8",
+      "verse:Esth.5.9",
+      "verse:Esth.5.10",
+      "verse:Esth.5.11",
+      "verse:Esth.5.12",
+      "verse:Esth.5.13",
+      "verse:Esth.5.14",
+      "verse:Esth.6.1",
+      "verse:Esth.6.2",
+      "verse:Esth.6.3",
+      "verse:Esth.6.4",
+      "verse:Esth.6.5",
+      "verse:Esth.6.6",
+      "verse:Esth.6.7",
+      "verse:Esth.6.8",
+      "verse:Esth.6.9",
+      "verse:Esth.6.10",
+      "verse:Esth.6.11",
+      "verse:Esth.6.12",
+      "verse:Esth.6.13",
+      "verse:Esth.6.14",
+      "verse:Esth.7.1",
+      "verse:Esth.7.2",
+      "verse:Esth.7.3",
+      "verse:Esth.7.4",
+      "verse:Esth.7.5",
+      "verse:Esth.7.6",
+      "verse:Esth.7.7",
+      "verse:Esth.7.8",
+      "verse:Esth.7.9",
+      "verse:Esth.7.10",
+      "verse:Esth.8.1",
+      "verse:Esth.8.2",
+      "verse:Esth.8.3",
+      "verse:Esth.8.4",
+      "verse:Esth.8.5",
+      "verse:Esth.8.6",
+      "verse:Esth.8.7",
+      "verse:Esth.8.8",
+      "verse:Esth.8.9",
+      "verse:Esth.8.10",
+      "verse:Esth.8.11",
+      "verse:Esth.8.12",
+      "verse:Esth.8.13",
+      "verse:Esth.8.14",
+      "verse:Esth.8.15",
+      "verse:Esth.8.16",
+      "verse:Esth.8.17",
+      "verse:Esth.9.1",
+      "verse:Esth.9.2",
+      "verse:Esth.9.3",
+      "verse:Esth.9.4",
+      "verse:Esth.9.5",
+      "verse:Esth.9.6",
+      "verse:Esth.9.7",
+      "verse:Esth.9.8",
+      "verse:Esth.9.9",
+      "verse:Esth.9.10",
+      "verse:Esth.9.11",
+      "verse:Esth.9.12",
+      "verse:Esth.9.13",
+      "verse:Esth.9.14",
+      "verse:Esth.9.15",
+      "verse:Esth.9.16",
+      "verse:Esth.9.17",
+      "verse:Esth.9.18",
+      "verse:Esth.9.19",
+      "verse:Esth.9.20",
+      "verse:Esth.9.21",
+      "verse:Esth.9.22",
+      "verse:Esth.9.23",
+      "verse:Esth.9.24",
+      "verse:Esth.9.25",
+      "verse:Esth.9.26",
+      "verse:Esth.9.27",
+      "verse:Esth.9.28",
+      "verse:Esth.9.29",
+      "verse:Esth.9.30",
+      "verse:Esth.9.31",
+      "verse:Esth.9.32",
+      "verse:Esth.10.1",
+      "verse:Esth.10.2",
+      "verse:Esth.10.3"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-nebuchadnezzar-1-2-6",
+        "verse_key": "verse:Esth.2.6",
+        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nebuchadnezzar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Nebuchadnezzar",
+          "occurrence_ordinal": 1,
+          "prefix": "e from Jerusalem by ",
+          "suffix": " king of Babylon amo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jehoiachin-1-2-6",
+        "verse_key": "verse:Esth.2.6",
+        "attestation_key": "attestation:wb-p-jehoiachin-1-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jehoiachin-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jeconiah",
+          "occurrence_ordinal": 1,
+          "prefix": " taken captive with ",
+          "suffix": " king of Judah."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-9",
+        "verse_key": "verse:Esth.1.9",
+        "attestation_key": "attestation:wb-p-vashti-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "Queen ",
+          "suffix": " also gave a banquet"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-11",
+        "verse_key": "verse:Esth.1.11",
+        "attestation_key": "attestation:wb-p-vashti-1-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "to bring Queen ",
+          "suffix": " before him, wearing"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-12",
+        "verse_key": "verse:Esth.1.12",
+        "attestation_key": "attestation:wb-p-vashti-1-1-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "Queen ",
+          "suffix": ", however, refused t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-15",
+        "verse_key": "verse:Esth.1.15",
+        "attestation_key": "attestation:wb-p-vashti-1-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": " be done with Queen ",
+          "suffix": ", since she refused "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-16",
+        "verse_key": "verse:Esth.1.16",
+        "attestation_key": "attestation:wb-p-vashti-1-1-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "can replied, “Queen ",
+          "suffix": " has wronged not onl"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-17",
+        "verse_key": "verse:Esth.1.17",
+        "attestation_key": "attestation:wb-p-vashti-1-1-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "erxes ordered Queen ",
+          "suffix": " to be brought befor"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-1-19",
+        "verse_key": "verse:Esth.1.19",
+        "attestation_key": "attestation:wb-p-vashti-1-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "t be repealed, that ",
+          "suffix": " shall never again e"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-2-1",
+        "verse_key": "verse:Esth.2.1",
+        "attestation_key": "attestation:wb-p-vashti-1-2-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "ided, he remembered ",
+          "suffix": " and what she had do"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-2-4",
+        "verse_key": "verse:Esth.2.4",
+        "attestation_key": "attestation:wb-p-vashti-1-2-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "e queen in place of ",
+          "suffix": ".” This suggestion p"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vashti-1-2-17",
+        "verse_key": "verse:Esth.2.17",
+        "attestation_key": "attestation:wb-p-vashti-1-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vashti-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vashti",
+          "occurrence_ordinal": 1,
+          "prefix": "r queen in place of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mehuman-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-mehuman-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mehuman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mehuman",
+          "occurrence_ordinal": 1,
+          "prefix": "uchs who served him—",
+          "suffix": ", Biztha, Harbona, B"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-biztha-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-biztha-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-biztha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Biztha",
+          "occurrence_ordinal": 1,
+          "prefix": "served him—Mehuman, ",
+          "suffix": ", Harbona, Bigtha, A"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-harbona-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-harbona-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-harbona-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Harbona",
+          "occurrence_ordinal": 1,
+          "prefix": "im—Mehuman, Biztha, ",
+          "suffix": ", Bigtha, Abagtha, Z"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-harbona-1-7-9",
+        "verse_key": "verse:Esth.7.9",
+        "attestation_key": "attestation:wb-p-harbona-1-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-harbona-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Harbonah",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": ", one of the eunuchs"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-bigtha-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-bigtha-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-bigtha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Bigtha",
+          "occurrence_ordinal": 1,
+          "prefix": "n, Biztha, Harbona, ",
+          "suffix": ", Abagtha, Zethar, a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abagtha-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-abagtha-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abagtha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abagtha",
+          "occurrence_ordinal": 1,
+          "prefix": "a, Harbona, Bigtha, ",
+          "suffix": ", Zethar, and Carkas"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zethar-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-zethar-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zethar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zethar",
+          "occurrence_ordinal": 1,
+          "prefix": "a, Bigtha, Abagtha, ",
+          "suffix": ", and Carkas—"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-carkas-1-1-10",
+        "verse_key": "verse:Esth.1.10",
+        "attestation_key": "attestation:wb-p-carkas-1-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-carkas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Carkas",
+          "occurrence_ordinal": 1,
+          "prefix": "bagtha, Zethar, and ",
+          "suffix": "—"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-carshena-1-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-carshena-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-carshena-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Carshena",
+          "occurrence_ordinal": 1,
+          "prefix": "osest advisors were ",
+          "suffix": ", Shethar, Admatha, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-shethar-1-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-shethar-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-shethar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Shethar",
+          "occurrence_ordinal": 1,
+          "prefix": "sors were Carshena, ",
+          "suffix": ", Admatha, Tarshish,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-admatha-1-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-admatha-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-admatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Admatha",
+          "occurrence_ordinal": 1,
+          "prefix": " Carshena, Shethar, ",
+          "suffix": ", Tarshish, Meres, M"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-tarshish-3-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-tarshish-3-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-tarshish-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tarshish",
+          "occurrence_ordinal": 1,
+          "prefix": ", Shethar, Admatha, ",
+          "suffix": ", Meres, Marsena, an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-meres-1-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-meres-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-meres-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Meres",
+          "occurrence_ordinal": 1,
+          "prefix": " Admatha, Tarshish, ",
+          "suffix": ", Marsena, and Memuc"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-marsena-1-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-marsena-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-marsena-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Marsena",
+          "occurrence_ordinal": 1,
+          "prefix": "a, Tarshish, Meres, ",
+          "suffix": ", and Memucan, the s"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-memucan-1-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-p-memucan-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-memucan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Memucan",
+          "occurrence_ordinal": 1,
+          "prefix": "Meres, Marsena, and ",
+          "suffix": ", the seven princes "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-memucan-1-1-16",
+        "verse_key": "verse:Esth.1.16",
+        "attestation_key": "attestation:wb-p-memucan-1-1-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-memucan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Memucan",
+          "occurrence_ordinal": 1,
+          "prefix": "ng and his princes, ",
+          "suffix": " replied, “Queen Vas"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-memucan-1-1-21",
+        "verse_key": "verse:Esth.1.21",
+        "attestation_key": "attestation:wb-p-memucan-1-1-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-memucan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Memucan",
+          "occurrence_ordinal": 1,
+          "prefix": " so the king did as ",
+          "suffix": " had advised."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hegai-1-2-3",
+        "verse_key": "verse:Esth.2.3",
+        "attestation_key": "attestation:wb-p-hegai-1-2-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hegai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hegai",
+          "occurrence_ordinal": 1,
+          "prefix": "d under the care of ",
+          "suffix": ", the king’s eunuch "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hegai-1-2-8",
+        "verse_key": "verse:Esth.2.8",
+        "attestation_key": "attestation:wb-p-hegai-1-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hegai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hegai",
+          "occurrence_ordinal": 1,
+          "prefix": "a under the care of ",
+          "suffix": ". Esther was also ta"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hegai-1-2-15",
+        "verse_key": "verse:Esth.2.15",
+        "attestation_key": "attestation:wb-p-hegai-1-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hegai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hegai",
+          "occurrence_ordinal": 1,
+          "prefix": "nything except what ",
+          "suffix": ", the king’s trusted"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "e of Benjamin named ",
+          "suffix": " son of Jair, the so"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-7",
+        "verse_key": "verse:Esth.2.7",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " had brought up Hada"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-10",
+        "verse_key": "verse:Esth.2.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "er lineage, because ",
+          "suffix": " had instructed her "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-11",
+        "verse_key": "verse:Esth.2.11",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "And every day ",
+          "suffix": " would walk back and"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-15",
+        "verse_key": "verse:Esth.2.15",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "the uncle from whom ",
+          "suffix": " had adopted her as "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-19",
+        "verse_key": "verse:Esth.2.19",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "bled a second time, ",
+          "suffix": " was sitting at the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-20",
+        "verse_key": "verse:Esth.2.20",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "her people, just as ",
+          "suffix": " had instructed. She"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-21",
+        "verse_key": "verse:Esth.2.21",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "n those days, while ",
+          "suffix": " was sitting at the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-22",
+        "verse_key": "verse:Esth.2.22",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "When ",
+          "suffix": " learned of the plot"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-2",
+        "verse_key": "verse:Esth.3.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "e done for him. But ",
+          "suffix": " would not bow down "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-3",
+        "verse_key": "verse:Esth.3.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "e king’s gate asked ",
+          "suffix": ", “Why do you disobe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-4",
+        "verse_key": "verse:Esth.3.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "aman to see whether ",
+          "suffix": "’s behavior would be"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-5",
+        "verse_key": "verse:Esth.3.5",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "When Haman saw that ",
+          "suffix": " would not bow down "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-6",
+        "verse_key": "verse:Esth.3.6",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "ned the identity of ",
+          "suffix": "’s people, he scorne"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-1",
+        "verse_key": "verse:Esth.4.1",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "When ",
+          "suffix": " learned of all that"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-4",
+        "verse_key": "verse:Esth.4.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": " and told her about ",
+          "suffix": ", the queen was over"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-5",
+        "verse_key": "verse:Esth.4.5",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "e dispatched him to ",
+          "suffix": " to learn what was t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-6",
+        "verse_key": "verse:Esth.4.6",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "Hathach went out to ",
+          "suffix": " in the city square "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-7",
+        "verse_key": "verse:Esth.4.7",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "and ",
+          "suffix": " told him all that h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-9",
+        "verse_key": "verse:Esth.4.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "nt back and relayed ",
+          "suffix": "’s response to Esthe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-10",
+        "verse_key": "verse:Esth.4.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "tructed him to tell ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-12",
+        "verse_key": "verse:Esth.4.12",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "rds were relayed to ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-15",
+        "verse_key": "verse:Esth.4.15",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": " sent this reply to ",
+          "suffix": ":"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-17",
+        "verse_key": "verse:Esth.4.17",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "So ",
+          "suffix": " went and did all th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-5-9",
+        "verse_key": "verse:Esth.5.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-5-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "te, however, he saw ",
+          "suffix": ", who did not rise o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-5-13",
+        "verse_key": "verse:Esth.5.13",
+        "attestation_key": "attestation:wb-p-mordecai-2-5-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "me as long as I see ",
+          "suffix": " the Jew sitting at "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-5-14",
+        "verse_key": "verse:Esth.5.14",
+        "attestation_key": "attestation:wb-p-mordecai-2-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "the morning to have ",
+          "suffix": " hanged on it. Then "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-2",
+        "verse_key": "verse:Esth.6.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "found recorded that ",
+          "suffix": " had exposed Bigthan"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-3",
+        "verse_key": "verse:Esth.6.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "as been bestowed on ",
+          "suffix": " for this act?” “Not"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-4",
+        "verse_key": "verse:Esth.6.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "sk the king to hang ",
+          "suffix": " on the gallows he h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-10",
+        "verse_key": "verse:Esth.6.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "be and the horse to ",
+          "suffix": " the Jew, who is sit"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-11",
+        "verse_key": "verse:Esth.6.11",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": " the horse, arrayed ",
+          "suffix": ", and paraded him th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-12",
+        "verse_key": "verse:Esth.6.12",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": " returned to the kin"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-13",
+        "verse_key": "verse:Esth.6.13",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "said to him, “Since ",
+          "suffix": ", before whom your d"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-7-9",
+        "verse_key": "verse:Esth.7.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "He had it built for ",
+          "suffix": ", who gave the repor"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-7-10",
+        "verse_key": "verse:Esth.7.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "he had prepared for ",
+          "suffix": ". Then the fury of t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "my of the Jews. And ",
+          "suffix": " entered the king’s "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-2",
+        "verse_key": "verse:Esth.8.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "and presented it to ",
+          "suffix": ". And Esther appoint"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "sther the Queen and ",
+          "suffix": " the Jew, “Behold, I"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-9",
+        "verse_key": "verse:Esth.8.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "hey recorded all of ",
+          "suffix": "’s orders to the Jew"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-15",
+        "verse_key": "verse:Esth.8.15",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " went out from the p"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-3",
+        "verse_key": "verse:Esth.9.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "because the fear of ",
+          "suffix": " had fallen upon the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-4",
+        "verse_key": "verse:Esth.9.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "For ",
+          "suffix": " exercised great pow"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-20",
+        "verse_key": "verse:Esth.9.20",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " recorded these even"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-23",
+        "verse_key": "verse:Esth.9.23",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "hey had started, as ",
+          "suffix": " had written to them"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-29",
+        "verse_key": "verse:Esth.9.29",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "Abihail, along with ",
+          "suffix": " the Jew, wrote with"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-31",
+        "verse_key": "verse:Esth.9.31",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "inted time, just as ",
+          "suffix": " the Jew and Queen E"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-10-2",
+        "verse_key": "verse:Esth.10.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-10-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "And all of ",
+          "suffix": "’s powerful and magn"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-10-3",
+        "verse_key": "verse:Esth.10.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-10-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mordecai",
+          "occurrence_ordinal": 1,
+          "prefix": "For ",
+          "suffix": " the Jew was second "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jair-3-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-p-jair-3-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jair-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jair",
+          "occurrence_ordinal": 1,
+          "prefix": "med Mordecai son of ",
+          "suffix": ", the son of Shimei,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-shimei-17-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-p-shimei-17-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-shimei-17"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Shimei",
+          "occurrence_ordinal": 1,
+          "prefix": "of Jair, the son of ",
+          "suffix": ", the son of Kish."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-kish-4-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-p-kish-4-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-kish-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Kish",
+          "occurrence_ordinal": 1,
+          "prefix": " Shimei, the son of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-7",
+        "verse_key": "verse:Esth.2.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hadassah",
+          "occurrence_ordinal": 1,
+          "prefix": "ecai had brought up ",
+          "suffix": " (that is, Esther), "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-8",
+        "verse_key": "verse:Esth.2.8",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": " the care of Hegai. ",
+          "suffix": " was also taken to t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-10",
+        "verse_key": "verse:Esth.2.10",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " did not reveal her "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-11",
+        "verse_key": "verse:Esth.2.11",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "arem to learn about ",
+          "suffix": "’s welfare and what "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-15",
+        "verse_key": "verse:Esth.2.15",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "Now ",
+          "suffix": " was the daughter of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-17",
+        "verse_key": "verse:Esth.2.17",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "And the king loved ",
+          "suffix": " more than all the o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-18",
+        "verse_key": "verse:Esth.2.18",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "ld a great banquet, ",
+          "suffix": "’s banquet, for all "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-20",
+        "verse_key": "verse:Esth.2.20",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " still had not revea"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-22",
+        "verse_key": "verse:Esth.2.22",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "eported it to Queen ",
+          "suffix": ", and she informed t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-4",
+        "verse_key": "verse:Esth.4.4",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "When ",
+          "suffix": "’s maidens and eunuc"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-5",
+        "verse_key": "verse:Esth.4.5",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": " summoned Hathach, o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-8",
+        "verse_key": "verse:Esth.4.8",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "show and explain to ",
+          "suffix": ", urging her to appr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-9",
+        "verse_key": "verse:Esth.4.9",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "decai’s response to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-10",
+        "verse_key": "verse:Esth.4.10",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": " spoke to Hathach an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-12",
+        "verse_key": "verse:Esth.4.12",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "When ",
+          "suffix": "’s words were relaye"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-15",
+        "verse_key": "verse:Esth.4.15",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": " sent this reply to "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-17",
+        "verse_key": "verse:Esth.4.17",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "nt and did all that ",
+          "suffix": " had instructed him."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-1",
+        "verse_key": "verse:Esth.5.1",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "On the third day, ",
+          "suffix": " put on her royal at"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-2",
+        "verse_key": "verse:Esth.5.2",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": " the king saw Queen ",
+          "suffix": " standing in the cou"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-3",
+        "verse_key": "verse:Esth.5.3",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "“What is it, Queen ",
+          "suffix": "?” the king inquired"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-4",
+        "verse_key": "verse:Esth.5.4",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": " pleases the king,” ",
+          "suffix": " replied, “may the k"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-5",
+        "verse_key": "verse:Esth.5.5",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "an, so we can do as ",
+          "suffix": " has requested.” So "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-6",
+        "verse_key": "verse:Esth.5.6",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "e, the king said to ",
+          "suffix": ", “What is your peti"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-7",
+        "verse_key": "verse:Esth.5.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " replied, “This is m"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-12",
+        "verse_key": "verse:Esth.5.12",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "Haman added, “Queen ",
+          "suffix": " invited no one but "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-6-14",
+        "verse_key": "verse:Esth.6.14",
+        "attestation_key": "attestation:wb-p-hadassah-1-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "to the banquet that ",
+          "suffix": " had prepared."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-1",
+        "verse_key": "verse:Esth.7.1",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "n went to dine with ",
+          "suffix": " the queen,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-2",
+        "verse_key": "verse:Esth.7.2",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "d once more, “Queen ",
+          "suffix": ", what is your petit"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-3",
+        "verse_key": "verse:Esth.7.3",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "Queen ",
+          "suffix": " replied, “If I have"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-5",
+        "verse_key": "verse:Esth.7.5",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": " up and asked Queen ",
+          "suffix": ", “Who is this, and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-6",
+        "verse_key": "verse:Esth.7.6",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " replied, “The adver"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-7",
+        "verse_key": "verse:Esth.7.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "behind to beg Queen ",
+          "suffix": " for his life, for h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-8",
+        "verse_key": "verse:Esth.7.8",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": " on the couch where ",
+          "suffix": " was reclining. The "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "erxes awarded Queen ",
+          "suffix": " the estate of Haman"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-2",
+        "verse_key": "verse:Esth.8.2",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "it to Mordecai. And ",
+          "suffix": " appointed Mordecai "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-3",
+        "verse_key": "verse:Esth.8.3",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "And once again, ",
+          "suffix": " addressed the king."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-4",
+        "verse_key": "verse:Esth.8.4",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "gold scepter toward ",
+          "suffix": ", and she arose and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "King Xerxes said to ",
+          "suffix": " the Queen and Morde"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-12",
+        "verse_key": "verse:Esth.9.12",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "who said to Queen ",
+          "suffix": ", “In the citadel of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-13",
+        "verse_key": "verse:Esth.9.13",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " replied, “If it ple"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-29",
+        "verse_key": "verse:Esth.9.29",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "So Queen ",
+          "suffix": " daughter of Abihail"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-31",
+        "verse_key": "verse:Esth.9.31",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "i the Jew and Queen ",
+          "suffix": " had established the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-32",
+        "verse_key": "verse:Esth.9.32",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esther",
+          "occurrence_ordinal": 1,
+          "prefix": "So ",
+          "suffix": "’s decree confirmed "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-shaashgaz-1-2-14",
+        "verse_key": "verse:Esth.2.14",
+        "attestation_key": "attestation:wb-p-shaashgaz-1-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-shaashgaz-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Shaashgaz",
+          "occurrence_ordinal": 1,
+          "prefix": "m under the care of ",
+          "suffix": ", the king’s eunuch "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abihail-5-2-15",
+        "verse_key": "verse:Esth.2.15",
+        "attestation_key": "attestation:wb-p-abihail-5-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abihail-5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abihail",
+          "occurrence_ordinal": 1,
+          "prefix": "was the daughter of ",
+          "suffix": ", the uncle from who"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abihail-5-9-29",
+        "verse_key": "verse:Esth.9.29",
+        "attestation_key": "attestation:wb-p-abihail-5-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abihail-5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abihail",
+          "occurrence_ordinal": 1,
+          "prefix": " Esther daughter of ",
+          "suffix": ", along with Mordeca"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-bigthan-1-2-21",
+        "verse_key": "verse:Esth.2.21",
+        "attestation_key": "attestation:wb-p-bigthan-1-2-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-bigthan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Bigthan",
+          "occurrence_ordinal": 1,
+          "prefix": "at the king’s gate, ",
+          "suffix": " and Teresh, two of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-bigthan-1-6-2",
+        "verse_key": "verse:Esth.6.2",
+        "attestation_key": "attestation:wb-p-bigthan-1-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-bigthan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Bigthana",
+          "occurrence_ordinal": 1,
+          "prefix": "ordecai had exposed ",
+          "suffix": " and Teresh, two of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-teresh-1-2-21",
+        "verse_key": "verse:Esth.2.21",
+        "attestation_key": "attestation:wb-p-teresh-1-2-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-teresh-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Teresh",
+          "occurrence_ordinal": 1,
+          "prefix": "s gate, Bigthan and ",
+          "suffix": ", two of the king’s "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-teresh-1-6-2",
+        "verse_key": "verse:Esth.6.2",
+        "attestation_key": "attestation:wb-p-teresh-1-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-teresh-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Teresh",
+          "occurrence_ordinal": 1,
+          "prefix": "xposed Bigthana and ",
+          "suffix": ", two of the eunuchs"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-1",
+        "verse_key": "verse:Esth.3.1",
+        "attestation_key": "attestation:wb-p-haman-1-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "King Xerxes honored ",
+          "suffix": " son of Hammedatha, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-2",
+        "verse_key": "verse:Esth.3.2",
+        "attestation_key": "attestation:wb-p-haman-1-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": " and paid homage to ",
+          "suffix": ", because the king h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-4",
+        "verse_key": "verse:Esth.3.4",
+        "attestation_key": "attestation:wb-p-haman-1-3-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "they reported it to ",
+          "suffix": " to see whether Mord"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-5",
+        "verse_key": "verse:Esth.3.5",
+        "attestation_key": "attestation:wb-p-haman-1-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "When ",
+          "suffix": " saw that Mordecai w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-7",
+        "verse_key": "verse:Esth.3.7",
+        "attestation_key": "attestation:wb-p-haman-1-3-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "ot) was cast before ",
+          "suffix": " to determine a day "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-8",
+        "verse_key": "verse:Esth.3.8",
+        "attestation_key": "attestation:wb-p-haman-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": " informed King Xerxe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-10",
+        "verse_key": "verse:Esth.3.10",
+        "attestation_key": "attestation:wb-p-haman-1-3-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "nger and gave it to ",
+          "suffix": " son of Hammedatha, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-11",
+        "verse_key": "verse:Esth.3.11",
+        "attestation_key": "attestation:wb-p-haman-1-3-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": ",” said the king to ",
+          "suffix": ". “These people are "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-12",
+        "verse_key": "verse:Esth.3.12",
+        "attestation_key": "attestation:wb-p-haman-1-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": " written exactly as ",
+          "suffix": " commanded the royal"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-15",
+        "verse_key": "verse:Esth.3.15",
+        "attestation_key": "attestation:wb-p-haman-1-3-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": ". Then the king and ",
+          "suffix": " sat down to drink, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-4-7",
+        "verse_key": "verse:Esth.4.7",
+        "attestation_key": "attestation:wb-p-haman-1-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "mount of money that ",
+          "suffix": " had promised to pay"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-4",
+        "verse_key": "verse:Esth.5.4",
+        "attestation_key": "attestation:wb-p-haman-1-5-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": ", “may the king and ",
+          "suffix": " come today to the b"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-5",
+        "verse_key": "verse:Esth.5.5",
+        "attestation_key": "attestation:wb-p-haman-1-5-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "he king, “and bring ",
+          "suffix": ", so we can do as Es"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-8",
+        "verse_key": "verse:Esth.5.8",
+        "attestation_key": "attestation:wb-p-haman-1-5-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "t, may the king and ",
+          "suffix": " come tomorrow to th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-9",
+        "verse_key": "verse:Esth.5.9",
+        "attestation_key": "attestation:wb-p-haman-1-5-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "That day ",
+          "suffix": " went out full of jo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-10",
+        "verse_key": "verse:Esth.5.10",
+        "attestation_key": "attestation:wb-p-haman-1-5-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "Nevertheless, ",
+          "suffix": " restrained himself "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-11",
+        "verse_key": "verse:Esth.5.11",
+        "attestation_key": "attestation:wb-p-haman-1-5-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " recounted to them h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-12",
+        "verse_key": "verse:Esth.5.12",
+        "attestation_key": "attestation:wb-p-haman-1-5-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "“What is more,” ",
+          "suffix": " added, “Queen Esthe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-14",
+        "verse_key": "verse:Esth.5.14",
+        "attestation_key": "attestation:wb-p-haman-1-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": " The advice pleased ",
+          "suffix": ", and he had the gal"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-4",
+        "verse_key": "verse:Esth.6.4",
+        "attestation_key": "attestation:wb-p-haman-1-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "the king asked. Now ",
+          "suffix": " had just entered th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-5",
+        "verse_key": "verse:Esth.6.5",
+        "attestation_key": "attestation:wb-p-haman-1-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "ants answered him, “",
+          "suffix": " is there, standing "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-6",
+        "verse_key": "verse:Esth.6.6",
+        "attestation_key": "attestation:wb-p-haman-1-6-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " entered, and the ki"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-7",
+        "verse_key": "verse:Esth.6.7",
+        "attestation_key": "attestation:wb-p-haman-1-6-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " told the king, “For"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-10",
+        "verse_key": "verse:Esth.6.10",
+        "attestation_key": "attestation:wb-p-haman-1-6-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": ",” said the king to ",
+          "suffix": ", “and do just as yo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-11",
+        "verse_key": "verse:Esth.6.11",
+        "attestation_key": "attestation:wb-p-haman-1-6-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "So ",
+          "suffix": " took the robe and t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-12",
+        "verse_key": "verse:Esth.6.12",
+        "attestation_key": "attestation:wb-p-haman-1-6-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "he king’s gate. But ",
+          "suffix": " rushed home, with h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-13",
+        "verse_key": "verse:Esth.6.13",
+        "attestation_key": "attestation:wb-p-haman-1-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " told his wife Zeres"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-14",
+        "verse_key": "verse:Esth.6.14",
+        "attestation_key": "attestation:wb-p-haman-1-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "still speaking with ",
+          "suffix": ", the king’s eunuchs"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-1",
+        "verse_key": "verse:Esth.7.1",
+        "attestation_key": "attestation:wb-p-haman-1-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "So the king and ",
+          "suffix": " went to dine with E"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-6",
+        "verse_key": "verse:Esth.7.6",
+        "attestation_key": "attestation:wb-p-haman-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": " is this wicked man—",
+          "suffix": "!” And Haman stood i"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-7",
+        "verse_key": "verse:Esth.7.7",
+        "attestation_key": "attestation:wb-p-haman-1-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "alace garden, while ",
+          "suffix": " stayed behind to be"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-8",
+        "verse_key": "verse:Esth.7.8",
+        "attestation_key": "attestation:wb-p-haman-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "o the banquet hall, ",
+          "suffix": " was falling on the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-9",
+        "verse_key": "verse:Esth.7.9",
+        "attestation_key": "attestation:wb-p-haman-1-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "ifty cubits high at ",
+          "suffix": "’s house. He had it "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-10",
+        "verse_key": "verse:Esth.7.10",
+        "attestation_key": "attestation:wb-p-haman-1-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "So they hanged ",
+          "suffix": " on the gallows he h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-haman-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "sther the estate of ",
+          "suffix": ", the enemy of the J"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-2",
+        "verse_key": "verse:Esth.8.2",
+        "attestation_key": "attestation:wb-p-haman-1-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": " had recovered from ",
+          "suffix": " and presented it to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-3",
+        "verse_key": "verse:Esth.8.3",
+        "attestation_key": "attestation:wb-p-haman-1-8-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": " the evil scheme of ",
+          "suffix": " the Agagite, which "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-5",
+        "verse_key": "verse:Esth.8.5",
+        "attestation_key": "attestation:wb-p-haman-1-8-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "s that the scheming ",
+          "suffix": " son of Hammedatha, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-haman-1-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "ehold, I have given ",
+          "suffix": "’s estate to Esther,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-10",
+        "verse_key": "verse:Esth.9.10",
+        "attestation_key": "attestation:wb-p-haman-1-9-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "d these ten sons of ",
+          "suffix": " son of Hammedatha, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-12",
+        "verse_key": "verse:Esth.9.12",
+        "attestation_key": "attestation:wb-p-haman-1-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "dred men, including ",
+          "suffix": "’s ten sons. What ha"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-13",
+        "verse_key": "verse:Esth.9.13",
+        "attestation_key": "attestation:wb-p-haman-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "d may the bodies of ",
+          "suffix": "’s ten sons be hange"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-14",
+        "verse_key": "verse:Esth.9.14",
+        "attestation_key": "attestation:wb-p-haman-1-9-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "ged the ten sons of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-24",
+        "verse_key": "verse:Esth.9.24",
+        "attestation_key": "attestation:wb-p-haman-1-9-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Haman",
+          "occurrence_ordinal": 1,
+          "prefix": "For ",
+          "suffix": " son of Hammedatha, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hammedatha-1-3-1",
+        "verse_key": "verse:Esth.3.1",
+        "attestation_key": "attestation:wb-p-hammedatha-1-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hammedatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hammedatha",
+          "occurrence_ordinal": 1,
+          "prefix": "onored Haman son of ",
+          "suffix": ", the Agagite, eleva"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hammedatha-1-3-10",
+        "verse_key": "verse:Esth.3.10",
+        "attestation_key": "attestation:wb-p-hammedatha-1-3-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hammedatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hammedatha",
+          "occurrence_ordinal": 1,
+          "prefix": " it to Haman son of ",
+          "suffix": ", the Agagite, the e"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hammedatha-1-8-5",
+        "verse_key": "verse:Esth.8.5",
+        "attestation_key": "attestation:wb-p-hammedatha-1-8-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hammedatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hammedatha",
+          "occurrence_ordinal": 1,
+          "prefix": "heming Haman son of ",
+          "suffix": ", the Agagite, wrote"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hammedatha-1-9-10",
+        "verse_key": "verse:Esth.9.10",
+        "attestation_key": "attestation:wb-p-hammedatha-1-9-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hammedatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hammedatha",
+          "occurrence_ordinal": 1,
+          "prefix": "ons of Haman son of ",
+          "suffix": ", the enemy of the J"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hammedatha-1-9-24",
+        "verse_key": "verse:Esth.9.24",
+        "attestation_key": "attestation:wb-p-hammedatha-1-9-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hammedatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hammedatha",
+          "occurrence_ordinal": 1,
+          "prefix": "For Haman son of ",
+          "suffix": ", the Agagite, the e"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hathach-1-4-5",
+        "verse_key": "verse:Esth.4.5",
+        "attestation_key": "attestation:wb-p-hathach-1-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hathach-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hathach",
+          "occurrence_ordinal": 1,
+          "prefix": "hen Esther summoned ",
+          "suffix": ", one of the king’s "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hathach-1-4-6",
+        "verse_key": "verse:Esth.4.6",
+        "attestation_key": "attestation:wb-p-hathach-1-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hathach-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hathach",
+          "occurrence_ordinal": 1,
+          "prefix": "So ",
+          "suffix": " went out to Mordeca"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hathach-1-4-9",
+        "verse_key": "verse:Esth.4.9",
+        "attestation_key": "attestation:wb-p-hathach-1-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hathach-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hathach",
+          "occurrence_ordinal": 1,
+          "prefix": "So ",
+          "suffix": " went back and relay"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hathach-1-4-10",
+        "verse_key": "verse:Esth.4.10",
+        "attestation_key": "attestation:wb-p-hathach-1-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hathach-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hathach",
+          "occurrence_ordinal": 1,
+          "prefix": "hen Esther spoke to ",
+          "suffix": " and instructed him "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zeresh-1-5-10",
+        "verse_key": "verse:Esth.5.10",
+        "attestation_key": "attestation:wb-p-zeresh-1-5-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zeresh-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zeresh",
+          "occurrence_ordinal": 1,
+          "prefix": "riends and his wife ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zeresh-1-5-14",
+        "verse_key": "verse:Esth.5.14",
+        "attestation_key": "attestation:wb-p-zeresh-1-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zeresh-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zeresh",
+          "occurrence_ordinal": 1,
+          "prefix": "His wife ",
+          "suffix": " and all his friends"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zeresh-1-6-13",
+        "verse_key": "verse:Esth.6.13",
+        "attestation_key": "attestation:wb-p-zeresh-1-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zeresh-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zeresh",
+          "occurrence_ordinal": 1,
+          "prefix": "Haman told his wife ",
+          "suffix": " and all his friends"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-parshandatha-1-9-7",
+        "verse_key": "verse:Esth.9.7",
+        "attestation_key": "attestation:wb-p-parshandatha-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-parshandatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Parshandatha",
+          "occurrence_ordinal": 1,
+          "prefix": "including ",
+          "suffix": ", Dalphon, Aspatha,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-dalphon-1-9-7",
+        "verse_key": "verse:Esth.9.7",
+        "attestation_key": "attestation:wb-p-dalphon-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-dalphon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Dalphon",
+          "occurrence_ordinal": 1,
+          "prefix": "uding Parshandatha, ",
+          "suffix": ", Aspatha,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aspatha-1-9-7",
+        "verse_key": "verse:Esth.9.7",
+        "attestation_key": "attestation:wb-p-aspatha-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aspatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aspatha",
+          "occurrence_ordinal": 1,
+          "prefix": "shandatha, Dalphon, ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-poratha-1-9-8",
+        "verse_key": "verse:Esth.9.8",
+        "attestation_key": "attestation:wb-p-poratha-1-9-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-poratha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Poratha",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", Adalia, Aridatha,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-adalia-1-9-8",
+        "verse_key": "verse:Esth.9.8",
+        "attestation_key": "attestation:wb-p-adalia-1-9-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-adalia-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Adalia",
+          "occurrence_ordinal": 1,
+          "prefix": "Poratha, ",
+          "suffix": ", Aridatha,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aridatha-1-9-8",
+        "verse_key": "verse:Esth.9.8",
+        "attestation_key": "attestation:wb-p-aridatha-1-9-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aridatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aridatha",
+          "occurrence_ordinal": 1,
+          "prefix": "Poratha, Adalia, ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-parmashta-1-9-9",
+        "verse_key": "verse:Esth.9.9",
+        "attestation_key": "attestation:wb-p-parmashta-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-parmashta-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Parmashta",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", Arisai, Aridai, an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-arisai-1-9-9",
+        "verse_key": "verse:Esth.9.9",
+        "attestation_key": "attestation:wb-p-arisai-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-arisai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Arisai",
+          "occurrence_ordinal": 1,
+          "prefix": "Parmashta, ",
+          "suffix": ", Aridai, and Vaizat"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aridai-1-9-9",
+        "verse_key": "verse:Esth.9.9",
+        "attestation_key": "attestation:wb-p-aridai-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aridai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aridai",
+          "occurrence_ordinal": 1,
+          "prefix": "Parmashta, Arisai, ",
+          "suffix": ", and Vaizatha."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-vaizatha-1-9-9",
+        "verse_key": "verse:Esth.9.9",
+        "attestation_key": "attestation:wb-p-vaizatha-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-vaizatha-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Vaizatha",
+          "occurrence_ordinal": 1,
+          "prefix": "Arisai, Aridai, and ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-india-a878481-1-1",
+        "verse_key": "verse:Esth.1.1",
+        "attestation_key": "attestation:wb-pl-india-a878481-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-india-a878481"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "India",
+          "occurrence_ordinal": 1,
+          "prefix": " 127 provinces from ",
+          "suffix": " to Cush."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-india-a878481-8-9",
+        "verse_key": "verse:Esth.8.9",
+        "attestation_key": "attestation:wb-pl-india-a878481-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-india-a878481"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "India",
+          "occurrence_ordinal": 1,
+          "prefix": " 127 provinces from ",
+          "suffix": " to Cush —writing to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-2-6",
+        "verse_key": "verse:Esth.2.6",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "ied into exile from ",
+          "suffix": " by Nebuchadnezzar k"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-media-ad2fadf-1-3",
+        "verse_key": "verse:Esth.1.3",
+        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-media-ad2fadf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Media",
+          "occurrence_ordinal": 1,
+          "prefix": "aders of Persia and ",
+          "suffix": " were there, along w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-media-ad2fadf-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-media-ad2fadf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Media",
+          "occurrence_ordinal": 1,
+          "prefix": "inces of Persia and ",
+          "suffix": " who had personal ac"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-media-ad2fadf-1-18",
+        "verse_key": "verse:Esth.1.18",
+        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-media-ad2fadf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Media",
+          "occurrence_ordinal": 1,
+          "prefix": "women of Persia and ",
+          "suffix": " who have heard abou"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-media-ad2fadf-1-19",
+        "verse_key": "verse:Esth.1.19",
+        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-media-ad2fadf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Media",
+          "occurrence_ordinal": 1,
+          "prefix": " laws of Persia and ",
+          "suffix": " so that it cannot b"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-media-ad2fadf-10-2",
+        "verse_key": "verse:Esth.10.2",
+        "attestation_key": "attestation:wb-pl-media-ad2fadf-10-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-media-ad2fadf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Media",
+          "occurrence_ordinal": 1,
+          "prefix": "les of the Kings of ",
+          "suffix": " and Persia?"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-3",
+        "verse_key": "verse:Esth.1.3",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 1,
+          "prefix": "military leaders of ",
+          "suffix": " and Media were ther"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 1,
+          "prefix": "he seven princes of ",
+          "suffix": " and Media who had p"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-18",
+        "verse_key": "verse:Esth.1.18",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 1,
+          "prefix": " the noble women of ",
+          "suffix": " and Media who have "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-19",
+        "verse_key": "verse:Esth.1.19",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 1,
+          "prefix": "rded in the laws of ",
+          "suffix": " and Media so that i"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-10-2",
+        "verse_key": "verse:Esth.10.2",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 1,
+          "prefix": " Kings of Media and ",
+          "suffix": "?"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-1-2",
+        "verse_key": "verse:Esth.1.2",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "e in the citadel of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-1-5",
+        "verse_key": "verse:Esth.1.5",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "e in the citadel of ",
+          "suffix": ", from the least to "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-2-3",
+        "verse_key": "verse:Esth.2.3",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-2-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "m at the citadel of ",
+          "suffix": ". Let them be placed"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "s at the citadel of ",
+          "suffix": " a Jewish man from t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-2-8",
+        "verse_key": "verse:Esth.2.8",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "d at the citadel of ",
+          "suffix": " under the care of H"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-3-15",
+        "verse_key": "verse:Esth.3.15",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-3-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "d in the citadel of ",
+          "suffix": ". Then the king and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-4-8",
+        "verse_key": "verse:Esth.4.8",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "en decree issued in ",
+          "suffix": " for the destruction"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-4-16",
+        "verse_key": "verse:Esth.4.16",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-4-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "who can be found in ",
+          "suffix": ", and fast for me. D"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-8-14",
+        "verse_key": "verse:Esth.8.14",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "d in the citadel of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-8-15",
+        "verse_key": "verse:Esth.8.15",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-8-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "en. And the city of ",
+          "suffix": " shouted and rejoice"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-6",
+        "verse_key": "verse:Esth.9.6",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "In the citadel of ",
+          "suffix": ", the Jews killed an"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-11",
+        "verse_key": "verse:Esth.9.11",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "d in the citadel of ",
+          "suffix": " was reported to the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-12",
+        "verse_key": "verse:Esth.9.12",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": " “In the citadel of ",
+          "suffix": " the Jews have kille"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-13",
+        "verse_key": "verse:Esth.9.13",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "ng, may the Jews in ",
+          "suffix": " also have tomorrow "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-14",
+        "verse_key": "verse:Esth.9.14",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "edict was issued in ",
+          "suffix": ", and they hanged th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-15",
+        "verse_key": "verse:Esth.9.15",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "f Adar, the Jews in ",
+          "suffix": " came together again"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-18",
+        "verse_key": "verse:Esth.9.18",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Susa",
+          "occurrence_ordinal": 1,
+          "prefix": "The Jews in ",
+          "suffix": ", however, had assem"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Esth.1.13",
+            "verse:Esth.1.20",
+            "verse:Esth.1.22",
+            "verse:Esth.1.4",
+            "verse:Esth.1.6",
+            "verse:Esth.1.7",
+            "verse:Esth.1.8",
+            "verse:Esth.10.1",
+            "verse:Esth.2.12",
+            "verse:Esth.2.13",
+            "verse:Esth.2.16",
+            "verse:Esth.2.2",
+            "verse:Esth.2.23",
+            "verse:Esth.2.9",
+            "verse:Esth.3.13",
+            "verse:Esth.3.14",
+            "verse:Esth.3.9",
+            "verse:Esth.4.11",
+            "verse:Esth.4.13",
+            "verse:Esth.4.14",
+            "verse:Esth.4.2",
+            "verse:Esth.4.3",
+            "verse:Esth.6.1",
+            "verse:Esth.6.8",
+            "verse:Esth.6.9",
+            "verse:Esth.7.4",
+            "verse:Esth.8.10",
+            "verse:Esth.8.11",
+            "verse:Esth.8.12",
+            "verse:Esth.8.13",
+            "verse:Esth.8.16",
+            "verse:Esth.8.17",
+            "verse:Esth.8.6",
+            "verse:Esth.8.8",
+            "verse:Esth.9.1",
+            "verse:Esth.9.16",
+            "verse:Esth.9.17",
+            "verse:Esth.9.19",
+            "verse:Esth.9.2",
+            "verse:Esth.9.21",
+            "verse:Esth.9.22",
+            "verse:Esth.9.25",
+            "verse:Esth.9.26",
+            "verse:Esth.9.27",
+            "verse:Esth.9.28",
+            "verse:Esth.9.30",
+            "verse:Esth.9.5"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-india-a878481-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.3"
+          ],
+          "record_keys": [
+            "mention:wb:pl-media-ad2fadf-1-3",
+            "mention:wb:pl-persia-ab9696f-1-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-abagtha-1-1-10",
+            "mention:wb:p-bigtha-1-1-10",
+            "mention:wb:p-biztha-1-1-10",
+            "mention:wb:p-carkas-1-1-10",
+            "mention:wb:p-harbona-1-1-10",
+            "mention:wb:p-mehuman-1-1-10",
+            "mention:wb:p-zethar-1-1-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-1-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-admatha-1-1-14",
+            "mention:wb:p-carshena-1-1-14",
+            "mention:wb:p-marsena-1-1-14",
+            "mention:wb:p-memucan-1-1-14",
+            "mention:wb:p-meres-1-1-14",
+            "mention:wb:p-shethar-1-1-14",
+            "mention:wb:p-tarshish-3-1-14",
+            "mention:wb:pl-media-ad2fadf-1-14",
+            "mention:wb:pl-persia-ab9696f-1-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-1-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-memucan-1-1-16",
+            "mention:wb:p-vashti-1-1-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-1-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-media-ad2fadf-1-18",
+            "mention:wb:pl-persia-ab9696f-1-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-1-19",
+            "mention:wb:pl-media-ad2fadf-1-19",
+            "mention:wb:pl-persia-ab9696f-1-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-memucan-1-1-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-2-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-hegai-1-2-3",
+            "mention:wb:pl-susa-a033b84-2-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-vashti-1-2-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-jair-3-2-5",
+            "mention:wb:p-kish-4-2-5",
+            "mention:wb:p-mordecai-2-2-5",
+            "mention:wb:p-shimei-17-2-5",
+            "mention:wb:pl-susa-a033b84-2-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-jehoiachin-1-2-6",
+            "mention:wb:p-nebuchadnezzar-1-2-6",
+            "mention:wb:pl-jerusalem-a15257a-2-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-7",
+            "mention:wb:p-mordecai-2-2-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-8",
+            "mention:wb:p-hegai-1-2-8",
+            "mention:wb:pl-susa-a033b84-2-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-10",
+            "mention:wb:p-mordecai-2-2-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-11",
+            "mention:wb:p-mordecai-2-2-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-shaashgaz-1-2-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-abihail-5-2-15",
+            "mention:wb:p-hadassah-1-2-15",
+            "mention:wb:p-hegai-1-2-15",
+            "mention:wb:p-mordecai-2-2-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-17",
+            "mention:wb:p-vashti-1-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.18"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-2-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-20",
+            "mention:wb:p-mordecai-2-2-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-bigthan-1-2-21",
+            "mention:wb:p-mordecai-2-2-21",
+            "mention:wb:p-teresh-1-2-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-22",
+            "mention:wb:p-mordecai-2-2-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-1",
+            "mention:wb:p-hammedatha-1-3-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-2",
+            "mention:wb:p-mordecai-2-3-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-3-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-4",
+            "mention:wb:p-mordecai-2-3-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-5",
+            "mention:wb:p-mordecai-2-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-3-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-10",
+            "mention:wb:p-hammedatha-1-3-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-15",
+            "mention:wb:pl-susa-a033b84-3-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-4",
+            "mention:wb:p-mordecai-2-4-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-5",
+            "mention:wb:p-hathach-1-4-5",
+            "mention:wb:p-mordecai-2-4-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-hathach-1-4-6",
+            "mention:wb:p-mordecai-2-4-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-4-7",
+            "mention:wb:p-mordecai-2-4-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-8",
+            "mention:wb:pl-susa-a033b84-4-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-9",
+            "mention:wb:p-hathach-1-4-9",
+            "mention:wb:p-mordecai-2-4-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-10",
+            "mention:wb:p-hathach-1-4-10",
+            "mention:wb:p-mordecai-2-4-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-12",
+            "mention:wb:p-mordecai-2-4-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-15",
+            "mention:wb:p-mordecai-2-4-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.16"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-4-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-17",
+            "mention:wb:p-mordecai-2-4-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-4",
+            "mention:wb:p-haman-1-5-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-5",
+            "mention:wb:p-haman-1-5-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-9",
+            "mention:wb:p-mordecai-2-5-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-10",
+            "mention:wb:p-zeresh-1-5-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-12",
+            "mention:wb:p-haman-1-5-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-5-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-14",
+            "mention:wb:p-mordecai-2-5-14",
+            "mention:wb:p-zeresh-1-5-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-bigthan-1-6-2",
+            "mention:wb:p-mordecai-2-6-2",
+            "mention:wb:p-teresh-1-6-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-6-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-4",
+            "mention:wb:p-mordecai-2-6-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-10",
+            "mention:wb:p-mordecai-2-6-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-11",
+            "mention:wb:p-mordecai-2-6-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-12",
+            "mention:wb:p-mordecai-2-6-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-13",
+            "mention:wb:p-mordecai-2-6-13",
+            "mention:wb:p-zeresh-1-6-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-6-14",
+            "mention:wb:p-haman-1-6-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-1",
+            "mention:wb:p-haman-1-7-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-6",
+            "mention:wb:p-haman-1-7-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-7",
+            "mention:wb:p-haman-1-7-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-8",
+            "mention:wb:p-haman-1-7-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-7-9",
+            "mention:wb:p-harbona-1-7-9",
+            "mention:wb:p-mordecai-2-7-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-7-10",
+            "mention:wb:p-mordecai-2-7-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-1",
+            "mention:wb:p-haman-1-8-1",
+            "mention:wb:p-mordecai-2-8-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-2",
+            "mention:wb:p-haman-1-8-2",
+            "mention:wb:p-mordecai-2-8-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-3",
+            "mention:wb:p-haman-1-8-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-8-5",
+            "mention:wb:p-hammedatha-1-8-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-7",
+            "mention:wb:p-haman-1-8-7",
+            "mention:wb:p-mordecai-2-8-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-8-9",
+            "mention:wb:pl-india-a878481-8-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-8-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-8-15",
+            "mention:wb:pl-susa-a033b84-8-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-aspatha-1-9-7",
+            "mention:wb:p-dalphon-1-9-7",
+            "mention:wb:p-parshandatha-1-9-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-adalia-1-9-8",
+            "mention:wb:p-aridatha-1-9-8",
+            "mention:wb:p-poratha-1-9-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-aridai-1-9-9",
+            "mention:wb:p-arisai-1-9-9",
+            "mention:wb:p-parmashta-1-9-9",
+            "mention:wb:p-vaizatha-1-9-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-9-10",
+            "mention:wb:p-hammedatha-1-9-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-12",
+            "mention:wb:p-haman-1-9-12",
+            "mention:wb:pl-susa-a033b84-9-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-13",
+            "mention:wb:p-haman-1-9-13",
+            "mention:wb:pl-susa-a033b84-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-9-14",
+            "mention:wb:pl-susa-a033b84-9-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.15"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-9-24",
+            "mention:wb:p-hammedatha-1-9-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.29"
+          ],
+          "record_keys": [
+            "mention:wb:p-abihail-5-9-29",
+            "mention:wb:p-hadassah-1-9-29",
+            "mention:wb:p-mordecai-2-9-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.31"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-31",
+            "mention:wb:p-mordecai-2-9-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.32"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.10.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-10-2",
+            "mention:wb:pl-media-ad2fadf-10-2",
+            "mention:wb:pl-persia-ab9696f-10-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.10.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-10-3"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

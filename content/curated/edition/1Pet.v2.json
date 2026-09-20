@@ -1,0 +1,568 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-1pet-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-1pet-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-1pet-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-1pet:refsys:eng-v22:1pet.1.1-1pet.5.14",
+      "scope:wb-1pet-1:refsys:eng-v22:1pet.1.1-1pet.1.25",
+      "scope:wb-1pet-2:refsys:eng-v22:1pet.2.1-1pet.2.25",
+      "scope:wb-1pet-3:refsys:eng-v22:1pet.3.1-1pet.3.22",
+      "scope:wb-1pet-4:refsys:eng-v22:1pet.4.1-1pet.4.19",
+      "scope:wb-1pet-5:refsys:eng-v22:1pet.5.1-1pet.5.14",
+      "scope:wb-1pet-1-p1:refsys:eng-v22:1pet.1.1-1pet.1.2",
+      "scope:wb-1pet-1-p2:refsys:eng-v22:1pet.1.3-1pet.1.12",
+      "scope:wb-1pet-1-p3:refsys:eng-v22:1pet.1.13-1pet.1.21",
+      "scope:wb-1pet-1-p4:refsys:eng-v22:1pet.1.22-1pet.1.25",
+      "scope:wb-1pet-2-p1:refsys:eng-v22:1pet.2.1-1pet.2.12",
+      "scope:wb-1pet-2-p2:refsys:eng-v22:1pet.2.13-1pet.2.20",
+      "scope:wb-1pet-2-p3:refsys:eng-v22:1pet.2.21-1pet.2.25",
+      "scope:wb-1pet-3-p1:refsys:eng-v22:1pet.3.1-1pet.3.7",
+      "scope:wb-1pet-3-p2:refsys:eng-v22:1pet.3.8-1pet.3.13",
+      "scope:wb-1pet-3-p3:refsys:eng-v22:1pet.3.14-1pet.3.22",
+      "scope:wb-1pet-4-p1:refsys:eng-v22:1pet.4.1-1pet.4.11",
+      "scope:wb-1pet-4-p2:refsys:eng-v22:1pet.4.12-1pet.4.19",
+      "scope:wb-1pet-5-p1:refsys:eng-v22:1pet.5.1-1pet.5.4",
+      "scope:wb-1pet-5-p2:refsys:eng-v22:1pet.5.5-1pet.5.9",
+      "scope:wb-1pet-5-p3:refsys:eng-v22:1pet.5.10-1pet.5.14"
+    ],
+    "reference_keys": [
+      "verse:1Pet.1.1",
+      "verse:1Pet.1.2",
+      "verse:1Pet.1.3",
+      "verse:1Pet.1.4",
+      "verse:1Pet.1.5",
+      "verse:1Pet.1.6",
+      "verse:1Pet.1.7",
+      "verse:1Pet.1.8",
+      "verse:1Pet.1.9",
+      "verse:1Pet.1.10",
+      "verse:1Pet.1.11",
+      "verse:1Pet.1.12",
+      "verse:1Pet.1.13",
+      "verse:1Pet.1.14",
+      "verse:1Pet.1.15",
+      "verse:1Pet.1.16",
+      "verse:1Pet.1.17",
+      "verse:1Pet.1.18",
+      "verse:1Pet.1.19",
+      "verse:1Pet.1.20",
+      "verse:1Pet.1.21",
+      "verse:1Pet.1.22",
+      "verse:1Pet.1.23",
+      "verse:1Pet.1.24",
+      "verse:1Pet.1.25",
+      "verse:1Pet.2.1",
+      "verse:1Pet.2.2",
+      "verse:1Pet.2.3",
+      "verse:1Pet.2.4",
+      "verse:1Pet.2.5",
+      "verse:1Pet.2.6",
+      "verse:1Pet.2.7",
+      "verse:1Pet.2.8",
+      "verse:1Pet.2.9",
+      "verse:1Pet.2.10",
+      "verse:1Pet.2.11",
+      "verse:1Pet.2.12",
+      "verse:1Pet.2.13",
+      "verse:1Pet.2.14",
+      "verse:1Pet.2.15",
+      "verse:1Pet.2.16",
+      "verse:1Pet.2.17",
+      "verse:1Pet.2.18",
+      "verse:1Pet.2.19",
+      "verse:1Pet.2.20",
+      "verse:1Pet.2.21",
+      "verse:1Pet.2.22",
+      "verse:1Pet.2.23",
+      "verse:1Pet.2.24",
+      "verse:1Pet.2.25",
+      "verse:1Pet.3.1",
+      "verse:1Pet.3.2",
+      "verse:1Pet.3.3",
+      "verse:1Pet.3.4",
+      "verse:1Pet.3.5",
+      "verse:1Pet.3.6",
+      "verse:1Pet.3.7",
+      "verse:1Pet.3.8",
+      "verse:1Pet.3.9",
+      "verse:1Pet.3.10",
+      "verse:1Pet.3.11",
+      "verse:1Pet.3.12",
+      "verse:1Pet.3.13",
+      "verse:1Pet.3.14",
+      "verse:1Pet.3.15",
+      "verse:1Pet.3.16",
+      "verse:1Pet.3.17",
+      "verse:1Pet.3.18",
+      "verse:1Pet.3.19",
+      "verse:1Pet.3.20",
+      "verse:1Pet.3.21",
+      "verse:1Pet.3.22",
+      "verse:1Pet.4.1",
+      "verse:1Pet.4.2",
+      "verse:1Pet.4.3",
+      "verse:1Pet.4.4",
+      "verse:1Pet.4.5",
+      "verse:1Pet.4.6",
+      "verse:1Pet.4.7",
+      "verse:1Pet.4.8",
+      "verse:1Pet.4.9",
+      "verse:1Pet.4.10",
+      "verse:1Pet.4.11",
+      "verse:1Pet.4.12",
+      "verse:1Pet.4.13",
+      "verse:1Pet.4.14",
+      "verse:1Pet.4.15",
+      "verse:1Pet.4.16",
+      "verse:1Pet.4.17",
+      "verse:1Pet.4.18",
+      "verse:1Pet.4.19",
+      "verse:1Pet.5.1",
+      "verse:1Pet.5.2",
+      "verse:1Pet.5.3",
+      "verse:1Pet.5.4",
+      "verse:1Pet.5.5",
+      "verse:1Pet.5.6",
+      "verse:1Pet.5.7",
+      "verse:1Pet.5.8",
+      "verse:1Pet.5.9",
+      "verse:1Pet.5.10",
+      "verse:1Pet.5.11",
+      "verse:1Pet.5.12",
+      "verse:1Pet.5.13",
+      "verse:1Pet.5.14"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-noah-1-3-20",
+        "verse_key": "verse:1Pet.3.20",
+        "attestation_key": "attestation:wb-p-noah-1-3-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-noah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Noah",
+          "occurrence_ordinal": 1,
+          "prefix": "ntly in the days of ",
+          "suffix": " while the ark was b"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-3-6",
+        "verse_key": "verse:1Pet.3.6",
+        "attestation_key": "attestation:wb-p-abram-1-3-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "ust as Sarah obeyed ",
+          "suffix": " and called him lord"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sarai-1-3-6",
+        "verse_key": "verse:1Pet.3.6",
+        "attestation_key": "attestation:wb-p-sarai-1-3-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sarai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sarah",
+          "occurrence_ordinal": 1,
+          "prefix": "just as ",
+          "suffix": " obeyed Abraham and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-1-1",
+        "verse_key": "verse:1Pet.1.1",
+        "attestation_key": "attestation:wb-p-simon-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Peter",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", an apostle of Jesu"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-5-5-13",
+        "verse_key": "verse:1Pet.5.13",
+        "attestation_key": "attestation:wb-p-john-5-5-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mark",
+          "occurrence_ordinal": 1,
+          "prefix": "ngs, as does my son ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-silas-1-5-12",
+        "verse_key": "verse:1Pet.5.12",
+        "attestation_key": "attestation:wb-p-silas-1-5-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-silas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Silvanus",
+          "occurrence_ordinal": 1,
+          "prefix": "Through ",
+          "suffix": ", whom I regard as a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-asia-a197f19-1-1",
+        "verse_key": "verse:1Pet.1.1",
+        "attestation_key": "attestation:wb-pl-asia-a197f19-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-asia-a197f19"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Asia",
+          "occurrence_ordinal": 1,
+          "prefix": "alatia, Cappadocia, ",
+          "suffix": ", and Bithynia, chos"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-bithynia-a5c0cb0-1-1",
+        "verse_key": "verse:1Pet.1.1",
+        "attestation_key": "attestation:wb-pl-bithynia-a5c0cb0-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-bithynia-a5c0cb0"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Bithynia",
+          "occurrence_ordinal": 1,
+          "prefix": "ppadocia, Asia, and ",
+          "suffix": ", chosen"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-cappadocia-a33fbde-1-1",
+        "verse_key": "verse:1Pet.1.1",
+        "attestation_key": "attestation:wb-pl-cappadocia-a33fbde-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-cappadocia-a33fbde"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Cappadocia",
+          "occurrence_ordinal": 1,
+          "prefix": "ut Pontus, Galatia, ",
+          "suffix": ", Asia, and Bithynia"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-galatia-a0f440a-1-1",
+        "verse_key": "verse:1Pet.1.1",
+        "attestation_key": "attestation:wb-pl-galatia-a0f440a-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-galatia-a0f440a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Galatia",
+          "occurrence_ordinal": 1,
+          "prefix": " throughout Pontus, ",
+          "suffix": ", Cappadocia, Asia, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-pontus-a83a43e-1-1",
+        "verse_key": "verse:1Pet.1.1",
+        "attestation_key": "attestation:wb-pl-pontus-a83a43e-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-pontus-a83a43e"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pontus",
+          "occurrence_ordinal": 1,
+          "prefix": "spersion throughout ",
+          "suffix": ", Galatia, Cappadoci"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zion-af20c46-2-6",
+        "verse_key": "verse:1Pet.2.6",
+        "attestation_key": "attestation:wb-pl-zion-af20c46-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zion-af20c46"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "ure: “See, I lay in ",
+          "suffix": " a stone, a chosen a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:1Pet.1.10",
+            "verse:1Pet.1.11",
+            "verse:1Pet.1.12",
+            "verse:1Pet.1.13",
+            "verse:1Pet.1.14",
+            "verse:1Pet.1.15",
+            "verse:1Pet.1.16",
+            "verse:1Pet.1.17",
+            "verse:1Pet.1.18",
+            "verse:1Pet.1.19",
+            "verse:1Pet.1.2",
+            "verse:1Pet.1.20",
+            "verse:1Pet.1.21",
+            "verse:1Pet.1.22",
+            "verse:1Pet.1.23",
+            "verse:1Pet.1.24",
+            "verse:1Pet.1.25",
+            "verse:1Pet.1.3",
+            "verse:1Pet.1.4",
+            "verse:1Pet.1.5",
+            "verse:1Pet.1.6",
+            "verse:1Pet.1.7",
+            "verse:1Pet.1.8",
+            "verse:1Pet.1.9",
+            "verse:1Pet.2.1",
+            "verse:1Pet.2.10",
+            "verse:1Pet.2.11",
+            "verse:1Pet.2.12",
+            "verse:1Pet.2.13",
+            "verse:1Pet.2.14",
+            "verse:1Pet.2.15",
+            "verse:1Pet.2.16",
+            "verse:1Pet.2.17",
+            "verse:1Pet.2.18",
+            "verse:1Pet.2.19",
+            "verse:1Pet.2.2",
+            "verse:1Pet.2.20",
+            "verse:1Pet.2.21",
+            "verse:1Pet.2.22",
+            "verse:1Pet.2.23",
+            "verse:1Pet.2.24",
+            "verse:1Pet.2.25",
+            "verse:1Pet.2.3",
+            "verse:1Pet.2.4",
+            "verse:1Pet.2.5",
+            "verse:1Pet.2.7",
+            "verse:1Pet.2.8",
+            "verse:1Pet.2.9",
+            "verse:1Pet.3.1",
+            "verse:1Pet.3.10",
+            "verse:1Pet.3.11",
+            "verse:1Pet.3.12",
+            "verse:1Pet.3.13",
+            "verse:1Pet.3.14",
+            "verse:1Pet.3.15",
+            "verse:1Pet.3.16",
+            "verse:1Pet.3.17",
+            "verse:1Pet.3.18",
+            "verse:1Pet.3.19",
+            "verse:1Pet.3.2",
+            "verse:1Pet.3.21",
+            "verse:1Pet.3.22",
+            "verse:1Pet.3.3",
+            "verse:1Pet.3.4",
+            "verse:1Pet.3.5",
+            "verse:1Pet.3.7",
+            "verse:1Pet.3.8",
+            "verse:1Pet.3.9",
+            "verse:1Pet.4.1",
+            "verse:1Pet.4.10",
+            "verse:1Pet.4.11",
+            "verse:1Pet.4.12",
+            "verse:1Pet.4.13",
+            "verse:1Pet.4.14",
+            "verse:1Pet.4.15",
+            "verse:1Pet.4.16",
+            "verse:1Pet.4.17",
+            "verse:1Pet.4.18",
+            "verse:1Pet.4.19",
+            "verse:1Pet.4.2",
+            "verse:1Pet.4.3",
+            "verse:1Pet.4.4",
+            "verse:1Pet.4.5",
+            "verse:1Pet.4.6",
+            "verse:1Pet.4.7",
+            "verse:1Pet.4.8",
+            "verse:1Pet.4.9",
+            "verse:1Pet.5.1",
+            "verse:1Pet.5.10",
+            "verse:1Pet.5.11",
+            "verse:1Pet.5.14",
+            "verse:1Pet.5.2",
+            "verse:1Pet.5.3",
+            "verse:1Pet.5.4",
+            "verse:1Pet.5.5",
+            "verse:1Pet.5.6",
+            "verse:1Pet.5.7",
+            "verse:1Pet.5.8",
+            "verse:1Pet.5.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-simon-1-1-1",
+            "mention:wb:pl-asia-a197f19-1-1",
+            "mention:wb:pl-bithynia-a5c0cb0-1-1",
+            "mention:wb:pl-cappadocia-a33fbde-1-1",
+            "mention:wb:pl-galatia-a0f440a-1-1",
+            "mention:wb:pl-pontus-a83a43e-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.2.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-zion-af20c46-2-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.3.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-3-6",
+            "mention:wb:p-sarai-1-3-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.3.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-noah-1-3-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.5.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-silas-1-5-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Pet.5.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-5-5-13"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

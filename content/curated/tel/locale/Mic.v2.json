@@ -1,0 +1,2426 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-mic-locale",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-mic-locale:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-mic-locale",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-mic:refsys:tel-v1:mic.1.1-mic.7.20",
+      "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+      "scope:wb-mic-2:refsys:tel-v1:mic.2.1-mic.2.13",
+      "scope:wb-mic-3:refsys:tel-v1:mic.3.1-mic.3.12",
+      "scope:wb-mic-4:refsys:tel-v1:mic.4.1-mic.4.13",
+      "scope:wb-mic-5:refsys:tel-v1:mic.5.1-mic.5.15",
+      "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+      "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+      "scope:wb-mic-1-p1:refsys:tel-v1:mic.1.1-mic.1.7",
+      "scope:wb-mic-1-p2:refsys:tel-v1:mic.1.8-mic.1.16",
+      "scope:wb-mic-2-p1:refsys:tel-v1:mic.2.1-mic.2.5",
+      "scope:wb-mic-2-p2:refsys:tel-v1:mic.2.6-mic.2.11",
+      "scope:wb-mic-2-p3:refsys:tel-v1:mic.2.12-mic.2.13",
+      "scope:wb-mic-3-p1:refsys:tel-v1:mic.3.1-mic.3.12",
+      "scope:wb-mic-4-p1:refsys:tel-v1:mic.4.1-mic.4.5",
+      "scope:wb-mic-4-p2:refsys:tel-v1:mic.4.6-mic.4.13",
+      "scope:wb-mic-5-p1:refsys:tel-v1:mic.5.1-mic.5.4",
+      "scope:wb-mic-5-p2:refsys:tel-v1:mic.5.5-mic.5.15",
+      "scope:wb-mic-6-p1:refsys:tel-v1:mic.6.1-mic.6.8",
+      "scope:wb-mic-6-p2:refsys:tel-v1:mic.6.9-mic.6.16",
+      "scope:wb-mic-7-p1:refsys:tel-v1:mic.7.1-mic.7.7",
+      "scope:wb-mic-7-p2:refsys:tel-v1:mic.7.8-mic.7.13",
+      "scope:wb-mic-7-p3:refsys:tel-v1:mic.7.14-mic.7.20"
+    ],
+    "reference_keys": [
+      "verse:Mic.1.1",
+      "verse:Mic.1.2",
+      "verse:Mic.1.3",
+      "verse:Mic.1.4",
+      "verse:Mic.1.5",
+      "verse:Mic.1.6",
+      "verse:Mic.1.7",
+      "verse:Mic.1.8",
+      "verse:Mic.1.9",
+      "verse:Mic.1.10",
+      "verse:Mic.1.11",
+      "verse:Mic.1.12",
+      "verse:Mic.1.13",
+      "verse:Mic.1.14",
+      "verse:Mic.1.15",
+      "verse:Mic.1.16",
+      "verse:Mic.2.1",
+      "verse:Mic.2.2",
+      "verse:Mic.2.3",
+      "verse:Mic.2.4",
+      "verse:Mic.2.5",
+      "verse:Mic.2.6",
+      "verse:Mic.2.7",
+      "verse:Mic.2.8",
+      "verse:Mic.2.9",
+      "verse:Mic.2.10",
+      "verse:Mic.2.11",
+      "verse:Mic.2.12",
+      "verse:Mic.2.13",
+      "verse:Mic.3.1",
+      "verse:Mic.3.2",
+      "verse:Mic.3.3",
+      "verse:Mic.3.4",
+      "verse:Mic.3.5",
+      "verse:Mic.3.6",
+      "verse:Mic.3.7",
+      "verse:Mic.3.8",
+      "verse:Mic.3.9",
+      "verse:Mic.3.10",
+      "verse:Mic.3.11",
+      "verse:Mic.3.12",
+      "verse:Mic.4.1",
+      "verse:Mic.4.2",
+      "verse:Mic.4.3",
+      "verse:Mic.4.4",
+      "verse:Mic.4.5",
+      "verse:Mic.4.6",
+      "verse:Mic.4.7",
+      "verse:Mic.4.8",
+      "verse:Mic.4.9",
+      "verse:Mic.4.10",
+      "verse:Mic.4.11",
+      "verse:Mic.4.12",
+      "verse:Mic.4.13",
+      "verse:Mic.5.1",
+      "verse:Mic.5.2",
+      "verse:Mic.5.3",
+      "verse:Mic.5.4",
+      "verse:Mic.5.5",
+      "verse:Mic.5.6",
+      "verse:Mic.5.7",
+      "verse:Mic.5.8",
+      "verse:Mic.5.9",
+      "verse:Mic.5.10",
+      "verse:Mic.5.11",
+      "verse:Mic.5.12",
+      "verse:Mic.5.13",
+      "verse:Mic.5.14",
+      "verse:Mic.5.15",
+      "verse:Mic.6.1",
+      "verse:Mic.6.2",
+      "verse:Mic.6.3",
+      "verse:Mic.6.4",
+      "verse:Mic.6.5",
+      "verse:Mic.6.6",
+      "verse:Mic.6.7",
+      "verse:Mic.6.8",
+      "verse:Mic.6.9",
+      "verse:Mic.6.10",
+      "verse:Mic.6.11",
+      "verse:Mic.6.12",
+      "verse:Mic.6.13",
+      "verse:Mic.6.14",
+      "verse:Mic.6.15",
+      "verse:Mic.6.16",
+      "verse:Mic.7.1",
+      "verse:Mic.7.2",
+      "verse:Mic.7.3",
+      "verse:Mic.7.4",
+      "verse:Mic.7.5",
+      "verse:Mic.7.6",
+      "verse:Mic.7.7",
+      "verse:Mic.7.8",
+      "verse:Mic.7.9",
+      "verse:Mic.7.10",
+      "verse:Mic.7.11",
+      "verse:Mic.7.12",
+      "verse:Mic.7.13",
+      "verse:Mic.7.14",
+      "verse:Mic.7.15",
+      "verse:Mic.7.16",
+      "verse:Mic.7.17",
+      "verse:Mic.7.18",
+      "verse:Mic.7.19",
+      "verse:Mic.7.20"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:te:p-moses-1",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "preferred_name": "మోషే",
+        "aliases": [],
+        "short_description": {
+          "text": "మోషే, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-aaron-1",
+        "entity_key": "entity:p-aaron-1",
+        "language_tag": "te",
+        "preferred_name": "అహరోను",
+        "aliases": [],
+        "short_description": {
+          "text": "అహరోను, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-balak-1",
+        "entity_key": "entity:p-balak-1",
+        "language_tag": "te",
+        "preferred_name": "బాలాకు",
+        "aliases": [],
+        "short_description": {
+          "text": "బాలాకు, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-balaam-1",
+        "entity_key": "entity:p-balaam-1",
+        "language_tag": "te",
+        "preferred_name": "బిలాము",
+        "aliases": [],
+        "short_description": {
+          "text": "బిలాము, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-ahab-1",
+        "entity_key": "entity:p-ahab-1",
+        "language_tag": "te",
+        "preferred_name": "అహాబు",
+        "aliases": [],
+        "short_description": {
+          "text": "అహాబు, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-jotham-2",
+        "entity_key": "entity:p-jotham-2",
+        "language_tag": "te",
+        "preferred_name": "యోతాము",
+        "aliases": [],
+        "short_description": {
+          "text": "యోతాము, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-ahaz-1",
+        "entity_key": "entity:p-ahaz-1",
+        "language_tag": "te",
+        "preferred_name": "ఆహాజు",
+        "aliases": [],
+        "short_description": {
+          "text": "ఆహాజు, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-hezekiah-1",
+        "entity_key": "entity:p-hezekiah-1",
+        "language_tag": "te",
+        "preferred_name": "హిజ్కియా",
+        "aliases": [],
+        "short_description": {
+          "text": "హిజ్కియా, మీకా గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-assyria-a3d1321",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "language_tag": "te",
+        "preferred_name": "అష్షూరు",
+        "aliases": [],
+        "short_description": {
+          "text": "అష్షూరు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-babylon-1-a217d18",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "preferred_name": "బబులోను",
+        "aliases": [],
+        "short_description": {
+          "text": "బబులోను, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-bashan-aa7a40a",
+        "entity_key": "entity:pl-bashan-aa7a40a",
+        "language_tag": "te",
+        "preferred_name": "బాషాను",
+        "aliases": [],
+        "short_description": {
+          "text": "బాషాను, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-bethlehem-1-a112427",
+        "entity_key": "entity:pl-bethlehem-1-a112427",
+        "language_tag": "te",
+        "preferred_name": "బేత్లెహేము",
+        "aliases": [],
+        "short_description": {
+          "text": "బేత్లెహేము, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-egypt-af301ca",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "language_tag": "te",
+        "preferred_name": "ఐగుప్తు",
+        "aliases": [],
+        "short_description": {
+          "text": "ఐగుప్తు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-euphrates-a62dec4",
+        "entity_key": "entity:pl-euphrates-a62dec4",
+        "language_tag": "te",
+        "preferred_name": "యూఫ్రటీసు",
+        "aliases": [],
+        "short_description": {
+          "text": "యూఫ్రటీసు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-gilead-1-ae73b90",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "language_tag": "te",
+        "preferred_name": "గిలాదు",
+        "aliases": [],
+        "short_description": {
+          "text": "గిలాదు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-lachish-a3cc590",
+        "entity_key": "entity:pl-lachish-a3cc590",
+        "language_tag": "te",
+        "preferred_name": "లాకీషు",
+        "aliases": [],
+        "short_description": {
+          "text": "లాకీషు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-moab-1-aa0b1d6",
+        "entity_key": "entity:pl-moab-1-aa0b1d6",
+        "language_tag": "te",
+        "preferred_name": "మోయాబు",
+        "aliases": [],
+        "short_description": {
+          "text": "మోయాబు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-mount-carmel-a3e21c6",
+        "entity_key": "entity:pl-mount-carmel-a3e21c6",
+        "language_tag": "te",
+        "preferred_name": "కర్మెలు",
+        "aliases": [],
+        "short_description": {
+          "text": "కర్మెలు, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-mount-zion-abd9596",
+        "entity_key": "entity:pl-mount-zion-abd9596",
+        "language_tag": "te",
+        "preferred_name": "సీయోను",
+        "aliases": [],
+        "short_description": {
+          "text": "సీయోను, మీకా గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:te:wb-mic",
+        "scope_key": "scope:wb-mic:refsys:tel-v1:mic.1.1-mic.7.20",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "దేవుడు, మీకా, నాయకులు, ప్రజలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "సమరియ, యెరూషలేము, యూదా పట్టణాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "క్రీ.పూ. ఎనిమిదవ శతాబ్ది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "మీకా యూదా, ఇశ్రాయేలులో అన్యాయాన్ని, అబద్ధ ప్రవచనాన్ని ఖండించి, తీర్పు ప్రకటించి, బెత్లెహేమునుండి రాబోయే అధిపతిని వాగ్దానం చేస్తాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "అష్షూరు ఒత్తిడి, సామాజిక అన్యాయాన్ని ఉద్దేశిస్తుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "దేవుడు న్యాయం, కరుణ, వినయం కోరి, పునరుద్ధరిస్తాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "మీకా యూదా, ఇశ్రాయేలులో అన్యాయాన్ని, అబద్ధ ప్రవచనాన్ని ఖండించి, తీర్పు ప్రకటించి, బెత్లెహేమునుండి రాబోయే అధిపతిని వాగ్దానం చేస్తాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-1",
+        "scope_key": "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Jacob, Micah, ఆహాజు, యోతాము, హిజ్కియా.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Achzib 1, Adullam, Beth-ezel, Beth-le-aphrah, Gath 1, Jerusalem, Mareshah, Maroth.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-when"
+          },
+          "what": {
+            "text": "This chapter: యెరూషలేము, సమరయ; ప్రవక్త విలాపం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: యెరూషలేము, సమరయ; ప్రవక్త విలాపం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-2",
+        "scope_key": "scope:wb-mic-2:refsys:tel-v1:mic.2.1-mic.2.13",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Jacob.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Bozrah 1.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-when"
+          },
+          "what": {
+            "text": "This chapter: ధనికుల దుర్మార్గాలు; అబద్ద ప్రవక్తలు; విమోచన వాగ్దానం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ధనికుల దుర్మార్గాలు; అబద్ద ప్రవక్తలు; విమోచన వాగ్దానం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-3",
+        "scope_key": "scope:wb-mic-3:refsys:tel-v1:mic.3.1-mic.3.12",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Jacob.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Jerusalem, Zion, సీయోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-3-when"
+          },
+          "what": {
+            "text": "This chapter: నాయకులు, ప్రవక్తలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-3-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నాయకులు, ప్రవక్తలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-4",
+        "scope_key": "scope:wb-mic-4:refsys:tel-v1:mic.4.1-mic.4.13",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-who"
+          },
+          "where": {
+            "text": "Places in this chapter: Jerusalem, Zion, బబులోను, సీయోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-when"
+          },
+          "what": {
+            "text": "This chapter: యెహోవా మందిర పర్వతం; యెహోవా ప్రణాళిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: యెహోవా మందిర పర్వతం; యెహోవా ప్రణాళిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-5",
+        "scope_key": "scope:wb-mic-5:refsys:tel-v1:mic.5.1-mic.5.15",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Jacob.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Jerusalem, Nimrod, అష్షూరు, బేత్లెహేము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-when"
+          },
+          "what": {
+            "text": "This chapter: బేత్లెహేముకు రాబోయే పాలకుడు; విధ్వంసం, విమోచన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: బేత్లెహేముకు రాబోయే పాలకుడు; విధ్వంసం, విమోచన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-6",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Beor, Miriam, Omri, అహరోను, అహాబు, బాలాకు, బిలాము, మోషే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Gilgal 1, Jerusalem, Shittim, ఐగుప్తు, మోయాబు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-when"
+          },
+          "what": {
+            "text": "This chapter: దేవుని ఫిర్యాదు; ఇశ్రాయేలీయుల దుర్నీతి క్రియలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: దేవుని ఫిర్యాదు; ఇశ్రాయేలీయుల దుర్నీతి క్రియలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-7",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-who"
+          },
+          "where": {
+            "text": "Places in this chapter: అష్షూరు, ఐగుప్తు, కర్మెలు, గిలాదు, బాషాను, యూఫ్రటీసు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-when"
+          },
+          "what": {
+            "text": "This chapter: ఇశ్రాయేలు కష్టాలు; ఇశ్రాయేలు తిరిగి లేవడం; దేవుని క్షమాపణ, ఆయన కనికరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ఇశ్రాయేలు కష్టాలు; ఇశ్రాయేలు తిరిగి లేవడం; దేవుని క్షమాపణ, ఆయన కనికరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-1-p1",
+        "scope_key": "scope:wb-mic-1-p1:refsys:tel-v1:mic.1.1-mic.1.7",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Jacob, Micah, ఆహాజు, యోతాము, హిజ్కియా.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, Moresheth-gath, Samaria 1.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p1-when"
+          },
+          "what": {
+            "text": "యెరూషలేము, సమరయ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "యెరూషలేము, సమరయ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-1-p2",
+        "scope_key": "scope:wb-mic-1-p2:refsys:tel-v1:mic.1.8-mic.1.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p2-who"
+          },
+          "where": {
+            "text": "Places in this passage: Achzib 1, Adullam, Beth-ezel, Beth-le-aphrah, Gath 1, Jerusalem, Mareshah, Maroth.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p2-when"
+          },
+          "what": {
+            "text": "ప్రవక్త విలాపం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-1-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "ప్రవక్త విలాపం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-2-p1",
+        "scope_key": "scope:wb-mic-2-p1:refsys:tel-v1:mic.2.1-mic.2.5",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p1-when"
+          },
+          "what": {
+            "text": "ధనికుల దుర్మార్గాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధనికుల దుర్మార్గాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-2-p2",
+        "scope_key": "scope:wb-mic-2-p2:refsys:tel-v1:mic.2.6-mic.2.11",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Jacob.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p2-when"
+          },
+          "what": {
+            "text": "అబద్ద ప్రవక్తలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "అబద్ద ప్రవక్తలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-2-p3",
+        "scope_key": "scope:wb-mic-2-p3:refsys:tel-v1:mic.2.12-mic.2.13",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p3-who"
+          },
+          "where": {
+            "text": "Places in this passage: Bozrah 1.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p3-when"
+          },
+          "what": {
+            "text": "విమోచన వాగ్దానం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-2-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "విమోచన వాగ్దానం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-3-p1",
+        "scope_key": "scope:wb-mic-3-p1:refsys:tel-v1:mic.3.1-mic.3.12",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Jacob.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, Zion, సీయోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-3-p1-when"
+          },
+          "what": {
+            "text": "నాయకులు, ప్రవక్తలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-3-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-3-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నాయకులు, ప్రవక్తలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-4-p1",
+        "scope_key": "scope:wb-mic-4-p1:refsys:tel-v1:mic.4.1-mic.4.5",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p1-who"
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, Zion, సీయోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p1-when"
+          },
+          "what": {
+            "text": "యెహోవా మందిర పర్వతం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "యెహోవా మందిర పర్వతం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-4-p2",
+        "scope_key": "scope:wb-mic-4-p2:refsys:tel-v1:mic.4.6-mic.4.13",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p2-who"
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, Zion, బబులోను, సీయోను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p2-when"
+          },
+          "what": {
+            "text": "యెహోవా ప్రణాళిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-4-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "యెహోవా ప్రణాళిక.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-5-p1",
+        "scope_key": "scope:wb-mic-5-p1:refsys:tel-v1:mic.5.1-mic.5.4",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Jacob.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem, బేత్లెహేము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p1-when"
+          },
+          "what": {
+            "text": "బేత్లెహేముకు రాబోయే పాలకుడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "బేత్లెహేముకు రాబోయే పాలకుడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-5-p2",
+        "scope_key": "scope:wb-mic-5-p2:refsys:tel-v1:mic.5.5-mic.5.15",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p2-who"
+          },
+          "where": {
+            "text": "Places in this passage: Nimrod, అష్షూరు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p2-when"
+          },
+          "what": {
+            "text": "విధ్వంసం, విమోచన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-5-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "విధ్వంసం, విమోచన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-6-p1",
+        "scope_key": "scope:wb-mic-6-p1:refsys:tel-v1:mic.6.1-mic.6.8",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Beor, Miriam, అహరోను, బాలాకు, బిలాము, మోషే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Gilgal 1, Shittim, ఐగుప్తు, మోయాబు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-p1-when"
+          },
+          "what": {
+            "text": "దేవుని ఫిర్యాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "దేవుని ఫిర్యాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-6-p2",
+        "scope_key": "scope:wb-mic-6-p2:refsys:tel-v1:mic.6.9-mic.6.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Omri, అహాబు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Jerusalem.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-p2-when"
+          },
+          "what": {
+            "text": "ఇశ్రాయేలీయుల దుర్నీతి క్రియలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-6-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఇశ్రాయేలీయుల దుర్నీతి క్రియలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-7-p1",
+        "scope_key": "scope:wb-mic-7-p1:refsys:tel-v1:mic.7.1-mic.7.7",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p1-when"
+          },
+          "what": {
+            "text": "ఇశ్రాయేలు కష్టాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఇశ్రాయేలు కష్టాలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-7-p2",
+        "scope_key": "scope:wb-mic-7-p2:refsys:tel-v1:mic.7.8-mic.7.13",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p2-who"
+          },
+          "where": {
+            "text": "Places in this passage: అష్షూరు, ఐగుప్తు, యూఫ్రటీసు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p2-when"
+          },
+          "what": {
+            "text": "ఇశ్రాయేలు తిరిగి లేవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఇశ్రాయేలు తిరిగి లేవడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-mic-7-p3",
+        "scope_key": "scope:wb-mic-7-p3:refsys:tel-v1:mic.7.14-mic.7.20",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p3-who"
+          },
+          "where": {
+            "text": "Places in this passage: ఐగుప్తు, కర్మెలు, గిలాదు, బాషాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p3-when"
+          },
+          "what": {
+            "text": "దేవుని క్షమాపణ, ఆయన కనికరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-mic-7-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "దేవుని క్షమాపణ, ఆయన కనికరం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-p-moses-1",
+        "relevance_key": "relevance:wb-mic-6-p-moses-1",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:p-moses-1",
+        "language_tag": "te",
+        "role_text": "మోషే — మీకా 6: 4.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-p-aaron-1",
+        "relevance_key": "relevance:wb-mic-6-p-aaron-1",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:p-aaron-1",
+        "language_tag": "te",
+        "role_text": "అహరోను — మీకా 6: 4.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-p-balak-1",
+        "relevance_key": "relevance:wb-mic-6-p-balak-1",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:p-balak-1",
+        "language_tag": "te",
+        "role_text": "బాలాకు — మీకా 6: 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-p-balaam-1",
+        "relevance_key": "relevance:wb-mic-6-p-balaam-1",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:p-balaam-1",
+        "language_tag": "te",
+        "role_text": "బిలాము — మీకా 6: 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-p-ahab-1",
+        "relevance_key": "relevance:wb-mic-6-p-ahab-1",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:p-ahab-1",
+        "language_tag": "te",
+        "role_text": "అహాబు — మీకా 6: 16.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-1-p-jotham-2",
+        "relevance_key": "relevance:wb-mic-1-p-jotham-2",
+        "scope_key": "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+        "entity_key": "entity:p-jotham-2",
+        "language_tag": "te",
+        "role_text": "యోతాము — మీకా 1: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-1-p-ahaz-1",
+        "relevance_key": "relevance:wb-mic-1-p-ahaz-1",
+        "scope_key": "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+        "entity_key": "entity:p-ahaz-1",
+        "language_tag": "te",
+        "role_text": "ఆహాజు — మీకా 1: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-1-p-hezekiah-1",
+        "relevance_key": "relevance:wb-mic-1-p-hezekiah-1",
+        "scope_key": "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+        "entity_key": "entity:p-hezekiah-1",
+        "language_tag": "te",
+        "role_text": "హిజ్కియా — మీకా 1: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-5-pl-assyria-a3d1321",
+        "relevance_key": "relevance:wb-mic-5-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-mic-5:refsys:tel-v1:mic.5.1-mic.5.15",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "language_tag": "te",
+        "role_text": "అష్షూరు — మీకా 5: 5, 6.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-7-pl-assyria-a3d1321",
+        "relevance_key": "relevance:wb-mic-7-pl-assyria-a3d1321",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "language_tag": "te",
+        "role_text": "అష్షూరు — మీకా 7: 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-4-pl-babylon-1-a217d18",
+        "relevance_key": "relevance:wb-mic-4-pl-babylon-1-a217d18",
+        "scope_key": "scope:wb-mic-4:refsys:tel-v1:mic.4.1-mic.4.13",
+        "entity_key": "entity:pl-babylon-1-a217d18",
+        "language_tag": "te",
+        "role_text": "బబులోను — మీకా 4: 10.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-7-pl-bashan-aa7a40a",
+        "relevance_key": "relevance:wb-mic-7-pl-bashan-aa7a40a",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "entity_key": "entity:pl-bashan-aa7a40a",
+        "language_tag": "te",
+        "role_text": "బాషాను — మీకా 7: 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-5-pl-bethlehem-1-a112427",
+        "relevance_key": "relevance:wb-mic-5-pl-bethlehem-1-a112427",
+        "scope_key": "scope:wb-mic-5:refsys:tel-v1:mic.5.1-mic.5.15",
+        "entity_key": "entity:pl-bethlehem-1-a112427",
+        "language_tag": "te",
+        "role_text": "బేత్లెహేము — మీకా 5: 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-pl-egypt-af301ca",
+        "relevance_key": "relevance:wb-mic-6-pl-egypt-af301ca",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "language_tag": "te",
+        "role_text": "ఐగుప్తు — మీకా 6: 4.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-7-pl-egypt-af301ca",
+        "relevance_key": "relevance:wb-mic-7-pl-egypt-af301ca",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "language_tag": "te",
+        "role_text": "ఐగుప్తు — మీకా 7: 12, 15.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-7-pl-euphrates-a62dec4",
+        "relevance_key": "relevance:wb-mic-7-pl-euphrates-a62dec4",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "entity_key": "entity:pl-euphrates-a62dec4",
+        "language_tag": "te",
+        "role_text": "యూఫ్రటీసు — మీకా 7: 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-7-pl-gilead-1-ae73b90",
+        "relevance_key": "relevance:wb-mic-7-pl-gilead-1-ae73b90",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "language_tag": "te",
+        "role_text": "గిలాదు — మీకా 7: 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-1-pl-lachish-a3cc590",
+        "relevance_key": "relevance:wb-mic-1-pl-lachish-a3cc590",
+        "scope_key": "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+        "entity_key": "entity:pl-lachish-a3cc590",
+        "language_tag": "te",
+        "role_text": "లాకీషు — మీకా 1: 13.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-6-pl-moab-1-aa0b1d6",
+        "relevance_key": "relevance:wb-mic-6-pl-moab-1-aa0b1d6",
+        "scope_key": "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+        "entity_key": "entity:pl-moab-1-aa0b1d6",
+        "language_tag": "te",
+        "role_text": "మోయాబు — మీకా 6: 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-7-pl-mount-carmel-a3e21c6",
+        "relevance_key": "relevance:wb-mic-7-pl-mount-carmel-a3e21c6",
+        "scope_key": "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+        "entity_key": "entity:pl-mount-carmel-a3e21c6",
+        "language_tag": "te",
+        "role_text": "కర్మెలు — మీకా 7: 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-3-pl-mount-zion-abd9596",
+        "relevance_key": "relevance:wb-mic-3-pl-mount-zion-abd9596",
+        "scope_key": "scope:wb-mic-3:refsys:tel-v1:mic.3.1-mic.3.12",
+        "entity_key": "entity:pl-mount-zion-abd9596",
+        "language_tag": "te",
+        "role_text": "సీయోను — మీకా 3: 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-mic-4-pl-mount-zion-abd9596",
+        "relevance_key": "relevance:wb-mic-4-pl-mount-zion-abd9596",
+        "scope_key": "scope:wb-mic-4:refsys:tel-v1:mic.4.1-mic.4.13",
+        "entity_key": "entity:pl-mount-zion-abd9596",
+        "language_tag": "te",
+        "role_text": "సీయోను — మీకా 4: 1, 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:wb-mic:refsys:tel-v1:mic.1.1-mic.7.20"
+          ],
+          "record_keys": [
+            "context:te:wb-mic"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+            "scope:wb-mic-2:refsys:tel-v1:mic.2.1-mic.2.13",
+            "scope:wb-mic-3:refsys:tel-v1:mic.3.1-mic.3.12",
+            "scope:wb-mic-4:refsys:tel-v1:mic.4.1-mic.4.13",
+            "scope:wb-mic-5:refsys:tel-v1:mic.5.1-mic.5.15",
+            "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+            "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+            "scope:wb-mic-1-p1:refsys:tel-v1:mic.1.1-mic.1.7",
+            "scope:wb-mic-1-p2:refsys:tel-v1:mic.1.8-mic.1.16",
+            "scope:wb-mic-2-p1:refsys:tel-v1:mic.2.1-mic.2.5",
+            "scope:wb-mic-2-p2:refsys:tel-v1:mic.2.6-mic.2.11",
+            "scope:wb-mic-2-p3:refsys:tel-v1:mic.2.12-mic.2.13",
+            "scope:wb-mic-3-p1:refsys:tel-v1:mic.3.1-mic.3.12",
+            "scope:wb-mic-4-p1:refsys:tel-v1:mic.4.1-mic.4.5",
+            "scope:wb-mic-4-p2:refsys:tel-v1:mic.4.6-mic.4.13",
+            "scope:wb-mic-5-p1:refsys:tel-v1:mic.5.1-mic.5.4",
+            "scope:wb-mic-5-p2:refsys:tel-v1:mic.5.5-mic.5.15",
+            "scope:wb-mic-6-p1:refsys:tel-v1:mic.6.1-mic.6.8",
+            "scope:wb-mic-6-p2:refsys:tel-v1:mic.6.9-mic.6.16",
+            "scope:wb-mic-7-p1:refsys:tel-v1:mic.7.1-mic.7.7",
+            "scope:wb-mic-7-p2:refsys:tel-v1:mic.7.8-mic.7.13",
+            "scope:wb-mic-7-p3:refsys:tel-v1:mic.7.14-mic.7.20"
+          ],
+          "record_keys": [
+            "context:te:wb-mic-1",
+            "context:te:wb-mic-2",
+            "context:te:wb-mic-3",
+            "context:te:wb-mic-4",
+            "context:te:wb-mic-5",
+            "context:te:wb-mic-6",
+            "context:te:wb-mic-7",
+            "context:te:wb-mic-1-p1",
+            "context:te:wb-mic-1-p2",
+            "context:te:wb-mic-2-p1",
+            "context:te:wb-mic-2-p2",
+            "context:te:wb-mic-2-p3",
+            "context:te:wb-mic-3-p1",
+            "context:te:wb-mic-4-p1",
+            "context:te:wb-mic-4-p2",
+            "context:te:wb-mic-5-p1",
+            "context:te:wb-mic-5-p2",
+            "context:te:wb-mic-6-p1",
+            "context:te:wb-mic-6-p2",
+            "context:te:wb-mic-7-p1",
+            "context:te:wb-mic-7-p2",
+            "context:te:wb-mic-7-p3"
+          ],
+          "blocker_question_keys": [
+            "question:wb-context-te-wb-mic-1-before",
+            "question:wb-context-te-wb-mic-1-p1-before",
+            "question:wb-context-te-wb-mic-1-p1-stakes",
+            "question:wb-context-te-wb-mic-1-p1-when",
+            "question:wb-context-te-wb-mic-1-p2-before",
+            "question:wb-context-te-wb-mic-1-p2-stakes",
+            "question:wb-context-te-wb-mic-1-p2-when",
+            "question:wb-context-te-wb-mic-1-p2-who",
+            "question:wb-context-te-wb-mic-1-stakes",
+            "question:wb-context-te-wb-mic-1-when",
+            "question:wb-context-te-wb-mic-2-before",
+            "question:wb-context-te-wb-mic-2-p1-before",
+            "question:wb-context-te-wb-mic-2-p1-stakes",
+            "question:wb-context-te-wb-mic-2-p1-when",
+            "question:wb-context-te-wb-mic-2-p1-where",
+            "question:wb-context-te-wb-mic-2-p1-who",
+            "question:wb-context-te-wb-mic-2-p2-before",
+            "question:wb-context-te-wb-mic-2-p2-stakes",
+            "question:wb-context-te-wb-mic-2-p2-when",
+            "question:wb-context-te-wb-mic-2-p2-where",
+            "question:wb-context-te-wb-mic-2-p3-before",
+            "question:wb-context-te-wb-mic-2-p3-stakes",
+            "question:wb-context-te-wb-mic-2-p3-when",
+            "question:wb-context-te-wb-mic-2-p3-who",
+            "question:wb-context-te-wb-mic-2-stakes",
+            "question:wb-context-te-wb-mic-2-when",
+            "question:wb-context-te-wb-mic-3-before",
+            "question:wb-context-te-wb-mic-3-p1-before",
+            "question:wb-context-te-wb-mic-3-p1-stakes",
+            "question:wb-context-te-wb-mic-3-p1-when",
+            "question:wb-context-te-wb-mic-3-stakes",
+            "question:wb-context-te-wb-mic-3-when",
+            "question:wb-context-te-wb-mic-4-before",
+            "question:wb-context-te-wb-mic-4-p1-before",
+            "question:wb-context-te-wb-mic-4-p1-stakes",
+            "question:wb-context-te-wb-mic-4-p1-when",
+            "question:wb-context-te-wb-mic-4-p1-who",
+            "question:wb-context-te-wb-mic-4-p2-before",
+            "question:wb-context-te-wb-mic-4-p2-stakes",
+            "question:wb-context-te-wb-mic-4-p2-when",
+            "question:wb-context-te-wb-mic-4-p2-who",
+            "question:wb-context-te-wb-mic-4-stakes",
+            "question:wb-context-te-wb-mic-4-when",
+            "question:wb-context-te-wb-mic-4-who",
+            "question:wb-context-te-wb-mic-5-before",
+            "question:wb-context-te-wb-mic-5-p1-before",
+            "question:wb-context-te-wb-mic-5-p1-stakes",
+            "question:wb-context-te-wb-mic-5-p1-when",
+            "question:wb-context-te-wb-mic-5-p2-before",
+            "question:wb-context-te-wb-mic-5-p2-stakes",
+            "question:wb-context-te-wb-mic-5-p2-when",
+            "question:wb-context-te-wb-mic-5-p2-who",
+            "question:wb-context-te-wb-mic-5-stakes",
+            "question:wb-context-te-wb-mic-5-when",
+            "question:wb-context-te-wb-mic-6-before",
+            "question:wb-context-te-wb-mic-6-p1-before",
+            "question:wb-context-te-wb-mic-6-p1-stakes",
+            "question:wb-context-te-wb-mic-6-p1-when",
+            "question:wb-context-te-wb-mic-6-p2-before",
+            "question:wb-context-te-wb-mic-6-p2-stakes",
+            "question:wb-context-te-wb-mic-6-p2-when",
+            "question:wb-context-te-wb-mic-6-stakes",
+            "question:wb-context-te-wb-mic-6-when",
+            "question:wb-context-te-wb-mic-7-before",
+            "question:wb-context-te-wb-mic-7-p1-before",
+            "question:wb-context-te-wb-mic-7-p1-stakes",
+            "question:wb-context-te-wb-mic-7-p1-when",
+            "question:wb-context-te-wb-mic-7-p1-where",
+            "question:wb-context-te-wb-mic-7-p1-who",
+            "question:wb-context-te-wb-mic-7-p2-before",
+            "question:wb-context-te-wb-mic-7-p2-stakes",
+            "question:wb-context-te-wb-mic-7-p2-when",
+            "question:wb-context-te-wb-mic-7-p2-who",
+            "question:wb-context-te-wb-mic-7-p3-before",
+            "question:wb-context-te-wb-mic-7-p3-stakes",
+            "question:wb-context-te-wb-mic-7-p3-when",
+            "question:wb-context-te-wb-mic-7-p3-who",
+            "question:wb-context-te-wb-mic-7-stakes",
+            "question:wb-context-te-wb-mic-7-when",
+            "question:wb-context-te-wb-mic-7-who"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-7",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-1-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-1-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-1-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-1-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-2-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-2-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-2-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-2-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-2-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-3-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-3-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-3-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-3-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-3-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-3-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-4-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-4-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-4-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-4-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-5-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-5-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-5-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-5-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-6-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-6-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-6-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-6-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-6-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-6-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-6-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-7-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-7-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-mic-7-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-mic-7-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-mic-7-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

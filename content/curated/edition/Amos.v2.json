@@ -1,0 +1,2240 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-amos-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-amos-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-amos-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-amos:refsys:eng-v22:amos.1.1-amos.9.15",
+      "scope:wb-amos-1:refsys:eng-v22:amos.1.1-amos.1.15",
+      "scope:wb-amos-2:refsys:eng-v22:amos.2.1-amos.2.16",
+      "scope:wb-amos-3:refsys:eng-v22:amos.3.1-amos.3.15",
+      "scope:wb-amos-4:refsys:eng-v22:amos.4.1-amos.4.13",
+      "scope:wb-amos-5:refsys:eng-v22:amos.5.1-amos.5.27",
+      "scope:wb-amos-6:refsys:eng-v22:amos.6.1-amos.6.14",
+      "scope:wb-amos-7:refsys:eng-v22:amos.7.1-amos.7.17",
+      "scope:wb-amos-8:refsys:eng-v22:amos.8.1-amos.8.14",
+      "scope:wb-amos-9:refsys:eng-v22:amos.9.1-amos.9.15",
+      "scope:wb-amos-1-p1:refsys:eng-v22:amos.1.1-amos.1.15",
+      "scope:wb-amos-2-p1:refsys:eng-v22:amos.2.1-amos.2.16",
+      "scope:wb-amos-3-p1:refsys:eng-v22:amos.3.1-amos.3.15",
+      "scope:wb-amos-4-p1:refsys:eng-v22:amos.4.1-amos.4.13",
+      "scope:wb-amos-5-p1:refsys:eng-v22:amos.5.1-amos.5.3",
+      "scope:wb-amos-5-p2:refsys:eng-v22:amos.5.4-amos.5.15",
+      "scope:wb-amos-5-p3:refsys:eng-v22:amos.5.16-amos.5.27",
+      "scope:wb-amos-6-p1:refsys:eng-v22:amos.6.1-amos.6.7",
+      "scope:wb-amos-6-p2:refsys:eng-v22:amos.6.8-amos.6.14",
+      "scope:wb-amos-7-p1:refsys:eng-v22:amos.7.1-amos.7.9",
+      "scope:wb-amos-7-p2:refsys:eng-v22:amos.7.10-amos.7.17",
+      "scope:wb-amos-8-p1:refsys:eng-v22:amos.8.1-amos.8.14",
+      "scope:wb-amos-9-p1:refsys:eng-v22:amos.9.1-amos.9.10",
+      "scope:wb-amos-9-p2:refsys:eng-v22:amos.9.11-amos.9.15"
+    ],
+    "reference_keys": [
+      "verse:Amos.1.1",
+      "verse:Amos.1.2",
+      "verse:Amos.1.3",
+      "verse:Amos.1.4",
+      "verse:Amos.1.5",
+      "verse:Amos.1.6",
+      "verse:Amos.1.7",
+      "verse:Amos.1.8",
+      "verse:Amos.1.9",
+      "verse:Amos.1.10",
+      "verse:Amos.1.11",
+      "verse:Amos.1.12",
+      "verse:Amos.1.13",
+      "verse:Amos.1.14",
+      "verse:Amos.1.15",
+      "verse:Amos.2.1",
+      "verse:Amos.2.2",
+      "verse:Amos.2.3",
+      "verse:Amos.2.4",
+      "verse:Amos.2.5",
+      "verse:Amos.2.6",
+      "verse:Amos.2.7",
+      "verse:Amos.2.8",
+      "verse:Amos.2.9",
+      "verse:Amos.2.10",
+      "verse:Amos.2.11",
+      "verse:Amos.2.12",
+      "verse:Amos.2.13",
+      "verse:Amos.2.14",
+      "verse:Amos.2.15",
+      "verse:Amos.2.16",
+      "verse:Amos.3.1",
+      "verse:Amos.3.2",
+      "verse:Amos.3.3",
+      "verse:Amos.3.4",
+      "verse:Amos.3.5",
+      "verse:Amos.3.6",
+      "verse:Amos.3.7",
+      "verse:Amos.3.8",
+      "verse:Amos.3.9",
+      "verse:Amos.3.10",
+      "verse:Amos.3.11",
+      "verse:Amos.3.12",
+      "verse:Amos.3.13",
+      "verse:Amos.3.14",
+      "verse:Amos.3.15",
+      "verse:Amos.4.1",
+      "verse:Amos.4.2",
+      "verse:Amos.4.3",
+      "verse:Amos.4.4",
+      "verse:Amos.4.5",
+      "verse:Amos.4.6",
+      "verse:Amos.4.7",
+      "verse:Amos.4.8",
+      "verse:Amos.4.9",
+      "verse:Amos.4.10",
+      "verse:Amos.4.11",
+      "verse:Amos.4.12",
+      "verse:Amos.4.13",
+      "verse:Amos.5.1",
+      "verse:Amos.5.2",
+      "verse:Amos.5.3",
+      "verse:Amos.5.4",
+      "verse:Amos.5.5",
+      "verse:Amos.5.6",
+      "verse:Amos.5.7",
+      "verse:Amos.5.8",
+      "verse:Amos.5.9",
+      "verse:Amos.5.10",
+      "verse:Amos.5.11",
+      "verse:Amos.5.12",
+      "verse:Amos.5.13",
+      "verse:Amos.5.14",
+      "verse:Amos.5.15",
+      "verse:Amos.5.16",
+      "verse:Amos.5.17",
+      "verse:Amos.5.18",
+      "verse:Amos.5.19",
+      "verse:Amos.5.20",
+      "verse:Amos.5.21",
+      "verse:Amos.5.22",
+      "verse:Amos.5.23",
+      "verse:Amos.5.24",
+      "verse:Amos.5.25",
+      "verse:Amos.5.26",
+      "verse:Amos.5.27",
+      "verse:Amos.6.1",
+      "verse:Amos.6.2",
+      "verse:Amos.6.3",
+      "verse:Amos.6.4",
+      "verse:Amos.6.5",
+      "verse:Amos.6.6",
+      "verse:Amos.6.7",
+      "verse:Amos.6.8",
+      "verse:Amos.6.9",
+      "verse:Amos.6.10",
+      "verse:Amos.6.11",
+      "verse:Amos.6.12",
+      "verse:Amos.6.13",
+      "verse:Amos.6.14",
+      "verse:Amos.7.1",
+      "verse:Amos.7.2",
+      "verse:Amos.7.3",
+      "verse:Amos.7.4",
+      "verse:Amos.7.5",
+      "verse:Amos.7.6",
+      "verse:Amos.7.7",
+      "verse:Amos.7.8",
+      "verse:Amos.7.9",
+      "verse:Amos.7.10",
+      "verse:Amos.7.11",
+      "verse:Amos.7.12",
+      "verse:Amos.7.13",
+      "verse:Amos.7.14",
+      "verse:Amos.7.15",
+      "verse:Amos.7.16",
+      "verse:Amos.7.17",
+      "verse:Amos.8.1",
+      "verse:Amos.8.2",
+      "verse:Amos.8.3",
+      "verse:Amos.8.4",
+      "verse:Amos.8.5",
+      "verse:Amos.8.6",
+      "verse:Amos.8.7",
+      "verse:Amos.8.8",
+      "verse:Amos.8.9",
+      "verse:Amos.8.10",
+      "verse:Amos.8.11",
+      "verse:Amos.8.12",
+      "verse:Amos.8.13",
+      "verse:Amos.8.14",
+      "verse:Amos.9.1",
+      "verse:Amos.9.2",
+      "verse:Amos.9.3",
+      "verse:Amos.9.4",
+      "verse:Amos.9.5",
+      "verse:Amos.9.6",
+      "verse:Amos.9.7",
+      "verse:Amos.9.8",
+      "verse:Amos.9.9",
+      "verse:Amos.9.10",
+      "verse:Amos.9.11",
+      "verse:Amos.9.12",
+      "verse:Amos.9.13",
+      "verse:Amos.9.14",
+      "verse:Amos.9.15"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-isaac-1-7-16",
+        "verse_key": "verse:Amos.7.16",
+        "attestation_key": "attestation:wb-p-isaac-1-7-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": "gainst the house of ",
+          "suffix": ".’"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-2-11",
+        "verse_key": "verse:Amos.2.11",
+        "attestation_key": "attestation:wb-p-jacob-1-2-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "true, O children of ",
+          "suffix": "?” declares the LORD"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-3-1",
+        "verse_key": "verse:Amos.3.1",
+        "attestation_key": "attestation:wb-p-jacob-1-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": " you, O children of ",
+          "suffix": ", against the whole "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-3-13",
+        "verse_key": "verse:Amos.3.13",
+        "attestation_key": "attestation:wb-p-jacob-1-3-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "gainst the house of ",
+          "suffix": ", declares the Lord "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-4-5",
+        "verse_key": "verse:Amos.4.5",
+        "attestation_key": "attestation:wb-p-jacob-1-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "hat you children of ",
+          "suffix": " love to do,” declar"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-5-1",
+        "verse_key": "verse:Amos.5.1",
+        "attestation_key": "attestation:wb-p-jacob-1-5-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "is word, O house of ",
+          "suffix": ", this lamentation I"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-5-3",
+        "verse_key": "verse:Amos.5.3",
+        "attestation_key": "attestation:wb-p-jacob-1-5-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "eft in the house of ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-5-4",
+        "verse_key": "verse:Amos.5.4",
+        "attestation_key": "attestation:wb-p-jacob-1-5-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ays to the house of ",
+          "suffix": ": “Seek Me and live!"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-6-1",
+        "verse_key": "verse:Amos.6.1",
+        "attestation_key": "attestation:wb-p-jacob-1-6-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "o whom the house of ",
+          "suffix": " comes."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-6-14",
+        "verse_key": "verse:Amos.6.14",
+        "attestation_key": "attestation:wb-p-jacob-1-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "nst you, O house of ",
+          "suffix": ",” declares the LORD"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-7",
+        "verse_key": "verse:Amos.9.7",
+        "attestation_key": "attestation:wb-p-jacob-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "o Me, O children of ",
+          "suffix": "?” declares the LORD"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-8",
+        "verse_key": "verse:Amos.9.8",
+        "attestation_key": "attestation:wb-p-jacob-1-9-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "estroy the house of ",
+          "suffix": ",” declares the LORD"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-9",
+        "verse_key": "verse:Amos.9.9",
+        "attestation_key": "attestation:wb-p-jacob-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": " shake the house of ",
+          "suffix": " among all the natio"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joseph-1-5-6",
+        "verse_key": "verse:Amos.5.6",
+        "attestation_key": "attestation:wb-p-joseph-1-5-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joseph-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Joseph",
+          "occurrence_ordinal": 1,
+          "prefix": "hrough the house of ",
+          "suffix": "; it will devour eve"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-6-5",
+        "verse_key": "verse:Amos.6.5",
+        "attestation_key": "attestation:wb-p-david-1-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "gs on the harp like ",
+          "suffix": " and invent your own"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-9-11",
+        "verse_key": "verse:Amos.9.11",
+        "attestation_key": "attestation:wb-p-david-1-9-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": " the fallen tent of ",
+          "suffix": ". I will repair its "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hazael-1-1-4",
+        "verse_key": "verse:Amos.1.4",
+        "attestation_key": "attestation:wb-p-hazael-1-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hazael-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hazael",
+          "occurrence_ordinal": 1,
+          "prefix": "e upon the house of ",
+          "suffix": " to consume the cita"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ben-hadad-2-1-4",
+        "verse_key": "verse:Amos.1.4",
+        "attestation_key": "attestation:wb-p-ben-hadad-2-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ben-hadad-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ben-hadad",
+          "occurrence_ordinal": 1,
+          "prefix": "ume the citadels of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joash-4-1-1",
+        "verse_key": "verse:Amos.1.1",
+        "attestation_key": "attestation:wb-p-joash-4-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joash-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jehoash",
+          "occurrence_ordinal": 1,
+          "prefix": "and Jeroboam son of ",
+          "suffix": " was king of Israel."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jeroboam-2-1-1",
+        "verse_key": "verse:Amos.1.1",
+        "attestation_key": "attestation:wb-p-jeroboam-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jeroboam-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jeroboam",
+          "occurrence_ordinal": 1,
+          "prefix": "s king of Judah and ",
+          "suffix": " son of Jehoash was "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jeroboam-2-7-9",
+        "verse_key": "verse:Amos.7.9",
+        "attestation_key": "attestation:wb-p-jeroboam-2-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jeroboam-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jeroboam",
+          "occurrence_ordinal": 1,
+          "prefix": "gainst the house of ",
+          "suffix": " with My sword.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jeroboam-2-7-10",
+        "verse_key": "verse:Amos.7.10",
+        "attestation_key": "attestation:wb-p-jeroboam-2-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jeroboam-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jeroboam",
+          "occurrence_ordinal": 1,
+          "prefix": "Bethel sent word to ",
+          "suffix": " king of Israel, say"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jeroboam-2-7-11",
+        "verse_key": "verse:Amos.7.11",
+        "attestation_key": "attestation:wb-p-jeroboam-2-7-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jeroboam-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jeroboam",
+          "occurrence_ordinal": 1,
+          "prefix": "hat Amos has said: ‘",
+          "suffix": " will die by the swo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-3-1-1",
+        "verse_key": "verse:Amos.1.1",
+        "attestation_key": "attestation:wb-p-azariah-3-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Uzziah",
+          "occurrence_ordinal": 1,
+          "prefix": "e, in the days when ",
+          "suffix": " was king of Judah a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amaziah-3-7-10",
+        "verse_key": "verse:Amos.7.10",
+        "attestation_key": "attestation:wb-p-amaziah-3-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amaziah-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amaziah",
+          "occurrence_ordinal": 1,
+          "prefix": "Then ",
+          "suffix": " the priest of Bethe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amaziah-3-7-12",
+        "verse_key": "verse:Amos.7.12",
+        "attestation_key": "attestation:wb-p-amaziah-3-7-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amaziah-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amaziah",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " said to Amos, “Go a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-1-1",
+        "verse_key": "verse:Amos.1.1",
+        "attestation_key": "attestation:wb-p-amos-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "se are the words of ",
+          "suffix": ", who was among the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-7-8",
+        "verse_key": "verse:Amos.7.8",
+        "attestation_key": "attestation:wb-p-amos-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "“",
+          "suffix": ", what do you see?” "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-7-10",
+        "verse_key": "verse:Amos.7.10",
+        "attestation_key": "attestation:wb-p-amos-1-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "of Israel, saying, “",
+          "suffix": " has conspired again"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-7-11",
+        "verse_key": "verse:Amos.7.11",
+        "attestation_key": "attestation:wb-p-amos-1-7-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "for this is what ",
+          "suffix": " has said: ‘Jeroboam"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-7-12",
+        "verse_key": "verse:Amos.7.12",
+        "attestation_key": "attestation:wb-p-amos-1-7-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "And Amaziah said to ",
+          "suffix": ", “Go away, you seer"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-7-14",
+        "verse_key": "verse:Amos.7.14",
+        "attestation_key": "attestation:wb-p-amos-1-7-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "was not a prophet,” ",
+          "suffix": " replied, “nor was I"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-amos-1-8-2",
+        "verse_key": "verse:Amos.8.2",
+        "attestation_key": "attestation:wb-p-amos-1-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amos-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amos",
+          "occurrence_ordinal": 1,
+          "prefix": "“",
+          "suffix": ", what do you see?” "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ashdod-a30c937-1-8",
+        "verse_key": "verse:Amos.1.8",
+        "attestation_key": "attestation:wb-pl-ashdod-a30c937-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashdod-a30c937"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ashdod",
+          "occurrence_ordinal": 1,
+          "prefix": "ut off the ruler of ",
+          "suffix": " and the one who wie"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ashdod-a30c937-3-9",
+        "verse_key": "verse:Amos.3.9",
+        "attestation_key": "attestation:wb-pl-ashdod-a30c937-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashdod-a30c937"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ashdod",
+          "occurrence_ordinal": 1,
+          "prefix": " to the citadels of ",
+          "suffix": " and to the citadels"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ashkelon-ac87d4c-1-8",
+        "verse_key": "verse:Amos.1.8",
+        "attestation_key": "attestation:wb-pl-ashkelon-ac87d4c-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashkelon-ac87d4c"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ashkelon",
+          "occurrence_ordinal": 1,
+          "prefix": "elds the scepter in ",
+          "suffix": ". I will turn My han"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-bashan-aa7a40a-4-1",
+        "verse_key": "verse:Amos.4.1",
+        "attestation_key": "attestation:wb-pl-bashan-aa7a40a-4-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-bashan-aa7a40a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Bashan",
+          "occurrence_ordinal": 1,
+          "prefix": "s word, you cows of ",
+          "suffix": " on Mount Samaria, y"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-beth-eden-a84c5a4-1-5",
+        "verse_key": "verse:Amos.1.5",
+        "attestation_key": "attestation:wb-pl-beth-eden-a84c5a4-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-beth-eden-a84c5a4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Beth-eden",
+          "occurrence_ordinal": 1,
+          "prefix": "elds the scepter in ",
+          "suffix": ". The people of Aram"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-brook-of-the-arabah-a5983ec-6-14",
+        "verse_key": "verse:Amos.6.14",
+        "attestation_key": "attestation:wb-pl-brook-of-the-arabah-a5983ec-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-brook-of-the-arabah-a5983ec"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Brook of the Arabah",
+          "occurrence_ordinal": 1,
+          "prefix": " Lebo-hamath to the ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-caphtor-a329990-9-7",
+        "verse_key": "verse:Amos.9.7",
+        "attestation_key": "attestation:wb-pl-caphtor-a329990-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-caphtor-a329990"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Caphtor",
+          "occurrence_ordinal": 1,
+          "prefix": "he Philistines from ",
+          "suffix": ", and the Arameans f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-damascus-a69c1d4-1-3",
+        "verse_key": "verse:Amos.1.3",
+        "attestation_key": "attestation:wb-pl-damascus-a69c1d4-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-damascus-a69c1d4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Damascus",
+          "occurrence_ordinal": 1,
+          "prefix": "e transgressions of ",
+          "suffix": ", even four, I will "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-damascus-a69c1d4-1-5",
+        "verse_key": "verse:Amos.1.5",
+        "attestation_key": "attestation:wb-pl-damascus-a69c1d4-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-damascus-a69c1d4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Damascus",
+          "occurrence_ordinal": 1,
+          "prefix": "k down the gates of ",
+          "suffix": "; I will cut off the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-damascus-a69c1d4-5-27",
+        "verse_key": "verse:Amos.5.27",
+        "attestation_key": "attestation:wb-pl-damascus-a69c1d4-5-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-damascus-a69c1d4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Damascus",
+          "occurrence_ordinal": 1,
+          "prefix": "u into exile beyond ",
+          "suffix": ",” says the LORD, wh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-dan-a513646-8-14",
+        "verse_key": "verse:Amos.8.14",
+        "attestation_key": "attestation:wb-pl-dan-a513646-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-dan-a513646"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Dan",
+          "occurrence_ordinal": 1,
+          "prefix": "s your god lives, O ",
+          "suffix": ",’ or, ‘As surely as"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-edom-a2735ff-1-6",
+        "verse_key": "verse:Amos.1.6",
+        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-edom-a2735ff"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Edom",
+          "occurrence_ordinal": 1,
+          "prefix": "livering them up to ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-edom-a2735ff-1-9",
+        "verse_key": "verse:Amos.1.9",
+        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-edom-a2735ff"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Edom",
+          "occurrence_ordinal": 1,
+          "prefix": "gation of exiles to ",
+          "suffix": " and broke a covenan"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-edom-a2735ff-1-11",
+        "verse_key": "verse:Amos.1.11",
+        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-edom-a2735ff"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Edom",
+          "occurrence_ordinal": 1,
+          "prefix": "e transgressions of ",
+          "suffix": ", even four, I will "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-edom-a2735ff-2-1",
+        "verse_key": "verse:Amos.2.1",
+        "attestation_key": "attestation:wb-pl-edom-a2735ff-2-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-edom-a2735ff"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Edom",
+          "occurrence_ordinal": 1,
+          "prefix": "o lime the bones of ",
+          "suffix": "’s king."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-edom-a2735ff-9-12",
+        "verse_key": "verse:Amos.9.12",
+        "attestation_key": "attestation:wb-pl-edom-a2735ff-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-edom-a2735ff"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Edom",
+          "occurrence_ordinal": 1,
+          "prefix": "sess the remnant of ",
+          "suffix": " and all the nations"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-2-10",
+        "verse_key": "verse:Amos.2.10",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-2-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "up from the land of ",
+          "suffix": " and led you forty y"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-3-1",
+        "verse_key": "verse:Amos.3.1",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": " out of the land of ",
+          "suffix": ":"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-3-9",
+        "verse_key": "verse:Amos.3.9",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": " to the citadels of ",
+          "suffix": ": “Assemble on the m"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-4-10",
+        "verse_key": "verse:Amos.4.10",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "g you like those of ",
+          "suffix": "; I killed your youn"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-8-8",
+        "verse_key": "verse:Amos.8.8",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-8-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "de like the Nile in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-5",
+        "verse_key": "verse:Amos.9.5",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "s like the river of ",
+          "suffix": "—"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-7",
+        "verse_key": "verse:Amos.9.7",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "up from the land of ",
+          "suffix": ", the Philistines fr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ekron-a3fc47a-1-8",
+        "verse_key": "verse:Amos.1.8",
+        "attestation_key": "attestation:wb-pl-ekron-a3fc47a-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ekron-a3fc47a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ekron",
+          "occurrence_ordinal": 1,
+          "prefix": "urn My hand against ",
+          "suffix": ", and the remnant of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-gaza-aa8edd2-1-6",
+        "verse_key": "verse:Amos.1.6",
+        "attestation_key": "attestation:wb-pl-gaza-aa8edd2-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gaza-aa8edd2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gaza",
+          "occurrence_ordinal": 1,
+          "prefix": "e transgressions of ",
+          "suffix": ", even four, I will "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-gaza-aa8edd2-1-7",
+        "verse_key": "verse:Amos.1.7",
+        "attestation_key": "attestation:wb-pl-gaza-aa8edd2-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gaza-aa8edd2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gaza",
+          "occurrence_ordinal": 1,
+          "prefix": "e upon the walls of ",
+          "suffix": ", to consume its cit"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-gomorrah-aa572e2-4-11",
+        "verse_key": "verse:Amos.4.11",
+        "attestation_key": "attestation:wb-pl-gomorrah-aa572e2-4-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gomorrah-aa572e2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gomorrah",
+          "occurrence_ordinal": 1,
+          "prefix": "overthrew Sodom and ",
+          "suffix": ", and you were like "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-harmon-a553fe6-4-3",
+        "verse_key": "verse:Amos.4.3",
+        "attestation_key": "attestation:wb-pl-harmon-a553fe6-4-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-harmon-a553fe6"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Harmon",
+          "occurrence_ordinal": 1,
+          "prefix": " be cast out toward ",
+          "suffix": ", ” declares the LOR"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-1-2",
+        "verse_key": "verse:Amos.1.2",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "ises His voice from ",
+          "suffix": "; the pastures of th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-2-5",
+        "verse_key": "verse:Amos.2.5",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "ume the citadels of ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-karnaim-adf5c7b-6-13",
+        "verse_key": "verse:Amos.6.13",
+        "attestation_key": "attestation:wb-pl-karnaim-adf5c7b-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-karnaim-adf5c7b"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Karnaim",
+          "occurrence_ordinal": 1,
+          "prefix": "y, ‘Did we not take ",
+          "suffix": " by our own strength"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-kerioth-a2d84de-2-2",
+        "verse_key": "verse:Amos.2.2",
+        "attestation_key": "attestation:wb-pl-kerioth-a2d84de-2-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-kerioth-a2d84de"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Kerioth",
+          "occurrence_ordinal": 1,
+          "prefix": "ume the citadels of ",
+          "suffix": ". Moab will die in t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lebo-hamath-a5eb047-6-14",
+        "verse_key": "verse:Amos.6.14",
+        "attestation_key": "attestation:wb-pl-lebo-hamath-a5eb047-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lebo-hamath-a5eb047"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lebo-hamath",
+          "occurrence_ordinal": 1,
+          "prefix": "ll oppress you from ",
+          "suffix": " to the Brook of the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lo-debar-a376eed-6-13",
+        "verse_key": "verse:Amos.6.13",
+        "attestation_key": "attestation:wb-pl-lo-debar-a376eed-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lo-debar-a376eed"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lo-debar",
+          "occurrence_ordinal": 1,
+          "prefix": "you who rejoice in ",
+          "suffix": " and say, ‘Did we no"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-nile-a012705-8-8",
+        "verse_key": "verse:Amos.8.8",
+        "attestation_key": "attestation:wb-pl-nile-a012705-8-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-nile-a012705"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Nile",
+          "occurrence_ordinal": 1,
+          "prefix": "will swell like the ",
+          "suffix": "; it will surge and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-nile-a012705-9-5",
+        "verse_key": "verse:Amos.9.5",
+        "attestation_key": "attestation:wb-pl-nile-a012705-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-nile-a012705"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Nile",
+          "occurrence_ordinal": 1,
+          "prefix": "land rises like the ",
+          "suffix": ", then sinks like th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sodom-a0aa664-4-11",
+        "verse_key": "verse:Amos.4.11",
+        "attestation_key": "attestation:wb-pl-sodom-a0aa664-4-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sodom-a0aa664"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sodom",
+          "occurrence_ordinal": 1,
+          "prefix": "hrew as I overthrew ",
+          "suffix": " and Gomorrah, and y"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tekoa-a2e3aa0-1-1",
+        "verse_key": "verse:Amos.1.1",
+        "attestation_key": "attestation:wb-pl-tekoa-a2e3aa0-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tekoa-a2e3aa0"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tekoa",
+          "occurrence_ordinal": 1,
+          "prefix": "the sheepherders of ",
+          "suffix": "—what he saw concern"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-teman-a831506-1-12",
+        "verse_key": "verse:Amos.1.12",
+        "attestation_key": "attestation:wb-pl-teman-a831506-1-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-teman-a831506"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Teman",
+          "occurrence_ordinal": 1,
+          "prefix": "will send fire upon ",
+          "suffix": " to consume the cita"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-1-9",
+        "verse_key": "verse:Amos.1.9",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tyre",
+          "occurrence_ordinal": 1,
+          "prefix": "e transgressions of ",
+          "suffix": ", even four, I will "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-tyre-a160272-1-10",
+        "verse_key": "verse:Amos.1.10",
+        "attestation_key": "attestation:wb-pl-tyre-a160272-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-tyre-a160272"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Tyre",
+          "occurrence_ordinal": 1,
+          "prefix": "e upon the walls of ",
+          "suffix": " to consume its cita"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-valley-of-aven-a0c71dc-1-5",
+        "verse_key": "verse:Amos.1.5",
+        "attestation_key": "attestation:wb-pl-valley-of-aven-a0c71dc-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-valley-of-aven-a0c71dc"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Valley of Aven",
+          "occurrence_ordinal": 1,
+          "prefix": "ff the ruler of the ",
+          "suffix": " and the one who wie"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zion-af20c46-1-2",
+        "verse_key": "verse:Amos.1.2",
+        "attestation_key": "attestation:wb-pl-zion-af20c46-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zion-af20c46"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "The LORD roars from ",
+          "suffix": " and raises His voic"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zion-af20c46-6-1",
+        "verse_key": "verse:Amos.6.1",
+        "attestation_key": "attestation:wb-pl-zion-af20c46-6-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zion-af20c46"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "to those at ease in ",
+          "suffix": " and those secure on"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Amos.1.13",
+            "verse:Amos.1.14",
+            "verse:Amos.1.15",
+            "verse:Amos.2.12",
+            "verse:Amos.2.13",
+            "verse:Amos.2.14",
+            "verse:Amos.2.15",
+            "verse:Amos.2.16",
+            "verse:Amos.2.3",
+            "verse:Amos.2.4",
+            "verse:Amos.2.6",
+            "verse:Amos.2.7",
+            "verse:Amos.2.8",
+            "verse:Amos.2.9",
+            "verse:Amos.3.10",
+            "verse:Amos.3.11",
+            "verse:Amos.3.12",
+            "verse:Amos.3.14",
+            "verse:Amos.3.15",
+            "verse:Amos.3.2",
+            "verse:Amos.3.3",
+            "verse:Amos.3.4",
+            "verse:Amos.3.5",
+            "verse:Amos.3.6",
+            "verse:Amos.3.7",
+            "verse:Amos.3.8",
+            "verse:Amos.4.12",
+            "verse:Amos.4.13",
+            "verse:Amos.4.2",
+            "verse:Amos.4.4",
+            "verse:Amos.4.6",
+            "verse:Amos.4.7",
+            "verse:Amos.4.8",
+            "verse:Amos.4.9",
+            "verse:Amos.5.10",
+            "verse:Amos.5.11",
+            "verse:Amos.5.12",
+            "verse:Amos.5.13",
+            "verse:Amos.5.14",
+            "verse:Amos.5.15",
+            "verse:Amos.5.16",
+            "verse:Amos.5.17",
+            "verse:Amos.5.18",
+            "verse:Amos.5.19",
+            "verse:Amos.5.2",
+            "verse:Amos.5.20",
+            "verse:Amos.5.21",
+            "verse:Amos.5.22",
+            "verse:Amos.5.23",
+            "verse:Amos.5.24",
+            "verse:Amos.5.25",
+            "verse:Amos.5.26",
+            "verse:Amos.5.5",
+            "verse:Amos.5.7",
+            "verse:Amos.5.8",
+            "verse:Amos.5.9",
+            "verse:Amos.6.10",
+            "verse:Amos.6.11",
+            "verse:Amos.6.12",
+            "verse:Amos.6.2",
+            "verse:Amos.6.3",
+            "verse:Amos.6.4",
+            "verse:Amos.6.6",
+            "verse:Amos.6.7",
+            "verse:Amos.6.8",
+            "verse:Amos.6.9",
+            "verse:Amos.7.1",
+            "verse:Amos.7.13",
+            "verse:Amos.7.15",
+            "verse:Amos.7.17",
+            "verse:Amos.7.2",
+            "verse:Amos.7.3",
+            "verse:Amos.7.4",
+            "verse:Amos.7.5",
+            "verse:Amos.7.6",
+            "verse:Amos.7.7",
+            "verse:Amos.8.1",
+            "verse:Amos.8.10",
+            "verse:Amos.8.11",
+            "verse:Amos.8.12",
+            "verse:Amos.8.13",
+            "verse:Amos.8.3",
+            "verse:Amos.8.4",
+            "verse:Amos.8.5",
+            "verse:Amos.8.6",
+            "verse:Amos.8.7",
+            "verse:Amos.8.9",
+            "verse:Amos.9.1",
+            "verse:Amos.9.10",
+            "verse:Amos.9.13",
+            "verse:Amos.9.14",
+            "verse:Amos.9.15",
+            "verse:Amos.9.2",
+            "verse:Amos.9.3",
+            "verse:Amos.9.4",
+            "verse:Amos.9.6"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-amos-1-1-1",
+            "mention:wb:p-azariah-3-1-1",
+            "mention:wb:p-jeroboam-2-1-1",
+            "mention:wb:p-joash-4-1-1",
+            "mention:wb:pl-tekoa-a2e3aa0-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-1-2",
+            "mention:wb:pl-zion-af20c46-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.3"
+          ],
+          "record_keys": [
+            "mention:wb:pl-damascus-a69c1d4-1-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-ben-hadad-2-1-4",
+            "mention:wb:p-hazael-1-1-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-beth-eden-a84c5a4-1-5",
+            "mention:wb:pl-damascus-a69c1d4-1-5",
+            "mention:wb:pl-valley-of-aven-a0c71dc-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-edom-a2735ff-1-6",
+            "mention:wb:pl-gaza-aa8edd2-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-gaza-aa8edd2-1-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ashdod-a30c937-1-8",
+            "mention:wb:pl-ashkelon-ac87d4c-1-8",
+            "mention:wb:pl-ekron-a3fc47a-1-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-edom-a2735ff-1-9",
+            "mention:wb:pl-tyre-a160272-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.10"
+          ],
+          "record_keys": [
+            "mention:wb:pl-tyre-a160272-1-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-edom-a2735ff-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.1.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-teman-a831506-1-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.2.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-edom-a2735ff-2-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.2.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-kerioth-a2d84de-2-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.2.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-2-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.2.10"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-2-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.2.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-2-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.3.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-3-1",
+            "mention:wb:pl-egypt-af301ca-3-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.3.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ashdod-a30c937-3-9",
+            "mention:wb:pl-egypt-af301ca-3-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.3.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-3-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.4.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-bashan-aa7a40a-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.4.3"
+          ],
+          "record_keys": [
+            "mention:wb:pl-harmon-a553fe6-4-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.4.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-4-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.4.10"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-4-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.4.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-gomorrah-aa572e2-4-11",
+            "mention:wb:pl-sodom-a0aa664-4-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.5.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-5-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.5.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-5-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.5.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-5-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.5.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-joseph-1-5-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.5.27"
+          ],
+          "record_keys": [
+            "mention:wb:pl-damascus-a69c1d4-5-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.6.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-6-1",
+            "mention:wb:pl-zion-af20c46-6-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.6.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-6-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.6.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-karnaim-adf5c7b-6-13",
+            "mention:wb:pl-lo-debar-a376eed-6-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.6.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-6-14",
+            "mention:wb:pl-brook-of-the-arabah-a5983ec-6-14",
+            "mention:wb:pl-lebo-hamath-a5eb047-6-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-amos-1-7-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-jeroboam-2-7-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-amaziah-3-7-10",
+            "mention:wb:p-amos-1-7-10",
+            "mention:wb:p-jeroboam-2-7-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-amos-1-7-11",
+            "mention:wb:p-jeroboam-2-7-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-amaziah-3-7-12",
+            "mention:wb:p-amos-1-7-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-amos-1-7-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.7.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaac-1-7-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.8.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-amos-1-8-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.8.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-8-8",
+            "mention:wb:pl-nile-a012705-8-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.8.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-dan-a513646-8-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.9.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-9-5",
+            "mention:wb:pl-nile-a012705-9-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.9.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-9-7",
+            "mention:wb:pl-caphtor-a329990-9-7",
+            "mention:wb:pl-egypt-af301ca-9-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.9.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-9-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.9.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-9-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.9.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-9-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Amos.9.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-edom-a2735ff-9-12"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

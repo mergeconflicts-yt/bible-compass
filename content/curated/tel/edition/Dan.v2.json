@@ -1,0 +1,4029 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-dan-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-dan-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-dan-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-dan:refsys:tel-v1:dan.1.1-dan.12.13",
+      "scope:wb-dan-1:refsys:tel-v1:dan.1.1-dan.1.21",
+      "scope:wb-dan-2:refsys:tel-v1:dan.2.1-dan.2.49",
+      "scope:wb-dan-3:refsys:tel-v1:dan.3.1-dan.3.30",
+      "scope:wb-dan-4:refsys:tel-v1:dan.4.1-dan.4.37",
+      "scope:wb-dan-5:refsys:tel-v1:dan.5.1-dan.5.31",
+      "scope:wb-dan-6:refsys:tel-v1:dan.6.1-dan.6.28",
+      "scope:wb-dan-7:refsys:tel-v1:dan.7.1-dan.7.28",
+      "scope:wb-dan-8:refsys:tel-v1:dan.8.1-dan.8.27",
+      "scope:wb-dan-9:refsys:tel-v1:dan.9.1-dan.9.27",
+      "scope:wb-dan-10:refsys:tel-v1:dan.10.1-dan.10.21",
+      "scope:wb-dan-11:refsys:tel-v1:dan.11.1-dan.11.45",
+      "scope:wb-dan-12:refsys:tel-v1:dan.12.1-dan.12.13",
+      "scope:wb-dan-1-p1:refsys:tel-v1:dan.1.1-dan.1.21",
+      "scope:wb-dan-2-p1:refsys:tel-v1:dan.2.1-dan.2.23",
+      "scope:wb-dan-2-p2:refsys:tel-v1:dan.2.24-dan.2.49",
+      "scope:wb-dan-3-p1:refsys:tel-v1:dan.3.1-dan.3.30",
+      "scope:wb-dan-4-p1:refsys:tel-v1:dan.4.1-dan.4.18",
+      "scope:wb-dan-4-p2:refsys:tel-v1:dan.4.19-dan.4.27",
+      "scope:wb-dan-4-p3:refsys:tel-v1:dan.4.28-dan.4.37",
+      "scope:wb-dan-5-p1:refsys:tel-v1:dan.5.1-dan.5.31",
+      "scope:wb-dan-6-p1:refsys:tel-v1:dan.6.1-dan.6.28",
+      "scope:wb-dan-7-p1:refsys:tel-v1:dan.7.1-dan.7.14",
+      "scope:wb-dan-7-p2:refsys:tel-v1:dan.7.15-dan.7.28",
+      "scope:wb-dan-8-p1:refsys:tel-v1:dan.8.1-dan.8.14",
+      "scope:wb-dan-8-p2:refsys:tel-v1:dan.8.15-dan.8.27",
+      "scope:wb-dan-9-p1:refsys:tel-v1:dan.9.1-dan.9.19",
+      "scope:wb-dan-9-p2:refsys:tel-v1:dan.9.20-dan.9.27",
+      "scope:wb-dan-10-p1:refsys:tel-v1:dan.10.1-dan.10.21",
+      "scope:wb-dan-11-p1:refsys:tel-v1:dan.11.1-dan.11.1",
+      "scope:wb-dan-11-p2:refsys:tel-v1:dan.11.2-dan.11.35",
+      "scope:wb-dan-11-p3:refsys:tel-v1:dan.11.36-dan.11.45",
+      "scope:wb-dan-12-p1:refsys:tel-v1:dan.12.1-dan.12.13"
+    ],
+    "reference_keys": [
+      "verse:Dan.1.1",
+      "verse:Dan.1.2",
+      "verse:Dan.1.3",
+      "verse:Dan.1.4",
+      "verse:Dan.1.5",
+      "verse:Dan.1.6",
+      "verse:Dan.1.7",
+      "verse:Dan.1.8",
+      "verse:Dan.1.9",
+      "verse:Dan.1.10",
+      "verse:Dan.1.11",
+      "verse:Dan.1.12",
+      "verse:Dan.1.13",
+      "verse:Dan.1.14",
+      "verse:Dan.1.15",
+      "verse:Dan.1.16",
+      "verse:Dan.1.17",
+      "verse:Dan.1.18",
+      "verse:Dan.1.19",
+      "verse:Dan.1.20",
+      "verse:Dan.1.21",
+      "verse:Dan.2.1",
+      "verse:Dan.2.2",
+      "verse:Dan.2.3",
+      "verse:Dan.2.4",
+      "verse:Dan.2.5",
+      "verse:Dan.2.6",
+      "verse:Dan.2.7",
+      "verse:Dan.2.8",
+      "verse:Dan.2.9",
+      "verse:Dan.2.10",
+      "verse:Dan.2.11",
+      "verse:Dan.2.12",
+      "verse:Dan.2.13",
+      "verse:Dan.2.14",
+      "verse:Dan.2.15",
+      "verse:Dan.2.16",
+      "verse:Dan.2.17",
+      "verse:Dan.2.18",
+      "verse:Dan.2.19",
+      "verse:Dan.2.20",
+      "verse:Dan.2.21",
+      "verse:Dan.2.22",
+      "verse:Dan.2.23",
+      "verse:Dan.2.24",
+      "verse:Dan.2.25",
+      "verse:Dan.2.26",
+      "verse:Dan.2.27",
+      "verse:Dan.2.28",
+      "verse:Dan.2.29",
+      "verse:Dan.2.30",
+      "verse:Dan.2.31",
+      "verse:Dan.2.32",
+      "verse:Dan.2.33",
+      "verse:Dan.2.34",
+      "verse:Dan.2.35",
+      "verse:Dan.2.36",
+      "verse:Dan.2.37",
+      "verse:Dan.2.38",
+      "verse:Dan.2.39",
+      "verse:Dan.2.40",
+      "verse:Dan.2.41",
+      "verse:Dan.2.42",
+      "verse:Dan.2.43",
+      "verse:Dan.2.44",
+      "verse:Dan.2.45",
+      "verse:Dan.2.46",
+      "verse:Dan.2.47",
+      "verse:Dan.2.48",
+      "verse:Dan.2.49",
+      "verse:Dan.3.1",
+      "verse:Dan.3.2",
+      "verse:Dan.3.3",
+      "verse:Dan.3.4",
+      "verse:Dan.3.5",
+      "verse:Dan.3.6",
+      "verse:Dan.3.7",
+      "verse:Dan.3.8",
+      "verse:Dan.3.9",
+      "verse:Dan.3.10",
+      "verse:Dan.3.11",
+      "verse:Dan.3.12",
+      "verse:Dan.3.13",
+      "verse:Dan.3.14",
+      "verse:Dan.3.15",
+      "verse:Dan.3.16",
+      "verse:Dan.3.17",
+      "verse:Dan.3.18",
+      "verse:Dan.3.19",
+      "verse:Dan.3.20",
+      "verse:Dan.3.21",
+      "verse:Dan.3.22",
+      "verse:Dan.3.23",
+      "verse:Dan.3.24",
+      "verse:Dan.3.25",
+      "verse:Dan.3.26",
+      "verse:Dan.3.27",
+      "verse:Dan.3.28",
+      "verse:Dan.3.29",
+      "verse:Dan.3.30",
+      "verse:Dan.4.1",
+      "verse:Dan.4.2",
+      "verse:Dan.4.3",
+      "verse:Dan.4.4",
+      "verse:Dan.4.5",
+      "verse:Dan.4.6",
+      "verse:Dan.4.7",
+      "verse:Dan.4.8",
+      "verse:Dan.4.9",
+      "verse:Dan.4.10",
+      "verse:Dan.4.11",
+      "verse:Dan.4.12",
+      "verse:Dan.4.13",
+      "verse:Dan.4.14",
+      "verse:Dan.4.15",
+      "verse:Dan.4.16",
+      "verse:Dan.4.17",
+      "verse:Dan.4.18",
+      "verse:Dan.4.19",
+      "verse:Dan.4.20",
+      "verse:Dan.4.21",
+      "verse:Dan.4.22",
+      "verse:Dan.4.23",
+      "verse:Dan.4.24",
+      "verse:Dan.4.25",
+      "verse:Dan.4.26",
+      "verse:Dan.4.27",
+      "verse:Dan.4.28",
+      "verse:Dan.4.29",
+      "verse:Dan.4.30",
+      "verse:Dan.4.31",
+      "verse:Dan.4.32",
+      "verse:Dan.4.33",
+      "verse:Dan.4.34",
+      "verse:Dan.4.35",
+      "verse:Dan.4.36",
+      "verse:Dan.4.37",
+      "verse:Dan.5.1",
+      "verse:Dan.5.2",
+      "verse:Dan.5.3",
+      "verse:Dan.5.4",
+      "verse:Dan.5.5",
+      "verse:Dan.5.6",
+      "verse:Dan.5.7",
+      "verse:Dan.5.8",
+      "verse:Dan.5.9",
+      "verse:Dan.5.10",
+      "verse:Dan.5.11",
+      "verse:Dan.5.12",
+      "verse:Dan.5.13",
+      "verse:Dan.5.14",
+      "verse:Dan.5.15",
+      "verse:Dan.5.16",
+      "verse:Dan.5.17",
+      "verse:Dan.5.18",
+      "verse:Dan.5.19",
+      "verse:Dan.5.20",
+      "verse:Dan.5.21",
+      "verse:Dan.5.22",
+      "verse:Dan.5.23",
+      "verse:Dan.5.24",
+      "verse:Dan.5.25",
+      "verse:Dan.5.26",
+      "verse:Dan.5.27",
+      "verse:Dan.5.28",
+      "verse:Dan.5.29",
+      "verse:Dan.5.30",
+      "verse:Dan.5.31",
+      "verse:Dan.6.1",
+      "verse:Dan.6.2",
+      "verse:Dan.6.3",
+      "verse:Dan.6.4",
+      "verse:Dan.6.5",
+      "verse:Dan.6.6",
+      "verse:Dan.6.7",
+      "verse:Dan.6.8",
+      "verse:Dan.6.9",
+      "verse:Dan.6.10",
+      "verse:Dan.6.11",
+      "verse:Dan.6.12",
+      "verse:Dan.6.13",
+      "verse:Dan.6.14",
+      "verse:Dan.6.15",
+      "verse:Dan.6.16",
+      "verse:Dan.6.17",
+      "verse:Dan.6.18",
+      "verse:Dan.6.19",
+      "verse:Dan.6.20",
+      "verse:Dan.6.21",
+      "verse:Dan.6.22",
+      "verse:Dan.6.23",
+      "verse:Dan.6.24",
+      "verse:Dan.6.25",
+      "verse:Dan.6.26",
+      "verse:Dan.6.27",
+      "verse:Dan.6.28",
+      "verse:Dan.7.1",
+      "verse:Dan.7.2",
+      "verse:Dan.7.3",
+      "verse:Dan.7.4",
+      "verse:Dan.7.5",
+      "verse:Dan.7.6",
+      "verse:Dan.7.7",
+      "verse:Dan.7.8",
+      "verse:Dan.7.9",
+      "verse:Dan.7.10",
+      "verse:Dan.7.11",
+      "verse:Dan.7.12",
+      "verse:Dan.7.13",
+      "verse:Dan.7.14",
+      "verse:Dan.7.15",
+      "verse:Dan.7.16",
+      "verse:Dan.7.17",
+      "verse:Dan.7.18",
+      "verse:Dan.7.19",
+      "verse:Dan.7.20",
+      "verse:Dan.7.21",
+      "verse:Dan.7.22",
+      "verse:Dan.7.23",
+      "verse:Dan.7.24",
+      "verse:Dan.7.25",
+      "verse:Dan.7.26",
+      "verse:Dan.7.27",
+      "verse:Dan.7.28",
+      "verse:Dan.8.1",
+      "verse:Dan.8.2",
+      "verse:Dan.8.3",
+      "verse:Dan.8.4",
+      "verse:Dan.8.5",
+      "verse:Dan.8.6",
+      "verse:Dan.8.7",
+      "verse:Dan.8.8",
+      "verse:Dan.8.9",
+      "verse:Dan.8.10",
+      "verse:Dan.8.11",
+      "verse:Dan.8.12",
+      "verse:Dan.8.13",
+      "verse:Dan.8.14",
+      "verse:Dan.8.15",
+      "verse:Dan.8.16",
+      "verse:Dan.8.17",
+      "verse:Dan.8.18",
+      "verse:Dan.8.19",
+      "verse:Dan.8.20",
+      "verse:Dan.8.21",
+      "verse:Dan.8.22",
+      "verse:Dan.8.23",
+      "verse:Dan.8.24",
+      "verse:Dan.8.25",
+      "verse:Dan.8.26",
+      "verse:Dan.8.27",
+      "verse:Dan.9.1",
+      "verse:Dan.9.2",
+      "verse:Dan.9.3",
+      "verse:Dan.9.4",
+      "verse:Dan.9.5",
+      "verse:Dan.9.6",
+      "verse:Dan.9.7",
+      "verse:Dan.9.8",
+      "verse:Dan.9.9",
+      "verse:Dan.9.10",
+      "verse:Dan.9.11",
+      "verse:Dan.9.12",
+      "verse:Dan.9.13",
+      "verse:Dan.9.14",
+      "verse:Dan.9.15",
+      "verse:Dan.9.16",
+      "verse:Dan.9.17",
+      "verse:Dan.9.18",
+      "verse:Dan.9.19",
+      "verse:Dan.9.20",
+      "verse:Dan.9.21",
+      "verse:Dan.9.22",
+      "verse:Dan.9.23",
+      "verse:Dan.9.24",
+      "verse:Dan.9.25",
+      "verse:Dan.9.26",
+      "verse:Dan.9.27",
+      "verse:Dan.10.1",
+      "verse:Dan.10.2",
+      "verse:Dan.10.3",
+      "verse:Dan.10.4",
+      "verse:Dan.10.5",
+      "verse:Dan.10.6",
+      "verse:Dan.10.7",
+      "verse:Dan.10.8",
+      "verse:Dan.10.9",
+      "verse:Dan.10.10",
+      "verse:Dan.10.11",
+      "verse:Dan.10.12",
+      "verse:Dan.10.13",
+      "verse:Dan.10.14",
+      "verse:Dan.10.15",
+      "verse:Dan.10.16",
+      "verse:Dan.10.17",
+      "verse:Dan.10.18",
+      "verse:Dan.10.19",
+      "verse:Dan.10.20",
+      "verse:Dan.10.21",
+      "verse:Dan.11.1",
+      "verse:Dan.11.2",
+      "verse:Dan.11.3",
+      "verse:Dan.11.4",
+      "verse:Dan.11.5",
+      "verse:Dan.11.6",
+      "verse:Dan.11.7",
+      "verse:Dan.11.8",
+      "verse:Dan.11.9",
+      "verse:Dan.11.10",
+      "verse:Dan.11.11",
+      "verse:Dan.11.12",
+      "verse:Dan.11.13",
+      "verse:Dan.11.14",
+      "verse:Dan.11.15",
+      "verse:Dan.11.16",
+      "verse:Dan.11.17",
+      "verse:Dan.11.18",
+      "verse:Dan.11.19",
+      "verse:Dan.11.20",
+      "verse:Dan.11.21",
+      "verse:Dan.11.22",
+      "verse:Dan.11.23",
+      "verse:Dan.11.24",
+      "verse:Dan.11.25",
+      "verse:Dan.11.26",
+      "verse:Dan.11.27",
+      "verse:Dan.11.28",
+      "verse:Dan.11.29",
+      "verse:Dan.11.30",
+      "verse:Dan.11.31",
+      "verse:Dan.11.32",
+      "verse:Dan.11.33",
+      "verse:Dan.11.34",
+      "verse:Dan.11.35",
+      "verse:Dan.11.36",
+      "verse:Dan.11.37",
+      "verse:Dan.11.38",
+      "verse:Dan.11.39",
+      "verse:Dan.11.40",
+      "verse:Dan.11.41",
+      "verse:Dan.11.42",
+      "verse:Dan.11.43",
+      "verse:Dan.11.44",
+      "verse:Dan.11.45",
+      "verse:Dan.12.1",
+      "verse:Dan.12.2",
+      "verse:Dan.12.3",
+      "verse:Dan.12.4",
+      "verse:Dan.12.5",
+      "verse:Dan.12.6",
+      "verse:Dan.12.7",
+      "verse:Dan.12.8",
+      "verse:Dan.12.9",
+      "verse:Dan.12.10",
+      "verse:Dan.12.11",
+      "verse:Dan.12.12",
+      "verse:Dan.12.13"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": "edition:tel-irv@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-moses-1-9-11",
+        "verse_key": "verse:Dan.9.11",
+        "attestation_key": "attestation:wb-p-moses-1-9-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "నని నీవు నీ సేవకుడు ",
+          "suffix": " ధర్మశాస్త్రంలో శపథం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-9-13",
+        "verse_key": "verse:Dan.9.13",
+        "attestation_key": "attestation:wb-p-moses-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ధర్మశాస్త్రంలో రాసి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-eliakim-2-1-1",
+        "verse_key": "verse:Dan.1.1",
+        "attestation_key": "attestation:wb-p-eliakim-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-eliakim-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యెహోయాకీము",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదా రాజు ",
+          "suffix": " పరిపాలన మూడో సంవత్స"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-eliakim-2-1-2",
+        "verse_key": "verse:Dan.1.2",
+        "attestation_key": "attestation:wb-p-eliakim-2-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-eliakim-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యెహోయాకీము",
+          "occurrence_ordinal": 1,
+          "prefix": "యెహోవా యూదా రాజు ",
+          "suffix": "పై విజయం ఇచ్చాడు. అత"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-nebuchadnezzar-1-1-1",
+        "verse_key": "verse:Dan.1.1",
+        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nebuchadnezzar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాలన మూడో సంవత్సరంలో ",
+          "suffix": " రాజు నెబుకద్నెజరు య"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-nebuchadnezzar-1-3-1",
+        "verse_key": "verse:Dan.3.1",
+        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nebuchadnezzar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": " వెడల్పు ఆరు మూరలు. ",
+          "suffix": " దేశాలోని “దూరా” అనే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jeremiah-6-9-2",
+        "verse_key": "verse:Dan.9.2",
+        "attestation_key": "attestation:wb-p-jeremiah-6-9-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jeremiah-6"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యిర్మీయా",
+          "occurrence_ordinal": 1,
+          "prefix": "ోవా తన ప్రవక్త అయిన ",
+          "suffix": "కు ఇచ్చిన వాక్కు రాస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-cyrus-1-1-21",
+        "verse_key": "verse:Dan.1.21",
+        "attestation_key": "attestation:wb-p-cyrus-1-1-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-cyrus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "కోరెషు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " చక్రవర్తి పాలన మొదట"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-cyrus-1-6-28",
+        "verse_key": "verse:Dan.6.28",
+        "attestation_key": "attestation:wb-p-cyrus-1-6-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-cyrus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "కోరెషు",
+          "occurrence_ordinal": 1,
+          "prefix": " కాలంలో, పారసీకుడైన ",
+          "suffix": " పరిపాలనలో వృద్ది చె"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-cyrus-1-10-1",
+        "verse_key": "verse:Dan.10.1",
+        "attestation_key": "attestation:wb-p-cyrus-1-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-cyrus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "కోరెషు",
+          "occurrence_ordinal": 1,
+          "prefix": "పారసీకరాజు ",
+          "suffix": " పరిపాలన కాలంలో మూడవ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-5-31",
+        "verse_key": "verse:Dan.5.31",
+        "attestation_key": "attestation:wb-p-darius-1-5-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": " వయసున్న మాదీయ రాజు ",
+          "suffix": " సింహాసనం అధిష్టించా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-6-1",
+        "verse_key": "verse:Dan.6.1",
+        "attestation_key": "attestation:wb-p-darius-1-6-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజైన ",
+          "suffix": " తన రాజ్య పరిపాలన వ్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-6-9",
+        "verse_key": "verse:Dan.6.9",
+        "attestation_key": "attestation:wb-p-darius-1-6-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు రాజైన ",
+          "suffix": " శాసనం సిద్ధం చేయించ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-6-25",
+        "verse_key": "verse:Dan.6.25",
+        "attestation_key": "attestation:wb-p-darius-1-6-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు రాజైన ",
+          "suffix": " లోకమంతటా నివసించే ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-6-28",
+        "verse_key": "verse:Dan.6.28",
+        "attestation_key": "attestation:wb-p-darius-1-6-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ దానియేలు ",
+          "suffix": " పరిపాలన కాలంలో, పార"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-darius-1-11-1",
+        "verse_key": "verse:Dan.11.1",
+        "attestation_key": "attestation:wb-p-darius-1-11-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-darius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దర్యావేషు",
+          "occurrence_ordinal": 1,
+          "prefix": "మాదీయుడైన ",
+          "suffix": " మొదటి సంవత్సరంలో మి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-9-1",
+        "verse_key": "verse:Dan.9.1",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-9-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "మాదీయుడైన ",
+          "suffix": " కుమారుడు దర్యావేషు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-6",
+        "verse_key": "verse:Dan.1.6",
+        "attestation_key": "attestation:wb-p-daniel-2-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "గా వెళ్ళిన యూదుల్లో ",
+          "suffix": ", హనన్యా, మిషాయేలు, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-7",
+        "verse_key": "verse:Dan.1.7",
+        "attestation_key": "attestation:wb-p-daniel-2-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "నపుంసకుల అధికారి ",
+          "suffix": "కు బెల్తెషాజరు అనీ, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-8",
+        "verse_key": "verse:Dan.1.8",
+        "attestation_key": "attestation:wb-p-daniel-2-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "విత్రం చేసుకోకూడదని ",
+          "suffix": " నిర్ణయించుకున్నాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-9",
+        "verse_key": "verse:Dan.1.9",
+        "attestation_key": "attestation:wb-p-daniel-2-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ుడు ముఖ్య అధికారికి ",
+          "suffix": " పట్ల దయ, అభిమానం కల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-10",
+        "verse_key": "verse:Dan.1.10",
+        "attestation_key": "attestation:wb-p-daniel-2-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ అధిపతి ",
+          "suffix": "తో “మీకు రాజ భోజనం, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-11",
+        "verse_key": "verse:Dan.1.11",
+        "attestation_key": "attestation:wb-p-daniel-2-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", హనన్యా, మిషాయేలు, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-17",
+        "verse_key": "verse:Dan.1.17",
+        "attestation_key": "attestation:wb-p-daniel-2-1-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ేటలు అనుగ్రహించాడు. ",
+          "suffix": "కు సకల విధాలైన దైవదర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-19",
+        "verse_key": "verse:Dan.1.19",
+        "attestation_key": "attestation:wb-p-daniel-2-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ించాడు. వాళ్ళందరిలో ",
+          "suffix": ", హనన్యా, మిషాయేలు, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-1-21",
+        "verse_key": "verse:Dan.1.21",
+        "attestation_key": "attestation:wb-p-daniel-2-1-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "మొదటి సంవత్సరం వరకూ ",
+          "suffix": " అక్కడ ఉన్నాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-13",
+        "verse_key": "verse:Dan.2.13",
+        "attestation_key": "attestation:wb-p-daniel-2-2-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "లుదేరారు. ఆ క్రమంలో ",
+          "suffix": "ను, అతని స్నేహితులను"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-14",
+        "verse_key": "verse:Dan.2.14",
+        "attestation_key": "attestation:wb-p-daniel-2-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "తి అర్యోకు దగ్గరికి ",
+          "suffix": " వెళ్ళాడు. అతనితో జ్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-15",
+        "verse_key": "verse:Dan.2.15",
+        "attestation_key": "attestation:wb-p-daniel-2-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ోకు జరిగిన విషయమంతా ",
+          "suffix": "కు వివరించాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-16",
+        "verse_key": "verse:Dan.2.16",
+        "attestation_key": "attestation:wb-p-daniel-2-2-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజుకు వచ్చిన కల భా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-17",
+        "verse_key": "verse:Dan.2.17",
+        "attestation_key": "attestation:wb-p-daniel-2-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "తరువాత ",
+          "suffix": " తన ఇంటికి వెళ్ళి తన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-19",
+        "verse_key": "verse:Dan.2.19",
+        "attestation_key": "attestation:wb-p-daniel-2-2-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రాత్రి సమయంలో ",
+          "suffix": "కు దర్శనంలో ఆ కల, కల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-24",
+        "verse_key": "verse:Dan.2.24",
+        "attestation_key": "attestation:wb-p-daniel-2-2-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "తి అర్యోకు దగ్గరికి ",
+          "suffix": " వెళ్ళాడు. అతనితో “బ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-25",
+        "verse_key": "verse:Dan.2.25",
+        "attestation_key": "attestation:wb-p-daniel-2-2-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": " అని చెప్పి, వెంటనే ",
+          "suffix": "ను రాజమందిరానికి తీస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-26",
+        "verse_key": "verse:Dan.2.26",
+        "attestation_key": "attestation:wb-p-daniel-2-2-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "అని బెల్తెషాజరు అనే ",
+          "suffix": "ను అడిగాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-27",
+        "verse_key": "verse:Dan.2.27",
+        "attestation_key": "attestation:wb-p-daniel-2-2-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు ఎదుట నిలబడి ఇల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-46",
+        "verse_key": "verse:Dan.2.46",
+        "attestation_key": "attestation:wb-p-daniel-2-2-46",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": " రాజైన నెబుకద్నెజరు ",
+          "suffix": " ఎదుట సాష్ఠాంగపడి నమ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-47",
+        "verse_key": "verse:Dan.2.47",
+        "attestation_key": "attestation:wb-p-daniel-2-2-47",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజు ",
+          "suffix": "తో “ఈ రహస్య విషయాలు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-48",
+        "verse_key": "verse:Dan.2.48",
+        "attestation_key": "attestation:wb-p-daniel-2-2-48",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజు ",
+          "suffix": "కు ఎన్నో విలువైన బహు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-2-49",
+        "verse_key": "verse:Dan.2.49",
+        "attestation_key": "attestation:wb-p-daniel-2-2-49",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " విన్నపం మేరకు రాజు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-4-8",
+        "verse_key": "verse:Dan.4.8",
+        "attestation_key": "attestation:wb-p-daniel-2-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "చివరకు ",
+          "suffix": " నా దగ్గరికి వచ్చాడు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-4-19",
+        "verse_key": "verse:Dan.4.19",
+        "attestation_key": "attestation:wb-p-daniel-2-4-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "తెషాజరు అనే పేరున్న ",
+          "suffix": " ఒక గంట సేపు ఎంతో ఆశ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-5-12",
+        "verse_key": "verse:Dan.5.12",
+        "attestation_key": "attestation:wb-p-daniel-2-5-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "“ఈ ",
+          "suffix": " బుద్ధికుశలత కలిగినవ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-5-13",
+        "verse_key": "verse:Dan.5.13",
+        "attestation_key": "attestation:wb-p-daniel-2-5-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు వాళ్ళు ",
+          "suffix": "ను తీసుకువచ్చారు. అత"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-5-17",
+        "verse_key": "verse:Dan.5.17",
+        "attestation_key": "attestation:wb-p-daniel-2-5-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "బదులుగా ",
+          "suffix": " ఇలా అన్నాడు. “రాజా,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-2",
+        "verse_key": "verse:Dan.6.2",
+        "attestation_key": "attestation:wb-p-daniel-2-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ంచాడు. ఆ ముగ్గురిలో ",
+          "suffix": " ముఖ్యుడు. దేశానికి,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-3",
+        "verse_key": "verse:Dan.6.3",
+        "attestation_key": "attestation:wb-p-daniel-2-6-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " శ్రేష్ఠమైన జ్ఞాన వి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-4",
+        "verse_key": "verse:Dan.6.4",
+        "attestation_key": "attestation:wb-p-daniel-2-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "రిపాలన వ్యవహారాల్లో ",
+          "suffix": "పై ఏదైనా ఒక నేరం ఆరో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-5",
+        "verse_key": "verse:Dan.6.5",
+        "attestation_key": "attestation:wb-p-daniel-2-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు వాళ్ళు “",
+          "suffix": " తన దేవుణ్ణి పూజించే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-10",
+        "verse_key": "verse:Dan.6.10",
+        "attestation_key": "attestation:wb-p-daniel-2-6-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "క ఆజ్ఞ జారీ అయిందని ",
+          "suffix": "కు తెలిసినప్పటికీ అత"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-11",
+        "verse_key": "verse:Dan.6.11",
+        "attestation_key": "attestation:wb-p-daniel-2-6-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "్తులు గుంపుగా వచ్చి ",
+          "suffix": " తన దేవునికి ప్రార్థ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-13",
+        "verse_key": "verse:Dan.6.13",
+        "attestation_key": "attestation:wb-p-daniel-2-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "టిన యూదుల్లో ఉన్న ఆ ",
+          "suffix": " నిన్నూ నువ్వు నియమి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-14",
+        "verse_key": "verse:Dan.6.14",
+        "attestation_key": "attestation:wb-p-daniel-2-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "జు ఎంతో మధనపడ్డాడు. ",
+          "suffix": "ను ఎలాగైనా రక్షించాల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-16",
+        "verse_key": "verse:Dan.6.16",
+        "attestation_key": "attestation:wb-p-daniel-2-6-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "జ్ఞ ఇవ్వగా సైనికులు ",
+          "suffix": "ను పట్టుకుని సింహాల "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-17",
+        "verse_key": "verse:Dan.6.17",
+        "attestation_key": "attestation:wb-p-daniel-2-6-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": " దాన్ని మూసివేశారు. ",
+          "suffix": " విషయంలో రాజు తన నిర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-20",
+        "verse_key": "verse:Dan.6.20",
+        "attestation_key": "attestation:wb-p-daniel-2-6-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "వచ్చి, దుఃఖ స్వరంతో ",
+          "suffix": "ను పిలిచాడు. “జీవం గ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-21",
+        "verse_key": "verse:Dan.6.21",
+        "attestation_key": "attestation:wb-p-daniel-2-6-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "అందుకు ",
+          "suffix": " “రాజు చిరకాలం జీవిం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-23",
+        "verse_key": "verse:Dan.6.23",
+        "attestation_key": "attestation:wb-p-daniel-2-6-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ు చాలా సంతోషించాడు. ",
+          "suffix": "ను గుహలో నుండి పైకి "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-24",
+        "verse_key": "verse:Dan.6.24",
+        "attestation_key": "attestation:wb-p-daniel-2-6-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " మీద నింద మోపిన ఆ వ్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-27",
+        "verse_key": "verse:Dan.6.27",
+        "attestation_key": "attestation:wb-p-daniel-2-6-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "సింహాల బారి నుండి ఈ ",
+          "suffix": "ను రక్షించాడు” అని ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-6-28",
+        "verse_key": "verse:Dan.6.28",
+        "attestation_key": "attestation:wb-p-daniel-2-6-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ ",
+          "suffix": " దర్యావేషు పరిపాలన క"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-7-1",
+        "verse_key": "verse:Dan.7.1",
+        "attestation_key": "attestation:wb-p-daniel-2-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "లన మొదటి సంవత్సరంలో ",
+          "suffix": "కు దర్శనాలు కలిగాయి."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-7-2",
+        "verse_key": "verse:Dan.7.2",
+        "attestation_key": "attestation:wb-p-daniel-2-7-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " వివరించి చెప్పిన దే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-7-15",
+        "verse_key": "verse:Dan.7.15",
+        "attestation_key": "attestation:wb-p-daniel-2-7-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ర పరుస్తున్నందువల్ల ",
+          "suffix": " అనే నాకు లోపల కలవరం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-7-28",
+        "verse_key": "verse:Dan.7.28",
+        "attestation_key": "attestation:wb-p-daniel-2-7-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " అనే నేను ఇది విని మ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-8-1",
+        "verse_key": "verse:Dan.8.1",
+        "attestation_key": "attestation:wb-p-daniel-2-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ాలన మూడవ సంవత్సరంలో ",
+          "suffix": " అనే నాకు మొదట కలిగి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-8-15",
+        "verse_key": "verse:Dan.8.15",
+        "attestation_key": "attestation:wb-p-daniel-2-8-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " అనే నేను ఈ దర్శనం చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-8-27",
+        "verse_key": "verse:Dan.8.27",
+        "attestation_key": "attestation:wb-p-daniel-2-8-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " అనే నేను తట్టుకోలేక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-9-2",
+        "verse_key": "verse:Dan.9.2",
+        "attestation_key": "attestation:wb-p-daniel-2-9-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "లనలో మొదటి సంవత్సరం ",
+          "suffix": " అనే నేను యెహోవా తన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-10-1",
+        "verse_key": "verse:Dan.10.1",
+        "attestation_key": "attestation:wb-p-daniel-2-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ంలో బెల్తెషాజరు అనే ",
+          "suffix": "కు ఒక సంగతి వెల్లడి "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-10-2",
+        "verse_key": "verse:Dan.10.2",
+        "attestation_key": "attestation:wb-p-daniel-2-10-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజుల్లో ",
+          "suffix": " అనే నేను మూడు వారాల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-10-7",
+        "verse_key": "verse:Dan.10.7",
+        "attestation_key": "attestation:wb-p-daniel-2-10-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " అనే నాకు ఈ దర్శనం క"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-daniel-2-12-5",
+        "verse_key": "verse:Dan.12.5",
+        "attestation_key": "attestation:wb-p-daniel-2-12-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-daniel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "దానియేలు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " అనే నేను చూస్తుండగా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-1-7",
+        "verse_key": "verse:Dan.1.7",
+        "attestation_key": "attestation:wb-p-hananiah-12-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "షాజరు అనీ, హనన్యాకు ",
+          "suffix": " అనీ, మిషాయేలుకు మేష"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-2-49",
+        "verse_key": "verse:Dan.2.49",
+        "attestation_key": "attestation:wb-p-hananiah-12-2-49",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": " విన్నపం మేరకు రాజు ",
+          "suffix": ", మేషాకు, అబేద్నెగో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-12",
+        "verse_key": "verse:Dan.3.12",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజా, తమరు ",
+          "suffix": ", మేషాకు, అబేద్నెగో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-13",
+        "verse_key": "verse:Dan.3.13",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "కోపంతో మండిపడ్డాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-16",
+        "verse_key": "verse:Dan.3.16",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-19",
+        "verse_key": "verse:Dan.3.19",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "కోపంతో మండిపడ్డాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-20",
+        "verse_key": "verse:Dan.3.20",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "ందరిని పిలిపించాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-22",
+        "verse_key": "verse:Dan.3.22",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "డం వేడి పెంచడం వల్ల ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-23",
+        "verse_key": "verse:Dan.3.23",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-26",
+        "verse_key": "verse:Dan.3.26",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": " దగ్గరికి వచ్చాడు. “",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hananiah-12-3-30",
+        "verse_key": "verse:Dan.3.30",
+        "attestation_key": "attestation:wb-p-hananiah-12-3-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hananiah-12"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పటి నుండి రాజు ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-1-7",
+        "verse_key": "verse:Dan.1.7",
+        "attestation_key": "attestation:wb-p-mishael-3-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "షాజరు అనీ, హనన్యాకు ",
+          "suffix": " అనీ, మిషాయేలుకు మేష"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-2-49",
+        "verse_key": "verse:Dan.2.49",
+        "attestation_key": "attestation:wb-p-mishael-3-2-49",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": " విన్నపం మేరకు రాజు ",
+          "suffix": ", మేషాకు, అబేద్నెగో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-12",
+        "verse_key": "verse:Dan.3.12",
+        "attestation_key": "attestation:wb-p-mishael-3-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజా, తమరు ",
+          "suffix": ", మేషాకు, అబేద్నెగో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-13",
+        "verse_key": "verse:Dan.3.13",
+        "attestation_key": "attestation:wb-p-mishael-3-3-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "కోపంతో మండిపడ్డాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-16",
+        "verse_key": "verse:Dan.3.16",
+        "attestation_key": "attestation:wb-p-mishael-3-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-19",
+        "verse_key": "verse:Dan.3.19",
+        "attestation_key": "attestation:wb-p-mishael-3-3-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "కోపంతో మండిపడ్డాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-20",
+        "verse_key": "verse:Dan.3.20",
+        "attestation_key": "attestation:wb-p-mishael-3-3-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "ందరిని పిలిపించాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-22",
+        "verse_key": "verse:Dan.3.22",
+        "attestation_key": "attestation:wb-p-mishael-3-3-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "డం వేడి పెంచడం వల్ల ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-23",
+        "verse_key": "verse:Dan.3.23",
+        "attestation_key": "attestation:wb-p-mishael-3-3-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-26",
+        "verse_key": "verse:Dan.3.26",
+        "attestation_key": "attestation:wb-p-mishael-3-3-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": " దగ్గరికి వచ్చాడు. “",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mishael-3-3-30",
+        "verse_key": "verse:Dan.3.30",
+        "attestation_key": "attestation:wb-p-mishael-3-3-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mishael-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పటి నుండి రాజు ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-1-7",
+        "verse_key": "verse:Dan.1.7",
+        "attestation_key": "attestation:wb-p-azariah-18-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "షాజరు అనీ, హనన్యాకు ",
+          "suffix": " అనీ, మిషాయేలుకు మేష"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-2-49",
+        "verse_key": "verse:Dan.2.49",
+        "attestation_key": "attestation:wb-p-azariah-18-2-49",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": " విన్నపం మేరకు రాజు ",
+          "suffix": ", మేషాకు, అబేద్నెగో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-12",
+        "verse_key": "verse:Dan.3.12",
+        "attestation_key": "attestation:wb-p-azariah-18-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజా, తమరు ",
+          "suffix": ", మేషాకు, అబేద్నెగో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-13",
+        "verse_key": "verse:Dan.3.13",
+        "attestation_key": "attestation:wb-p-azariah-18-3-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "కోపంతో మండిపడ్డాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-16",
+        "verse_key": "verse:Dan.3.16",
+        "attestation_key": "attestation:wb-p-azariah-18-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-19",
+        "verse_key": "verse:Dan.3.19",
+        "attestation_key": "attestation:wb-p-azariah-18-3-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "కోపంతో మండిపడ్డాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-20",
+        "verse_key": "verse:Dan.3.20",
+        "attestation_key": "attestation:wb-p-azariah-18-3-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "ందరిని పిలిపించాడు. ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-22",
+        "verse_key": "verse:Dan.3.22",
+        "attestation_key": "attestation:wb-p-azariah-18-3-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "డం వేడి పెంచడం వల్ల ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-23",
+        "verse_key": "verse:Dan.3.23",
+        "attestation_key": "attestation:wb-p-azariah-18-3-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-26",
+        "verse_key": "verse:Dan.3.26",
+        "attestation_key": "attestation:wb-p-azariah-18-3-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": " దగ్గరికి వచ్చాడు. “",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-azariah-18-3-30",
+        "verse_key": "verse:Dan.3.30",
+        "attestation_key": "attestation:wb-p-azariah-18-3-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-azariah-18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షద్రకు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పటి నుండి రాజు ",
+          "suffix": ", మేషాకు, అబేద్నెగోల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-1-1",
+        "verse_key": "verse:Dan.1.1",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాలన మూడో సంవత్సరంలో ",
+          "suffix": " రాజు నెబుకద్నెజరు య"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-12",
+        "verse_key": "verse:Dan.2.12",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ోపం తెచ్చుకున్నాడు. ",
+          "suffix": " దేశంలో ఉన్న జ్ఞానుల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-14",
+        "verse_key": "verse:Dan.2.14",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "లో ఉన్న జ్ఞానులను చం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-18",
+        "verse_key": "verse:Dan.2.18",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "కు, తన స్నేహితులకు, ",
+          "suffix": "లో ఉన్న మిగిలిన జ్ఞా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-24",
+        "verse_key": "verse:Dan.2.24",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ు వెళ్ళాడు. అతనితో “",
+          "suffix": "లో ఉన్న జ్ఞానులను చం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-48",
+        "verse_key": "verse:Dan.2.48",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-48",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "చాడు. అతణ్ణి ఘనపరచి ",
+          "suffix": " ఆస్థానం అంతటిపైన అధ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-49",
+        "verse_key": "verse:Dan.2.49",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-49",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "బేద్నెగో అనేవాళ్ళను ",
+          "suffix": " సంస్థానం అంతటి మీదా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-3-1",
+        "verse_key": "verse:Dan.3.1",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": " వెడల్పు ఆరు మూరలు. ",
+          "suffix": " దేశాలోని “దూరా” అనే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-3-12",
+        "verse_key": "verse:Dan.3.12",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "్గురు యూదు యువకులను ",
+          "suffix": " దేశంలోని రాజ్య పరిప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-3-30",
+        "verse_key": "verse:Dan.3.30",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-3-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ేషాకు, అబేద్నెగోలను ",
+          "suffix": " సంస్థానంలో ఉన్నత స్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-4-6",
+        "verse_key": "verse:Dan.4.6",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ు అర్థం చెప్పడానికి ",
+          "suffix": "లో ఉన్న జ్ఞానులనందరి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-4-29",
+        "verse_key": "verse:Dan.4.29",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ు తన రాజధాని పట్టణం ",
+          "suffix": "లోని ఒక నగరంలో సంచరి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-4-30",
+        "verse_key": "verse:Dan.4.30",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ు దాన్ని చూస్తూ. “ఈ ",
+          "suffix": " నగరం మహా విశాలమైన ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-5-7",
+        "verse_key": "verse:Dan.5.7",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-5-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ంచమని ఆజ్ఞ ఇచ్చాడు. ",
+          "suffix": "లోని జ్ఞానులు రాగానే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-7-1",
+        "verse_key": "verse:Dan.7.1",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు బెల్షస్సరు పరి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-9-15",
+        "verse_key": "verse:Dan.9.15",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "ు బలం వలన నీ ప్రజను ",
+          "suffix": "లో నుండి రప్పించడం వ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-8",
+        "verse_key": "verse:Dan.11.8",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "వస్తువులను చెరపట్టి ",
+          "suffix": "కు తీసుకుపోతాడు. అతడ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-42",
+        "verse_key": "verse:Dan.11.42",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-42",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": " తన సేన పంపిస్తాడు. ",
+          "suffix": " సైతం తప్పించుకోలేదు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-43",
+        "verse_key": "verse:Dan.11.43",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-43",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "ి బంగారు వస్తువులను ",
+          "suffix": "లోని విలువ గల వస్తువ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-elam-a7e3a59-8-2",
+        "verse_key": "verse:Dan.8.2",
+        "attestation_key": "attestation:wb-pl-elam-a7e3a59-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-elam-a7e3a59"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఏలాము",
+          "occurrence_ordinal": 1,
+          "prefix": "ను. చూస్తుండగా నేను ",
+          "suffix": " ప్రాంతానికి చెందిన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-most-holy-place-2-a9acaaf-9-24",
+        "verse_key": "verse:Dan.9.24",
+        "attestation_key": "attestation:wb-pl-most-holy-place-2-a9acaaf-9-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-most-holy-place-2-a9acaaf"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అతి",
+          "occurrence_ordinal": 1,
+          "prefix": "్ని ముద్రించడానికి, ",
+          "suffix": " పరిశుద్ధ స్థలాన్ని "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-8-20",
+        "verse_key": "verse:Dan.8.20",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-8-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "లు మాదీయుల పారసీకుల ",
+          "suffix": "లను సూచిస్తున్నది."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-10-13",
+        "verse_key": "verse:Dan.10.13",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "డ్డాడు. ఇంకా పారసీక ",
+          "suffix": "ల దగ్గర నేను ఆగిపోయి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-11-2",
+        "verse_key": "verse:Dan.11.2",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-11-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "ిటంటే ఇంకా ముగ్గురు ",
+          "suffix": "లు పారసీకంపై రాజ్యం "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-8-2",
+        "verse_key": "verse:Dan.8.2",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": " ప్రాంతానికి చెందిన ",
+          "suffix": " అనే పట్టణం కోటలో ఉం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Dan.1.12",
+            "verse:Dan.1.13",
+            "verse:Dan.1.14",
+            "verse:Dan.1.15",
+            "verse:Dan.1.16",
+            "verse:Dan.1.18",
+            "verse:Dan.1.20",
+            "verse:Dan.1.3",
+            "verse:Dan.1.4",
+            "verse:Dan.1.5",
+            "verse:Dan.10.10",
+            "verse:Dan.10.11",
+            "verse:Dan.10.12",
+            "verse:Dan.10.14",
+            "verse:Dan.10.15",
+            "verse:Dan.10.16",
+            "verse:Dan.10.17",
+            "verse:Dan.10.18",
+            "verse:Dan.10.19",
+            "verse:Dan.10.20",
+            "verse:Dan.10.21",
+            "verse:Dan.10.3",
+            "verse:Dan.10.4",
+            "verse:Dan.10.5",
+            "verse:Dan.10.6",
+            "verse:Dan.10.8",
+            "verse:Dan.10.9",
+            "verse:Dan.11.10",
+            "verse:Dan.11.11",
+            "verse:Dan.11.12",
+            "verse:Dan.11.13",
+            "verse:Dan.11.14",
+            "verse:Dan.11.15",
+            "verse:Dan.11.16",
+            "verse:Dan.11.17",
+            "verse:Dan.11.18",
+            "verse:Dan.11.19",
+            "verse:Dan.11.20",
+            "verse:Dan.11.21",
+            "verse:Dan.11.22",
+            "verse:Dan.11.23",
+            "verse:Dan.11.24",
+            "verse:Dan.11.25",
+            "verse:Dan.11.26",
+            "verse:Dan.11.27",
+            "verse:Dan.11.28",
+            "verse:Dan.11.29",
+            "verse:Dan.11.3",
+            "verse:Dan.11.30",
+            "verse:Dan.11.31",
+            "verse:Dan.11.32",
+            "verse:Dan.11.33",
+            "verse:Dan.11.34",
+            "verse:Dan.11.35",
+            "verse:Dan.11.36",
+            "verse:Dan.11.37",
+            "verse:Dan.11.38",
+            "verse:Dan.11.39",
+            "verse:Dan.11.4",
+            "verse:Dan.11.40",
+            "verse:Dan.11.41",
+            "verse:Dan.11.44",
+            "verse:Dan.11.45",
+            "verse:Dan.11.5",
+            "verse:Dan.11.6",
+            "verse:Dan.11.7",
+            "verse:Dan.11.9",
+            "verse:Dan.12.1",
+            "verse:Dan.12.10",
+            "verse:Dan.12.11",
+            "verse:Dan.12.12",
+            "verse:Dan.12.13",
+            "verse:Dan.12.2",
+            "verse:Dan.12.3",
+            "verse:Dan.12.4",
+            "verse:Dan.12.6",
+            "verse:Dan.12.7",
+            "verse:Dan.12.8",
+            "verse:Dan.12.9",
+            "verse:Dan.2.1",
+            "verse:Dan.2.10",
+            "verse:Dan.2.11",
+            "verse:Dan.2.2",
+            "verse:Dan.2.20",
+            "verse:Dan.2.21",
+            "verse:Dan.2.22",
+            "verse:Dan.2.23",
+            "verse:Dan.2.28",
+            "verse:Dan.2.29",
+            "verse:Dan.2.3",
+            "verse:Dan.2.30",
+            "verse:Dan.2.31",
+            "verse:Dan.2.32",
+            "verse:Dan.2.33",
+            "verse:Dan.2.34",
+            "verse:Dan.2.35",
+            "verse:Dan.2.36",
+            "verse:Dan.2.37",
+            "verse:Dan.2.38",
+            "verse:Dan.2.39",
+            "verse:Dan.2.4",
+            "verse:Dan.2.40",
+            "verse:Dan.2.41",
+            "verse:Dan.2.42",
+            "verse:Dan.2.43",
+            "verse:Dan.2.44",
+            "verse:Dan.2.45",
+            "verse:Dan.2.5",
+            "verse:Dan.2.6",
+            "verse:Dan.2.7",
+            "verse:Dan.2.8",
+            "verse:Dan.2.9",
+            "verse:Dan.3.10",
+            "verse:Dan.3.11",
+            "verse:Dan.3.14",
+            "verse:Dan.3.15",
+            "verse:Dan.3.17",
+            "verse:Dan.3.18",
+            "verse:Dan.3.2",
+            "verse:Dan.3.21",
+            "verse:Dan.3.24",
+            "verse:Dan.3.25",
+            "verse:Dan.3.27",
+            "verse:Dan.3.28",
+            "verse:Dan.3.29",
+            "verse:Dan.3.3",
+            "verse:Dan.3.4",
+            "verse:Dan.3.5",
+            "verse:Dan.3.6",
+            "verse:Dan.3.7",
+            "verse:Dan.3.8",
+            "verse:Dan.3.9",
+            "verse:Dan.4.1",
+            "verse:Dan.4.10",
+            "verse:Dan.4.11",
+            "verse:Dan.4.12",
+            "verse:Dan.4.13",
+            "verse:Dan.4.14",
+            "verse:Dan.4.15",
+            "verse:Dan.4.16",
+            "verse:Dan.4.17",
+            "verse:Dan.4.18",
+            "verse:Dan.4.2",
+            "verse:Dan.4.20",
+            "verse:Dan.4.21",
+            "verse:Dan.4.22",
+            "verse:Dan.4.23",
+            "verse:Dan.4.24",
+            "verse:Dan.4.25",
+            "verse:Dan.4.26",
+            "verse:Dan.4.27",
+            "verse:Dan.4.28",
+            "verse:Dan.4.3",
+            "verse:Dan.4.31",
+            "verse:Dan.4.32",
+            "verse:Dan.4.33",
+            "verse:Dan.4.34",
+            "verse:Dan.4.35",
+            "verse:Dan.4.36",
+            "verse:Dan.4.37",
+            "verse:Dan.4.4",
+            "verse:Dan.4.5",
+            "verse:Dan.4.7",
+            "verse:Dan.4.9",
+            "verse:Dan.5.1",
+            "verse:Dan.5.10",
+            "verse:Dan.5.11",
+            "verse:Dan.5.14",
+            "verse:Dan.5.15",
+            "verse:Dan.5.16",
+            "verse:Dan.5.18",
+            "verse:Dan.5.19",
+            "verse:Dan.5.2",
+            "verse:Dan.5.20",
+            "verse:Dan.5.21",
+            "verse:Dan.5.22",
+            "verse:Dan.5.23",
+            "verse:Dan.5.24",
+            "verse:Dan.5.25",
+            "verse:Dan.5.26",
+            "verse:Dan.5.27",
+            "verse:Dan.5.28",
+            "verse:Dan.5.29",
+            "verse:Dan.5.3",
+            "verse:Dan.5.30",
+            "verse:Dan.5.4",
+            "verse:Dan.5.5",
+            "verse:Dan.5.6",
+            "verse:Dan.5.8",
+            "verse:Dan.5.9",
+            "verse:Dan.6.12",
+            "verse:Dan.6.15",
+            "verse:Dan.6.18",
+            "verse:Dan.6.19",
+            "verse:Dan.6.22",
+            "verse:Dan.6.26",
+            "verse:Dan.6.6",
+            "verse:Dan.6.7",
+            "verse:Dan.6.8",
+            "verse:Dan.7.10",
+            "verse:Dan.7.11",
+            "verse:Dan.7.12",
+            "verse:Dan.7.13",
+            "verse:Dan.7.14",
+            "verse:Dan.7.16",
+            "verse:Dan.7.17",
+            "verse:Dan.7.18",
+            "verse:Dan.7.19",
+            "verse:Dan.7.20",
+            "verse:Dan.7.21",
+            "verse:Dan.7.22",
+            "verse:Dan.7.23",
+            "verse:Dan.7.24",
+            "verse:Dan.7.25",
+            "verse:Dan.7.26",
+            "verse:Dan.7.27",
+            "verse:Dan.7.3",
+            "verse:Dan.7.4",
+            "verse:Dan.7.5",
+            "verse:Dan.7.6",
+            "verse:Dan.7.7",
+            "verse:Dan.7.8",
+            "verse:Dan.7.9",
+            "verse:Dan.8.10",
+            "verse:Dan.8.11",
+            "verse:Dan.8.12",
+            "verse:Dan.8.13",
+            "verse:Dan.8.14",
+            "verse:Dan.8.16",
+            "verse:Dan.8.17",
+            "verse:Dan.8.18",
+            "verse:Dan.8.19",
+            "verse:Dan.8.21",
+            "verse:Dan.8.22",
+            "verse:Dan.8.23",
+            "verse:Dan.8.24",
+            "verse:Dan.8.25",
+            "verse:Dan.8.26",
+            "verse:Dan.8.3",
+            "verse:Dan.8.4",
+            "verse:Dan.8.5",
+            "verse:Dan.8.6",
+            "verse:Dan.8.7",
+            "verse:Dan.8.8",
+            "verse:Dan.8.9",
+            "verse:Dan.9.10",
+            "verse:Dan.9.12",
+            "verse:Dan.9.14",
+            "verse:Dan.9.16",
+            "verse:Dan.9.17",
+            "verse:Dan.9.18",
+            "verse:Dan.9.19",
+            "verse:Dan.9.20",
+            "verse:Dan.9.21",
+            "verse:Dan.9.22",
+            "verse:Dan.9.23",
+            "verse:Dan.9.25",
+            "verse:Dan.9.26",
+            "verse:Dan.9.27",
+            "verse:Dan.9.3",
+            "verse:Dan.9.4",
+            "verse:Dan.9.5",
+            "verse:Dan.9.6",
+            "verse:Dan.9.7",
+            "verse:Dan.9.8",
+            "verse:Dan.9.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-eliakim-2-1-1",
+            "mention:wb:p-nebuchadnezzar-1-1-1",
+            "mention:wb:pl-babylon-1-a217d18-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-eliakim-2-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-1-7",
+            "mention:wb:p-daniel-2-1-7",
+            "mention:wb:p-hananiah-12-1-7",
+            "mention:wb:p-mishael-3-1-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-1-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.1.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-cyrus-1-1-21",
+            "mention:wb:p-daniel-2-1-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-2-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-14",
+            "mention:wb:pl-babylon-1-a217d18-2-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-2-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-24",
+            "mention:wb:pl-babylon-1-a217d18-2-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.25"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.26"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.27"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.46"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-46"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.47"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-47"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.48"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-2-48",
+            "mention:wb:pl-babylon-1-a217d18-2-48"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.2.49"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-2-49",
+            "mention:wb:p-daniel-2-2-49",
+            "mention:wb:p-hananiah-12-2-49",
+            "mention:wb:p-mishael-3-2-49",
+            "mention:wb:pl-babylon-1-a217d18-2-49"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-nebuchadnezzar-1-3-1",
+            "mention:wb:pl-babylon-1-a217d18-3-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-12",
+            "mention:wb:p-hananiah-12-3-12",
+            "mention:wb:p-mishael-3-3-12",
+            "mention:wb:pl-babylon-1-a217d18-3-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-13",
+            "mention:wb:p-hananiah-12-3-13",
+            "mention:wb:p-mishael-3-3-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-16",
+            "mention:wb:p-hananiah-12-3-16",
+            "mention:wb:p-mishael-3-3-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-19",
+            "mention:wb:p-hananiah-12-3-19",
+            "mention:wb:p-mishael-3-3-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-20",
+            "mention:wb:p-hananiah-12-3-20",
+            "mention:wb:p-mishael-3-3-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-22",
+            "mention:wb:p-hananiah-12-3-22",
+            "mention:wb:p-mishael-3-3-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-23",
+            "mention:wb:p-hananiah-12-3-23",
+            "mention:wb:p-mishael-3-3-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.26"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-26",
+            "mention:wb:p-hananiah-12-3-26",
+            "mention:wb:p-mishael-3-3-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.3.30"
+          ],
+          "record_keys": [
+            "mention:wb:p-azariah-18-3-30",
+            "mention:wb:p-hananiah-12-3-30",
+            "mention:wb:p-mishael-3-3-30",
+            "mention:wb:pl-babylon-1-a217d18-3-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.4.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-4-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.4.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-4-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.4.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-4-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.4.29"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-4-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.4.30"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-4-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.5.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-5-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.5.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-5-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.5.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-5-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.5.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-5-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.5.31"
+          ],
+          "record_keys": [
+            "mention:wb:p-darius-1-5-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-darius-1-6-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-darius-1-6-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.25"
+          ],
+          "record_keys": [
+            "mention:wb:p-darius-1-6-25"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.27"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-6-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.6.28"
+          ],
+          "record_keys": [
+            "mention:wb:p-cyrus-1-6-28",
+            "mention:wb:p-daniel-2-6-28",
+            "mention:wb:p-darius-1-6-28"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.7.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-7-1",
+            "mention:wb:pl-babylon-1-a217d18-7-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.7.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-7-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.7.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-7-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.7.28"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-7-28"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.8.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-8-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.8.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-elam-a7e3a59-8-2",
+            "mention:wb:pl-susa-a033b84-8-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.8.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-8-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.8.20"
+          ],
+          "record_keys": [
+            "mention:wb:pl-persia-ab9696f-8-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.8.27"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-8-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.9.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-9-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.9.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-9-2",
+            "mention:wb:p-jeremiah-6-9-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.9.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-9-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.9.15"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-9-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.9.24"
+          ],
+          "record_keys": [
+            "mention:wb:pl-most-holy-place-2-a9acaaf-9-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.10.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-cyrus-1-10-1",
+            "mention:wb:p-daniel-2-10-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.10.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-10-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.10.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-10-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.10.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-persia-ab9696f-10-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.11.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-darius-1-11-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.11.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-persia-ab9696f-11-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.11.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.11.42"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-42"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.11.43"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-43"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Dan.12.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-daniel-2-12-5"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "translation-mention-coverage-limited",
+      "note": "Translation mentions are emitted only for entities whose name form was derived from this translation's own text; verses without such a form are reported complete_zero in this draft."
+    }
+  ]
+}

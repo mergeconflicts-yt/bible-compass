@@ -1,0 +1,2854 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-gal-locale",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-gal-locale:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-gal-locale",
+  "package_layer": "locale",
+  "package_family": "locale-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-gal:refsys:tel-v1:gal.1.1-gal.6.18",
+      "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+      "scope:wb-gal-2:refsys:tel-v1:gal.2.1-gal.2.21",
+      "scope:wb-gal-3:refsys:tel-v1:gal.3.1-gal.3.29",
+      "scope:wb-gal-4:refsys:tel-v1:gal.4.1-gal.4.31",
+      "scope:wb-gal-5:refsys:tel-v1:gal.5.1-gal.5.26",
+      "scope:wb-gal-6:refsys:tel-v1:gal.6.1-gal.6.18",
+      "scope:wb-gal-1-p1:refsys:tel-v1:gal.1.1-gal.1.5",
+      "scope:wb-gal-1-p2:refsys:tel-v1:gal.1.6-gal.1.10",
+      "scope:wb-gal-1-p3:refsys:tel-v1:gal.1.11-gal.1.24",
+      "scope:wb-gal-2-p1:refsys:tel-v1:gal.2.1-gal.2.19",
+      "scope:wb-gal-2-p2:refsys:tel-v1:gal.2.20-gal.2.21",
+      "scope:wb-gal-3-p1:refsys:tel-v1:gal.3.1-gal.3.5",
+      "scope:wb-gal-3-p2:refsys:tel-v1:gal.3.6-gal.3.9",
+      "scope:wb-gal-3-p3:refsys:tel-v1:gal.3.10-gal.3.12",
+      "scope:wb-gal-3-p4:refsys:tel-v1:gal.3.13-gal.3.16",
+      "scope:wb-gal-3-p5:refsys:tel-v1:gal.3.17-gal.3.18",
+      "scope:wb-gal-3-p6:refsys:tel-v1:gal.3.19-gal.3.24",
+      "scope:wb-gal-3-p7:refsys:tel-v1:gal.3.25-gal.3.29",
+      "scope:wb-gal-4-p1:refsys:tel-v1:gal.4.1-gal.4.3",
+      "scope:wb-gal-4-p2:refsys:tel-v1:gal.4.4-gal.4.5",
+      "scope:wb-gal-4-p3:refsys:tel-v1:gal.4.6-gal.4.7",
+      "scope:wb-gal-4-p4:refsys:tel-v1:gal.4.8-gal.4.14",
+      "scope:wb-gal-4-p5:refsys:tel-v1:gal.4.15-gal.4.18",
+      "scope:wb-gal-4-p6:refsys:tel-v1:gal.4.19-gal.4.31",
+      "scope:wb-gal-5-p1:refsys:tel-v1:gal.5.1-gal.5.15",
+      "scope:wb-gal-5-p2:refsys:tel-v1:gal.5.16-gal.5.24",
+      "scope:wb-gal-5-p3:refsys:tel-v1:gal.5.25-gal.5.26",
+      "scope:wb-gal-6-p1:refsys:tel-v1:gal.6.1-gal.6.18"
+    ],
+    "reference_keys": [
+      "verse:Gal.1.1",
+      "verse:Gal.1.2",
+      "verse:Gal.1.3",
+      "verse:Gal.1.4",
+      "verse:Gal.1.5",
+      "verse:Gal.1.6",
+      "verse:Gal.1.7",
+      "verse:Gal.1.8",
+      "verse:Gal.1.9",
+      "verse:Gal.1.10",
+      "verse:Gal.1.11",
+      "verse:Gal.1.12",
+      "verse:Gal.1.13",
+      "verse:Gal.1.14",
+      "verse:Gal.1.15",
+      "verse:Gal.1.16",
+      "verse:Gal.1.17",
+      "verse:Gal.1.18",
+      "verse:Gal.1.19",
+      "verse:Gal.1.20",
+      "verse:Gal.1.21",
+      "verse:Gal.1.22",
+      "verse:Gal.1.23",
+      "verse:Gal.1.24",
+      "verse:Gal.2.1",
+      "verse:Gal.2.2",
+      "verse:Gal.2.3",
+      "verse:Gal.2.4",
+      "verse:Gal.2.5",
+      "verse:Gal.2.6",
+      "verse:Gal.2.7",
+      "verse:Gal.2.8",
+      "verse:Gal.2.9",
+      "verse:Gal.2.10",
+      "verse:Gal.2.11",
+      "verse:Gal.2.12",
+      "verse:Gal.2.13",
+      "verse:Gal.2.14",
+      "verse:Gal.2.15",
+      "verse:Gal.2.16",
+      "verse:Gal.2.17",
+      "verse:Gal.2.18",
+      "verse:Gal.2.19",
+      "verse:Gal.2.20",
+      "verse:Gal.2.21",
+      "verse:Gal.3.1",
+      "verse:Gal.3.2",
+      "verse:Gal.3.3",
+      "verse:Gal.3.4",
+      "verse:Gal.3.5",
+      "verse:Gal.3.6",
+      "verse:Gal.3.7",
+      "verse:Gal.3.8",
+      "verse:Gal.3.9",
+      "verse:Gal.3.10",
+      "verse:Gal.3.11",
+      "verse:Gal.3.12",
+      "verse:Gal.3.13",
+      "verse:Gal.3.14",
+      "verse:Gal.3.15",
+      "verse:Gal.3.16",
+      "verse:Gal.3.17",
+      "verse:Gal.3.18",
+      "verse:Gal.3.19",
+      "verse:Gal.3.20",
+      "verse:Gal.3.21",
+      "verse:Gal.3.22",
+      "verse:Gal.3.23",
+      "verse:Gal.3.24",
+      "verse:Gal.3.25",
+      "verse:Gal.3.26",
+      "verse:Gal.3.27",
+      "verse:Gal.3.28",
+      "verse:Gal.3.29",
+      "verse:Gal.4.1",
+      "verse:Gal.4.2",
+      "verse:Gal.4.3",
+      "verse:Gal.4.4",
+      "verse:Gal.4.5",
+      "verse:Gal.4.6",
+      "verse:Gal.4.7",
+      "verse:Gal.4.8",
+      "verse:Gal.4.9",
+      "verse:Gal.4.10",
+      "verse:Gal.4.11",
+      "verse:Gal.4.12",
+      "verse:Gal.4.13",
+      "verse:Gal.4.14",
+      "verse:Gal.4.15",
+      "verse:Gal.4.16",
+      "verse:Gal.4.17",
+      "verse:Gal.4.18",
+      "verse:Gal.4.19",
+      "verse:Gal.4.20",
+      "verse:Gal.4.21",
+      "verse:Gal.4.22",
+      "verse:Gal.4.23",
+      "verse:Gal.4.24",
+      "verse:Gal.4.25",
+      "verse:Gal.4.26",
+      "verse:Gal.4.27",
+      "verse:Gal.4.28",
+      "verse:Gal.4.29",
+      "verse:Gal.4.30",
+      "verse:Gal.4.31",
+      "verse:Gal.5.1",
+      "verse:Gal.5.2",
+      "verse:Gal.5.3",
+      "verse:Gal.5.4",
+      "verse:Gal.5.5",
+      "verse:Gal.5.6",
+      "verse:Gal.5.7",
+      "verse:Gal.5.8",
+      "verse:Gal.5.9",
+      "verse:Gal.5.10",
+      "verse:Gal.5.11",
+      "verse:Gal.5.12",
+      "verse:Gal.5.13",
+      "verse:Gal.5.14",
+      "verse:Gal.5.15",
+      "verse:Gal.5.16",
+      "verse:Gal.5.17",
+      "verse:Gal.5.18",
+      "verse:Gal.5.19",
+      "verse:Gal.5.20",
+      "verse:Gal.5.21",
+      "verse:Gal.5.22",
+      "verse:Gal.5.23",
+      "verse:Gal.5.24",
+      "verse:Gal.5.25",
+      "verse:Gal.5.26",
+      "verse:Gal.6.1",
+      "verse:Gal.6.2",
+      "verse:Gal.6.3",
+      "verse:Gal.6.4",
+      "verse:Gal.6.5",
+      "verse:Gal.6.6",
+      "verse:Gal.6.7",
+      "verse:Gal.6.8",
+      "verse:Gal.6.9",
+      "verse:Gal.6.10",
+      "verse:Gal.6.11",
+      "verse:Gal.6.12",
+      "verse:Gal.6.13",
+      "verse:Gal.6.14",
+      "verse:Gal.6.15",
+      "verse:Gal.6.16",
+      "verse:Gal.6.17",
+      "verse:Gal.6.18"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_profiles": [
+      {
+        "profile_key": "profile:te:p-abram-1",
+        "entity_key": "entity:p-abram-1",
+        "language_tag": "te",
+        "preferred_name": "అబ్రాహాము",
+        "aliases": [],
+        "short_description": {
+          "text": "అబ్రాహాము, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-simon-1",
+        "entity_key": "entity:p-simon-1",
+        "language_tag": "te",
+        "preferred_name": "పేతురు",
+        "aliases": [],
+        "short_description": {
+          "text": "పేతురు, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-james-1",
+        "entity_key": "entity:p-james-1",
+        "language_tag": "te",
+        "preferred_name": "యోహాను",
+        "aliases": [],
+        "short_description": {
+          "text": "యోహాను, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-john-2",
+        "entity_key": "entity:p-john-2",
+        "language_tag": "te",
+        "preferred_name": "యోహాను",
+        "aliases": [],
+        "short_description": {
+          "text": "యోహాను, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:p-saul-2",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "te",
+        "preferred_name": "పౌలు",
+        "aliases": [],
+        "short_description": {
+          "text": "పౌలు, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన వ్యక్తి.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-damascus-a69c1d4",
+        "entity_key": "entity:pl-damascus-a69c1d4",
+        "language_tag": "te",
+        "preferred_name": "దమస్కు",
+        "aliases": [],
+        "short_description": {
+          "text": "దమస్కు, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-judea-1-a149f13",
+        "entity_key": "entity:pl-judea-1-a149f13",
+        "language_tag": "te",
+        "preferred_name": "యూదయ",
+        "aliases": [],
+        "short_description": {
+          "text": "యూదయ, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:te:pl-mount-sinai-abfba2a",
+        "entity_key": "entity:pl-mount-sinai-abfba2a",
+        "language_tag": "te",
+        "preferred_name": "సీనాయి",
+        "aliases": [],
+        "short_description": {
+          "text": "సీనాయి, గలతీయులకు రాసిన పత్రిక గ్రంథంలో పేర్కొనబడిన స్థలం.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      }
+    ],
+    "passage_contexts": [
+      {
+        "context_key": "context:te:wb-gal",
+        "scope_key": "scope:wb-gal:refsys:tel-v1:gal.1.1-gal.6.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "దేవుడు, పౌలు, యేసు, పేతురు, గలతీయులు, యూదా ఉపదేశకులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "అన్యజాతుల చేరికపై వివాద మధ్య.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": "సాధారణంగా క్రీ.శ. 48-55.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "what": {
+            "text": "అన్యజాతుల సున్నతి కోరే ఉపదేశకులకు వ్యతిరేకంగా పౌలు ధర్మశాస్త్ర క్రియలు లేకుండా విశ్వాసం ద్వారా నీతీకరణను సమర్థిస్తాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": "ధర్మశాస్త్రం గురించి ప్రారంభ సంఘ చర్చను ప్రతిబింబిస్తుంది.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "stakes": {
+            "text": "కృప సువార్త ధర్మ క్రియలతో కలపకూడదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "immediate_summary": {
+            "text": "అన్యజాతుల సున్నతి కోరే ఉపదేశకులకు వ్యతిరేకంగా పౌలు ధర్మశాస్త్ర క్రియలు లేకుండా విశ్వాసం ద్వారా నీతీకరణను సమర్థిస్తాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-1",
+        "scope_key": "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: పేతురు, పౌలు, యోహాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Arabia 2, Cilicia, Galatia, Jerusalem, Syria 2, దమస్కు, యూదయ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-when"
+          },
+          "what": {
+            "text": "This chapter: పలకరింపులు; లేఖ ముఖ్యాంశం, సందర్భం; పౌలు ప్రకటించిన సువార్త అతనికి ప్రత్యేకంగా వెల్లడి అయ్యింది, ఇతర అపొస్తలుల నుంచి పొందినది కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: పలకరింపులు; లేఖ ముఖ్యాంశం, సందర్భం; పౌలు ప్రకటించిన సువార్త అతనికి ప్రత్యేకంగా వెల్లడి అయ్యింది, ఇతర అపొస్తలుల నుంచి పొందినది కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-2",
+        "scope_key": "scope:wb-gal-2:refsys:tel-v1:gal.2.1-gal.2.21",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Joseph, Titus, పేతురు, యోహాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Antioch 1, Jerusalem.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-when"
+          },
+          "what": {
+            "text": "This chapter: నిర్దోషిగా అయ్యేది విశ్వాసం మూలంగానే; లోపల నివసిస్తున్న క్రీస్తును బయటకు కనుపరచేదే క్రైస్తవ జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: నిర్దోషిగా అయ్యేది విశ్వాసం మూలంగానే; లోపల నివసిస్తున్న క్రీస్తును బయటకు కనుపరచేదే క్రైస్తవ జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3",
+        "scope_key": "scope:wb-gal-3:refsys:tel-v1:gal.3.1-gal.3.29",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-when"
+          },
+          "what": {
+            "text": "This chapter: ఆత్మ వరం విశ్వాసం వల్లనే, ధర్మశాస్త్ర క్రియల వల్ల కాదు; అబ్రాహాము నిబంధన విశ్వాస నిబంధన; ధర్మశాస్త్ర క్రియలు చేస్తున్న మనిషి ధర్మశాస్త్ర శాపం కింద ఉన్నవాడు; ధర్మశాస్త్ర సంబంధిత శాపాన్ని క్రీస్తు భరించి విశ్వాస సంబంధమైన దీవెనలను మనకు ఇచ్చాడు; అబ్రాహాముకు చేసిన విశ్వాస నిబంధనకు ధర్మశాస్త్రం ఏమీ కలపడం లేదు; ధర్మశాస్త్రం అసలు ఉద్దేశం శిక్ష విధించడమే; విశ్వాసి జీవితంపై రాజ్యమేలుతున్నది కృపే, చట్టం కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ఆత్మ వరం విశ్వాసం వల్లనే, ధర్మశాస్త్ర క్రియల వల్ల కాదు; అబ్రాహాము నిబంధన విశ్వాస నిబంధన; ధర్మశాస్త్ర క్రియలు చేస్తున్న మనిషి ధర్మశాస్త్ర శాపం కింద ఉన్నవాడు; ధర్మశాస్త్ర సంబంధిత శాపాన్ని క్రీస్తు భరించి విశ్వాస సంబంధమైన దీవెనలను మనకు ఇచ్చాడు; అబ్రాహాముకు చేసిన విశ్వాస నిబంధనకు ధర్మశాస్త్రం ఏమీ కలపడం లేదు; ధర్మశాస్త్రం అసలు ఉద్దేశం శిక్ష విధించడమే; విశ్వాసి జీవితంపై రాజ్యమేలుతున్నది కృపే, చట్టం కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4",
+        "scope_key": "scope:wb-gal-4:refsys:tel-v1:gal.4.1-gal.4.31",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: Hagar, అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this chapter: Arabia 2, Jerusalem, సీనాయి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-when"
+          },
+          "what": {
+            "text": "This chapter: విశ్వాసి ధర్మశాస్త్రం నుంచి విడుదల పొందాడు; విశ్వాసి కుమారత్వాన్ని వాస్తవం చేసేది ఆత్మ; ధర్మశాస్త్ర క్రియల వైపుకు మళ్ళడం అంటే తిరిగి ప్రాథమిక మతం వైపు తిరగడమే; చట్టపరమైన నీతికి మళ్లడం ద్వారా గలతీయులు తమ దీవెనలను పోగొట్టుకున్నారు; ధర్మశాస్త్రం, కృప, ఈ రెండూ కలిసి ఉండడం అసాధ్యం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: విశ్వాసి ధర్మశాస్త్రం నుంచి విడుదల పొందాడు; విశ్వాసి కుమారత్వాన్ని వాస్తవం చేసేది ఆత్మ; ధర్మశాస్త్ర క్రియల వైపుకు మళ్ళడం అంటే తిరిగి ప్రాథమిక మతం వైపు తిరగడమే; చట్టపరమైన నీతికి మళ్లడం ద్వారా గలతీయులు తమ దీవెనలను పోగొట్టుకున్నారు; ధర్మశాస్త్రం, కృప, ఈ రెండూ కలిసి ఉండడం అసాధ్యం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-5",
+        "scope_key": "scope:wb-gal-5:refsys:tel-v1:gal.5.1-gal.5.26",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this chapter: పౌలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-when"
+          },
+          "what": {
+            "text": "This chapter: ఉపమానం వివరణ; పవిత్రీకరణ ఆత్మ ద్వారానే, ధర్మశాస్త్రం ద్వారా కాదు; క్రీస్తులో నూతన జీవం బహిర్గతం కావడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: ఉపమానం వివరణ; పవిత్రీకరణ ఆత్మ ద్వారానే, ధర్మశాస్త్రం ద్వారా కాదు; క్రీస్తులో నూతన జీవం బహిర్గతం కావడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-6",
+        "scope_key": "scope:wb-gal-6:refsys:tel-v1:gal.6.1-gal.6.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-when"
+          },
+          "what": {
+            "text": "This chapter: సోదరభావంతో కూడిన నూతన జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-stakes"
+          },
+          "immediate_summary": {
+            "text": "This chapter: సోదరభావంతో కూడిన నూతన జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-1-p1",
+        "scope_key": "scope:wb-gal-1-p1:refsys:tel-v1:gal.1.1-gal.1.5",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: పౌలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Galatia.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p1-when"
+          },
+          "what": {
+            "text": "పలకరింపులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "పలకరింపులు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-1-p2",
+        "scope_key": "scope:wb-gal-1-p2:refsys:tel-v1:gal.1.6-gal.1.10",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p2-when"
+          },
+          "what": {
+            "text": "లేఖ ముఖ్యాంశం, సందర్భం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "లేఖ ముఖ్యాంశం, సందర్భం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-1-p3",
+        "scope_key": "scope:wb-gal-1-p3:refsys:tel-v1:gal.1.11-gal.1.24",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: పేతురు, యోహాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Arabia 2, Cilicia, Jerusalem, Syria 2, దమస్కు, యూదయ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p3-when"
+          },
+          "what": {
+            "text": "పౌలు ప్రకటించిన సువార్త అతనికి ప్రత్యేకంగా వెల్లడి అయ్యింది, ఇతర అపొస్తలుల నుంచి పొందినది కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-1-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "పౌలు ప్రకటించిన సువార్త అతనికి ప్రత్యేకంగా వెల్లడి అయ్యింది, ఇతర అపొస్తలుల నుంచి పొందినది కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-2-p1",
+        "scope_key": "scope:wb-gal-2-p1:refsys:tel-v1:gal.2.1-gal.2.19",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Joseph, Titus, పేతురు, యోహాను.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Antioch 1, Jerusalem.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p1-when"
+          },
+          "what": {
+            "text": "నిర్దోషిగా అయ్యేది విశ్వాసం మూలంగానే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "నిర్దోషిగా అయ్యేది విశ్వాసం మూలంగానే.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-2-p2",
+        "scope_key": "scope:wb-gal-2-p2:refsys:tel-v1:gal.2.20-gal.2.21",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p2-when"
+          },
+          "what": {
+            "text": "లోపల నివసిస్తున్న క్రీస్తును బయటకు కనుపరచేదే క్రైస్తవ జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-2-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "లోపల నివసిస్తున్న క్రీస్తును బయటకు కనుపరచేదే క్రైస్తవ జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p1",
+        "scope_key": "scope:wb-gal-3-p1:refsys:tel-v1:gal.3.1-gal.3.5",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p1-when"
+          },
+          "what": {
+            "text": "ఆత్మ వరం విశ్వాసం వల్లనే, ధర్మశాస్త్ర క్రియల వల్ల కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఆత్మ వరం విశ్వాసం వల్లనే, ధర్మశాస్త్ర క్రియల వల్ల కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p2",
+        "scope_key": "scope:wb-gal-3-p2:refsys:tel-v1:gal.3.6-gal.3.9",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p2-when"
+          },
+          "what": {
+            "text": "అబ్రాహాము నిబంధన విశ్వాస నిబంధన.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "అబ్రాహాము నిబంధన విశ్వాస నిబంధన.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p3",
+        "scope_key": "scope:wb-gal-3-p3:refsys:tel-v1:gal.3.10-gal.3.12",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p3-when"
+          },
+          "what": {
+            "text": "ధర్మశాస్త్ర క్రియలు చేస్తున్న మనిషి ధర్మశాస్త్ర శాపం కింద ఉన్నవాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధర్మశాస్త్ర క్రియలు చేస్తున్న మనిషి ధర్మశాస్త్ర శాపం కింద ఉన్నవాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p4",
+        "scope_key": "scope:wb-gal-3-p4:refsys:tel-v1:gal.3.13-gal.3.16",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p4-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p4-when"
+          },
+          "what": {
+            "text": "ధర్మశాస్త్ర సంబంధిత శాపాన్ని క్రీస్తు భరించి విశ్వాస సంబంధమైన దీవెనలను మనకు ఇచ్చాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p4-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధర్మశాస్త్ర సంబంధిత శాపాన్ని క్రీస్తు భరించి విశ్వాస సంబంధమైన దీవెనలను మనకు ఇచ్చాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p5",
+        "scope_key": "scope:wb-gal-3-p5:refsys:tel-v1:gal.3.17-gal.3.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p5-when"
+          },
+          "what": {
+            "text": "అబ్రాహాముకు చేసిన విశ్వాస నిబంధనకు ధర్మశాస్త్రం ఏమీ కలపడం లేదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p5-stakes"
+          },
+          "immediate_summary": {
+            "text": "అబ్రాహాముకు చేసిన విశ్వాస నిబంధనకు ధర్మశాస్త్రం ఏమీ కలపడం లేదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p6",
+        "scope_key": "scope:wb-gal-3-p6:refsys:tel-v1:gal.3.19-gal.3.24",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p6-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p6-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p6-when"
+          },
+          "what": {
+            "text": "ధర్మశాస్త్రం అసలు ఉద్దేశం శిక్ష విధించడమే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p6-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధర్మశాస్త్రం అసలు ఉద్దేశం శిక్ష విధించడమే.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-3-p7",
+        "scope_key": "scope:wb-gal-3-p7:refsys:tel-v1:gal.3.25-gal.3.29",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p7-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p7-when"
+          },
+          "what": {
+            "text": "విశ్వాసి జీవితంపై రాజ్యమేలుతున్నది కృపే, చట్టం కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p7-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-3-p7-stakes"
+          },
+          "immediate_summary": {
+            "text": "విశ్వాసి జీవితంపై రాజ్యమేలుతున్నది కృపే, చట్టం కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4-p1",
+        "scope_key": "scope:wb-gal-4-p1:refsys:tel-v1:gal.4.1-gal.4.3",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p1-when"
+          },
+          "what": {
+            "text": "గలతీయులకు రాసిన పత్రిక 4:1-3.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "గలతీయులకు రాసిన పత్రిక 4:1-3.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4-p2",
+        "scope_key": "scope:wb-gal-4-p2:refsys:tel-v1:gal.4.4-gal.4.5",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p2-when"
+          },
+          "what": {
+            "text": "విశ్వాసి ధర్మశాస్త్రం నుంచి విడుదల పొందాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "విశ్వాసి ధర్మశాస్త్రం నుంచి విడుదల పొందాడు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4-p3",
+        "scope_key": "scope:wb-gal-4-p3:refsys:tel-v1:gal.4.6-gal.4.7",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p3-when"
+          },
+          "what": {
+            "text": "విశ్వాసి కుమారత్వాన్ని వాస్తవం చేసేది ఆత్మ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "విశ్వాసి కుమారత్వాన్ని వాస్తవం చేసేది ఆత్మ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4-p4",
+        "scope_key": "scope:wb-gal-4-p4:refsys:tel-v1:gal.4.8-gal.4.14",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p4-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p4-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p4-when"
+          },
+          "what": {
+            "text": "ధర్మశాస్త్ర క్రియల వైపుకు మళ్ళడం అంటే తిరిగి ప్రాథమిక మతం వైపు తిరగడమే.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p4-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p4-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధర్మశాస్త్ర క్రియల వైపుకు మళ్ళడం అంటే తిరిగి ప్రాథమిక మతం వైపు తిరగడమే.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4-p5",
+        "scope_key": "scope:wb-gal-4-p5:refsys:tel-v1:gal.4.15-gal.4.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p5-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p5-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p5-when"
+          },
+          "what": {
+            "text": "చట్టపరమైన నీతికి మళ్లడం ద్వారా గలతీయులు తమ దీవెనలను పోగొట్టుకున్నారు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p5-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p5-stakes"
+          },
+          "immediate_summary": {
+            "text": "చట్టపరమైన నీతికి మళ్లడం ద్వారా గలతీయులు తమ దీవెనలను పోగొట్టుకున్నారు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-4-p6",
+        "scope_key": "scope:wb-gal-4-p6:refsys:tel-v1:gal.4.19-gal.4.31",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: Hagar, అబ్రాహాము.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": "Places in this passage: Arabia 2, Jerusalem, సీనాయి.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p6-when"
+          },
+          "what": {
+            "text": "ధర్మశాస్త్రం, కృప, ఈ రెండూ కలిసి ఉండడం అసాధ్యం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p6-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-4-p6-stakes"
+          },
+          "immediate_summary": {
+            "text": "ధర్మశాస్త్రం, కృప, ఈ రెండూ కలిసి ఉండడం అసాధ్యం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-5-p1",
+        "scope_key": "scope:wb-gal-5-p1:refsys:tel-v1:gal.5.1-gal.5.15",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": "Present in this passage: పౌలు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p1-when"
+          },
+          "what": {
+            "text": "ఉపమానం వివరణ.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "ఉపమానం వివరణ.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-5-p2",
+        "scope_key": "scope:wb-gal-5-p2:refsys:tel-v1:gal.5.16-gal.5.24",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p2-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p2-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p2-when"
+          },
+          "what": {
+            "text": "పవిత్రీకరణ ఆత్మ ద్వారానే, ధర్మశాస్త్రం ద్వారా కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p2-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p2-stakes"
+          },
+          "immediate_summary": {
+            "text": "పవిత్రీకరణ ఆత్మ ద్వారానే, ధర్మశాస్త్రం ద్వారా కాదు.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-5-p3",
+        "scope_key": "scope:wb-gal-5-p3:refsys:tel-v1:gal.5.25-gal.5.26",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p3-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p3-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p3-when"
+          },
+          "what": {
+            "text": "క్రీస్తులో నూతన జీవం బహిర్గతం కావడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p3-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-5-p3-stakes"
+          },
+          "immediate_summary": {
+            "text": "క్రీస్తులో నూతన జీవం బహిర్గతం కావడం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      },
+      {
+        "context_key": "context:te:wb-gal-6-p1",
+        "scope_key": "scope:wb-gal-6-p1:refsys:tel-v1:gal.6.1-gal.6.18",
+        "language_tag": "te",
+        "orientation": {
+          "who": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-p1-who"
+          },
+          "where": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-p1-where"
+          },
+          "when": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-p1-when"
+          },
+          "what": {
+            "text": "సోదరభావంతో కూడిన నూతన జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          },
+          "before": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-p1-before"
+          },
+          "stakes": {
+            "text": null,
+            "claim_keys": [],
+            "open_question_key": "question:wb-context-te-wb-gal-6-p1-stakes"
+          },
+          "immediate_summary": {
+            "text": "సోదరభావంతో కూడిన నూతన జీవితం.",
+            "claim_keys": [],
+            "open_question_key": null
+          }
+        },
+        "review_status": "draft"
+      }
+    ],
+    "relevance_localizations": [
+      {
+        "localization_key": "relevance-localization:te:wb-gal-3-p-abram-1",
+        "relevance_key": "relevance:wb-gal-3-p-abram-1",
+        "scope_key": "scope:wb-gal-3:refsys:tel-v1:gal.3.1-gal.3.29",
+        "entity_key": "entity:p-abram-1",
+        "language_tag": "te",
+        "role_text": "అబ్రాహాము — గలతీయులకు రాసిన పత్రిక 3: 6, 7, 8, 9, 14, 16, 18, 29.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-4-p-abram-1",
+        "relevance_key": "relevance:wb-gal-4-p-abram-1",
+        "scope_key": "scope:wb-gal-4:refsys:tel-v1:gal.4.1-gal.4.31",
+        "entity_key": "entity:p-abram-1",
+        "language_tag": "te",
+        "role_text": "అబ్రాహాము — గలతీయులకు రాసిన పత్రిక 4: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-1-p-simon-1",
+        "relevance_key": "relevance:wb-gal-1-p-simon-1",
+        "scope_key": "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+        "entity_key": "entity:p-simon-1",
+        "language_tag": "te",
+        "role_text": "పేతురు — గలతీయులకు రాసిన పత్రిక 1: 18.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-2-p-simon-1",
+        "relevance_key": "relevance:wb-gal-2-p-simon-1",
+        "scope_key": "scope:wb-gal-2:refsys:tel-v1:gal.2.1-gal.2.21",
+        "entity_key": "entity:p-simon-1",
+        "language_tag": "te",
+        "role_text": "పేతురు — గలతీయులకు రాసిన పత్రిక 2: 7, 8, 9, 11, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-1-p-james-1",
+        "relevance_key": "relevance:wb-gal-1-p-james-1",
+        "scope_key": "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+        "entity_key": "entity:p-james-1",
+        "language_tag": "te",
+        "role_text": "యోహాను — గలతీయులకు రాసిన పత్రిక 1: 19.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-2-p-james-1",
+        "relevance_key": "relevance:wb-gal-2-p-james-1",
+        "scope_key": "scope:wb-gal-2:refsys:tel-v1:gal.2.1-gal.2.21",
+        "entity_key": "entity:p-james-1",
+        "language_tag": "te",
+        "role_text": "యోహాను — గలతీయులకు రాసిన పత్రిక 2: 9, 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-2-p-john-2",
+        "relevance_key": "relevance:wb-gal-2-p-john-2",
+        "scope_key": "scope:wb-gal-2:refsys:tel-v1:gal.2.1-gal.2.21",
+        "entity_key": "entity:p-john-2",
+        "language_tag": "te",
+        "role_text": "యోహాను — గలతీయులకు రాసిన పత్రిక 2: 9.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-1-p-saul-2",
+        "relevance_key": "relevance:wb-gal-1-p-saul-2",
+        "scope_key": "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "te",
+        "role_text": "పౌలు — గలతీయులకు రాసిన పత్రిక 1: 1.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-5-p-saul-2",
+        "relevance_key": "relevance:wb-gal-5-p-saul-2",
+        "scope_key": "scope:wb-gal-5:refsys:tel-v1:gal.5.1-gal.5.26",
+        "entity_key": "entity:p-saul-2",
+        "language_tag": "te",
+        "role_text": "పౌలు — గలతీయులకు రాసిన పత్రిక 5: 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-1-pl-damascus-a69c1d4",
+        "relevance_key": "relevance:wb-gal-1-pl-damascus-a69c1d4",
+        "scope_key": "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+        "entity_key": "entity:pl-damascus-a69c1d4",
+        "language_tag": "te",
+        "role_text": "దమస్కు — గలతీయులకు రాసిన పత్రిక 1: 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-1-pl-judea-1-a149f13",
+        "relevance_key": "relevance:wb-gal-1-pl-judea-1-a149f13",
+        "scope_key": "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+        "entity_key": "entity:pl-judea-1-a149f13",
+        "language_tag": "te",
+        "role_text": "యూదయ — గలతీయులకు రాసిన పత్రిక 1: 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:te:wb-gal-4-pl-mount-sinai-abfba2a",
+        "relevance_key": "relevance:wb-gal-4-pl-mount-sinai-abfba2a",
+        "scope_key": "scope:wb-gal-4:refsys:tel-v1:gal.4.1-gal.4.31",
+        "entity_key": "entity:pl-mount-sinai-abfba2a",
+        "language_tag": "te",
+        "role_text": "సీనాయి — గలతీయులకు రాసిన పత్రిక 4: 24, 25.",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "passage_context_localization",
+      "groups": [
+        {
+          "result": "complete_with_records",
+          "scope_keys": [
+            "scope:wb-gal:refsys:tel-v1:gal.1.1-gal.6.18"
+          ],
+          "record_keys": [
+            "context:te:wb-gal"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "blocked",
+          "scope_keys": [
+            "scope:wb-gal-1:refsys:tel-v1:gal.1.1-gal.1.24",
+            "scope:wb-gal-2:refsys:tel-v1:gal.2.1-gal.2.21",
+            "scope:wb-gal-3:refsys:tel-v1:gal.3.1-gal.3.29",
+            "scope:wb-gal-4:refsys:tel-v1:gal.4.1-gal.4.31",
+            "scope:wb-gal-5:refsys:tel-v1:gal.5.1-gal.5.26",
+            "scope:wb-gal-6:refsys:tel-v1:gal.6.1-gal.6.18",
+            "scope:wb-gal-1-p1:refsys:tel-v1:gal.1.1-gal.1.5",
+            "scope:wb-gal-1-p2:refsys:tel-v1:gal.1.6-gal.1.10",
+            "scope:wb-gal-1-p3:refsys:tel-v1:gal.1.11-gal.1.24",
+            "scope:wb-gal-2-p1:refsys:tel-v1:gal.2.1-gal.2.19",
+            "scope:wb-gal-2-p2:refsys:tel-v1:gal.2.20-gal.2.21",
+            "scope:wb-gal-3-p1:refsys:tel-v1:gal.3.1-gal.3.5",
+            "scope:wb-gal-3-p2:refsys:tel-v1:gal.3.6-gal.3.9",
+            "scope:wb-gal-3-p3:refsys:tel-v1:gal.3.10-gal.3.12",
+            "scope:wb-gal-3-p4:refsys:tel-v1:gal.3.13-gal.3.16",
+            "scope:wb-gal-3-p5:refsys:tel-v1:gal.3.17-gal.3.18",
+            "scope:wb-gal-3-p6:refsys:tel-v1:gal.3.19-gal.3.24",
+            "scope:wb-gal-3-p7:refsys:tel-v1:gal.3.25-gal.3.29",
+            "scope:wb-gal-4-p1:refsys:tel-v1:gal.4.1-gal.4.3",
+            "scope:wb-gal-4-p2:refsys:tel-v1:gal.4.4-gal.4.5",
+            "scope:wb-gal-4-p3:refsys:tel-v1:gal.4.6-gal.4.7",
+            "scope:wb-gal-4-p4:refsys:tel-v1:gal.4.8-gal.4.14",
+            "scope:wb-gal-4-p5:refsys:tel-v1:gal.4.15-gal.4.18",
+            "scope:wb-gal-4-p6:refsys:tel-v1:gal.4.19-gal.4.31",
+            "scope:wb-gal-5-p1:refsys:tel-v1:gal.5.1-gal.5.15",
+            "scope:wb-gal-5-p2:refsys:tel-v1:gal.5.16-gal.5.24",
+            "scope:wb-gal-5-p3:refsys:tel-v1:gal.5.25-gal.5.26",
+            "scope:wb-gal-6-p1:refsys:tel-v1:gal.6.1-gal.6.18"
+          ],
+          "record_keys": [
+            "context:te:wb-gal-1",
+            "context:te:wb-gal-2",
+            "context:te:wb-gal-3",
+            "context:te:wb-gal-4",
+            "context:te:wb-gal-5",
+            "context:te:wb-gal-6",
+            "context:te:wb-gal-1-p1",
+            "context:te:wb-gal-1-p2",
+            "context:te:wb-gal-1-p3",
+            "context:te:wb-gal-2-p1",
+            "context:te:wb-gal-2-p2",
+            "context:te:wb-gal-3-p1",
+            "context:te:wb-gal-3-p2",
+            "context:te:wb-gal-3-p3",
+            "context:te:wb-gal-3-p4",
+            "context:te:wb-gal-3-p5",
+            "context:te:wb-gal-3-p6",
+            "context:te:wb-gal-3-p7",
+            "context:te:wb-gal-4-p1",
+            "context:te:wb-gal-4-p2",
+            "context:te:wb-gal-4-p3",
+            "context:te:wb-gal-4-p4",
+            "context:te:wb-gal-4-p5",
+            "context:te:wb-gal-4-p6",
+            "context:te:wb-gal-5-p1",
+            "context:te:wb-gal-5-p2",
+            "context:te:wb-gal-5-p3",
+            "context:te:wb-gal-6-p1"
+          ],
+          "blocker_question_keys": [
+            "question:wb-context-te-wb-gal-1-before",
+            "question:wb-context-te-wb-gal-1-p1-before",
+            "question:wb-context-te-wb-gal-1-p1-stakes",
+            "question:wb-context-te-wb-gal-1-p1-when",
+            "question:wb-context-te-wb-gal-1-p2-before",
+            "question:wb-context-te-wb-gal-1-p2-stakes",
+            "question:wb-context-te-wb-gal-1-p2-when",
+            "question:wb-context-te-wb-gal-1-p2-where",
+            "question:wb-context-te-wb-gal-1-p2-who",
+            "question:wb-context-te-wb-gal-1-p3-before",
+            "question:wb-context-te-wb-gal-1-p3-stakes",
+            "question:wb-context-te-wb-gal-1-p3-when",
+            "question:wb-context-te-wb-gal-1-stakes",
+            "question:wb-context-te-wb-gal-1-when",
+            "question:wb-context-te-wb-gal-2-before",
+            "question:wb-context-te-wb-gal-2-p1-before",
+            "question:wb-context-te-wb-gal-2-p1-stakes",
+            "question:wb-context-te-wb-gal-2-p1-when",
+            "question:wb-context-te-wb-gal-2-p2-before",
+            "question:wb-context-te-wb-gal-2-p2-stakes",
+            "question:wb-context-te-wb-gal-2-p2-when",
+            "question:wb-context-te-wb-gal-2-p2-where",
+            "question:wb-context-te-wb-gal-2-p2-who",
+            "question:wb-context-te-wb-gal-2-stakes",
+            "question:wb-context-te-wb-gal-2-when",
+            "question:wb-context-te-wb-gal-3-before",
+            "question:wb-context-te-wb-gal-3-p1-before",
+            "question:wb-context-te-wb-gal-3-p1-stakes",
+            "question:wb-context-te-wb-gal-3-p1-when",
+            "question:wb-context-te-wb-gal-3-p1-where",
+            "question:wb-context-te-wb-gal-3-p1-who",
+            "question:wb-context-te-wb-gal-3-p2-before",
+            "question:wb-context-te-wb-gal-3-p2-stakes",
+            "question:wb-context-te-wb-gal-3-p2-when",
+            "question:wb-context-te-wb-gal-3-p2-where",
+            "question:wb-context-te-wb-gal-3-p3-before",
+            "question:wb-context-te-wb-gal-3-p3-stakes",
+            "question:wb-context-te-wb-gal-3-p3-when",
+            "question:wb-context-te-wb-gal-3-p3-where",
+            "question:wb-context-te-wb-gal-3-p3-who",
+            "question:wb-context-te-wb-gal-3-p4-before",
+            "question:wb-context-te-wb-gal-3-p4-stakes",
+            "question:wb-context-te-wb-gal-3-p4-when",
+            "question:wb-context-te-wb-gal-3-p4-where",
+            "question:wb-context-te-wb-gal-3-p5-before",
+            "question:wb-context-te-wb-gal-3-p5-stakes",
+            "question:wb-context-te-wb-gal-3-p5-when",
+            "question:wb-context-te-wb-gal-3-p5-where",
+            "question:wb-context-te-wb-gal-3-p6-before",
+            "question:wb-context-te-wb-gal-3-p6-stakes",
+            "question:wb-context-te-wb-gal-3-p6-when",
+            "question:wb-context-te-wb-gal-3-p6-where",
+            "question:wb-context-te-wb-gal-3-p6-who",
+            "question:wb-context-te-wb-gal-3-p7-before",
+            "question:wb-context-te-wb-gal-3-p7-stakes",
+            "question:wb-context-te-wb-gal-3-p7-when",
+            "question:wb-context-te-wb-gal-3-p7-where",
+            "question:wb-context-te-wb-gal-3-stakes",
+            "question:wb-context-te-wb-gal-3-when",
+            "question:wb-context-te-wb-gal-3-where",
+            "question:wb-context-te-wb-gal-4-before",
+            "question:wb-context-te-wb-gal-4-p1-before",
+            "question:wb-context-te-wb-gal-4-p1-stakes",
+            "question:wb-context-te-wb-gal-4-p1-when",
+            "question:wb-context-te-wb-gal-4-p1-where",
+            "question:wb-context-te-wb-gal-4-p1-who",
+            "question:wb-context-te-wb-gal-4-p2-before",
+            "question:wb-context-te-wb-gal-4-p2-stakes",
+            "question:wb-context-te-wb-gal-4-p2-when",
+            "question:wb-context-te-wb-gal-4-p2-where",
+            "question:wb-context-te-wb-gal-4-p2-who",
+            "question:wb-context-te-wb-gal-4-p3-before",
+            "question:wb-context-te-wb-gal-4-p3-stakes",
+            "question:wb-context-te-wb-gal-4-p3-when",
+            "question:wb-context-te-wb-gal-4-p3-where",
+            "question:wb-context-te-wb-gal-4-p3-who",
+            "question:wb-context-te-wb-gal-4-p4-before",
+            "question:wb-context-te-wb-gal-4-p4-stakes",
+            "question:wb-context-te-wb-gal-4-p4-when",
+            "question:wb-context-te-wb-gal-4-p4-where",
+            "question:wb-context-te-wb-gal-4-p4-who",
+            "question:wb-context-te-wb-gal-4-p5-before",
+            "question:wb-context-te-wb-gal-4-p5-stakes",
+            "question:wb-context-te-wb-gal-4-p5-when",
+            "question:wb-context-te-wb-gal-4-p5-where",
+            "question:wb-context-te-wb-gal-4-p5-who",
+            "question:wb-context-te-wb-gal-4-p6-before",
+            "question:wb-context-te-wb-gal-4-p6-stakes",
+            "question:wb-context-te-wb-gal-4-p6-when",
+            "question:wb-context-te-wb-gal-4-stakes",
+            "question:wb-context-te-wb-gal-4-when",
+            "question:wb-context-te-wb-gal-5-before",
+            "question:wb-context-te-wb-gal-5-p1-before",
+            "question:wb-context-te-wb-gal-5-p1-stakes",
+            "question:wb-context-te-wb-gal-5-p1-when",
+            "question:wb-context-te-wb-gal-5-p1-where",
+            "question:wb-context-te-wb-gal-5-p2-before",
+            "question:wb-context-te-wb-gal-5-p2-stakes",
+            "question:wb-context-te-wb-gal-5-p2-when",
+            "question:wb-context-te-wb-gal-5-p2-where",
+            "question:wb-context-te-wb-gal-5-p2-who",
+            "question:wb-context-te-wb-gal-5-p3-before",
+            "question:wb-context-te-wb-gal-5-p3-stakes",
+            "question:wb-context-te-wb-gal-5-p3-when",
+            "question:wb-context-te-wb-gal-5-p3-where",
+            "question:wb-context-te-wb-gal-5-p3-who",
+            "question:wb-context-te-wb-gal-5-stakes",
+            "question:wb-context-te-wb-gal-5-when",
+            "question:wb-context-te-wb-gal-5-where",
+            "question:wb-context-te-wb-gal-6-before",
+            "question:wb-context-te-wb-gal-6-p1-before",
+            "question:wb-context-te-wb-gal-6-p1-stakes",
+            "question:wb-context-te-wb-gal-6-p1-when",
+            "question:wb-context-te-wb-gal-6-p1-where",
+            "question:wb-context-te-wb-gal-6-p1-who",
+            "question:wb-context-te-wb-gal-6-stakes",
+            "question:wb-context-te-wb-gal-6-when",
+            "question:wb-context-te-wb-gal-6-where",
+            "question:wb-context-te-wb-gal-6-who"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-1-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-1-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-1-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-1-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-1-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-2-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-2-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-2-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-2-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p4-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p4",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p6-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p6",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p6-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p6",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p7-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p7",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p7-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-3-p7",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p7-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p7",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-3-p7-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-3-p7",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p4-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p4",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p4-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p4",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p4-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4-p4",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p4-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p4",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p4-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p4",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p5-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p5",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p5-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p5",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p5-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4-p5",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p5-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p5",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p5-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p5",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p6-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-4-p6",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p6-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p6",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-4-p6-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-4-p6",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-5-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p2-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p2",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p2-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-5-p2",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p2-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p2",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p2-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p2",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p3-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p3",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p3-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-5-p3",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p3-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p3",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-5-p3-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-5-p3",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-p1-where",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6-p1",
+      "field_path": "/records/passage_contexts/orientation/where",
+      "question": "Where context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-p1-when",
+      "question_type": "uncertain_date",
+      "record_key": "context:te:wb-gal-6-p1",
+      "field_path": "/records/passage_contexts/orientation/when",
+      "question": "When context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-p1-before",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6-p1",
+      "field_path": "/records/passage_contexts/orientation/before",
+      "question": "Before context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-te-wb-gal-6-p1-stakes",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:te:wb-gal-6-p1",
+      "field_path": "/records/passage_contexts/orientation/stakes",
+      "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    }
+  ],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

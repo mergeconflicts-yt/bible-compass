@@ -1,0 +1,839 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-mic-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-mic-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-mic-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-mic:refsys:tel-v1:mic.1.1-mic.7.20",
+      "scope:wb-mic-1:refsys:tel-v1:mic.1.1-mic.1.16",
+      "scope:wb-mic-2:refsys:tel-v1:mic.2.1-mic.2.13",
+      "scope:wb-mic-3:refsys:tel-v1:mic.3.1-mic.3.12",
+      "scope:wb-mic-4:refsys:tel-v1:mic.4.1-mic.4.13",
+      "scope:wb-mic-5:refsys:tel-v1:mic.5.1-mic.5.15",
+      "scope:wb-mic-6:refsys:tel-v1:mic.6.1-mic.6.16",
+      "scope:wb-mic-7:refsys:tel-v1:mic.7.1-mic.7.20",
+      "scope:wb-mic-1-p1:refsys:tel-v1:mic.1.1-mic.1.7",
+      "scope:wb-mic-1-p2:refsys:tel-v1:mic.1.8-mic.1.16",
+      "scope:wb-mic-2-p1:refsys:tel-v1:mic.2.1-mic.2.5",
+      "scope:wb-mic-2-p2:refsys:tel-v1:mic.2.6-mic.2.11",
+      "scope:wb-mic-2-p3:refsys:tel-v1:mic.2.12-mic.2.13",
+      "scope:wb-mic-3-p1:refsys:tel-v1:mic.3.1-mic.3.12",
+      "scope:wb-mic-4-p1:refsys:tel-v1:mic.4.1-mic.4.5",
+      "scope:wb-mic-4-p2:refsys:tel-v1:mic.4.6-mic.4.13",
+      "scope:wb-mic-5-p1:refsys:tel-v1:mic.5.1-mic.5.4",
+      "scope:wb-mic-5-p2:refsys:tel-v1:mic.5.5-mic.5.15",
+      "scope:wb-mic-6-p1:refsys:tel-v1:mic.6.1-mic.6.8",
+      "scope:wb-mic-6-p2:refsys:tel-v1:mic.6.9-mic.6.16",
+      "scope:wb-mic-7-p1:refsys:tel-v1:mic.7.1-mic.7.7",
+      "scope:wb-mic-7-p2:refsys:tel-v1:mic.7.8-mic.7.13",
+      "scope:wb-mic-7-p3:refsys:tel-v1:mic.7.14-mic.7.20"
+    ],
+    "reference_keys": [
+      "verse:Mic.1.1",
+      "verse:Mic.1.2",
+      "verse:Mic.1.3",
+      "verse:Mic.1.4",
+      "verse:Mic.1.5",
+      "verse:Mic.1.6",
+      "verse:Mic.1.7",
+      "verse:Mic.1.8",
+      "verse:Mic.1.9",
+      "verse:Mic.1.10",
+      "verse:Mic.1.11",
+      "verse:Mic.1.12",
+      "verse:Mic.1.13",
+      "verse:Mic.1.14",
+      "verse:Mic.1.15",
+      "verse:Mic.1.16",
+      "verse:Mic.2.1",
+      "verse:Mic.2.2",
+      "verse:Mic.2.3",
+      "verse:Mic.2.4",
+      "verse:Mic.2.5",
+      "verse:Mic.2.6",
+      "verse:Mic.2.7",
+      "verse:Mic.2.8",
+      "verse:Mic.2.9",
+      "verse:Mic.2.10",
+      "verse:Mic.2.11",
+      "verse:Mic.2.12",
+      "verse:Mic.2.13",
+      "verse:Mic.3.1",
+      "verse:Mic.3.2",
+      "verse:Mic.3.3",
+      "verse:Mic.3.4",
+      "verse:Mic.3.5",
+      "verse:Mic.3.6",
+      "verse:Mic.3.7",
+      "verse:Mic.3.8",
+      "verse:Mic.3.9",
+      "verse:Mic.3.10",
+      "verse:Mic.3.11",
+      "verse:Mic.3.12",
+      "verse:Mic.4.1",
+      "verse:Mic.4.2",
+      "verse:Mic.4.3",
+      "verse:Mic.4.4",
+      "verse:Mic.4.5",
+      "verse:Mic.4.6",
+      "verse:Mic.4.7",
+      "verse:Mic.4.8",
+      "verse:Mic.4.9",
+      "verse:Mic.4.10",
+      "verse:Mic.4.11",
+      "verse:Mic.4.12",
+      "verse:Mic.4.13",
+      "verse:Mic.5.1",
+      "verse:Mic.5.2",
+      "verse:Mic.5.3",
+      "verse:Mic.5.4",
+      "verse:Mic.5.5",
+      "verse:Mic.5.6",
+      "verse:Mic.5.7",
+      "verse:Mic.5.8",
+      "verse:Mic.5.9",
+      "verse:Mic.5.10",
+      "verse:Mic.5.11",
+      "verse:Mic.5.12",
+      "verse:Mic.5.13",
+      "verse:Mic.5.14",
+      "verse:Mic.5.15",
+      "verse:Mic.6.1",
+      "verse:Mic.6.2",
+      "verse:Mic.6.3",
+      "verse:Mic.6.4",
+      "verse:Mic.6.5",
+      "verse:Mic.6.6",
+      "verse:Mic.6.7",
+      "verse:Mic.6.8",
+      "verse:Mic.6.9",
+      "verse:Mic.6.10",
+      "verse:Mic.6.11",
+      "verse:Mic.6.12",
+      "verse:Mic.6.13",
+      "verse:Mic.6.14",
+      "verse:Mic.6.15",
+      "verse:Mic.6.16",
+      "verse:Mic.7.1",
+      "verse:Mic.7.2",
+      "verse:Mic.7.3",
+      "verse:Mic.7.4",
+      "verse:Mic.7.5",
+      "verse:Mic.7.6",
+      "verse:Mic.7.7",
+      "verse:Mic.7.8",
+      "verse:Mic.7.9",
+      "verse:Mic.7.10",
+      "verse:Mic.7.11",
+      "verse:Mic.7.12",
+      "verse:Mic.7.13",
+      "verse:Mic.7.14",
+      "verse:Mic.7.15",
+      "verse:Mic.7.16",
+      "verse:Mic.7.17",
+      "verse:Mic.7.18",
+      "verse:Mic.7.19",
+      "verse:Mic.7.20"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": "edition:tel-irv@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-moses-1-6-4",
+        "verse_key": "verse:Mic.6.4",
+        "attestation_key": "attestation:wb-p-moses-1-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోషే",
+          "occurrence_ordinal": 1,
+          "prefix": "ి కాపాడాను. మీ కోసం ",
+          "suffix": " అహరోను మిర్యాములను "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aaron-1-6-4",
+        "verse_key": "verse:Mic.6.4",
+        "attestation_key": "attestation:wb-p-aaron-1-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aaron-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహరోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాడాను. మీ కోసం మోషే ",
+          "suffix": " మిర్యాములను పంపించా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-balak-1-6-5",
+        "verse_key": "verse:Mic.6.5",
+        "attestation_key": "attestation:wb-p-balak-1-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-balak-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బాలాకు",
+          "occurrence_ordinal": 1,
+          "prefix": "్రజలారా, మోయాబురాజు ",
+          "suffix": " చేసిన ఆలోచన,బెయోరు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-balaam-1-6-5",
+        "verse_key": "verse:Mic.6.5",
+        "attestation_key": "attestation:wb-p-balaam-1-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-balaam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బిలాము",
+          "occurrence_ordinal": 1,
+          "prefix": "ోచన,బెయోరు కుమారుడు ",
+          "suffix": " అతనికిచ్చిన జవాబు గ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahab-1-6-16",
+        "verse_key": "verse:Mic.6.16",
+        "attestation_key": "attestation:wb-p-ahab-1-6-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahab-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహాబు",
+          "occurrence_ordinal": 1,
+          "prefix": "మీరు పాటిస్తున్నారు.",
+          "suffix": " వంశం వాళ్ళు చేసిన ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jotham-2-1-1",
+        "verse_key": "verse:Mic.1.1",
+        "attestation_key": "attestation:wb-p-jotham-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jotham-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యోతాము",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఆహాజు హిజ్కియా అనే "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahaz-1-1-1",
+        "verse_key": "verse:Mic.1.1",
+        "attestation_key": "attestation:wb-p-ahaz-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahaz-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఆహాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "యోతాము ",
+          "suffix": " హిజ్కియా అనే యూదా ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hezekiah-1-1-1",
+        "verse_key": "verse:Mic.1.1",
+        "attestation_key": "attestation:wb-p-hezekiah-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hezekiah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హిజ్కియా",
+          "occurrence_ordinal": 1,
+          "prefix": "యోతాము ఆహాజు ",
+          "suffix": " అనే యూదా రాజుల రోజు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-5-6",
+        "verse_key": "verse:Mic.5.6",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-5-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అష్షూరు",
+          "occurrence_ordinal": 1,
+          "prefix": "వారు కత్తితో ",
+          "suffix": " దేశాన్ని పాలిస్తారు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-assyria-a3d1321-7-12",
+        "verse_key": "verse:Mic.7.12",
+        "attestation_key": "attestation:wb-pl-assyria-a3d1321-7-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-assyria-a3d1321"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అష్షూరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజు ",
+          "suffix": " దేశం నుంచి, ఐగుప్తు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-4-10",
+        "verse_key": "verse:Mic.4.10",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "్టణం వదిలిపెట్టండి. ",
+          "suffix": " వెళ్తారు. అక్కడ మీక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-bashan-aa7a40a-7-14",
+        "verse_key": "verse:Mic.7.14",
+        "attestation_key": "attestation:wb-pl-bashan-aa7a40a-7-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-bashan-aa7a40a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బాషాను",
+          "occurrence_ordinal": 1,
+          "prefix": "తున్నా పూర్వ కాలంలో ",
+          "suffix": ", గిలాదుల్లో మేసినట్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-bethlehem-1-a112427-5-2",
+        "verse_key": "verse:Mic.5.2",
+        "attestation_key": "attestation:wb-pl-bethlehem-1-a112427-5-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-bethlehem-1-a112427"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బేత్లెహేము",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఎఫ్రాతా, యూదావారి క"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-6-4",
+        "verse_key": "verse:Mic.6.4",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " దేశంలో నుంచి నేను మ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-7-12",
+        "verse_key": "verse:Mic.7.12",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-7-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "అష్షూరు దేశం నుంచి, ",
+          "suffix": " దేశపు పట్టణాల నుంచి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-7-15",
+        "verse_key": "verse:Mic.7.15",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-7-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఐగుప్తు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "దేశంలో నుంచి నువ్వు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-euphrates-a62dec4-7-12",
+        "verse_key": "verse:Mic.7.12",
+        "attestation_key": "attestation:wb-pl-euphrates-a62dec4-7-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-euphrates-a62dec4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "యూఫ్రటీసు",
+          "occurrence_ordinal": 1,
+          "prefix": "ుంచి, ఐగుప్తు మొదలు ",
+          "suffix": " నది వరకూ ఉన్న ప్రాం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-gilead-1-ae73b90-7-14",
+        "verse_key": "verse:Mic.7.14",
+        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-7-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gilead-1-ae73b90"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "గిలాదు",
+          "occurrence_ordinal": 1,
+          "prefix": "ూర్వ కాలంలో బాషాను, ",
+          "suffix": "ల్లో మేసినట్టు మేస్త"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lachish-a3cc590-1-13",
+        "verse_key": "verse:Mic.1.13",
+        "attestation_key": "attestation:wb-pl-lachish-a3cc590-1-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lachish-a3cc590"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "లాకీషు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " పురవాసులారా, రథాలకు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-moab-1-aa0b1d6-6-5",
+        "verse_key": "verse:Mic.6.5",
+        "attestation_key": "attestation:wb-pl-moab-1-aa0b1d6-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-moab-1-aa0b1d6"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మోయాబు",
+          "occurrence_ordinal": 1,
+          "prefix": "నా ప్రజలారా, ",
+          "suffix": "రాజు బాలాకు చేసిన ఆల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-carmel-a3e21c6-7-14",
+        "verse_key": "verse:Mic.7.14",
+        "attestation_key": "attestation:wb-pl-mount-carmel-a3e21c6-7-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-carmel-a3e21c6"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "కర్మెలు",
+          "occurrence_ordinal": 1,
+          "prefix": "ండు. వారు నీ సొత్తు.",
+          "suffix": "కు చెందిన అడవిలో వాళ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-zion-abd9596-3-12",
+        "verse_key": "verse:Mic.3.12",
+        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-zion-abd9596"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీయోను",
+          "occurrence_ordinal": 1,
+          "prefix": "మీ మూలంగా శత్రువులు ",
+          "suffix": "ను పొలంలాగా దున్నుతా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-zion-abd9596-4-7",
+        "verse_key": "verse:Mic.4.7",
+        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-zion-abd9596"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "సీయోను",
+          "occurrence_ordinal": 1,
+          "prefix": "ను. యెహోవానైన నేను, ",
+          "suffix": " కొండ మీద ఇప్పటినుంచ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Mic.1.10",
+            "verse:Mic.1.11",
+            "verse:Mic.1.12",
+            "verse:Mic.1.14",
+            "verse:Mic.1.15",
+            "verse:Mic.1.16",
+            "verse:Mic.1.2",
+            "verse:Mic.1.3",
+            "verse:Mic.1.4",
+            "verse:Mic.1.5",
+            "verse:Mic.1.6",
+            "verse:Mic.1.7",
+            "verse:Mic.1.8",
+            "verse:Mic.1.9",
+            "verse:Mic.2.1",
+            "verse:Mic.2.10",
+            "verse:Mic.2.11",
+            "verse:Mic.2.12",
+            "verse:Mic.2.13",
+            "verse:Mic.2.2",
+            "verse:Mic.2.3",
+            "verse:Mic.2.4",
+            "verse:Mic.2.5",
+            "verse:Mic.2.6",
+            "verse:Mic.2.7",
+            "verse:Mic.2.8",
+            "verse:Mic.2.9",
+            "verse:Mic.3.1",
+            "verse:Mic.3.10",
+            "verse:Mic.3.11",
+            "verse:Mic.3.2",
+            "verse:Mic.3.3",
+            "verse:Mic.3.4",
+            "verse:Mic.3.5",
+            "verse:Mic.3.6",
+            "verse:Mic.3.7",
+            "verse:Mic.3.8",
+            "verse:Mic.3.9",
+            "verse:Mic.4.1",
+            "verse:Mic.4.11",
+            "verse:Mic.4.12",
+            "verse:Mic.4.13",
+            "verse:Mic.4.2",
+            "verse:Mic.4.3",
+            "verse:Mic.4.4",
+            "verse:Mic.4.5",
+            "verse:Mic.4.6",
+            "verse:Mic.4.8",
+            "verse:Mic.4.9",
+            "verse:Mic.5.1",
+            "verse:Mic.5.10",
+            "verse:Mic.5.11",
+            "verse:Mic.5.12",
+            "verse:Mic.5.13",
+            "verse:Mic.5.14",
+            "verse:Mic.5.15",
+            "verse:Mic.5.3",
+            "verse:Mic.5.4",
+            "verse:Mic.5.5",
+            "verse:Mic.5.7",
+            "verse:Mic.5.8",
+            "verse:Mic.5.9",
+            "verse:Mic.6.1",
+            "verse:Mic.6.10",
+            "verse:Mic.6.11",
+            "verse:Mic.6.12",
+            "verse:Mic.6.13",
+            "verse:Mic.6.14",
+            "verse:Mic.6.15",
+            "verse:Mic.6.2",
+            "verse:Mic.6.3",
+            "verse:Mic.6.6",
+            "verse:Mic.6.7",
+            "verse:Mic.6.8",
+            "verse:Mic.6.9",
+            "verse:Mic.7.1",
+            "verse:Mic.7.10",
+            "verse:Mic.7.11",
+            "verse:Mic.7.13",
+            "verse:Mic.7.16",
+            "verse:Mic.7.17",
+            "verse:Mic.7.18",
+            "verse:Mic.7.19",
+            "verse:Mic.7.2",
+            "verse:Mic.7.20",
+            "verse:Mic.7.3",
+            "verse:Mic.7.4",
+            "verse:Mic.7.5",
+            "verse:Mic.7.6",
+            "verse:Mic.7.7",
+            "verse:Mic.7.8",
+            "verse:Mic.7.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahaz-1-1-1",
+            "mention:wb:p-hezekiah-1-1-1",
+            "mention:wb:p-jotham-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.1.13"
+          ],
+          "record_keys": [
+            "mention:wb:pl-lachish-a3cc590-1-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.3.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-mount-zion-abd9596-3-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.4.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-mount-zion-abd9596-4-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.4.10"
+          ],
+          "record_keys": [
+            "mention:wb:pl-babylon-1-a217d18-4-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.5.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-bethlehem-1-a112427-5-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.5.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-5-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.6.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-aaron-1-6-4",
+            "mention:wb:p-moses-1-6-4",
+            "mention:wb:pl-egypt-af301ca-6-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.6.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-balaam-1-6-5",
+            "mention:wb:p-balak-1-6-5",
+            "mention:wb:pl-moab-1-aa0b1d6-6-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.6.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahab-1-6-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.7.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-assyria-a3d1321-7-12",
+            "mention:wb:pl-egypt-af301ca-7-12",
+            "mention:wb:pl-euphrates-a62dec4-7-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.7.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-bashan-aa7a40a-7-14",
+            "mention:wb:pl-gilead-1-ae73b90-7-14",
+            "mention:wb:pl-mount-carmel-a3e21c6-7-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Mic.7.15"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-7-15"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "translation-mention-coverage-limited",
+      "note": "Translation mentions are emitted only for entities whose name form was derived from this translation's own text; verses without such a form are reported complete_zero in this draft."
+    }
+  ]
+}

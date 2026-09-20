@@ -1,0 +1,2591 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-heb-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-heb-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-heb-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-heb:refsys:eng-v22:heb.1.1-heb.13.25",
+      "scope:wb-heb-1:refsys:eng-v22:heb.1.1-heb.1.14",
+      "scope:wb-heb-2:refsys:eng-v22:heb.2.1-heb.2.18",
+      "scope:wb-heb-3:refsys:eng-v22:heb.3.1-heb.3.19",
+      "scope:wb-heb-4:refsys:eng-v22:heb.4.1-heb.4.16",
+      "scope:wb-heb-5:refsys:eng-v22:heb.5.1-heb.5.14",
+      "scope:wb-heb-6:refsys:eng-v22:heb.6.1-heb.6.20",
+      "scope:wb-heb-7:refsys:eng-v22:heb.7.1-heb.7.28",
+      "scope:wb-heb-8:refsys:eng-v22:heb.8.1-heb.8.13",
+      "scope:wb-heb-9:refsys:eng-v22:heb.9.1-heb.9.28",
+      "scope:wb-heb-10:refsys:eng-v22:heb.10.1-heb.10.39",
+      "scope:wb-heb-11:refsys:eng-v22:heb.11.1-heb.11.40",
+      "scope:wb-heb-12:refsys:eng-v22:heb.12.1-heb.12.29",
+      "scope:wb-heb-13:refsys:eng-v22:heb.13.1-heb.13.25",
+      "scope:wb-heb-1-p1:refsys:eng-v22:heb.1.1-heb.1.14",
+      "scope:wb-heb-2-p1:refsys:eng-v22:heb.2.1-heb.2.4",
+      "scope:wb-heb-2-p2:refsys:eng-v22:heb.2.5-heb.2.18",
+      "scope:wb-heb-3-p1:refsys:eng-v22:heb.3.1-heb.3.6",
+      "scope:wb-heb-3-p2:refsys:eng-v22:heb.3.7-heb.3.11",
+      "scope:wb-heb-3-p3:refsys:eng-v22:heb.3.12-heb.3.19",
+      "scope:wb-heb-4-p1:refsys:eng-v22:heb.4.1-heb.4.11",
+      "scope:wb-heb-4-p2:refsys:eng-v22:heb.4.12-heb.4.16",
+      "scope:wb-heb-5-p1:refsys:eng-v22:heb.5.1-heb.5.10",
+      "scope:wb-heb-5-p2:refsys:eng-v22:heb.5.11-heb.5.14",
+      "scope:wb-heb-6-p1:refsys:eng-v22:heb.6.1-heb.6.12",
+      "scope:wb-heb-6-p2:refsys:eng-v22:heb.6.13-heb.6.20",
+      "scope:wb-heb-7-p1:refsys:eng-v22:heb.7.1-heb.7.10",
+      "scope:wb-heb-7-p2:refsys:eng-v22:heb.7.11-heb.7.28",
+      "scope:wb-heb-8-p1:refsys:eng-v22:heb.8.1-heb.8.5",
+      "scope:wb-heb-8-p2:refsys:eng-v22:heb.8.6-heb.8.13",
+      "scope:wb-heb-9-p1:refsys:eng-v22:heb.9.1-heb.9.10",
+      "scope:wb-heb-9-p2:refsys:eng-v22:heb.9.11-heb.9.28",
+      "scope:wb-heb-10-p1:refsys:eng-v22:heb.10.1-heb.10.18",
+      "scope:wb-heb-10-p2:refsys:eng-v22:heb.10.19-heb.10.39",
+      "scope:wb-heb-11-p1:refsys:eng-v22:heb.11.1-heb.11.3",
+      "scope:wb-heb-11-p2:refsys:eng-v22:heb.11.4-heb.11.7",
+      "scope:wb-heb-11-p3:refsys:eng-v22:heb.11.8-heb.11.19",
+      "scope:wb-heb-11-p4:refsys:eng-v22:heb.11.20-heb.11.22",
+      "scope:wb-heb-11-p5:refsys:eng-v22:heb.11.23-heb.11.29",
+      "scope:wb-heb-11-p6:refsys:eng-v22:heb.11.30-heb.11.40",
+      "scope:wb-heb-12-p1:refsys:eng-v22:heb.12.1-heb.12.3",
+      "scope:wb-heb-12-p2:refsys:eng-v22:heb.12.4-heb.12.13",
+      "scope:wb-heb-12-p3:refsys:eng-v22:heb.12.14-heb.12.17",
+      "scope:wb-heb-12-p4:refsys:eng-v22:heb.12.18-heb.12.29",
+      "scope:wb-heb-13-p1:refsys:eng-v22:heb.13.1-heb.13.4",
+      "scope:wb-heb-13-p2:refsys:eng-v22:heb.13.5-heb.13.14",
+      "scope:wb-heb-13-p3:refsys:eng-v22:heb.13.15-heb.13.19",
+      "scope:wb-heb-13-p4:refsys:eng-v22:heb.13.20-heb.13.25"
+    ],
+    "reference_keys": [
+      "verse:Heb.1.1",
+      "verse:Heb.1.2",
+      "verse:Heb.1.3",
+      "verse:Heb.1.4",
+      "verse:Heb.1.5",
+      "verse:Heb.1.6",
+      "verse:Heb.1.7",
+      "verse:Heb.1.8",
+      "verse:Heb.1.9",
+      "verse:Heb.1.10",
+      "verse:Heb.1.11",
+      "verse:Heb.1.12",
+      "verse:Heb.1.13",
+      "verse:Heb.1.14",
+      "verse:Heb.2.1",
+      "verse:Heb.2.2",
+      "verse:Heb.2.3",
+      "verse:Heb.2.4",
+      "verse:Heb.2.5",
+      "verse:Heb.2.6",
+      "verse:Heb.2.7",
+      "verse:Heb.2.8",
+      "verse:Heb.2.9",
+      "verse:Heb.2.10",
+      "verse:Heb.2.11",
+      "verse:Heb.2.12",
+      "verse:Heb.2.13",
+      "verse:Heb.2.14",
+      "verse:Heb.2.15",
+      "verse:Heb.2.16",
+      "verse:Heb.2.17",
+      "verse:Heb.2.18",
+      "verse:Heb.3.1",
+      "verse:Heb.3.2",
+      "verse:Heb.3.3",
+      "verse:Heb.3.4",
+      "verse:Heb.3.5",
+      "verse:Heb.3.6",
+      "verse:Heb.3.7",
+      "verse:Heb.3.8",
+      "verse:Heb.3.9",
+      "verse:Heb.3.10",
+      "verse:Heb.3.11",
+      "verse:Heb.3.12",
+      "verse:Heb.3.13",
+      "verse:Heb.3.14",
+      "verse:Heb.3.15",
+      "verse:Heb.3.16",
+      "verse:Heb.3.17",
+      "verse:Heb.3.18",
+      "verse:Heb.3.19",
+      "verse:Heb.4.1",
+      "verse:Heb.4.2",
+      "verse:Heb.4.3",
+      "verse:Heb.4.4",
+      "verse:Heb.4.5",
+      "verse:Heb.4.6",
+      "verse:Heb.4.7",
+      "verse:Heb.4.8",
+      "verse:Heb.4.9",
+      "verse:Heb.4.10",
+      "verse:Heb.4.11",
+      "verse:Heb.4.12",
+      "verse:Heb.4.13",
+      "verse:Heb.4.14",
+      "verse:Heb.4.15",
+      "verse:Heb.4.16",
+      "verse:Heb.5.1",
+      "verse:Heb.5.2",
+      "verse:Heb.5.3",
+      "verse:Heb.5.4",
+      "verse:Heb.5.5",
+      "verse:Heb.5.6",
+      "verse:Heb.5.7",
+      "verse:Heb.5.8",
+      "verse:Heb.5.9",
+      "verse:Heb.5.10",
+      "verse:Heb.5.11",
+      "verse:Heb.5.12",
+      "verse:Heb.5.13",
+      "verse:Heb.5.14",
+      "verse:Heb.6.1",
+      "verse:Heb.6.2",
+      "verse:Heb.6.3",
+      "verse:Heb.6.4",
+      "verse:Heb.6.5",
+      "verse:Heb.6.6",
+      "verse:Heb.6.7",
+      "verse:Heb.6.8",
+      "verse:Heb.6.9",
+      "verse:Heb.6.10",
+      "verse:Heb.6.11",
+      "verse:Heb.6.12",
+      "verse:Heb.6.13",
+      "verse:Heb.6.14",
+      "verse:Heb.6.15",
+      "verse:Heb.6.16",
+      "verse:Heb.6.17",
+      "verse:Heb.6.18",
+      "verse:Heb.6.19",
+      "verse:Heb.6.20",
+      "verse:Heb.7.1",
+      "verse:Heb.7.2",
+      "verse:Heb.7.3",
+      "verse:Heb.7.4",
+      "verse:Heb.7.5",
+      "verse:Heb.7.6",
+      "verse:Heb.7.7",
+      "verse:Heb.7.8",
+      "verse:Heb.7.9",
+      "verse:Heb.7.10",
+      "verse:Heb.7.11",
+      "verse:Heb.7.12",
+      "verse:Heb.7.13",
+      "verse:Heb.7.14",
+      "verse:Heb.7.15",
+      "verse:Heb.7.16",
+      "verse:Heb.7.17",
+      "verse:Heb.7.18",
+      "verse:Heb.7.19",
+      "verse:Heb.7.20",
+      "verse:Heb.7.21",
+      "verse:Heb.7.22",
+      "verse:Heb.7.23",
+      "verse:Heb.7.24",
+      "verse:Heb.7.25",
+      "verse:Heb.7.26",
+      "verse:Heb.7.27",
+      "verse:Heb.7.28",
+      "verse:Heb.8.1",
+      "verse:Heb.8.2",
+      "verse:Heb.8.3",
+      "verse:Heb.8.4",
+      "verse:Heb.8.5",
+      "verse:Heb.8.6",
+      "verse:Heb.8.7",
+      "verse:Heb.8.8",
+      "verse:Heb.8.9",
+      "verse:Heb.8.10",
+      "verse:Heb.8.11",
+      "verse:Heb.8.12",
+      "verse:Heb.8.13",
+      "verse:Heb.9.1",
+      "verse:Heb.9.2",
+      "verse:Heb.9.3",
+      "verse:Heb.9.4",
+      "verse:Heb.9.5",
+      "verse:Heb.9.6",
+      "verse:Heb.9.7",
+      "verse:Heb.9.8",
+      "verse:Heb.9.9",
+      "verse:Heb.9.10",
+      "verse:Heb.9.11",
+      "verse:Heb.9.12",
+      "verse:Heb.9.13",
+      "verse:Heb.9.14",
+      "verse:Heb.9.15",
+      "verse:Heb.9.16",
+      "verse:Heb.9.17",
+      "verse:Heb.9.18",
+      "verse:Heb.9.19",
+      "verse:Heb.9.20",
+      "verse:Heb.9.21",
+      "verse:Heb.9.22",
+      "verse:Heb.9.23",
+      "verse:Heb.9.24",
+      "verse:Heb.9.25",
+      "verse:Heb.9.26",
+      "verse:Heb.9.27",
+      "verse:Heb.9.28",
+      "verse:Heb.10.1",
+      "verse:Heb.10.2",
+      "verse:Heb.10.3",
+      "verse:Heb.10.4",
+      "verse:Heb.10.5",
+      "verse:Heb.10.6",
+      "verse:Heb.10.7",
+      "verse:Heb.10.8",
+      "verse:Heb.10.9",
+      "verse:Heb.10.10",
+      "verse:Heb.10.11",
+      "verse:Heb.10.12",
+      "verse:Heb.10.13",
+      "verse:Heb.10.14",
+      "verse:Heb.10.15",
+      "verse:Heb.10.16",
+      "verse:Heb.10.17",
+      "verse:Heb.10.18",
+      "verse:Heb.10.19",
+      "verse:Heb.10.20",
+      "verse:Heb.10.21",
+      "verse:Heb.10.22",
+      "verse:Heb.10.23",
+      "verse:Heb.10.24",
+      "verse:Heb.10.25",
+      "verse:Heb.10.26",
+      "verse:Heb.10.27",
+      "verse:Heb.10.28",
+      "verse:Heb.10.29",
+      "verse:Heb.10.30",
+      "verse:Heb.10.31",
+      "verse:Heb.10.32",
+      "verse:Heb.10.33",
+      "verse:Heb.10.34",
+      "verse:Heb.10.35",
+      "verse:Heb.10.36",
+      "verse:Heb.10.37",
+      "verse:Heb.10.38",
+      "verse:Heb.10.39",
+      "verse:Heb.11.1",
+      "verse:Heb.11.2",
+      "verse:Heb.11.3",
+      "verse:Heb.11.4",
+      "verse:Heb.11.5",
+      "verse:Heb.11.6",
+      "verse:Heb.11.7",
+      "verse:Heb.11.8",
+      "verse:Heb.11.9",
+      "verse:Heb.11.10",
+      "verse:Heb.11.11",
+      "verse:Heb.11.12",
+      "verse:Heb.11.13",
+      "verse:Heb.11.14",
+      "verse:Heb.11.15",
+      "verse:Heb.11.16",
+      "verse:Heb.11.17",
+      "verse:Heb.11.18",
+      "verse:Heb.11.19",
+      "verse:Heb.11.20",
+      "verse:Heb.11.21",
+      "verse:Heb.11.22",
+      "verse:Heb.11.23",
+      "verse:Heb.11.24",
+      "verse:Heb.11.25",
+      "verse:Heb.11.26",
+      "verse:Heb.11.27",
+      "verse:Heb.11.28",
+      "verse:Heb.11.29",
+      "verse:Heb.11.30",
+      "verse:Heb.11.31",
+      "verse:Heb.11.32",
+      "verse:Heb.11.33",
+      "verse:Heb.11.34",
+      "verse:Heb.11.35",
+      "verse:Heb.11.36",
+      "verse:Heb.11.37",
+      "verse:Heb.11.38",
+      "verse:Heb.11.39",
+      "verse:Heb.11.40",
+      "verse:Heb.12.1",
+      "verse:Heb.12.2",
+      "verse:Heb.12.3",
+      "verse:Heb.12.4",
+      "verse:Heb.12.5",
+      "verse:Heb.12.6",
+      "verse:Heb.12.7",
+      "verse:Heb.12.8",
+      "verse:Heb.12.9",
+      "verse:Heb.12.10",
+      "verse:Heb.12.11",
+      "verse:Heb.12.12",
+      "verse:Heb.12.13",
+      "verse:Heb.12.14",
+      "verse:Heb.12.15",
+      "verse:Heb.12.16",
+      "verse:Heb.12.17",
+      "verse:Heb.12.18",
+      "verse:Heb.12.19",
+      "verse:Heb.12.20",
+      "verse:Heb.12.21",
+      "verse:Heb.12.22",
+      "verse:Heb.12.23",
+      "verse:Heb.12.24",
+      "verse:Heb.12.25",
+      "verse:Heb.12.26",
+      "verse:Heb.12.27",
+      "verse:Heb.12.28",
+      "verse:Heb.12.29",
+      "verse:Heb.13.1",
+      "verse:Heb.13.2",
+      "verse:Heb.13.3",
+      "verse:Heb.13.4",
+      "verse:Heb.13.5",
+      "verse:Heb.13.6",
+      "verse:Heb.13.7",
+      "verse:Heb.13.8",
+      "verse:Heb.13.9",
+      "verse:Heb.13.10",
+      "verse:Heb.13.11",
+      "verse:Heb.13.12",
+      "verse:Heb.13.13",
+      "verse:Heb.13.14",
+      "verse:Heb.13.15",
+      "verse:Heb.13.16",
+      "verse:Heb.13.17",
+      "verse:Heb.13.18",
+      "verse:Heb.13.19",
+      "verse:Heb.13.20",
+      "verse:Heb.13.21",
+      "verse:Heb.13.22",
+      "verse:Heb.13.23",
+      "verse:Heb.13.24",
+      "verse:Heb.13.25"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-cain-1-11-4",
+        "verse_key": "verse:Heb.11.4",
+        "attestation_key": "attestation:wb-p-cain-1-11-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-cain-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Cain",
+          "occurrence_ordinal": 1,
+          "prefix": "tter sacrifice than ",
+          "suffix": " did. By faith he wa"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abel-1-11-4",
+        "verse_key": "verse:Heb.11.4",
+        "attestation_key": "attestation:wb-p-abel-1-11-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abel-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abel",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": " offered God a bette"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abel-1-12-24",
+        "verse_key": "verse:Heb.12.24",
+        "attestation_key": "attestation:wb-p-abel-1-12-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abel-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abel",
+          "occurrence_ordinal": 1,
+          "prefix": "d than the blood of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-enoch-1-11-5",
+        "verse_key": "verse:Heb.11.5",
+        "attestation_key": "attestation:wb-p-enoch-1-11-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-enoch-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Enoch",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": " was taken up so tha"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-noah-1-11-7",
+        "verse_key": "verse:Heb.11.7",
+        "attestation_key": "attestation:wb-p-noah-1-11-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-noah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Noah",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", when warned about "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-2-16",
+        "verse_key": "verse:Heb.2.16",
+        "attestation_key": "attestation:wb-p-abram-1-2-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": " the descendants of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-6-13",
+        "verse_key": "verse:Heb.6.13",
+        "attestation_key": "attestation:wb-p-abram-1-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "made His promise to ",
+          "suffix": ", since He had no on"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-7-1",
+        "verse_key": "verse:Heb.7.1",
+        "attestation_key": "attestation:wb-p-abram-1-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "d Most High. He met ",
+          "suffix": " returning from the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-7-2",
+        "verse_key": "verse:Heb.7.2",
+        "attestation_key": "attestation:wb-p-abram-1-7-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "and ",
+          "suffix": " apportioned to him "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-7-4",
+        "verse_key": "verse:Heb.7.4",
+        "attestation_key": "attestation:wb-p-abram-1-7-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": " Even the patriarch ",
+          "suffix": " gave him a tenth of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-7-5",
+        "verse_key": "verse:Heb.7.5",
+        "attestation_key": "attestation:wb-p-abram-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": " are descended from ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-7-6",
+        "verse_key": "verse:Heb.7.6",
+        "attestation_key": "attestation:wb-p-abram-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "lected a tenth from ",
+          "suffix": " and blessed him who"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-7-9",
+        "verse_key": "verse:Heb.7.9",
+        "attestation_key": "attestation:wb-p-abram-1-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "d the tenth through ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-11-8",
+        "verse_key": "verse:Heb.11.8",
+        "attestation_key": "attestation:wb-p-abram-1-11-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", when called to go "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-11-17",
+        "verse_key": "verse:Heb.11.17",
+        "attestation_key": "attestation:wb-p-abram-1-11-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", when he was tested"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sarai-1-11-11",
+        "verse_key": "verse:Heb.11.11",
+        "attestation_key": "attestation:wb-p-sarai-1-11-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sarai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sarah",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", even though she wa"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-5-6",
+        "verse_key": "verse:Heb.5.6",
+        "attestation_key": "attestation:wb-p-melchizedek-1-5-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "ver in the order of ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-5-10",
+        "verse_key": "verse:Heb.5.10",
+        "attestation_key": "attestation:wb-p-melchizedek-1-5-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "est in the order of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-6-20",
+        "verse_key": "verse:Heb.6.20",
+        "attestation_key": "attestation:wb-p-melchizedek-1-6-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "ver in the order of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-7-1",
+        "verse_key": "verse:Heb.7.1",
+        "attestation_key": "attestation:wb-p-melchizedek-1-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "This ",
+          "suffix": " was king of Salem a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-7-10",
+        "verse_key": "verse:Heb.7.10",
+        "attestation_key": "attestation:wb-p-melchizedek-1-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "For when ",
+          "suffix": " met Abraham, Levi w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-7-11",
+        "verse_key": "verse:Heb.7.11",
+        "attestation_key": "attestation:wb-p-melchizedek-1-7-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "one in the order of ",
+          "suffix": " and not in the orde"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-7-15",
+        "verse_key": "verse:Heb.7.15",
+        "attestation_key": "attestation:wb-p-melchizedek-1-7-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "another priest like ",
+          "suffix": " appears,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-melchizedek-1-7-17",
+        "verse_key": "verse:Heb.7.17",
+        "attestation_key": "attestation:wb-p-melchizedek-1-7-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-melchizedek-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Melchizedek",
+          "occurrence_ordinal": 1,
+          "prefix": "ver in the order of ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-11-9",
+        "verse_key": "verse:Heb.11.9",
+        "attestation_key": "attestation:wb-p-isaac-1-11-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": "ed in tents, as did ",
+          "suffix": " and Jacob, who were"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-11-17",
+        "verse_key": "verse:Heb.11.17",
+        "attestation_key": "attestation:wb-p-isaac-1-11-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": " tested, offered up ",
+          "suffix": " on the altar. He wh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-11-18",
+        "verse_key": "verse:Heb.11.18",
+        "attestation_key": "attestation:wb-p-isaac-1-11-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": "id to him, “Through ",
+          "suffix": " your offspring will"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-11-20",
+        "verse_key": "verse:Heb.11.20",
+        "attestation_key": "attestation:wb-p-isaac-1-11-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": " blessed Jacob and E"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-esau-1-11-20",
+        "verse_key": "verse:Heb.11.20",
+        "attestation_key": "attestation:wb-p-esau-1-11-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-esau-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esau",
+          "occurrence_ordinal": 1,
+          "prefix": "c blessed Jacob and ",
+          "suffix": " concerning the futu"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-esau-1-12-16",
+        "verse_key": "verse:Heb.12.16",
+        "attestation_key": "attestation:wb-p-esau-1-12-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-esau-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Esau",
+          "occurrence_ordinal": 1,
+          "prefix": " or is godless like ",
+          "suffix": ", who for a single m"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-8-8",
+        "verse_key": "verse:Heb.8.8",
+        "attestation_key": "attestation:wb-p-jacob-1-8-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "t with the house of ",
+          "suffix": " and with the house "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-8-10",
+        "verse_key": "verse:Heb.8.10",
+        "attestation_key": "attestation:wb-p-jacob-1-8-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "e with the house of ",
+          "suffix": " after those days, d"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-11-9",
+        "verse_key": "verse:Heb.11.9",
+        "attestation_key": "attestation:wb-p-jacob-1-11-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "s, as did Isaac and ",
+          "suffix": ", who were heirs wit"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-11-20",
+        "verse_key": "verse:Heb.11.20",
+        "attestation_key": "attestation:wb-p-jacob-1-11-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "faith Isaac blessed ",
+          "suffix": " and Esau concerning"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-11-21",
+        "verse_key": "verse:Heb.11.21",
+        "attestation_key": "attestation:wb-p-jacob-1-11-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", when he was dying,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-levi-1-7-5",
+        "verse_key": "verse:Heb.7.5",
+        "attestation_key": "attestation:wb-p-levi-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-levi-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Levi",
+          "occurrence_ordinal": 1,
+          "prefix": "ommands the sons of ",
+          "suffix": " who become priests "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-levi-1-7-9",
+        "verse_key": "verse:Heb.7.9",
+        "attestation_key": "attestation:wb-p-levi-1-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-levi-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Levi",
+          "occurrence_ordinal": 1,
+          "prefix": "And so to speak, ",
+          "suffix": ", who collects the t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-7-14",
+        "verse_key": "verse:Heb.7.14",
+        "attestation_key": "attestation:wb-p-judah-1-7-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "Lord descended from ",
+          "suffix": ", a tribe as to whic"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-8-8",
+        "verse_key": "verse:Heb.8.8",
+        "attestation_key": "attestation:wb-p-judah-1-8-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "d with the house of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joseph-1-11-21",
+        "verse_key": "verse:Heb.11.21",
+        "attestation_key": "attestation:wb-p-joseph-1-11-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joseph-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Joseph",
+          "occurrence_ordinal": 1,
+          "prefix": "ng, blessed each of ",
+          "suffix": "’s sons and worshipe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joseph-1-11-22",
+        "verse_key": "verse:Heb.11.22",
+        "attestation_key": "attestation:wb-p-joseph-1-11-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joseph-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Joseph",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", when his end was n"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pharaoh-3-11-24",
+        "verse_key": "verse:Heb.11.24",
+        "attestation_key": "attestation:wb-p-pharaoh-3-11-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pharaoh-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pharaoh",
+          "occurrence_ordinal": 1,
+          "prefix": "e called the son of ",
+          "suffix": "’s daughter."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-3-2",
+        "verse_key": "verse:Heb.3.2",
+        "attestation_key": "attestation:wb-p-moses-1-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "ointed Him, just as ",
+          "suffix": " was faithful in all"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-3-3",
+        "verse_key": "verse:Heb.3.3",
+        "attestation_key": "attestation:wb-p-moses-1-3-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": " greater glory than ",
+          "suffix": ", just as the builde"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-3-5",
+        "verse_key": "verse:Heb.3.5",
+        "attestation_key": "attestation:wb-p-moses-1-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "Now ",
+          "suffix": " was faithful as a s"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-3-16",
+        "verse_key": "verse:Heb.3.16",
+        "attestation_key": "attestation:wb-p-moses-1-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": " they not all those ",
+          "suffix": " led out of Egypt?"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-7-14",
+        "verse_key": "verse:Heb.7.14",
+        "attestation_key": "attestation:wb-p-moses-1-7-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "a tribe as to which ",
+          "suffix": " said nothing about "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-8-5",
+        "verse_key": "verse:Heb.8.5",
+        "attestation_key": "attestation:wb-p-moses-1-8-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "heaven. This is why ",
+          "suffix": " was warned when he "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-9-19",
+        "verse_key": "verse:Heb.9.19",
+        "attestation_key": "attestation:wb-p-moses-1-9-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "For when ",
+          "suffix": " had proclaimed ever"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-10-28",
+        "verse_key": "verse:Heb.10.28",
+        "attestation_key": "attestation:wb-p-moses-1-10-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "rejected the law of ",
+          "suffix": " died without mercy "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-11-23",
+        "verse_key": "verse:Heb.11.23",
+        "attestation_key": "attestation:wb-p-moses-1-11-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": "’ parents hid him fo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-11-24",
+        "verse_key": "verse:Heb.11.24",
+        "attestation_key": "attestation:wb-p-moses-1-11-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith ",
+          "suffix": ", when he was grown,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-12-21",
+        "verse_key": "verse:Heb.12.21",
+        "attestation_key": "attestation:wb-p-moses-1-12-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "errifying that even ",
+          "suffix": " said, “I am trembli"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aaron-1-5-4",
+        "verse_key": "verse:Heb.5.4",
+        "attestation_key": "attestation:wb-p-aaron-1-5-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aaron-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aaron",
+          "occurrence_ordinal": 1,
+          "prefix": "led by God, just as ",
+          "suffix": " was."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aaron-1-7-11",
+        "verse_key": "verse:Heb.7.11",
+        "attestation_key": "attestation:wb-p-aaron-1-7-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aaron-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aaron",
+          "occurrence_ordinal": 1,
+          "prefix": "not in the order of ",
+          "suffix": "?"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aaron-1-9-4",
+        "verse_key": "verse:Heb.9.4",
+        "attestation_key": "attestation:wb-p-aaron-1-9-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aaron-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aaron",
+          "occurrence_ordinal": 1,
+          "prefix": " gold jar of manna, ",
+          "suffix": "’s staff that had bu"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joshua-1-4-8",
+        "verse_key": "verse:Heb.4.8",
+        "attestation_key": "attestation:wb-p-joshua-1-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joshua-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Joshua",
+          "occurrence_ordinal": 1,
+          "prefix": "For if ",
+          "suffix": " had given them rest"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-rahab-1-11-31",
+        "verse_key": "verse:Heb.11.31",
+        "attestation_key": "attestation:wb-p-rahab-1-11-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-rahab-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rahab",
+          "occurrence_ordinal": 1,
+          "prefix": "aith the prostitute ",
+          "suffix": ", because she welcom"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-barak-1-11-32",
+        "verse_key": "verse:Heb.11.32",
+        "attestation_key": "attestation:wb-p-barak-1-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-barak-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Barak",
+          "occurrence_ordinal": 1,
+          "prefix": " to tell of Gideon, ",
+          "suffix": ", Samson, Jephthah, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-gideon-1-11-32",
+        "verse_key": "verse:Heb.11.32",
+        "attestation_key": "attestation:wb-p-gideon-1-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-gideon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gideon",
+          "occurrence_ordinal": 1,
+          "prefix": "allow me to tell of ",
+          "suffix": ", Barak, Samson, Jep"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jephthah-1-11-32",
+        "verse_key": "verse:Heb.11.32",
+        "attestation_key": "attestation:wb-p-jephthah-1-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jephthah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jephthah",
+          "occurrence_ordinal": 1,
+          "prefix": "eon, Barak, Samson, ",
+          "suffix": ", David, Samuel, and"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-samson-1-11-32",
+        "verse_key": "verse:Heb.11.32",
+        "attestation_key": "attestation:wb-p-samson-1-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-samson-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Samson",
+          "occurrence_ordinal": 1,
+          "prefix": "l of Gideon, Barak, ",
+          "suffix": ", Jephthah, David, S"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-4-7",
+        "verse_key": "verse:Heb.4.7",
+        "attestation_key": "attestation:wb-p-david-1-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "er He spoke through ",
+          "suffix": " as was just stated:"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-11-32",
+        "verse_key": "verse:Heb.11.32",
+        "attestation_key": "attestation:wb-p-david-1-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": ", Samson, Jephthah, ",
+          "suffix": ", Samuel, and the pr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-samuel-2-11-32",
+        "verse_key": "verse:Heb.11.32",
+        "attestation_key": "attestation:wb-p-samuel-2-11-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-samuel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Samuel",
+          "occurrence_ordinal": 1,
+          "prefix": "n, Jephthah, David, ",
+          "suffix": ", and the prophets,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-2-14",
+        "verse_key": "verse:Heb.2.14",
+        "attestation_key": "attestation:wb-p-satan-1-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 1,
+          "prefix": " of death, that is, ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-timothy-1-13-23",
+        "verse_key": "verse:Heb.13.23",
+        "attestation_key": "attestation:wb-p-timothy-1-13-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-timothy-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Timothy",
+          "occurrence_ordinal": 1,
+          "prefix": "re that our brother ",
+          "suffix": " has been released. "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-3-16",
+        "verse_key": "verse:Heb.3.16",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "se Moses led out of ",
+          "suffix": "?"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-8-9",
+        "verse_key": "verse:Heb.8.9",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": " out of the land of ",
+          "suffix": ", because they did n"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-26",
+        "verse_key": "verse:Heb.11.26",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "ve the treasures of ",
+          "suffix": ", for he was looking"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-27",
+        "verse_key": "verse:Heb.11.27",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "By faith Moses left ",
+          "suffix": ", not fearing the ki"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-italy-a7184a7-13-24",
+        "verse_key": "verse:Heb.13.24",
+        "attestation_key": "attestation:wb-pl-italy-a7184a7-13-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-italy-a7184a7"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Italy",
+          "occurrence_ordinal": 1,
+          "prefix": " saints. Those from ",
+          "suffix": " send you greetings."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-12-22",
+        "verse_key": "verse:Heb.12.22",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-12-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "g God, the heavenly ",
+          "suffix": ". You have come to m"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-zion-abd9596-12-22",
+        "verse_key": "verse:Heb.12.22",
+        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-12-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-zion-abd9596"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mount Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "d, you have come to ",
+          "suffix": ", to the city of the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-salem-aad7e4e-7-1",
+        "verse_key": "verse:Heb.7.1",
+        "attestation_key": "attestation:wb-pl-salem-aad7e4e-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-salem-aad7e4e"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Salem",
+          "occurrence_ordinal": 1,
+          "prefix": "hizedek was king of ",
+          "suffix": " and priest of God M"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-salem-aad7e4e-7-2",
+        "verse_key": "verse:Heb.7.2",
+        "attestation_key": "attestation:wb-pl-salem-aad7e4e-7-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-salem-aad7e4e"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Salem",
+          "occurrence_ordinal": 1,
+          "prefix": "Then also, “king of ",
+          "suffix": "” means “king of pea"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Heb.1.1",
+            "verse:Heb.1.10",
+            "verse:Heb.1.11",
+            "verse:Heb.1.12",
+            "verse:Heb.1.13",
+            "verse:Heb.1.14",
+            "verse:Heb.1.2",
+            "verse:Heb.1.3",
+            "verse:Heb.1.4",
+            "verse:Heb.1.5",
+            "verse:Heb.1.6",
+            "verse:Heb.1.7",
+            "verse:Heb.1.8",
+            "verse:Heb.1.9",
+            "verse:Heb.10.1",
+            "verse:Heb.10.10",
+            "verse:Heb.10.11",
+            "verse:Heb.10.12",
+            "verse:Heb.10.13",
+            "verse:Heb.10.14",
+            "verse:Heb.10.15",
+            "verse:Heb.10.16",
+            "verse:Heb.10.17",
+            "verse:Heb.10.18",
+            "verse:Heb.10.19",
+            "verse:Heb.10.2",
+            "verse:Heb.10.20",
+            "verse:Heb.10.21",
+            "verse:Heb.10.22",
+            "verse:Heb.10.23",
+            "verse:Heb.10.24",
+            "verse:Heb.10.25",
+            "verse:Heb.10.26",
+            "verse:Heb.10.27",
+            "verse:Heb.10.29",
+            "verse:Heb.10.3",
+            "verse:Heb.10.30",
+            "verse:Heb.10.31",
+            "verse:Heb.10.32",
+            "verse:Heb.10.33",
+            "verse:Heb.10.34",
+            "verse:Heb.10.35",
+            "verse:Heb.10.36",
+            "verse:Heb.10.37",
+            "verse:Heb.10.38",
+            "verse:Heb.10.39",
+            "verse:Heb.10.4",
+            "verse:Heb.10.5",
+            "verse:Heb.10.6",
+            "verse:Heb.10.7",
+            "verse:Heb.10.8",
+            "verse:Heb.10.9",
+            "verse:Heb.11.1",
+            "verse:Heb.11.10",
+            "verse:Heb.11.12",
+            "verse:Heb.11.13",
+            "verse:Heb.11.14",
+            "verse:Heb.11.15",
+            "verse:Heb.11.16",
+            "verse:Heb.11.19",
+            "verse:Heb.11.2",
+            "verse:Heb.11.25",
+            "verse:Heb.11.28",
+            "verse:Heb.11.29",
+            "verse:Heb.11.3",
+            "verse:Heb.11.30",
+            "verse:Heb.11.33",
+            "verse:Heb.11.34",
+            "verse:Heb.11.35",
+            "verse:Heb.11.36",
+            "verse:Heb.11.37",
+            "verse:Heb.11.38",
+            "verse:Heb.11.39",
+            "verse:Heb.11.40",
+            "verse:Heb.11.6",
+            "verse:Heb.12.1",
+            "verse:Heb.12.10",
+            "verse:Heb.12.11",
+            "verse:Heb.12.12",
+            "verse:Heb.12.13",
+            "verse:Heb.12.14",
+            "verse:Heb.12.15",
+            "verse:Heb.12.17",
+            "verse:Heb.12.18",
+            "verse:Heb.12.19",
+            "verse:Heb.12.2",
+            "verse:Heb.12.20",
+            "verse:Heb.12.23",
+            "verse:Heb.12.25",
+            "verse:Heb.12.26",
+            "verse:Heb.12.27",
+            "verse:Heb.12.28",
+            "verse:Heb.12.29",
+            "verse:Heb.12.3",
+            "verse:Heb.12.4",
+            "verse:Heb.12.5",
+            "verse:Heb.12.6",
+            "verse:Heb.12.7",
+            "verse:Heb.12.8",
+            "verse:Heb.12.9",
+            "verse:Heb.13.1",
+            "verse:Heb.13.10",
+            "verse:Heb.13.11",
+            "verse:Heb.13.12",
+            "verse:Heb.13.13",
+            "verse:Heb.13.14",
+            "verse:Heb.13.15",
+            "verse:Heb.13.16",
+            "verse:Heb.13.17",
+            "verse:Heb.13.18",
+            "verse:Heb.13.19",
+            "verse:Heb.13.2",
+            "verse:Heb.13.20",
+            "verse:Heb.13.21",
+            "verse:Heb.13.22",
+            "verse:Heb.13.25",
+            "verse:Heb.13.3",
+            "verse:Heb.13.4",
+            "verse:Heb.13.5",
+            "verse:Heb.13.6",
+            "verse:Heb.13.7",
+            "verse:Heb.13.8",
+            "verse:Heb.13.9",
+            "verse:Heb.2.1",
+            "verse:Heb.2.10",
+            "verse:Heb.2.11",
+            "verse:Heb.2.12",
+            "verse:Heb.2.13",
+            "verse:Heb.2.15",
+            "verse:Heb.2.17",
+            "verse:Heb.2.18",
+            "verse:Heb.2.2",
+            "verse:Heb.2.3",
+            "verse:Heb.2.4",
+            "verse:Heb.2.5",
+            "verse:Heb.2.6",
+            "verse:Heb.2.7",
+            "verse:Heb.2.8",
+            "verse:Heb.2.9",
+            "verse:Heb.3.1",
+            "verse:Heb.3.10",
+            "verse:Heb.3.11",
+            "verse:Heb.3.12",
+            "verse:Heb.3.13",
+            "verse:Heb.3.14",
+            "verse:Heb.3.15",
+            "verse:Heb.3.17",
+            "verse:Heb.3.18",
+            "verse:Heb.3.19",
+            "verse:Heb.3.4",
+            "verse:Heb.3.6",
+            "verse:Heb.3.7",
+            "verse:Heb.3.8",
+            "verse:Heb.3.9",
+            "verse:Heb.4.1",
+            "verse:Heb.4.10",
+            "verse:Heb.4.11",
+            "verse:Heb.4.12",
+            "verse:Heb.4.13",
+            "verse:Heb.4.14",
+            "verse:Heb.4.15",
+            "verse:Heb.4.16",
+            "verse:Heb.4.2",
+            "verse:Heb.4.3",
+            "verse:Heb.4.4",
+            "verse:Heb.4.5",
+            "verse:Heb.4.6",
+            "verse:Heb.4.9",
+            "verse:Heb.5.1",
+            "verse:Heb.5.11",
+            "verse:Heb.5.12",
+            "verse:Heb.5.13",
+            "verse:Heb.5.14",
+            "verse:Heb.5.2",
+            "verse:Heb.5.3",
+            "verse:Heb.5.5",
+            "verse:Heb.5.7",
+            "verse:Heb.5.8",
+            "verse:Heb.5.9",
+            "verse:Heb.6.1",
+            "verse:Heb.6.10",
+            "verse:Heb.6.11",
+            "verse:Heb.6.12",
+            "verse:Heb.6.14",
+            "verse:Heb.6.15",
+            "verse:Heb.6.16",
+            "verse:Heb.6.17",
+            "verse:Heb.6.18",
+            "verse:Heb.6.19",
+            "verse:Heb.6.2",
+            "verse:Heb.6.3",
+            "verse:Heb.6.4",
+            "verse:Heb.6.5",
+            "verse:Heb.6.6",
+            "verse:Heb.6.7",
+            "verse:Heb.6.8",
+            "verse:Heb.6.9",
+            "verse:Heb.7.12",
+            "verse:Heb.7.13",
+            "verse:Heb.7.16",
+            "verse:Heb.7.18",
+            "verse:Heb.7.19",
+            "verse:Heb.7.20",
+            "verse:Heb.7.21",
+            "verse:Heb.7.22",
+            "verse:Heb.7.23",
+            "verse:Heb.7.24",
+            "verse:Heb.7.25",
+            "verse:Heb.7.26",
+            "verse:Heb.7.27",
+            "verse:Heb.7.28",
+            "verse:Heb.7.3",
+            "verse:Heb.7.7",
+            "verse:Heb.7.8",
+            "verse:Heb.8.1",
+            "verse:Heb.8.11",
+            "verse:Heb.8.12",
+            "verse:Heb.8.13",
+            "verse:Heb.8.2",
+            "verse:Heb.8.3",
+            "verse:Heb.8.4",
+            "verse:Heb.8.6",
+            "verse:Heb.8.7",
+            "verse:Heb.9.1",
+            "verse:Heb.9.10",
+            "verse:Heb.9.11",
+            "verse:Heb.9.12",
+            "verse:Heb.9.13",
+            "verse:Heb.9.14",
+            "verse:Heb.9.15",
+            "verse:Heb.9.16",
+            "verse:Heb.9.17",
+            "verse:Heb.9.18",
+            "verse:Heb.9.2",
+            "verse:Heb.9.20",
+            "verse:Heb.9.21",
+            "verse:Heb.9.22",
+            "verse:Heb.9.23",
+            "verse:Heb.9.24",
+            "verse:Heb.9.25",
+            "verse:Heb.9.26",
+            "verse:Heb.9.27",
+            "verse:Heb.9.28",
+            "verse:Heb.9.3",
+            "verse:Heb.9.5",
+            "verse:Heb.9.6",
+            "verse:Heb.9.7",
+            "verse:Heb.9.8",
+            "verse:Heb.9.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.2.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-2-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.2.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-2-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.3.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-3-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.3.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-3-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.3.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.3.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-3-16",
+            "mention:wb:pl-egypt-af301ca-3-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.4.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-4-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.4.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-joshua-1-4-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.5.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-aaron-1-5-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.5.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-melchizedek-1-5-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.5.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-melchizedek-1-5-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.6.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-6-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.6.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-melchizedek-1-6-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-7-1",
+            "mention:wb:p-melchizedek-1-7-1",
+            "mention:wb:pl-salem-aad7e4e-7-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-7-2",
+            "mention:wb:pl-salem-aad7e4e-7-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-7-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-7-5",
+            "mention:wb:p-levi-1-7-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-7-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-7-9",
+            "mention:wb:p-levi-1-7-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-melchizedek-1-7-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-aaron-1-7-11",
+            "mention:wb:p-melchizedek-1-7-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-judah-1-7-14",
+            "mention:wb:p-moses-1-7-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-melchizedek-1-7-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.7.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-melchizedek-1-7-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.8.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-8-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.8.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-8-8",
+            "mention:wb:p-judah-1-8-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.8.9"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-8-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.8.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-8-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.9.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-aaron-1-9-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.9.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-9-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.10.28"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-10-28"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-abel-1-11-4",
+            "mention:wb:p-cain-1-11-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-enoch-1-11-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-noah-1-11-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-11-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaac-1-11-9",
+            "mention:wb:p-jacob-1-11-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-sarai-1-11-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-abram-1-11-17",
+            "mention:wb:p-isaac-1-11-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.18"
+          ],
+          "record_keys": [
+            "mention:wb:p-isaac-1-11-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-esau-1-11-20",
+            "mention:wb:p-isaac-1-11-20",
+            "mention:wb:p-jacob-1-11-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-11-21",
+            "mention:wb:p-joseph-1-11-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-joseph-1-11-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-11-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-11-24",
+            "mention:wb:p-pharaoh-3-11-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.26"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-26"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.27"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-27"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.31"
+          ],
+          "record_keys": [
+            "mention:wb:p-rahab-1-11-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.11.32"
+          ],
+          "record_keys": [
+            "mention:wb:p-barak-1-11-32",
+            "mention:wb:p-david-1-11-32",
+            "mention:wb:p-gideon-1-11-32",
+            "mention:wb:p-jephthah-1-11-32",
+            "mention:wb:p-samson-1-11-32",
+            "mention:wb:p-samuel-2-11-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.12.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-esau-1-12-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.12.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-12-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.12.22"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-12-22",
+            "mention:wb:pl-mount-zion-abd9596-12-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.12.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-abel-1-12-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.13.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-timothy-1-13-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Heb.13.24"
+          ],
+          "record_keys": [
+            "mention:wb:pl-italy-a7184a7-13-24"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}

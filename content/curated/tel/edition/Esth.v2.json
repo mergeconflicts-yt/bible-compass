@@ -1,0 +1,4556 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-esth-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-esth-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-esth-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-esth:refsys:tel-v1:esth.1.1-esth.10.3",
+      "scope:wb-esth-1:refsys:tel-v1:esth.1.1-esth.1.22",
+      "scope:wb-esth-2:refsys:tel-v1:esth.2.1-esth.2.23",
+      "scope:wb-esth-3:refsys:tel-v1:esth.3.1-esth.3.15",
+      "scope:wb-esth-4:refsys:tel-v1:esth.4.1-esth.4.17",
+      "scope:wb-esth-5:refsys:tel-v1:esth.5.1-esth.5.14",
+      "scope:wb-esth-6:refsys:tel-v1:esth.6.1-esth.6.14",
+      "scope:wb-esth-7:refsys:tel-v1:esth.7.1-esth.7.10",
+      "scope:wb-esth-8:refsys:tel-v1:esth.8.1-esth.8.17",
+      "scope:wb-esth-9:refsys:tel-v1:esth.9.1-esth.9.32",
+      "scope:wb-esth-10:refsys:tel-v1:esth.10.1-esth.10.3",
+      "scope:wb-esth-1-p1:refsys:tel-v1:esth.1.1-esth.1.22",
+      "scope:wb-esth-2-p1:refsys:tel-v1:esth.2.1-esth.2.18",
+      "scope:wb-esth-2-p2:refsys:tel-v1:esth.2.19-esth.2.23",
+      "scope:wb-esth-3-p1:refsys:tel-v1:esth.3.1-esth.3.15",
+      "scope:wb-esth-4-p1:refsys:tel-v1:esth.4.1-esth.4.17",
+      "scope:wb-esth-5-p1:refsys:tel-v1:esth.5.1-esth.5.8",
+      "scope:wb-esth-5-p2:refsys:tel-v1:esth.5.9-esth.5.14",
+      "scope:wb-esth-6-p1:refsys:tel-v1:esth.6.1-esth.6.14",
+      "scope:wb-esth-7-p1:refsys:tel-v1:esth.7.1-esth.7.10",
+      "scope:wb-esth-8-p1:refsys:tel-v1:esth.8.1-esth.8.14",
+      "scope:wb-esth-8-p2:refsys:tel-v1:esth.8.15-esth.8.17",
+      "scope:wb-esth-9-p1:refsys:tel-v1:esth.9.1-esth.9.17",
+      "scope:wb-esth-9-p2:refsys:tel-v1:esth.9.18-esth.9.32",
+      "scope:wb-esth-10-p1:refsys:tel-v1:esth.10.1-esth.10.3"
+    ],
+    "reference_keys": [
+      "verse:Esth.1.1",
+      "verse:Esth.1.2",
+      "verse:Esth.1.3",
+      "verse:Esth.1.4",
+      "verse:Esth.1.5",
+      "verse:Esth.1.6",
+      "verse:Esth.1.7",
+      "verse:Esth.1.8",
+      "verse:Esth.1.9",
+      "verse:Esth.1.10",
+      "verse:Esth.1.11",
+      "verse:Esth.1.12",
+      "verse:Esth.1.13",
+      "verse:Esth.1.14",
+      "verse:Esth.1.15",
+      "verse:Esth.1.16",
+      "verse:Esth.1.17",
+      "verse:Esth.1.18",
+      "verse:Esth.1.19",
+      "verse:Esth.1.20",
+      "verse:Esth.1.21",
+      "verse:Esth.1.22",
+      "verse:Esth.2.1",
+      "verse:Esth.2.2",
+      "verse:Esth.2.3",
+      "verse:Esth.2.4",
+      "verse:Esth.2.5",
+      "verse:Esth.2.6",
+      "verse:Esth.2.7",
+      "verse:Esth.2.8",
+      "verse:Esth.2.9",
+      "verse:Esth.2.10",
+      "verse:Esth.2.11",
+      "verse:Esth.2.12",
+      "verse:Esth.2.13",
+      "verse:Esth.2.14",
+      "verse:Esth.2.15",
+      "verse:Esth.2.16",
+      "verse:Esth.2.17",
+      "verse:Esth.2.18",
+      "verse:Esth.2.19",
+      "verse:Esth.2.20",
+      "verse:Esth.2.21",
+      "verse:Esth.2.22",
+      "verse:Esth.2.23",
+      "verse:Esth.3.1",
+      "verse:Esth.3.2",
+      "verse:Esth.3.3",
+      "verse:Esth.3.4",
+      "verse:Esth.3.5",
+      "verse:Esth.3.6",
+      "verse:Esth.3.7",
+      "verse:Esth.3.8",
+      "verse:Esth.3.9",
+      "verse:Esth.3.10",
+      "verse:Esth.3.11",
+      "verse:Esth.3.12",
+      "verse:Esth.3.13",
+      "verse:Esth.3.14",
+      "verse:Esth.3.15",
+      "verse:Esth.4.1",
+      "verse:Esth.4.2",
+      "verse:Esth.4.3",
+      "verse:Esth.4.4",
+      "verse:Esth.4.5",
+      "verse:Esth.4.6",
+      "verse:Esth.4.7",
+      "verse:Esth.4.8",
+      "verse:Esth.4.9",
+      "verse:Esth.4.10",
+      "verse:Esth.4.11",
+      "verse:Esth.4.12",
+      "verse:Esth.4.13",
+      "verse:Esth.4.14",
+      "verse:Esth.4.15",
+      "verse:Esth.4.16",
+      "verse:Esth.4.17",
+      "verse:Esth.5.1",
+      "verse:Esth.5.2",
+      "verse:Esth.5.3",
+      "verse:Esth.5.4",
+      "verse:Esth.5.5",
+      "verse:Esth.5.6",
+      "verse:Esth.5.7",
+      "verse:Esth.5.8",
+      "verse:Esth.5.9",
+      "verse:Esth.5.10",
+      "verse:Esth.5.11",
+      "verse:Esth.5.12",
+      "verse:Esth.5.13",
+      "verse:Esth.5.14",
+      "verse:Esth.6.1",
+      "verse:Esth.6.2",
+      "verse:Esth.6.3",
+      "verse:Esth.6.4",
+      "verse:Esth.6.5",
+      "verse:Esth.6.6",
+      "verse:Esth.6.7",
+      "verse:Esth.6.8",
+      "verse:Esth.6.9",
+      "verse:Esth.6.10",
+      "verse:Esth.6.11",
+      "verse:Esth.6.12",
+      "verse:Esth.6.13",
+      "verse:Esth.6.14",
+      "verse:Esth.7.1",
+      "verse:Esth.7.2",
+      "verse:Esth.7.3",
+      "verse:Esth.7.4",
+      "verse:Esth.7.5",
+      "verse:Esth.7.6",
+      "verse:Esth.7.7",
+      "verse:Esth.7.8",
+      "verse:Esth.7.9",
+      "verse:Esth.7.10",
+      "verse:Esth.8.1",
+      "verse:Esth.8.2",
+      "verse:Esth.8.3",
+      "verse:Esth.8.4",
+      "verse:Esth.8.5",
+      "verse:Esth.8.6",
+      "verse:Esth.8.7",
+      "verse:Esth.8.8",
+      "verse:Esth.8.9",
+      "verse:Esth.8.10",
+      "verse:Esth.8.11",
+      "verse:Esth.8.12",
+      "verse:Esth.8.13",
+      "verse:Esth.8.14",
+      "verse:Esth.8.15",
+      "verse:Esth.8.16",
+      "verse:Esth.8.17",
+      "verse:Esth.9.1",
+      "verse:Esth.9.2",
+      "verse:Esth.9.3",
+      "verse:Esth.9.4",
+      "verse:Esth.9.5",
+      "verse:Esth.9.6",
+      "verse:Esth.9.7",
+      "verse:Esth.9.8",
+      "verse:Esth.9.9",
+      "verse:Esth.9.10",
+      "verse:Esth.9.11",
+      "verse:Esth.9.12",
+      "verse:Esth.9.13",
+      "verse:Esth.9.14",
+      "verse:Esth.9.15",
+      "verse:Esth.9.16",
+      "verse:Esth.9.17",
+      "verse:Esth.9.18",
+      "verse:Esth.9.19",
+      "verse:Esth.9.20",
+      "verse:Esth.9.21",
+      "verse:Esth.9.22",
+      "verse:Esth.9.23",
+      "verse:Esth.9.24",
+      "verse:Esth.9.25",
+      "verse:Esth.9.26",
+      "verse:Esth.9.27",
+      "verse:Esth.9.28",
+      "verse:Esth.9.29",
+      "verse:Esth.9.30",
+      "verse:Esth.9.31",
+      "verse:Esth.9.32",
+      "verse:Esth.10.1",
+      "verse:Esth.10.2",
+      "verse:Esth.10.3"
+    ],
+    "language_tag": "te",
+    "translation_edition_key": "edition:tel-irv@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-nebuchadnezzar-1-2-6",
+        "verse_key": "verse:Esth.2.6",
+        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nebuchadnezzar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు నెబుకద్నెజరు య"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-1",
+        "verse_key": "verse:Esth.1.1",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "థానాలను పరిపాలించిన ",
+          "suffix": " కాలంలో జరిగిన విషయా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-2",
+        "verse_key": "verse:Esth.1.2",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ కాలంలో ",
+          "suffix": " రాజు షూషను కోటలో ను"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-9",
+        "verse_key": "verse:Esth.1.9",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "వష్తి రాణి కూడా ",
+          "suffix": " రాజ భవనంలో స్త్రీలక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-15",
+        "verse_key": "verse:Esth.1.15",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజు “రాజైన ",
+          "suffix": " అనే నేను నపుంసకుల ద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-16",
+        "verse_key": "verse:Esth.1.16",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "మాత్రమే కాదు, రాజైన ",
+          "suffix": " పాలనలోని సంస్థానాలన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-17",
+        "verse_key": "verse:Esth.1.17",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "చేస్తారు. ఎలాగంటే, ‘",
+          "suffix": " రాజు తన రాణి వష్తిన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-1-19",
+        "verse_key": "verse:Esth.1.19",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ంగీకారం అయితే రాజైన ",
+          "suffix": " సమక్షంలోకి వష్తి రా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-2-1",
+        "verse_key": "verse:Esth.2.1",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-2-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ విషయాలు జరిగి ",
+          "suffix": " రాజు కోపం చల్లారిన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-2-16",
+        "verse_key": "verse:Esth.2.16",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-2-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ విధంగా ",
+          "suffix": " రాజు పరిపాలనలో ఏడో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-2-21",
+        "verse_key": "verse:Esth.2.21",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-2-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "షు అనే ద్వారపాలకులు ",
+          "suffix": " రాజుపై కోపంతో అతనిన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-3-1",
+        "verse_key": "verse:Esth.3.1",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ విషయాలు జరిగాక ",
+          "suffix": " రాజు హమ్మెదాతా కొడు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-3-6",
+        "verse_key": "verse:Esth.3.6",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-3-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ుకున్నాడు. ఎందుకంటే ",
+          "suffix": " రాజ్యమంతటా ఉన్న మొర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-3-7",
+        "verse_key": "verse:Esth.3.7",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-3-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజైన ",
+          "suffix": " పరిపాలన పన్నెండో సం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-3-8",
+        "verse_key": "verse:Esth.3.8",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు హామాను ",
+          "suffix": "తో ఇలా చెప్పాడు. “మీ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-3-12",
+        "verse_key": "verse:Esth.3.12",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": " ఆజ్ఞ అయింది. రాజైన ",
+          "suffix": " పేరట ఆ లేఖికులు తాక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-6-2",
+        "verse_key": "verse:Esth.6.2",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "దరు నపుంసకులు రాజైన ",
+          "suffix": "ను చంపడానికి కుట్ర ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-7-5",
+        "verse_key": "verse:Esth.7.5",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "అందుకు రాజైన ",
+          "suffix": " “వాడెవడు? ఈ పని చేయ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజు ",
+          "suffix": " రాజు యూదుల శత్రువు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు రాణి అయిన ఎస్త"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-8-10",
+        "verse_key": "verse:Esth.8.10",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-8-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "మొర్దెకై ",
+          "suffix": " పేర శాసనాలు రాయించి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-9-2",
+        "verse_key": "verse:Esth.9.2",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-9-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదులు ",
+          "suffix": " పాలనలో ఉన్న సంస్థాన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-9-20",
+        "verse_key": "verse:Esth.9.20",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-9-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "ిషయాల గురించి రాజైన ",
+          "suffix": " సంస్థానాలన్నిటికీ ద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-9-30",
+        "verse_key": "verse:Esth.9.30",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-9-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " సామ్రాజ్యంలోని 127 "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-10-1",
+        "verse_key": "verse:Esth.10.1",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజైన ",
+          "suffix": " తన రాజ్యం మీదా సముద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-ahasuerus-1-10-3",
+        "verse_key": "verse:Esth.10.3",
+        "attestation_key": "attestation:wb-p-ahasuerus-1-10-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahasuerus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "అహష్వేరోషు",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదుడైన మొర్దెకై ",
+          "suffix": " రాజు తరువాతి స్థానం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ాయీరు వంశికుడు అయిన ",
+          "suffix": " అనే ఒక యూదుడుండేవాడ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-7",
+        "verse_key": "verse:Esth.2.7",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "లిదండ్రులు చనిపోయాక ",
+          "suffix": " ఆమెను తన సొంత కూతుర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-10",
+        "verse_key": "verse:Esth.2.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "కంటే అలా తెలపవద్దని ",
+          "suffix": " ఆమెకు ఆజ్ఞాపించాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-11",
+        "verse_key": "verse:Esth.2.11",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "లుసుకుంటూ ఉండడానికీ ",
+          "suffix": " అంతఃపురం ఆవరణం బయట "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-15",
+        "verse_key": "verse:Esth.2.15",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " తన స్వంత కూతురుగా చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-19",
+        "verse_key": "verse:Esth.2.19",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "లను సమకూర్చినప్పుడు ",
+          "suffix": " రాజు భవనం ద్వారం దగ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-20",
+        "verse_key": "verse:Esth.2.20",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ఎస్తేరు ",
+          "suffix": " పోషణలో ఉన్న కాలంలో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-21",
+        "verse_key": "verse:Esth.2.21",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజుల్లో ",
+          "suffix": " రాజ భవన ద్వారం దగ్గ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-2-22",
+        "verse_key": "verse:Esth.2.22",
+        "attestation_key": "attestation:wb-p-mordecai-2-2-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ సంగతి ",
+          "suffix": "కి తెలిసి అతడు దాన్న"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-2",
+        "verse_key": "verse:Esth.3.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ానుకు నమస్కరించారు. ",
+          "suffix": " మాత్రం అలా వంగలేదు,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-5",
+        "verse_key": "verse:Esth.3.5",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " తన ముందు మోకరించక ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-3-6",
+        "verse_key": "verse:Esth.3.6",
+        "attestation_key": "attestation:wb-p-mordecai-2-3-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "అతడు, ",
+          "suffix": " జాతి ప్రజలు ఎవరో తె"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-1",
+        "verse_key": "verse:Esth.4.1",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "జరిగినదంతా ",
+          "suffix": " విన్నాడు. అతడు తన బ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-4",
+        "verse_key": "verse:Esth.4.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "లా దిగులు కలిగింది. ",
+          "suffix": " కట్టుకున్న గోనెపట్ట"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-6",
+        "verse_key": "verse:Esth.4.6",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": " ఉన్న పట్టణ కూడలిలో ",
+          "suffix": " దగ్గరికి వచ్చాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-7",
+        "verse_key": "verse:Esth.4.7",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " తనకు జరిగినదంతా అతన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-9",
+        "verse_key": "verse:Esth.4.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ప్పుడు హతాకు వెళ్లి ",
+          "suffix": " చెప్పినదంతా ఎస్తేరు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-10",
+        "verse_key": "verse:Esth.4.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ఎస్తేరు ",
+          "suffix": "తో చెప్పమని హతాకుతో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-12",
+        "verse_key": "verse:Esth.4.12",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "హతాకు ఎస్తేరు మాటలు ",
+          "suffix": "కి తెలిపాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-13",
+        "verse_key": "verse:Esth.4.13",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఎస్తేరుకు ఇలా కబురం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-15",
+        "verse_key": "verse:Esth.4.15",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ఎస్తేరు ",
+          "suffix": "కి ఇలా చెప్పి పంపింద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-4-17",
+        "verse_key": "verse:Esth.4.17",
+        "attestation_key": "attestation:wb-p-mordecai-2-4-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " వెళ్లి ఎస్తేరు తనకు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-5-9",
+        "verse_key": "verse:Esth.5.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-5-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "న ద్వారం దగ్గర ఉన్న ",
+          "suffix": " తనను చూసి లేచి నిలబ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-5-13",
+        "verse_key": "verse:Esth.5.13",
+        "attestation_key": "attestation:wb-p-mordecai-2-5-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "“అయితే యూదుడైన ",
+          "suffix": " రాజభవన ద్వారం దగ్గర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-5-14",
+        "verse_key": "verse:Esth.5.14",
+        "attestation_key": "attestation:wb-p-mordecai-2-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ి చేయించు. దాని మీద ",
+          "suffix": "ని ఉరి తీసేలా రేపు ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-2",
+        "verse_key": "verse:Esth.6.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": " కుట్ర పన్నిన సంగతి ",
+          "suffix": " బయట పెట్టి తెలియజేస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-3",
+        "verse_key": "verse:Esth.6.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "విని “మరి దీని కోసం ",
+          "suffix": "కి సన్మానంగా, గుర్తి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-4",
+        "verse_key": "verse:Esth.6.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ించిన ఉరి కొయ్య మీద ",
+          "suffix": "ని ఉరి తీయించడానికి "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-10",
+        "verse_key": "verse:Esth.6.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ర్చుని ఉన్న యూదుడైన ",
+          "suffix": "కి ఆ విధంగా చెయ్యి. "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-11",
+        "verse_key": "verse:Esth.6.11",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": ", గుర్రాన్నీ తెచ్చి ",
+          "suffix": "కి ఆ బట్టలు తొడిగి ఆ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-12",
+        "verse_key": "verse:Esth.6.12",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "తరువాత ",
+          "suffix": " రాజు ద్వారం దగ్గరిక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-6-13",
+        "verse_key": "verse:Esth.6.13",
+        "attestation_key": "attestation:wb-p-mordecai-2-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "డిపోవడం మొదలయిందో ఆ ",
+          "suffix": " యూదు జాతివాడైతే గనక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-7-9",
+        "verse_key": "verse:Esth.7.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "పాడేందుకు మాట్లాడిన ",
+          "suffix": "ని ఉరి తీయాలని ఈ హామ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-7-10",
+        "verse_key": "verse:Esth.7.10",
+        "attestation_key": "attestation:wb-p-mordecai-2-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ విధంగా హామాను ",
+          "suffix": " కోసం సిద్ధం చేసిన ఉ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ు రాణికి ఇచ్చేశాడు. ",
+          "suffix": "తో తన బంధుత్వం గురిం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-2",
+        "verse_key": "verse:Esth.8.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ుకున్న తన ఉంగరాన్ని ",
+          "suffix": "కి ఇచ్చాడు. ఎస్తేరు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ాణి అయిన ఎస్తేరుకు, ",
+          "suffix": "కి ఇలా చెప్పాడు. “హా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-9",
+        "verse_key": "verse:Esth.8.9",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "లేఖికులను పిలిచారు. ",
+          "suffix": " ఆజ్ఞాపించినట్టు యూద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-8-15",
+        "verse_key": "verse:Esth.8.15",
+        "attestation_key": "attestation:wb-p-mordecai-2-8-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " నేరేడు, తెలుపు వర్ణ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-3",
+        "verse_key": "verse:Esth.9.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "ని గూర్చిన భయంతో సంస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-4",
+        "verse_key": "verse:Esth.9.4",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", రాజు ఆస్థానంలో గొప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-20",
+        "verse_key": "verse:Esth.9.20",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఈ విషయాల గురించి రా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-23",
+        "verse_key": "verse:Esth.9.23",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": " దాన్ని కొనసాగిస్తూ ",
+          "suffix": " తమకు రాసిన ప్రకారం "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-29",
+        "verse_key": "verse:Esth.9.29",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ిన ఎస్తేరు, యూదుడైన ",
+          "suffix": " అధికార పూర్వకంగా రా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-9-31",
+        "verse_key": "verse:Esth.9.31",
+        "attestation_key": "attestation:wb-p-mordecai-2-9-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదుడైన ",
+          "suffix": ", ఎస్తేరు రాణి పూరీమ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-10-2",
+        "verse_key": "verse:Esth.10.2",
+        "attestation_key": "attestation:wb-p-mordecai-2-10-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "ిజయాల గురించీ, రాజు ",
+          "suffix": "ని గొప్ప పదవుల్లో ఉం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-mordecai-2-10-3",
+        "verse_key": "verse:Esth.10.3",
+        "attestation_key": "attestation:wb-p-mordecai-2-10-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mordecai-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "మొర్దెకై",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదుడైన ",
+          "suffix": " అహష్వేరోషు రాజు తరు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-7",
+        "verse_key": "verse:Esth.2.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "డు తన బాబాయి కూతురు ",
+          "suffix": " అనే మారు పేరు గల హద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-8",
+        "verse_key": "verse:Esth.2.8",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ర్యవేక్షణలో ఉంచారు. ",
+          "suffix": "ను కూడా అంతఃపురానికి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-11",
+        "verse_key": "verse:Esth.2.11",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " యోగక్షేమాలు కనుక్కో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-15",
+        "verse_key": "verse:Esth.2.15",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ీహాయిలు కూతురు అయిన ",
+          "suffix": "కు రాజు దగ్గరికి వెళ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-16",
+        "verse_key": "verse:Esth.2.16",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ెబేతు అనే పదో నెలలో ",
+          "suffix": " రాజ మందిరంలో అతని ద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-17",
+        "verse_key": "verse:Esth.2.17",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "్త్రీలందరికంటే రాజు ",
+          "suffix": "ను ఎక్కువగా ప్రేమించ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-18",
+        "verse_key": "verse:Esth.2.18",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "దరికి, సేవకులందరికి ",
+          "suffix": " విషయమై గొప్పవిందు చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-20",
+        "verse_key": "verse:Esth.2.20",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " మొర్దెకై పోషణలో ఉన్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-2-22",
+        "verse_key": "verse:Esth.2.22",
+        "attestation_key": "attestation:wb-p-hadassah-1-2-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": " తెలిసి అతడు దాన్ని ",
+          "suffix": "రాణితో చెప్పాడు. ఎస్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-4",
+        "verse_key": "verse:Esth.4.4",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " దాసీలు, ఆమె దగ్గరున"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-5",
+        "verse_key": "verse:Esth.4.5",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " తనను సేవించడానికి ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-8",
+        "verse_key": "verse:Esth.4.8",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "కు చూపించడం కోసం యూద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-9",
+        "verse_key": "verse:Esth.4.9",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ొర్దెకై చెప్పినదంతా ",
+          "suffix": "కు తెలియజేశాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-10",
+        "verse_key": "verse:Esth.4.10",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " మొర్దెకైతో చెప్పమని"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-12",
+        "verse_key": "verse:Esth.4.12",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "హతాకు ",
+          "suffix": " మాటలు మొర్దెకైకి తె"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-13",
+        "verse_key": "verse:Esth.4.13",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "మొర్దెకై ",
+          "suffix": "కు ఇలా కబురంపాడు. “ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-15",
+        "verse_key": "verse:Esth.4.15",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " మొర్దెకైకి ఇలా చెప్"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-4-17",
+        "verse_key": "verse:Esth.4.17",
+        "attestation_key": "attestation:wb-p-hadassah-1-4-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "మొర్దెకై వెళ్లి ",
+          "suffix": " తనకు చెప్పినదంతా చే"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-1",
+        "verse_key": "verse:Esth.5.1",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "మూడో రోజున ",
+          "suffix": " రాణివస్త్రాలు ధరించ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-2",
+        "verse_key": "verse:Esth.5.2",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "రాణి ఆవరణంలో నిలబడి "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-4",
+        "verse_key": "verse:Esth.5.4",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " “రాజుకు సమంజసం అనిప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-5",
+        "verse_key": "verse:Esth.5.5",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు రాజు “",
+          "suffix": " అడిగిన ప్రకారం జరిగ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-6",
+        "verse_key": "verse:Esth.5.6",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "రసం పోస్తుండగా రాజు ",
+          "suffix": "తో “నీ కోరిక ఏమిటి? "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-7",
+        "verse_key": "verse:Esth.5.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఇలా బదులు ఇచ్చింది "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-5-12",
+        "verse_key": "verse:Esth.5.12",
+        "attestation_key": "attestation:wb-p-hadassah-1-5-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఇంకా అతడు “",
+          "suffix": " రాణి తాను చేయించిన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-6-14",
+        "verse_key": "verse:Esth.6.14",
+        "attestation_key": "attestation:wb-p-hadassah-1-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ారి ఉద్యోగులు వచ్చి ",
+          "suffix": " ఏర్పాటు చేసిన విందు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-1",
+        "verse_key": "verse:Esth.7.1",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": ", హామాను రెండవ రోజు ",
+          "suffix": " రాణి దగ్గరికి విందు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-2",
+        "verse_key": "verse:Esth.7.2",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజు “",
+          "suffix": " రాణీ, నీ విన్నపం ఏమ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-3",
+        "verse_key": "verse:Esth.7.3",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " రాణి ఇలా జవాబిచ్చిం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-5",
+        "verse_key": "verse:Esth.7.5",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ంచిన వాడెక్కడ?” అని ",
+          "suffix": " రాణిని అడిగాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-6",
+        "verse_key": "verse:Esth.7.6",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " “మా విరోధి అయిన ఆ శ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-7",
+        "verse_key": "verse:Esth.7.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "న ప్రాణాలు కాపాడమని ",
+          "suffix": " రాణిని ప్రాధేయ పడసా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-7-8",
+        "verse_key": "verse:Esth.7.8",
+        "attestation_key": "attestation:wb-p-hadassah-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ి రాజు తిరిగి వచ్చి ",
+          "suffix": " కూర్చున్న తల్పం మీద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "్రువు హామాను ఇంటిని ",
+          "suffix": " రాణికి ఇచ్చేశాడు. మ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-2",
+        "verse_key": "verse:Esth.8.2",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "మొర్దెకైకి ఇచ్చాడు. ",
+          "suffix": " మొర్దెకైని హామాను ఇ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-3",
+        "verse_key": "verse:Esth.8.3",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు పాదాలపై పడి వి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-4",
+        "verse_key": "verse:Esth.8.4",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "బంగారు రాజ దండాన్ని ",
+          "suffix": " వైపు చాపాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-hadassah-1-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "రోషు రాజు రాణి అయిన ",
+          "suffix": "కు, మొర్దెకైకి ఇలా చ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-12",
+        "verse_key": "verse:Esth.9.12",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజు ",
+          "suffix": " రాణితో “యూదులు షూషన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-13",
+        "verse_key": "verse:Esth.9.13",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " “రాజైన మీకు సమ్మతమై"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-29",
+        "verse_key": "verse:Esth.9.29",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "కుమార్తె, రాణి అయిన ",
+          "suffix": ", యూదుడైన మొర్దెకై అ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-31",
+        "verse_key": "verse:Esth.9.31",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-31",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "యూదుడైన మొర్దెకై, ",
+          "suffix": " రాణి పూరీము పండగ రో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hadassah-1-9-32",
+        "verse_key": "verse:Esth.9.32",
+        "attestation_key": "attestation:wb-p-hadassah-1-9-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hadassah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "ఎస్తేరు",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ విధంగా ",
+          "suffix": " రాణి ఆజ్ఞ చేత ఈ పూర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-1",
+        "verse_key": "verse:Esth.3.1",
+        "attestation_key": "attestation:wb-p-haman-1-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "అగగు వంశం వాడు అయిన ",
+          "suffix": "కు పదోన్నతి కలిగించి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-2",
+        "verse_key": "verse:Esth.3.2",
+        "attestation_key": "attestation:wb-p-haman-1-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " ప్రకారం మోకాళ్లూని ",
+          "suffix": "కు నమస్కరించారు. మొర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-4",
+        "verse_key": "verse:Esth.3.4",
+        "attestation_key": "attestation:wb-p-haman-1-3-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "దో చూద్దాం అని వారు ",
+          "suffix": "కు ఈ విషయం తెలియజేశా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-5",
+        "verse_key": "verse:Esth.3.5",
+        "attestation_key": "attestation:wb-p-haman-1-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "స్కరించక పోవడం చూసి ",
+          "suffix": " మండిపడ్డాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-7",
+        "verse_key": "verse:Esth.3.7",
+        "attestation_key": "attestation:wb-p-haman-1-3-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "నే మొదటి నెలలో వారు ",
+          "suffix": " ఎదుట “పూరు” అంటే చీ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-8",
+        "verse_key": "verse:Esth.3.8",
+        "attestation_key": "attestation:wb-p-haman-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "అప్పుడు ",
+          "suffix": " అహష్వేరోషుతో ఇలా చె"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-10",
+        "verse_key": "verse:Esth.3.10",
+        "attestation_key": "attestation:wb-p-haman-1-3-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " అగగు వంశీకుడు అయిన ",
+          "suffix": "కు ఇచ్చాడు. ఇతడు యూద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-12",
+        "verse_key": "verse:Esth.3.12",
+        "attestation_key": "attestation:wb-p-haman-1-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ికులను పిలిపించారు. ",
+          "suffix": " ఆజ్ఞాపించిన ప్రకారం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-3-15",
+        "verse_key": "verse:Esth.3.15",
+        "attestation_key": "attestation:wb-p-haman-1-3-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " ప్రకటించారు. రాజు, ",
+          "suffix": " విందుకు కూర్చున్నార"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-4-7",
+        "verse_key": "verse:Esth.4.7",
+        "attestation_key": "attestation:wb-p-haman-1-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " అతనికి వివరించాడు. ",
+          "suffix": " యూదులను నాశనం చేయడా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-5",
+        "verse_key": "verse:Esth.5.5",
+        "attestation_key": "attestation:wb-p-haman-1-5-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "గిన ప్రకారం జరిగేలా ",
+          "suffix": "ను కూడా త్వరగా తెండి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-9",
+        "verse_key": "verse:Esth.5.9",
+        "attestation_key": "attestation:wb-p-haman-1-5-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజు ",
+          "suffix": " సంతోషంగా ఉల్లాసంగా "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-5-14",
+        "verse_key": "verse:Esth.5.14",
+        "attestation_key": "attestation:wb-p-haman-1-5-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ో చెప్పారు. ఈ సంగతి ",
+          "suffix": "కు సముచితంగా తోచింది"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-4",
+        "verse_key": "verse:Esth.6.4",
+        "attestation_key": "attestation:wb-p-haman-1-6-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ు అడిగాడు. అప్పటికి ",
+          "suffix": " తాను చేయించిన ఉరి క"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-5",
+        "verse_key": "verse:Esth.6.5",
+        "attestation_key": "attestation:wb-p-haman-1-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజ సేవకులు “అయ్యా, ",
+          "suffix": " ఆవరణంలో నిలబడి ఉన్న"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-6",
+        "verse_key": "verse:Esth.6.6",
+        "attestation_key": "attestation:wb-p-haman-1-6-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ాజు అతన్ని అడిగాడు. ",
+          "suffix": " “నన్ను గాక రాజు మరి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-10",
+        "verse_key": "verse:Esth.6.10",
+        "attestation_key": "attestation:wb-p-haman-1-6-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "డా అంతా చెయ్యి” అని ",
+          "suffix": "కు ఆజ్ఞాపించాడు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-11",
+        "verse_key": "verse:Esth.6.11",
+        "attestation_key": "attestation:wb-p-haman-1-6-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " ఆ వస్త్రాలను, గుర్ర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-12",
+        "verse_key": "verse:Esth.6.12",
+        "attestation_key": "attestation:wb-p-haman-1-6-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ికి తిరిగి వచ్చాడు. ",
+          "suffix": " మాత్రం తలపై గుడ్డ క"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-13",
+        "verse_key": "verse:Esth.6.13",
+        "attestation_key": "attestation:wb-p-haman-1-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " తనకు పట్టిన గతి తన "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-6-14",
+        "verse_key": "verse:Esth.6.14",
+        "attestation_key": "attestation:wb-p-haman-1-6-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ేసిన విందుకు రమ్మని ",
+          "suffix": "ను తొందర పెట్టారు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-1",
+        "verse_key": "verse:Esth.7.1",
+        "attestation_key": "attestation:wb-p-haman-1-7-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "రాజు, ",
+          "suffix": " రెండవ రోజు ఎస్తేరు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-8",
+        "verse_key": "verse:Esth.7.8",
+        "attestation_key": "attestation:wb-p-haman-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "కూర్చున్న తల్పం మీద ",
+          "suffix": " పడి ఉండడం చూశాడు. “"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-9",
+        "verse_key": "verse:Esth.7.9",
+        "attestation_key": "attestation:wb-p-haman-1-7-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ెకైని ఉరి తీయాలని ఈ ",
+          "suffix": " 50 మూరల ఎత్తున్న ఉర"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-7-10",
+        "verse_key": "verse:Esth.7.10",
+        "attestation_key": "attestation:wb-p-haman-1-7-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ విధంగా ",
+          "suffix": " మొర్దెకై కోసం సిద్ధ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-1",
+        "verse_key": "verse:Esth.8.1",
+        "attestation_key": "attestation:wb-p-haman-1-8-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " రాజు యూదుల శత్రువు ",
+          "suffix": " ఇంటిని ఎస్తేరు రాణి"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-2",
+        "verse_key": "verse:Esth.8.2",
+        "attestation_key": "attestation:wb-p-haman-1-8-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ి వచ్చినప్పుడు రాజు ",
+          "suffix": " చేతిలోనుండి తీసుకున"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-3",
+        "verse_key": "verse:Esth.8.3",
+        "attestation_key": "attestation:wb-p-haman-1-8-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "స్తూ “అగగు వంశీకుడు ",
+          "suffix": " చేసిన కీడును, అతడు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-5",
+        "verse_key": "verse:Esth.8.5",
+        "attestation_key": "attestation:wb-p-haman-1-8-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " అగగు వంశీకుడు అయిన ",
+          "suffix": " రాయించిన శాసనాలు అమ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-8-7",
+        "verse_key": "verse:Esth.8.7",
+        "attestation_key": "attestation:wb-p-haman-1-8-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "కైకి ఇలా చెప్పాడు. “",
+          "suffix": " ఇంటిని ఎస్తేరుకు ఇచ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-12",
+        "verse_key": "verse:Esth.9.12",
+        "attestation_key": "attestation:wb-p-haman-1-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "కోటలోనే 500 మందిని, ",
+          "suffix": " కొడుకులు 10 మందిని "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-13",
+        "verse_key": "verse:Esth.9.13",
+        "attestation_key": "attestation:wb-p-haman-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ేపు కూడా చేయడానికి, ",
+          "suffix": " పదిమంది కొడుకుల దేహ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-14",
+        "verse_key": "verse:Esth.9.14",
+        "attestation_key": "attestation:wb-p-haman-1-9-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఈ ఆజ్ఞను చాటించారు. ",
+          "suffix": " పదిమంది కొడుకులను వ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-haman-1-9-24",
+        "verse_key": "verse:Esth.9.24",
+        "attestation_key": "attestation:wb-p-haman-1-9-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-haman-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "హామాను",
+          "occurrence_ordinal": 1,
+          "prefix": " అగగు వంశికుడు అయిన ",
+          "suffix": " యూదులను మట్టుబెట్టా"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-babylon-1-a217d18-2-6",
+        "verse_key": "verse:Esth.2.6",
+        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-babylon-1-a217d18"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "బబులోను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " రాజు నెబుకద్నెజరు య"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-14",
+        "verse_key": "verse:Esth.1.14",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": " ఉండిన వారు. వీరికి ",
+          "suffix": " ఎప్పుడూ అందుబాటులో "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-18",
+        "verse_key": "verse:Esth.1.18",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "ి పలికినట్టే ఈ రోజు ",
+          "suffix": " అధిపతులందరితో పలుకు"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-1-19",
+        "verse_key": "verse:Esth.1.19",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "గారికి అంగీకారం అయిత"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-persia-ab9696f-10-2",
+        "verse_key": "verse:Esth.10.2",
+        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "రాజు",
+          "occurrence_ordinal": 1,
+          "prefix": "గిన విజయాల గురించీ, ",
+          "suffix": " మొర్దెకైని గొప్ప పద"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-1-2",
+        "verse_key": "verse:Esth.1.2",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "ంలో అహష్వేరోషు రాజు ",
+          "suffix": " కోటలో నుండి పరిపాలన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-1-5",
+        "verse_key": "verse:Esth.1.5",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "పాటు చేయించాడు. అది ",
+          "suffix": " కోటలో ఉన్న వారందరిక"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-2-3",
+        "verse_key": "verse:Esth.2.3",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-2-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "సుకు వచ్చిన కన్యలను ",
+          "suffix": " రాజభవనంలోని రాణివాస"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-2-5",
+        "verse_key": "verse:Esth.2.5",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " కోటలో బెన్యామీను గో"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-2-8",
+        "verse_key": "verse:Esth.2.8",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "మంది కన్యలను తెచ్చి ",
+          "suffix": " కోటలో ఉంచారు. వారిన"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-3-15",
+        "verse_key": "verse:Esth.3.15",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-3-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "రి వెళ్లారు. ఈ ఆజ్ఞ ",
+          "suffix": " కోటలో కూడా ప్రకటించ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-4-8",
+        "verse_key": "verse:Esth.4.8",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": " కోసం యూదుల ఊచకోతకై ",
+          "suffix": "లో విడుదల చేసిన ఆజ్ఞ"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-4-16",
+        "verse_key": "verse:Esth.4.16",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-4-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "“",
+          "suffix": "లో ఉన్న యూదులందరినీ "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-8-14",
+        "verse_key": "verse:Esth.8.14",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "ుదేరారు. ఆ తాకీదును ",
+          "suffix": " కోటలో కూడా ఇచ్చారు."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-8-15",
+        "verse_key": "verse:Esth.8.15",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-8-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "లుదేరాడు. ఈ కారణంగా ",
+          "suffix": " నగరంలో సంబరం కలిగిం"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-6",
+        "verse_key": "verse:Esth.9.6",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఒక్క ",
+          "suffix": " కోటలోనే యూదులు 500 "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-11",
+        "verse_key": "verse:Esth.9.11",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "ఆ రోజున ",
+          "suffix": " కోటలో హతమైన వారి లె"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-12",
+        "verse_key": "verse:Esth.9.12",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "తేరు రాణితో “యూదులు ",
+          "suffix": " కోటలోనే 500 మందిని,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-13",
+        "verse_key": "verse:Esth.9.13",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "ే ఈ రోజు జరిగినట్టే ",
+          "suffix": "లో ఉన్న యూదులు రేపు "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-14",
+        "verse_key": "verse:Esth.9.14",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": " రాజు ఆజ్ఞ ఇచ్చాడు. ",
+          "suffix": "లో ఈ ఆజ్ఞను చాటించార"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-15",
+        "verse_key": "verse:Esth.9.15",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "నెల పద్నాలుగో తేదీన ",
+          "suffix": "లోని యూదులు సమకూడి ప"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-susa-a033b84-9-18",
+        "verse_key": "verse:Esth.9.18",
+        "attestation_key": "attestation:wb-pl-susa-a033b84-9-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-susa-a033b84"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "షూషను",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": "లో ఉన్న యూదులు ఆ నెల"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Esth.1.10",
+            "verse:Esth.1.11",
+            "verse:Esth.1.12",
+            "verse:Esth.1.13",
+            "verse:Esth.1.20",
+            "verse:Esth.1.21",
+            "verse:Esth.1.22",
+            "verse:Esth.1.3",
+            "verse:Esth.1.4",
+            "verse:Esth.1.6",
+            "verse:Esth.1.7",
+            "verse:Esth.1.8",
+            "verse:Esth.2.12",
+            "verse:Esth.2.13",
+            "verse:Esth.2.14",
+            "verse:Esth.2.2",
+            "verse:Esth.2.23",
+            "verse:Esth.2.4",
+            "verse:Esth.2.9",
+            "verse:Esth.3.11",
+            "verse:Esth.3.13",
+            "verse:Esth.3.14",
+            "verse:Esth.3.3",
+            "verse:Esth.3.9",
+            "verse:Esth.4.11",
+            "verse:Esth.4.14",
+            "verse:Esth.4.2",
+            "verse:Esth.4.3",
+            "verse:Esth.5.10",
+            "verse:Esth.5.11",
+            "verse:Esth.5.3",
+            "verse:Esth.5.8",
+            "verse:Esth.6.1",
+            "verse:Esth.6.7",
+            "verse:Esth.6.8",
+            "verse:Esth.6.9",
+            "verse:Esth.7.4",
+            "verse:Esth.8.11",
+            "verse:Esth.8.12",
+            "verse:Esth.8.13",
+            "verse:Esth.8.16",
+            "verse:Esth.8.17",
+            "verse:Esth.8.6",
+            "verse:Esth.8.8",
+            "verse:Esth.9.1",
+            "verse:Esth.9.10",
+            "verse:Esth.9.16",
+            "verse:Esth.9.17",
+            "verse:Esth.9.19",
+            "verse:Esth.9.21",
+            "verse:Esth.9.22",
+            "verse:Esth.9.25",
+            "verse:Esth.9.26",
+            "verse:Esth.9.27",
+            "verse:Esth.9.28",
+            "verse:Esth.9.5",
+            "verse:Esth.9.7",
+            "verse:Esth.9.8",
+            "verse:Esth.9.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-2",
+            "mention:wb:pl-susa-a033b84-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.5"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-1-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-persia-ab9696f-1-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-persia-ab9696f-1-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.1.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-1-19",
+            "mention:wb:pl-persia-ab9696f-1-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-2-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.3"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-2-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-2-5",
+            "mention:wb:pl-susa-a033b84-2-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-nebuchadnezzar-1-2-6",
+            "mention:wb:pl-babylon-1-a217d18-2-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-7",
+            "mention:wb:p-mordecai-2-2-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-8",
+            "mention:wb:pl-susa-a033b84-2-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-2-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-11",
+            "mention:wb:p-mordecai-2-2-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-15",
+            "mention:wb:p-mordecai-2-2-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-2-16",
+            "mention:wb:p-hadassah-1-2-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.18"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.19"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-2-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-20",
+            "mention:wb:p-mordecai-2-2-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.21"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-2-21",
+            "mention:wb:p-mordecai-2-2-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.2.22"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-2-22",
+            "mention:wb:p-mordecai-2-2-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-3-1",
+            "mention:wb:p-haman-1-3-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-2",
+            "mention:wb:p-mordecai-2-3-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-5",
+            "mention:wb:p-mordecai-2-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-3-6",
+            "mention:wb:p-mordecai-2-3-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-3-7",
+            "mention:wb:p-haman-1-3-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-3-8",
+            "mention:wb:p-haman-1-3-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-3-12",
+            "mention:wb:p-haman-1-3-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.3.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-3-15",
+            "mention:wb:pl-susa-a033b84-3-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-4-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-4",
+            "mention:wb:p-mordecai-2-4-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-4-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-4-7",
+            "mention:wb:p-mordecai-2-4-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-8",
+            "mention:wb:pl-susa-a033b84-4-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-9",
+            "mention:wb:p-mordecai-2-4-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-10",
+            "mention:wb:p-mordecai-2-4-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-12",
+            "mention:wb:p-mordecai-2-4-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-13",
+            "mention:wb:p-mordecai-2-4-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-15",
+            "mention:wb:p-mordecai-2-4-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.16"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-4-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.4.17"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-4-17",
+            "mention:wb:p-mordecai-2-4-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-5",
+            "mention:wb:p-haman-1-5-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-9",
+            "mention:wb:p-mordecai-2-5-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-5-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-5-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.5.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-5-14",
+            "mention:wb:p-mordecai-2-5-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-6-2",
+            "mention:wb:p-mordecai-2-6-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-6-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-4",
+            "mention:wb:p-mordecai-2-6-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-10",
+            "mention:wb:p-mordecai-2-6-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-11",
+            "mention:wb:p-mordecai-2-6-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-12",
+            "mention:wb:p-mordecai-2-6-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-6-13",
+            "mention:wb:p-mordecai-2-6-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.6.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-6-14",
+            "mention:wb:p-haman-1-6-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-1",
+            "mention:wb:p-haman-1-7-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-7-5",
+            "mention:wb:p-hadassah-1-7-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-7-8",
+            "mention:wb:p-haman-1-7-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-7-9",
+            "mention:wb:p-mordecai-2-7-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.7.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-7-10",
+            "mention:wb:p-mordecai-2-7-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-8-1",
+            "mention:wb:p-hadassah-1-8-1",
+            "mention:wb:p-haman-1-8-1",
+            "mention:wb:p-mordecai-2-8-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-2",
+            "mention:wb:p-haman-1-8-2",
+            "mention:wb:p-mordecai-2-8-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-3",
+            "mention:wb:p-haman-1-8-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-8-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-8-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-8-7",
+            "mention:wb:p-hadassah-1-8-7",
+            "mention:wb:p-haman-1-8-7",
+            "mention:wb:p-mordecai-2-8-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-8-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-8-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-8-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.8.15"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-8-15",
+            "mention:wb:pl-susa-a033b84-8-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-9-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.6"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-12",
+            "mention:wb:p-haman-1-9-12",
+            "mention:wb:pl-susa-a033b84-9-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-13",
+            "mention:wb:p-haman-1-9-13",
+            "mention:wb:pl-susa-a033b84-9-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-9-14",
+            "mention:wb:pl-susa-a033b84-9-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.15"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-susa-a033b84-9-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-9-20",
+            "mention:wb:p-mordecai-2-9-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.23"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-9-23"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-haman-1-9-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.29"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-29",
+            "mention:wb:p-mordecai-2-9-29"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.30"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-9-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.31"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-31",
+            "mention:wb:p-mordecai-2-9-31"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.9.32"
+          ],
+          "record_keys": [
+            "mention:wb:p-hadassah-1-9-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.10.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-10-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.10.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-mordecai-2-10-2",
+            "mention:wb:pl-persia-ab9696f-10-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Esth.10.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-ahasuerus-1-10-3",
+            "mention:wb:p-mordecai-2-10-3"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "translation-mention-coverage-limited",
+      "note": "Translation mentions are emitted only for entities whose name form was derived from this translation's own text; verses without such a form are reported complete_zero in this draft."
+    }
+  ]
+}

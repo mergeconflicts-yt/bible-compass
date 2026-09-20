@@ -1,0 +1,54 @@
+{
+  "attempt_id": "task:whole-bible-status-register:attempt-1",
+  "task_id": "CUR-register",
+  "task_title": "Whole-Bible curation status register (tracking scaffold only)",
+  "result": "PASS",
+  "user_visible_outcome": "No user-visible change. A single reference file now records the curation status of all 66 books for future planning.",
+  "scope_ruling": "Whole-Bible content generation was NOT performed. It is an explicit first-MVP exclusion (AGENTS.md; MVP_PRD.md:175; PRODUCT_DECISIONS.md:58) and would require inventing historical/theological/geographic claims, which AGENTS.md forbids. WHOLE_BIBLE_CURATION_SPEC.md is DRAFT FOR SPECIALIST REVIEW and states Nehemiah 2 remains the only first-MVP production slice. Owner selected status-register-only.",
+  "files_changed": [
+    "content/curation/whole-bible-status.json (new: 66-book coverage/status register derived from the committed canon skeleton and bundled BSB assets; every book not_started except the Nehemiah 2 pilot, which is blocked/draft-only-synthetic; counts all zero; gates all NOT_STARTED)"
+  ],
+  "files_not_changed": [
+    "No Scripture, context, claims, citations, coordinates, or prose generated",
+    "No content/pilot/**, no schemas, no app, no migrations, no rights, no gates",
+    "The one-off generator script lived in the temp dir and was deleted (not committed)"
+  ],
+  "register_contents": {
+    "books_total": 66,
+    "testaments": "39 OT / 27 NT",
+    "chapters_expected_total": 1189,
+    "verses_expected_total": 31086,
+    "books_not_started": 65,
+    "books_blocked": 1,
+    "curated_counts": "all zero (passages, entities, claims, attestations, mentions, contexts, localizations)",
+    "per_book": "osis, bsb, name, testament, status, counts, verses_expected, 10-stage expansion map, notes",
+    "policy": "status values, coverage results, 10-step expansion order, gate states, incremental-by-book note",
+    "pilot": "Neh.2 — scope, draft_only_synthetic, eligibility DENIED, package INELIGIBLE"
+  },
+  "commands_executed": [
+    {
+      "command": "python3 generator (temp) reading books.ts + assets/scripture/bsb/*.json",
+      "exit_code": 0,
+      "output": "66 books, 1189 chapters, 31086 verses; register written"
+    },
+    {
+      "command": "python structural verification",
+      "exit_code": 0,
+      "output": "66 books; 39 OT / 27 NT; no missing verse counts; only Neh non-not_started; summary totals consistent"
+    },
+    {
+      "command": "prettier --check content/curation/whole-bible-status.json",
+      "exit_code": 0,
+      "output": "clean"
+    }
+  ],
+  "status_meaning": "not_started = no curation attempted. blocked (Neh) = synthetic pilot drafts exist but cannot advance (gates void, no human approval). Every count is zero because no reviewed content exists.",
+  "needs_from_owner": [
+    "Confirm the register schema is the tracking format you want, or extend it (e.g., add per-chapter or per-passage rows, assignees, batch IDs, reviewer requirements from WHOLE_BIBLE_CURATION_SPEC.md's coverage section).",
+    "To actually begin curation: pass the required gates (C1/C2/D/D2/E1/E2), acquire licensed sources, finish the mention/span schema (G3), and let the Nehemiah 2 pilot pass steps 5-9 before expanding book-by-book."
+  ],
+  "scope_guard": "Tracking scaffold only. No content generated, approved, or published; no excluded feature implemented.",
+  "no_content_approved_or_published_by_ai": true,
+  "task_attempt": "task:whole-bible-status-register:attempt-1",
+  "data_kind": "derived tracking metadata from committed structural data; zero production content"
+}

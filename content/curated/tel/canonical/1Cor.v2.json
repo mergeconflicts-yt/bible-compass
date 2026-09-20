@@ -1,0 +1,2578 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-tel-irv-1cor-canonical",
+  "package_revision": 1,
+  "submission_id": "submission:wb-tel-irv-1cor-canonical:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-tel-irv-1cor-canonical",
+  "package_layer": "canonical",
+  "package_family": "canonical-context-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:tel-v1",
+    "scope_keys": [
+      "scope:wb-1cor:refsys:tel-v1:1cor.1.1-1cor.16.24",
+      "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+      "scope:wb-1cor-2:refsys:tel-v1:1cor.2.1-1cor.2.16",
+      "scope:wb-1cor-3:refsys:tel-v1:1cor.3.1-1cor.3.23",
+      "scope:wb-1cor-4:refsys:tel-v1:1cor.4.1-1cor.4.21",
+      "scope:wb-1cor-5:refsys:tel-v1:1cor.5.1-1cor.5.13",
+      "scope:wb-1cor-6:refsys:tel-v1:1cor.6.1-1cor.6.20",
+      "scope:wb-1cor-7:refsys:tel-v1:1cor.7.1-1cor.7.40",
+      "scope:wb-1cor-8:refsys:tel-v1:1cor.8.1-1cor.8.13",
+      "scope:wb-1cor-9:refsys:tel-v1:1cor.9.1-1cor.9.27",
+      "scope:wb-1cor-10:refsys:tel-v1:1cor.10.1-1cor.10.33",
+      "scope:wb-1cor-11:refsys:tel-v1:1cor.11.1-1cor.11.34",
+      "scope:wb-1cor-12:refsys:tel-v1:1cor.12.1-1cor.12.31",
+      "scope:wb-1cor-13:refsys:tel-v1:1cor.13.1-1cor.13.13",
+      "scope:wb-1cor-14:refsys:tel-v1:1cor.14.1-1cor.14.40",
+      "scope:wb-1cor-15:refsys:tel-v1:1cor.15.1-1cor.15.58",
+      "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+      "scope:wb-1cor-1-p1:refsys:tel-v1:1cor.1.1-1cor.1.9",
+      "scope:wb-1cor-1-p2:refsys:tel-v1:1cor.1.10-1cor.1.10",
+      "scope:wb-1cor-1-p3:refsys:tel-v1:1cor.1.11-1cor.1.17",
+      "scope:wb-1cor-1-p4:refsys:tel-v1:1cor.1.18-1cor.1.25",
+      "scope:wb-1cor-1-p5:refsys:tel-v1:1cor.1.26-1cor.1.31",
+      "scope:wb-1cor-2-p1:refsys:tel-v1:1cor.2.1-1cor.2.13",
+      "scope:wb-1cor-2-p2:refsys:tel-v1:1cor.2.14-1cor.2.16",
+      "scope:wb-1cor-3-p1:refsys:tel-v1:1cor.3.1-1cor.3.9",
+      "scope:wb-1cor-3-p2:refsys:tel-v1:1cor.3.10-1cor.3.10",
+      "scope:wb-1cor-3-p3:refsys:tel-v1:1cor.3.11-1cor.3.11",
+      "scope:wb-1cor-3-p4:refsys:tel-v1:1cor.3.12-1cor.3.23",
+      "scope:wb-1cor-4-p1:refsys:tel-v1:1cor.4.1-1cor.4.8",
+      "scope:wb-1cor-4-p2:refsys:tel-v1:1cor.4.9-1cor.4.17",
+      "scope:wb-1cor-4-p3:refsys:tel-v1:1cor.4.18-1cor.4.21",
+      "scope:wb-1cor-5-p1:refsys:tel-v1:1cor.5.1-1cor.5.1",
+      "scope:wb-1cor-5-p2:refsys:tel-v1:1cor.5.2-1cor.5.13",
+      "scope:wb-1cor-6-p1:refsys:tel-v1:1cor.6.1-1cor.6.8",
+      "scope:wb-1cor-6-p2:refsys:tel-v1:1cor.6.9-1cor.6.12",
+      "scope:wb-1cor-6-p3:refsys:tel-v1:1cor.6.13-1cor.6.18",
+      "scope:wb-1cor-6-p4:refsys:tel-v1:1cor.6.19-1cor.6.20",
+      "scope:wb-1cor-7-p1:refsys:tel-v1:1cor.7.1-1cor.7.9",
+      "scope:wb-1cor-7-p2:refsys:tel-v1:1cor.7.10-1cor.7.40",
+      "scope:wb-1cor-8-p1:refsys:tel-v1:1cor.8.1-1cor.8.13",
+      "scope:wb-1cor-9-p1:refsys:tel-v1:1cor.9.1-1cor.9.6",
+      "scope:wb-1cor-9-p2:refsys:tel-v1:1cor.9.7-1cor.9.18",
+      "scope:wb-1cor-9-p3:refsys:tel-v1:1cor.9.19-1cor.9.27",
+      "scope:wb-1cor-10-p1:refsys:tel-v1:1cor.10.1-1cor.10.15",
+      "scope:wb-1cor-10-p2:refsys:tel-v1:1cor.10.16-1cor.10.22",
+      "scope:wb-1cor-10-p3:refsys:tel-v1:1cor.10.23-1cor.10.33",
+      "scope:wb-1cor-11-p1:refsys:tel-v1:1cor.11.1-1cor.11.16",
+      "scope:wb-1cor-11-p2:refsys:tel-v1:1cor.11.17-1cor.11.22",
+      "scope:wb-1cor-11-p3:refsys:tel-v1:1cor.11.23-1cor.11.34",
+      "scope:wb-1cor-12-p1:refsys:tel-v1:1cor.12.1-1cor.12.3",
+      "scope:wb-1cor-12-p2:refsys:tel-v1:1cor.12.4-1cor.12.11",
+      "scope:wb-1cor-12-p3:refsys:tel-v1:1cor.12.12-1cor.12.31",
+      "scope:wb-1cor-13-p1:refsys:tel-v1:1cor.13.1-1cor.13.13",
+      "scope:wb-1cor-14-p1:refsys:tel-v1:1cor.14.1-1cor.14.22",
+      "scope:wb-1cor-14-p2:refsys:tel-v1:1cor.14.23-1cor.14.40",
+      "scope:wb-1cor-15-p1:refsys:tel-v1:1cor.15.1-1cor.15.11",
+      "scope:wb-1cor-15-p2:refsys:tel-v1:1cor.15.12-1cor.15.19",
+      "scope:wb-1cor-15-p3:refsys:tel-v1:1cor.15.20-1cor.15.34",
+      "scope:wb-1cor-15-p4:refsys:tel-v1:1cor.15.35-1cor.15.50",
+      "scope:wb-1cor-15-p5:refsys:tel-v1:1cor.15.51-1cor.15.58",
+      "scope:wb-1cor-16-p1:refsys:tel-v1:1cor.16.1-1cor.16.24"
+    ],
+    "reference_keys": [
+      "verse:1Cor.1.1",
+      "verse:1Cor.1.2",
+      "verse:1Cor.1.3",
+      "verse:1Cor.1.4",
+      "verse:1Cor.1.5",
+      "verse:1Cor.1.6",
+      "verse:1Cor.1.7",
+      "verse:1Cor.1.8",
+      "verse:1Cor.1.9",
+      "verse:1Cor.1.10",
+      "verse:1Cor.1.11",
+      "verse:1Cor.1.12",
+      "verse:1Cor.1.13",
+      "verse:1Cor.1.14",
+      "verse:1Cor.1.15",
+      "verse:1Cor.1.16",
+      "verse:1Cor.1.17",
+      "verse:1Cor.1.18",
+      "verse:1Cor.1.19",
+      "verse:1Cor.1.20",
+      "verse:1Cor.1.21",
+      "verse:1Cor.1.22",
+      "verse:1Cor.1.23",
+      "verse:1Cor.1.24",
+      "verse:1Cor.1.25",
+      "verse:1Cor.1.26",
+      "verse:1Cor.1.27",
+      "verse:1Cor.1.28",
+      "verse:1Cor.1.29",
+      "verse:1Cor.1.30",
+      "verse:1Cor.1.31",
+      "verse:1Cor.2.1",
+      "verse:1Cor.2.2",
+      "verse:1Cor.2.3",
+      "verse:1Cor.2.4",
+      "verse:1Cor.2.5",
+      "verse:1Cor.2.6",
+      "verse:1Cor.2.7",
+      "verse:1Cor.2.8",
+      "verse:1Cor.2.9",
+      "verse:1Cor.2.10",
+      "verse:1Cor.2.11",
+      "verse:1Cor.2.12",
+      "verse:1Cor.2.13",
+      "verse:1Cor.2.14",
+      "verse:1Cor.2.15",
+      "verse:1Cor.2.16",
+      "verse:1Cor.3.1",
+      "verse:1Cor.3.2",
+      "verse:1Cor.3.3",
+      "verse:1Cor.3.4",
+      "verse:1Cor.3.5",
+      "verse:1Cor.3.6",
+      "verse:1Cor.3.7",
+      "verse:1Cor.3.8",
+      "verse:1Cor.3.9",
+      "verse:1Cor.3.10",
+      "verse:1Cor.3.11",
+      "verse:1Cor.3.12",
+      "verse:1Cor.3.13",
+      "verse:1Cor.3.14",
+      "verse:1Cor.3.15",
+      "verse:1Cor.3.16",
+      "verse:1Cor.3.17",
+      "verse:1Cor.3.18",
+      "verse:1Cor.3.19",
+      "verse:1Cor.3.20",
+      "verse:1Cor.3.21",
+      "verse:1Cor.3.22",
+      "verse:1Cor.3.23",
+      "verse:1Cor.4.1",
+      "verse:1Cor.4.2",
+      "verse:1Cor.4.3",
+      "verse:1Cor.4.4",
+      "verse:1Cor.4.5",
+      "verse:1Cor.4.6",
+      "verse:1Cor.4.7",
+      "verse:1Cor.4.8",
+      "verse:1Cor.4.9",
+      "verse:1Cor.4.10",
+      "verse:1Cor.4.11",
+      "verse:1Cor.4.12",
+      "verse:1Cor.4.13",
+      "verse:1Cor.4.14",
+      "verse:1Cor.4.15",
+      "verse:1Cor.4.17",
+      "verse:1Cor.4.18",
+      "verse:1Cor.4.19",
+      "verse:1Cor.4.20",
+      "verse:1Cor.4.21",
+      "verse:1Cor.5.1",
+      "verse:1Cor.5.2",
+      "verse:1Cor.5.3",
+      "verse:1Cor.5.4",
+      "verse:1Cor.5.5",
+      "verse:1Cor.5.6",
+      "verse:1Cor.5.7",
+      "verse:1Cor.5.8",
+      "verse:1Cor.5.9",
+      "verse:1Cor.5.10",
+      "verse:1Cor.5.11",
+      "verse:1Cor.5.12",
+      "verse:1Cor.5.13",
+      "verse:1Cor.6.1",
+      "verse:1Cor.6.2",
+      "verse:1Cor.6.3",
+      "verse:1Cor.6.4",
+      "verse:1Cor.6.5",
+      "verse:1Cor.6.6",
+      "verse:1Cor.6.7",
+      "verse:1Cor.6.8",
+      "verse:1Cor.6.9",
+      "verse:1Cor.6.10",
+      "verse:1Cor.6.11",
+      "verse:1Cor.6.12",
+      "verse:1Cor.6.13",
+      "verse:1Cor.6.14",
+      "verse:1Cor.6.15",
+      "verse:1Cor.6.16",
+      "verse:1Cor.6.17",
+      "verse:1Cor.6.18",
+      "verse:1Cor.6.19",
+      "verse:1Cor.6.20",
+      "verse:1Cor.7.1",
+      "verse:1Cor.7.2",
+      "verse:1Cor.7.3",
+      "verse:1Cor.7.4",
+      "verse:1Cor.7.5",
+      "verse:1Cor.7.6",
+      "verse:1Cor.7.7",
+      "verse:1Cor.7.8",
+      "verse:1Cor.7.9",
+      "verse:1Cor.7.10",
+      "verse:1Cor.7.11",
+      "verse:1Cor.7.12",
+      "verse:1Cor.7.13",
+      "verse:1Cor.7.14",
+      "verse:1Cor.7.15",
+      "verse:1Cor.7.16",
+      "verse:1Cor.7.17",
+      "verse:1Cor.7.18",
+      "verse:1Cor.7.19",
+      "verse:1Cor.7.20",
+      "verse:1Cor.7.21",
+      "verse:1Cor.7.22",
+      "verse:1Cor.7.23",
+      "verse:1Cor.7.24",
+      "verse:1Cor.7.25",
+      "verse:1Cor.7.26",
+      "verse:1Cor.7.27",
+      "verse:1Cor.7.28",
+      "verse:1Cor.7.29",
+      "verse:1Cor.7.30",
+      "verse:1Cor.7.31",
+      "verse:1Cor.7.32",
+      "verse:1Cor.7.33",
+      "verse:1Cor.7.34",
+      "verse:1Cor.7.35",
+      "verse:1Cor.7.36",
+      "verse:1Cor.7.37",
+      "verse:1Cor.7.38",
+      "verse:1Cor.7.39",
+      "verse:1Cor.7.40",
+      "verse:1Cor.8.1",
+      "verse:1Cor.8.2",
+      "verse:1Cor.8.3",
+      "verse:1Cor.8.4",
+      "verse:1Cor.8.5",
+      "verse:1Cor.8.6",
+      "verse:1Cor.8.7",
+      "verse:1Cor.8.8",
+      "verse:1Cor.8.9",
+      "verse:1Cor.8.10",
+      "verse:1Cor.8.11",
+      "verse:1Cor.8.12",
+      "verse:1Cor.8.13",
+      "verse:1Cor.9.1",
+      "verse:1Cor.9.2",
+      "verse:1Cor.9.3",
+      "verse:1Cor.9.4",
+      "verse:1Cor.9.5",
+      "verse:1Cor.9.6",
+      "verse:1Cor.9.7",
+      "verse:1Cor.9.8",
+      "verse:1Cor.9.9",
+      "verse:1Cor.9.10",
+      "verse:1Cor.9.11",
+      "verse:1Cor.9.12",
+      "verse:1Cor.9.13",
+      "verse:1Cor.9.14",
+      "verse:1Cor.9.15",
+      "verse:1Cor.9.16",
+      "verse:1Cor.9.17",
+      "verse:1Cor.9.18",
+      "verse:1Cor.9.19",
+      "verse:1Cor.9.20",
+      "verse:1Cor.9.21",
+      "verse:1Cor.9.22",
+      "verse:1Cor.9.23",
+      "verse:1Cor.9.24",
+      "verse:1Cor.9.25",
+      "verse:1Cor.9.26",
+      "verse:1Cor.9.27",
+      "verse:1Cor.10.1",
+      "verse:1Cor.10.2",
+      "verse:1Cor.10.3",
+      "verse:1Cor.10.4",
+      "verse:1Cor.10.5",
+      "verse:1Cor.10.6",
+      "verse:1Cor.10.7",
+      "verse:1Cor.10.8",
+      "verse:1Cor.10.9",
+      "verse:1Cor.10.10",
+      "verse:1Cor.10.11",
+      "verse:1Cor.10.12",
+      "verse:1Cor.10.13",
+      "verse:1Cor.10.14",
+      "verse:1Cor.10.15",
+      "verse:1Cor.10.16",
+      "verse:1Cor.10.17",
+      "verse:1Cor.10.18",
+      "verse:1Cor.10.19",
+      "verse:1Cor.10.20",
+      "verse:1Cor.10.21",
+      "verse:1Cor.10.22",
+      "verse:1Cor.10.23",
+      "verse:1Cor.10.24",
+      "verse:1Cor.10.25",
+      "verse:1Cor.10.26",
+      "verse:1Cor.10.27",
+      "verse:1Cor.10.28",
+      "verse:1Cor.10.29",
+      "verse:1Cor.10.30",
+      "verse:1Cor.10.31",
+      "verse:1Cor.10.32",
+      "verse:1Cor.10.33",
+      "verse:1Cor.11.1",
+      "verse:1Cor.11.2",
+      "verse:1Cor.11.3",
+      "verse:1Cor.11.4",
+      "verse:1Cor.11.5",
+      "verse:1Cor.11.6",
+      "verse:1Cor.11.7",
+      "verse:1Cor.11.8",
+      "verse:1Cor.11.9",
+      "verse:1Cor.11.10",
+      "verse:1Cor.11.11",
+      "verse:1Cor.11.12",
+      "verse:1Cor.11.13",
+      "verse:1Cor.11.14",
+      "verse:1Cor.11.15",
+      "verse:1Cor.11.16",
+      "verse:1Cor.11.17",
+      "verse:1Cor.11.18",
+      "verse:1Cor.11.19",
+      "verse:1Cor.11.20",
+      "verse:1Cor.11.21",
+      "verse:1Cor.11.22",
+      "verse:1Cor.11.23",
+      "verse:1Cor.11.24",
+      "verse:1Cor.11.25",
+      "verse:1Cor.11.26",
+      "verse:1Cor.11.27",
+      "verse:1Cor.11.28",
+      "verse:1Cor.11.29",
+      "verse:1Cor.11.30",
+      "verse:1Cor.11.31",
+      "verse:1Cor.11.32",
+      "verse:1Cor.11.33",
+      "verse:1Cor.11.34",
+      "verse:1Cor.12.1",
+      "verse:1Cor.12.2",
+      "verse:1Cor.12.3",
+      "verse:1Cor.12.4",
+      "verse:1Cor.12.5",
+      "verse:1Cor.12.6",
+      "verse:1Cor.12.7",
+      "verse:1Cor.12.8",
+      "verse:1Cor.12.9",
+      "verse:1Cor.12.10",
+      "verse:1Cor.12.11",
+      "verse:1Cor.12.12",
+      "verse:1Cor.12.13",
+      "verse:1Cor.12.14",
+      "verse:1Cor.12.15",
+      "verse:1Cor.12.16",
+      "verse:1Cor.12.17",
+      "verse:1Cor.12.18",
+      "verse:1Cor.12.19",
+      "verse:1Cor.12.20",
+      "verse:1Cor.12.21",
+      "verse:1Cor.12.22",
+      "verse:1Cor.12.23",
+      "verse:1Cor.12.24",
+      "verse:1Cor.12.26",
+      "verse:1Cor.12.27",
+      "verse:1Cor.12.28",
+      "verse:1Cor.12.29",
+      "verse:1Cor.12.30",
+      "verse:1Cor.12.31",
+      "verse:1Cor.13.1",
+      "verse:1Cor.13.2",
+      "verse:1Cor.13.3",
+      "verse:1Cor.13.4",
+      "verse:1Cor.13.5",
+      "verse:1Cor.13.6",
+      "verse:1Cor.13.7",
+      "verse:1Cor.13.8",
+      "verse:1Cor.13.9",
+      "verse:1Cor.13.10",
+      "verse:1Cor.13.11",
+      "verse:1Cor.13.12",
+      "verse:1Cor.13.13",
+      "verse:1Cor.14.1",
+      "verse:1Cor.14.2",
+      "verse:1Cor.14.3",
+      "verse:1Cor.14.4",
+      "verse:1Cor.14.5",
+      "verse:1Cor.14.6",
+      "verse:1Cor.14.7",
+      "verse:1Cor.14.8",
+      "verse:1Cor.14.9",
+      "verse:1Cor.14.10",
+      "verse:1Cor.14.11",
+      "verse:1Cor.14.12",
+      "verse:1Cor.14.13",
+      "verse:1Cor.14.14",
+      "verse:1Cor.14.15",
+      "verse:1Cor.14.16",
+      "verse:1Cor.14.17",
+      "verse:1Cor.14.18",
+      "verse:1Cor.14.19",
+      "verse:1Cor.14.20",
+      "verse:1Cor.14.21",
+      "verse:1Cor.14.22",
+      "verse:1Cor.14.23",
+      "verse:1Cor.14.24",
+      "verse:1Cor.14.25",
+      "verse:1Cor.14.26",
+      "verse:1Cor.14.27",
+      "verse:1Cor.14.28",
+      "verse:1Cor.14.29",
+      "verse:1Cor.14.30",
+      "verse:1Cor.14.31",
+      "verse:1Cor.14.32",
+      "verse:1Cor.14.33",
+      "verse:1Cor.14.34",
+      "verse:1Cor.14.35",
+      "verse:1Cor.14.36",
+      "verse:1Cor.14.37",
+      "verse:1Cor.14.38",
+      "verse:1Cor.14.39",
+      "verse:1Cor.14.40",
+      "verse:1Cor.15.1",
+      "verse:1Cor.15.2",
+      "verse:1Cor.15.3",
+      "verse:1Cor.15.4",
+      "verse:1Cor.15.5",
+      "verse:1Cor.15.6",
+      "verse:1Cor.15.7",
+      "verse:1Cor.15.8",
+      "verse:1Cor.15.9",
+      "verse:1Cor.15.10",
+      "verse:1Cor.15.11",
+      "verse:1Cor.15.12",
+      "verse:1Cor.15.13",
+      "verse:1Cor.15.14",
+      "verse:1Cor.15.15",
+      "verse:1Cor.15.16",
+      "verse:1Cor.15.17",
+      "verse:1Cor.15.18",
+      "verse:1Cor.15.19",
+      "verse:1Cor.15.20",
+      "verse:1Cor.15.21",
+      "verse:1Cor.15.22",
+      "verse:1Cor.15.23",
+      "verse:1Cor.15.24",
+      "verse:1Cor.15.25",
+      "verse:1Cor.15.26",
+      "verse:1Cor.15.27",
+      "verse:1Cor.15.28",
+      "verse:1Cor.15.29",
+      "verse:1Cor.15.30",
+      "verse:1Cor.15.31",
+      "verse:1Cor.15.32",
+      "verse:1Cor.15.33",
+      "verse:1Cor.15.34",
+      "verse:1Cor.15.35",
+      "verse:1Cor.15.36",
+      "verse:1Cor.15.37",
+      "verse:1Cor.15.38",
+      "verse:1Cor.15.39",
+      "verse:1Cor.15.40",
+      "verse:1Cor.15.41",
+      "verse:1Cor.15.42",
+      "verse:1Cor.15.43",
+      "verse:1Cor.15.44",
+      "verse:1Cor.15.45",
+      "verse:1Cor.15.46",
+      "verse:1Cor.15.47",
+      "verse:1Cor.15.48",
+      "verse:1Cor.15.49",
+      "verse:1Cor.15.50",
+      "verse:1Cor.15.51",
+      "verse:1Cor.15.52",
+      "verse:1Cor.15.53",
+      "verse:1Cor.15.54",
+      "verse:1Cor.15.55",
+      "verse:1Cor.15.56",
+      "verse:1Cor.15.57",
+      "verse:1Cor.15.58",
+      "verse:1Cor.16.1",
+      "verse:1Cor.16.2",
+      "verse:1Cor.16.3",
+      "verse:1Cor.16.4",
+      "verse:1Cor.16.5",
+      "verse:1Cor.16.6",
+      "verse:1Cor.16.7",
+      "verse:1Cor.16.8",
+      "verse:1Cor.16.9",
+      "verse:1Cor.16.10",
+      "verse:1Cor.16.11",
+      "verse:1Cor.16.12",
+      "verse:1Cor.16.13",
+      "verse:1Cor.16.14",
+      "verse:1Cor.16.15",
+      "verse:1Cor.16.16",
+      "verse:1Cor.16.17",
+      "verse:1Cor.16.18",
+      "verse:1Cor.16.19",
+      "verse:1Cor.16.20",
+      "verse:1Cor.16.21",
+      "verse:1Cor.16.22",
+      "verse:1Cor.16.23",
+      "verse:1Cor.16.24"
+    ],
+    "language_tag": null,
+    "translation_edition_key": null
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-adam-1",
+        "entity_type": "person",
+        "proposed_label": "Adam",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-moses-1",
+        "entity_type": "person",
+        "proposed_label": "Moses",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-satan-1",
+        "entity_type": "person",
+        "proposed_label": "Satan",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-simon-1",
+        "entity_type": "person",
+        "proposed_label": "Simon",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-james-1",
+        "entity_type": "person",
+        "proposed_label": "James",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-joseph-12",
+        "entity_type": "person",
+        "proposed_label": "Joseph",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-saul-2",
+        "entity_type": "person",
+        "proposed_label": "Saul",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-timothy-1",
+        "entity_type": "person",
+        "proposed_label": "Timothy",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-aquila-1",
+        "entity_type": "person",
+        "proposed_label": "Aquila",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-priscilla-1",
+        "entity_type": "person",
+        "proposed_label": "Priscilla",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-crispus-1",
+        "entity_type": "person",
+        "proposed_label": "Crispus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-apollos-1",
+        "entity_type": "person",
+        "proposed_label": "Apollos",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-gaius-1",
+        "entity_type": "person",
+        "proposed_label": "Gaius",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-chloe-1",
+        "entity_type": "person",
+        "proposed_label": "Chloe",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-stephanas-1",
+        "entity_type": "person",
+        "proposed_label": "Stephanas",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-forunatus-1",
+        "entity_type": "person",
+        "proposed_label": "Forunatus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-achaicus-1",
+        "entity_type": "person",
+        "proposed_label": "Achaicus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-achaia-aef4242",
+        "entity_type": "place",
+        "proposed_label": "Achaia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "entity_type": "place",
+        "proposed_label": "Asia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-corinth-a6f437a",
+        "entity_type": "place",
+        "proposed_label": "Corinth",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
+        "entity_type": "place",
+        "proposed_label": "Ephesus",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
+        "entity_type": "place",
+        "proposed_label": "Galatia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
+        "entity_type": "place",
+        "proposed_label": "Macedonia",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      }
+    ],
+    "claims": [],
+    "citations": [],
+    "attestations": [
+      {
+        "attestation_key": "attestation:wb-p-adam-1-15-22",
+        "reference_key": "verse:1Cor.15.22",
+        "entity_key": "entity:p-adam-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-adam-1-15-45",
+        "reference_key": "verse:1Cor.15.45",
+        "entity_key": "entity:p-adam-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-moses-1-9-9",
+        "reference_key": "verse:1Cor.9.9",
+        "entity_key": "entity:p-moses-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-moses-1-10-2",
+        "reference_key": "verse:1Cor.10.2",
+        "entity_key": "entity:p-moses-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-satan-1-5-5",
+        "reference_key": "verse:1Cor.5.5",
+        "entity_key": "entity:p-satan-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-satan-1-7-5",
+        "reference_key": "verse:1Cor.7.5",
+        "entity_key": "entity:p-satan-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-simon-1-1-12",
+        "reference_key": "verse:1Cor.1.12",
+        "entity_key": "entity:p-simon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-simon-1-3-22",
+        "reference_key": "verse:1Cor.3.22",
+        "entity_key": "entity:p-simon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-simon-1-9-5",
+        "reference_key": "verse:1Cor.9.5",
+        "entity_key": "entity:p-simon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-simon-1-15-5",
+        "reference_key": "verse:1Cor.15.5",
+        "entity_key": "entity:p-simon-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-james-1-15-7",
+        "reference_key": "verse:1Cor.15.7",
+        "entity_key": "entity:p-james-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-joseph-12-9-6",
+        "reference_key": "verse:1Cor.9.6",
+        "entity_key": "entity:p-joseph-12",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-1-1",
+        "reference_key": "verse:1Cor.1.1",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-1-12",
+        "reference_key": "verse:1Cor.1.12",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-1-13",
+        "reference_key": "verse:1Cor.1.13",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-3-4",
+        "reference_key": "verse:1Cor.3.4",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-3-5",
+        "reference_key": "verse:1Cor.3.5",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-3-22",
+        "reference_key": "verse:1Cor.3.22",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-saul-2-16-21",
+        "reference_key": "verse:1Cor.16.21",
+        "entity_key": "entity:p-saul-2",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-timothy-1-4-17",
+        "reference_key": "verse:1Cor.4.17",
+        "entity_key": "entity:p-timothy-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-timothy-1-16-10",
+        "reference_key": "verse:1Cor.16.10",
+        "entity_key": "entity:p-timothy-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-aquila-1-16-19",
+        "reference_key": "verse:1Cor.16.19",
+        "entity_key": "entity:p-aquila-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-priscilla-1-16-19",
+        "reference_key": "verse:1Cor.16.19",
+        "entity_key": "entity:p-priscilla-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-crispus-1-1-1",
+        "reference_key": "verse:1Cor.1.1",
+        "entity_key": "entity:p-crispus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-crispus-1-1-14",
+        "reference_key": "verse:1Cor.1.14",
+        "entity_key": "entity:p-crispus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-1-12",
+        "reference_key": "verse:1Cor.1.12",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-3-4",
+        "reference_key": "verse:1Cor.3.4",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-3-5",
+        "reference_key": "verse:1Cor.3.5",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-3-6",
+        "reference_key": "verse:1Cor.3.6",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-3-22",
+        "reference_key": "verse:1Cor.3.22",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-4-6",
+        "reference_key": "verse:1Cor.4.6",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-apollos-1-16-12",
+        "reference_key": "verse:1Cor.16.12",
+        "entity_key": "entity:p-apollos-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-gaius-1-1-14",
+        "reference_key": "verse:1Cor.1.14",
+        "entity_key": "entity:p-gaius-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-chloe-1-1-11",
+        "reference_key": "verse:1Cor.1.11",
+        "entity_key": "entity:p-chloe-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-stephanas-1-1-16",
+        "reference_key": "verse:1Cor.1.16",
+        "entity_key": "entity:p-stephanas-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-stephanas-1-16-15",
+        "reference_key": "verse:1Cor.16.15",
+        "entity_key": "entity:p-stephanas-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-stephanas-1-16-17",
+        "reference_key": "verse:1Cor.16.17",
+        "entity_key": "entity:p-stephanas-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-forunatus-1-16-17",
+        "reference_key": "verse:1Cor.16.17",
+        "entity_key": "entity:p-forunatus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-p-achaicus-1-16-17",
+        "reference_key": "verse:1Cor.16.17",
+        "entity_key": "entity:p-achaicus-1",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-achaia-aef4242-16-15",
+        "reference_key": "verse:1Cor.16.15",
+        "entity_key": "entity:pl-achaia-aef4242",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-asia-a197f19-16-19",
+        "reference_key": "verse:1Cor.16.19",
+        "entity_key": "entity:pl-asia-a197f19",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-corinth-a6f437a-1-2",
+        "reference_key": "verse:1Cor.1.2",
+        "entity_key": "entity:pl-corinth-a6f437a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-15-32",
+        "reference_key": "verse:1Cor.15.32",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-16-8",
+        "reference_key": "verse:1Cor.16.8",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-galatia-a0f440a-16-1",
+        "reference_key": "verse:1Cor.16.1",
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-16-1",
+        "reference_key": "verse:1Cor.16.1",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-16-3",
+        "reference_key": "verse:1Cor.16.3",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-pl-macedonia-a69e1b8-16-5",
+        "reference_key": "verse:1Cor.16.5",
+        "entity_key": "entity:pl-macedonia-a69e1b8",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "relationships": [],
+    "events": [],
+    "places": [
+      {
+        "entity_key": "entity:pl-achaia-aef4242",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-achaia-aef4242",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-asia-a197f19",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-asia-a197f19",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-corinth-a6f437a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-corinth-a6f437a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-ephesus-a5feb15",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-galatia-a0f440a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-macedonia-a69e1b8",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-macedonia-a69e1b8",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      }
+    ],
+    "relevance": [
+      {
+        "relevance_key": "relevance:wb-1cor-15-p-adam-1",
+        "scope_key": "scope:wb-1cor-15:refsys:tel-v1:1cor.15.1-1cor.15.58",
+        "entity_key": "entity:p-adam-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-9-p-moses-1",
+        "scope_key": "scope:wb-1cor-9:refsys:tel-v1:1cor.9.1-1cor.9.27",
+        "entity_key": "entity:p-moses-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-10-p-moses-1",
+        "scope_key": "scope:wb-1cor-10:refsys:tel-v1:1cor.10.1-1cor.10.33",
+        "entity_key": "entity:p-moses-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-5-p-satan-1",
+        "scope_key": "scope:wb-1cor-5:refsys:tel-v1:1cor.5.1-1cor.5.13",
+        "entity_key": "entity:p-satan-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-7-p-satan-1",
+        "scope_key": "scope:wb-1cor-7:refsys:tel-v1:1cor.7.1-1cor.7.40",
+        "entity_key": "entity:p-satan-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-simon-1",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-simon-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-3-p-simon-1",
+        "scope_key": "scope:wb-1cor-3:refsys:tel-v1:1cor.3.1-1cor.3.23",
+        "entity_key": "entity:p-simon-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-9-p-simon-1",
+        "scope_key": "scope:wb-1cor-9:refsys:tel-v1:1cor.9.1-1cor.9.27",
+        "entity_key": "entity:p-simon-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-15-p-simon-1",
+        "scope_key": "scope:wb-1cor-15:refsys:tel-v1:1cor.15.1-1cor.15.58",
+        "entity_key": "entity:p-simon-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-15-p-james-1",
+        "scope_key": "scope:wb-1cor-15:refsys:tel-v1:1cor.15.1-1cor.15.58",
+        "entity_key": "entity:p-james-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-9-p-joseph-12",
+        "scope_key": "scope:wb-1cor-9:refsys:tel-v1:1cor.9.1-1cor.9.27",
+        "entity_key": "entity:p-joseph-12",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-saul-2",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-saul-2",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-3-p-saul-2",
+        "scope_key": "scope:wb-1cor-3:refsys:tel-v1:1cor.3.1-1cor.3.23",
+        "entity_key": "entity:p-saul-2",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-saul-2",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-saul-2",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-4-p-timothy-1",
+        "scope_key": "scope:wb-1cor-4:refsys:tel-v1:1cor.4.1-1cor.4.21",
+        "entity_key": "entity:p-timothy-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-timothy-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-timothy-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-aquila-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-aquila-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-priscilla-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-priscilla-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-crispus-1",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-crispus-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-apollos-1",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-apollos-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-3-p-apollos-1",
+        "scope_key": "scope:wb-1cor-3:refsys:tel-v1:1cor.3.1-1cor.3.23",
+        "entity_key": "entity:p-apollos-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-4-p-apollos-1",
+        "scope_key": "scope:wb-1cor-4:refsys:tel-v1:1cor.4.1-1cor.4.21",
+        "entity_key": "entity:p-apollos-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-apollos-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-apollos-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-gaius-1",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-gaius-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-chloe-1",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-chloe-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-p-stephanas-1",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:p-stephanas-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-stephanas-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-stephanas-1",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-forunatus-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-forunatus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-p-achaicus-1",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:p-achaicus-1",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-pl-achaia-aef4242",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:pl-achaia-aef4242",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-pl-asia-a197f19",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:pl-asia-a197f19",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-1-pl-corinth-a6f437a",
+        "scope_key": "scope:wb-1cor-1:refsys:tel-v1:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:pl-corinth-a6f437a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-15-pl-ephesus-a5feb15",
+        "scope_key": "scope:wb-1cor-15:refsys:tel-v1:1cor.15.1-1cor.15.58",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-pl-ephesus-a5feb15",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:pl-ephesus-a5feb15",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-pl-galatia-a0f440a",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:pl-galatia-a0f440a",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-pl-jerusalem-a15257a",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:pl-jerusalem-a15257a",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1cor-16-pl-macedonia-a69e1b8",
+        "scope_key": "scope:wb-1cor-16:refsys:tel-v1:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:pl-macedonia-a69e1b8",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "reconciliation_records": [
+      {
+        "candidate_key": "candidate:wb:p-adam-1",
+        "canonical_entity_key": "entity:p-adam-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-moses-1",
+        "canonical_entity_key": "entity:p-moses-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-satan-1",
+        "canonical_entity_key": "entity:p-satan-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-simon-1",
+        "canonical_entity_key": "entity:p-simon-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-james-1",
+        "canonical_entity_key": "entity:p-james-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-joseph-12",
+        "canonical_entity_key": "entity:p-joseph-12",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-saul-2",
+        "canonical_entity_key": "entity:p-saul-2",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-timothy-1",
+        "canonical_entity_key": "entity:p-timothy-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-aquila-1",
+        "canonical_entity_key": "entity:p-aquila-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-priscilla-1",
+        "canonical_entity_key": "entity:p-priscilla-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-crispus-1",
+        "canonical_entity_key": "entity:p-crispus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-apollos-1",
+        "canonical_entity_key": "entity:p-apollos-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-gaius-1",
+        "canonical_entity_key": "entity:p-gaius-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-chloe-1",
+        "canonical_entity_key": "entity:p-chloe-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-stephanas-1",
+        "canonical_entity_key": "entity:p-stephanas-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-forunatus-1",
+        "canonical_entity_key": "entity:p-forunatus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-achaicus-1",
+        "canonical_entity_key": "entity:p-achaicus-1",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-achaia-aef4242",
+        "canonical_entity_key": "entity:pl-achaia-aef4242",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "canonical_entity_key": "entity:pl-asia-a197f19",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-corinth-a6f437a",
+        "canonical_entity_key": "entity:pl-corinth-a6f437a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
+        "canonical_entity_key": "entity:pl-ephesus-a5feb15",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
+        "canonical_entity_key": "entity:pl-galatia-a0f440a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
+        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
+        "canonical_entity_key": "entity:pl-macedonia-a69e1b8",
+        "resolution_status": "created_new_canonical",
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "canonical_entity_attestation",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:1Cor.1.10",
+            "verse:1Cor.1.15",
+            "verse:1Cor.1.17",
+            "verse:1Cor.1.18",
+            "verse:1Cor.1.19",
+            "verse:1Cor.1.20",
+            "verse:1Cor.1.21",
+            "verse:1Cor.1.22",
+            "verse:1Cor.1.23",
+            "verse:1Cor.1.24",
+            "verse:1Cor.1.25",
+            "verse:1Cor.1.26",
+            "verse:1Cor.1.27",
+            "verse:1Cor.1.28",
+            "verse:1Cor.1.29",
+            "verse:1Cor.1.3",
+            "verse:1Cor.1.30",
+            "verse:1Cor.1.31",
+            "verse:1Cor.1.4",
+            "verse:1Cor.1.5",
+            "verse:1Cor.1.6",
+            "verse:1Cor.1.7",
+            "verse:1Cor.1.8",
+            "verse:1Cor.1.9",
+            "verse:1Cor.10.1",
+            "verse:1Cor.10.10",
+            "verse:1Cor.10.11",
+            "verse:1Cor.10.12",
+            "verse:1Cor.10.13",
+            "verse:1Cor.10.14",
+            "verse:1Cor.10.15",
+            "verse:1Cor.10.16",
+            "verse:1Cor.10.17",
+            "verse:1Cor.10.18",
+            "verse:1Cor.10.19",
+            "verse:1Cor.10.20",
+            "verse:1Cor.10.21",
+            "verse:1Cor.10.22",
+            "verse:1Cor.10.23",
+            "verse:1Cor.10.24",
+            "verse:1Cor.10.25",
+            "verse:1Cor.10.26",
+            "verse:1Cor.10.27",
+            "verse:1Cor.10.28",
+            "verse:1Cor.10.29",
+            "verse:1Cor.10.3",
+            "verse:1Cor.10.30",
+            "verse:1Cor.10.31",
+            "verse:1Cor.10.32",
+            "verse:1Cor.10.33",
+            "verse:1Cor.10.4",
+            "verse:1Cor.10.5",
+            "verse:1Cor.10.6",
+            "verse:1Cor.10.7",
+            "verse:1Cor.10.8",
+            "verse:1Cor.10.9",
+            "verse:1Cor.11.1",
+            "verse:1Cor.11.10",
+            "verse:1Cor.11.11",
+            "verse:1Cor.11.12",
+            "verse:1Cor.11.13",
+            "verse:1Cor.11.14",
+            "verse:1Cor.11.15",
+            "verse:1Cor.11.16",
+            "verse:1Cor.11.17",
+            "verse:1Cor.11.18",
+            "verse:1Cor.11.19",
+            "verse:1Cor.11.2",
+            "verse:1Cor.11.20",
+            "verse:1Cor.11.21",
+            "verse:1Cor.11.22",
+            "verse:1Cor.11.23",
+            "verse:1Cor.11.24",
+            "verse:1Cor.11.25",
+            "verse:1Cor.11.26",
+            "verse:1Cor.11.27",
+            "verse:1Cor.11.28",
+            "verse:1Cor.11.29",
+            "verse:1Cor.11.3",
+            "verse:1Cor.11.30",
+            "verse:1Cor.11.31",
+            "verse:1Cor.11.32",
+            "verse:1Cor.11.33",
+            "verse:1Cor.11.34",
+            "verse:1Cor.11.4",
+            "verse:1Cor.11.5",
+            "verse:1Cor.11.6",
+            "verse:1Cor.11.7",
+            "verse:1Cor.11.8",
+            "verse:1Cor.11.9",
+            "verse:1Cor.12.1",
+            "verse:1Cor.12.10",
+            "verse:1Cor.12.11",
+            "verse:1Cor.12.12",
+            "verse:1Cor.12.13",
+            "verse:1Cor.12.14",
+            "verse:1Cor.12.15",
+            "verse:1Cor.12.16",
+            "verse:1Cor.12.17",
+            "verse:1Cor.12.18",
+            "verse:1Cor.12.19",
+            "verse:1Cor.12.2",
+            "verse:1Cor.12.20",
+            "verse:1Cor.12.21",
+            "verse:1Cor.12.22",
+            "verse:1Cor.12.23",
+            "verse:1Cor.12.24",
+            "verse:1Cor.12.26",
+            "verse:1Cor.12.27",
+            "verse:1Cor.12.28",
+            "verse:1Cor.12.29",
+            "verse:1Cor.12.3",
+            "verse:1Cor.12.30",
+            "verse:1Cor.12.31",
+            "verse:1Cor.12.4",
+            "verse:1Cor.12.5",
+            "verse:1Cor.12.6",
+            "verse:1Cor.12.7",
+            "verse:1Cor.12.8",
+            "verse:1Cor.12.9",
+            "verse:1Cor.13.1",
+            "verse:1Cor.13.10",
+            "verse:1Cor.13.11",
+            "verse:1Cor.13.12",
+            "verse:1Cor.13.13",
+            "verse:1Cor.13.2",
+            "verse:1Cor.13.3",
+            "verse:1Cor.13.4",
+            "verse:1Cor.13.5",
+            "verse:1Cor.13.6",
+            "verse:1Cor.13.7",
+            "verse:1Cor.13.8",
+            "verse:1Cor.13.9",
+            "verse:1Cor.14.1",
+            "verse:1Cor.14.10",
+            "verse:1Cor.14.11",
+            "verse:1Cor.14.12",
+            "verse:1Cor.14.13",
+            "verse:1Cor.14.14",
+            "verse:1Cor.14.15",
+            "verse:1Cor.14.16",
+            "verse:1Cor.14.17",
+            "verse:1Cor.14.18",
+            "verse:1Cor.14.19",
+            "verse:1Cor.14.2",
+            "verse:1Cor.14.20",
+            "verse:1Cor.14.21",
+            "verse:1Cor.14.22",
+            "verse:1Cor.14.23",
+            "verse:1Cor.14.24",
+            "verse:1Cor.14.25",
+            "verse:1Cor.14.26",
+            "verse:1Cor.14.27",
+            "verse:1Cor.14.28",
+            "verse:1Cor.14.29",
+            "verse:1Cor.14.3",
+            "verse:1Cor.14.30",
+            "verse:1Cor.14.31",
+            "verse:1Cor.14.32",
+            "verse:1Cor.14.33",
+            "verse:1Cor.14.34",
+            "verse:1Cor.14.35",
+            "verse:1Cor.14.36",
+            "verse:1Cor.14.37",
+            "verse:1Cor.14.38",
+            "verse:1Cor.14.39",
+            "verse:1Cor.14.4",
+            "verse:1Cor.14.40",
+            "verse:1Cor.14.5",
+            "verse:1Cor.14.6",
+            "verse:1Cor.14.7",
+            "verse:1Cor.14.8",
+            "verse:1Cor.14.9",
+            "verse:1Cor.15.1",
+            "verse:1Cor.15.10",
+            "verse:1Cor.15.11",
+            "verse:1Cor.15.12",
+            "verse:1Cor.15.13",
+            "verse:1Cor.15.14",
+            "verse:1Cor.15.15",
+            "verse:1Cor.15.16",
+            "verse:1Cor.15.17",
+            "verse:1Cor.15.18",
+            "verse:1Cor.15.19",
+            "verse:1Cor.15.2",
+            "verse:1Cor.15.20",
+            "verse:1Cor.15.21",
+            "verse:1Cor.15.23",
+            "verse:1Cor.15.24",
+            "verse:1Cor.15.25",
+            "verse:1Cor.15.26",
+            "verse:1Cor.15.27",
+            "verse:1Cor.15.28",
+            "verse:1Cor.15.29",
+            "verse:1Cor.15.3",
+            "verse:1Cor.15.30",
+            "verse:1Cor.15.31",
+            "verse:1Cor.15.33",
+            "verse:1Cor.15.34",
+            "verse:1Cor.15.35",
+            "verse:1Cor.15.36",
+            "verse:1Cor.15.37",
+            "verse:1Cor.15.38",
+            "verse:1Cor.15.39",
+            "verse:1Cor.15.4",
+            "verse:1Cor.15.40",
+            "verse:1Cor.15.41",
+            "verse:1Cor.15.42",
+            "verse:1Cor.15.43",
+            "verse:1Cor.15.44",
+            "verse:1Cor.15.46",
+            "verse:1Cor.15.47",
+            "verse:1Cor.15.48",
+            "verse:1Cor.15.49",
+            "verse:1Cor.15.50",
+            "verse:1Cor.15.51",
+            "verse:1Cor.15.52",
+            "verse:1Cor.15.53",
+            "verse:1Cor.15.54",
+            "verse:1Cor.15.55",
+            "verse:1Cor.15.56",
+            "verse:1Cor.15.57",
+            "verse:1Cor.15.58",
+            "verse:1Cor.15.6",
+            "verse:1Cor.15.8",
+            "verse:1Cor.15.9",
+            "verse:1Cor.16.11",
+            "verse:1Cor.16.13",
+            "verse:1Cor.16.14",
+            "verse:1Cor.16.16",
+            "verse:1Cor.16.18",
+            "verse:1Cor.16.2",
+            "verse:1Cor.16.20",
+            "verse:1Cor.16.22",
+            "verse:1Cor.16.23",
+            "verse:1Cor.16.24",
+            "verse:1Cor.16.4",
+            "verse:1Cor.16.6",
+            "verse:1Cor.16.7",
+            "verse:1Cor.16.9",
+            "verse:1Cor.2.1",
+            "verse:1Cor.2.10",
+            "verse:1Cor.2.11",
+            "verse:1Cor.2.12",
+            "verse:1Cor.2.13",
+            "verse:1Cor.2.14",
+            "verse:1Cor.2.15",
+            "verse:1Cor.2.16",
+            "verse:1Cor.2.2",
+            "verse:1Cor.2.3",
+            "verse:1Cor.2.4",
+            "verse:1Cor.2.5",
+            "verse:1Cor.2.6",
+            "verse:1Cor.2.7",
+            "verse:1Cor.2.8",
+            "verse:1Cor.2.9",
+            "verse:1Cor.3.1",
+            "verse:1Cor.3.10",
+            "verse:1Cor.3.11",
+            "verse:1Cor.3.12",
+            "verse:1Cor.3.13",
+            "verse:1Cor.3.14",
+            "verse:1Cor.3.15",
+            "verse:1Cor.3.16",
+            "verse:1Cor.3.17",
+            "verse:1Cor.3.18",
+            "verse:1Cor.3.19",
+            "verse:1Cor.3.2",
+            "verse:1Cor.3.20",
+            "verse:1Cor.3.21",
+            "verse:1Cor.3.23",
+            "verse:1Cor.3.3",
+            "verse:1Cor.3.7",
+            "verse:1Cor.3.8",
+            "verse:1Cor.3.9",
+            "verse:1Cor.4.1",
+            "verse:1Cor.4.10",
+            "verse:1Cor.4.11",
+            "verse:1Cor.4.12",
+            "verse:1Cor.4.13",
+            "verse:1Cor.4.14",
+            "verse:1Cor.4.15",
+            "verse:1Cor.4.18",
+            "verse:1Cor.4.19",
+            "verse:1Cor.4.2",
+            "verse:1Cor.4.20",
+            "verse:1Cor.4.21",
+            "verse:1Cor.4.3",
+            "verse:1Cor.4.4",
+            "verse:1Cor.4.5",
+            "verse:1Cor.4.7",
+            "verse:1Cor.4.8",
+            "verse:1Cor.4.9",
+            "verse:1Cor.5.1",
+            "verse:1Cor.5.10",
+            "verse:1Cor.5.11",
+            "verse:1Cor.5.12",
+            "verse:1Cor.5.13",
+            "verse:1Cor.5.2",
+            "verse:1Cor.5.3",
+            "verse:1Cor.5.4",
+            "verse:1Cor.5.6",
+            "verse:1Cor.5.7",
+            "verse:1Cor.5.8",
+            "verse:1Cor.5.9",
+            "verse:1Cor.6.1",
+            "verse:1Cor.6.10",
+            "verse:1Cor.6.11",
+            "verse:1Cor.6.12",
+            "verse:1Cor.6.13",
+            "verse:1Cor.6.14",
+            "verse:1Cor.6.15",
+            "verse:1Cor.6.16",
+            "verse:1Cor.6.17",
+            "verse:1Cor.6.18",
+            "verse:1Cor.6.19",
+            "verse:1Cor.6.2",
+            "verse:1Cor.6.20",
+            "verse:1Cor.6.3",
+            "verse:1Cor.6.4",
+            "verse:1Cor.6.5",
+            "verse:1Cor.6.6",
+            "verse:1Cor.6.7",
+            "verse:1Cor.6.8",
+            "verse:1Cor.6.9",
+            "verse:1Cor.7.1",
+            "verse:1Cor.7.10",
+            "verse:1Cor.7.11",
+            "verse:1Cor.7.12",
+            "verse:1Cor.7.13",
+            "verse:1Cor.7.14",
+            "verse:1Cor.7.15",
+            "verse:1Cor.7.16",
+            "verse:1Cor.7.17",
+            "verse:1Cor.7.18",
+            "verse:1Cor.7.19",
+            "verse:1Cor.7.2",
+            "verse:1Cor.7.20",
+            "verse:1Cor.7.21",
+            "verse:1Cor.7.22",
+            "verse:1Cor.7.23",
+            "verse:1Cor.7.24",
+            "verse:1Cor.7.25",
+            "verse:1Cor.7.26",
+            "verse:1Cor.7.27",
+            "verse:1Cor.7.28",
+            "verse:1Cor.7.29",
+            "verse:1Cor.7.3",
+            "verse:1Cor.7.30",
+            "verse:1Cor.7.31",
+            "verse:1Cor.7.32",
+            "verse:1Cor.7.33",
+            "verse:1Cor.7.34",
+            "verse:1Cor.7.35",
+            "verse:1Cor.7.36",
+            "verse:1Cor.7.37",
+            "verse:1Cor.7.38",
+            "verse:1Cor.7.39",
+            "verse:1Cor.7.4",
+            "verse:1Cor.7.40",
+            "verse:1Cor.7.6",
+            "verse:1Cor.7.7",
+            "verse:1Cor.7.8",
+            "verse:1Cor.7.9",
+            "verse:1Cor.8.1",
+            "verse:1Cor.8.10",
+            "verse:1Cor.8.11",
+            "verse:1Cor.8.12",
+            "verse:1Cor.8.13",
+            "verse:1Cor.8.2",
+            "verse:1Cor.8.3",
+            "verse:1Cor.8.4",
+            "verse:1Cor.8.5",
+            "verse:1Cor.8.6",
+            "verse:1Cor.8.7",
+            "verse:1Cor.8.8",
+            "verse:1Cor.8.9",
+            "verse:1Cor.9.1",
+            "verse:1Cor.9.10",
+            "verse:1Cor.9.11",
+            "verse:1Cor.9.12",
+            "verse:1Cor.9.13",
+            "verse:1Cor.9.14",
+            "verse:1Cor.9.15",
+            "verse:1Cor.9.16",
+            "verse:1Cor.9.17",
+            "verse:1Cor.9.18",
+            "verse:1Cor.9.19",
+            "verse:1Cor.9.2",
+            "verse:1Cor.9.20",
+            "verse:1Cor.9.21",
+            "verse:1Cor.9.22",
+            "verse:1Cor.9.23",
+            "verse:1Cor.9.24",
+            "verse:1Cor.9.25",
+            "verse:1Cor.9.26",
+            "verse:1Cor.9.27",
+            "verse:1Cor.9.3",
+            "verse:1Cor.9.4",
+            "verse:1Cor.9.7",
+            "verse:1Cor.9.8"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.1"
+          ],
+          "record_keys": [
+            "attestation:wb-p-crispus-1-1-1",
+            "attestation:wb-p-saul-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.2"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-corinth-a6f437a-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.11"
+          ],
+          "record_keys": [
+            "attestation:wb-p-chloe-1-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.12"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-1-12",
+            "attestation:wb-p-saul-2-1-12",
+            "attestation:wb-p-simon-1-1-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.13"
+          ],
+          "record_keys": [
+            "attestation:wb-p-saul-2-1-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.14"
+          ],
+          "record_keys": [
+            "attestation:wb-p-crispus-1-1-14",
+            "attestation:wb-p-gaius-1-1-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.1.16"
+          ],
+          "record_keys": [
+            "attestation:wb-p-stephanas-1-1-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.3.4"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-3-4",
+            "attestation:wb-p-saul-2-3-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.3.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-3-5",
+            "attestation:wb-p-saul-2-3-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.3.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-3-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.3.22"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-3-22",
+            "attestation:wb-p-saul-2-3-22",
+            "attestation:wb-p-simon-1-3-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.4.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-4-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.4.17"
+          ],
+          "record_keys": [
+            "attestation:wb-p-timothy-1-4-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.5.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-satan-1-5-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.7.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-satan-1-7-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.9.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-simon-1-9-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.9.6"
+          ],
+          "record_keys": [
+            "attestation:wb-p-joseph-12-9-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.9.9"
+          ],
+          "record_keys": [
+            "attestation:wb-p-moses-1-9-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.10.2"
+          ],
+          "record_keys": [
+            "attestation:wb-p-moses-1-10-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.15.5"
+          ],
+          "record_keys": [
+            "attestation:wb-p-simon-1-15-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.15.7"
+          ],
+          "record_keys": [
+            "attestation:wb-p-james-1-15-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.15.22"
+          ],
+          "record_keys": [
+            "attestation:wb-p-adam-1-15-22"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.15.32"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-ephesus-a5feb15-15-32"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.15.45"
+          ],
+          "record_keys": [
+            "attestation:wb-p-adam-1-15-45"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.1"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-galatia-a0f440a-16-1",
+            "attestation:wb-pl-jerusalem-a15257a-16-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.3"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-jerusalem-a15257a-16-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.5"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-macedonia-a69e1b8-16-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.8"
+          ],
+          "record_keys": [
+            "attestation:wb-pl-ephesus-a5feb15-16-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.10"
+          ],
+          "record_keys": [
+            "attestation:wb-p-timothy-1-16-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.12"
+          ],
+          "record_keys": [
+            "attestation:wb-p-apollos-1-16-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.15"
+          ],
+          "record_keys": [
+            "attestation:wb-p-stephanas-1-16-15",
+            "attestation:wb-pl-achaia-aef4242-16-15"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.17"
+          ],
+          "record_keys": [
+            "attestation:wb-p-achaicus-1-16-17",
+            "attestation:wb-p-forunatus-1-16-17",
+            "attestation:wb-p-stephanas-1-16-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.19"
+          ],
+          "record_keys": [
+            "attestation:wb-p-aquila-1-16-19",
+            "attestation:wb-p-priscilla-1-16-19",
+            "attestation:wb-pl-asia-a197f19-16-19"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Cor.16.21"
+          ],
+          "record_keys": [
+            "attestation:wb-p-saul-2-16-21"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    },
+    {
+      "code": "versification-alignment-unverified",
+      "note": "Attestation reference coordinates are aligned to this edition's canon skeleton. Where this edition's versification differs from the source reference system, exact alignment requires TVTMS verification, which has not yet been applied."
+    }
+  ]
+}

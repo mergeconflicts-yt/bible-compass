@@ -1,0 +1,2559 @@
+{
+  "contract_version": "2.0.0",
+  "schema_version": "2.0.0",
+  "vocabulary_version": "1.0.0",
+  "coverage_policy_version": "1.0.0",
+  "data_classification": "synthetic_fixture",
+  "package_key": "draft:wb-bsb-rev-edition",
+  "package_revision": 1,
+  "submission_id": "submission:wb-bsb-rev-edition:attempt-1",
+  "attempt": 1,
+  "produced_for_job_id": "job:wb-bsb-rev-edition",
+  "package_layer": "edition",
+  "package_family": "translation-mention-draft",
+  "scope": {
+    "canon_key": "canon:prot-66",
+    "reference_system_key": "refsys:eng-v22",
+    "scope_keys": [
+      "scope:wb-rev:refsys:eng-v22:rev.1.1-rev.22.21",
+      "scope:wb-rev-1:refsys:eng-v22:rev.1.1-rev.1.20",
+      "scope:wb-rev-2:refsys:eng-v22:rev.2.1-rev.2.29",
+      "scope:wb-rev-3:refsys:eng-v22:rev.3.1-rev.3.22",
+      "scope:wb-rev-4:refsys:eng-v22:rev.4.1-rev.4.11",
+      "scope:wb-rev-5:refsys:eng-v22:rev.5.1-rev.5.14",
+      "scope:wb-rev-6:refsys:eng-v22:rev.6.1-rev.6.17",
+      "scope:wb-rev-7:refsys:eng-v22:rev.7.1-rev.7.17",
+      "scope:wb-rev-8:refsys:eng-v22:rev.8.1-rev.8.13",
+      "scope:wb-rev-9:refsys:eng-v22:rev.9.1-rev.9.21",
+      "scope:wb-rev-10:refsys:eng-v22:rev.10.1-rev.10.11",
+      "scope:wb-rev-11:refsys:eng-v22:rev.11.1-rev.11.19",
+      "scope:wb-rev-12:refsys:eng-v22:rev.12.1-rev.12.17",
+      "scope:wb-rev-13:refsys:eng-v22:rev.13.1-rev.13.18",
+      "scope:wb-rev-14:refsys:eng-v22:rev.14.1-rev.14.20",
+      "scope:wb-rev-15:refsys:eng-v22:rev.15.1-rev.15.8",
+      "scope:wb-rev-16:refsys:eng-v22:rev.16.1-rev.16.21",
+      "scope:wb-rev-17:refsys:eng-v22:rev.17.1-rev.17.18",
+      "scope:wb-rev-18:refsys:eng-v22:rev.18.1-rev.18.24",
+      "scope:wb-rev-19:refsys:eng-v22:rev.19.1-rev.19.21",
+      "scope:wb-rev-20:refsys:eng-v22:rev.20.1-rev.20.15",
+      "scope:wb-rev-21:refsys:eng-v22:rev.21.1-rev.21.27",
+      "scope:wb-rev-22:refsys:eng-v22:rev.22.1-rev.22.21",
+      "scope:wb-rev-1-p1:refsys:eng-v22:rev.1.1-rev.1.3",
+      "scope:wb-rev-1-p2:refsys:eng-v22:rev.1.4-rev.1.8",
+      "scope:wb-rev-1-p3:refsys:eng-v22:rev.1.9-rev.1.20",
+      "scope:wb-rev-2-p1:refsys:eng-v22:rev.2.1-rev.2.7",
+      "scope:wb-rev-2-p2:refsys:eng-v22:rev.2.8-rev.2.11",
+      "scope:wb-rev-2-p3:refsys:eng-v22:rev.2.12-rev.2.17",
+      "scope:wb-rev-2-p4:refsys:eng-v22:rev.2.18-rev.2.29",
+      "scope:wb-rev-3-p1:refsys:eng-v22:rev.3.1-rev.3.6",
+      "scope:wb-rev-3-p2:refsys:eng-v22:rev.3.7-rev.3.13",
+      "scope:wb-rev-3-p3:refsys:eng-v22:rev.3.14-rev.3.22",
+      "scope:wb-rev-4-p1:refsys:eng-v22:rev.4.1-rev.4.4",
+      "scope:wb-rev-4-p2:refsys:eng-v22:rev.4.5-rev.4.11",
+      "scope:wb-rev-5-p1:refsys:eng-v22:rev.5.1-rev.5.10",
+      "scope:wb-rev-5-p2:refsys:eng-v22:rev.5.11-rev.5.14",
+      "scope:wb-rev-6-p1:refsys:eng-v22:rev.6.1-rev.6.2",
+      "scope:wb-rev-6-p2:refsys:eng-v22:rev.6.3-rev.6.4",
+      "scope:wb-rev-6-p3:refsys:eng-v22:rev.6.5-rev.6.6",
+      "scope:wb-rev-6-p4:refsys:eng-v22:rev.6.7-rev.6.8",
+      "scope:wb-rev-6-p5:refsys:eng-v22:rev.6.9-rev.6.11",
+      "scope:wb-rev-6-p6:refsys:eng-v22:rev.6.12-rev.6.17",
+      "scope:wb-rev-7-p1:refsys:eng-v22:rev.7.1-rev.7.8",
+      "scope:wb-rev-7-p2:refsys:eng-v22:rev.7.9-rev.7.17",
+      "scope:wb-rev-8-p1:refsys:eng-v22:rev.8.1-rev.8.5",
+      "scope:wb-rev-8-p2:refsys:eng-v22:rev.8.6-rev.8.13",
+      "scope:wb-rev-9-p1:refsys:eng-v22:rev.9.1-rev.9.12",
+      "scope:wb-rev-9-p2:refsys:eng-v22:rev.9.13-rev.9.21",
+      "scope:wb-rev-10-p1:refsys:eng-v22:rev.10.1-rev.10.11",
+      "scope:wb-rev-11-p1:refsys:eng-v22:rev.11.1-rev.11.6",
+      "scope:wb-rev-11-p2:refsys:eng-v22:rev.11.7-rev.11.14",
+      "scope:wb-rev-11-p3:refsys:eng-v22:rev.11.15-rev.11.19",
+      "scope:wb-rev-12-p1:refsys:eng-v22:rev.12.1-rev.12.6",
+      "scope:wb-rev-12-p2:refsys:eng-v22:rev.12.7-rev.12.12",
+      "scope:wb-rev-12-p3:refsys:eng-v22:rev.12.13-rev.12.17",
+      "scope:wb-rev-13-p1:refsys:eng-v22:rev.13.1-rev.13.10",
+      "scope:wb-rev-13-p2:refsys:eng-v22:rev.13.11-rev.13.15",
+      "scope:wb-rev-13-p3:refsys:eng-v22:rev.13.16-rev.13.18",
+      "scope:wb-rev-14-p1:refsys:eng-v22:rev.14.1-rev.14.5",
+      "scope:wb-rev-14-p2:refsys:eng-v22:rev.14.6-rev.14.13",
+      "scope:wb-rev-14-p3:refsys:eng-v22:rev.14.14-rev.14.20",
+      "scope:wb-rev-15-p1:refsys:eng-v22:rev.15.1-rev.15.4",
+      "scope:wb-rev-15-p2:refsys:eng-v22:rev.15.5-rev.15.8",
+      "scope:wb-rev-16-p1:refsys:eng-v22:rev.16.1-rev.16.16",
+      "scope:wb-rev-16-p2:refsys:eng-v22:rev.16.17-rev.16.21",
+      "scope:wb-rev-17-p1:refsys:eng-v22:rev.17.1-rev.17.5",
+      "scope:wb-rev-17-p2:refsys:eng-v22:rev.17.6-rev.17.13",
+      "scope:wb-rev-17-p3:refsys:eng-v22:rev.17.14-rev.17.18",
+      "scope:wb-rev-18-p1:refsys:eng-v22:rev.18.1-rev.18.8",
+      "scope:wb-rev-18-p2:refsys:eng-v22:rev.18.9-rev.18.20",
+      "scope:wb-rev-18-p3:refsys:eng-v22:rev.18.21-rev.18.24",
+      "scope:wb-rev-19-p1:refsys:eng-v22:rev.19.1-rev.19.5",
+      "scope:wb-rev-19-p2:refsys:eng-v22:rev.19.6-rev.19.10",
+      "scope:wb-rev-19-p3:refsys:eng-v22:rev.19.11-rev.19.16",
+      "scope:wb-rev-19-p4:refsys:eng-v22:rev.19.17-rev.19.21",
+      "scope:wb-rev-20-p1:refsys:eng-v22:rev.20.1-rev.20.6",
+      "scope:wb-rev-20-p2:refsys:eng-v22:rev.20.7-rev.20.10",
+      "scope:wb-rev-20-p3:refsys:eng-v22:rev.20.11-rev.20.15",
+      "scope:wb-rev-21-p1:refsys:eng-v22:rev.21.1-rev.21.8",
+      "scope:wb-rev-21-p2:refsys:eng-v22:rev.21.9-rev.21.27",
+      "scope:wb-rev-22-p1:refsys:eng-v22:rev.22.1-rev.22.5",
+      "scope:wb-rev-22-p2:refsys:eng-v22:rev.22.6-rev.22.17",
+      "scope:wb-rev-22-p3:refsys:eng-v22:rev.22.18-rev.22.21"
+    ],
+    "reference_keys": [
+      "verse:Rev.1.1",
+      "verse:Rev.1.2",
+      "verse:Rev.1.3",
+      "verse:Rev.1.4",
+      "verse:Rev.1.5",
+      "verse:Rev.1.6",
+      "verse:Rev.1.7",
+      "verse:Rev.1.8",
+      "verse:Rev.1.9",
+      "verse:Rev.1.10",
+      "verse:Rev.1.11",
+      "verse:Rev.1.12",
+      "verse:Rev.1.13",
+      "verse:Rev.1.14",
+      "verse:Rev.1.15",
+      "verse:Rev.1.16",
+      "verse:Rev.1.17",
+      "verse:Rev.1.18",
+      "verse:Rev.1.19",
+      "verse:Rev.1.20",
+      "verse:Rev.2.1",
+      "verse:Rev.2.2",
+      "verse:Rev.2.3",
+      "verse:Rev.2.4",
+      "verse:Rev.2.5",
+      "verse:Rev.2.6",
+      "verse:Rev.2.7",
+      "verse:Rev.2.8",
+      "verse:Rev.2.9",
+      "verse:Rev.2.10",
+      "verse:Rev.2.11",
+      "verse:Rev.2.12",
+      "verse:Rev.2.13",
+      "verse:Rev.2.14",
+      "verse:Rev.2.15",
+      "verse:Rev.2.16",
+      "verse:Rev.2.17",
+      "verse:Rev.2.18",
+      "verse:Rev.2.19",
+      "verse:Rev.2.20",
+      "verse:Rev.2.21",
+      "verse:Rev.2.22",
+      "verse:Rev.2.23",
+      "verse:Rev.2.24",
+      "verse:Rev.2.25",
+      "verse:Rev.2.26",
+      "verse:Rev.2.27",
+      "verse:Rev.2.28",
+      "verse:Rev.2.29",
+      "verse:Rev.3.1",
+      "verse:Rev.3.2",
+      "verse:Rev.3.3",
+      "verse:Rev.3.4",
+      "verse:Rev.3.5",
+      "verse:Rev.3.6",
+      "verse:Rev.3.7",
+      "verse:Rev.3.8",
+      "verse:Rev.3.9",
+      "verse:Rev.3.10",
+      "verse:Rev.3.11",
+      "verse:Rev.3.12",
+      "verse:Rev.3.13",
+      "verse:Rev.3.14",
+      "verse:Rev.3.15",
+      "verse:Rev.3.16",
+      "verse:Rev.3.17",
+      "verse:Rev.3.18",
+      "verse:Rev.3.19",
+      "verse:Rev.3.20",
+      "verse:Rev.3.21",
+      "verse:Rev.3.22",
+      "verse:Rev.4.1",
+      "verse:Rev.4.2",
+      "verse:Rev.4.3",
+      "verse:Rev.4.4",
+      "verse:Rev.4.5",
+      "verse:Rev.4.6",
+      "verse:Rev.4.7",
+      "verse:Rev.4.8",
+      "verse:Rev.4.9",
+      "verse:Rev.4.10",
+      "verse:Rev.4.11",
+      "verse:Rev.5.1",
+      "verse:Rev.5.2",
+      "verse:Rev.5.3",
+      "verse:Rev.5.4",
+      "verse:Rev.5.5",
+      "verse:Rev.5.6",
+      "verse:Rev.5.7",
+      "verse:Rev.5.8",
+      "verse:Rev.5.9",
+      "verse:Rev.5.10",
+      "verse:Rev.5.11",
+      "verse:Rev.5.12",
+      "verse:Rev.5.13",
+      "verse:Rev.5.14",
+      "verse:Rev.6.1",
+      "verse:Rev.6.2",
+      "verse:Rev.6.3",
+      "verse:Rev.6.4",
+      "verse:Rev.6.5",
+      "verse:Rev.6.6",
+      "verse:Rev.6.7",
+      "verse:Rev.6.8",
+      "verse:Rev.6.9",
+      "verse:Rev.6.10",
+      "verse:Rev.6.11",
+      "verse:Rev.6.12",
+      "verse:Rev.6.13",
+      "verse:Rev.6.14",
+      "verse:Rev.6.15",
+      "verse:Rev.6.16",
+      "verse:Rev.6.17",
+      "verse:Rev.7.1",
+      "verse:Rev.7.2",
+      "verse:Rev.7.3",
+      "verse:Rev.7.4",
+      "verse:Rev.7.5",
+      "verse:Rev.7.6",
+      "verse:Rev.7.7",
+      "verse:Rev.7.8",
+      "verse:Rev.7.9",
+      "verse:Rev.7.10",
+      "verse:Rev.7.11",
+      "verse:Rev.7.12",
+      "verse:Rev.7.13",
+      "verse:Rev.7.14",
+      "verse:Rev.7.15",
+      "verse:Rev.7.16",
+      "verse:Rev.7.17",
+      "verse:Rev.8.1",
+      "verse:Rev.8.2",
+      "verse:Rev.8.3",
+      "verse:Rev.8.4",
+      "verse:Rev.8.5",
+      "verse:Rev.8.6",
+      "verse:Rev.8.7",
+      "verse:Rev.8.8",
+      "verse:Rev.8.9",
+      "verse:Rev.8.10",
+      "verse:Rev.8.11",
+      "verse:Rev.8.12",
+      "verse:Rev.8.13",
+      "verse:Rev.9.1",
+      "verse:Rev.9.2",
+      "verse:Rev.9.3",
+      "verse:Rev.9.4",
+      "verse:Rev.9.5",
+      "verse:Rev.9.6",
+      "verse:Rev.9.7",
+      "verse:Rev.9.8",
+      "verse:Rev.9.9",
+      "verse:Rev.9.10",
+      "verse:Rev.9.11",
+      "verse:Rev.9.12",
+      "verse:Rev.9.13",
+      "verse:Rev.9.14",
+      "verse:Rev.9.15",
+      "verse:Rev.9.16",
+      "verse:Rev.9.17",
+      "verse:Rev.9.18",
+      "verse:Rev.9.19",
+      "verse:Rev.9.20",
+      "verse:Rev.9.21",
+      "verse:Rev.10.1",
+      "verse:Rev.10.2",
+      "verse:Rev.10.3",
+      "verse:Rev.10.4",
+      "verse:Rev.10.5",
+      "verse:Rev.10.6",
+      "verse:Rev.10.7",
+      "verse:Rev.10.8",
+      "verse:Rev.10.9",
+      "verse:Rev.10.10",
+      "verse:Rev.10.11",
+      "verse:Rev.11.1",
+      "verse:Rev.11.2",
+      "verse:Rev.11.3",
+      "verse:Rev.11.4",
+      "verse:Rev.11.5",
+      "verse:Rev.11.6",
+      "verse:Rev.11.7",
+      "verse:Rev.11.8",
+      "verse:Rev.11.9",
+      "verse:Rev.11.10",
+      "verse:Rev.11.11",
+      "verse:Rev.11.12",
+      "verse:Rev.11.13",
+      "verse:Rev.11.14",
+      "verse:Rev.11.15",
+      "verse:Rev.11.16",
+      "verse:Rev.11.17",
+      "verse:Rev.11.18",
+      "verse:Rev.11.19",
+      "verse:Rev.12.1",
+      "verse:Rev.12.2",
+      "verse:Rev.12.3",
+      "verse:Rev.12.4",
+      "verse:Rev.12.5",
+      "verse:Rev.12.6",
+      "verse:Rev.12.7",
+      "verse:Rev.12.8",
+      "verse:Rev.12.9",
+      "verse:Rev.12.10",
+      "verse:Rev.12.11",
+      "verse:Rev.12.12",
+      "verse:Rev.12.13",
+      "verse:Rev.12.14",
+      "verse:Rev.12.15",
+      "verse:Rev.12.16",
+      "verse:Rev.12.17",
+      "verse:Rev.13.1",
+      "verse:Rev.13.2",
+      "verse:Rev.13.3",
+      "verse:Rev.13.4",
+      "verse:Rev.13.5",
+      "verse:Rev.13.6",
+      "verse:Rev.13.7",
+      "verse:Rev.13.8",
+      "verse:Rev.13.9",
+      "verse:Rev.13.10",
+      "verse:Rev.13.11",
+      "verse:Rev.13.12",
+      "verse:Rev.13.13",
+      "verse:Rev.13.14",
+      "verse:Rev.13.15",
+      "verse:Rev.13.16",
+      "verse:Rev.13.17",
+      "verse:Rev.13.18",
+      "verse:Rev.14.1",
+      "verse:Rev.14.2",
+      "verse:Rev.14.3",
+      "verse:Rev.14.4",
+      "verse:Rev.14.5",
+      "verse:Rev.14.6",
+      "verse:Rev.14.7",
+      "verse:Rev.14.8",
+      "verse:Rev.14.9",
+      "verse:Rev.14.10",
+      "verse:Rev.14.11",
+      "verse:Rev.14.12",
+      "verse:Rev.14.13",
+      "verse:Rev.14.14",
+      "verse:Rev.14.15",
+      "verse:Rev.14.16",
+      "verse:Rev.14.17",
+      "verse:Rev.14.18",
+      "verse:Rev.14.19",
+      "verse:Rev.14.20",
+      "verse:Rev.15.1",
+      "verse:Rev.15.2",
+      "verse:Rev.15.3",
+      "verse:Rev.15.4",
+      "verse:Rev.15.5",
+      "verse:Rev.15.6",
+      "verse:Rev.15.7",
+      "verse:Rev.15.8",
+      "verse:Rev.16.1",
+      "verse:Rev.16.2",
+      "verse:Rev.16.3",
+      "verse:Rev.16.4",
+      "verse:Rev.16.5",
+      "verse:Rev.16.6",
+      "verse:Rev.16.7",
+      "verse:Rev.16.8",
+      "verse:Rev.16.9",
+      "verse:Rev.16.10",
+      "verse:Rev.16.11",
+      "verse:Rev.16.12",
+      "verse:Rev.16.13",
+      "verse:Rev.16.14",
+      "verse:Rev.16.15",
+      "verse:Rev.16.16",
+      "verse:Rev.16.17",
+      "verse:Rev.16.18",
+      "verse:Rev.16.19",
+      "verse:Rev.16.20",
+      "verse:Rev.16.21",
+      "verse:Rev.17.1",
+      "verse:Rev.17.2",
+      "verse:Rev.17.3",
+      "verse:Rev.17.4",
+      "verse:Rev.17.5",
+      "verse:Rev.17.6",
+      "verse:Rev.17.7",
+      "verse:Rev.17.8",
+      "verse:Rev.17.9",
+      "verse:Rev.17.10",
+      "verse:Rev.17.11",
+      "verse:Rev.17.12",
+      "verse:Rev.17.13",
+      "verse:Rev.17.14",
+      "verse:Rev.17.15",
+      "verse:Rev.17.16",
+      "verse:Rev.17.17",
+      "verse:Rev.17.18",
+      "verse:Rev.18.1",
+      "verse:Rev.18.2",
+      "verse:Rev.18.3",
+      "verse:Rev.18.4",
+      "verse:Rev.18.5",
+      "verse:Rev.18.6",
+      "verse:Rev.18.7",
+      "verse:Rev.18.8",
+      "verse:Rev.18.9",
+      "verse:Rev.18.10",
+      "verse:Rev.18.11",
+      "verse:Rev.18.12",
+      "verse:Rev.18.13",
+      "verse:Rev.18.14",
+      "verse:Rev.18.15",
+      "verse:Rev.18.16",
+      "verse:Rev.18.17",
+      "verse:Rev.18.18",
+      "verse:Rev.18.19",
+      "verse:Rev.18.20",
+      "verse:Rev.18.21",
+      "verse:Rev.18.22",
+      "verse:Rev.18.23",
+      "verse:Rev.18.24",
+      "verse:Rev.19.1",
+      "verse:Rev.19.2",
+      "verse:Rev.19.3",
+      "verse:Rev.19.4",
+      "verse:Rev.19.5",
+      "verse:Rev.19.6",
+      "verse:Rev.19.7",
+      "verse:Rev.19.8",
+      "verse:Rev.19.9",
+      "verse:Rev.19.10",
+      "verse:Rev.19.11",
+      "verse:Rev.19.12",
+      "verse:Rev.19.13",
+      "verse:Rev.19.14",
+      "verse:Rev.19.15",
+      "verse:Rev.19.16",
+      "verse:Rev.19.17",
+      "verse:Rev.19.18",
+      "verse:Rev.19.19",
+      "verse:Rev.19.20",
+      "verse:Rev.19.21",
+      "verse:Rev.20.1",
+      "verse:Rev.20.2",
+      "verse:Rev.20.3",
+      "verse:Rev.20.4",
+      "verse:Rev.20.5",
+      "verse:Rev.20.6",
+      "verse:Rev.20.7",
+      "verse:Rev.20.8",
+      "verse:Rev.20.9",
+      "verse:Rev.20.10",
+      "verse:Rev.20.11",
+      "verse:Rev.20.12",
+      "verse:Rev.20.13",
+      "verse:Rev.20.14",
+      "verse:Rev.20.15",
+      "verse:Rev.21.1",
+      "verse:Rev.21.2",
+      "verse:Rev.21.3",
+      "verse:Rev.21.4",
+      "verse:Rev.21.5",
+      "verse:Rev.21.6",
+      "verse:Rev.21.7",
+      "verse:Rev.21.8",
+      "verse:Rev.21.9",
+      "verse:Rev.21.10",
+      "verse:Rev.21.11",
+      "verse:Rev.21.12",
+      "verse:Rev.21.13",
+      "verse:Rev.21.14",
+      "verse:Rev.21.15",
+      "verse:Rev.21.16",
+      "verse:Rev.21.17",
+      "verse:Rev.21.18",
+      "verse:Rev.21.19",
+      "verse:Rev.21.20",
+      "verse:Rev.21.21",
+      "verse:Rev.21.22",
+      "verse:Rev.21.23",
+      "verse:Rev.21.24",
+      "verse:Rev.21.25",
+      "verse:Rev.21.26",
+      "verse:Rev.21.27",
+      "verse:Rev.22.1",
+      "verse:Rev.22.2",
+      "verse:Rev.22.3",
+      "verse:Rev.22.4",
+      "verse:Rev.22.5",
+      "verse:Rev.22.6",
+      "verse:Rev.22.7",
+      "verse:Rev.22.8",
+      "verse:Rev.22.9",
+      "verse:Rev.22.10",
+      "verse:Rev.22.11",
+      "verse:Rev.22.12",
+      "verse:Rev.22.13",
+      "verse:Rev.22.14",
+      "verse:Rev.22.15",
+      "verse:Rev.22.16",
+      "verse:Rev.22.17",
+      "verse:Rev.22.18",
+      "verse:Rev.22.19",
+      "verse:Rev.22.20",
+      "verse:Rev.22.21"
+    ],
+    "language_tag": "en",
+    "translation_edition_key": "edition:bsb@20260912"
+  },
+  "review_status": "draft",
+  "dependencies": [
+    {
+      "package_key": "registry:wb:entities",
+      "revision": 1,
+      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+    }
+  ],
+  "records": {
+    "mentions": [
+      {
+        "mention_key": "mention:wb:p-jacob-1-7-4",
+        "verse_key": "verse:Rev.7.4",
+        "attestation_key": "attestation:wb-p-jacob-1-7-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "m all the tribes of ",
+          "suffix": ":"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-21-12",
+        "verse_key": "verse:Rev.21.12",
+        "attestation_key": "attestation:wb-p-jacob-1-21-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "he twelve tribes of ",
+          "suffix": ", and twelve angels "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-reuben-1-7-5",
+        "verse_key": "verse:Rev.7.5",
+        "attestation_key": "attestation:wb-p-reuben-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-reuben-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Reuben",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000, from the tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simeon-1-7-7",
+        "verse_key": "verse:Rev.7.7",
+        "attestation_key": "attestation:wb-p-simeon-1-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simeon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Simeon",
+          "occurrence_ordinal": 1,
+          "prefix": "from the tribe of ",
+          "suffix": " 12,000, from the tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-levi-1-7-7",
+        "verse_key": "verse:Rev.7.7",
+        "attestation_key": "attestation:wb-p-levi-1-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-levi-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Levi",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000, from the tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-judah-1-7-5",
+        "verse_key": "verse:Rev.7.5",
+        "attestation_key": "attestation:wb-p-judah-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-judah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Judah",
+          "occurrence_ordinal": 1,
+          "prefix": "From the tribe of ",
+          "suffix": " 12,000 were sealed,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-naphtali-1-7-6",
+        "verse_key": "verse:Rev.7.6",
+        "attestation_key": "attestation:wb-p-naphtali-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-naphtali-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Naphtali",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000, from the tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-gad-1-7-5",
+        "verse_key": "verse:Rev.7.5",
+        "attestation_key": "attestation:wb-p-gad-1-7-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-gad-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gad",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-asher-1-7-6",
+        "verse_key": "verse:Rev.7.6",
+        "attestation_key": "attestation:wb-p-asher-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-asher-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Asher",
+          "occurrence_ordinal": 1,
+          "prefix": "from the tribe of ",
+          "suffix": " 12,000, from the tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-issachar-1-7-7",
+        "verse_key": "verse:Rev.7.7",
+        "attestation_key": "attestation:wb-p-issachar-1-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-issachar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Issachar",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-zebulun-1-7-8",
+        "verse_key": "verse:Rev.7.8",
+        "attestation_key": "attestation:wb-p-zebulun-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zebulun-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zebulun",
+          "occurrence_ordinal": 1,
+          "prefix": "from the tribe of ",
+          "suffix": " 12,000, from the tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-joseph-1-7-8",
+        "verse_key": "verse:Rev.7.8",
+        "attestation_key": "attestation:wb-p-joseph-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-joseph-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Joseph",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000, and from th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-benjamin-1-7-8",
+        "verse_key": "verse:Rev.7.8",
+        "attestation_key": "attestation:wb-p-benjamin-1-7-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-benjamin-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": "d from the tribe of ",
+          "suffix": " 12,000."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-manasseh-1-7-6",
+        "verse_key": "verse:Rev.7.6",
+        "attestation_key": "attestation:wb-p-manasseh-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-manasseh-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Manasseh",
+          "occurrence_ordinal": 1,
+          "prefix": ", from the tribe of ",
+          "suffix": " 12,000,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-15-3",
+        "verse_key": "verse:Rev.15.3",
+        "attestation_key": "attestation:wb-p-moses-1-15-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "ng of God’s servant ",
+          "suffix": " and of the Lamb: “G"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-balak-1-2-14",
+        "verse_key": "verse:Rev.2.14",
+        "attestation_key": "attestation:wb-p-balak-1-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-balak-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Balak",
+          "occurrence_ordinal": 1,
+          "prefix": " Balaam, who taught ",
+          "suffix": " to place a stumblin"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-balaam-1-2-14",
+        "verse_key": "verse:Rev.2.14",
+        "attestation_key": "attestation:wb-p-balaam-1-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-balaam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Balaam",
+          "occurrence_ordinal": 1,
+          "prefix": " to the teaching of ",
+          "suffix": ", who taught Balak t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-david-1-22-16",
+        "verse_key": "verse:Rev.22.16",
+        "attestation_key": "attestation:wb-p-david-1-22-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "nd the Offspring of ",
+          "suffix": ", the bright Morning"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-2-9",
+        "verse_key": "verse:Rev.2.9",
+        "attestation_key": "attestation:wb-p-satan-1-2-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "fact a synagogue of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-2-10",
+        "verse_key": "verse:Rev.2.10",
+        "attestation_key": "attestation:wb-p-satan-1-2-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 1,
+          "prefix": "ut to suffer. Look, ",
+          "suffix": " is about to throw s"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-2-13",
+        "verse_key": "verse:Rev.2.13",
+        "attestation_key": "attestation:wb-p-satan-1-2-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "where the throne of ",
+          "suffix": " sits. Yet you have "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-2-24",
+        "verse_key": "verse:Rev.2.24",
+        "attestation_key": "attestation:wb-p-satan-1-2-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "lled deep things of ",
+          "suffix": ": I will place no fu"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-3-9",
+        "verse_key": "verse:Rev.3.9",
+        "attestation_key": "attestation:wb-p-satan-1-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "to the synagogue of ",
+          "suffix": ", who claim to be Je"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-12-9",
+        "verse_key": "verse:Rev.12.9",
+        "attestation_key": "attestation:wb-p-satan-1-12-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "alled the devil and ",
+          "suffix": ", the deceiver of th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-20-2",
+        "verse_key": "verse:Rev.20.2",
+        "attestation_key": "attestation:wb-p-satan-1-20-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "ho is the devil and ",
+          "suffix": ", and bound him for "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-20-7",
+        "verse_key": "verse:Rev.20.7",
+        "attestation_key": "attestation:wb-p-satan-1-20-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "years are complete, ",
+          "suffix": " will be released fr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-20-10",
+        "verse_key": "verse:Rev.20.10",
+        "attestation_key": "attestation:wb-p-satan-1-20-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " who had deceived th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-michael-9-12-7",
+        "verse_key": "verse:Rev.12.7",
+        "attestation_key": "attestation:wb-p-michael-9-12-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-michael-9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Michael",
+          "occurrence_ordinal": 1,
+          "prefix": "roke out in heaven: ",
+          "suffix": " and his angels foug"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-1-1",
+        "verse_key": "verse:Rev.1.1",
+        "attestation_key": "attestation:wb-p-john-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "John",
+          "occurrence_ordinal": 1,
+          "prefix": "ngel to His servant ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-1-4",
+        "verse_key": "verse:Rev.1.4",
+        "attestation_key": "attestation:wb-p-john-2-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "John",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", To the seven churc"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-1-9",
+        "verse_key": "verse:Rev.1.9",
+        "attestation_key": "attestation:wb-p-john-2-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "John",
+          "occurrence_ordinal": 1,
+          "prefix": "I, ",
+          "suffix": ", your brother and p"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-john-2-22-8",
+        "verse_key": "verse:Rev.22.8",
+        "attestation_key": "attestation:wb-p-john-2-22-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "John",
+          "occurrence_ordinal": 1,
+          "prefix": "And I am ",
+          "suffix": ", who heard and saw "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-antipas-1-2-13",
+        "verse_key": "verse:Rev.2.13",
+        "attestation_key": "attestation:wb-p-antipas-1-2-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-antipas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Antipas",
+          "occurrence_ordinal": 1,
+          "prefix": "My faithful witness ",
+          "suffix": " was killed among yo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jezebel-2-2-20",
+        "verse_key": "verse:Rev.2.20",
+        "attestation_key": "attestation:wb-p-jezebel-2-2-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jezebel-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jezebel",
+          "occurrence_ordinal": 1,
+          "prefix": "tolerate that woman ",
+          "suffix": ", who calls herself "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-death-1-6-8",
+        "verse_key": "verse:Rev.6.8",
+        "attestation_key": "attestation:wb-p-death-1-6-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-death-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Death",
+          "occurrence_ordinal": 1,
+          "prefix": "ts rider’s name was ",
+          "suffix": ", and Hades followed"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abaddon-1-9-11",
+        "verse_key": "verse:Rev.9.11",
+        "attestation_key": "attestation:wb-p-abaddon-1-9-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abaddon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abaddon",
+          "occurrence_ordinal": 1,
+          "prefix": "s name in Hebrew is ",
+          "suffix": ", and in Greek it is"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-armageddon-a105543-16-16",
+        "verse_key": "verse:Rev.16.16",
+        "attestation_key": "attestation:wb-pl-armageddon-a105543-16-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-armageddon-a105543"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Armageddon",
+          "occurrence_ordinal": 1,
+          "prefix": "in Hebrew is called ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-asia-a197f19-1-4",
+        "verse_key": "verse:Rev.1.4",
+        "attestation_key": "attestation:wb-pl-asia-a197f19-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-asia-a197f19"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Asia",
+          "occurrence_ordinal": 1,
+          "prefix": " in the province of ",
+          "suffix": ": Grace and peace to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-east-ab0b2dd-16-12",
+        "verse_key": "verse:Rev.16.12",
+        "attestation_key": "attestation:wb-pl-east-ab0b2dd-16-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-east-ab0b2dd"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "East",
+          "occurrence_ordinal": 1,
+          "prefix": "or the kings of the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-egypt-af301ca-11-8",
+        "verse_key": "verse:Rev.11.8",
+        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-egypt-af301ca"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Egypt",
+          "occurrence_ordinal": 1,
+          "prefix": "ly called Sodom and ",
+          "suffix": "—where their Lord wa"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ephesus-a5feb15-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ephesus-a5feb15"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ephesus",
+          "occurrence_ordinal": 1,
+          "prefix": " seven churches: to ",
+          "suffix": ", Smyrna, Pergamum, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-ephesus-a5feb15-2-1",
+        "verse_key": "verse:Rev.2.1",
+        "attestation_key": "attestation:wb-pl-ephesus-a5feb15-2-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ephesus-a5feb15"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ephesus",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-euphrates-a62dec4-9-14",
+        "verse_key": "verse:Rev.9.14",
+        "attestation_key": "attestation:wb-pl-euphrates-a62dec4-9-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-euphrates-a62dec4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Euphrates",
+          "occurrence_ordinal": 1,
+          "prefix": " at the great river ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-euphrates-a62dec4-16-12",
+        "verse_key": "verse:Rev.16.12",
+        "attestation_key": "attestation:wb-pl-euphrates-a62dec4-16-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-euphrates-a62dec4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Euphrates",
+          "occurrence_ordinal": 1,
+          "prefix": " on the great river ",
+          "suffix": ", and its water was "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-gog-a858723-20-8",
+        "verse_key": "verse:Rev.20.8",
+        "attestation_key": "attestation:wb-pl-gog-a858723-20-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gog-a858723"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gog",
+          "occurrence_ordinal": 1,
+          "prefix": "orners of the earth—",
+          "suffix": " and Magog—to assemb"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-3-12",
+        "verse_key": "verse:Rev.3.12",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": " of My God (the new ",
+          "suffix": " that comes down out"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-21-2",
+        "verse_key": "verse:Rev.21.2",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-21-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": " holy city, the new ",
+          "suffix": ", coming down out of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-21-10",
+        "verse_key": "verse:Rev.21.10",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-21-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "me the holy city of ",
+          "suffix": " coming down out of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-laodicea-a83fb1e-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-laodicea-a83fb1e-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-laodicea-a83fb1e"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Laodicea",
+          "occurrence_ordinal": 1,
+          "prefix": ", Philadelphia, and ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-laodicea-a83fb1e-3-14",
+        "verse_key": "verse:Rev.3.14",
+        "attestation_key": "attestation:wb-pl-laodicea-a83fb1e-3-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-laodicea-a83fb1e"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Laodicea",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-magog-ae3d487-20-8",
+        "verse_key": "verse:Rev.20.8",
+        "attestation_key": "attestation:wb-pl-magog-ae3d487-20-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-magog-ae3d487"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Magog",
+          "occurrence_ordinal": 1,
+          "prefix": "f the earth—Gog and ",
+          "suffix": "—to assemble them fo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-mount-zion-abd9596-14-1",
+        "verse_key": "verse:Rev.14.1",
+        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-14-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-zion-abd9596"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mount Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "he Lamb standing on ",
+          "suffix": ", and with Him 144,0"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-patmos-a8f60f3-1-9",
+        "verse_key": "verse:Rev.1.9",
+        "attestation_key": "attestation:wb-pl-patmos-a8f60f3-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-patmos-a8f60f3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Patmos",
+          "occurrence_ordinal": 1,
+          "prefix": "as on the island of ",
+          "suffix": " because of the word"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-pergamum-a75d2c1-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-pergamum-a75d2c1-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-pergamum-a75d2c1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pergamum",
+          "occurrence_ordinal": 1,
+          "prefix": "to Ephesus, Smyrna, ",
+          "suffix": ", Thyatira, Sardis, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-pergamum-a75d2c1-2-12",
+        "verse_key": "verse:Rev.2.12",
+        "attestation_key": "attestation:wb-pl-pergamum-a75d2c1-2-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-pergamum-a75d2c1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pergamum",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-philadelphia-a1c7cc1-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-philadelphia-a1c7cc1-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-philadelphia-a1c7cc1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Philadelphia",
+          "occurrence_ordinal": 1,
+          "prefix": ", Thyatira, Sardis, ",
+          "suffix": ", and Laodicea.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-philadelphia-a1c7cc1-3-7",
+        "verse_key": "verse:Rev.3.7",
+        "attestation_key": "attestation:wb-pl-philadelphia-a1c7cc1-3-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-philadelphia-a1c7cc1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Philadelphia",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sardis-aab4a5f-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-sardis-aab4a5f-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sardis-aab4a5f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sardis",
+          "occurrence_ordinal": 1,
+          "prefix": "Pergamum, Thyatira, ",
+          "suffix": ", Philadelphia, and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sardis-aab4a5f-3-1",
+        "verse_key": "verse:Rev.3.1",
+        "attestation_key": "attestation:wb-pl-sardis-aab4a5f-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sardis-aab4a5f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sardis",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sardis-aab4a5f-3-4",
+        "verse_key": "verse:Rev.3.4",
+        "attestation_key": "attestation:wb-pl-sardis-aab4a5f-3-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sardis-aab4a5f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sardis",
+          "occurrence_ordinal": 1,
+          "prefix": "ave a few people in ",
+          "suffix": " who have not soiled"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-smyrna-a2e65fb-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-smyrna-a2e65fb-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-smyrna-a2e65fb"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Smyrna",
+          "occurrence_ordinal": 1,
+          "prefix": "urches: to Ephesus, ",
+          "suffix": ", Pergamum, Thyatira"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-smyrna-a2e65fb-2-8",
+        "verse_key": "verse:Rev.2.8",
+        "attestation_key": "attestation:wb-pl-smyrna-a2e65fb-2-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-smyrna-a2e65fb"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Smyrna",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-sodom-a0aa664-11-8",
+        "verse_key": "verse:Rev.11.8",
+        "attestation_key": "attestation:wb-pl-sodom-a0aa664-11-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-sodom-a0aa664"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sodom",
+          "occurrence_ordinal": 1,
+          "prefix": "figuratively called ",
+          "suffix": " and Egypt—where the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-thyatira-a94b661-1-11",
+        "verse_key": "verse:Rev.1.11",
+        "attestation_key": "attestation:wb-pl-thyatira-a94b661-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-thyatira-a94b661"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Thyatira",
+          "occurrence_ordinal": 1,
+          "prefix": ", Smyrna, Pergamum, ",
+          "suffix": ", Sardis, Philadelph"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-thyatira-a94b661-2-18",
+        "verse_key": "verse:Rev.2.18",
+        "attestation_key": "attestation:wb-pl-thyatira-a94b661-2-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-thyatira-a94b661"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Thyatira",
+          "occurrence_ordinal": 1,
+          "prefix": "el of the church in ",
+          "suffix": " write: These are th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-thyatira-a94b661-2-24",
+        "verse_key": "verse:Rev.2.24",
+        "attestation_key": "attestation:wb-pl-thyatira-a94b661-2-24",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-thyatira-a94b661"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Thyatira",
+          "occurrence_ordinal": 1,
+          "prefix": " the rest of you in ",
+          "suffix": ", who do not hold to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "annotation_class": "translation_mention",
+      "groups": [
+        {
+          "result": "complete_zero",
+          "reference_keys": [
+            "verse:Rev.1.10",
+            "verse:Rev.1.12",
+            "verse:Rev.1.13",
+            "verse:Rev.1.14",
+            "verse:Rev.1.15",
+            "verse:Rev.1.16",
+            "verse:Rev.1.17",
+            "verse:Rev.1.18",
+            "verse:Rev.1.19",
+            "verse:Rev.1.2",
+            "verse:Rev.1.20",
+            "verse:Rev.1.3",
+            "verse:Rev.1.5",
+            "verse:Rev.1.6",
+            "verse:Rev.1.7",
+            "verse:Rev.1.8",
+            "verse:Rev.10.1",
+            "verse:Rev.10.10",
+            "verse:Rev.10.11",
+            "verse:Rev.10.2",
+            "verse:Rev.10.3",
+            "verse:Rev.10.4",
+            "verse:Rev.10.5",
+            "verse:Rev.10.6",
+            "verse:Rev.10.7",
+            "verse:Rev.10.8",
+            "verse:Rev.10.9",
+            "verse:Rev.11.1",
+            "verse:Rev.11.10",
+            "verse:Rev.11.11",
+            "verse:Rev.11.12",
+            "verse:Rev.11.13",
+            "verse:Rev.11.14",
+            "verse:Rev.11.15",
+            "verse:Rev.11.16",
+            "verse:Rev.11.17",
+            "verse:Rev.11.18",
+            "verse:Rev.11.19",
+            "verse:Rev.11.2",
+            "verse:Rev.11.3",
+            "verse:Rev.11.4",
+            "verse:Rev.11.5",
+            "verse:Rev.11.6",
+            "verse:Rev.11.7",
+            "verse:Rev.11.9",
+            "verse:Rev.12.1",
+            "verse:Rev.12.10",
+            "verse:Rev.12.11",
+            "verse:Rev.12.12",
+            "verse:Rev.12.13",
+            "verse:Rev.12.14",
+            "verse:Rev.12.15",
+            "verse:Rev.12.16",
+            "verse:Rev.12.17",
+            "verse:Rev.12.2",
+            "verse:Rev.12.3",
+            "verse:Rev.12.4",
+            "verse:Rev.12.5",
+            "verse:Rev.12.6",
+            "verse:Rev.12.8",
+            "verse:Rev.13.1",
+            "verse:Rev.13.10",
+            "verse:Rev.13.11",
+            "verse:Rev.13.12",
+            "verse:Rev.13.13",
+            "verse:Rev.13.14",
+            "verse:Rev.13.15",
+            "verse:Rev.13.16",
+            "verse:Rev.13.17",
+            "verse:Rev.13.18",
+            "verse:Rev.13.2",
+            "verse:Rev.13.3",
+            "verse:Rev.13.4",
+            "verse:Rev.13.5",
+            "verse:Rev.13.6",
+            "verse:Rev.13.7",
+            "verse:Rev.13.8",
+            "verse:Rev.13.9",
+            "verse:Rev.14.10",
+            "verse:Rev.14.11",
+            "verse:Rev.14.12",
+            "verse:Rev.14.13",
+            "verse:Rev.14.14",
+            "verse:Rev.14.15",
+            "verse:Rev.14.16",
+            "verse:Rev.14.17",
+            "verse:Rev.14.18",
+            "verse:Rev.14.19",
+            "verse:Rev.14.2",
+            "verse:Rev.14.20",
+            "verse:Rev.14.3",
+            "verse:Rev.14.4",
+            "verse:Rev.14.5",
+            "verse:Rev.14.6",
+            "verse:Rev.14.7",
+            "verse:Rev.14.8",
+            "verse:Rev.14.9",
+            "verse:Rev.15.1",
+            "verse:Rev.15.2",
+            "verse:Rev.15.4",
+            "verse:Rev.15.5",
+            "verse:Rev.15.6",
+            "verse:Rev.15.7",
+            "verse:Rev.15.8",
+            "verse:Rev.16.1",
+            "verse:Rev.16.10",
+            "verse:Rev.16.11",
+            "verse:Rev.16.13",
+            "verse:Rev.16.14",
+            "verse:Rev.16.15",
+            "verse:Rev.16.17",
+            "verse:Rev.16.18",
+            "verse:Rev.16.19",
+            "verse:Rev.16.2",
+            "verse:Rev.16.20",
+            "verse:Rev.16.21",
+            "verse:Rev.16.3",
+            "verse:Rev.16.4",
+            "verse:Rev.16.5",
+            "verse:Rev.16.6",
+            "verse:Rev.16.7",
+            "verse:Rev.16.8",
+            "verse:Rev.16.9",
+            "verse:Rev.17.1",
+            "verse:Rev.17.10",
+            "verse:Rev.17.11",
+            "verse:Rev.17.12",
+            "verse:Rev.17.13",
+            "verse:Rev.17.14",
+            "verse:Rev.17.15",
+            "verse:Rev.17.16",
+            "verse:Rev.17.17",
+            "verse:Rev.17.18",
+            "verse:Rev.17.2",
+            "verse:Rev.17.3",
+            "verse:Rev.17.4",
+            "verse:Rev.17.5",
+            "verse:Rev.17.6",
+            "verse:Rev.17.7",
+            "verse:Rev.17.8",
+            "verse:Rev.17.9",
+            "verse:Rev.18.1",
+            "verse:Rev.18.10",
+            "verse:Rev.18.11",
+            "verse:Rev.18.12",
+            "verse:Rev.18.13",
+            "verse:Rev.18.14",
+            "verse:Rev.18.15",
+            "verse:Rev.18.16",
+            "verse:Rev.18.17",
+            "verse:Rev.18.18",
+            "verse:Rev.18.19",
+            "verse:Rev.18.2",
+            "verse:Rev.18.20",
+            "verse:Rev.18.21",
+            "verse:Rev.18.22",
+            "verse:Rev.18.23",
+            "verse:Rev.18.24",
+            "verse:Rev.18.3",
+            "verse:Rev.18.4",
+            "verse:Rev.18.5",
+            "verse:Rev.18.6",
+            "verse:Rev.18.7",
+            "verse:Rev.18.8",
+            "verse:Rev.18.9",
+            "verse:Rev.19.1",
+            "verse:Rev.19.10",
+            "verse:Rev.19.11",
+            "verse:Rev.19.12",
+            "verse:Rev.19.13",
+            "verse:Rev.19.14",
+            "verse:Rev.19.15",
+            "verse:Rev.19.16",
+            "verse:Rev.19.17",
+            "verse:Rev.19.18",
+            "verse:Rev.19.19",
+            "verse:Rev.19.2",
+            "verse:Rev.19.20",
+            "verse:Rev.19.21",
+            "verse:Rev.19.3",
+            "verse:Rev.19.4",
+            "verse:Rev.19.5",
+            "verse:Rev.19.6",
+            "verse:Rev.19.7",
+            "verse:Rev.19.8",
+            "verse:Rev.19.9",
+            "verse:Rev.2.11",
+            "verse:Rev.2.15",
+            "verse:Rev.2.16",
+            "verse:Rev.2.17",
+            "verse:Rev.2.19",
+            "verse:Rev.2.2",
+            "verse:Rev.2.21",
+            "verse:Rev.2.22",
+            "verse:Rev.2.23",
+            "verse:Rev.2.25",
+            "verse:Rev.2.26",
+            "verse:Rev.2.27",
+            "verse:Rev.2.28",
+            "verse:Rev.2.29",
+            "verse:Rev.2.3",
+            "verse:Rev.2.4",
+            "verse:Rev.2.5",
+            "verse:Rev.2.6",
+            "verse:Rev.2.7",
+            "verse:Rev.20.1",
+            "verse:Rev.20.11",
+            "verse:Rev.20.12",
+            "verse:Rev.20.13",
+            "verse:Rev.20.14",
+            "verse:Rev.20.15",
+            "verse:Rev.20.3",
+            "verse:Rev.20.4",
+            "verse:Rev.20.5",
+            "verse:Rev.20.6",
+            "verse:Rev.20.9",
+            "verse:Rev.21.1",
+            "verse:Rev.21.11",
+            "verse:Rev.21.13",
+            "verse:Rev.21.14",
+            "verse:Rev.21.15",
+            "verse:Rev.21.16",
+            "verse:Rev.21.17",
+            "verse:Rev.21.18",
+            "verse:Rev.21.19",
+            "verse:Rev.21.20",
+            "verse:Rev.21.21",
+            "verse:Rev.21.22",
+            "verse:Rev.21.23",
+            "verse:Rev.21.24",
+            "verse:Rev.21.25",
+            "verse:Rev.21.26",
+            "verse:Rev.21.27",
+            "verse:Rev.21.3",
+            "verse:Rev.21.4",
+            "verse:Rev.21.5",
+            "verse:Rev.21.6",
+            "verse:Rev.21.7",
+            "verse:Rev.21.8",
+            "verse:Rev.21.9",
+            "verse:Rev.22.1",
+            "verse:Rev.22.10",
+            "verse:Rev.22.11",
+            "verse:Rev.22.12",
+            "verse:Rev.22.13",
+            "verse:Rev.22.14",
+            "verse:Rev.22.15",
+            "verse:Rev.22.17",
+            "verse:Rev.22.18",
+            "verse:Rev.22.19",
+            "verse:Rev.22.2",
+            "verse:Rev.22.20",
+            "verse:Rev.22.21",
+            "verse:Rev.22.3",
+            "verse:Rev.22.4",
+            "verse:Rev.22.5",
+            "verse:Rev.22.6",
+            "verse:Rev.22.7",
+            "verse:Rev.22.9",
+            "verse:Rev.3.10",
+            "verse:Rev.3.11",
+            "verse:Rev.3.13",
+            "verse:Rev.3.15",
+            "verse:Rev.3.16",
+            "verse:Rev.3.17",
+            "verse:Rev.3.18",
+            "verse:Rev.3.19",
+            "verse:Rev.3.2",
+            "verse:Rev.3.20",
+            "verse:Rev.3.21",
+            "verse:Rev.3.22",
+            "verse:Rev.3.3",
+            "verse:Rev.3.5",
+            "verse:Rev.3.6",
+            "verse:Rev.3.8",
+            "verse:Rev.4.1",
+            "verse:Rev.4.10",
+            "verse:Rev.4.11",
+            "verse:Rev.4.2",
+            "verse:Rev.4.3",
+            "verse:Rev.4.4",
+            "verse:Rev.4.5",
+            "verse:Rev.4.6",
+            "verse:Rev.4.7",
+            "verse:Rev.4.8",
+            "verse:Rev.4.9",
+            "verse:Rev.5.1",
+            "verse:Rev.5.10",
+            "verse:Rev.5.11",
+            "verse:Rev.5.12",
+            "verse:Rev.5.13",
+            "verse:Rev.5.14",
+            "verse:Rev.5.2",
+            "verse:Rev.5.3",
+            "verse:Rev.5.4",
+            "verse:Rev.5.5",
+            "verse:Rev.5.6",
+            "verse:Rev.5.7",
+            "verse:Rev.5.8",
+            "verse:Rev.5.9",
+            "verse:Rev.6.1",
+            "verse:Rev.6.10",
+            "verse:Rev.6.11",
+            "verse:Rev.6.12",
+            "verse:Rev.6.13",
+            "verse:Rev.6.14",
+            "verse:Rev.6.15",
+            "verse:Rev.6.16",
+            "verse:Rev.6.17",
+            "verse:Rev.6.2",
+            "verse:Rev.6.3",
+            "verse:Rev.6.4",
+            "verse:Rev.6.5",
+            "verse:Rev.6.6",
+            "verse:Rev.6.7",
+            "verse:Rev.6.9",
+            "verse:Rev.7.1",
+            "verse:Rev.7.10",
+            "verse:Rev.7.11",
+            "verse:Rev.7.12",
+            "verse:Rev.7.13",
+            "verse:Rev.7.14",
+            "verse:Rev.7.15",
+            "verse:Rev.7.16",
+            "verse:Rev.7.17",
+            "verse:Rev.7.2",
+            "verse:Rev.7.3",
+            "verse:Rev.7.9",
+            "verse:Rev.8.1",
+            "verse:Rev.8.10",
+            "verse:Rev.8.11",
+            "verse:Rev.8.12",
+            "verse:Rev.8.13",
+            "verse:Rev.8.2",
+            "verse:Rev.8.3",
+            "verse:Rev.8.4",
+            "verse:Rev.8.5",
+            "verse:Rev.8.6",
+            "verse:Rev.8.7",
+            "verse:Rev.8.8",
+            "verse:Rev.8.9",
+            "verse:Rev.9.1",
+            "verse:Rev.9.10",
+            "verse:Rev.9.12",
+            "verse:Rev.9.13",
+            "verse:Rev.9.15",
+            "verse:Rev.9.16",
+            "verse:Rev.9.17",
+            "verse:Rev.9.18",
+            "verse:Rev.9.19",
+            "verse:Rev.9.2",
+            "verse:Rev.9.20",
+            "verse:Rev.9.21",
+            "verse:Rev.9.3",
+            "verse:Rev.9.4",
+            "verse:Rev.9.5",
+            "verse:Rev.9.6",
+            "verse:Rev.9.7",
+            "verse:Rev.9.8",
+            "verse:Rev.9.9"
+          ],
+          "record_keys": [],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.1.1"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.1.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-2-1-4",
+            "mention:wb:pl-asia-a197f19-1-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.1.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-2-1-9",
+            "mention:wb:pl-patmos-a8f60f3-1-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.1.11"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ephesus-a5feb15-1-11",
+            "mention:wb:pl-laodicea-a83fb1e-1-11",
+            "mention:wb:pl-pergamum-a75d2c1-1-11",
+            "mention:wb:pl-philadelphia-a1c7cc1-1-11",
+            "mention:wb:pl-sardis-aab4a5f-1-11",
+            "mention:wb:pl-smyrna-a2e65fb-1-11",
+            "mention:wb:pl-thyatira-a94b661-1-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-ephesus-a5feb15-2-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-smyrna-a2e65fb-2-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-2-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-2-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-pergamum-a75d2c1-2-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.13"
+          ],
+          "record_keys": [
+            "mention:wb:p-antipas-1-2-13",
+            "mention:wb:p-satan-1-2-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.14"
+          ],
+          "record_keys": [
+            "mention:wb:p-balaam-1-2-14",
+            "mention:wb:p-balak-1-2-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.18"
+          ],
+          "record_keys": [
+            "mention:wb:pl-thyatira-a94b661-2-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.20"
+          ],
+          "record_keys": [
+            "mention:wb:p-jezebel-2-2-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.2.24"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-2-24",
+            "mention:wb:pl-thyatira-a94b661-2-24"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.3.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-sardis-aab4a5f-3-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.3.4"
+          ],
+          "record_keys": [
+            "mention:wb:pl-sardis-aab4a5f-3-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.3.7"
+          ],
+          "record_keys": [
+            "mention:wb:pl-philadelphia-a1c7cc1-3-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.3.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-3-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.3.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-3-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.3.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-laodicea-a83fb1e-3-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.6.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-death-1-6-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.7.4"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-7-4"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.7.5"
+          ],
+          "record_keys": [
+            "mention:wb:p-gad-1-7-5",
+            "mention:wb:p-judah-1-7-5",
+            "mention:wb:p-reuben-1-7-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.7.6"
+          ],
+          "record_keys": [
+            "mention:wb:p-asher-1-7-6",
+            "mention:wb:p-manasseh-1-7-6",
+            "mention:wb:p-naphtali-1-7-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.7.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-issachar-1-7-7",
+            "mention:wb:p-levi-1-7-7",
+            "mention:wb:p-simeon-1-7-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.7.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-benjamin-1-7-8",
+            "mention:wb:p-joseph-1-7-8",
+            "mention:wb:p-zebulun-1-7-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.9.11"
+          ],
+          "record_keys": [
+            "mention:wb:p-abaddon-1-9-11"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.9.14"
+          ],
+          "record_keys": [
+            "mention:wb:pl-euphrates-a62dec4-9-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.11.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-egypt-af301ca-11-8",
+            "mention:wb:pl-sodom-a0aa664-11-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.12.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-michael-9-12-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.12.9"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-12-9"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.14.1"
+          ],
+          "record_keys": [
+            "mention:wb:pl-mount-zion-abd9596-14-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.15.3"
+          ],
+          "record_keys": [
+            "mention:wb:p-moses-1-15-3"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.16.12"
+          ],
+          "record_keys": [
+            "mention:wb:pl-east-ab0b2dd-16-12",
+            "mention:wb:pl-euphrates-a62dec4-16-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.16.16"
+          ],
+          "record_keys": [
+            "mention:wb:pl-armageddon-a105543-16-16"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.20.2"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-20-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.20.7"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-20-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.20.8"
+          ],
+          "record_keys": [
+            "mention:wb:pl-gog-a858723-20-8",
+            "mention:wb:pl-magog-ae3d487-20-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.20.10"
+          ],
+          "record_keys": [
+            "mention:wb:p-satan-1-20-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.21.2"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-21-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.21.10"
+          ],
+          "record_keys": [
+            "mention:wb:pl-jerusalem-a15257a-21-10"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.21.12"
+          ],
+          "record_keys": [
+            "mention:wb:p-jacob-1-21-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.22.8"
+          ],
+          "record_keys": [
+            "mention:wb:p-john-2-22-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Rev.22.16"
+          ],
+          "record_keys": [
+            "mention:wb:p-david-1-22-16"
+          ],
+          "blocker_question_keys": []
+        }
+      ]
+    }
+  ],
+  "open_questions": [],
+  "editorial_observations": [
+    {
+      "code": "source-attribution",
+      "note": "Names and references derived from STEPBible/BibleData/OpenBible (CC BY 4.0) and the Berean Standard Bible (BSB). Draft machine-generated fixture; not reviewed, approved or published."
+    },
+    {
+      "code": "machine-generated-draft",
+      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+    }
+  ]
+}
