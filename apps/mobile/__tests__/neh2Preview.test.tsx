@@ -1,6 +1,7 @@
 import {
   anchorsForVerse,
   entityBySlug,
+  mentionOccurrences,
   previewRailStops,
   splitAnchoredOccurrences,
   getPreview,
@@ -58,22 +59,8 @@ describe('curated preview asset', () => {
   it('resolves every mention selector against the bundled BSB verse text', () => {
     const preview = getPreview();
     for (const mention of preview.mentions) {
-      const text = getVerseText('Neh', 2, mention.verse, 'BSB');
-      expect(text).not.toBeNull();
-      const verse = text ?? '';
-      let index = -1;
-      let seen = 0;
-      for (
-        let i = verse.indexOf(mention.quote);
-        i !== -1;
-        i = verse.indexOf(mention.quote, i + 1)
-      ) {
-        seen += 1;
-        if (seen === mention.ordinal) {
-          index = i;
-          break;
-        }
-      }
+      const verse = getVerseText('Neh', 2, mention.verse, 'BSB') ?? '';
+      const index = mentionOccurrences(verse, mention.quote)[mention.ordinal - 1];
       expect(index).toBeGreaterThanOrEqual(0);
       expect(verse.slice(Math.max(0, index - 20), index)).toBe(mention.prefix);
       expect(verse.slice(index + mention.quote.length, index + mention.quote.length + 20)).toBe(
@@ -82,31 +69,43 @@ describe('curated preview asset', () => {
     }
   });
 
-  it('resolves mentions to their exact occurrence, not the first match', () => {
-    // Neh.2.8 anchors the second "the king"; 2:17 the second "Jerusalem".
+  it('matches mentions on word boundaries, not substrings', () => {
+    // "us" must not match inside "Jerusalem".
+    expect(mentionOccurrences('the wall of Jerusalem', 'us')).toEqual([]);
+    expect(mentionOccurrences('let us rebuild', 'us')).toEqual([4]);
+    expect(mentionOccurrences('I had never been sad', 'I')).toEqual([0]);
+    expect(mentionOccurrences('neither', 'I')).toEqual([]);
+  });
+
+  it('resolves mentions to their exact occurrence and never overlaps', () => {
+    // Neh.2.8 anchors the second "the king" (the first is inside
+    // "the king's forest"), proving ordinals are honored.
     const v8 = anchorsForVerse('Neh', 2, 8).find((anchor) => anchor.slug === 'artaxerxes-i');
     expect(v8?.ordinal).toBe(2);
-    const v17 = anchorsForVerse('Neh', 2, 17).find(
-      (anchor) => anchor.slug === 'jerusalem' && anchor.phrase === 'Jerusalem',
-    );
-    expect(v17?.ordinal).toBe(2);
-
     const text8 = getVerseText('Neh', 2, 8, 'BSB') ?? '';
+    const occurrences8 = mentionOccurrences(text8, 'the king');
+    expect(occurrences8).toHaveLength(2);
     const segments8 = splitAnchoredOccurrences(text8, anchorsForVerse('Neh', 2, 8));
     const anchored8 = segments8.findIndex((segment) => segment.slug === 'artaxerxes-i');
-    expect(anchored8).toBeGreaterThan(0);
-    // The artaxerxes segment starts at the second standalone "the king".
-    const kingA = text8.indexOf('the king');
-    const kingB = text8.indexOf('the king', kingA + 1);
     const prefixLength = segments8
       .slice(0, anchored8)
       .reduce((sum, segment) => sum + segment.text.length, 0);
-    expect(prefixLength).toBe(kingB);
+    expect(prefixLength).toBe(occurrences8[1]);
 
-    // The second "Jerusalem" sits inside "the wall of Jerusalem", which is a
-    // longer validated selector and therefore wins; the mention ordinal is
-    // still recorded so the overlap is explicit, never a silent first-match.
-    expect(segments8.some((segment) => segment.text === 'the king')).toBe(true);
+    // 2:17 anchors the standalone first "Jerusalem" and the distinct
+    // "the wall of Jerusalem"; the two selectors do not overlap.
+    const v17 = anchorsForVerse('Neh', 2, 17);
+    expect(v17.find((anchor) => anchor.slug === 'jerusalem')?.ordinal).toBe(1);
+    const text17 = getVerseText('Neh', 2, 17, 'BSB') ?? '';
+    const spans = [
+      ...v17.map((anchor) => {
+        const start = mentionOccurrences(text17, anchor.phrase)[anchor.ordinal - 1] ?? -1;
+        return [start, start + anchor.phrase.length] as const;
+      }),
+    ].sort((a, b) => a[0] - b[0]);
+    for (let i = 1; i < spans.length; i += 1) {
+      expect(spans[i]![0]).toBeGreaterThanOrEqual(spans[i - 1]![1]);
+    }
   });
 
   it('offers curated rail stops, never prototype timeline claims', () => {

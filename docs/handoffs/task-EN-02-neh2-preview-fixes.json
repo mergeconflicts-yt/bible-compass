@@ -1,0 +1,109 @@
+{
+  "attempt_id": "task:EN-02-neh2-preview-fixes:attempt-1",
+  "task_id": "EN-02",
+  "task_title": "Fix generator drift detection, overlapping mention handling, and legacy timeline loading; test the curated context flow",
+  "result": "PASS for code and automated tests; MANUAL DEVICE TESTING BLOCKED (iOS partially attempted, Android unavailable)",
+  "user_visible_outcome": "The Nehemiah 2 curated preview is now reproducible and drift-checked, its BSB mention selectors are word-bounded and non-overlapping, and the curated reader no longer loads the legacy prototype timeline. Reader behaviour is unchanged for other chapters.",
+  "read_first": [
+    "docs/handoffs/task-EN-01-neh2-curation.json",
+    "tools/build-neh2-preview.py",
+    "tools/curate_neh2.py",
+    "apps/mobile/src/content/neh2Preview.ts",
+    "apps/mobile/src/components/TimelineRail.tsx",
+    "packages/content-schema/tests/neh2-global.test.ts"
+  ],
+  "files_changed": [
+    "tools/build-neh2-preview.py (word-bounded selector check, per-verse overlap failure, --check drift mode)",
+    "tools/curate_neh2.py (word-bounded mention matching, build-time overlap failure, removed 3 overlapping mentions, v17 Jerusalem re-anchored to the standalone occurrence)",
+    "content/nehemiah-2/edition-bsb.v2.json (regenerated: 76 -> 74 mentions)",
+    "apps/mobile/assets/content/nehemiah-2.preview.json (regenerated)",
+    "apps/mobile/src/content/neh2Preview.ts (mentionOccurrences word-boundary helper; splitAnchoredOccurrences uses it)",
+    "apps/mobile/src/components/TimelineRail.tsx (only loads the legacy timeline when no curated stops are supplied)",
+    "apps/mobile/__tests__/neh2Preview.test.tsx (boundary, ordinal, curated-rail tests)",
+    "packages/content-schema/tests/neh2-global.test.ts (word-bounded selector resolution)",
+    "packages/content-schema/tests/neh2PreviewDrift.test.ts (new: generator presence + canonical digest drift)",
+    "package.json (verify:preview script)",
+    "apps/mobile/metro.config.js (new: register .wasm as a Metro asset so expo-sqlite's web worker resolves)"
+  ],
+  "fixes": {
+    "generator_drift_detection": {
+      "what": "The asset is a projection of the three packages. Added `python3 tools/build-neh2-preview.py --check`, which regenerates in memory and fails if the committed asset differs byte-for-byte. Added root script `npm run verify:preview`. Added Jest drift tests: the generator file must exist and be the one named in the asset, and the asset's canonical_digest must equal the recomputed digest of content/nehemiah-2/canonical.v2.json.",
+      "verified": "Mutating the asset digest makes the drift test fail; restoring passes. `npm run verify:preview` reports up to date. Two consecutive generator runs are byte-identical."
+    },
+    "overlapping_mentions": {
+      "what": "Selector lookup is now word-bounded everywhere (generator, projection tool, mobile renderer), so 'us' can no longer match inside 'Jerusalem'. Both generators now FAIL the build on any per-verse overlap. Removed three overlaps: 2:7 dropped the nested 'west of the Euphrates' (the governors collective keeps the phrase), 2:13 dropped the nested 'Jerusalem' (the wall phrase keeps it), and 2:17 re-anchored 'Jerusalem' to the standalone first occurrence (ordinal 2 -> 1) so it no longer nests in 'the wall of Jerusalem'.",
+      "verified": "Generator overlap check passes; 74 mentions; content-schema and mobile selector tests resolve every mention to its word-bounded occurrence; 2:8 still proves ordinal handling (second 'the king')."
+    },
+    "legacy_timeline_loading": {
+      "what": "TimelineRail no longer calls getTimeline() from neh2Draft when curated stops are provided; the legacy prototype timeline loads only for chapters that pass no stops. ReaderView passes curated stops for Nehemiah 2 (empty when the preview is invalid) so legacy data can never leak into the curated flow.",
+      "verified": "Curated rail tests assert only curated stops render; no neh2Draft timeline import is hit on the Nehemiah 2 path."
+    },
+    "web_bundling": {
+      "what": "`expo start`/`expo export` failed on the web target with 'Unable to resolve module ./wa-sqlite/wa-sqlite.wasm from expo-sqlite/web/worker.ts' because Metro did not treat .wasm as an asset. Added apps/mobile/metro.config.js pushing 'wasm' into resolver.assetExts (the documented expo-sqlite web setup). Inert for iOS/Android.",
+      "verified": "npx expo export --platform web now bundles the worker chunk and exports all 14 static routes; iOS and Android exports still succeed unchanged."
+    }
+  },
+  "commands_executed": [
+    {
+      "command": "python3 tools/build-neh2-preview.py && python3 tools/build-neh2-preview.py --check",
+      "exit_code": 0,
+      "output": "contexts=6 entities=31 mentions=74 events=6 relationships=17 connections=4; asset up to date"
+    },
+    {
+      "command": "npm run verify:preview",
+      "exit_code": 0,
+      "output": "preview asset is up to date"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean; content-schema 254/254, mobile 262/262 (within workspace runs)"
+    },
+    {
+      "command": "npm --prefix packages/content-schema test",
+      "exit_code": 0,
+      "output": "8 suites, 254 tests passed (including neh2PreviewDrift)"
+    },
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest",
+      "exit_code": 0,
+      "output": "30 suites, 262 tests passed; 0 eslint errors (17 warnings, below the 21 baseline)"
+    },
+    {
+      "command": "npx expo export --platform ios --platform android --output-dir /tmp/exp-export",
+      "exit_code": 0,
+      "output": "iOS Hermes bundle 31MB and Android Hermes bundle 31MB both compiled"
+    },
+    {
+      "command": "npx expo export --platform web --output-dir /tmp/web-export",
+      "exit_code": 0,
+      "output": "Web Bundled entry + worker chunk; 14 static routes exported"
+    }
+  ],
+  "manual_testing": {
+    "ios": {
+      "status": "BLOCKED (partially attempted)",
+      "attempted": [
+        "Booted iPhone 17 simulator (iOS 26.5) headlessly via xcrun simctl.",
+        "Installed cached Expo Go 57.0.9 onto the simulator.",
+        "Started Metro (npx expo start --localhost) and launched Expo Go, then deep-linked exp://127.0.0.1:8081/--/passage/Neh.2."
+      ],
+      "blocker": "The simulator shows the OS confirmation dialog 'Open in Expo Go?' and this environment has no Simulator.app UI (Xcode at /Applications/Xcode.app lacks Contents/Developer/Applications) and no tap automation (no idb, no XCUITest harness), so the dialog cannot be dismissed to reach the app. No prebuilt dev client and no CocoaPods exist, so a native build is also unavailable. The iOS JS bundle itself compiles (expo export).",
+      "evidence": "Screenshots at /tmp/ios-neh2.png and /tmp/ios-try2.png show Expo Go's home with the undismissable dialog."
+    },
+    "android": {
+      "status": "UNAVAILABLE",
+      "blocker": "No Android SDK, no emulator, and no Java runtime on this machine (ANDROID_HOME empty, `adb`/`emulator` absent, `java` fails). The Android JS bundle compiles via expo export, but no device or emulator can be started.",
+      "evidence": "command -v adb/emulator returned nothing; java: 'Unable to locate a Java Runtime'."
+    },
+    "not_performed": "The interactive curated flow (tap mention -> entity profile -> back, scope switching, timeline) was NOT exercised on a device or simulator. It is covered by automated React renderer tests only."
+  },
+  "remaining_limitations": [
+    "Manual iOS/Android verification is still outstanding; the iOS simulator cannot dismiss Expo Go's OS 'Open in Expo Go?' confirmation (no Simulator.app UI, no tap automation), and no Android SDK/emulator/Java exists. The curated flow is proven by automated tests and successful iOS/Android/web bundle exports only.",
+    "DailyView still reads the legacy neh2Draft 'moment' text; it was not among the surfaces in scope and remains a follow-up.",
+    "TimelineRail keeps the legacy prototype timeline for non-Nehemiah chapters by design (unchanged behaviour).",
+    "The preview asset is a draft projection and is never source of truth; the app labels it unverified draft and shows an error state when invalid (Scripture stays readable).",
+    "Canonical deity/event vocabulary remains code-only until the pending Postgres CHECK migration is applied to a live database."
+  ],
+  "scope_guard": "No other chapter curated, no database redesign, no app navigation changes. All records remain review_status draft; nothing approved or published."
+}

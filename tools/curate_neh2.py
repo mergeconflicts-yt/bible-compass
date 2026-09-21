@@ -774,7 +774,6 @@ MENTIONS: dict[int, list[tuple[str, str, str, int]]] = {
         ("artaxerxes-i", "the king", "title", 1),
         ("royal-letters", "letters", "indirect", 1),
         ("governors-beyond-the-river", "the governors west of the Euphrates", "collective", 1),
-        ("beyond-the-river", "west of the Euphrates", "explicit_name", 1),
         ("judah", "Judah", "explicit_name", 1)],
     8: [("nehemiah-governor", "I", "pronoun", 1),
         ("asaph-royal-park", "Asaph", "explicit_name", 1),
@@ -800,8 +799,7 @@ MENTIONS: dict[int, list[tuple[str, str, str, int]]] = {
          ("well-of-the-serpent", "the Well of the Serpent", "explicit_name", 1),
          ("dung-gate", "the Dung Gate", "explicit_name", 1),
          ("jerusalem-wall", "the walls of Jerusalem", "indirect", 1),
-         ("jerusalem-gates", "the gates", "indirect", 1),
-         ("jerusalem", "Jerusalem", "explicit_name", 1)],
+         ("jerusalem-gates", "the gates", "indirect", 1)],
     14: [("nehemiah-governor", "I", "pronoun", 1),
          ("fountain-gate", "the Fountain Gate", "explicit_name", 1),
          ("kings-pool", "the King\u2019s Pool", "explicit_name", 1)],
@@ -813,7 +811,7 @@ MENTIONS: dict[int, list[tuple[str, str, str, int]]] = {
     17: [("nehemiah-governor", "I", "pronoun", 1),
          ("jerusalem-wall", "the wall of Jerusalem", "indirect", 1),
          ("jerusalem-gates", "its gates", "indirect", 1),
-         ("jerusalem", "Jerusalem", "explicit_name", 2),
+         ("jerusalem", "Jerusalem", "explicit_name", 1),
          ("judean-people", "us", "pronoun", 1)],
     18: [("nehemiah-governor", "I", "pronoun", 1),
          ("judean-people", "they", "pronoun", 1)],
@@ -847,9 +845,21 @@ def bsb_verse_texts() -> dict[int, str]:
     return {b["n"]: b["text"] for b in chapter["blocks"] if b.get("t") == "v"}
 
 
+def mention_matches(text: str, quote: str) -> list[re.Match[str]]:
+    """Word-bounded matches: 'us' must never match inside 'Jerusalem'."""
+    pattern = re.compile(rf"(?<![A-Za-z0-9]){re.escape(quote)}(?![A-Za-z0-9])")
+    return list(pattern.finditer(text))
+
+
+def nth_index(text: str, quote: str, ordinal: int) -> int:
+    matches = mention_matches(text, quote)
+    if len(matches) < ordinal:
+        raise ValueError(f"quote {quote!r} ordinal {ordinal} not found in {text!r}")
+    return matches[ordinal - 1].start()
+
+
 def find_selector(text: str, quote: str, ordinal: int) -> tuple[str, str]:
-    pattern = re.compile(re.escape(quote))
-    matches = [m for m in pattern.finditer(text)]
+    matches = mention_matches(text, quote)
     if len(matches) < ordinal:
         raise ValueError(f"quote {quote!r} ordinal {ordinal} not found in {text!r}")
     m = matches[ordinal - 1]
@@ -1075,8 +1085,11 @@ def build_edition(canonical_digest: str) -> dict:
     mentions = []
     for vs, rows in sorted(MENTIONS.items()):
         text = texts[vs]
+        spans: list[tuple[int, int, str]] = []
         for slug, quote, form, ordinal in rows:
             prefix, suffix = find_selector(text, quote, ordinal)
+            start = nth_index(text, quote, ordinal)
+            spans.append((start, start + len(quote), slug))
             mentions.append({
                 "mention_key": mention_key(vs, slug),
                 "verse_key": f"verse:Neh.2.{vs}",
@@ -1092,6 +1105,16 @@ def build_edition(canonical_digest: str) -> dict:
                 "claim_keys": claims_for_entity(slug),
                 "review_status": "draft",
             })
+        # Overlapping selectors in one verse cannot both render as taps. Fail
+        # the build so curation resolves the overlap (drop the nested mention
+        # or move it to a distinct occurrence) instead of silently picking one.
+        ordered = sorted(spans)
+        for (start_a, end_a, slug_a), (start_b, end_b, slug_b) in zip(ordered, ordered[1:]):
+            if start_b < end_a:
+                raise ValueError(
+                    f"Neh.2.{vs}: overlapping mentions {slug_a}[{start_a}:{end_a}] and "
+                    f"{slug_b}[{start_b}:{end_b}]"
+                )
     mention_by_verse: dict[str, list[str]] = {f"verse:Neh.2.{n}": [] for n in range(1, 21)}
     for m in mentions:
         mention_by_verse[m["verse_key"]].append(m["mention_key"])

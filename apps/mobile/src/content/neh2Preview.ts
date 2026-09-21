@@ -216,18 +216,31 @@ export interface TextSegment {
  * anchor to its exact occurrence. Overlapping spans resolve to the earliest,
  * longest match; anything else renders as plain text. Never guesses.
  */
+function isWordChar(char: string | undefined): boolean {
+  return char !== undefined && /[A-Za-z0-9]/.test(char);
+}
+
+/**
+ * Word-bounded occurrences of a phrase, so "us" never matches inside
+ * "Jerusalem" and "I" never matches inside a word. Hermes-safe: no regex
+ * lookbehind.
+ */
+export function mentionOccurrences(text: string, phrase: string): number[] {
+  const out: number[] = [];
+  let i = text.indexOf(phrase);
+  while (i !== -1) {
+    const before = i === 0 ? undefined : text[i - 1];
+    const after = text[i + phrase.length];
+    if (!isWordChar(before) && !isWordChar(after)) out.push(i);
+    i = text.indexOf(phrase, i + 1);
+  }
+  return out;
+}
+
 export function splitAnchoredOccurrences(text: string, anchors: PreviewAnchor[]): TextSegment[] {
   const resolved = anchors.flatMap((anchor) => {
-    let index = -1;
-    let seen = 0;
-    for (let i = text.indexOf(anchor.phrase); i !== -1; i = text.indexOf(anchor.phrase, i + 1)) {
-      seen += 1;
-      if (seen === anchor.ordinal) {
-        index = i;
-        break;
-      }
-    }
-    return index >= 0 ? [{ ...anchor, index }] : [];
+    const index = mentionOccurrences(text, anchor.phrase)[anchor.ordinal - 1];
+    return index === undefined ? [] : [{ ...anchor, index }];
   });
   resolved.sort((a, b) => a.index - b.index || b.phrase.length - a.phrase.length);
   const out: TextSegment[] = [];

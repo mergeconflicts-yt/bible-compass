@@ -35,10 +35,11 @@ interface TimelineRailProps {
  */
 export function TimelineRail({ activeKey, onOpenTimeline, stops }: TimelineRailProps) {
   const { colors } = useTheme();
-  const events = getTimeline();
+  // Load the legacy prototype timeline only when curated stops are absent
+  // (non-Nehemiah chapters). The curated flow never reads neh2Draft here.
   const items: RailStop[] =
     stops ??
-    events.map((event) => ({
+    getTimeline().map((event) => ({
       key: event.canonical_key,
       top: formatYear(event.start),
       title: event.title,

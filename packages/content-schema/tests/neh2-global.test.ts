@@ -519,27 +519,28 @@ export function checkGlobalNeh2(dataset: Dataset): void {
       );
   }
 
-  // 7. BSB selectors resolve to the correct occurrence
+  // 7. BSB selectors resolve to the correct word-bounded occurrence
+  const wordBoundedMatches = (text: string, quote: string): number[] => {
+    const out: number[] = [];
+    let i = text.indexOf(quote);
+    while (i !== -1) {
+      const before = i === 0 ? undefined : text[i - 1];
+      const after = text[i + quote.length];
+      const isWord = (char: string | undefined): boolean =>
+        char !== undefined && /[A-Za-z0-9]/.test(char);
+      if (!isWord(before) && !isWord(after)) out.push(i);
+      i = text.indexOf(quote, i + 1);
+    }
+    return out;
+  };
   for (const mention of edition.records.mentions) {
     const text = bsb[mention.verse_key];
     if (text === undefined)
       fail(`mention verse missing from BSB: ${mention.verse_key}`);
     const { exact_quote, occurrence_ordinal, prefix, suffix } =
       mention.selector;
-    let index = -1;
-    let seen = 0;
-    for (
-      let i = text.indexOf(exact_quote);
-      i !== -1;
-      i = text.indexOf(exact_quote, i + 1)
-    ) {
-      seen += 1;
-      if (seen === occurrence_ordinal) {
-        index = i;
-        break;
-      }
-    }
-    if (index === -1)
+    const index = wordBoundedMatches(text, exact_quote)[occurrence_ordinal - 1];
+    if (index === undefined)
       fail(
         `${mention.mention_key}: quote ${exact_quote} ordinal ${occurrence_ordinal} not in ${mention.verse_key}`,
       );

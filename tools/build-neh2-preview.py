@@ -16,7 +16,9 @@ source of truth: the app must treat it as unverified draft content and must
 show an explicit unavailable/error state when it fails validation instead of
 falling back to any legacy draft.
 
-Usage: python3 tools/build-neh2-preview.py
+Usage:
+  python3 tools/build-neh2-preview.py          # regenerate the asset
+  python3 tools/build-neh2-preview.py --check  # fail on drift (CI gate)
 """
 
 from __future__ import annotations
@@ -25,6 +27,8 @@ import hashlib
 import json
 import re
 import sys
+
+CHECK = "--check" in sys.argv[1:]
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -122,15 +126,22 @@ def bsb_texts() -> tuple[dict[int, str], dict[int, str | None]]:
     return texts, headings
 
 
-def check_selector(text: str, quote: str, ordinal: int, prefix: str, suffix: str, where: str) -> None:
-    matches = [m.start() for m in re.finditer(re.escape(quote), text)]
+def mention_matches(text: str, quote: str) -> list[re.Match[str]]:
+    """Word-bounded matches: 'us' must never match inside 'Jerusalem'."""
+    pattern = re.compile(rf"(?<![A-Za-z0-9]){re.escape(quote)}(?![A-Za-z0-9])")
+    return list(pattern.finditer(text))
+
+
+def check_selector(text: str, quote: str, ordinal: int, prefix: str, suffix: str, where: str) -> tuple[int, int]:
+    matches = mention_matches(text, quote)
     if len(matches) < ordinal:
         fail(f"{where}: quote {quote!r} ordinal {ordinal} not found")
-    index = matches[ordinal - 1]
-    if text[max(0, index - 20) : index] != prefix:
+    m = matches[ordinal - 1]
+    if text[max(0, m.start() - 20) : m.start()] != prefix:
         fail(f"{where}: prefix mismatch")
-    if text[index + len(quote) : index + len(quote) + 20] != suffix:
+    if text[m.end() : m.end() + 20] != suffix:
         fail(f"{where}: suffix mismatch")
+    return m.start(), m.end()
 
 
 def main() -> int:
@@ -187,6 +198,7 @@ def main() -> int:
 
     # --- mentions resolve against BSB text and canonical attestations ---
     mentions_out = []
+    verse_spans: dict[int, list[tuple[int, int, str]]] = {}
     for m in edition["records"]["mentions"]:
         verse_key = m.get("verse_key", "")
         match = re.fullmatch(r"verse:Neh\.2\.(\d+)", verse_key)
@@ -197,10 +209,11 @@ def main() -> int:
         if text is None:
             fail(f"mention {m.get('mention_key')}: verse missing from BSB")
         sel = m.get("selector", {})
-        check_selector(text, sel.get("exact_quote", ""), sel.get("occurrence_ordinal", 0),
-                       sel.get("prefix", ""), sel.get("suffix", ""), m.get("mention_key", "?"))
+        start, end = check_selector(text, sel.get("exact_quote", ""), sel.get("occurrence_ordinal", 0),
+                                    sel.get("prefix", ""), sel.get("suffix", ""), m.get("mention_key", "?"))
         if m.get("attestation_key") not in attestations:
             fail(f"mention {m.get('mention_key')}: unknown attestation")
+        verse_spans.setdefault(verse, []).append((start, end, m.get("mention_key", "?")))
         mentions_out.append({
             "verse": verse,
             "quote": sel["exact_quote"],
@@ -210,6 +223,13 @@ def main() -> int:
             "entity_slug": m["target"]["key"].split("entity:", 1)[1],
             "form": m.get("mention_form", "explicit_name"),
         })
+    # Overlapping selectors in one verse cannot both be tapped; the source
+    # packages must resolve this rather than the app silently dropping one.
+    for verse, spans in sorted(verse_spans.items()):
+        ordered = sorted(spans)
+        for (_, end_a, key_a), (start_b, _, key_b) in zip(ordered, ordered[1:]):
+            if start_b < end_a:
+                fail(f"Neh.2.{verse}: overlapping mentions {key_a} and {key_b}")
     mentions_out.sort(key=lambda m: (m["verse"], m["quote"]))
 
     # --- scope display metadata (titles derived from BSB headings or ranges) ---
@@ -366,9 +386,26 @@ def main() -> int:
         "relationships": relationships_out,
         "connections": connections_out,
     }
+    summary = (f"contexts={len(contexts_out)} entities={len(entities_out)} mentions={len(mentions_out)} "
+               f"events={len(events_out)} relationships={len(relationships_out)} connections={len(connections_out)}")
+
+    # --check: drift detection. Regenerate in memory and compare byte-for-byte
+    # with the committed asset so CI can fail when the projection is stale.
+    if CHECK:
+        expected = json.dumps(asset, indent=2, ensure_ascii=False) + "\n"
+        if not OUT.exists():
+            fail(f"drift: {OUT} is missing; run tools/build-neh2-preview.py")
+        actual = OUT.read_text(encoding="utf-8")
+        if actual != expected:
+            fail(
+                "drift: apps/mobile/assets/content/nehemiah-2.preview.json is out of date "
+                "with the Nehemiah 2 packages; run tools/build-neh2-preview.py"
+            )
+        print(f"preview asset is up to date ({summary})")
+        return 0
+
     OUT.write_text(json.dumps(asset, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"contexts={len(contexts_out)} entities={len(entities_out)} mentions={len(mentions_out)} "
-          f"events={len(events_out)} relationships={len(relationships_out)} connections={len(connections_out)}")
+    print(summary)
     print(f"wrote {OUT}")
     return 0
 
