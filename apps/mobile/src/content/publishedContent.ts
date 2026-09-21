@@ -80,6 +80,18 @@ export interface PublishedContentCache {
     cachedAt: string,
   ): Promise<void>;
   readAttestations(scopeKey?: string): Promise<PublishedAttestation[]>;
+  /**
+   * Atomically store one validated context bundle for a scope. The bundle
+   * must already have passed parsePublishedContextBundle; readers re-validate
+   * and treat anything unparsable as absent.
+   */
+  writeContextBundle(
+    scopeKey: string,
+    bundle: PublishedContextBundle,
+    cachedAt: string,
+  ): Promise<void>;
+  /** The last healthy cached bundle for the scope, or null when absent/corrupt. */
+  readContextBundle(scopeKey: string): Promise<PublishedContextBundle | null>;
   markSynced(at: string): Promise<void>;
   lastSyncedAt(): Promise<string | null>;
 }

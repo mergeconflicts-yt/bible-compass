@@ -10,6 +10,9 @@
 
 import { z } from 'zod';
 
+/** Contract version stored alongside every cached bundle. */
+export const PUBLISHED_CONTEXT_SCHEMA_VERSION = 1;
+
 export class PublishedContextError extends Error {
   constructor(message: string) {
     super(`publishedContext: ${message}`);

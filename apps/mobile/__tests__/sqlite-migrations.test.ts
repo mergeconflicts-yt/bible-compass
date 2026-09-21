@@ -120,9 +120,9 @@ describe('sqlite migration runner', () => {
   it('applies the production registry on a fresh database and records the ledger', async () => {
     const fake = new FakeExecutor();
     const result = await migrate(fake, MIGRATIONS, hashSql);
-    expect(result).toEqual({ applied: [1, 2, 3, 4, 5, 6, 7, 8], skipped: [] });
-    expect(fake.ledger).toHaveLength(8);
-    expect(fake.ledger.map((row) => row.version)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(result).toEqual({ applied: [1, 2, 3, 4, 5, 6, 7, 8, 9], skipped: [] });
+    expect(fake.ledger).toHaveLength(9);
+    expect(fake.ledger.map((row) => row.version)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(fake.ledger.map((row) => row.name)).toEqual([
       'core_001',
       'headings_002',
@@ -132,6 +132,7 @@ describe('sqlite migration runner', () => {
       'sync_006',
       'reminder_007',
       'published_cache_008',
+      'published_context_cache_009',
     ]);
     for (const [index, row] of fake.ledger.entries()) {
       const expectedSha = await hashSql(MIGRATIONS[index]?.sql ?? '');
@@ -147,11 +148,11 @@ describe('sqlite migration runner', () => {
       sql.includes('CREATE TABLE content_installations'),
     );
     const second = await migrate(fake, MIGRATIONS, hashSql);
-    expect(second).toEqual({ applied: [], skipped: [1, 2, 3, 4, 5, 6, 7, 8] });
+    expect(second).toEqual({ applied: [], skipped: [1, 2, 3, 4, 5, 6, 7, 8, 9] });
     expect(
       fake.execCalls.filter((sql) => sql.includes('CREATE TABLE content_installations')),
     ).toHaveLength(creates.length);
-    expect(insertCount(fake)).toBe(8);
+    expect(insertCount(fake)).toBe(9);
   });
 
   it('fails closed when registered SQL drifts from the applied ledger', async () => {
@@ -241,9 +242,9 @@ describe('sqlite migration runner', () => {
     await expect(migrate(fake, MIGRATIONS, bogus)).rejects.toMatchObject({ code: 'invalid-hash' });
   });
 
-  it('keeps the production registry to versions 1-8 (published cache in 008)', () => {
+  it('keeps the production registry to versions 1-9 (published context cache in 009)', () => {
     expect(validateMigrations(MIGRATIONS).map((migration) => migration.version)).toEqual([
-      1, 2, 3, 4, 5, 6, 7, 8,
+      1, 2, 3, 4, 5, 6, 7, 8, 9,
     ]);
   });
 });
@@ -257,7 +258,7 @@ describe('sqlite database adapter wiring', () => {
     expect(DATABASE_FILE).toBe('bible-compass.db');
     expect(fake.execCalls).toContain('PRAGMA journal_mode = WAL;');
     expect(fake.execCalls).toContain('PRAGMA foreign_keys = ON;');
-    expect(fake.ledger.map((row) => row.version)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(fake.ledger.map((row) => row.version)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(db).toBe(fake);
   });
 });

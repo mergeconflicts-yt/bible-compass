@@ -1,0 +1,33 @@
+{
+  "attempt_id": "task:EN-09-context-back-and-bullets:attempt-2",
+  "task_id": "EN-09",
+  "task_title": "Context sheet back navigation and bullet splitting for verse references",
+  "result": "PASS — back-stack navigation added, toBullets no longer splits verse references; all tests pass.",
+  "user_visible_outcome": "Tapping a person, place, event or the timeline in the Passage Context sheet opens the sheet (one sheet at a time), and Back unwinds one sheet at a time back to the context sheet. The Essential brief keeps reference such as (Neh.1) in one bullet.",
+  "files_changed": [
+    "apps/mobile/src/components/sheets/ContextFlow.tsx (context navigation stack; Back unwinds one sheet; close clears it)",
+    "apps/mobile/src/content/neh2Draft.ts (toBullets splits only on real sentence ends)",
+    "apps/mobile/__tests__/entitychip.test.tsx (backs out of an entity sheet to the context sheet)",
+    "apps/mobile/__tests__/draft.test.ts (dotted verse references stay in one bullet)"
+  ],
+  "fixes": {
+    "back_navigation": "ContextFlow keeps a stack and shows only ONE sheet at a time: the context sheet is visible only when the stack is empty, otherwise the top entity/event/timeline sheet is visible. This avoids stacking React Native Modals (a second Modal silently failed to present, so taps looked dead) while still letting Back pop one level. Closing the flow clears the stack.",
+    "bullet_splitting": "toBullets now splits only where a sentence terminator is followed by whitespace and a capital letter/opening quote (Hermes-safe, no lookbehind). Book-abbreviation periods such as 'Neh.1' no longer split; '(Neh.1).' followed by a new sentence still does."
+  },
+  "commands_executed": [
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest (NODE_OPTIONS=--experimental-sqlite)",
+      "exit_code": 0,
+      "output": "34 suites, 296 tests passed; 0 eslint errors (17 warnings, below baseline)"
+    }
+  ],
+  "tests": {
+    "back_navigation": "Opening a person from the context sheet shows the entity sheet; pressing Back hides it and the context sheet remains to continue from.",
+    "bullet_splitting": "toBullets('Ruined (Neh.1). Earlier work was stopped (Ezra 4:17-23).') returns exactly two bullets, keeping each reference intact."
+  },
+  "known_limitations": [
+    "Manual iOS/Android verification was not run in this environment; behaviour is covered by component tests.",
+    "Events and the timeline are pushed onto the same stack; there is no separate history indicator, only Back."
+  ],
+  "stop_condition": "Stopped after one-by-one Back navigation and correct bullet splitting were implemented and tested. No publication, no Supabase API change, no other chapter."
+}

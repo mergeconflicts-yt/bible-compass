@@ -159,21 +159,45 @@ export async function fetchPublishedAttestations(
 }
 
 /**
- * Complete published context bundle for a scope. Remote-only (no SQLite
- * caching by design); returns null when unconfigured, offline, or when the
- * payload fails runtime validation, so callers render an honest unavailable
- * state instead of partial content.
+ * Complete published context bundle for a scope: remote first, then the
+ * last healthy SQLite-cached bundle.
+ *
+ * Only bundles that pass runtime validation reach the cache (the repository
+ * validates before returning; the cache re-validates on read). A network,
+ * validation or cache-write failure never destroys the previous healthy
+ * bundle: nothing is overwritten on failure, and the cached copy is served
+ * instead. Returns null only when neither source has a healthy bundle.
  */
 export async function fetchPublishedContextBundle(
   scopeKey: string,
 ): Promise<PublishedContextBundle | null> {
   const repo = current;
-  if (!repo) return null;
-  try {
-    return await repo.fetchPublishedContextBundle(scopeKey);
-  } catch {
-    return null;
+  if (repo) {
+    try {
+      const bundle = await repo.fetchPublishedContextBundle(scopeKey);
+      const store = cache;
+      if (store) {
+        try {
+          await store.writeContextBundle(scopeKey, bundle, nowIso());
+        } catch {
+          // Cache write failed: keep the fresh bundle and the old cached row.
+        }
+      }
+      return bundle;
+    } catch {
+      // Network or validation failure: fall through to the cached bundle,
+      // which was never overwritten.
+    }
   }
+  const store = cache;
+  if (store) {
+    try {
+      return await store.readContextBundle(scopeKey);
+    } catch {
+      return null;
+    }
+  }
+  return null;
 }
 
 /** When the cache last received content, or null when never synced. */

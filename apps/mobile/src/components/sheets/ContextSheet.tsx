@@ -18,6 +18,7 @@ import {
   previewOtherSlugs,
   previewPeople,
   previewPlaceSlugs,
+  shortRange,
   toBullets,
   type PreviewEvent,
 } from '@/content/neh2Preview';
@@ -54,11 +55,9 @@ export function ContextSheet({
   const preferences = useOptionalPreferences();
   const translationId = preferences?.translationId ?? 'BSB';
   const [tab, setTab] = useState(0);
-  const scopes = previewContexts();
-  const [scopeIndex, setScopeIndex] = useState(0);
-  const scope = scopes[scopeIndex] ?? scopes[0]!;
+  // The sheet shows the chapter context only: no scope rail at the top.
+  const scope = previewContexts()[0]!;
   const brief = previewBrief(scope.slug);
-  const [whenFirst] = toBullets(scope.when);
   const scopeEvents = previewEventsForScope(scope.slug);
 
   return (
@@ -69,14 +68,6 @@ export function ContextSheet({
       full
       testID="context-sheet"
     >
-      <Segmented
-        options={scopes.map((entry) => entry.title)}
-        selected={scopeIndex}
-        onSelect={setScopeIndex}
-        accessibilityLabel="Passage scopes"
-        testID="context-scope"
-        compact
-      />
       <Segmented
         options={tabs}
         selected={tab}
@@ -172,14 +163,12 @@ export function ContextSheet({
 
       {tab === 1 ? (
         <View testID="context-history">
-          <View style={styles.chipList}>
-            <EventChip
-              title={(whenFirst ?? scope.when).trim()}
-              qualifier="Approximate"
-              onPress={onOpenTimeline}
-              testID="context-time-chip"
-            />
-          </View>
+          <AppText variant="caption" color="accent" style={styles.eyebrow}>
+            WHEN
+          </AppText>
+          <AppText variant="body" scripture style={styles.whenText} testID="context-when">
+            {scope.when}
+          </AppText>
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
             PLACES IN THIS PASSAGE
           </AppText>
@@ -201,7 +190,7 @@ export function ContextSheet({
               <EventChip
                 key={event.key}
                 title={event.title}
-                qualifier={event.range}
+                qualifier={shortRange(event.range)}
                 onPress={() => (onOpenEvent ? onOpenEvent(event) : onOpenTimeline())}
                 testID={`context-event-${event.key}`}
               />
@@ -256,6 +245,9 @@ const styles = StyleSheet.create({
   eyebrow: {
     letterSpacing: 1.5,
     marginTop: space[4],
+    marginBottom: space[2],
+  },
+  whenText: {
     marginBottom: space[2],
   },
   chipList: {

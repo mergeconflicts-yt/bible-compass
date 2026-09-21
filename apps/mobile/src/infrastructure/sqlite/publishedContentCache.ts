@@ -14,6 +14,11 @@ import type {
   PublishedEntity,
   PublishedVerse,
 } from '@/content/publishedContent';
+import {
+  parsePublishedContextBundle,
+  PUBLISHED_CONTEXT_SCHEMA_VERSION,
+  type PublishedContextBundle,
+} from '@/content/publishedContext';
 import type { PassageDbHandle } from '@/content/passageStore';
 
 interface VerseRow {
@@ -45,6 +50,13 @@ interface AttestationRow {
 
 interface MetaRow {
   value: string;
+}
+
+interface BundleRow {
+  scope_key: string;
+  schema_version: number;
+  payload: string;
+  cached_at: string;
 }
 
 const LAST_SYNCED_KEY = 'published:last_synced_at';
@@ -192,6 +204,40 @@ export class SqlitePublishedContentCache implements PublishedContentCache {
       explicitness: row.explicitness,
       reviewState: row.review_state,
     }));
+  }
+
+  async writeContextBundle(
+    scopeKey: string,
+    bundle: PublishedContextBundle,
+    cachedAt: string,
+  ): Promise<void> {
+    // The caller guarantees the bundle was validated; store it as JSON with
+    // the contract version and cache timestamp. A single INSERT OR REPLACE is
+    // the atomic replacement: readers either see the old row or the new one.
+    const payload = JSON.stringify(bundle);
+    if (payload.length === 0) throw new Error('refusing to cache an empty bundle payload');
+    await this.db.runAsync(
+      'INSERT OR REPLACE INTO published_context_bundles (scope_key, schema_version, payload, cached_at) VALUES (?, ?, ?, ?)',
+      [scopeKey, PUBLISHED_CONTEXT_SCHEMA_VERSION, payload, cachedAt],
+    );
+    await this.markSynced(cachedAt);
+  }
+
+  async readContextBundle(scopeKey: string): Promise<PublishedContextBundle | null> {
+    const rows = await this.db.getAllAsync<BundleRow>(
+      'SELECT scope_key, schema_version, payload, cached_at FROM published_context_bundles WHERE scope_key = ?',
+      [scopeKey],
+    );
+    const row = rows[0];
+    if (!row) return null;
+    // A bundle written by an older contract, or corrupt JSON, is treated as
+    // absent (never served); the next healthy refresh replaces it.
+    if (row.schema_version !== PUBLISHED_CONTEXT_SCHEMA_VERSION) return null;
+    try {
+      return parsePublishedContextBundle(JSON.parse(row.payload));
+    } catch {
+      return null;
+    }
   }
 
   async markSynced(at: string): Promise<void> {

@@ -1,0 +1,56 @@
+{
+  "attempt_id": "task:EN-07-context-bundle-cache:attempt-1",
+  "task_id": "EN-07",
+  "task_title": "Cache complete validated context bundles by scope_key in SQLite",
+  "result": "PASS — 9 new cache tests plus the full suite pass; fetchPublishedContextBundle works online and offline.",
+  "user_visible_outcome": "No screen change. fetchPublishedContextBundle() now writes each validated bundle through to SQLite and serves the last healthy cached bundle when Supabase is unavailable, keeping scopes isolated and never serving corrupt or wrong-version data.",
+  "read_first": [
+    "docs/handoffs/task-EN-06-published-context-contract.json",
+    "docs/handoffs/task-EN-05-offline-cache.json",
+    "apps/mobile/src/infrastructure/sqlite/publishedContentCache.ts"
+  ],
+  "files_changed": [
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (migration 009 published_context_cache_009)",
+    "apps/mobile/src/content/publishedContext.ts (PUBLISHED_CONTEXT_SCHEMA_VERSION)",
+    "apps/mobile/src/content/publishedContent.ts (cache port: writeContextBundle / readContextBundle)",
+    "apps/mobile/src/infrastructure/sqlite/publishedContentCache.ts (atomic bundle upsert + re-validating read)",
+    "apps/mobile/src/content/publishedContentStore.ts (fetchPublishedContextBundle: remote-first, write-through, offline fallback)",
+    "apps/mobile/__tests__/published-context-cache.test.ts (new)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (registry now 1-9)",
+    "apps/mobile/__tests__/published-content.test.ts (fake cache implements the new port methods)"
+  ],
+  "design": {
+    "schema": "Migration 009 adds published_context_bundles(scope_key PRIMARY KEY, schema_version, payload TEXT, cached_at) with a cached_at index. One row per scope; schema_version records the bundle contract version; cached_at records the cache timestamp.",
+    "atomic_replacement": "writeContextBundle is a single INSERT OR REPLACE keyed by scope_key — readers see either the old row or the new row, never a partial write.",
+    "validated_only": "Only bundles that passed parsePublishedContextBundle reach the cache (the repository validates before returning; readContextBundle re-parses and re-validates, returning null for corrupt JSON, an invalid bundle, or a mismatched schema_version).",
+    "failure_preservation": "fetchPublishedContextBundle is remote-first with write-through. A network or validation failure (the repository throws) or a cache-write failure leaves the previous row untouched and serves the cached healthy bundle; the store returns null only when neither source has a healthy bundle.",
+    "scope_isolation": "All reads and writes are keyed by scope_key; one scope's cached bundle can never be served for another."
+  },
+  "commands_executed": [
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest (NODE_OPTIONS=--experimental-sqlite)",
+      "exit_code": 0,
+      "output": "34 suites, 295 tests passed (migration 009 runs on a real SQLite engine in the migration tests); 0 eslint errors (17 warnings, below baseline)"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    }
+  ],
+  "tests": {
+    "online_write_through": "A successful online fetch returns the bundle and stores it with the schema version and cached_at timestamp.",
+    "offline_reads": "With Supabase failing, fetchPublishedContextBundle serves the cached bundle.",
+    "scope_isolation": "Cached scope A is served for A and never for B (both adapter-level and offline store-level).",
+    "corrupt_cached_data": "Invalid JSON and a mismatched schema_version are treated as absent (null), never served.",
+    "failed_refresh_preservation": "A validation/network failure keeps the cached payload unchanged; a cache-write failure returns the fresh bundle and leaves the cached row unchanged.",
+    "migration_idempotency": "sqlite-migrations.test.ts applies the registry (1-9) once, records the ledger, and proves a re-run is a verified no-op.",
+    "empty_cache": "No remote and no cached bundle yields null."
+  },
+  "known_limitations": [
+    "The curated Nehemiah 2 draft is not published, so a live online bundle is empty; offline behaviour is proven with synthetic validated fixtures.",
+    "No cache eviction/TTL: a scope's row is replaced only when that scope is fetched again; cached_at is stored for a future freshness policy.",
+    "The bundle cache is independent of the EN-05 verses/entities/attestations cache; nothing was changed in the Supabase read API."
+  ],
+  "stop_condition": "Stopped after fetchPublishedContextBundle() works reliably online and offline through the existing repository boundary, with all listed cache tests and the full suite passing. No screens, no publication, no draft exposure, no Supabase API change, no other chapter."
+}

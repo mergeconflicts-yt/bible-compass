@@ -179,6 +179,17 @@ CREATE TABLE published_cache_meta (
 );
 `.trim();
 
+const PUBLISHED_CONTEXT_CACHE_009_SQL = `
+CREATE TABLE published_context_bundles (
+  scope_key TEXT PRIMARY KEY,
+  schema_version INTEGER NOT NULL CHECK (schema_version > 0),
+  payload TEXT NOT NULL CHECK (length(payload) > 0),
+  cached_at TEXT NOT NULL
+);
+
+CREATE INDEX idx_published_context_bundles_cached_at ON published_context_bundles (cached_at DESC);
+`.trim();
+
 /**
  * Ordered migration registry. New migrations append with the next version;
  * never edit an applied migration (drift is detected and fails closed).
@@ -192,4 +203,5 @@ export const MIGRATIONS: Migration[] = [
   { version: 6, name: 'sync_006', sql: SYNC_006_SQL },
   { version: 7, name: 'reminder_007', sql: REMINDER_007_SQL },
   { version: 8, name: 'published_cache_008', sql: PUBLISHED_CACHE_008_SQL },
+  { version: 9, name: 'published_context_cache_009', sql: PUBLISHED_CONTEXT_CACHE_009_SQL },
 ];

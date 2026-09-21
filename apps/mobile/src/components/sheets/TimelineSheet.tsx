@@ -6,7 +6,7 @@ import { Sheet } from '@/components/Sheet';
 import { AppText } from '@/components/AppText';
 import { ReferenceText } from '@/components/ReferenceText';
 import { Button } from '@/components/Button';
-import { previewEvents, previewNotice, type PreviewEvent } from '@/content/neh2Preview';
+import { previewEvents, previewNotice, shortRange, type PreviewEvent } from '@/content/neh2Preview';
 
 interface TimelineSheetProps {
   visible: boolean;
@@ -15,10 +15,12 @@ interface TimelineSheetProps {
 }
 
 /**
- * Passage events rendered from the generated Nehemiah 2 preview asset.
- * The curated packages carry no dates, so rows show the passage range plus
- * participants and places instead of years. Precision labels are honest:
- * everything here is unverified draft content (see previewNotice).
+ * Vertical passage timeline rendered from the generated Nehemiah 2 preview
+ * asset: one row per event laid out as line · dot · verse details, with the
+ * connecting line running through the dots (trimmed at the two ends). The
+ * curated packages carry no dates, so each dot is labelled with its same-book
+ * reference range. Everything here is unverified draft content (see
+ * previewNotice).
  */
 export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheetProps) {
   const { colors } = useTheme();
@@ -75,10 +77,11 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
           The Nehemiah 2 preview failed validation, so passage events are unavailable.
         </AppText>
       ) : null}
-      <View style={[styles.rail, { borderColor: colors.border }]}>
+      <View style={styles.timeline} testID="timeline-body">
         {events.map((event, index) => {
           const participants = event.participants.map((person) => person.name).join(', ');
           const places = event.places.map((place) => place.name).join(', ');
+          const last = index === events.length - 1;
           return (
             <View
               key={event.key}
@@ -93,20 +96,30 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
               }
               style={styles.item}
             >
-              <AppText variant="label" style={styles.year}>
-                {event.range}
-              </AppText>
-              <View
-                style={[
-                  styles.node,
-                  {
-                    backgroundColor: colors.border,
-                    borderColor: colors.canvas,
-                  },
-                ]}
-              />
-              <View style={styles.itemText}>
-                <AppText variant="label">{event.title}</AppText>
+              {/* Dot anchored to the event title; the line runs down from it
+                  to the next dot, so dots mark each heading. */}
+              <View style={styles.railCol}>
+                <View
+                  style={[
+                    styles.dot,
+                    { backgroundColor: colors.accent, borderColor: colors.canvas },
+                  ]}
+                />
+                <AppText variant="caption" color="textSecondary" style={styles.railRange}>
+                  {shortRange(event.range)}
+                </AppText>
+                <View
+                  style={[
+                    styles.line,
+                    last ? styles.lineNone : styles.lineFlex,
+                    { backgroundColor: last ? 'transparent' : colors.border },
+                  ]}
+                />
+              </View>
+              <View style={styles.details}>
+                <AppText variant="title3" style={styles.title}>
+                  {event.title}
+                </AppText>
                 {participants ? (
                   <AppText variant="metadata" color="textSecondary" style={styles.note}>
                     {`With ${participants}`}
@@ -142,30 +155,48 @@ const styles = StyleSheet.create({
     gap: space[4],
     marginVertical: space[2],
   },
-  rail: {
-    borderLeftWidth: 2,
-    marginLeft: space[8],
-    paddingLeft: space[4],
-    marginVertical: space[2],
+  timeline: {
+    marginVertical: space[3],
   },
   item: {
     flexDirection: 'row',
-    paddingVertical: space[3],
-    gap: space[2],
+    gap: space[3],
   },
-  year: {
-    width: 52,
-    marginLeft: -space[10],
+  railCol: {
+    width: 48,
+    alignItems: 'center',
   },
-  node: {
+  line: {
+    width: 2,
+  },
+  lineFlex: {
+    flex: 1,
+  },
+  lineNone: {
+    flex: 0,
+    height: 0,
+  },
+  dot: {
     width: 12,
     height: 12,
     borderRadius: 6,
     borderWidth: 2,
+    // Anchor the dot to the first line of the event title.
     marginTop: 4,
+    marginBottom: 2,
   },
-  itemText: {
+  railRange: {
+    fontSize: 10,
+    lineHeight: 12,
+    marginVertical: 2,
+    textAlign: 'center',
+  },
+  details: {
     flex: 1,
+    paddingBottom: space[5],
+  },
+  title: {
+    marginTop: 0,
   },
   note: {
     marginTop: space[1],

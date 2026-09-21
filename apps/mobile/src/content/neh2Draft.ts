@@ -230,9 +230,18 @@ export function foregroundEvents(): DraftEvent[] {
 
 /** Splitter for brief prose into scannable bullets (no lookbehind: Hermes-safe). */
 export function toBullets(text: string): string[] {
-  const sentences = text.match(/[^.!?]+[.!?]+/g);
-  if (!sentences) return [text.trim()];
-  return sentences.map((sentence) => sentence.trim()).filter((sentence) => sentence.length > 0);
+  const trimmed = text.trim();
+  if (!trimmed) return [];
+  // Split only where a sentence terminator is followed by whitespace and a
+  // capital letter or opening quote. This keeps dotted references such as
+  // "Neh.1" / "Ezra 4:17-23" inside one bullet instead of splitting on the
+  // book abbreviation. No lookbehind (Hermes-safe).
+  const DELIM = '\u0000';
+  const marked = trimmed.replace(/([.!?]["'”’)]*)\s+(?=[A-Z“"'(])/g, `$1${DELIM}`);
+  return marked
+    .split(DELIM)
+    .map((sentence) => sentence.trim())
+    .filter((sentence) => sentence.length > 0);
 }
 
 /** Cross-passage connections derived from draft source references. */

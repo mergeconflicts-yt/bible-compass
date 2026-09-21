@@ -14,6 +14,7 @@ import {
   previewNotice,
   entityBySlug,
   rolesForEntity,
+  shortRange,
   type PreviewEntity,
   type PreviewEvent,
   type PreviewRole,
@@ -245,17 +246,41 @@ export function FullCard({
       {event ? (
         <View style={[styles.spineCard, { backgroundColor: colors.surfaceSubtle }]}>
           <AppText variant="caption" color="accent" style={styles.eyebrow}>
-            IN NEHEMIAH 2 · {event.range}
+            {`IN NEHEMIAH 2 · ${shortRange(event.range)}`}
           </AppText>
           {event.participants.length > 0 ? (
-            <AppText variant="body" scripture style={styles.sectionBody}>
-              {`With ${event.participants.map((person) => person.name).join(', ')}`}
-            </AppText>
+            <>
+              <AppText variant="caption" color="textSecondary" style={styles.sectionBody}>
+                WITH
+              </AppText>
+              <View style={styles.spineList}>
+                {event.participants.map((person) => (
+                  <EntityChip
+                    key={`participant-${person.slug}`}
+                    slug={person.slug}
+                    onPress={(slug) => onOpenEntity?.(slug)}
+                    testID={`event-participant-${person.slug}`}
+                  />
+                ))}
+              </View>
+            </>
           ) : null}
           {event.places.length > 0 ? (
-            <AppText variant="body" scripture style={styles.sectionBody}>
-              {`At ${event.places.map((place) => place.name).join(', ')}`}
-            </AppText>
+            <>
+              <AppText variant="caption" color="textSecondary" style={styles.sectionBody}>
+                AT
+              </AppText>
+              <View style={styles.spineList}>
+                {event.places.map((place) => (
+                  <EntityChip
+                    key={`place-${place.slug}`}
+                    slug={place.slug}
+                    onPress={(slug) => onOpenEntity?.(slug)}
+                    testID={`event-place-${place.slug}`}
+                  />
+                ))}
+              </View>
+            </>
           ) : null}
         </View>
       ) : null}

@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, within } from '@testing-library/react-native';
 import { EntitySheet } from '@/components/sheets/EntitySheet';
+import { TimelineSheet } from '@/components/sheets/TimelineSheet';
 import { previewEvents } from '@/content/neh2Preview';
 
 describe('EntitySheet full hierarchy', () => {
@@ -103,13 +104,27 @@ describe('Event full cards', () => {
     );
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
     expect(
-      within(screen.getByTestId('entity-sheet')).getByText(
-        'Audience With Artaxerxes · Neh.2.1–Neh.2.8',
-      ),
-    ).toBeTruthy();
-    expect(screen.getByText('IN NEHEMIAH 2 · Neh.2.1–Neh.2.8')).toBeTruthy();
-    expect(screen.getByText(/With Nehemiah, Artaxerxes I, The queen/)).toBeTruthy();
+      within(screen.getByTestId('entity-sheet')).getAllByText('Audience With Artaxerxes').length,
+    ).toBeGreaterThanOrEqual(1);
+    // Same-book short range: no repeated book name.
+    expect(screen.getByText('IN NEHEMIAH 2 · 2:1–8')).toBeTruthy();
+    expect(screen.getByTestId('event-participant-nehemiah-governor')).toBeTruthy();
     fireEvent.press(screen.getByTestId('fullcard-lateral'));
     expect(onOpenTimeline).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('TimelineSheet layout', () => {
+  it('renders one line-dot-details row per curated event', () => {
+    render(<TimelineSheet visible onClose={jest.fn()} />);
+    expect(screen.getByTestId('timeline-body')).toBeTruthy();
+    const events = previewEvents();
+    expect(events.length).toBeGreaterThan(0);
+    for (const event of events) {
+      expect(screen.getByTestId(`timeline-${event.key}`)).toBeTruthy();
+    }
+    // Same-book short range next to the dot, no repeated book name.
+    expect(screen.getAllByText('2:1–8').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText('Audience With Artaxerxes')).toBeTruthy();
   });
 });

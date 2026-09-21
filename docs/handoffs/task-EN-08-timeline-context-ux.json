@@ -1,0 +1,53 @@
+{
+  "attempt_id": "task:EN-08-timeline-context-ux:attempt-2",
+  "task_id": "EN-08",
+  "task_title": "Timeline labels, passage-context Essential/History fixes",
+  "result": "PASS — UI fixes implemented and all mobile/repo tests pass.",
+  "user_visible_outcome": "The passage keeps its timeline rail (same-book ranges like 2:1–8, no repeated book name). Inside the Passage Context sheet the top scope rail is removed so the chapter context is shown directly; 'Nisan ...' is plain context (no navigation), and places, events and event participants/places are tappable.",
+  "read_first": [
+    "apps/mobile/src/components/sheets/ContextSheet.tsx",
+    "apps/mobile/src/components/sheets/TimelineSheet.tsx",
+    "apps/mobile/src/components/ReaderView.tsx",
+    "tools/build-neh2-preview.py"
+  ],
+  "files_changed": [
+    "tools/build-neh2-preview.py (event title is the event name only; range no longer embedded)",
+    "apps/mobile/assets/content/nehemiah-2.preview.json (regenerated)",
+    "apps/mobile/src/components/sheets/TimelineSheet.tsx (same-book short range via shortRange)",
+    "apps/mobile/src/components/sheets/ContextSheet.tsx (scope rail removed from the top; WHEN is plain text; event chips use short range)",
+    "apps/mobile/src/components/sheets/ContextFlow.tsx (close context before opening entity/event/timeline)",
+    "apps/mobile/src/components/sheets/EntitySheet.tsx (event participants/places are tappable EntityChips; short range label)",
+    "apps/mobile/src/components/ReaderView.tsx (passage timeline rail restored)",
+    "apps/mobile/__tests__/reader.test.tsx, neh2Preview.test.tsx, entitychip.test.tsx, cards.test.tsx (updated expectations)"
+  ],
+  "fixes": {
+    "no_repeated_book_name": "Event titles are now the event name only (e.g. 'Audience With Artaxerxes'); the timeline rows and event chips render the range in same-book short form '2:1–8' via shortRange(), so 'Neh' never repeats for the same event.",
+    "remove_top_timeline": "Corrected: the passage timeline rail is RESTORED at the top of the reader. The rail removed is the passage-scope selector (Segmented) at the top of the Passage Context sheet; the sheet now always shows the chapter context directly.",
+    "history_clicks": "ContextFlow now closes the context sheet before opening the entity, event or timeline sheet, so a tap has a visible effect (sheets no longer stack). Event cards now render participants and places as tappable EntityChips instead of inert prose.",
+    "nisan_no_longer_navigates": "The History 'when' chip that jumped to the timeline was replaced by plain WHEN text (testID context-when); it is no longer a control.",
+    "places_events_actionable": "History places open the entity card; events open the event card; event participants/places open their entity cards.",
+    "passage_rail": "Restored the era rail with curated stops; it shows same-book short ranges such as 2:1–8 and the event names."
+  },
+  "commands_executed": [
+    {
+      "command": "python3 tools/build-neh2-preview.py && npm run verify:preview",
+      "exit_code": 0,
+      "output": "asset regenerated; up to date (contexts=6 entities=31 mentions=74 events=6 relationships=17 connections=4)"
+    },
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest (NODE_OPTIONS=--experimental-sqlite)",
+      "exit_code": 0,
+      "output": "34 suites, 295 tests passed; 0 eslint errors (17 warnings, below baseline)"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    }
+  ],
+  "interpretation": "'Remove timeline at the top in Essential' = the passage-scope rail (Segmented) at the top of the Passage Context sheet, not the reader's timeline rail. The reader rail is kept/restored.",
+  "known_limitations": [
+    "Manual iOS/Android visual verification was not run in this environment; the changes are covered by component tests."
+  ],
+  "stop_condition": "Stopped after the reported timeline and passage-context issues were fixed with updated tests. No publication, no Supabase API change, no other chapter."
+}

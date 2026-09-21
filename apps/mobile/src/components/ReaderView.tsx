@@ -255,9 +255,8 @@ export function ReaderView({
         <TimelineRail
           activeKey={null}
           onOpenTimeline={() => setTimelineOpen(true)}
-          // Neh.2 always uses curated stops (empty when the preview is
-          // invalid) so the legacy prototype timeline can never leak into
-          // the curated flow. Other chapters keep their existing behaviour.
+          // Neh.2 uses curated stops (empty when the preview is invalid);
+          // other chapters keep the legacy prototype timeline.
           stops={wantsPreview ? (contextMode ? previewRailStops() : []) : undefined}
         />
       </View>

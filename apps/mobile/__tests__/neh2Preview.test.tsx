@@ -168,8 +168,8 @@ describe('preview rejection', () => {
   });
 });
 
-describe('curated scope coverage', () => {
-  it('displays context for all six passage scopes', () => {
+describe('curated chapter context', () => {
+  it('renders the chapter context without a scope rail at the top', () => {
     render(
       <ContextSheet
         visible
@@ -179,17 +179,10 @@ describe('curated scope coverage', () => {
         onOpenPassage={jest.fn()}
       />,
     );
-    const titles = [
-      'Nehemiah 2',
-      'Nehemiah Sent to Jerusalem',
-      'Nehemiah 2:9–10',
-      'Nehemiah Inspects the Walls',
-      'Nehemiah 2:17–18',
-      'Nehemiah 2:19–20',
-    ];
-    titles.forEach((title, index) => {
-      fireEvent.press(screen.getByTestId(`context-scope-${index}`));
-      expect(screen.getByText(title)).toBeTruthy();
-    });
+    // No passage-scope rail above the tabs; the chapter context is shown.
+    expect(screen.queryByTestId('context-scope')).toBeNull();
+    expect(screen.getByTestId('context-essential')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('context-tabs-1'));
+    expect(screen.getByTestId('context-history')).toBeTruthy();
   });
 });

@@ -320,7 +320,9 @@ def main() -> int:
         scope = ev["scripture_accounts"][0]["scope_key"]
         events_out.append({
             "key": ev["event_key"].split("event:", 1)[1],
-            "title": f"{humanize(ev['event_key'].split('event:', 1)[1])} · {display_range(scope)}",
+            # Title is the event name only; the range is rendered separately
+            # (same-book short form) so the book is never repeated.
+            "title": humanize(ev["event_key"].split("event:", 1)[1]),
             "range": display_range(scope),
             "scope_key": scope,
             "participants": [{"slug": k.split("entity:", 1)[1], "name": names[k.split("entity:", 1)[1]]}

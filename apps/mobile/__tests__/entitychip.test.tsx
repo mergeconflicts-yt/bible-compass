@@ -40,7 +40,7 @@ describe('EventChip', () => {
         testID="event-chip-test"
       />,
     );
-    expect(screen.getByText('Audience With Artaxerxes · Neh.2.1–Neh.2.8')).toBeTruthy();
+    expect(screen.getByText('Audience With Artaxerxes')).toBeTruthy();
     expect(screen.getByText('Neh.2.1–Neh.2.8')).toBeTruthy();
     fireEvent.press(screen.getByTestId('event-chip-test'));
     expect(onPress).toHaveBeenCalledTimes(1);
@@ -74,16 +74,26 @@ describe('ContextSheet entity chips', () => {
     expect(sheetProps.onOpenEntity).toHaveBeenCalledWith('jerusalem');
   });
 
-  it('lists time and events as chips on the History tab', () => {
+  it('shows the when text without navigating, and lists events that open', () => {
     render(<ContextSheet visible {...sheetProps} />);
     fireEvent.press(screen.getByTestId('context-tabs-1'));
-    expect(screen.getByTestId('context-time-chip')).toBeTruthy();
-    expect(screen.getByText(/commonly rendered about 445 BC/)).toBeTruthy();
-    fireEvent.press(screen.getByTestId('context-time-chip'));
-    expect(sheetProps.onOpenTimeline).toHaveBeenCalledTimes(1);
+    // "Nisan ..." is plain context now, not a control that jumps to the timeline.
+    expect(screen.getByTestId('context-when')).toBeTruthy();
+    expect(screen.queryByTestId('context-time-chip')).toBeNull();
+    expect(sheetProps.onOpenTimeline).not.toHaveBeenCalled();
     expect(screen.getByTestId('context-event-audience-with-artaxerxes')).toBeTruthy();
     fireEvent.press(screen.getByTestId('context-event-audience-with-artaxerxes'));
     expect(sheetProps.onOpenEvent).toHaveBeenCalledTimes(1);
+  });
+
+  it('backs out of an entity sheet to the context sheet', () => {
+    render(<ContextFlow visible onClose={jest.fn()} />);
+    fireEvent.press(screen.getByTestId('context-person-nehemiah-governor'));
+    expect(screen.getByTestId('entity-sheet')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('fullcard-back'));
+    expect(screen.queryByTestId('entity-sheet')).toBeNull();
+    // The context sheet is still there to continue from.
+    expect(screen.getByTestId('context-sheet')).toBeTruthy();
   });
 
   it('opens an event full card from a History event chip', () => {
@@ -91,9 +101,8 @@ describe('ContextSheet entity chips', () => {
     fireEvent.press(screen.getByTestId('context-tabs-1'));
     fireEvent.press(screen.getByTestId('context-event-audience-with-artaxerxes'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
-    expect(
-      screen.getAllByText('Audience With Artaxerxes · Neh.2.1–Neh.2.8').length,
-    ).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText(/With Nehemiah, Artaxerxes I, The queen/)).toBeTruthy();
+    expect(screen.getAllByText('Audience With Artaxerxes').length).toBeGreaterThanOrEqual(1);
+    // Participants are actionable chips, not inert prose.
+    expect(screen.getByTestId('event-participant-nehemiah-governor')).toBeTruthy();
   });
 });

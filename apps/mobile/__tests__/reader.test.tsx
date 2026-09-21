@@ -55,15 +55,20 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     expect(screen.getAllByText(/Berean Standard Bible/).length).toBeGreaterThan(0);
   });
 
-  it('shows one scrollable rail of curated passage events opening the timeline', () => {
+  it('shows the passage timeline rail with same-book short ranges', () => {
     renderReader();
     expect(screen.getByTestId('timeline-rail')).toBeTruthy();
-    // Curated stops only: no prototype years or world-history events.
     expect(screen.getByTestId('rail-audience-with-artaxerxes')).toBeTruthy();
-    expect(screen.getByText('Audience With Artaxerxes')).toBeTruthy();
+    // Same-book ranges: no repeated book name, no prototype claims.
+    expect(screen.getByText('2:1–8')).toBeTruthy();
     expect(screen.queryByText('Exodus')).toBeNull();
-    expect(screen.queryByText('Parthenon')).toBeNull();
     fireEvent.press(screen.getByTestId('rail-night-inspection'));
+    expect(screen.getByTestId('timeline-sheet')).toBeTruthy();
+  });
+
+  it('opens the timeline from the era rail link', () => {
+    renderReader();
+    fireEvent.press(screen.getByTestId('reader-open-timeline'));
     expect(screen.getByTestId('timeline-sheet')).toBeTruthy();
   });
 
@@ -159,12 +164,6 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
     // Link taps dismiss layers and navigate: the sheet closes on the jump.
     expect(screen.queryByTestId('entity-sheet')).toBeNull();
     expect(onOpenPassage).not.toHaveBeenCalled();
-  });
-
-  it('opens the timeline from the era rail link', () => {
-    renderReader();
-    fireEvent.press(screen.getByTestId('reader-open-timeline'));
-    expect(screen.getByTestId('timeline-sheet')).toBeTruthy();
   });
 
   it('reads a Tamil chapter with a localized title and no unreviewed anchors', () => {

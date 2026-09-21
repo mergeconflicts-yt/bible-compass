@@ -73,6 +73,12 @@ describe('draft context wiring', () => {
   it('splits brief prose into bullets without losing sentences', () => {
     expect(toBullets('First. Second! Third?')).toEqual(['First.', 'Second!', 'Third?']);
     expect(toBullets('No terminator')).toEqual(['No terminator']);
+    // Dotted verse references stay inside one bullet; only real sentence
+    // ends split.
+    expect(toBullets('Ruined (Neh.1). Earlier work was stopped (Ezra 4:17-23).')).toEqual([
+      'Ruined (Neh.1).',
+      'Earlier work was stopped (Ezra 4:17-23).',
+    ]);
   });
 
   it('splits verse text around each anchor without losing words', () => {

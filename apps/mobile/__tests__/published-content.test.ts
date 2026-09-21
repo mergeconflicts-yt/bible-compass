@@ -242,6 +242,8 @@ function fakeCache(): { cache: PublishedContentCache; state: CacheState } {
       state.last = at;
     },
     readAttestations: async () => state.attestations,
+    writeContextBundle: async () => {},
+    readContextBundle: async () => null,
     markSynced: async (at) => {
       state.last = at;
     },

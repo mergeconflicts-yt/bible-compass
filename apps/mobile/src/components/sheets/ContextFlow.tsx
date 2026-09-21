@@ -10,58 +10,67 @@ interface ContextFlowProps {
   onOpenPassage?: (passageKey: string) => void;
 }
 
+/** One entry in the context navigation stack. */
+type ContextTarget =
+  { kind: 'entity'; slug: string } | { kind: 'event'; event: PreviewEvent } | { kind: 'timeline' };
+
 /**
- * The context navigation flow: context sheet fans out to entity profiles,
- * the timeline and the historical map. One component so every view wires
- * the same flow without prop-drilling each sheet separately.
+ * The context navigation flow: the context sheet fans out to entity profiles,
+ * events and the timeline, and every opening is pushed onto a stack so Back
+ * unwinds one sheet at a time — entity -> previous entity -> context ->
+ * reading. Sheets are never stacked blindly: the top of the stack decides
+ * which one is visible.
  */
 export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProps) {
-  const [entitySlug, setEntitySlug] = useState<string | null>(null);
-  const [openEvent, setOpenEvent] = useState<PreviewEvent | null>(null);
-  const [timelineOpen, setTimelineOpen] = useState(false);
+  const [stack, setStack] = useState<ContextTarget[]>([]);
 
-  const closeEntity = () => {
-    setEntitySlug(null);
-    setOpenEvent(null);
+  const push = (target: ContextTarget) => setStack((current) => [...current, target]);
+  const pop = () => setStack((current) => current.slice(0, -1));
+  const reset = () => setStack([]);
+  // Closing the flow clears the stack so the next open starts fresh.
+  const handleClose = () => {
+    reset();
+    onClose();
   };
+
+  const current = stack[stack.length - 1] ?? null;
+  const entityTarget = current?.kind === 'entity' || current?.kind === 'event' ? current : null;
 
   return (
     <>
+      {/* Only ONE sheet is visible at a time. Stacking React Native Modals
+          silently fails to present the second one, which looked like a dead
+          tap; swapping instead keeps taps working and Back returns here. */}
       <ContextSheet
-        visible={visible}
-        onClose={onClose}
-        onOpenEntity={(slug) => setEntitySlug(slug)}
-        onOpenEvent={(event) => setOpenEvent(event)}
-        onOpenTimeline={() => {
-          onClose();
-          setTimelineOpen(true);
-        }}
+        visible={visible && stack.length === 0}
+        onClose={handleClose}
+        onOpenEntity={(slug) => push({ kind: 'entity', slug })}
+        onOpenEvent={(event) => push({ kind: 'event', event })}
+        onOpenTimeline={() => push({ kind: 'timeline' })}
         onOpenPassage={(key) => {
+          reset();
           onClose();
           onOpenPassage?.(key);
         }}
       />
       <EntitySheet
-        visible={entitySlug !== null || openEvent !== null}
-        slug={entitySlug}
-        event={openEvent}
-        onClose={closeEntity}
-        onOpenEntity={(slug) => setEntitySlug(slug)}
+        visible={visible && entityTarget !== null}
+        slug={entityTarget?.kind === 'entity' ? entityTarget.slug : null}
+        event={entityTarget?.kind === 'event' ? entityTarget.event : null}
+        onClose={pop}
+        onOpenEntity={(slug) => push({ kind: 'entity', slug })}
         onOpenPassage={(key) => {
-          closeEntity();
+          reset();
           onClose();
           onOpenPassage?.(key);
         }}
-        onOpenTimeline={() => {
-          closeEntity();
-          setTimelineOpen(true);
-        }}
+        onOpenTimeline={() => push({ kind: 'timeline' })}
       />
       <TimelineSheet
-        visible={timelineOpen}
-        onClose={() => setTimelineOpen(false)}
+        visible={visible && current?.kind === 'timeline'}
+        onClose={pop}
         onOpenPassage={(key) => {
-          setTimelineOpen(false);
+          reset();
           onClose();
           onOpenPassage?.(key);
         }}
