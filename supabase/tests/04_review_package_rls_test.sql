@@ -197,25 +197,35 @@ DECLARE
   pub_ed uuid;
   draft_ed uuid;
 BEGIN
+  -- Conflict-proof: a full curation import (Task EN-03) may already have
+  -- created these ratified rows, so reuse them instead of re-inserting.
   INSERT INTO private_staging.canons (key, name)
-  VALUES ('canon:prot-66', 'Protestant 66') RETURNING id INTO canon_id;
+  VALUES ('canon:prot-66', 'Protestant 66')
+  ON CONFLICT (key) DO UPDATE SET key = EXCLUDED.key RETURNING id INTO canon_id;
   INSERT INTO private_staging.scripture_works (key, osis_code, name, testament)
-  VALUES ('work:Neh:prot-66', 'Neh', 'Nehemiah', 'OT') RETURNING id INTO work_id;
+  VALUES ('work:Neh:prot-66', 'Neh', 'Nehemiah', 'OT')
+  ON CONFLICT (key) DO UPDATE SET key = EXCLUDED.key RETURNING id INTO work_id;
   INSERT INTO private_staging.reference_systems (key, canon_id, version, status)
-  VALUES ('refsys:eng-v22', canon_id, 22, 'active') RETURNING id INTO refsys_id;
+  VALUES ('refsys:eng-v22', canon_id, 22, 'active')
+  ON CONFLICT (key) DO UPDATE SET key = EXCLUDED.key RETURNING id INTO refsys_id;
   INSERT INTO private_staging.reference_units
     (reference_system_id, local_key, work_id, chapter_label, kind, ordinal)
-  VALUES (refsys_id, 'Neh.2.4', work_id, '2', 'verse', 1) RETURNING id INTO unit_id;
+  VALUES (refsys_id, 'Neh.2.4', work_id, '2', 'verse', 1)
+  ON CONFLICT (reference_system_id, local_key) DO UPDATE SET local_key = EXCLUDED.local_key
+  RETURNING id INTO unit_id;
   INSERT INTO private_staging.translation_works (key, language_tag, name, publisher)
-  VALUES ('trans:bsb', 'en', 'BSB', 'test') RETURNING id INTO twork_id;
+  VALUES ('trans:bsb', 'en', 'BSB', 'test')
+  ON CONFLICT (key) DO UPDATE SET key = EXCLUDED.key RETURNING id INTO twork_id;
   INSERT INTO private_staging.translation_editions
     (work_id, key, language_tag, reference_system_id, revision_date, source_artifact_sha256, attribution, status)
   VALUES (twork_id, 'edition:bsb@20260912:sha-12ab34cd', 'en', refsys_id, '2026-09-12',
-    'sha256:' || repeat('b', 64), 'test', 'published') RETURNING id INTO pub_ed;
+    'sha256:' || repeat('b', 64), 'test', 'published')
+  ON CONFLICT (key) DO UPDATE SET key = EXCLUDED.key RETURNING id INTO pub_ed;
   INSERT INTO private_staging.translation_editions
     (work_id, key, language_tag, reference_system_id, revision_date, source_artifact_sha256, attribution, status)
   VALUES (twork_id, 'edition:bsb@20260913:sha-34cd56ef', 'en', refsys_id, '2026-09-13',
-    'sha256:' || repeat('c', 64), 'test', 'draft') RETURNING id INTO draft_ed;
+    'sha256:' || repeat('c', 64), 'test', 'draft')
+  ON CONFLICT (key) DO UPDATE SET key = EXCLUDED.key RETURNING id INTO draft_ed;
   INSERT INTO private_staging.translation_edition_verses
     (edition_id, reference_unit_id, book_id, chapter, verse_number, text, text_sha256)
   VALUES (pub_ed, unit_id, work_id, 2, 4, 'published text', 'sha256:' || repeat('d', 64));

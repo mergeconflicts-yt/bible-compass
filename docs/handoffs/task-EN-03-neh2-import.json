@@ -1,0 +1,97 @@
+{
+  "attempt_id": "task:EN-03-neh2-import:attempt-1",
+  "task_id": "EN-03",
+  "task_title": "Idempotent Nehemiah 2 importer into the existing local Supabase/PostgreSQL schema",
+  "result": "PASS — clean-rebuild import and all SQL tests pass; data is queryable. Draft/private only.",
+  "user_visible_outcome": "No app or public change. The four EN-01 packages can now be imported transactionally into private_staging with stable keys; re-importing identical data is a no-op, changed replay fails clearly, and any failure rolls back completely. An import receipt is recorded and the data is queryable by draft-only, private queries.",
+  "read_first": [
+    "docs/handoffs/task-EN-01-neh2-curation.json",
+    "supabase/migrations/20260915000002_canon_reference_edition.sql",
+    "supabase/migrations/20260915000003_knowledge_claim_context.sql",
+    "docs/DATA_MODEL.md",
+    "docs/CONTENT_RIGHTS.md"
+  ],
+  "files_changed": [
+    "tools/import-neh2.py (new: validate + transactional idempotent import + receipt; --check, --emit-sql, --database-url)",
+    "supabase/migrations/20260915000012_curation_imports.sql (new: curation_imports receipt table; attestation claim_id nullable)",
+    "supabase/tests/08_neh2_import_test.sql (new: import completeness, queryability, draft-only, anonymity)",
+    "supabase/tests/04_review_package_rls_test.sql (conflict-proof reference seed so a prior import does not break it)",
+    "tools/verify-supabase.sh (run the importer, then tests 01-08)"
+  ],
+  "validation_before_write": [
+    "contract/schema/vocabulary versions, layer and family, data_classification, review_status draft",
+    "translation-independence of the canonical scope; locale en with no edition; edition equals the ratified BSB edition and refsys",
+    "locale and edition depend on the exact canonical package key and digest",
+    "reference coverage is exactly Neh.2.1-20 and the bundled BSB text has all 20 verses",
+    "every entity/claim/citation/attestation/relationship/event/place/relevance localizes resolves to a defined record",
+    "every mention resolves word-bounded to its occurrence ordinal, and no two mentions overlap in a verse",
+    "canonical digest recomputed and matched to both dependency digests"
+  ],
+  "guarantees_proven": {
+    "transactional": "All writes run in ONE psql -1 transaction. Injected a failure after partial inserts (682 statements) and re-queried: entities/claims/mentions/receipts = 0/0/0/0 — full rollback.",
+    "idempotent_noop": "Second run of identical packages printed: no-op: identical payload already imported (payload_digest sha256:b82b7e57...). No writes.",
+    "changed_replay": "A modified locale package produced a different payload digest and exited with: changed replay: import:neh2:canonical-locale-edition was imported with digest ...; refusing to overwrite (rollback, no writes). No writes occurred."
+  },
+  "imported_counts": {
+    "entities": 37,
+    "claims": 33,
+    "citations": 56,
+    "attestations": 86,
+    "mentions": 74,
+    "render_spans": 74,
+    "relationships": 17,
+    "relevance": 50,
+    "contexts": 6,
+    "edition_verses": 20
+  },
+  "commands_executed": [
+    {
+      "command": "python3 tools/import-neh2.py --check",
+      "exit_code": 0,
+      "output": "validated counts; payload_digest sha256:b82b7e57..."
+    },
+    {
+      "command": "psql \"$DB\" -f supabase/migrations/20260915000012_curation_imports.sql && python3 tools/import-neh2.py --database-url \"$DB\"",
+      "exit_code": 0,
+      "output": "imported + receipt"
+    },
+    {
+      "command": "python3 tools/import-neh2.py --database-url \"$DB\" (identical re-run)",
+      "exit_code": 0,
+      "output": "no-op"
+    },
+    {
+      "command": "python3 tools/import-neh2.py --database-url \"$DB\" (modified package)",
+      "exit_code": 3,
+      "output": "changed replay refused; no writes"
+    },
+    {
+      "command": "python3 tools/import-neh2.py --emit-sql > import.sql; echo 'select 1/0;' >> import.sql; psql -1 -f import.sql",
+      "exit_code": 1,
+      "output": "failure at line 682; all imported counts 0 (full rollback)"
+    },
+    {
+      "command": "createdb bible_clean; bootstrap + migrations 01-12; REQUIRE_SUPABASE_TESTS=1 DATABASE_URL=... sh tools/verify-supabase.sh",
+      "exit_code": 0,
+      "output": "IMPORT imported; RUN 01..08; SUPABASE-TESTS-PASS"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    }
+  ],
+  "schema_changes": [
+    "private_staging.curation_imports (package_key PK, package_revision, payload_digest, receipt jsonb, imported_at) — necessary for idempotency and the import receipt. RLS enabled, revoked from public/anon/authenticated.",
+    "reference_entity_attestations.claim_id is now nullable — the canonical package permits an attestation with no supporting claim (5 of 86). Private table, unchanged RLS."
+  ],
+  "mappings_and_limitations": [
+    "Registry source_release rows are NOT created (rights gate). citation.source_release_id is a deterministic uuid5 of the evidence release key, and citation.digest is a SHA-256 of the evidence catalog entry; source_edition_id points at the imported BSB edition for scripture citations. Documented in the receipt note.",
+    "English relevance localizations are stored as scope_entity_relevance.role_in_passage (the schema's localization table allows only te/ta).",
+    "Event claim links are not represented (no column); event entities, participants, places and scripture accounts are imported.",
+    "place_geometries rows carry precision only (geometry null, crs EPSG:4326, component_license 'unknown') because the packages carry no coordinates or license.",
+    "English only; the canonical body is otherwise unharmed. Nothing is published; anon sees zero draft rows (test 08).",
+    "The importer is Python + psql (no new npm dependency); it must run where psql and python3 exist."
+  ],
+  "stop_condition": "Stopped after proving the imported data is queryable (test 08 joins entity -> description -> claim -> citation -> evidence locator, mention -> render span with ordinal, relevance role text and context sections) and that drafts stay private. No mobile wiring, no publication, no further chapters, no database redesign."
+}

@@ -27,7 +27,16 @@ if ! psql "$DB_URL" -c 'select 1' >/dev/null 2>&1; then
   fail_skip "SUPABASE_TESTS_SKIPPED: no database at \$DATABASE_URL — run 'supabase start && supabase db reset' then rerun, per docs/REGISTRY_MIGRATION_NOTES.md"
 fi
 
-for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql supabase/tests/07_*.sql; do
+# Nehemiah 2 curation import (Task EN-03): idempotent, so this is safe on a
+# database that already has it. Requires python3; skipped loudly otherwise.
+if command -v python3 >/dev/null 2>&1 && [ -f tools/import-neh2.py ]; then
+  echo "IMPORT tools/import-neh2.py"
+  python3 tools/import-neh2.py --database-url "$DB_URL" || exit 1
+else
+  echo "IMPORT-SKIPPED: python3 or tools/import-neh2.py unavailable"
+fi
+
+for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql supabase/tests/07_*.sql supabase/tests/08_*.sql; do
   echo "RUN $f"
   psql "$DB_URL" -v ON_ERROR_STOP=1 -f "$f" || exit 1
 done
