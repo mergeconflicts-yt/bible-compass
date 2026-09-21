@@ -51,12 +51,25 @@ EXCEPTION
 END $$;
 RESET ROLE;
 
--- 4. Authenticated cannot read staging canon tables either.
+-- 4. Structural reference tables are readable by design (the published read
+-- API needs book codes and reference keys — migration 20260915000013), while
+-- other staging canon tables stay private.
 SET ROLE authenticated;
 DO $$
 BEGIN
   PERFORM 1 FROM private_staging.reference_units LIMIT 1;
-  RAISE EXCEPTION 'FAIL: authenticated could read private_staging.reference_units';
+END $$;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_staging.canons LIMIT 1;
+  RAISE EXCEPTION 'FAIL: authenticated could read private_staging.canons';
+EXCEPTION
+  WHEN insufficient_privilege THEN NULL;
+END $$;
+DO $$
+BEGIN
+  PERFORM 1 FROM private_staging.reference_mappings LIMIT 1;
+  RAISE EXCEPTION 'FAIL: authenticated could read private_staging.reference_mappings';
 EXCEPTION
   WHEN insufficient_privilege THEN NULL;
 END $$;

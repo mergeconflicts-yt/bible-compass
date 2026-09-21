@@ -22,6 +22,15 @@ import { initializeSyncEngine, syncNow, type RemoteBookmark } from '@/content/sy
 import { config, isSyncConfigured } from '@/config';
 import { createAppSupabaseClient, SupabaseAuth } from '@/infrastructure/supabase/auth';
 import { SupabaseBookmarkSync } from '@/infrastructure/supabase/bookmarksSync';
+import {
+  SupabasePublishedContentRepository,
+  type PublishedContentClient,
+} from '@/infrastructure/supabase/publishedContentRepository';
+import { SqlitePublishedContentCache } from '@/infrastructure/sqlite/publishedContentCache';
+import {
+  initializePublishedContent,
+  initializePublishedContentCache,
+} from '@/content/publishedContentStore';
 import { wipeUserData } from '@/infrastructure/sqlite/library';
 import {
   asPassageDbHandle,
@@ -87,6 +96,9 @@ function RootLayoutNav() {
   useEffect(() => {
     const seed = async (): Promise<void> => {
       const handle = asPassageDbHandle(await openAppDatabase());
+      // Published content is cached in SQLite so it stays readable offline;
+      // the cache exists even when the remote backend is unconfigured.
+      initializePublishedContentCache(new SqlitePublishedContentCache(handle));
       await initializePassageContent(
         {
           openDatabase: async () => handle,
@@ -131,6 +143,17 @@ function RootLayoutNav() {
         initializeAuthStore({
           createAuth: () => new SupabaseAuth(supabase),
           wipeLibrary: () => wipeUserData(handle),
+        });
+        // Published-content read API: reads only the public_content views
+        // (published-only, RLS-filtered). Unconfigured builds keep the store
+        // empty so reads render an honest unavailable state.
+        initializePublishedContent({
+          cache: new SqlitePublishedContentCache(handle),
+          createRepository: () =>
+            // SupabaseClient is structurally a superset of the narrow
+            // PublishedContentClient chain; the cast keeps the adapter's
+            // dependency small and testable (no generated DB types).
+            new SupabasePublishedContentRepository(supabase as unknown as PublishedContentClient),
         });
         // Sync engine shares the handle and client but never runs on boot:
         // the user id is read lazily so sign-in/out needs no re-init, and

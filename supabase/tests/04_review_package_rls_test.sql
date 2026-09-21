@@ -329,13 +329,13 @@ BEGIN
   SELECT string_agg(column_name, ',' ORDER BY ordinal_position) INTO got
   FROM information_schema.columns
   WHERE table_schema = 'public_content' AND table_name = 'published_attestations';
-  IF got <> 'entity_id,scope_id,reference_unit_id,kind,explicitness,review_state' THEN
+  IF got <> 'entity_key,scope_key,reference_local_key,kind,explicitness,review_state' THEN
     RAISE EXCEPTION 'FAIL: published_attestations columns (%) are not the allowlist', got;
   END IF;
   SELECT string_agg(column_name, ',' ORDER BY ordinal_position) INTO got
   FROM information_schema.columns
   WHERE table_schema = 'public_content' AND table_name = 'published_verses';
-  IF got <> 'edition_id,reference_unit_id,book_id,chapter,verse_number,text,text_sha256' THEN
+  IF got <> 'edition_key,refsys_key,book_osis,chapter,verse_number,local_key,text,text_sha256' THEN
     RAISE EXCEPTION 'FAIL: published_verses columns (%) are not the allowlist', got;
   END IF;
 END $$;

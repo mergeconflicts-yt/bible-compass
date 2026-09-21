@@ -1,0 +1,68 @@
+{
+  "attempt_id": "task:EN-04-supabase-read-repository:attempt-1",
+  "task_id": "EN-04",
+  "task_title": "Add the Supabase read repository/API and wire it through the mobile repository interface",
+  "result": "PASS — published-only read API added, adapter wired at the composition root, all SQL and mobile tests pass.",
+  "user_visible_outcome": "No screen change. The app now has a published-content read repository (port + store + Supabase adapter) injected by the composition root, reading the published-only public_content views. Unconfigured or failing backends return an honest empty result instead of crashing.",
+  "read_first": [
+    "docs/handoffs/task-EN-03-neh2-import.json",
+    "apps/mobile/src/content/passageRepository.ts",
+    "apps/mobile/src/content/passageStore.ts",
+    "apps/mobile/app/_layout.tsx",
+    "supabase/migrations/20260915000011_publication_rules.sql"
+  ],
+  "files_changed": [
+    "supabase/migrations/20260915000013_published_read_api.sql (new: stable client keys in the published views; structural read grants/policies)",
+    "apps/mobile/src/content/publishedContent.ts (new: PublishedContentRepository port + row types)",
+    "apps/mobile/src/content/publishedContentStore.ts (new: repository selection, never-throw reads, reset/set)",
+    "apps/mobile/src/infrastructure/supabase/publishedContentRepository.ts (new: Supabase adapter over public_content views)",
+    "apps/mobile/app/_layout.tsx (wire initializePublishedContent in the configured branch)",
+    "apps/mobile/__tests__/published-content.test.ts (new: adapter query shape/mapping + store fallback)",
+    "supabase/tests/09_published_read_api_test.sql (new: anon/authenticated published-only + stable keys)",
+    "supabase/tests/02_canon_reference_edition_test.sql (structural read now allowed by design)",
+    "supabase/tests/04_review_package_rls_test.sql (view column allowlist updated)",
+    "tools/verify-supabase.sh (run test 09)"
+  ],
+  "read_api": {
+    "published_entities": "key, slug, type, identification_status",
+    "published_attestations": "entity_key, scope_key, reference_local_key, kind, explicitness, review_state",
+    "published_verses": "edition_key, refsys_key, book_osis, chapter, verse_number, local_key, text, text_sha256",
+    "security": "Every view remains published-only (published package / review_state = published / edition status = published) and runs with security_invoker, so Postgres RLS decides visibility. Draft rows are never exposed. Only the public anon key is used; no service_role key and no writes.",
+    "why_views_changed": "The earlier views exposed surrogate uuids and no book reference, so a client could not address rows. The read API now exposes stable client-safe keys and the structural canon columns (book OSIS, reference keys) needed to map published rows to app references."
+  },
+  "structural_read_change": "Migration 13 grants anon/authenticated read on the non-draft structural canon tables (scripture_works, reference_systems, reference_units, scripture_scopes) with permissive policies, because the security_invoker views join them. canons, memberships, mappings and all content tables stay private.",
+  "mobile_wiring": {
+    "port": "src/content/publishedContent.ts (PublishedContentRepository: fetchPublishedVerses / fetchPublishedEntities / fetchPublishedAttestations)",
+    "store": "src/content/publishedContentStore.ts (initializePublishedContent / setPublishedContentRepository / resetPublishedContentStore / fetchPublished*); reads never throw and return [] when unconfigured or failing",
+    "adapter": "src/infrastructure/supabase/publishedContentRepository.ts; depends on a narrow PublishedContentClient structural subset so tests inject a fake with no network; only module allowed to read public_content besides auth/bookmark adapters",
+    "composition_root": "app/_layout.tsx calls initializePublishedContent only inside the isSyncConfigured + url/key branch, alongside auth and sync"
+  },
+  "commands_executed": [
+    {
+      "command": "clean rebuild: createdb bible_clean; bootstrap + migrations 01-13; REQUIRE_SUPABASE_TESTS=1 DATABASE_URL=... sh tools/verify-supabase.sh",
+      "exit_code": 0,
+      "output": "IMPORT imported; RUN 01..09; SUPABASE-TESTS-PASS"
+    },
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest",
+      "exit_code": 0,
+      "output": "31 suites, 270 tests passed; 0 eslint errors (17 warnings, below baseline)"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    }
+  ],
+  "tests": {
+    "sql_09": "Seeds a published package/edition + published and draft attestations, then proves anon and authenticated see exactly the published verse/attestation with stable keys, and never the draft rows.",
+    "mobile": "published-content.test.ts proves the adapter issues the exact view/column/filter reads and maps rows, propagates backend errors, and that the store is safe when unconfigured, failing, or initialized from injected deps."
+  },
+  "known_limitations": [
+    "Reads return published rows only; nothing is published yet, so the read API yields empty results in practice until a publication release exists. Drafts intentionally stay invisible.",
+    "The mobile store is not yet consumed by any screen (no screen change was requested); it is wired at the composition root and proven by tests.",
+    "No new dependency was added; @supabase/supabase-js 2.116.0 was already present.",
+    "A live Supabase-hosted confirmation (supabase db reset + hosted run) has not been performed here."
+  ],
+  "stop_condition": "Stopped after the read repository/API is implemented, wired through the repository pattern, and proven by SQL and mobile tests. No publication, no anonymous draft exposure, no screen redesign."
+}

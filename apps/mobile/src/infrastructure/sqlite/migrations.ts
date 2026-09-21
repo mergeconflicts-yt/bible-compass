@@ -136,6 +136,49 @@ CREATE TABLE reminder (
 );
 `.trim();
 
+const PUBLISHED_CACHE_008_SQL = `
+CREATE TABLE published_verses_cache (
+  edition_key TEXT NOT NULL,
+  refsys_key TEXT NOT NULL,
+  book TEXT NOT NULL,
+  chapter INTEGER NOT NULL CHECK (chapter > 0),
+  verse INTEGER NOT NULL CHECK (verse >= 0),
+  local_key TEXT NOT NULL,
+  text TEXT NOT NULL CHECK (length(text) > 0),
+  text_sha256 TEXT NOT NULL CHECK (text_sha256 LIKE 'sha256:%'),
+  cached_at TEXT NOT NULL,
+  PRIMARY KEY (edition_key, book, chapter, verse)
+);
+
+CREATE INDEX idx_published_verses_cache_book ON published_verses_cache (book, chapter);
+
+CREATE TABLE published_entities_cache (
+  key TEXT PRIMARY KEY,
+  slug TEXT NOT NULL,
+  type TEXT NOT NULL,
+  identification_status TEXT NOT NULL,
+  cached_at TEXT NOT NULL
+);
+
+CREATE TABLE published_attestations_cache (
+  entity_key TEXT NOT NULL,
+  scope_key TEXT NOT NULL,
+  reference_local_key TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  explicitness TEXT NOT NULL,
+  review_state TEXT NOT NULL,
+  cached_at TEXT NOT NULL,
+  PRIMARY KEY (entity_key, scope_key, reference_local_key, kind)
+);
+
+CREATE INDEX idx_published_attestations_cache_scope ON published_attestations_cache (scope_key);
+
+CREATE TABLE published_cache_meta (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL CHECK (length(value) > 0)
+);
+`.trim();
+
 /**
  * Ordered migration registry. New migrations append with the next version;
  * never edit an applied migration (drift is detected and fails closed).
@@ -148,4 +191,5 @@ export const MIGRATIONS: Migration[] = [
   { version: 5, name: 'progress_005', sql: PROGRESS_005_SQL },
   { version: 6, name: 'sync_006', sql: SYNC_006_SQL },
   { version: 7, name: 'reminder_007', sql: REMINDER_007_SQL },
+  { version: 8, name: 'published_cache_008', sql: PUBLISHED_CACHE_008_SQL },
 ];

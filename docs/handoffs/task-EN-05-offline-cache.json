@@ -1,0 +1,46 @@
+{
+  "attempt_id": "task:EN-05-offline-cache:attempt-1",
+  "task_id": "EN-05",
+  "task_title": "Cache received published content in SQLite for offline use",
+  "result": "PASS — offline cache schema, adapter, read-through store and tests all pass.",
+  "user_visible_outcome": "No screen change. Published content received from the read API is now written to SQLite and served from it when the network is unavailable or the backend is unconfigured. A failed or absent remote never crashes a read; it returns cached rows or an honest empty result.",
+  "files_changed": [
+    "apps/mobile/src/infrastructure/sqlite/migrations.ts (migration 008 published_cache_008: verse/entity/attestation cache + meta)",
+    "apps/mobile/src/content/publishedContent.ts (PublishedContentCache port)",
+    "apps/mobile/src/infrastructure/sqlite/publishedContentCache.ts (new: SQLite cache adapter, replace-per-scope in a transaction)",
+    "apps/mobile/src/content/publishedContentStore.ts (remote-first + write-through cache + offline fallback; initializePublishedContentCache; publishedContentLastSyncedAt)",
+    "apps/mobile/app/_layout.tsx (instantiate the cache from the DB handle; inject into the store)",
+    "apps/mobile/__tests__/published-content-cache.test.ts (new: adapter replace/read round-trips, scope filtering, last-sync)",
+    "apps/mobile/__tests__/published-content.test.ts (store write-through, offline fallback, no-remote, empty)",
+    "apps/mobile/__tests__/sqlite-migrations.test.ts (registry now versions 1-8)"
+  ],
+  "design": {
+    "schema": "Migration 008 adds published_verses_cache, published_entities_cache, published_attestations_cache and published_cache_meta. Strict CHECKs mirror the published read API (sha256 text hashes, positive chapter, published review_state is a copied field, not re-validated locally).",
+    "strategy": "Read-through cache. On a configured remote the store fetches from Supabase first and writes the result through to SQLite (replace-per-scope inside one transaction, so an empty published slice clears stale rows). If the remote is unconfigured or fails, the store reads the cache; if neither has content it returns []. Reads never throw.",
+    "layering": "Screens never touch SQLite or Supabase; the cache implements a content-layer port and is injected at the composition root, matching the existing passage/bookmark/progress repositories.",
+    "sign_out": "The published cache is public server content, not user data, so sign-out does not wipe it (library wipe is unchanged)."
+  },
+  "commands_executed": [
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest (NODE_OPTIONS=--experimental-sqlite)",
+      "exit_code": 0,
+      "output": "32 suites, 279 tests passed; real-SQLite migration tests execute migration 008; 0 eslint errors (17 warnings, below baseline)"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    }
+  ],
+  "tests": {
+    "cache_adapter": "Replace-per-scope DELETE + INSERT OR REPLACE with exact params; verse/entity/attestation read mapping; attestation scope filter; lastSyncedAt returns the stamp or null.",
+    "store": "Writes received rows through to the cache and stamps last-synced; falls back to cached rows when the remote throws; reads the cache when no remote is configured; returns [] (no throw) when neither source has content.",
+    "migrations": "Registry is versions 1-8 with names recorded and a verified no-op on re-run."
+  },
+  "known_limitations": [
+    "Nothing is published yet, so a live sync currently caches an empty slice; the path is exercised by tests and will populate once a publication release exists.",
+    "No cache eviction/TTL: a scope is replaced only when that scope is fetched again; lastSyncedAt is exposed for a future freshness policy.",
+    "The cached content is not yet consumed by a screen (screens keep reading bundled/SQLite Scripture); the store API is ready for that wiring."
+  ],
+  "stop_condition": "Stopped after the published content is cached in SQLite with offline fallback and proven by tests. No publication, no screen redesign, no new dependency."
+}
