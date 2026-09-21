@@ -202,6 +202,73 @@ export function previewNotice(): string {
 export interface PreviewAnchor {
   phrase: string;
   slug: string;
+  /** 1-based occurrence of phrase in the verse; validated upstream. */
+  ordinal: number;
+}
+
+export interface TextSegment {
+  text: string;
+  slug: string | null;
+}
+
+/**
+ * Splits verse text around validated mention selectors, resolving each
+ * anchor to its exact occurrence. Overlapping spans resolve to the earliest,
+ * longest match; anything else renders as plain text. Never guesses.
+ */
+export function splitAnchoredOccurrences(text: string, anchors: PreviewAnchor[]): TextSegment[] {
+  const resolved = anchors.flatMap((anchor) => {
+    let index = -1;
+    let seen = 0;
+    for (let i = text.indexOf(anchor.phrase); i !== -1; i = text.indexOf(anchor.phrase, i + 1)) {
+      seen += 1;
+      if (seen === anchor.ordinal) {
+        index = i;
+        break;
+      }
+    }
+    return index >= 0 ? [{ ...anchor, index }] : [];
+  });
+  resolved.sort((a, b) => a.index - b.index || b.phrase.length - a.phrase.length);
+  const out: TextSegment[] = [];
+  let cursor = 0;
+  for (const anchor of resolved) {
+    if (anchor.index < cursor) continue;
+    if (anchor.index > cursor) out.push({ text: text.slice(cursor, anchor.index), slug: null });
+    out.push({ text: anchor.phrase, slug: anchor.slug });
+    cursor = anchor.index + anchor.phrase.length;
+  }
+  if (cursor < text.length) out.push({ text: text.slice(cursor), slug: null });
+  return out.filter((segment) => segment.text.length > 0);
+}
+
+/** "Neh.2.1–Neh.2.8" -> "2:1–8" for narrow rail labels. */
+export function shortRange(range: string): string {
+  // Input looks like "Neh.2.1–Neh.2.8" (book.chapter.verse, en dash).
+  const compact = range.replace(/Neh\./g, '');
+  const [start = '', end = ''] = compact.split('–');
+  const [startChapter, startVerse] = start.split('.');
+  const [endChapter, endVerse] = (end || start).split('.');
+  if (startChapter && startChapter === endChapter && startVerse && endVerse) {
+    return `${startChapter}:${startVerse}–${endVerse}`;
+  }
+  return compact;
+}
+
+function shortTitle(key: string): string {
+  return key
+    .split('-')
+    .map((word) => (word.length > 0 ? word[0]!.toUpperCase() + word.slice(1) : word))
+    .join(' ');
+}
+
+/** Curated rail stops for the passage timeline (no prototype claims). */
+export function previewRailStops(): Array<{ key: string; top: string; title: string }> {
+  return getPreview().events.map((event) => ({
+    key: event.key,
+    top: shortRange(event.range),
+    title: shortTitle(event.key),
+  }));
 }
 
 /**
@@ -218,7 +285,11 @@ export function anchorsForVerse(
   if (bookOsis !== 'Neh' || chapter !== 2 || translationId !== 'BSB') return [];
   return getPreview()
     .mentions.filter((mention) => mention.verse === verse)
-    .map((mention) => ({ phrase: mention.quote, slug: mention.entity_slug }));
+    .map((mention) => ({
+      phrase: mention.quote,
+      slug: mention.entity_slug,
+      ordinal: mention.ordinal,
+    }));
 }
 
 export function entityBySlug(slug: string): PreviewEntity | null {

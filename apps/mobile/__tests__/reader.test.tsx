@@ -51,18 +51,19 @@ describe('ReaderView (Nehemiah 2 context mode)', () => {
   it('renders the era rail, story, chapter block and full BSB chapter', () => {
     renderReader();
     expect(screen.getByTestId('reader-screen')).toBeTruthy();
-    expect(screen.getByText('PERSIAN PERIOD')).toBeTruthy();
     expect(screen.getByTestId('scripture-block')).toBeTruthy();
     expect(screen.getAllByText(/Berean Standard Bible/).length).toBeGreaterThan(0);
   });
 
-  it('shows one scrollable timeline rail with short names, centered on the passage', () => {
+  it('shows one scrollable rail of curated passage events opening the timeline', () => {
     renderReader();
     expect(screen.getByTestId('timeline-rail')).toBeTruthy();
-    expect(screen.getByTestId('rail-nehemiah-2-request')).toBeTruthy();
-    expect(screen.getByText('Exodus')).toBeTruthy();
-    expect(screen.getByText('Parthenon')).toBeTruthy();
-    fireEvent.press(screen.getByTestId('rail-david-capital'));
+    // Curated stops only: no prototype years or world-history events.
+    expect(screen.getByTestId('rail-audience-with-artaxerxes')).toBeTruthy();
+    expect(screen.getByText('Audience With Artaxerxes')).toBeTruthy();
+    expect(screen.queryByText('Exodus')).toBeNull();
+    expect(screen.queryByText('Parthenon')).toBeNull();
+    fireEvent.press(screen.getByTestId('rail-night-inspection'));
     expect(screen.getByTestId('timeline-sheet')).toBeTruthy();
   });
 

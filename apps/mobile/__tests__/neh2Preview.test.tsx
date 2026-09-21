@@ -1,6 +1,8 @@
 import {
   anchorsForVerse,
   entityBySlug,
+  previewRailStops,
+  splitAnchoredOccurrences,
   getPreview,
   previewAvailable,
   previewChapter,
@@ -80,6 +82,43 @@ describe('curated preview asset', () => {
     }
   });
 
+  it('resolves mentions to their exact occurrence, not the first match', () => {
+    // Neh.2.8 anchors the second "the king"; 2:17 the second "Jerusalem".
+    const v8 = anchorsForVerse('Neh', 2, 8).find((anchor) => anchor.slug === 'artaxerxes-i');
+    expect(v8?.ordinal).toBe(2);
+    const v17 = anchorsForVerse('Neh', 2, 17).find(
+      (anchor) => anchor.slug === 'jerusalem' && anchor.phrase === 'Jerusalem',
+    );
+    expect(v17?.ordinal).toBe(2);
+
+    const text8 = getVerseText('Neh', 2, 8, 'BSB') ?? '';
+    const segments8 = splitAnchoredOccurrences(text8, anchorsForVerse('Neh', 2, 8));
+    const anchored8 = segments8.findIndex((segment) => segment.slug === 'artaxerxes-i');
+    expect(anchored8).toBeGreaterThan(0);
+    // The artaxerxes segment starts at the second standalone "the king".
+    const kingA = text8.indexOf('the king');
+    const kingB = text8.indexOf('the king', kingA + 1);
+    const prefixLength = segments8
+      .slice(0, anchored8)
+      .reduce((sum, segment) => sum + segment.text.length, 0);
+    expect(prefixLength).toBe(kingB);
+
+    // The second "Jerusalem" sits inside "the wall of Jerusalem", which is a
+    // longer validated selector and therefore wins; the mention ordinal is
+    // still recorded so the overlap is explicit, never a silent first-match.
+    expect(segments8.some((segment) => segment.text === 'the king')).toBe(true);
+  });
+
+  it('offers curated rail stops, never prototype timeline claims', () => {
+    const stops = previewRailStops();
+    expect(stops.length).toBe(previewEvents().length);
+    expect(stops.map((stop) => stop.key)).toContain('audience-with-artaxerxes');
+    for (const stop of stops) {
+      expect(stop.top).toMatch(/^2:/);
+      expect(stop.title.length).toBeGreaterThan(0);
+    }
+  });
+
   it('keeps curated anchors off other translations until reviewed', () => {
     expect(anchorsForVerse('Neh', 2, 1, 'tam_irv')).toEqual([]);
     expect(anchorsForVerse('Neh', 2, 1, 'tel_irv')).toEqual([]);
@@ -138,7 +177,6 @@ describe('curated scope coverage', () => {
         onClose={jest.fn()}
         onOpenEntity={jest.fn()}
         onOpenTimeline={jest.fn()}
-        onOpenMap={jest.fn()}
         onOpenPassage={jest.fn()}
       />,
     );

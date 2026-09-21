@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { ContextSheet } from './ContextSheet';
 import { EntitySheet } from './EntitySheet';
 import { TimelineSheet } from './TimelineSheet';
-import { MapSheet } from './MapSheet';
 import type { PreviewEvent } from '@/content/neh2Preview';
 
 interface ContextFlowProps {
@@ -20,7 +19,6 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
   const [entitySlug, setEntitySlug] = useState<string | null>(null);
   const [openEvent, setOpenEvent] = useState<PreviewEvent | null>(null);
   const [timelineOpen, setTimelineOpen] = useState(false);
-  const [mapOpen, setMapOpen] = useState(false);
 
   const closeEntity = () => {
     setEntitySlug(null);
@@ -37,10 +35,6 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
         onOpenTimeline={() => {
           onClose();
           setTimelineOpen(true);
-        }}
-        onOpenMap={() => {
-          onClose();
-          setMapOpen(true);
         }}
         onOpenPassage={(key) => {
           onClose();
@@ -62,10 +56,6 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
           closeEntity();
           setTimelineOpen(true);
         }}
-        onOpenMap={() => {
-          closeEntity();
-          setMapOpen(true);
-        }}
       />
       <TimelineSheet
         visible={timelineOpen}
@@ -76,7 +66,6 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
           onOpenPassage?.(key);
         }}
       />
-      <MapSheet visible={mapOpen} onClose={() => setMapOpen(false)} />
     </>
   );
 }

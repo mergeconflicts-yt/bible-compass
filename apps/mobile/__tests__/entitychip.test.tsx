@@ -52,7 +52,6 @@ describe('ContextSheet entity chips', () => {
     onClose: jest.fn(),
     onOpenEntity: jest.fn(),
     onOpenTimeline: jest.fn(),
-    onOpenMap: jest.fn(),
     onOpenPassage: jest.fn(),
     onOpenEvent: jest.fn(),
   };

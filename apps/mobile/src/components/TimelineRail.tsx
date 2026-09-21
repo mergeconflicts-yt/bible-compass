@@ -9,10 +9,22 @@ const ITEM_WIDTH = 88;
 /* Dot-center geometry: item top padding (4) + year line (14) + gap (2) + dot radius (5). */
 const DOT_CENTER_Y = 4 + 14 + 2 + 5;
 
+export interface RailStop {
+  key: string;
+  /** Short top-line label (a year for legacy stops, a range for curated ones). */
+  top: string;
+  title: string;
+}
+
 interface TimelineRailProps {
   /** Canonical key of the passage event; null highlights nothing. */
   activeKey: string | null;
   onOpenTimeline: () => void;
+  /**
+   * Curated stops to render instead of the legacy prototype timeline.
+   * When omitted, the legacy draft timeline renders (other chapters).
+   */
+  stops?: RailStop[];
 }
 
 /**
@@ -21,13 +33,20 @@ interface TimelineRailProps {
  * centers the passage event on mount. Every stop opens the full vertical
  * timeline, which renders the same dataset with complete details.
  */
-export function TimelineRail({ activeKey, onOpenTimeline }: TimelineRailProps) {
+export function TimelineRail({ activeKey, onOpenTimeline, stops }: TimelineRailProps) {
   const { colors } = useTheme();
   const events = getTimeline();
+  const items: RailStop[] =
+    stops ??
+    events.map((event) => ({
+      key: event.canonical_key,
+      top: formatYear(event.start),
+      title: event.title,
+    }));
   const scrollRef = useRef<ScrollView>(null);
   const offsetRef = useRef(0);
   const [width, setWidth] = useState(0);
-  const activeIndex = events.findIndex((event) => event.canonical_key === activeKey);
+  const activeIndex = items.findIndex((item) => item.key === activeKey);
 
   useEffect(() => {
     if (width > 0 && activeIndex > 0) {
@@ -42,8 +61,10 @@ export function TimelineRail({ activeKey, onOpenTimeline }: TimelineRailProps) {
       testID="timeline-rail"
       onLayout={(event) => setWidth(event.nativeEvent.layout.width)}
       accessibilityRole="image"
-      accessibilityLabel={`Biblical timeline, ${events.length} events. Currently showing ${
-        activeIndex >= 0 ? events[activeIndex]?.title : 'no highlighted passage'
+      accessibilityLabel={`Biblical timeline, ${items.length} events. Currently showing ${
+        activeIndex >= 0
+          ? (items[activeIndex]?.title ?? 'no highlighted passage')
+          : 'no highlighted passage'
       }.`}
     >
       <ScrollView
@@ -72,15 +93,15 @@ export function TimelineRail({ activeKey, onOpenTimeline }: TimelineRailProps) {
             pointerEvents="none"
           />
           <View style={styles.stops}>
-            {events.map((event) => {
-              const active = event.canonical_key === activeKey;
+            {items.map((item) => {
+              const active = item.key === activeKey;
               return (
                 <Pressable
-                  key={event.canonical_key}
+                  key={item.key}
                   onPress={onOpenTimeline}
-                  testID={`rail-${event.canonical_key}`}
+                  testID={`rail-${item.key}`}
                   accessibilityRole="button"
-                  accessibilityLabel={`${event.title}, ${formatYear(event.start)}. Open timeline.`}
+                  accessibilityLabel={`${item.title}, ${item.top}. Open timeline.`}
                   accessibilityState={{ selected: active }}
                   style={[
                     styles.item,
@@ -93,7 +114,7 @@ export function TimelineRail({ activeKey, onOpenTimeline }: TimelineRailProps) {
                     style={styles.year}
                     numberOfLines={1}
                   >
-                    {formatYear(event.start)}
+                    {item.top}
                   </AppText>
                   <View
                     style={[
@@ -110,7 +131,7 @@ export function TimelineRail({ activeKey, onOpenTimeline }: TimelineRailProps) {
                     style={styles.label}
                     numberOfLines={2}
                   >
-                    {event.short_name}
+                    {item.title}
                   </AppText>
                 </Pressable>
               );

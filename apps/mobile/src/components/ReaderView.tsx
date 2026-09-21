@@ -22,15 +22,15 @@ import {
 import { ContextFlow } from '@/components/sheets/ContextFlow';
 import { OptionsSheet } from '@/components/sheets/OptionsSheet';
 import { EntitySheet } from '@/components/sheets/EntitySheet';
-import { MapSheet } from '@/components/sheets/MapSheet';
 import { TimelineSheet } from '@/components/sheets/TimelineSheet';
 import { TimelineRail } from '@/components/TimelineRail';
-import { eraRail } from '@/fixtures/demo';
 import {
   anchorsForVerse,
   previewAvailable,
   previewChapter,
-  splitAnchored,
+  previewRailStops,
+  splitAnchoredOccurrences,
+  type PreviewAnchor,
 } from '@/content/neh2Preview';
 import { parseReference } from '@/lib/reference';
 import { isIndicTranslation, type ChapterBlock } from '@/content/bsb';
@@ -69,7 +69,6 @@ export function ReaderView({
   const win = useWindowDimensions();
   const [entitySlug, setEntitySlug] = useState<string | null>(null);
   const [timelineOpen, setTimelineOpen] = useState(false);
-  const [mapOpen, setMapOpen] = useState(false);
   const [highlightedVerse, setHighlightedVerse] = useState<number | null>(initialVerse ?? null);
   const scrollRef = useRef<ScrollView | null>(null);
   const verseOffsets = useRef(new Map<number, number>());
@@ -197,32 +196,10 @@ export function ReaderView({
     );
   }
 
-  // Curated preview data is invalid: say so explicitly instead of silently
-  // falling back to any legacy draft.
-  if (wantsPreview && !previewOk) {
-    return (
-      <Screen
-        testID="reader-screen"
-        header={
-          <ReaderHeader
-            title={title}
-            translationName={preferences.translation.name}
-            onBack={onBack}
-            onOptions={undefined}
-          />
-        }
-      >
-        <StateView
-          variant="error"
-          title="Preview data isn't available"
-          explanation="The Nehemiah 2 curated preview failed validation, so context is hidden until a valid preview ships."
-          actionLabel="Back"
-          onAction={onBack}
-          testID="preview-unavailable"
-        />
-      </Screen>
-    );
-  }
+  // Curated preview data is invalid: Scripture stays readable with context
+  // disabled, plus an explicit error notice. Never silently fall back to any
+  // legacy draft.
+  const previewBroken = wantsPreview && !previewOk;
 
   return (
     <Screen
@@ -259,11 +236,7 @@ export function ReaderView({
       <View style={[styles.era, { borderColor: colors.border }]}>
         {contextMode ? (
           <View style={styles.eraRow}>
-            <View style={[styles.periodChip, { backgroundColor: colors.accentSoft }]}>
-              <AppText variant="caption" color="accent" style={styles.eraSmall}>
-                {(eraRail.period.split('·')[0] ?? eraRail.period).trim().toUpperCase()}
-              </AppText>
-            </View>
+            <View />
             <Pressable
               onPress={() => setTimelineOpen(true)}
               testID="reader-open-timeline"
@@ -280,10 +253,22 @@ export function ReaderView({
           </View>
         ) : null}
         <TimelineRail
-          activeKey={contextMode ? 'nehemiah-2-request' : null}
+          activeKey={null}
           onOpenTimeline={() => setTimelineOpen(true)}
+          // Neh.2 always uses curated stops (empty when the preview is
+          // invalid) so the legacy prototype timeline can never leak into
+          // the curated flow. Other chapters keep their existing behaviour.
+          stops={wantsPreview ? (contextMode ? previewRailStops() : []) : undefined}
         />
       </View>
+      {previewBroken ? (
+        <StateView
+          variant="error"
+          title="Preview data isn't available"
+          explanation="The Nehemiah 2 curated preview failed validation, so context is hidden until a valid preview ships. Scripture below is unaffected."
+          testID="preview-unavailable"
+        />
+      ) : null}
 
       {contextMode ? (
         <Pressable
@@ -328,7 +313,7 @@ export function ReaderView({
             scriptSize={scriptSize}
             scriptLine={scriptLine}
             anchors={
-              block.kind === 'verse'
+              block.kind === 'verse' && contextMode
                 ? anchorsForVerse(bookOsis, chapter, block.number, preferences.translationId)
                 : []
             }
@@ -422,10 +407,6 @@ export function ReaderView({
               setEntitySlug(null);
               setTimelineOpen(true);
             }}
-            onOpenMap={() => {
-              setEntitySlug(null);
-              setMapOpen(true);
-            }}
           />
           <ContextFlow
             visible={contextOpen}
@@ -445,7 +426,6 @@ export function ReaderView({
           openReference(key);
         }}
       />
-      <MapSheet visible={mapOpen} onClose={() => setMapOpen(false)} />
       <OptionsSheet
         visible={optionsOpen}
         onClose={() => setOptionsOpen(false)}
@@ -486,7 +466,7 @@ function ChapterBlockView({
   block: ChapterBlock;
   scriptSize: number;
   scriptLine: number;
-  anchors: Array<{ phrase: string; slug: string }>;
+  anchors: PreviewAnchor[];
   onAnchorPress: (slug: string, rect: AnchorRect | null) => void;
   highlightedVerse: number | null;
   onLayoutVerse: (verse: number, y: number) => void;
@@ -528,7 +508,7 @@ function ChapterBlockView({
       onAnchorPress(slug, null);
     }
   };
-  const segments = splitAnchored(block.text, anchors);
+  const segments = splitAnchoredOccurrences(block.text, anchors);
   const targeted = highlightedVerse === block.number;
   return (
     <AppText

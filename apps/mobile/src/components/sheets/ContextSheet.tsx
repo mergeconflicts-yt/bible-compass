@@ -29,7 +29,6 @@ interface ContextSheetProps {
   onClose: () => void;
   onOpenEntity: (slug: string) => void;
   onOpenTimeline: () => void;
-  onOpenMap: () => void;
   onOpenPassage: (passageKey: string) => void;
   onOpenEvent?: (event: PreviewEvent) => void;
 }
@@ -48,7 +47,6 @@ export function ContextSheet({
   onClose,
   onOpenEntity,
   onOpenTimeline,
-  onOpenMap,
   onOpenPassage,
   onOpenEvent,
 }: ContextSheetProps) {
@@ -215,12 +213,6 @@ export function ContextSheet({
               variant="secondary"
               onPress={onOpenTimeline}
               testID="context-open-timeline"
-            />
-            <Button
-              title="Historical map ›"
-              variant="secondary"
-              onPress={onOpenMap}
-              testID="context-open-map"
             />
           </View>
           <ReviewBox />

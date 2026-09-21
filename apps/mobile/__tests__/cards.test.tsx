@@ -8,7 +8,6 @@ describe('EntitySheet full hierarchy', () => {
     onOpenEntity: jest.fn(),
     onOpenPassage: jest.fn(),
     onOpenTimeline: jest.fn(),
-    onOpenMap: jest.fn(),
   };
   beforeEach(() => jest.clearAllMocks());
 
@@ -52,13 +51,11 @@ describe('EntitySheet full hierarchy', () => {
     expect(sheetProps.onOpenEntity).toHaveBeenCalledWith('nehemiah-governor');
   });
 
-  it('gives places a locator lateral and no person spine', () => {
+  it('gives places their profile and roles with no person spine or map lateral', () => {
     render(<EntitySheet visible slug="jerusalem" {...sheetProps} />);
-    expect(screen.getByText('PLACE')).toBeTruthy();
     expect(screen.queryByText('WHO HE STANDS BETWEEN')).toBeNull();
-    expect(screen.getByTestId('fullcard-locate')).toBeTruthy();
-    fireEvent.press(screen.getByTestId('fullcard-locate'));
-    expect(sheetProps.onOpenMap).toHaveBeenCalledTimes(1);
+    // No curated map data exists, so the prototype locator is removed.
+    expect(screen.queryByTestId('fullcard-locate')).toBeNull();
     expect(screen.getByText('About the place')).toBeTruthy();
     expect(screen.getByText('The ruined ancestral city Nehemiah seeks to restore.')).toBeTruthy();
     expect(
@@ -66,7 +63,7 @@ describe('EntitySheet full hierarchy', () => {
     ).toBeTruthy();
   });
 
-  it('omits locator and lateral moves when no opener is provided', () => {
+  it('gives a place no lateral when no opener is provided', () => {
     render(
       <EntitySheet
         visible

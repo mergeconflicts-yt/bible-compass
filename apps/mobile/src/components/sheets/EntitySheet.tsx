@@ -30,7 +30,6 @@ interface EntitySheetProps {
   onOpenEntity: (slug: string) => void;
   onOpenPassage: (passageKey: string) => void;
   onOpenTimeline?: () => void;
-  onOpenMap?: () => void;
 }
 
 const TYPE_GLYPHS: Record<string, keyof typeof Ionicons.glyphMap> = {
@@ -89,7 +88,6 @@ export function EntitySheet({
   onOpenEntity,
   onOpenPassage,
   onOpenTimeline,
-  onOpenMap,
 }: EntitySheetProps) {
   const { colors } = useTheme();
   const preferences = useOptionalPreferences();
@@ -141,7 +139,6 @@ export function EntitySheet({
           onOpenEntity={onOpenEntity}
           onOpenPassage={onOpenPassage}
           onOpenTimeline={onOpenTimeline}
-          onOpenMap={onOpenMap}
           onBack={onClose}
         />
       )}
@@ -158,7 +155,6 @@ export interface FullCardProps {
   onOpenEntity?: (slug: string) => void;
   onOpenPassage?: (passageKey: string) => void;
   onOpenTimeline?: () => void;
-  onOpenMap?: () => void;
   onBack?: () => void;
 }
 
@@ -181,7 +177,6 @@ export function FullCard({
   onOpenEntity,
   onOpenPassage,
   onOpenTimeline,
-  onOpenMap,
   onBack,
 }: FullCardProps) {
   const { colors } = useTheme();
@@ -218,8 +213,6 @@ export function FullCard({
         type === 'person' && entity ? `See ${pronoun(entity.slug, true)} in time` : 'See in time',
       onPress: onOpenTimeline,
     };
-  } else if (onOpenMap && (type === 'place' || type === 'structure') && entity) {
-    lateral = { title: 'See on map', onPress: onOpenMap };
   }
 
   return (
@@ -246,29 +239,6 @@ export function FullCard({
               />
             ))}
           </View>
-        </View>
-      ) : null}
-
-      {(type === 'place' || type === 'structure') && entity && onOpenMap ? (
-        <View style={[styles.spineCard, { backgroundColor: colors.surfaceSubtle }]}>
-          <AppText variant="caption" color="accent" style={styles.eyebrow}>
-            {entity.type.toUpperCase()}
-          </AppText>
-          <Pressable
-            onPress={onOpenMap}
-            testID="fullcard-locate"
-            accessibilityRole="button"
-            accessibilityLabel={`See ${entity.name} on the historical map`}
-            style={styles.locateRow}
-          >
-            <Ionicons name="location-outline" size={20} color={colors.accent} />
-            <AppText variant="label" style={styles.locateText}>
-              {`See ${entity.name} on the historical map`}
-            </AppText>
-            <AppText variant="body" color="textSecondary">
-              ›
-            </AppText>
-          </Pressable>
         </View>
       ) : null}
 
@@ -441,16 +411,6 @@ const styles = StyleSheet.create({
   spineList: {
     gap: space[2],
     marginTop: space[2],
-  },
-  locateRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: space[2],
-    marginTop: space[2],
-    minHeight: space[12],
-  },
-  locateText: {
-    flex: 1,
   },
   contextCard: {
     borderWidth: 1,

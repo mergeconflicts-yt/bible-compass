@@ -6,7 +6,7 @@ import { Sheet } from '@/components/Sheet';
 import { AppText } from '@/components/AppText';
 import { ReferenceText } from '@/components/ReferenceText';
 import { Button } from '@/components/Button';
-import { previewEvents, previewNotice } from '@/content/neh2Preview';
+import { previewEvents, previewNotice, type PreviewEvent } from '@/content/neh2Preview';
 
 interface TimelineSheetProps {
   visible: boolean;
@@ -22,7 +22,15 @@ interface TimelineSheetProps {
  */
 export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheetProps) {
   const { colors } = useTheme();
-  const events = previewEvents();
+  // The sheet is mounted even when hidden; never let invalid preview data
+  // throw during render. Show an honest unavailable state instead.
+  let events: PreviewEvent[] = [];
+  let unavailable = false;
+  try {
+    events = previewEvents();
+  } catch {
+    unavailable = true;
+  }
   const scrollRef = useRef<ScrollView>(null);
   const legendHeight = useRef(0);
   const activeY = useRef<number | null>(null);
@@ -62,6 +70,11 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
           Curated passage events
         </AppText>
       </View>
+      {unavailable ? (
+        <AppText variant="body" color="textSecondary" testID="timeline-unavailable">
+          The Nehemiah 2 preview failed validation, so passage events are unavailable.
+        </AppText>
+      ) : null}
       <View style={[styles.rail, { borderColor: colors.border }]}>
         {events.map((event, index) => {
           const participants = event.participants.map((person) => person.name).join(', ');
