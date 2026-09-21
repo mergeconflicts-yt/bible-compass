@@ -5,18 +5,29 @@
 
 begin;
 
--- 1. Exactly one import receipt, draft, with a payload digest.
+-- 1. Exactly one import receipt, draft, with a payload digest and the
+-- inserted / unchanged / rejected counts.
 DO $$
 DECLARE
   n integer;
   d text;
   s text;
+  inserted integer;
+  unchanged integer;
+  rejected integer;
+  total integer;
+  rcpt jsonb;
 BEGIN
   SELECT count(*) INTO n FROM private_staging.curation_imports;
   IF n <> 1 THEN
     RAISE EXCEPTION 'FAIL: expected 1 import receipt, found %', n;
   END IF;
-  SELECT payload_digest, receipt->>'review_status' INTO d, s
+  SELECT payload_digest, receipt->>'review_status', receipt,
+         (receipt->'counts'->>'inserted')::int,
+         (receipt->'counts'->>'unchanged')::int,
+         (receipt->'counts'->>'rejected')::int,
+         (receipt->'counts'->>'total')::int
+    INTO d, s, rcpt, inserted, unchanged, rejected, total
   FROM private_staging.curation_imports
   WHERE package_key = 'import:neh2:canonical-locale-edition';
   IF d !~ '^sha256:[0-9a-f]{64}$' THEN
@@ -24,6 +35,23 @@ BEGIN
   END IF;
   IF s <> 'draft' THEN
     RAISE EXCEPTION 'FAIL: receipt is not draft: %', s;
+  END IF;
+  IF inserted IS NULL OR unchanged IS NULL OR rejected IS NULL THEN
+    RAISE EXCEPTION 'FAIL: receipt is missing inserted/unchanged/rejected counts';
+  END IF;
+  IF rejected <> 0 THEN
+    RAISE EXCEPTION 'FAIL: rejected count % <> 0', rejected;
+  END IF;
+  IF inserted + unchanged <> total THEN
+    RAISE EXCEPTION 'FAIL: inserted % + unchanged % <> total %', inserted, unchanged, total;
+  END IF;
+  -- A prior import in this database means the rows exist: the receipt must
+  -- account for every planned row exactly once.
+  IF total <> 379 THEN
+    RAISE EXCEPTION 'FAIL: receipt total % <> 379 planned rows', total;
+  END IF;
+  IF jsonb_typeof(rcpt->'counts'->'by_table') <> 'object' THEN
+    RAISE EXCEPTION 'FAIL: receipt has no per-table counts';
   END IF;
 END $$;
 

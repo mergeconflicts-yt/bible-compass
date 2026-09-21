@@ -272,7 +272,75 @@ def validate(canonical: dict, locale: dict, edition: dict, catalog: dict, verses
 # ---------------------------------------------------------------------------
 
 
-def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verses: dict[int, str], payload_digest: str) -> str:
+def stable_key_sets(canonical: dict) -> dict[str, list[str]]:
+    entity_keys = [r["canonical_entity_key"] for r in canonical["records"]["reconciliation_records"]]
+    entity_keys += [
+        f"entity:{e['event_key'].split('event:', 1)[1]}" for e in canonical["records"]["events"]
+    ]
+    return {
+        "entities": entity_keys,
+        "claims": [c["claim_key"] for c in canonical["records"]["claims"]],
+        "scopes": canonical["scope"]["scope_keys"],
+    }
+
+
+def planned_counts(canonical: dict, locale: dict, edition: dict, verses: dict[int, str]) -> dict[str, int]:
+    sets = stable_key_sets(canonical)
+    return {
+        "entities": len(sets["entities"]),
+        "claims": len(sets["claims"]),
+        "citations": len(canonical["records"]["citations"]),
+        "attestations": len(canonical["records"]["attestations"]),
+        "mentions": len(edition["records"]["mentions"]),
+        "relationships": len(canonical["records"]["relationships"]),
+        "relevance": len(canonical["records"]["relevance"]),
+        "contexts": len(locale["records"]["passage_contexts"]),
+        "verses": len(verses),
+    }
+
+
+def existing_counts(url: str, canonical: dict) -> dict[str, int]:
+    """Rows already present for our stable keys, so the receipt can report
+    inserted vs unchanged (the import itself is conflict-guarded)."""
+    sets = stable_key_sets(canonical)
+    ent = text_array(sets["entities"])
+    cl = text_array(sets["claims"])
+    sc = text_array(sets["scopes"])
+    edition = f"(select id from private_staging.translation_editions where key={esc(EDITION_KEY)})"
+    queries = {
+        "entities": f"select count(*) from private_staging.entities where key = any({ent})",
+        "claims": f"select count(*) from private_staging.claims where key = any({cl})",
+        "citations": f"select count(*) from private_staging.claim_citations c join private_staging.claims cl on cl.id=c.claim_id where cl.key = any({cl})",
+        "attestations": f"select count(*) from private_staging.reference_entity_attestations a join private_staging.entities e on e.id=a.entity_id where e.key = any({ent})",
+        "mentions": f"select count(*) from private_staging.edition_mentions where edition_id={edition}",
+        "relationships": f"select count(*) from private_staging.entity_relationship_assertions a join private_staging.entities e on e.id=a.subject_entity_id where e.key = any({ent})",
+        "relevance": f"select count(*) from private_staging.scope_entity_relevance r join private_staging.scripture_scopes s on s.id=r.scope_id where s.key = any({sc})",
+        "contexts": f"select count(*) from private_staging.context_artifacts a join private_staging.scripture_scopes s on s.id=a.scope_id where s.key = any({sc})",
+        "verses": f"select count(*) from private_staging.translation_edition_verses where edition_id={edition}",
+    }
+    return {name: int(psql(url, query) or "0") for name, query in queries.items()}
+
+
+def build_receipt_counts(planned: dict[str, int], existing: dict[str, int]) -> dict:
+    by_table: dict[str, dict] = {}
+    inserted = 0
+    unchanged = 0
+    for name, total in planned.items():
+        already = min(existing.get(name, 0), total)
+        new = total - already
+        by_table[name] = {"inserted": new, "unchanged": already, "rejected": 0, "total": total}
+        inserted += new
+        unchanged += already
+    return {
+        "inserted": inserted,
+        "unchanged": unchanged,
+        "rejected": 0,
+        "total": inserted + unchanged,
+        "by_table": by_table,
+    }
+
+
+def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verses: dict[int, str], payload_digest: str, receipt_counts: dict | None = None) -> str:
     stmts: list[str] = []
 
     def add(sql: str) -> None:
@@ -548,7 +616,7 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
             "edition": edition["package_key"],
         },
         "canonical_digest": sha256_text(jcs(canonical)),
-        "counts": counts,
+        "counts": receipt_counts or build_receipt_counts(counts, {}),
         "review_status": "draft",
         "note": "Draft private import. Registry source_release rows are not created (rights gate); citation source_release_id values are deterministic local references and digests hash the evidence catalog entries.",
     }
@@ -592,8 +660,14 @@ def main() -> int:
 
     summary = validate(canonical, locale_pkg, edition, catalog, verses)
     payload_digest = sha256_text(jcs({"canonical": canonical, "locale": locale_pkg, "edition": edition, "evidence": catalog}))
+    planned = planned_counts(canonical, locale_pkg, edition, verses)
     if args.emit_sql:
-        sys.stdout.write(build_sql(canonical, locale_pkg, edition, catalog, verses, payload_digest))
+        sys.stdout.write(
+            build_sql(
+                canonical, locale_pkg, edition, catalog, verses, payload_digest,
+                build_receipt_counts(planned, {}),
+            )
+        )
         return 0
     print(f"validated: counts={json.dumps(summary['counts'])} payload_digest={payload_digest}")
     if args.check or not args.database_url:
@@ -602,20 +676,32 @@ def main() -> int:
         return 0
 
     url = args.database_url
-    try:
-        existing = psql(url, f"select payload_digest || '|' || package_revision from private_staging.curation_imports where package_key={esc(IMPORT_PACKAGE_KEY)}")
-    except SystemExit:
-        raise
+    existing = psql(url, f"select payload_digest || '|' || package_revision from private_staging.curation_imports where package_key={esc(IMPORT_PACKAGE_KEY)}")
     if existing:
         digest, _, revision = existing.partition("|")
         if digest == payload_digest and int(revision) == IMPORT_REVISION:
-            receipt = psql(url, f"select receipt::text from private_staging.curation_imports where package_key={esc(IMPORT_PACKAGE_KEY)}")
+            # Identical replay: report the no-op with inserted=0 and the
+            # already-present rows counted as unchanged.
+            noop = {
+                "status": "no_op",
+                "inserted": 0,
+                "unchanged": sum(planned.values()),
+                "rejected": 0,
+                "total": sum(planned.values()),
+                "by_table": {
+                    name: {"inserted": 0, "unchanged": total, "rejected": 0, "total": total}
+                    for name, total in planned.items()
+                },
+            }
             print(f"no-op: identical payload already imported (payload_digest={payload_digest})")
-            print(receipt)
+            print(json.dumps(noop, ensure_ascii=False))
             return 0
         fail(f"changed replay: {IMPORT_PACKAGE_KEY} was imported with digest {digest}; refusing to overwrite (rollback, no writes)", 3)
 
-    sql = build_sql(canonical, locale_pkg, edition, catalog, verses, payload_digest)
+    # inserted vs unchanged is measured against rows already present for our
+    # stable keys, before the single transaction writes anything.
+    receipt_counts = build_receipt_counts(planned, existing_counts(url, canonical))
+    sql = build_sql(canonical, locale_pkg, edition, catalog, verses, payload_digest, receipt_counts)
     psql(url, sql, single_transaction=True)
     print(f"imported: {IMPORT_PACKAGE_KEY} payload_digest={payload_digest}")
     print(psql(url, f"select receipt::text from private_staging.curation_imports where package_key={esc(IMPORT_PACKAGE_KEY)}"))

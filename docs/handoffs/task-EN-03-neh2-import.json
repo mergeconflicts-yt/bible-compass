@@ -1,5 +1,5 @@
 {
-  "attempt_id": "task:EN-03-neh2-import:attempt-1",
+  "attempt_id": "task:EN-03-neh2-import:attempt-2",
   "task_id": "EN-03",
   "task_title": "Idempotent Nehemiah 2 importer into the existing local Supabase/PostgreSQL schema",
   "result": "PASS — clean-rebuild import and all SQL tests pass; data is queryable. Draft/private only.",
@@ -16,7 +16,8 @@
     "supabase/migrations/20260915000012_curation_imports.sql (new: curation_imports receipt table; attestation claim_id nullable)",
     "supabase/tests/08_neh2_import_test.sql (new: import completeness, queryability, draft-only, anonymity)",
     "supabase/tests/04_review_package_rls_test.sql (conflict-proof reference seed so a prior import does not break it)",
-    "tools/verify-supabase.sh (run the importer, then tests 01-08)"
+    "tools/verify-supabase.sh (run the importer, then tests 01-08)",
+    "tools/import-neh2.py (inserted/unchanged/rejected receipt counts with per-table breakdown; no-op receipt)"
   ],
   "validation_before_write": [
     "contract/schema/vocabulary versions, layer and family, data_classification, review_status draft",
@@ -30,7 +31,8 @@
   "guarantees_proven": {
     "transactional": "All writes run in ONE psql -1 transaction. Injected a failure after partial inserts (682 statements) and re-queried: entities/claims/mentions/receipts = 0/0/0/0 — full rollback.",
     "idempotent_noop": "Second run of identical packages printed: no-op: identical payload already imported (payload_digest sha256:b82b7e57...). No writes.",
-    "changed_replay": "A modified locale package produced a different payload digest and exited with: changed replay: import:neh2:canonical-locale-edition was imported with digest ...; refusing to overwrite (rollback, no writes). No writes occurred."
+    "changed_replay": "A modified locale package produced a different payload digest and exited with: changed replay: import:neh2:canonical-locale-edition was imported with digest ...; refusing to overwrite (rollback, no writes). No writes occurred.",
+    "receipt_counts": "The receipt now stores inserted / unchanged / rejected counts with a per-table breakdown. First import on a clean database: inserted=379, unchanged=0, rejected=0 (entities 37, claims 33, citations 56, attestations 86, mentions 74, relationships 17, relevance 50, contexts 6, verses 20). An identical re-import prints status=no_op with inserted=0, unchanged=379, rejected=0. rejected is 0 because every record either inserts or is already present; validation failures abort before any write."
   },
   "imported_counts": {
     "entities": 37,
@@ -79,6 +81,26 @@
       "command": "npm run typecheck && npm run lint && npm run test",
       "exit_code": 0,
       "output": "all workspaces clean"
+    },
+    {
+      "command": "python3 tools/import-neh2.py --database-url \"$DB\" (fresh database)",
+      "exit_code": 0,
+      "output": "imported; receipt counts inserted=379 unchanged=0 rejected=0"
+    },
+    {
+      "command": "python3 tools/import-neh2.py --database-url \"$DB\" (identical replay)",
+      "exit_code": 0,
+      "output": "no-op; status=no_op inserted=0 unchanged=379 rejected=0"
+    },
+    {
+      "command": "python3 tools/__... emit-sql | psql -1 with injected failure",
+      "exit_code": 1,
+      "output": "failure after 682 statements; entities/mentions/receipts = 0/0/0 (full rollback)"
+    },
+    {
+      "command": "clean rebuild bible_clean; bootstrap + migrations 01-13; REQUIRE_SUPABASE_TESTS=1 sh tools/verify-supabase.sh",
+      "exit_code": 0,
+      "output": "RUN 01..09; SUPABASE-TESTS-PASS (test 08 asserts receipt counts and totals)"
     }
   ],
   "schema_changes": [
@@ -93,5 +115,6 @@
     "English only; the canonical body is otherwise unharmed. Nothing is published; anon sees zero draft rows (test 08).",
     "The importer is Python + psql (no new npm dependency); it must run where psql and python3 exist."
   ],
-  "stop_condition": "Stopped after proving the imported data is queryable (test 08 joins entity -> description -> claim -> citation -> evidence locator, mention -> render span with ordinal, relevance role text and context sections) and that drafts stay private. No mobile wiring, no publication, no further chapters, no database redesign."
+  "stop_condition": "Stopped after proving the imported data is queryable (test 08 joins entity -> description -> claim -> citation -> evidence locator, mention -> render span with ordinal, relevance role text and context sections) and that drafts stay private. No mobile wiring, no publication, no further chapters, no database redesign.",
+  "tests_sql_new": "supabase/tests/08_neh2_import_test.sql now asserts the receipt's inserted/unchanged/rejected counts, rejected=0, inserted+unchanged=total, total=379, and a per-table object."
 }
