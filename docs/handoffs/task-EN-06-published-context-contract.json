@@ -1,0 +1,61 @@
+{
+  "attempt_id": "task:EN-06-published-context-contract:attempt-1",
+  "task_id": "EN-06",
+  "task_title": "Complete published context read contract for a Scripture scope",
+  "result": "PASS — published-only bundle RPC, TypeScript contracts, runtime validation, Supabase repository and tests all pass.",
+  "user_visible_outcome": "No screen change. A consumer can now fetch one complete, validated context bundle for a Scripture scope through the mobile repository boundary: passage contexts, localized entities, claims with source references, mentions with render spans, relevance, relationships and events (participants and places), all in deterministic order using stable keys. Drafts never appear.",
+  "read_first": [
+    "docs/handoffs/task-EN-04-supabase-read-repository.json",
+    "docs/SECURITY.md",
+    "supabase/migrations/20260915000003_knowledge_claim_context.sql",
+    "apps/mobile/src/content/publishedContent.ts"
+  ],
+  "files_changed": [
+    "supabase/migrations/20260915000014_published_context_bundle.sql (new: public_content.published_context_bundle(scope_key) read API)",
+    "supabase/tests/10_published_context_bundle_test.sql (new: synthetic published fixture + draft denial + deterministic order)",
+    "apps/mobile/src/content/publishedContext.ts (new: Zod contract, runtime validation, deterministic-order checks, PublishedContextError)",
+    "apps/mobile/src/content/publishedContent.ts (repository port gains fetchPublishedContextBundle)",
+    "apps/mobile/src/infrastructure/supabase/publishedContentRepository.ts (RPC implementation + validation)",
+    "apps/mobile/src/content/publishedContentStore.ts (fetchPublishedContextBundle; remote-only, null on failure)",
+    "apps/mobile/__tests__/published-context.test.ts (new: contract/adapter/store tests)",
+    "apps/mobile/__tests__/published-content.test.ts (fake repos updated for the new method)",
+    "tools/verify-supabase.sh (run test 10)"
+  ],
+  "read_api": {
+    "surface": "public_content.published_context_bundle(p_scope_key text) returns jsonb. One call returns the whole bundle for a scope.",
+    "bundle_keys": "scope_key, contexts[], entities[] (names + descriptions), claims[] (citations), mentions[] (start/end utf16 spans), relevance[], relationships[], events[] (participants, places).",
+    "stable_keys": "entity_key/claim_key/scope_key and book_osis + chapter + verse + local_key + edition_key; no surrogate ids cross the boundary.",
+    "deterministic_order": "contexts by kind; entities/claims/relevance/events by key; names by (language_tag, normalized_form, kind); descriptions by (locale, revision); citations by (locator, support_kind); mentions by (book, chapter, verse, entity_key, occurrence_ordinal); relationships by (subject, predicate, object).",
+    "security": "Read-only, STABLE, SECURITY DEFINER with pinned search_path. Every branch filters to published rows (published package membership and/or review_state='published'; mentions require edition.status='published'). Execute granted to anon/authenticated; no private table is exposed directly. Chosen over N invoker views because the bundle joins many private tables with per-table publication rules; gating happens once, centrally, and is covered by published-only and draft-denial tests.",
+    "why": "Contexts, claims, mentions, relevance, relationships and events were not previously readable by clients; only entities/attestations/verses were. This adds the complete scope bundle the mobile boundary needs."
+  },
+  "runtime_validation": "apps/mobile/src/content/publishedContext.ts defines strict Zod schemas (unknown fields rejected), span and digest checks, and superRefine checks that every array is in the server's deterministic order. parsePublishedContextBundle throws PublishedContextError on any defect; the repository validates before returning, and the store maps failures to null.",
+  "commands_executed": [
+    {
+      "command": "clean database: bootstrap + migrations 01-14; REQUIRE_SUPABASE_TESTS=1 DATABASE_URL=... sh tools/verify-supabase.sh",
+      "exit_code": 0,
+      "output": "IMPORT imported; RUN 01..10; SUPABASE-TESTS-PASS"
+    },
+    {
+      "command": "apps/mobile: npx tsc --noEmit && npx prettier --check . && npx jest (NODE_OPTIONS=--experimental-sqlite)",
+      "exit_code": 0,
+      "output": "33 suites, 286 tests passed; 0 eslint errors (17 warnings, below baseline)"
+    },
+    {
+      "command": "npm run typecheck && npm run lint && npm run test",
+      "exit_code": 0,
+      "output": "all workspaces clean"
+    }
+  ],
+  "tests": {
+    "sql_10": "Seeds a synthetic published scope (published entities/names/descriptions/claim+citation/context section/edition+mention+span/relevance/relationship/event+participant+place) plus a draft entity, draft description and draft claim; asserts anon receives the full bundle with correct keys, spans, ordering and counts, and that draft rows never appear.",
+    "mobile": "Contract: parses a complete ordered bundle; rejects missing sections, malformed digests, bad spans, unknown fields and non-deterministic order. Adapter: calls published_context_bundle with the scope key and validates the payload; throws on backend error or invalid payload. Store: returns the bundle through the boundary, and null (never throws) when unconfigured or failing."
+  },
+  "known_limitations": [
+    "The curated Nehemiah 2 draft is not published, so a live bundle is empty until a publication release exists; the contract is proven with synthetic published fixtures.",
+    "claim_citations.source_release_id is a deterministic local uuid (registry release rows are not created); the bundle exposes the source edition key and the citation locator/digest rather than a registry release key.",
+    "The bundle is remote-only by design: no SQLite caching was added (per instruction).",
+    "SECURITY DEFINER is a deliberate, documented trade-off for this public read API; it is read-only, pinned, and published-filtered, but it does bypass RLS internally."
+  ],
+  "stop_condition": "Stopped after the complete context bundle can be fetched and validated through the mobile repository boundary, with published-only and draft-denial tests passing. No publication, no screens, no SQLite cache expansion, no other chapter, no unrelated table changes."
+}

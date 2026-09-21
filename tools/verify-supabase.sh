@@ -36,7 +36,7 @@ else
   echo "IMPORT-SKIPPED: python3 or tools/import-neh2.py unavailable"
 fi
 
-for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql supabase/tests/07_*.sql supabase/tests/08_*.sql supabase/tests/09_*.sql; do
+for f in supabase/tests/01_*.sql supabase/tests/02_*.sql supabase/tests/03_*.sql supabase/tests/04_*.sql supabase/tests/05_*.sql supabase/tests/06_*.sql supabase/tests/07_*.sql supabase/tests/08_*.sql supabase/tests/09_*.sql supabase/tests/10_*.sql; do
   echo "RUN $f"
   psql "$DB_URL" -v ON_ERROR_STOP=1 -f "$f" || exit 1
 done

@@ -9,6 +9,10 @@
  * "no content exists".
  */
 
+import type { PublishedContextBundle } from './publishedContext';
+
+export type { PublishedContextBundle } from './publishedContext';
+
 export interface PublishedVerse {
   editionKey: string;
   refsysKey: string;
@@ -47,6 +51,11 @@ export interface PublishedContentRepository {
   fetchPublishedEntities(): Promise<PublishedEntity[]>;
   /** Published attestations, optionally filtered to one scope. */
   fetchPublishedAttestations(scopeKey?: string): Promise<PublishedAttestation[]>;
+  /**
+   * Complete published context bundle for one Scripture scope, already
+   * validated against the strict contract. Throws on a malformed payload.
+   */
+  fetchPublishedContextBundle(scopeKey: string): Promise<PublishedContextBundle>;
 }
 
 /**

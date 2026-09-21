@@ -16,6 +16,10 @@ import type {
   PublishedEntity,
   PublishedVerse,
 } from '@/content/publishedContent';
+import {
+  parsePublishedContextBundle,
+  type PublishedContextBundle,
+} from '@/content/publishedContext';
 
 interface QueryResult<T> {
   data: T[] | null;
@@ -33,6 +37,10 @@ interface ViewReader {
 
 export interface PublishedContentClient {
   schema(name: 'public_content'): { from(table: string): ViewReader };
+  rpc(
+    fn: string,
+    args: Record<string, unknown>,
+  ): PromiseLike<{ data: unknown; error: { message: string } | null }>;
 }
 
 interface VerseRow {
@@ -110,6 +118,15 @@ export class SupabasePublishedContentRepository implements PublishedContentRepos
       type: row.type,
       identificationStatus: row.identification_status,
     }));
+  }
+
+  async fetchPublishedContextBundle(scopeKey: string): Promise<PublishedContextBundle> {
+    const { data, error } = await this.client.rpc('published_context_bundle', {
+      p_scope_key: scopeKey,
+    });
+    if (error) throw new Error(error.message);
+    // Runtime validation: a malformed bundle never crosses this boundary.
+    return parsePublishedContextBundle(data);
   }
 
   async fetchPublishedAttestations(scopeKey?: string): Promise<PublishedAttestation[]> {

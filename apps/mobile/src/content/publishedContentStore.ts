@@ -17,6 +17,7 @@ import type {
   PublishedEntity,
   PublishedVerse,
 } from './publishedContent';
+import type { PublishedContextBundle } from './publishedContext';
 
 let current: PublishedContentRepository | null = null;
 let cache: PublishedContentCache | null = null;
@@ -155,6 +156,24 @@ export async function fetchPublishedAttestations(
     }
   }
   return [];
+}
+
+/**
+ * Complete published context bundle for a scope. Remote-only (no SQLite
+ * caching by design); returns null when unconfigured, offline, or when the
+ * payload fails runtime validation, so callers render an honest unavailable
+ * state instead of partial content.
+ */
+export async function fetchPublishedContextBundle(
+  scopeKey: string,
+): Promise<PublishedContextBundle | null> {
+  const repo = current;
+  if (!repo) return null;
+  try {
+    return await repo.fetchPublishedContextBundle(scopeKey);
+  } catch {
+    return null;
+  }
 }
 
 /** When the cache last received content, or null when never synced. */

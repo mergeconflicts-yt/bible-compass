@@ -161,6 +161,9 @@ describe('publishedContentStore', () => {
     fetchPublishedAttestations: async () => {
       throw new Error('network down');
     },
+    fetchPublishedContextBundle: async () => {
+      throw new Error('network down');
+    },
   };
 
   beforeEach(() => resetPublishedContentStore());
@@ -286,6 +289,9 @@ describe('publishedContentStore offline cache', () => {
         throw new Error('offline');
       },
       fetchPublishedAttestations: async () => {
+        throw new Error('offline');
+      },
+      fetchPublishedContextBundle: async () => {
         throw new Error('offline');
       },
     });
