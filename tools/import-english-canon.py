@@ -614,7 +614,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             if sc is None:
                 continue
             cid = claim_id(a["claim_keys"][0]) if a["claim_keys"] else "null"
-            ex_atts.add((a["entity_key"], f"{osis}.{ch}.{v}".lower(), a["kind"]))
+            ex_atts.add((a["entity_key"], sc, f"{osis}.{ch}.{v}".lower(), a["kind"]))
             add(
                 "insert into private_staging.reference_entity_attestations (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state, origin_package_id) values ("
                 f"{ent(a['entity_key'])}, {scope_id(sc)}, {unit(f'{osis}.{ch}.{v}')}, {esc(a['kind'])}, {esc(a['textual_basis'])}, {cid}, 'draft', {manifest}) on conflict do nothing;"
@@ -879,9 +879,14 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
     # never claim a row that is not part of this payload. Unchanged rows become
     # members of both the old and new revision and survive a release transition.
     def _values(rows) -> str:
-        return "(" + ",".join(
-            "(" + ",".join(esc(str(x)) for x in row) + ")" for row in sorted(rows)
-        ) + ")"
+        # Each element becomes one VALUES row. A single-column set holds plain
+        # strings, so normalise every element to a 1-tuple; the caller supplies
+        # the surrounding "(VALUES ...)" (so no extra outer parentheses here).
+        parts = []
+        for r in sorted(rows):
+            row = (r,) if isinstance(r, str) else tuple(r)
+            parts.append("(" + ",".join(esc(str(x)) for x in row) + ")")
+        return ",".join(parts)
 
     def _member_stmt(kind, cols, rows, id_expr, from_clause) -> None:
         if not rows:
@@ -896,7 +901,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
     _member_stmt(
         "entity_name", "entity_key,normalized_form", ex_names, "n.id",
         "join private_staging.entities e on e.key = w.entity_key "
-        "join private_staging.entity_names n on n.entity_id = e.id and n.normalized_form = w.normalized_form",
+        "join private_staging.entity_names n on n.entity_id = e.id and n.language_tag = 'en' and n.normalized_form = w.normalized_form",
     )
     _member_stmt(
         "entity_description", "entity_key", ex_descs, "d.id",
@@ -904,10 +909,11 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         "join private_staging.entity_descriptions d on d.entity_id = e.id and d.locale = 'en' and d.revision = 1",
     )
     _member_stmt(
-        "reference_entity_attestation", "entity_key,local_key,kind", ex_atts, "a.id",
+        "reference_entity_attestation", "entity_key,scope_key,local_key,kind", ex_atts, "a.id",
         "join private_staging.entities e on e.key = w.entity_key "
+        "join private_staging.scripture_scopes sc on sc.key = w.scope_key "
         f"join private_staging.reference_units ru on ru.local_key = w.local_key and ru.reference_system_id = {refsys_id} "
-        "join private_staging.reference_entity_attestations a on a.entity_id = e.id and a.reference_unit_id = ru.id and a.kind = w.kind",
+        "join private_staging.reference_entity_attestations a on a.entity_id = e.id and a.scope_id = sc.id and a.reference_unit_id = ru.id and a.kind = w.kind",
     )
     _member_stmt(
         "edition_mention", "entity_key,local_key,quote,ordinal", ex_mentions, "em.id",
