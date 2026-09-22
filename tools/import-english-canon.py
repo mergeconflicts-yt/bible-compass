@@ -791,7 +791,10 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
                 # blueprint (which records them explicitly), never from a
                 # hardcoded "unknown"/EPSG value here. A geometry is written
                 # only when the package actually carries coordinates.
-                crs = esc(pos["crs"]) if pos.get("crs") else "null"
+                # place_geometries.crs is NOT NULL. When the package carries no
+                # coordinate (every current position), the CRS is recorded as
+                # "unknown" rather than NULL so the insert is valid.
+                crs = esc(pos["crs"]) if pos.get("crs") else esc("unknown")
                 component_license = esc(pos.get("component_license") or "unknown")
                 add(
                     "insert into private_staging.place_geometries (entity_id, crs, precision, evidence_claim_id, component_license, origin_package_id) values ("

@@ -98,7 +98,7 @@ BEGIN
   INSERT INTO private_staging.event_scripture_accounts (event_id, scope_id, relation, origin_package_id)
     VALUES (ev_id, scope_id, 'reports', pkg);
   INSERT INTO private_staging.place_geometries (entity_id, crs, precision, component_license, origin_package_id)
-    VALUES (pl_id, NULL, 'unknown', 'unknown', pkg);
+    VALUES (pl_id, 'unknown', 'unknown', 'unknown', pkg);
 END $$;
 
 -- Pre-backfill: the published attestation is invisible (memberships empty).
