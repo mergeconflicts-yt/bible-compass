@@ -306,6 +306,8 @@ PREFERRED_NAME_OVERRIDES: dict[str, str] = {
     "p-saul-2": "Paul",
     "p-simon-1": "Peter",
     "p-jesus-1": "Jesus Justus",
+    # Source typo (BibleData "Forunatus_1"): the BSB reads "Fortunatus".
+    "p-forunatus-1": "Fortunatus",
 }
 
 # OpenBible identification ids (a15257a, m66c5b8, ...) are internal source
@@ -820,13 +822,11 @@ def curate_divine_identities(
         "name": "Jesus Christ",
         "aliases": jesus_aliases,
         "refs": jesus_refs,
-        "external_ids": [
-            {
-                "source": "bibledata",
-                "id": "YHVH_1",
-                "evidence": "evidence:bibledata:YHVH_1",
-            }
-        ],
+        # No unambiguous external source row: BibleData routes both YHWH and
+        # Jesus titles through YHVH_1, which is assigned to entity:god. Mapping
+        # it here too would make the reverse lookup ambiguous (a unique index
+        # now forbids it).
+        "external_ids": [],
     }
     person_labels["jesus-christ"] = set(jesus_aliases)
     places["god"] = {
@@ -896,14 +896,26 @@ _PLACE_ENTITIES = {
     "&apos;": "'",
 }
 
+# Markers that identify prose copied or closely derived from a commercial
+# reference work, a wiki, or an archaeological report. Such text stays in
+# quarantine; the profile falls back to original prose (finding 17/8).
+_PLACE_SOURCE_MARKERS = re.compile(
+    r"\b(according to|encyclopedia|dictionary|lexicon|commentary|journal|"
+    r"volume\s+\d+|press|publisher|wikidata|wikipedia|zondervan|nelson|"
+    r"archaeolog|excavat|scholar|remains date|treatise|atlas|says)\b"
+    r"|\(\s*(1[5-9]|20)\d{2}\s*\)",
+    re.IGNORECASE,
+)
+
 
 def _clean_place_comment(raw: str) -> str | None:
     """Return reader-safe plain text, or None to keep the text quarantined.
 
-    OpenBible comments can embed markup, external links and long excerpts from
-    other works. None of that may be copied into a reader-facing profile
-    (finding 17): markup is stripped, and any residual markup/link or an
-    over-long excerpt is rejected so the caller falls back to original prose.
+    OpenBible comments can embed markup, external links, long excerpts and
+    prose closely derived from commercial reference works. None of that may be
+    copied into a reader-facing profile (findings 17/8): markup is stripped, and
+    any residual markup/link, over-long excerpt, or source-work marker is
+    rejected so the caller falls back to original prose.
     """
     text = _PLACE_TAG_RE.sub(" ", raw)
     for entity, char in _PLACE_ENTITIES.items():
@@ -914,6 +926,8 @@ def _clean_place_comment(raw: str) -> str | None:
     if re.search(r"[<>]|https?://|www\.", text, re.IGNORECASE):
         return None
     if len(text) > 200:
+        return None
+    if _PLACE_SOURCE_MARKERS.search(text):
         return None
     return text
 

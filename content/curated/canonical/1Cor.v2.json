@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-1cor-canonical",
-  "package_revision": 2,
-  "submission_id": "submission:wb-1cor-canonical:attempt-2",
-  "attempt": 2,
+  "package_revision": 3,
+  "submission_id": "submission:wb-1cor-canonical:attempt-3",
+  "attempt": 3,
   "produced_for_job_id": "job:wb-1cor-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
@@ -524,8 +524,8 @@
   "dependencies": [
     {
       "package_key": "registry:wb:entities",
-      "revision": 1,
-      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
+      "revision": 2,
+      "digest": "sha256:a1c35c9c2ce8c1379a9d8cbeaf2088c76fffbaf46c0898f5a881b816e1104a49"
     }
   ],
   "records": {
@@ -553,7 +553,7 @@
       {
         "candidate_key": "candidate:wb:p-forunatus-1",
         "entity_type": "person",
-        "proposed_label": "Forunatus",
+        "proposed_label": "Fortunatus",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -949,8 +949,8 @@
         "reference_key": "verse:1Cor.16.17",
         "entity_key": "entity:p-forunatus-1",
         "kind": "participant",
-        "textual_basis": "inferred",
-        "identification_status": "proposed",
+        "textual_basis": "explicit",
+        "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -5934,5 +5934,5 @@
       "note": "4 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
   ],
-  "content_digest": "sha256:90f205c07f9dbc8ca1d7baf9b3246dd85be028c04b80f602aa0db06142d8a3cb"
+  "content_digest": "sha256:2e020fdcc7cf418716d580932a2f7fae173c547eb53feec2bce2025e3cac9194"
 }

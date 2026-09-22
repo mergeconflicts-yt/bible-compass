@@ -403,54 +403,62 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         "on conflict (key) do update set checksum = excluded.checksum, content_version = excluded.content_version;"
     )
     manifest = f"(select id from private_staging.package_manifests where key={esc(manifest_key)})"
+    # The whole-English package is ONE logical package across revisions. Each
+    # revision gets a new manifest key (key contains revision + digest), so
+    # cleanup must target EVERY English manifest, not only the new one: a
+    # revision-7 import would otherwise own nothing and leave revision-6 rows
+    # (and their ownership) behind (blocker 2). Rows first written by another
+    # package keep a NULL origin and are never removed.
+    english_manifests = (
+        "(select id from private_staging.package_manifests where key like 'en.bsb.all@%')"
+    )
 
     # --- ownership-scoped resync (revision-safe coexistence) --------------
-    # Delete ONLY rows this package owns (origin_package_id = this manifest).
-    # Rows first written by another package (e.g. the locked Nehemiah 2
-    # package) keep a NULL origin and are never removed, so a later English
-    # refresh cannot destroy another package's reviewed rows or break the
-    # restrictive foreign keys on their Telugu/Tamil localizations. Dependent
-    # rows are deleted before the rows they reference (on delete restrict).
+    # Delete ONLY rows this logical package owns across all its revisions.
+    # Dependent rows are deleted before the rows they reference (restrict).
     add(f"delete from private_staging.edition_render_spans where mention_id in "
-        f"(select id from private_staging.edition_mentions where origin_package_id = {manifest});")
-    add(f"delete from private_staging.edition_mentions where origin_package_id = {manifest};")
+        f"(select id from private_staging.edition_mentions where origin_package_id in {english_manifests});")
+    add(f"delete from private_staging.edition_mentions where origin_package_id in {english_manifests};")
     add(f"delete from private_staging.reference_entity_attestation_claims where attestation_id in "
-        f"(select id from private_staging.reference_entity_attestations where origin_package_id = {manifest});")
-    add(f"delete from private_staging.reference_entity_attestations where origin_package_id = {manifest};")
+        f"(select id from private_staging.reference_entity_attestations where origin_package_id in {english_manifests});")
+    add(f"delete from private_staging.reference_entity_attestations where origin_package_id in {english_manifests};")
     add(f"delete from private_staging.entity_relationship_assertion_claims where assertion_id in "
-        f"(select id from private_staging.entity_relationship_assertions where origin_package_id = {manifest});")
-    add(f"delete from private_staging.entity_relationship_assertions where origin_package_id = {manifest};")
-    add(f"delete from private_staging.scope_entity_relevance where origin_package_id = {manifest};")
+        f"(select id from private_staging.entity_relationship_assertions where origin_package_id in {english_manifests});")
+    add(f"delete from private_staging.entity_relationship_assertions where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.scope_entity_relevance where origin_package_id in {english_manifests};")
     add(f"delete from private_staging.event_participant_claims where (event_id, entity_id, role) in "
-        f"(select event_id, entity_id, role from private_staging.event_participants where origin_package_id = {manifest});")
+        f"(select event_id, entity_id, role from private_staging.event_participants where origin_package_id in {english_manifests});")
     add(f"delete from private_staging.event_place_claims where (event_id, place_id) in "
-        f"(select event_id, place_id from private_staging.event_places where origin_package_id = {manifest});")
+        f"(select event_id, place_id from private_staging.event_places where origin_package_id in {english_manifests});")
     add(f"delete from private_staging.event_scripture_account_claims where (event_id, scope_id) in "
-        f"(select event_id, scope_id from private_staging.event_scripture_accounts where origin_package_id = {manifest});")
-    add(f"delete from private_staging.event_participants where origin_package_id = {manifest};")
-    add(f"delete from private_staging.event_places where origin_package_id = {manifest};")
-    add(f"delete from private_staging.event_scripture_accounts where origin_package_id = {manifest};")
-    add(f"delete from private_staging.events where origin_package_id = {manifest};")
-    add(f"delete from private_staging.place_geometries where origin_package_id = {manifest};")
-    add(f"delete from private_staging.entity_names where origin_package_id = {manifest};")
-    add(f"delete from private_staging.entity_descriptions where origin_package_id = {manifest};")
+        f"(select event_id, scope_id from private_staging.event_scripture_accounts where origin_package_id in {english_manifests});")
+    add(f"delete from private_staging.event_participants where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.event_places where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.event_scripture_accounts where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.events where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.place_geometries where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.entity_names where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.entity_descriptions where origin_package_id in {english_manifests};")
     add(f"delete from private_staging.context_sections where revision_id in "
         f"(select cr.id from private_staging.context_revisions cr "
         f"join private_staging.context_artifacts ca on ca.id = cr.artifact_id "
-        f"where ca.origin_package_id = {manifest});")
+        f"where ca.origin_package_id in {english_manifests});")
     add(f"delete from private_staging.context_revisions where artifact_id in "
-        f"(select id from private_staging.context_artifacts where origin_package_id = {manifest});")
-    add(f"delete from private_staging.context_artifacts where origin_package_id = {manifest};")
-    add(f"delete from private_staging.package_members where package_id = {manifest};")
+        f"(select id from private_staging.context_artifacts where origin_package_id in {english_manifests});")
+    add(f"delete from private_staging.context_artifacts where origin_package_id in {english_manifests};")
+    add(f"delete from private_staging.package_members where package_id in {english_manifests};")
 
     # --- entities (ONE row per canonical key; the registry is authoritative)
-    # Upsert (never delete: every other table references entities): an
-    # upgrade corrects a stale type/slug/status instead of keeping it. The
-    # identification status comes from the registry, so source-unresolved
-    # identities (proposed) are never written as established.
+    # A draft import must never mutate an entity that is already a member of a
+    # PUBLISHED package: type and identification status are frozen once
+    # published (blocker 3). The upsert updates only unpublished identities;
+    # a published row is left exactly as reviewed.
     entity_upsert = (
         "on conflict (key) do update set slug = excluded.slug, type = excluded.type, "
-        "identification_status = excluded.identification_status, provenance = excluded.provenance"
+        "identification_status = excluded.identification_status, provenance = excluded.provenance "
+        "where not exists (select 1 from private_staging.package_members pm "
+        "join private_staging.package_manifests pkg on pkg.id = pm.package_id "
+        "where pm.entity_id = entities.id and pkg.published_at is not null and pkg.published_at <= now())"
     )
     for e in sorted(registry["entities"], key=lambda x: x["entity_key"]):
         add(
@@ -534,14 +542,20 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
                 continue
             # Claims are upserted, never deleted: attestations, citations and
             # geometries reference them, including rows of a co-installed
-            # Nehemiah-2 package that shares claim keys.
+            # Nehemiah-2 package that shares claim keys. A claim that is
+            # already a member of a PUBLISHED package is never mutated and its
+            # review_state is never reset to draft (blocker 3): the update is
+            # skipped for published claims, leaving reviewed content intact.
             add(
                 "insert into private_staging.claims (key, subject_type, subject_id, predicate, object_type, object, evidence_status, textual_basis, review_state) values ("
                 f"{esc(claim['claim_key'])}, {esc(subject_type)}, {subject_id}, {esc(claim['predicate'])}, "
                 f"{esc(claim['object']['type'])}, {jsonb(claim['object'])}, {esc(claim['evidence_status'])}, {esc(claim['textual_basis'])}, 'draft') "
                 "on conflict (key) do update set subject_type = excluded.subject_type, subject_id = excluded.subject_id, "
                 "predicate = excluded.predicate, object_type = excluded.object_type, object = excluded.object, "
-                "evidence_status = excluded.evidence_status, textual_basis = excluded.textual_basis, review_state = excluded.review_state;"
+                "evidence_status = excluded.evidence_status, textual_basis = excluded.textual_basis, review_state = excluded.review_state "
+                "where not exists (select 1 from private_staging.package_members pm "
+                "join private_staging.package_manifests pkg on pkg.id = pm.package_id "
+                "where pm.claim_id = claims.id and pkg.published_at is not null and pkg.published_at <= now());"
             )
         claim_id = lambda key: f"(select id from private_staging.claims where key={esc(key)})"
         for citation in canonical["records"].get("citations", []):

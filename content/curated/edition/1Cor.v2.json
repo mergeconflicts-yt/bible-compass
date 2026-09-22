@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-1cor-edition",
-  "package_revision": 4,
-  "submission_id": "submission:wb-bsb-1cor-edition:attempt-4",
-  "attempt": 4,
+  "package_revision": 8,
+  "submission_id": "submission:wb-bsb-1cor-edition:attempt-8",
+  "attempt": 8,
   "produced_for_job_id": "job:wb-bsb-1cor-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -524,8 +524,8 @@
   "dependencies": [
     {
       "package_key": "draft:wb-1cor-canonical",
-      "revision": 2,
-      "digest": "sha256:90f205c07f9dbc8ca1d7baf9b3246dd85be028c04b80f602aa0db06142d8a3cb"
+      "revision": 3,
+      "digest": "sha256:2e020fdcc7cf418716d580932a2f7fae173c547eb53feec2bce2025e3cac9194"
     }
   ],
   "records": {
@@ -3897,6 +3897,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1cor-p-forunatus-1-16-17",
+        "verse_key": "verse:1Cor.16.17",
+        "attestation_key": "attestation:wb-1cor-p-forunatus-1-16-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-forunatus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Fortunatus",
+          "occurrence_ordinal": 1,
+          "prefix": "lad that Stephanas, ",
+          "suffix": ", and Achaicus have "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1cor-p-gaius-1-1-14",
         "verse_key": "verse:1Cor.1.14",
         "attestation_key": "attestation:wb-1cor-p-gaius-1-1-14",
@@ -6338,6 +6356,7 @@
           ],
           "record_keys": [
             "mention:wb:1cor-p-achaicus-1-16-17",
+            "mention:wb:1cor-p-forunatus-1-16-17",
             "mention:wb:1cor-p-stephanas-1-16-17"
           ],
           "blocker_question_keys": []
@@ -6402,5 +6421,5 @@
       "note": "4 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
     }
   ],
-  "content_digest": "sha256:1d6bd38ff3ebd69930183c01312c12da7bf165f7120910d69f82c4b7ee1c39cd"
+  "content_digest": "sha256:a015b2565348c7c891422eab5282842dc75e9d38f6d2ebdb22157c62402af72e"
 }

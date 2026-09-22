@@ -77,8 +77,8 @@ BEGIN
     VALUES ('en.bsb.neh-2@9:sha-99887766', 'sha256:' || repeat('f', 64), 9, 'probe', 'editorial_reviewer', 'approved')
     RETURNING id INTO appr;
   INSERT INTO private_staging.package_manifests
-    (key, locale, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at, rights_status)
-    VALUES ('en.bsb.neh-2@9:sha-99887766', 'en', '1.0.0', 9, 'sha256:' || repeat('f', 64), '1.0.0', appr, now() - interval '1 day', 'cleared')
+    (key, locale, translation_edition_id, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at, rights_status)
+    VALUES ('en.bsb.neh-2@9:sha-99887766', 'en', pub_ed, '1.0.0', 9, 'sha256:' || repeat('f', 64), '1.0.0', appr, now() - interval '1 day', 'cleared')
     RETURNING id INTO pkg_id;
   INSERT INTO private_staging.publication_releases (locale, package_id, is_active) VALUES ('en', pkg_id, true);
   INSERT INTO private_staging.package_members (package_id, entity_id) VALUES (pkg_id, ent_id);

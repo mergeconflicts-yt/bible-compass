@@ -185,6 +185,7 @@ select jsonb_build_object(
         ) order by n.language_tag, n.normalized_form, n.kind)
         from entity_names n
         where n.entity_id = se.id and n.language_tag = p_locale
+          and (n.origin_package_id is null or private_staging.package_is_published(n.origin_package_id))
       ), '[]'::jsonb),
       'descriptions', coalesce((
         select jsonb_agg(jsonb_build_object(
@@ -195,6 +196,7 @@ select jsonb_build_object(
         ) order by d.locale, d.revision)
         from entity_descriptions d
         where d.entity_id = se.id and d.locale = p_locale and d.review_state = 'published'
+          and (d.origin_package_id is null or private_staging.package_is_published(d.origin_package_id))
       ), '[]'::jsonb)
     ) order by se.key)
     from scope_entities se
@@ -257,6 +259,10 @@ select jsonb_build_object(
     where ed.status = 'published'
       and ed.language_tag = p_locale
       and (p_edition_key is null or ed.key = p_edition_key)
+      -- The mention itself must be published and owned by a published package;
+      -- a draft mention attached to a published entity/edition never leaks.
+      and em.review_state = 'published'
+      and (em.origin_package_id is null or private_staging.package_is_published(em.origin_package_id))
   ), '[]'::jsonb),
   'relevance', coalesce((
     select jsonb_agg(jsonb_build_object(
@@ -269,6 +275,7 @@ select jsonb_build_object(
     from scope_entity_relevance r
     join scope s on s.id = r.scope_id
     join pub_entities se on se.id = r.entity_id
+    where (r.origin_package_id is null or private_staging.package_is_published(r.origin_package_id))
   ), '[]'::jsonb),
   'relationships', coalesce((
     select jsonb_agg(jsonb_build_object(
@@ -281,8 +288,9 @@ select jsonb_build_object(
     from entity_relationship_assertions ra
     join pub_entities su1 on su1.id = ra.subject_entity_id
     join pub_entities su2 on su2.id = ra.object_entity_id
-    where su1.id in (select id from scope_entities)
-       or su2.id in (select id from scope_entities)
+    where (su1.id in (select id from scope_entities)
+       or su2.id in (select id from scope_entities))
+      and (ra.origin_package_id is null or private_staging.package_is_published(ra.origin_package_id))
   ), '[]'::jsonb),
   'events', coalesce((
     select jsonb_agg(jsonb_build_object(
@@ -293,20 +301,23 @@ select jsonb_build_object(
         from event_participants ep
         join pub_entities pe on pe.id = ep.entity_id
         where ep.event_id = e.entity_id
+          and (ep.origin_package_id is null or private_staging.package_is_published(ep.origin_package_id))
       ), '[]'::jsonb),
       'places', coalesce((
         select jsonb_agg(jsonb_build_object('entity_key', pl.key, 'role', epl.role) order by pl.key, epl.role)
         from event_places epl
         join pub_entities pl on pl.id = epl.place_id
         where epl.event_id = e.entity_id
+          and (epl.origin_package_id is null or private_staging.package_is_published(epl.origin_package_id))
       ), '[]'::jsonb)
     ) order by ev.key)
     from events e
     join pub_entities ev on ev.id = e.entity_id
-    where exists (
-      select 1 from event_scripture_accounts esa join scope s on s.id = esa.scope_id
-      where esa.event_id = e.entity_id
-    )
+    where (e.origin_package_id is null or private_staging.package_is_published(e.origin_package_id))
+      and exists (
+        select 1 from event_scripture_accounts esa join scope s on s.id = esa.scope_id
+        where esa.event_id = e.entity_id
+      )
   ), '[]'::jsonb)
 );
 $$;

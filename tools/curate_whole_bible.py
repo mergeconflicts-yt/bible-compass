@@ -296,12 +296,17 @@ def load_places() -> dict:
             if not pid or not friendly:
                 continue
             slug = "pl-" + slugify(friendly) + "-" + slugify(pid)
+            # preferred_name keeps the source disambiguation suffix ("Babylon 2")
+            # so searchable names stay unique across distinct places;
+            # display_name strips it for the reader-facing profile (finding 9).
+            base_name = re.sub(r"\s+\d+$", "", friendly).strip() or friendly
             entry = places.setdefault(
                 slug,
                 {
                     "slug": slug,
                     "type": "place",
                     "name": friendly,
+                    "display_name": base_name if base_name != friendly else None,
                     "aliases": set(),
                     "refs": set(),
                     "evidence": f"evidence:openbible:{slug}",
@@ -868,7 +873,11 @@ def generate_book(
             # No licensed translation-specific name form was derived from this
             # edition's own text, so no localized profile is emitted.
             continue
-        name = display(slug, entry["name"])
+        # Reader-facing name: a source disambiguation suffix ("Babylon 2") is a
+        # searchable identity, not a display name. display_name carries the
+        # clean form for the reader while preferred_name/search stay unique
+        # (finding 9).
+        name = display(slug, entry.get("display_name") or entry["name"])
         if lang == "en":
             aliases = sorted(
                 a for a in entry.get("aliases", set()) if a and a != entry["name"]
