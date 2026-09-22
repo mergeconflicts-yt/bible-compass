@@ -45,4 +45,7 @@ psql "$DB_URL" -v ON_ERROR_STOP=1 -f supabase/tests/12_upgrade_convergence_test.
 echo "RUN supabase/tests/13_release_transition_test.sql"
 psql "$DB_URL" -v ON_ERROR_STOP=1 -f supabase/tests/13_release_transition_test.sql || exit 1
 
+echo "RUN supabase/tests/14_membership_backfill_test.sql"
+psql "$DB_URL" -v ON_ERROR_STOP=1 -f supabase/tests/14_membership_backfill_test.sql || exit 1
+
 echo "ENGLISH-CANON-TESTS-PASS"

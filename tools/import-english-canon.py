@@ -59,6 +59,11 @@ BSB_ARTIFACT_SHA = (
     "sha256:b2898c49cadb50fd8763feb9e2f74a90a3817e33408a24b6cbf09e7a950dde97"
 )
 IMPORT_PACKAGE_KEY = "import:english-canon:canonical-locale-edition"
+# Revision 7: many-to-many publishable membership (package_row_memberships),
+# populated from the EXACT natural keys in the curated files, plus versioned
+# context revisions. An existing revision-6 database must re-run the importer
+# so the new membership table is populated for it (migration 22 backfills from
+# origin_package_id as a stop-gap; this bump makes the upgrade execute).
 # Revision 6: whole-canon draft manifest + package membership, lossless
 # witness links (all attestation claims, every relationship scope, event/
 # place claim links), real citation provenance (evidence key as locator +
@@ -73,7 +78,7 @@ IMPORT_PACKAGE_KEY = "import:english-canon:canonical-locale-edition"
 # revision 4 added owned-row resync, which revision 6 narrows to explicit
 # per-row ownership.
 # A revision bump authorizes re-import over an older receipt.
-IMPORT_REVISION = 6
+IMPORT_REVISION = 7
 # The whole-English canon is one draft package; its manifest is created
 # unpublished. MANIFEST_REVISION tracks the import revision so a content bump
 # produces a new manifest key (`en.bsb.all@<rev>:sha-<digest8>`).
@@ -481,6 +486,20 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             )
     ent = lambda key: f"(select id from private_staging.entities where key={esc(key)})"
 
+    # Exact-key collections for many-to-many membership registration (fresh from
+    # the curated files, never broad entity/scope queries).
+    ex_names: set[tuple[str, str]] = set()
+    ex_descs: set[str] = set()
+    ex_atts: set[tuple[str, str, str]] = set()
+    ex_mentions: set[tuple[str, str, str, int]] = set()
+    ex_rel: set[tuple[str, str]] = set()
+    ex_reln: set[tuple[str, str, str, str]] = set()
+    ex_events: set[str] = set()
+    ex_ep: set[tuple[str, str]] = set()
+    ex_epl: set[tuple[str, str]] = set()
+    ex_esa: set[tuple[str, str]] = set()
+    ex_geom: set[str] = set()
+
     # --- structured external identifiers (finding 26) ---------------------
     # Source row ids are retained as (source, external_id, evidence) mappings
     # instead of being embedded in the canonical key and forgotten.
@@ -515,6 +534,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             if not norm or norm in seen_norm:
                 continue
             seen_norm.add(norm)
+            ex_names.add((e["entity_key"], norm))
             add(
                 "insert into private_staging.entity_names (entity_id, language_tag, form, normalized_form, kind, origin_package_id) values ("
                 f"{ent(e['entity_key'])}, 'en', {esc(form)}, {esc(norm)}, {esc(kind)}, {manifest}) on conflict do nothing;"
@@ -525,6 +545,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         for prof in locale["records"].get("entity_profiles", []):
             short = prof["short_description"]["text"]
             extended = prof.get("extended_description")
+            ex_descs.add(prof["entity_key"])
             add(
                 "insert into private_staging.entity_descriptions (entity_id, locale, revision, short_desc, extended_desc, source_locale, review_state, origin_package_id) values ("
                 f"{ent(prof['entity_key'])}, 'en', 1, {esc(short)}, "
@@ -593,6 +614,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             if sc is None:
                 continue
             cid = claim_id(a["claim_keys"][0]) if a["claim_keys"] else "null"
+            ex_atts.add((a["entity_key"], f"{osis}.{ch}.{v}".lower(), a["kind"]))
             add(
                 "insert into private_staging.reference_entity_attestations (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state, origin_package_id) values ("
                 f"{ent(a['entity_key'])}, {scope_id(sc)}, {unit(f'{osis}.{ch}.{v}')}, {esc(a['kind'])}, {esc(a['textual_basis'])}, {cid}, 'draft', {manifest}) on conflict do nothing;"
@@ -624,6 +646,12 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             parts = cv.split(".")
             ch, v = int(parts[-2]), int(parts[-1])
             text = verse_text.get((ch, v), "")
+            ex_mentions.add((
+                m["target"]["key"],
+                f"{osis}.{ch}.{v}".lower(),
+                m["selector"]["exact_quote"],
+                m["selector"]["occurrence_ordinal"],
+            ))
             add(
                 "insert into private_staging.edition_mentions (edition_id, verse_id, entity_id, form, quote, occurrence_ordinal, pipeline_text_sha256, review_state, origin_package_id) "
                 f"select {edition_id}, {verse_id(osis, ch, v)}, {ent(m['target']['key'])}, {esc(m['mention_form'])}, {esc(m['selector']['exact_quote'])}, {m['selector']['occurrence_ordinal']}, {esc(sha256_text(text))}, 'draft', {manifest} "
@@ -661,6 +689,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         }
         for r in canonical["records"].get("relevance", []):
             role = role_by_relevance.get(r["relevance_key"], "Named in this passage.")
+            ex_rel.add((r["scope_key"], r["entity_key"]))
             add(
                 "insert into private_staging.scope_entity_relevance (scope_id, entity_id, role_in_passage, importance, is_attested, origin_package_id) values ("
                 f"{scope_id(r['scope_key'])}, {ent(r['entity_key'])}, {esc(role)}, {esc(r['importance'])}, {str(r['is_attested']).lower()}, {manifest}) on conflict do nothing;"
@@ -686,6 +715,10 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             # "established". Each assertion is then linked to all its claims.
             certainty = rel.get("certainty", "unknown")
             for sc in rel["applicable_scope_keys"]:
+                ex_reln.add((
+                    rel["subject_entity_key"], rel["predicate_key"],
+                    rel["object_entity_key"], sc,
+                ))
                 add(
                     "insert into private_staging.entity_relationship_assertions (subject_entity_id, predicate, object_entity_id, scope_id, certainty, origin_package_id) "
                     f"select {ent(rel['subject_entity_key'])}, {esc(rel['predicate_key'])}, {ent(rel['object_entity_key'])}, {scope_id(sc)}, {esc(certainty)}, {manifest} "
@@ -707,6 +740,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         canonical = load_json(CURATED / "canonical" / f"{book['osis']}.v2.json")
         for ev in canonical["records"].get("events", []):
             ev_key = "entity:" + ev["event_key"].split("event:", 1)[1]
+            ex_events.add(ev_key)
             add(
                 "insert into private_staging.events (entity_id, event_kind, origin_package_id) values ("
                 f"{ent(ev_key)}, {esc(ev['event_type'])}, {manifest}) on conflict (entity_id) do nothing;"
@@ -714,6 +748,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
             claim_keys = ev.get("claim_keys", [])
             first_claim = claim_id(claim_keys[0]) if claim_keys else "null"
             for p in ev["participant_entity_keys"]:
+                ex_ep.add((ev_key, p))
                 add(
                     "insert into private_staging.event_participants (event_id, entity_id, role, claim_id, origin_package_id) values ("
                     f"{ent(ev_key)}, {ent(p)}, 'participant', {first_claim}, {manifest}) on conflict do nothing;"
@@ -724,6 +759,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
                         f"{ent(ev_key)}, {ent(p)}, 'participant', {claim_id(claim_key)}) on conflict do nothing;"
                     )
             for pl in ev["place_entity_keys"]:
+                ex_epl.add((ev_key, pl))
                 add(
                     "insert into private_staging.event_places (event_id, place_id, claim_id, origin_package_id) values ("
                     f"{ent(ev_key)}, {ent(pl)}, {first_claim}, {manifest}) on conflict do nothing;"
@@ -734,6 +770,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
                         f"{ent(ev_key)}, {ent(pl)}, {claim_id(claim_key)}) on conflict do nothing;"
                     )
             for account in ev["scripture_accounts"]:
+                ex_esa.add((ev_key, account["scope_key"]))
                 add(
                     "insert into private_staging.event_scripture_accounts (event_id, scope_id, relation, claim_id, origin_package_id) values ("
                     f"{ent(ev_key)}, {scope_id(account['scope_key'])}, {esc(account['relation'])}, {first_claim}, {manifest}) on conflict do nothing;"
@@ -749,6 +786,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         canonical = load_json(CURATED / "canonical" / f"{book['osis']}.v2.json")
         for place in canonical["records"].get("places", []):
             for pos in place["geographic_positions"]:
+                ex_geom.add(place["entity_key"])
                 # Precision, license and certainty come from the package
                 # blueprint (which records them explicitly), never from a
                 # hardcoded "unknown"/EPSG value here. A geometry is written
@@ -836,43 +874,92 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         )
 
     # --- many-to-many row membership (R1) ---------------------------------
-    # Every publishable row is registered as a member of THIS package, so an
-    # unchanged row belongs to both the old and the new revision and survives a
-    # release transition (the public gates read membership in the ACTIVE
-    # package). Set-based, keyed by the package's entity/scope/edition members.
-    row_membership_kinds = [
-        ("entity_name", "n.id", "private_staging.entity_names n",
-         f"join private_staging.package_members pm on pm.entity_id = n.entity_id and pm.package_id = {manifest}"),
-        ("entity_description", "d.id", "private_staging.entity_descriptions d",
-         f"join private_staging.package_members pm on pm.entity_id = d.entity_id and pm.package_id = {manifest}"),
-        ("reference_entity_attestation", "a.id", "private_staging.reference_entity_attestations a",
-         f"join private_staging.package_members pm on pm.entity_id = a.entity_id and pm.package_id = {manifest}"),
-        ("edition_mention", "em.id", "private_staging.edition_mentions em",
-         f"where em.edition_id = {edition_id}"),
-        ("scope_entity_relevance", "r.id", "private_staging.scope_entity_relevance r",
-         "join private_staging.scripture_scopes sc on sc.id = r.scope_id where sc.key like 'scope:wb-%'"),
-        ("entity_relationship_assertion", "ra.id", "private_staging.entity_relationship_assertions ra",
-         "join private_staging.scripture_scopes sc on sc.id = ra.scope_id where sc.key like 'scope:wb-%'"),
-        ("event", "e.entity_id", "private_staging.events e",
-         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
-        ("event_participant", "ep.id", "private_staging.event_participants ep",
-         f"join private_staging.events e on e.entity_id = ep.event_id "
-         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
-        ("event_place", "epl.id", "private_staging.event_places epl",
-         f"join private_staging.events e on e.entity_id = epl.event_id "
-         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
-        ("event_scripture_account", "esa.id", "private_staging.event_scripture_accounts esa",
-         f"join private_staging.events e on e.entity_id = esa.event_id "
-         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
-        ("place_geometry", "pg.entity_id", "private_staging.place_geometries pg",
-         f"join private_staging.package_members pm on pm.entity_id = pg.entity_id and pm.package_id = {manifest}"),
-    ]
-    for kind, id_expr, from_expr, tail in row_membership_kinds:
+    # Rows are registered from the EXACT natural keys present in the curated
+    # files (blocker 2), never by broad entity/scope queries, so membership can
+    # never claim a row that is not part of this payload. Unchanged rows become
+    # members of both the old and new revision and survive a release transition.
+    def _values(rows) -> str:
+        return "(" + ",".join(
+            "(" + ",".join(esc(str(x)) for x in row) + ")" for row in sorted(rows)
+        ) + ")"
+
+    def _member_stmt(kind, cols, rows, id_expr, from_clause) -> None:
+        if not rows:
+            return
         add(
             "insert into private_staging.package_row_memberships (package_id, row_kind, row_id) "
-            f"select distinct {manifest}, {esc(kind)}, {id_expr} from {from_expr} {tail} "
+            f"select distinct {manifest}, {esc(kind)}, {id_expr} "
+            f"from (values {_values(rows)}) as w({cols}) {from_clause} "
             "on conflict do nothing;"
         )
+
+    _member_stmt(
+        "entity_name", "entity_key,normalized_form", ex_names, "n.id",
+        "join private_staging.entities e on e.key = w.entity_key "
+        "join private_staging.entity_names n on n.entity_id = e.id and n.normalized_form = w.normalized_form",
+    )
+    _member_stmt(
+        "entity_description", "entity_key", ex_descs, "d.id",
+        "join private_staging.entities e on e.key = w.entity_key "
+        "join private_staging.entity_descriptions d on d.entity_id = e.id and d.locale = 'en' and d.revision = 1",
+    )
+    _member_stmt(
+        "reference_entity_attestation", "entity_key,local_key,kind", ex_atts, "a.id",
+        "join private_staging.entities e on e.key = w.entity_key "
+        f"join private_staging.reference_units ru on ru.local_key = w.local_key and ru.reference_system_id = {refsys_id} "
+        "join private_staging.reference_entity_attestations a on a.entity_id = e.id and a.reference_unit_id = ru.id and a.kind = w.kind",
+    )
+    _member_stmt(
+        "edition_mention", "entity_key,local_key,quote,ordinal", ex_mentions, "em.id",
+        "join private_staging.entities e on e.key = w.entity_key "
+        f"join private_staging.reference_units ru on ru.local_key = w.local_key and ru.reference_system_id = {refsys_id} "
+        f"join private_staging.translation_edition_verses v on v.reference_unit_id = ru.id and v.edition_id = {edition_id} "
+        "join private_staging.edition_mentions em on em.verse_id = v.id and em.entity_id = e.id and em.quote = w.quote and em.occurrence_ordinal = w.ordinal::int",
+    )
+    _member_stmt(
+        "scope_entity_relevance", "scope_key,entity_key", ex_rel, "r.id",
+        "join private_staging.scripture_scopes sc on sc.key = w.scope_key "
+        "join private_staging.entities e on e.key = w.entity_key "
+        "join private_staging.scope_entity_relevance r on r.scope_id = sc.id and r.entity_id = e.id",
+    )
+    _member_stmt(
+        "entity_relationship_assertion", "subject_key,predicate,object_key,scope_key", ex_reln, "ra.id",
+        "join private_staging.entities s on s.key = w.subject_key "
+        "join private_staging.entities o on o.key = w.object_key "
+        "join private_staging.scripture_scopes sc on sc.key = w.scope_key "
+        "join private_staging.entity_relationship_assertions ra on ra.subject_entity_id = s.id and ra.object_entity_id = o.id and ra.predicate = w.predicate and ra.scope_id = sc.id",
+    )
+    _member_stmt(
+        "event", "event_key", ex_events, "ev.entity_id",
+        "join private_staging.entities e on e.key = w.event_key "
+        "join private_staging.events ev on ev.entity_id = e.id",
+    )
+    _member_stmt(
+        "event_participant", "event_key,participant_key", ex_ep, "ep.id",
+        "join private_staging.entities ee on ee.key = w.event_key "
+        "join private_staging.events ev on ev.entity_id = ee.id "
+        "join private_staging.entities pe on pe.key = w.participant_key "
+        "join private_staging.event_participants ep on ep.event_id = ev.entity_id and ep.entity_id = pe.id and ep.role = 'participant'",
+    )
+    _member_stmt(
+        "event_place", "event_key,place_key", ex_epl, "epl.id",
+        "join private_staging.entities ee on ee.key = w.event_key "
+        "join private_staging.events ev on ev.entity_id = ee.id "
+        "join private_staging.entities pl on pl.key = w.place_key "
+        "join private_staging.event_places epl on epl.event_id = ev.entity_id and epl.place_id = pl.id",
+    )
+    _member_stmt(
+        "event_scripture_account", "event_key,scope_key", ex_esa, "esa.id",
+        "join private_staging.entities ee on ee.key = w.event_key "
+        "join private_staging.events ev on ev.entity_id = ee.id "
+        "join private_staging.scripture_scopes sc on sc.key = w.scope_key "
+        "join private_staging.event_scripture_accounts esa on esa.event_id = ev.entity_id and esa.scope_id = sc.id",
+    )
+    _member_stmt(
+        "place_geometry", "entity_key", ex_geom, "pg.entity_id",
+        "join private_staging.entities e on e.key = w.entity_key "
+        "join private_staging.place_geometries pg on pg.entity_id = e.id",
+    )
 
     # --- receipt ----------------------------------------------------------
     return "\n".join(stmts), {}
