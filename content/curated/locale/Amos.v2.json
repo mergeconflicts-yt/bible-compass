@@ -196,7 +196,7 @@
     {
       "package_key": "draft:wb-amos-canonical",
       "revision": 1,
-      "digest": "sha256:bbd5faadb73b116e71d356bacc747715e94e49184753a029a7a636e374829cf9"
+      "digest": "sha256:53e43391af8aed60aa183c1fcd014f7f47d0ccb849fca11253406bf830d8c164"
     }
   ],
   "records": {
@@ -541,12 +541,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Joseph.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-amos-5-who"
           },
           "where": {
-            "text": "Places in this chapter: Beersheba 1, Bethel 1, Damascus, Gilgal 1, The Israelites.",
+            "text": "Places in this chapter: Beersheba 1, Bethel 1, Damascus, Gilgal 1, The Israelites, Tribe of Joseph.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -971,12 +971,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Joseph.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-amos-5-p2-who"
           },
           "where": {
-            "text": "Places in this passage: Beersheba 1, Bethel 1, Gilgal 1, The Israelites.",
+            "text": "Places in this passage: Beersheba 1, Bethel 1, Gilgal 1, The Israelites, Tribe of Joseph.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1371,16 +1371,6 @@
         "entity_key": "entity:p-ben-ammi-1",
         "language_tag": "en",
         "role_text": "Named in Amos 1 at verse(s) 13.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "localization_key": "relevance-localization:en:wb-amos-5-p-joseph-1",
-        "relevance_key": "relevance:wb-amos-5-p-joseph-1",
-        "scope_key": "scope:wb-amos-5:refsys:eng-v22:amos.5.1-amos.5.27",
-        "entity_key": "entity:p-joseph-1",
-        "language_tag": "en",
-        "role_text": "Named in Amos 5 at verse(s) 6.",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -2213,6 +2203,16 @@
         "role_text": "Named in Amos 9 at verse(s) 7, 8, 9.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-amos-5-tribe-of-joseph",
+        "relevance_key": "relevance:wb-amos-5-tribe-of-joseph",
+        "scope_key": "scope:wb-amos-5:refsys:eng-v22:amos.5.1-amos.5.27",
+        "entity_key": "entity:tribe-of-joseph",
+        "language_tag": "en",
+        "role_text": "Named in Amos 5 at verse(s) 6.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -2316,12 +2316,14 @@
             "question:wb-context-en-wb-amos-5-p2-before",
             "question:wb-context-en-wb-amos-5-p2-stakes",
             "question:wb-context-en-wb-amos-5-p2-when",
+            "question:wb-context-en-wb-amos-5-p2-who",
             "question:wb-context-en-wb-amos-5-p3-before",
             "question:wb-context-en-wb-amos-5-p3-stakes",
             "question:wb-context-en-wb-amos-5-p3-when",
             "question:wb-context-en-wb-amos-5-p3-who",
             "question:wb-context-en-wb-amos-5-stakes",
             "question:wb-context-en-wb-amos-5-when",
+            "question:wb-context-en-wb-amos-5-who",
             "question:wb-context-en-wb-amos-6-p1-before",
             "question:wb-context-en-wb-amos-6-p1-stakes",
             "question:wb-context-en-wb-amos-6-p1-when",
@@ -2446,6 +2448,14 @@
       "record_key": "context:en:wb-amos-4",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-amos-5-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-amos-5",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -2678,6 +2688,14 @@
       "record_key": "context:en:wb-amos-5-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-amos-5-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-amos-5-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

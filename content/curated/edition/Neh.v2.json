@@ -480,7 +480,7 @@
     {
       "package_key": "draft:wb-neh-canonical",
       "revision": 1,
-      "digest": "sha256:574a9aeb2a13445e2fc08484f41e5143fa249ff72a05432b26d8fb7646a57481"
+      "digest": "sha256:a958ffcd2fcd7eed4836450d6981714c8137a0bb199105e173909db817b7b087"
     }
   ],
   "records": {
@@ -4411,24 +4411,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:neh-p-benjamin-1-11-31",
-        "verse_key": "verse:Neh.11.31",
-        "attestation_key": "attestation:wb-neh-p-benjamin-1-11-31",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": "The descendants of ",
-          "suffix": " from Geba lived in "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:neh-p-benjamin-1-11-4",
         "verse_key": "verse:Neh.11.4",
         "attestation_key": "attestation:wb-neh-p-benjamin-1-11-4",
@@ -4442,24 +4424,6 @@
           "occurrence_ordinal": 1,
           "prefix": "ndants of Judah and ",
           "suffix": " settled in Jerusale"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:neh-p-benjamin-1-11-7",
-        "verse_key": "verse:Neh.11.7",
-        "attestation_key": "attestation:wb-neh-p-benjamin-1-11-7",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": " the descendants of ",
-          "suffix": ": Sallu son of Meshu"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -8708,42 +8672,6 @@
           "occurrence_ordinal": 1,
           "prefix": "ant of Zerah son of ",
           "suffix": ", was the king’s age"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:neh-p-judah-1-11-25",
-        "verse_key": "verse:Neh.11.25",
-        "attestation_key": "attestation:wb-neh-p-judah-1-11-25",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": "me of the people of ",
-          "suffix": " lived in Kiriath-ar"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:neh-p-judah-1-11-4",
-        "verse_key": "verse:Neh.11.4",
-        "attestation_key": "attestation:wb-neh-p-judah-1-11-4",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": " the descendants of ",
-          "suffix": " and Benjamin settle"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -15319,6 +15247,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:neh-tribe-of-levi-10-39",
+        "verse_key": "verse:Neh.10.39",
+        "attestation_key": "attestation:wb-neh-tribe-of-levi-10-39",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-levi"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Levites",
+          "occurrence_ordinal": 1,
+          "prefix": " Israelites and the ",
+          "suffix": " are to bring the co"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:neh-valley-gate-3-13",
         "verse_key": "verse:Neh.3.13",
         "attestation_key": "attestation:wb-neh-valley-gate-3-13",
@@ -15362,6 +15308,7 @@
             "verse:Neh.11.18",
             "verse:Neh.11.20",
             "verse:Neh.11.23",
+            "verse:Neh.11.25",
             "verse:Neh.11.36",
             "verse:Neh.12.30",
             "verse:Neh.12.40",
@@ -15876,7 +15823,8 @@
             "verse:Neh.10.39"
           ],
           "record_keys": [
-            "mention:wb:neh-israelites-10-39"
+            "mention:wb:neh-israelites-10-39",
+            "mention:wb:neh-tribe-of-levi-10-39"
           ],
           "blocker_question_keys": []
         },
@@ -16012,7 +15960,6 @@
             "mention:wb:neh-p-amariah-7-11-4",
             "mention:wb:neh-p-athaiah-1-11-4",
             "mention:wb:neh-p-benjamin-1-11-4",
-            "mention:wb:neh-p-judah-1-11-4",
             "mention:wb:neh-p-mahalalel-2-11-4",
             "mention:wb:neh-p-perez-1-11-4",
             "mention:wb:neh-p-shephatiah-7-11-4",
@@ -17121,36 +17068,6 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
-            "verse:Neh.11.31"
-          ],
-          "record_keys": [
-            "mention:wb:neh-p-benjamin-1-11-31",
-            "mention:wb:neh-pl-aija-aa884e2-11-31",
-            "mention:wb:neh-pl-michmash-adea06c-11-31"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
-            "verse:Neh.11.7"
-          ],
-          "record_keys": [
-            "mention:wb:neh-p-benjamin-1-11-7",
-            "mention:wb:neh-p-ithiel-1-11-7",
-            "mention:wb:neh-p-jeshaiah-5-11-7",
-            "mention:wb:neh-p-joed-1-11-7",
-            "mention:wb:neh-p-kolaiah-1-11-7",
-            "mention:wb:neh-p-maaseiah-12-11-7",
-            "mention:wb:neh-p-meshullam-14-11-7",
-            "mention:wb:neh-p-pedaiah-6-11-7",
-            "mention:wb:neh-p-sallu-2-11-7"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
             "verse:Neh.12.34"
           ],
           "record_keys": [
@@ -17995,6 +17912,23 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
+            "verse:Neh.11.7"
+          ],
+          "record_keys": [
+            "mention:wb:neh-p-ithiel-1-11-7",
+            "mention:wb:neh-p-jeshaiah-5-11-7",
+            "mention:wb:neh-p-joed-1-11-7",
+            "mention:wb:neh-p-kolaiah-1-11-7",
+            "mention:wb:neh-p-maaseiah-12-11-7",
+            "mention:wb:neh-p-meshullam-14-11-7",
+            "mention:wb:neh-p-pedaiah-6-11-7",
+            "mention:wb:neh-p-sallu-2-11-7"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
             "verse:Neh.11.10"
           ],
           "record_keys": [
@@ -18120,16 +18054,6 @@
             "mention:wb:neh-p-meshezabel-2-11-24",
             "mention:wb:neh-p-pethahiah-4-11-24",
             "mention:wb:neh-p-zerah-3-11-24"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
-            "verse:Neh.11.25"
-          ],
-          "record_keys": [
-            "mention:wb:neh-p-judah-1-11-25"
           ],
           "blocker_question_keys": []
         },
@@ -18454,6 +18378,17 @@
             "mention:wb:neh-pl-azekah-af2ca0c-11-30",
             "mention:wb:neh-pl-lachish-a3cc590-11-30",
             "mention:wb:neh-pl-valley-of-hinnom-a37c8e6-11-30"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Neh.11.31"
+          ],
+          "record_keys": [
+            "mention:wb:neh-pl-aija-aa884e2-11-31",
+            "mention:wb:neh-pl-michmash-adea06c-11-31"
           ],
           "blocker_question_keys": []
         },

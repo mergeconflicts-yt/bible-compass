@@ -1111,7 +1111,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:b3f6781626fdccc76c91c19d67484aabe32ba2d70524b2882e74ec88852c454b"
     }
   ],
   "records": {
@@ -1877,16 +1877,6 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-deut-p-jacob-1-33-4",
-        "reference_key": "verse:Deut.33.4",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-deut-p-jacob-1-34-4",
         "reference_key": "verse:Deut.34.4",
         "entity_key": "entity:p-jacob-1",
@@ -1897,39 +1887,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-deut-p-reuben-1-11-6",
-        "reference_key": "verse:Deut.11.6",
-        "entity_key": "entity:p-reuben-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-deut-p-reuben-1-33-6",
         "reference_key": "verse:Deut.33.6",
         "entity_key": "entity:p-reuben-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-deut-p-levi-1-10-8",
-        "reference_key": "verse:Deut.10.8",
-        "entity_key": "entity:p-levi-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-deut-p-levi-1-18-1",
-        "reference_key": "verse:Deut.18.1",
-        "entity_key": "entity:p-levi-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -5817,6 +5777,16 @@
         "review_status": "draft"
       },
       {
+        "attestation_key": "attestation:wb-deut-israelites-33-4",
+        "reference_key": "verse:Deut.33.4",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "attestation_key": "attestation:wb-deut-israelites-33-5",
         "reference_key": "verse:Deut.33.5",
         "entity_key": "entity:israelites",
@@ -5840,6 +5810,36 @@
         "attestation_key": "attestation:wb-deut-israelites-34-9",
         "reference_key": "verse:Deut.34.9",
         "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-deut-tribe-of-reuben-11-6",
+        "reference_key": "verse:Deut.11.6",
+        "entity_key": "entity:tribe-of-reuben",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-deut-tribe-of-levi-10-8",
+        "reference_key": "verse:Deut.10.8",
+        "entity_key": "entity:tribe-of-levi",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-deut-tribe-of-levi-18-1",
+        "reference_key": "verse:Deut.18.1",
+        "entity_key": "entity:tribe-of-levi",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -5974,7 +5974,7 @@
           "entity:israelites",
           "entity:p-aaron-1",
           "entity:p-eleazar-1",
-          "entity:p-levi-1"
+          "entity:tribe-of-levi"
         ],
         "place_entity_keys": [
           "entity:pl-beeroth-bene-jaakan-a280f83",
@@ -6015,7 +6015,7 @@
           "entity:p-dathan-1",
           "entity:p-eliab-2",
           "entity:p-pharaoh-4",
-          "entity:p-reuben-1"
+          "entity:tribe-of-reuben"
         ],
         "place_entity_keys": [
           "entity:pl-egypt-af301ca",
@@ -6186,7 +6186,7 @@
         "event_key": "event:wb-deut-18-p1",
         "event_type": "vision",
         "participant_entity_keys": [
-          "entity:p-levi-1"
+          "entity:tribe-of-levi"
         ],
         "place_entity_keys": [],
         "scripture_accounts": [
@@ -6726,7 +6726,6 @@
         "participant_entity_keys": [
           "entity:israelites",
           "entity:p-ephraim-1",
-          "entity:p-jacob-1",
           "entity:p-joseph-1",
           "entity:p-judah-1",
           "entity:p-levi-1",
@@ -7731,15 +7730,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-deut-33-p-jacob-1",
-        "scope_key": "scope:wb-deut-33:refsys:eng-v22:deut.33.1-deut.33.29",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-deut-34-p-jacob-1",
         "scope_key": "scope:wb-deut-34:refsys:eng-v22:deut.34.1-deut.34.12",
         "entity_key": "entity:p-jacob-1",
@@ -7749,36 +7739,9 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-deut-11-p-reuben-1",
-        "scope_key": "scope:wb-deut-11:refsys:eng-v22:deut.11.1-deut.11.32",
-        "entity_key": "entity:p-reuben-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-deut-33-p-reuben-1",
         "scope_key": "scope:wb-deut-33:refsys:eng-v22:deut.33.1-deut.33.29",
         "entity_key": "entity:p-reuben-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-deut-10-p-levi-1",
-        "scope_key": "scope:wb-deut-10:refsys:eng-v22:deut.10.1-deut.10.22",
-        "entity_key": "entity:p-levi-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-deut-18-p-levi-1",
-        "scope_key": "scope:wb-deut-18:refsys:eng-v22:deut.18.1-deut.18.22",
-        "entity_key": "entity:p-levi-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -9952,6 +9915,33 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-deut-11-tribe-of-reuben",
+        "scope_key": "scope:wb-deut-11:refsys:eng-v22:deut.11.1-deut.11.32",
+        "entity_key": "entity:tribe-of-reuben",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-deut-10-tribe-of-levi",
+        "scope_key": "scope:wb-deut-10:refsys:eng-v22:deut.10.1-deut.10.22",
+        "entity_key": "entity:tribe-of-levi",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-deut-18-tribe-of-levi",
+        "scope_key": "scope:wb-deut-18:refsys:eng-v22:deut.18.1-deut.18.22",
+        "entity_key": "entity:tribe-of-levi",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -10547,6 +10537,16 @@
       },
       {
         "canonical_entity_key": "entity:pl-zoar-aacfcda",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-levi",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-reuben",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -12528,7 +12528,7 @@
             "verse:Deut.10.8"
           ],
           "record_keys": [
-            "attestation:wb-deut-p-levi-1-10-8"
+            "attestation:wb-deut-tribe-of-levi-10-8"
           ],
           "blocker_question_keys": []
         },
@@ -12583,7 +12583,7 @@
             "attestation:wb-deut-p-abiram-1-11-6",
             "attestation:wb-deut-p-dathan-1-11-6",
             "attestation:wb-deut-p-eliab-2-11-6",
-            "attestation:wb-deut-p-reuben-1-11-6"
+            "attestation:wb-deut-tribe-of-reuben-11-6"
           ],
           "blocker_question_keys": []
         },
@@ -12759,7 +12759,7 @@
             "verse:Deut.18.1"
           ],
           "record_keys": [
-            "attestation:wb-deut-p-levi-1-18-1"
+            "attestation:wb-deut-tribe-of-levi-18-1"
           ],
           "blocker_question_keys": []
         },
@@ -13425,7 +13425,7 @@
             "verse:Deut.33.4"
           ],
           "record_keys": [
-            "attestation:wb-deut-p-jacob-1-33-4",
+            "attestation:wb-deut-israelites-33-4",
             "attestation:wb-deut-p-moses-1-33-4"
           ],
           "blocker_question_keys": []

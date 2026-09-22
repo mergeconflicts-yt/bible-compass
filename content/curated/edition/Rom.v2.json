@@ -522,7 +522,7 @@
     {
       "package_key": "draft:wb-rom-canonical",
       "revision": 1,
-      "digest": "sha256:fcbc14ca665c02b549a5b598fc8fea3236e913063b15f7fbb7a7a40c9a7ff3fe"
+      "digest": "sha256:07231c9db6cb84634811b3711985cd261835213654337ccb6ee738799d5e508b"
     }
   ],
   "records": {
@@ -882,24 +882,6 @@
           "exact_quote": "Aristobulus",
           "occurrence_ordinal": 1,
           "prefix": "to the household of ",
-          "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:rom-p-benjamin-1-11-1",
-        "verse_key": "verse:Rom.11.1",
-        "attestation_key": "attestation:wb-rom-p-benjamin-1-11-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": ", from the tribe of ",
           "suffix": "."
         },
         "claim_keys": [],
@@ -2002,6 +1984,24 @@
         },
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rom-tribe-of-benjamin-11-1",
+        "verse_key": "verse:Rom.11.1",
+        "attestation_key": "attestation:wb-rom-tribe-of-benjamin-11-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-benjamin"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": "f Abraham, from the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -2685,7 +2685,7 @@
           ],
           "record_keys": [
             "mention:wb:rom-p-abram-1-11-1",
-            "mention:wb:rom-p-benjamin-1-11-1"
+            "mention:wb:rom-tribe-of-benjamin-11-1"
           ],
           "blocker_question_keys": []
         },

@@ -112,7 +112,7 @@
     {
       "package_key": "draft:wb-joel-canonical",
       "revision": 1,
-      "digest": "sha256:ba685a28397102b9b6dfd8c9dc981c2f8e6fea3cd3e171522f085f49d113db35"
+      "digest": "sha256:d2fec4536df7f25965f8635e72ce40ba86f7d383fa4b0e88cb4ae0af10043ce5"
     }
   ],
   "records": {
@@ -306,12 +306,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Judah.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-joel-3-who"
           },
           "where": {
-            "text": "Places in this chapter: Edom, Egypt, Jerusalem, Philistia, Sheba 1, Sidon, The Israelites, Tyre.",
+            "text": "Places in this chapter: Edom, Egypt, Jerusalem, Philistia, Sheba 1, Sidon, The Israelites, Tribe of Judah.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -650,12 +650,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Judah.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-joel-3-p1-who"
           },
           "where": {
-            "text": "Places in this passage: Jerusalem, Philistia, Sheba 1, Sidon, The Israelites, Tyre, Valley of Decision, Valley of Jehoshaphat.",
+            "text": "Places in this passage: Jerusalem, Philistia, Sheba 1, Sidon, The Israelites, Tribe of Judah, Tyre, Valley of Decision.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -693,12 +693,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Judah.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-joel-3-p2-who"
           },
           "where": {
-            "text": "Places in this passage: Edom, Egypt, Jerusalem, Valley of Shittim, Zion.",
+            "text": "Places in this passage: Edom, Egypt, Jerusalem, Tribe of Judah, Valley of Shittim, Zion.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -732,16 +732,6 @@
       }
     ],
     "relevance_localizations": [
-      {
-        "localization_key": "relevance-localization:en:wb-joel-3-p-judah-1",
-        "relevance_key": "relevance:wb-joel-3-p-judah-1",
-        "scope_key": "scope:wb-joel-3:refsys:eng-v22:joel.3.1-joel.3.21",
-        "entity_key": "entity:p-judah-1",
-        "language_tag": "en",
-        "role_text": "Named in Joel 3 at verse(s) 6, 8, 19.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "localization_key": "relevance-localization:en:wb-joel-1-p-joel-11",
         "relevance_key": "relevance:wb-joel-1-p-joel-11",
@@ -941,6 +931,16 @@
         "role_text": "Named in Joel 3 at verse(s) 16.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-joel-3-tribe-of-judah",
+        "relevance_key": "relevance:wb-joel-3-tribe-of-judah",
+        "scope_key": "scope:wb-joel-3:refsys:eng-v22:joel.3.1-joel.3.21",
+        "entity_key": "entity:tribe-of-judah",
+        "language_tag": "en",
+        "role_text": "Named in Joel 3 at verse(s) 6, 8, 19.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -1028,11 +1028,14 @@
             "question:wb-context-en-wb-joel-3-p1-before",
             "question:wb-context-en-wb-joel-3-p1-stakes",
             "question:wb-context-en-wb-joel-3-p1-when",
+            "question:wb-context-en-wb-joel-3-p1-who",
             "question:wb-context-en-wb-joel-3-p2-before",
             "question:wb-context-en-wb-joel-3-p2-stakes",
             "question:wb-context-en-wb-joel-3-p2-when",
+            "question:wb-context-en-wb-joel-3-p2-who",
             "question:wb-context-en-wb-joel-3-stakes",
-            "question:wb-context-en-wb-joel-3-when"
+            "question:wb-context-en-wb-joel-3-when",
+            "question:wb-context-en-wb-joel-3-who"
           ]
         }
       ]
@@ -1085,6 +1088,14 @@
       "record_key": "context:en:wb-joel-2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-joel-3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-joel-3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1344,6 +1355,14 @@
       "blocks_publication": true
     },
     {
+      "question_key": "question:wb-context-en-wb-joel-3-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-joel-3-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
       "question_key": "question:wb-context-en-wb-joel-3-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-joel-3-p1",
@@ -1365,6 +1384,14 @@
       "record_key": "context:en:wb-joel-3-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-joel-3-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-joel-3-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

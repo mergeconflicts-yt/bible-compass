@@ -991,7 +991,7 @@
     {
       "package_key": "draft:wb-2chr-canonical",
       "revision": 1,
-      "digest": "sha256:8438fa1ae6257c1ea68b41c2a28e337a4fbcbc3a98941e2837fccb896f385b71"
+      "digest": "sha256:d8f7944bc0b21c98029006bd574073f7b522368fdc71a7c862e84951ff61ce47"
     }
   ],
   "records": {
@@ -12391,24 +12391,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:2chr-p-judah-1-13-18",
-        "verse_key": "verse:2Chr.13.18",
-        "attestation_key": "attestation:wb-2chr-p-judah-1-13-18",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": "ime, and the men of ",
-          "suffix": " prevailed because t"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:2chr-p-kishi-1-29-12",
         "verse_key": "verse:2Chr.29.12",
         "attestation_key": "attestation:wb-2chr-p-kishi-1-29-12",
@@ -19393,6 +19375,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:2chr-tribe-of-ephraim-25-7",
+        "verse_key": "verse:2Chr.25.7",
+        "attestation_key": "attestation:wb-2chr-tribe-of-ephraim-25-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-ephraim"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ephraimites",
+          "occurrence_ordinal": 1,
+          "prefix": "not with any of the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:2chr-valley-gate-26-9",
         "verse_key": "verse:2Chr.26.9",
         "attestation_key": "attestation:wb-2chr-valley-gate-26-9",
@@ -19530,7 +19530,6 @@
             "verse:2Chr.25.28",
             "verse:2Chr.25.3",
             "verse:2Chr.25.6",
-            "verse:2Chr.25.7",
             "verse:2Chr.25.8",
             "verse:2Chr.26.10",
             "verse:2Chr.26.12",
@@ -21379,8 +21378,7 @@
             "verse:2Chr.13.18"
           ],
           "record_keys": [
-            "mention:wb:2chr-israelites-13-18",
-            "mention:wb:2chr-p-judah-1-13-18"
+            "mention:wb:2chr-israelites-13-18"
           ],
           "blocker_question_keys": []
         },
@@ -23171,6 +23169,16 @@
           ],
           "record_keys": [
             "mention:wb:2chr-p-amaziah-1-25-5"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:2Chr.25.7"
+          ],
+          "record_keys": [
+            "mention:wb:2chr-tribe-of-ephraim-25-7"
           ],
           "blocker_question_keys": []
         },

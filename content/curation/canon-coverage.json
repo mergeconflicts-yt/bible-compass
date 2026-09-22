@@ -13,8 +13,8 @@
       "verses_complete_with_records": 12255
     },
     "translation_mention": {
-      "verses_complete_zero": 20210,
-      "verses_complete_with_records": 10876
+      "verses_complete_zero": 20247,
+      "verses_complete_with_records": 10839
     }
   },
   "attempted_annotation_classes": [
@@ -32,11 +32,12 @@
     "canonical_term",
     "canonical_theme",
     "canonical_chronology",
+    "canonical_deity_attestation",
     "historical_context",
     "localized_entity_name",
     "map_timeline_projection"
   ],
-  "not_attempted_note": "Objects, roles, practices, lexical terms, themes, chronology and meaningful historical context are required by the curation spec but no approved input or pipeline produces them yet. Verses are NOT claimed complete for these classes.",
+  "not_attempted_note": "Objects, roles, practices, lexical terms, themes, chronology and meaningful historical context are required by the curation spec but no approved input or pipeline produces them yet. Deity references are likewise not curated: the person loader excludes God/YHWH by design, so canonical_entity_attestation covers persons, places and collectives only. Verses are NOT claimed complete for the not_attempted classes, including verses that mention God.",
   "books": [
     {
       "osis": "1Chr",
@@ -56,7 +57,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 224,
-          "mentions": 206,
+          "mentions": 204,
           "contexts": 2
         },
         {
@@ -72,7 +73,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 187,
-          "mentions": 164,
+          "mentions": 162,
           "contexts": 5
         },
         {
@@ -80,7 +81,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 86,
-          "mentions": 78,
+          "mentions": 75,
           "contexts": 4
         },
         {
@@ -88,15 +89,15 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 266,
-          "mentions": 234,
+          "mentions": 229,
           "contexts": 5
         },
         {
           "chapter": 7,
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
-          "attestations": 178,
-          "mentions": 163,
+          "attestations": 177,
+          "mentions": 154,
           "contexts": 7
         },
         {
@@ -104,7 +105,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 148,
-          "mentions": 141,
+          "mentions": 140,
           "contexts": 3
         },
         {
@@ -112,7 +113,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 134,
-          "mentions": 125,
+          "mentions": 126,
           "contexts": 3
         },
         {
@@ -128,7 +129,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 135,
-          "mentions": 106,
+          "mentions": 107,
           "contexts": 4
         },
         {
@@ -136,7 +137,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 87,
-          "mentions": 77,
+          "mentions": 79,
           "contexts": 3
         },
         {
@@ -168,7 +169,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 34,
-          "mentions": 32,
+          "mentions": 31,
           "contexts": 5
         },
         {
@@ -224,7 +225,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 72,
-          "mentions": 70,
+          "mentions": 69,
           "contexts": 6
         },
         {
@@ -232,7 +233,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 92,
-          "mentions": 91,
+          "mentions": 90,
           "contexts": 3
         },
         {
@@ -256,7 +257,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 98,
-          "mentions": 78,
+          "mentions": 80,
           "contexts": 5
         },
         {
@@ -264,7 +265,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 11,
-          "mentions": 11,
+          "mentions": 10,
           "contexts": 3
         },
         {
@@ -279,21 +280,21 @@
       "chapters_curated": 29,
       "jobs": 8,
       "jobs_done": 8,
-      "entities": 1532,
-      "attestations": 2662,
-      "mentions": 2363,
+      "entities": 1545,
+      "attestations": 2661,
+      "mentions": 2343,
       "relationships": 1778,
       "events": 83,
       "contexts": 114,
-      "profiles": 1529,
+      "profiles": 1542,
       "coverage_by_class": {
         "canonical_entity_attestation": {
           "verses_complete_zero": 140,
           "verses_complete_with_records": 802
         },
         "translation_mention": {
-          "verses_complete_zero": 164,
-          "verses_complete_with_records": 778
+          "verses_complete_zero": 166,
+          "verses_complete_with_records": 776
         }
       }
     },
@@ -609,7 +610,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 99,
-          "mentions": 85,
+          "mentions": 84,
           "contexts": 7
         },
         {
@@ -617,7 +618,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 57,
-          "mentions": 49,
+          "mentions": 48,
           "contexts": 5
         },
         {
@@ -641,7 +642,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 83,
-          "mentions": 74,
+          "mentions": 73,
           "contexts": 7
         },
         {
@@ -665,7 +666,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 52,
-          "mentions": 48,
+          "mentions": 47,
           "contexts": 5
         },
         {
@@ -706,8 +707,8 @@
       "jobs_done": 6,
       "entities": 157,
       "attestations": 1180,
-      "mentions": 985,
-      "relationships": 124,
+      "mentions": 981,
+      "relationships": 122,
       "events": 87,
       "contexts": 117,
       "profiles": 157,
@@ -717,8 +718,8 @@
           "verses_complete_with_records": 549
         },
         "translation_mention": {
-          "verses_complete_zero": 310,
-          "verses_complete_with_records": 506
+          "verses_complete_zero": 309,
+          "verses_complete_with_records": 507
         }
       }
     },
@@ -879,7 +880,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 26,
-          "mentions": 18,
+          "mentions": 17,
           "contexts": 3
         },
         {
@@ -1048,8 +1049,8 @@
       "jobs_done": 8,
       "entities": 93,
       "attestations": 1233,
-      "mentions": 1008,
-      "relationships": 95,
+      "mentions": 1007,
+      "relationships": 93,
       "events": 70,
       "contexts": 102,
       "profiles": 93,
@@ -1312,7 +1313,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 41,
-          "mentions": 37,
+          "mentions": 36,
           "contexts": 3
         },
         {
@@ -1408,7 +1409,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 50,
-          "mentions": 39,
+          "mentions": 40,
           "contexts": 6
         },
         {
@@ -1506,7 +1507,7 @@
       "entities": 200,
       "attestations": 1233,
       "mentions": 1023,
-      "relationships": 148,
+      "relationships": 138,
       "events": 103,
       "contexts": 143,
       "profiles": 200,
@@ -1516,8 +1517,8 @@
           "verses_complete_with_records": 565
         },
         "translation_mention": {
-          "verses_complete_zero": 298,
-          "verses_complete_with_records": 524
+          "verses_complete_zero": 297,
+          "verses_complete_with_records": 525
         }
       }
     },
@@ -1841,7 +1842,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 75,
-          "mentions": 53,
+          "mentions": 52,
           "contexts": 6
         },
         {
@@ -1898,7 +1899,7 @@
       "jobs_done": 7,
       "entities": 118,
       "attestations": 1302,
-      "mentions": 933,
+      "mentions": 932,
       "relationships": 168,
       "events": 93,
       "contexts": 119,
@@ -1909,8 +1910,8 @@
           "verses_complete_with_records": 544
         },
         "translation_mention": {
-          "verses_complete_zero": 234,
-          "verses_complete_with_records": 485
+          "verses_complete_zero": 235,
+          "verses_complete_with_records": 484
         }
       }
     },
@@ -2151,7 +2152,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 95,
-          "mentions": 69,
+          "mentions": 70,
           "contexts": 3
         },
         {
@@ -2168,8 +2169,8 @@
       "jobs_done": 6,
       "entities": 57,
       "attestations": 1285,
-      "mentions": 1108,
-      "relationships": 194,
+      "mentions": 1109,
+      "relationships": 190,
       "events": 64,
       "contexts": 89,
       "profiles": 57,
@@ -2622,7 +2623,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 9,
-          "mentions": 2,
+          "mentions": 1,
           "contexts": 4
         },
         {
@@ -2663,7 +2664,7 @@
       "jobs_done": 3,
       "entities": 9,
       "attestations": 116,
-      "mentions": 66,
+      "mentions": 65,
       "relationships": 0,
       "events": 14,
       "contexts": 24,
@@ -2674,8 +2675,8 @@
           "verses_complete_with_records": 62
         },
         "translation_mention": {
-          "verses_complete_zero": 103,
-          "verses_complete_with_records": 43
+          "verses_complete_zero": 104,
+          "verses_complete_with_records": 42
         }
       }
     },
@@ -2951,7 +2952,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 21,
-          "mentions": 15,
+          "mentions": 16,
           "contexts": 5
         },
         {
@@ -3127,7 +3128,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 19,
-          "mentions": 13,
+          "mentions": 12,
           "contexts": 2
         },
         {
@@ -3483,7 +3484,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 28,
-          "mentions": 26,
+          "mentions": 25,
           "contexts": 4
         },
         {
@@ -3515,7 +3516,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 100,
-          "mentions": 97,
+          "mentions": 94,
           "contexts": 3
         },
         {
@@ -3659,7 +3660,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 28,
-          "mentions": 26,
+          "mentions": 25,
           "contexts": 3
         },
         {
@@ -3723,7 +3724,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 37,
-          "mentions": 34,
+          "mentions": 36,
           "contexts": 2
         },
         {
@@ -3794,21 +3795,21 @@
       "chapters_curated": 40,
       "jobs": 10,
       "jobs_done": 10,
-      "entities": 30,
+      "entities": 31,
       "attestations": 1000,
-      "mentions": 882,
+      "mentions": 879,
       "relationships": 83,
       "events": 99,
       "contexts": 164,
-      "profiles": 30,
+      "profiles": 31,
       "coverage_by_class": {
         "canonical_entity_attestation": {
           "verses_complete_zero": 645,
           "verses_complete_with_records": 568
         },
         "translation_mention": {
-          "verses_complete_zero": 690,
-          "verses_complete_with_records": 523
+          "verses_complete_zero": 692,
+          "verses_complete_with_records": 521
         }
       }
     },
@@ -3846,7 +3847,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 11,
-          "mentions": 6,
+          "mentions": 5,
           "contexts": 3
         },
         {
@@ -3878,7 +3879,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 11,
-          "mentions": 8,
+          "mentions": 7,
           "contexts": 2
         },
         {
@@ -4014,7 +4015,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 29,
-          "mentions": 14,
+          "mentions": 11,
           "contexts": 5
         },
         {
@@ -4134,7 +4135,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 5,
-          "mentions": 3,
+          "mentions": 4,
           "contexts": 10
         },
         {
@@ -4207,7 +4208,7 @@
       "jobs_done": 12,
       "entities": 66,
       "attestations": 629,
-      "mentions": 346,
+      "mentions": 342,
       "relationships": 8,
       "events": 96,
       "contexts": 163,
@@ -4218,8 +4219,8 @@
           "verses_complete_with_records": 380
         },
         "translation_mention": {
-          "verses_complete_zero": 1038,
-          "verses_complete_with_records": 235
+          "verses_complete_zero": 1042,
+          "verses_complete_with_records": 231
         }
       }
     },
@@ -4775,7 +4776,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 129,
-          "mentions": 118,
+          "mentions": 108,
           "contexts": 8
         },
         {
@@ -4791,7 +4792,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 51,
-          "mentions": 45,
+          "mentions": 44,
           "contexts": 2
         },
         {
@@ -4816,7 +4817,7 @@
       "jobs_done": 13,
       "entities": 139,
       "attestations": 2216,
-      "mentions": 1985,
+      "mentions": 1974,
       "relationships": 960,
       "events": 136,
       "contexts": 199,
@@ -4984,7 +4985,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 19,
-          "mentions": 18,
+          "mentions": 17,
           "contexts": 3
         },
         {
@@ -4992,7 +4993,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 5,
-          "mentions": 3,
+          "mentions": 2,
           "contexts": 3
         },
         {
@@ -5041,7 +5042,7 @@
       "jobs_done": 4,
       "entities": 2,
       "attestations": 92,
-      "mentions": 75,
+      "mentions": 73,
       "relationships": 0,
       "events": 22,
       "contexts": 48,
@@ -5052,8 +5053,8 @@
           "verses_complete_with_records": 67
         },
         "translation_mention": {
-          "verses_complete_zero": 250,
-          "verses_complete_with_records": 53
+          "verses_complete_zero": 251,
+          "verses_complete_with_records": 52
         }
       }
     },
@@ -5067,7 +5068,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 23,
-          "mentions": 20,
+          "mentions": 18,
           "contexts": 2
         },
         {
@@ -5180,7 +5181,7 @@
       "jobs_done": 4,
       "entities": 16,
       "attestations": 98,
-      "mentions": 63,
+      "mentions": 61,
       "relationships": 12,
       "events": 17,
       "contexts": 34,
@@ -5191,8 +5192,8 @@
           "verses_complete_with_records": 61
         },
         "translation_mention": {
-          "verses_complete_zero": 155,
-          "verses_complete_with_records": 42
+          "verses_complete_zero": 156,
+          "verses_complete_with_records": 41
         }
       }
     },
@@ -5494,7 +5495,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 74,
-          "mentions": 53,
+          "mentions": 52,
           "contexts": 6
         },
         {
@@ -5590,7 +5591,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 6,
-          "mentions": 4,
+          "mentions": 3,
           "contexts": 2
         },
         {
@@ -5735,7 +5736,7 @@
       "jobs_done": 17,
       "entities": 42,
       "attestations": 729,
-      "mentions": 479,
+      "mentions": 477,
       "relationships": 10,
       "events": 97,
       "contexts": 187,
@@ -5746,8 +5747,8 @@
           "verses_complete_with_records": 402
         },
         "translation_mention": {
-          "verses_complete_zero": 986,
-          "verses_complete_with_records": 306
+          "verses_complete_zero": 988,
+          "verses_complete_with_records": 304
         }
       }
     },
@@ -5844,7 +5845,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 7,
-          "mentions": 4,
+          "mentions": 3,
           "contexts": 4
         },
         {
@@ -5860,7 +5861,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 5,
-          "mentions": 2,
+          "mentions": 1,
           "contexts": 3
         },
         {
@@ -5868,7 +5869,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 9,
-          "mentions": 8,
+          "mentions": 7,
           "contexts": 3
         },
         {
@@ -5876,7 +5877,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 13,
-          "mentions": 12,
+          "mentions": 11,
           "contexts": 4
         },
         {
@@ -5908,7 +5909,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 12,
-          "mentions": 11,
+          "mentions": 10,
           "contexts": 3
         },
         {
@@ -5916,7 +5917,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 2,
-          "mentions": 2,
+          "mentions": 1,
           "contexts": 4
         },
         {
@@ -5924,7 +5925,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 12,
-          "mentions": 5,
+          "mentions": 4,
           "contexts": 4
         },
         {
@@ -6068,7 +6069,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 23,
-          "mentions": 14,
+          "mentions": 12,
           "contexts": 3
         },
         {
@@ -6076,7 +6077,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 54,
-          "mentions": 32,
+          "mentions": 31,
           "contexts": 5
         },
         {
@@ -6084,7 +6085,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 20,
-          "mentions": 13,
+          "mentions": 12,
           "contexts": 3
         },
         {
@@ -6108,7 +6109,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 74,
-          "mentions": 72,
+          "mentions": 71,
           "contexts": 5
         },
         {
@@ -6220,7 +6221,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 59,
-          "mentions": 15,
+          "mentions": 13,
           "contexts": 6
         },
         {
@@ -6245,7 +6246,7 @@
       "jobs_done": 14,
       "entities": 102,
       "attestations": 1477,
-      "mentions": 940,
+      "mentions": 926,
       "relationships": 80,
       "events": 113,
       "contexts": 175,
@@ -6256,8 +6257,8 @@
           "verses_complete_with_records": 704
         },
         "translation_mention": {
-          "verses_complete_zero": 851,
-          "verses_complete_with_records": 513
+          "verses_complete_zero": 863,
+          "verses_complete_with_records": 501
         }
       }
     },
@@ -6650,7 +6651,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 22,
-          "mentions": 18,
+          "mentions": 15,
           "contexts": 3
         }
       ],
@@ -6659,7 +6660,7 @@
       "jobs_done": 1,
       "entities": 4,
       "attestations": 32,
-      "mentions": 25,
+      "mentions": 22,
       "relationships": 2,
       "events": 7,
       "contexts": 13,
@@ -6670,8 +6671,8 @@
           "verses_complete_with_records": 20
         },
         "translation_mention": {
-          "verses_complete_zero": 57,
-          "verses_complete_with_records": 16
+          "verses_complete_zero": 58,
+          "verses_complete_with_records": 15
         }
       }
     },
@@ -6947,7 +6948,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 24,
-          "mentions": 14,
+          "mentions": 13,
           "contexts": 3
         },
         {
@@ -6963,7 +6964,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 42,
-          "mentions": 32,
+          "mentions": 34,
           "contexts": 3
         },
         {
@@ -7035,7 +7036,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 114,
-          "mentions": 78,
+          "mentions": 80,
           "contexts": 6
         },
         {
@@ -7043,7 +7044,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 33,
-          "mentions": 30,
+          "mentions": 28,
           "contexts": 3
         },
         {
@@ -7051,7 +7052,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 207,
-          "mentions": 138,
+          "mentions": 135,
           "contexts": 4
         },
         {
@@ -7059,7 +7060,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 32,
-          "mentions": 16,
+          "mentions": 12,
           "contexts": 2
         },
         {
@@ -7067,7 +7068,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 61,
-          "mentions": 46,
+          "mentions": 41,
           "contexts": 2
         },
         {
@@ -7075,14 +7076,14 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 77,
-          "mentions": 59,
+          "mentions": 56,
           "contexts": 3
         },
         {
           "chapter": 19,
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
-          "attestations": 157,
+          "attestations": 155,
           "mentions": 110,
           "contexts": 8
         },
@@ -7099,7 +7100,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 106,
-          "mentions": 82,
+          "mentions": 78,
           "contexts": 2
         },
         {
@@ -7107,7 +7108,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 81,
-          "mentions": 54,
+          "mentions": 72,
           "contexts": 3
         },
         {
@@ -7131,7 +7132,7 @@
       "jobs": 6,
       "jobs_done": 6,
       "entities": 312,
-      "attestations": 1532,
+      "attestations": 1530,
       "mentions": 1053,
       "relationships": 18,
       "events": 51,
@@ -7143,8 +7144,8 @@
           "verses_complete_with_records": 543
         },
         "translation_mention": {
-          "verses_complete_zero": 158,
-          "verses_complete_with_records": 500
+          "verses_complete_zero": 162,
+          "verses_complete_with_records": 496
         }
       }
     },
@@ -7193,7 +7194,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 76,
-          "mentions": 46,
+          "mentions": 43,
           "contexts": 4
         },
         {
@@ -7209,7 +7210,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 54,
-          "mentions": 35,
+          "mentions": 34,
           "contexts": 5
         },
         {
@@ -7217,7 +7218,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 70,
-          "mentions": 59,
+          "mentions": 58,
           "contexts": 3
         },
         {
@@ -7329,7 +7330,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 40,
-          "mentions": 25,
+          "mentions": 31,
           "contexts": 3
         },
         {
@@ -7345,7 +7346,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 66,
-          "mentions": 19,
+          "mentions": 29,
           "contexts": 3
         },
         {
@@ -7353,7 +7354,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 27,
-          "mentions": 14,
+          "mentions": 18,
           "contexts": 2
         }
       ],
@@ -7362,7 +7363,7 @@
       "jobs_done": 6,
       "entities": 95,
       "attestations": 936,
-      "mentions": 630,
+      "mentions": 645,
       "relationships": 52,
       "events": 52,
       "contexts": 74,
@@ -7373,8 +7374,8 @@
           "verses_complete_with_records": 454
         },
         "translation_mention": {
-          "verses_complete_zero": 241,
-          "verses_complete_with_records": 377
+          "verses_complete_zero": 233,
+          "verses_complete_with_records": 385
         }
       }
     },
@@ -7673,7 +7674,7 @@
       "entities": 3,
       "attestations": 260,
       "mentions": 226,
-      "relationships": 4,
+      "relationships": 2,
       "events": 55,
       "contexts": 98,
       "profiles": 3,
@@ -7933,7 +7934,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 3,
-          "mentions": 2,
+          "mentions": 1,
           "contexts": 4
         },
         {
@@ -7950,7 +7951,7 @@
       "jobs_done": 1,
       "entities": 1,
       "attestations": 14,
-      "mentions": 12,
+      "mentions": 11,
       "relationships": 0,
       "events": 6,
       "contexts": 13,
@@ -7961,8 +7962,8 @@
           "verses_complete_with_records": 12
         },
         "translation_mention": {
-          "verses_complete_zero": 44,
-          "verses_complete_with_records": 11
+          "verses_complete_zero": 45,
+          "verses_complete_with_records": 10
         }
       }
     },
@@ -8588,7 +8589,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 92,
-          "mentions": 89,
+          "mentions": 90,
           "contexts": 3
         },
         {
@@ -8596,7 +8597,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 132,
-          "mentions": 117,
+          "mentions": 113,
           "contexts": 3
         },
         {
@@ -8621,8 +8622,8 @@
       "jobs_done": 4,
       "entities": 304,
       "attestations": 951,
-      "mentions": 814,
-      "relationships": 443,
+      "mentions": 811,
+      "relationships": 359,
       "events": 33,
       "contexts": 48,
       "profiles": 304,
@@ -8632,8 +8633,8 @@
           "verses_complete_with_records": 283
         },
         "translation_mention": {
-          "verses_complete_zero": 130,
-          "verses_complete_with_records": 276
+          "verses_complete_zero": 131,
+          "verses_complete_with_records": 275
         }
       }
     },
@@ -8647,7 +8648,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 82,
-          "mentions": 78,
+          "mentions": 64,
           "contexts": 5
         },
         {
@@ -8655,7 +8656,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 48,
-          "mentions": 47,
+          "mentions": 46,
           "contexts": 2
         },
         {
@@ -8671,7 +8672,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 35,
-          "mentions": 25,
+          "mentions": 26,
           "contexts": 5
         },
         {
@@ -8695,7 +8696,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 67,
-          "mentions": 52,
+          "mentions": 62,
           "contexts": 2
         },
         {
@@ -8767,7 +8768,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 75,
-          "mentions": 70,
+          "mentions": 69,
           "contexts": 6
         },
         {
@@ -8775,7 +8776,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 19,
-          "mentions": 19,
+          "mentions": 18,
           "contexts": 2
         },
         {
@@ -8783,7 +8784,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 18,
-          "mentions": 17,
+          "mentions": 18,
           "contexts": 3
         },
         {
@@ -8847,7 +8848,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 157,
-          "mentions": 148,
+          "mentions": 133,
           "contexts": 17
         },
         {
@@ -8895,7 +8896,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 96,
-          "mentions": 60,
+          "mentions": 76,
           "contexts": 2
         },
         {
@@ -8911,7 +8912,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 74,
-          "mentions": 61,
+          "mentions": 63,
           "contexts": 3
         },
         {
@@ -8927,7 +8928,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 32,
-          "mentions": 27,
+          "mentions": 25,
           "contexts": 2
         }
       ],
@@ -8936,7 +8937,7 @@
       "jobs_done": 11,
       "entities": 121,
       "attestations": 1619,
-      "mentions": 1370,
+      "mentions": 1366,
       "relationships": 207,
       "events": 106,
       "contexts": 150,
@@ -8947,8 +8948,8 @@
           "verses_complete_with_records": 781
         },
         "translation_mention": {
-          "verses_complete_zero": 559,
-          "verses_complete_with_records": 729
+          "verses_complete_zero": 566,
+          "verses_complete_with_records": 722
         }
       }
     },
@@ -8962,7 +8963,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 32,
-          "mentions": 14,
+          "mentions": 12,
           "contexts": 3
         }
       ],
@@ -8971,7 +8972,7 @@
       "jobs_done": 1,
       "entities": 3,
       "attestations": 32,
-      "mentions": 14,
+      "mentions": 12,
       "relationships": 0,
       "events": 2,
       "contexts": 4,
@@ -8982,8 +8983,8 @@
           "verses_complete_with_records": 12
         },
         "translation_mention": {
-          "verses_complete_zero": 12,
-          "verses_complete_with_records": 9
+          "verses_complete_zero": 13,
+          "verses_complete_with_records": 8
         }
       }
     },
@@ -10438,7 +10439,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 12,
-          "mentions": 11,
+          "mentions": 10,
           "contexts": 2
         },
         {
@@ -10567,7 +10568,7 @@
       "jobs_done": 39,
       "entities": 10,
       "attestations": 292,
-      "mentions": 195,
+      "mentions": 194,
       "relationships": 0,
       "events": 76,
       "contexts": 301,
@@ -10578,8 +10579,8 @@
           "verses_complete_with_records": 206
         },
         "translation_mention": {
-          "verses_complete_zero": 2312,
-          "verses_complete_with_records": 149
+          "verses_complete_zero": 2313,
+          "verses_complete_with_records": 148
         }
       }
     },
@@ -10926,7 +10927,7 @@
       "entities": 30,
       "attestations": 92,
       "mentions": 82,
-      "relationships": 2,
+      "relationships": 0,
       "events": 16,
       "contexts": 64,
       "profiles": 30,
@@ -11208,7 +11209,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 14,
-          "mentions": 10,
+          "mentions": 8,
           "contexts": 2
         },
         {
@@ -11224,7 +11225,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 10,
-          "mentions": 9,
+          "mentions": 6,
           "contexts": 2
         },
         {
@@ -11240,7 +11241,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 18,
-          "mentions": 18,
+          "mentions": 17,
           "contexts": 3
         },
         {
@@ -11265,7 +11266,7 @@
       "jobs_done": 4,
       "entities": 11,
       "attestations": 152,
-      "mentions": 125,
+      "mentions": 119,
       "relationships": 4,
       "events": 20,
       "contexts": 40,
@@ -11276,8 +11277,8 @@
           "verses_complete_with_records": 88
         },
         "translation_mention": {
-          "verses_complete_zero": 129,
-          "verses_complete_with_records": 82
+          "verses_complete_zero": 134,
+          "verses_complete_with_records": 77
         }
       }
     },

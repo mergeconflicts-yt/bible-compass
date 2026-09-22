@@ -983,7 +983,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -1053,16 +1053,6 @@
         "attestation_key": "attestation:wb-lev-p-jacob-1-26-42",
         "reference_key": "verse:Lev.26.42",
         "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-lev-p-dan-1-24-11",
-        "reference_key": "verse:Lev.24.11",
-        "entity_key": "entity:p-dan-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3618,31 +3608,19 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lev-tribe-of-dan-24-11",
+        "reference_key": "verse:Lev.24.11",
+        "entity_key": "entity:tribe-of-dan",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
-      {
-        "relationship_key": "relationship:wb-lev-p-dan-1-ancestor-p-dibri-1",
-        "subject_entity_key": "entity:p-dan-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-dibri-1",
-        "applicable_scope_keys": [
-          "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-lev-p-dibri-1-descendant-p-dan-1",
-        "subject_entity_key": "entity:p-dibri-1",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-dan-1",
-        "applicable_scope_keys": [
-          "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "relationship_key": "relationship:wb-lev-p-dibri-1-father-p-shelomith-1",
         "subject_entity_key": "entity:p-dibri-1",
@@ -4196,10 +4174,10 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:israelites",
-          "entity:p-dan-1",
           "entity:p-dibri-1",
           "entity:p-moses-1",
-          "entity:p-shelomith-1"
+          "entity:p-shelomith-1",
+          "entity:tribe-of-dan"
         ],
         "place_entity_keys": [],
         "scripture_accounts": [
@@ -4695,15 +4673,6 @@
         "relevance_key": "relevance:wb-lev-26-p-jacob-1",
         "scope_key": "scope:wb-lev-26:refsys:eng-v22:lev.26.1-lev.26.46",
         "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-lev-24-p-dan-1",
-        "scope_key": "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23",
-        "entity_key": "entity:p-dan-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -5527,6 +5496,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-lev-24-tribe-of-dan",
+        "scope_key": "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23",
+        "entity_key": "entity:tribe-of-dan",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -5547,11 +5525,6 @@
       },
       {
         "canonical_entity_key": "entity:p-abram-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-dan-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -5642,6 +5615,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-wilderness-of-sinai-ae50cf1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-dan",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -8110,10 +8088,10 @@
             "verse:Lev.24.11"
           ],
           "record_keys": [
-            "attestation:wb-lev-p-dan-1-24-11",
             "attestation:wb-lev-p-dibri-1-24-11",
             "attestation:wb-lev-p-moses-1-24-11",
-            "attestation:wb-lev-p-shelomith-1-24-11"
+            "attestation:wb-lev-p-shelomith-1-24-11",
+            "attestation:wb-lev-tribe-of-dan-24-11"
           ],
           "blocker_question_keys": []
         },

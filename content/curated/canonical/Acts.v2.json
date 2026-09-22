@@ -1168,7 +1168,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -2708,16 +2708,6 @@
         "attestation_key": "attestation:wb-acts-p-hamor-1-7-16",
         "reference_key": "verse:Acts.7.16",
         "entity_key": "entity:p-hamor-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-acts-p-benjamin-1-13-21",
-        "reference_key": "verse:Acts.13.21",
-        "entity_key": "entity:p-benjamin-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -12343,6 +12333,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-acts-tribe-of-benjamin-13-21",
+        "reference_key": "verse:Acts.13.21",
+        "entity_key": "entity:tribe-of-benjamin",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -12889,7 +12889,6 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:p-abram-1",
-          "entity:p-benjamin-1",
           "entity:p-david-1",
           "entity:p-jesse-1",
           "entity:p-john-1",
@@ -12898,7 +12897,8 @@
           "entity:p-pilate-1",
           "entity:p-samuel-2",
           "entity:p-saul-1",
-          "entity:p-saul-2"
+          "entity:p-saul-2",
+          "entity:tribe-of-benjamin"
         ],
         "place_entity_keys": [
           "entity:jerusalem",
@@ -15678,15 +15678,6 @@
         "relevance_key": "relevance:wb-acts-7-p-hamor-1",
         "scope_key": "scope:wb-acts-7:refsys:eng-v22:acts.7.1-acts.7.60",
         "entity_key": "entity:p-hamor-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-acts-13-p-benjamin-1",
-        "scope_key": "scope:wb-acts-13:refsys:eng-v22:acts.13.1-acts.13.52",
-        "entity_key": "entity:p-benjamin-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -19885,6 +19876,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-acts-13-tribe-of-benjamin",
+        "scope_key": "scope:wb-acts-13:refsys:eng-v22:acts.13.1-acts.13.52",
+        "entity_key": "entity:tribe-of-benjamin",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -19985,11 +19985,6 @@
       },
       {
         "canonical_entity_key": "entity:p-bartholomew-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-benjamin-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -21015,6 +21010,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-tyre-a160272",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-benjamin",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -24007,8 +24007,8 @@
             "verse:Acts.13.21"
           ],
           "record_keys": [
-            "attestation:wb-acts-p-benjamin-1-13-21",
-            "attestation:wb-acts-p-saul-1-13-21"
+            "attestation:wb-acts-p-saul-1-13-21",
+            "attestation:wb-acts-tribe-of-benjamin-13-21"
           ],
           "blocker_question_keys": []
         },

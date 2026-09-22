@@ -150,7 +150,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -186,16 +186,6 @@
     "claims": [],
     "citations": [],
     "attestations": [
-      {
-        "attestation_key": "attestation:wb-phil-p-benjamin-1-3-5",
-        "reference_key": "verse:Phil.3.5",
-        "entity_key": "entity:p-benjamin-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "attestation_key": "attestation:wb-phil-p-saul-2-1-1",
         "reference_key": "verse:Phil.1.1",
@@ -325,6 +315,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-phil-tribe-of-benjamin-3-5",
+        "reference_key": "verse:Phil.3.5",
+        "entity_key": "entity:tribe-of-benjamin",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -370,7 +370,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:israelites",
-          "entity:p-benjamin-1"
+          "entity:tribe-of-benjamin"
         ],
         "place_entity_keys": [],
         "scripture_accounts": [
@@ -438,15 +438,6 @@
     ],
     "places": [],
     "relevance": [
-      {
-        "relevance_key": "relevance:wb-phil-3-p-benjamin-1",
-        "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
-        "entity_key": "entity:p-benjamin-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "relevance_key": "relevance:wb-phil-1-p-saul-2",
         "scope_key": "scope:wb-phil-1:refsys:eng-v22:phil.1.1-phil.1.30",
@@ -563,16 +554,20 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-phil-3-tribe-of-benjamin",
+        "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
+        "entity_key": "entity:tribe-of-benjamin",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
       {
         "canonical_entity_key": "entity:israelites",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-benjamin-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -623,6 +618,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-thessalonica-afa9d8e",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-benjamin",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -772,7 +772,7 @@
           ],
           "record_keys": [
             "attestation:wb-phil-israelites-3-5",
-            "attestation:wb-phil-p-benjamin-1-3-5"
+            "attestation:wb-phil-tribe-of-benjamin-3-5"
           ],
           "blocker_question_keys": []
         },

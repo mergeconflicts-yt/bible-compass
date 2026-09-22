@@ -938,7 +938,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -1818,46 +1818,6 @@
         "attestation_key": "attestation:wb-1sam-p-rachel-1-10-2",
         "reference_key": "verse:1Sam.10.2",
         "entity_key": "entity:p-rachel-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-1sam-p-judah-1-11-8",
-        "reference_key": "verse:1Sam.11.8",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-1sam-p-benjamin-1-9-21",
-        "reference_key": "verse:1Sam.9.21",
-        "entity_key": "entity:p-benjamin-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-1sam-p-benjamin-1-10-20",
-        "reference_key": "verse:1Sam.10.20",
-        "entity_key": "entity:p-benjamin-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-1sam-p-benjamin-1-10-21",
-        "reference_key": "verse:1Sam.10.21",
-        "entity_key": "entity:p-benjamin-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -14113,6 +14073,46 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-1sam-tribe-of-judah-11-8",
+        "reference_key": "verse:1Sam.11.8",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-1sam-tribe-of-benjamin-9-21",
+        "reference_key": "verse:1Sam.9.21",
+        "entity_key": "entity:tribe-of-benjamin",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-1sam-tribe-of-benjamin-10-20",
+        "reference_key": "verse:1Sam.10.20",
+        "entity_key": "entity:tribe-of-benjamin",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-1sam-tribe-of-benjamin-10-21",
+        "reference_key": "verse:1Sam.10.21",
+        "entity_key": "entity:tribe-of-benjamin",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -14414,17 +14414,6 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-1sam-p-aphiah-1-descendant-p-benjamin-1",
-        "subject_entity_key": "entity:p-aphiah-1",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-benjamin-1",
-        "applicable_scope_keys": [
-          "scope:wb-1sam-9:refsys:eng-v22:1sam.9.1-1sam.9.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relationship_key": "relationship:wb-1sam-p-aphiah-1-father-p-becorath-1",
         "subject_entity_key": "entity:p-aphiah-1",
         "predicate_key": "relationship:father",
@@ -14464,17 +14453,6 @@
         "object_entity_key": "entity:p-nahash-1",
         "applicable_scope_keys": [
           "scope:wb-1sam-11:refsys:eng-v22:1sam.11.1-1sam.11.15"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-1sam-p-benjamin-1-ancestor-p-aphiah-1",
-        "subject_entity_key": "entity:p-benjamin-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-aphiah-1",
-        "applicable_scope_keys": [
-          "scope:wb-1sam-9:refsys:eng-v22:1sam.9.1-1sam.9.27"
         ],
         "claim_keys": [],
         "review_status": "draft"
@@ -15279,9 +15257,9 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:israelites",
-          "entity:p-benjamin-1",
           "entity:p-samuel-2",
-          "entity:p-saul-1"
+          "entity:p-saul-1",
+          "entity:tribe-of-benjamin"
         ],
         "place_entity_keys": [
           "entity:pl-egypt-af301ca",
@@ -15304,10 +15282,10 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:israelites",
-          "entity:p-judah-1",
           "entity:p-nahash-1",
           "entity:p-samuel-2",
-          "entity:p-saul-1"
+          "entity:p-saul-1",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:pl-ammon-a6046fa",
@@ -16730,10 +16708,10 @@
           "entity:p-abiel-1",
           "entity:p-aphiah-1",
           "entity:p-becorath-1",
-          "entity:p-benjamin-1",
           "entity:p-samuel-2",
           "entity:p-saul-1",
-          "entity:p-zeror-1"
+          "entity:p-zeror-1",
+          "entity:tribe-of-benjamin"
         ],
         "place_entity_keys": [
           "entity:pl-shaalim-ab6f1f0",
@@ -17467,33 +17445,6 @@
         "scope_key": "scope:wb-1sam-10:refsys:eng-v22:1sam.10.1-1sam.10.27",
         "entity_key": "entity:p-rachel-1",
         "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-1sam-11-p-judah-1",
-        "scope_key": "scope:wb-1sam-11:refsys:eng-v22:1sam.11.1-1sam.11.15",
-        "entity_key": "entity:p-judah-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-1sam-9-p-benjamin-1",
-        "scope_key": "scope:wb-1sam-9:refsys:eng-v22:1sam.9.1-1sam.9.27",
-        "entity_key": "entity:p-benjamin-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-1sam-10-p-benjamin-1",
-        "scope_key": "scope:wb-1sam-10:refsys:eng-v22:1sam.10.1-1sam.10.27",
-        "entity_key": "entity:p-benjamin-1",
-        "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -20719,6 +20670,33 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1sam-11-tribe-of-judah",
+        "scope_key": "scope:wb-1sam-11:refsys:eng-v22:1sam.11.1-1sam.11.15",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1sam-9-tribe-of-benjamin",
+        "scope_key": "scope:wb-1sam-9:refsys:eng-v22:1sam.9.1-1sam.9.27",
+        "entity_key": "entity:tribe-of-benjamin",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-1sam-10-tribe-of-benjamin",
+        "scope_key": "scope:wb-1sam-10:refsys:eng-v22:1sam.10.1-1sam.10.27",
+        "entity_key": "entity:tribe-of-benjamin",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -20848,11 +20826,6 @@
         "review_status": "draft"
       },
       {
-        "canonical_entity_key": "entity:p-benjamin-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "canonical_entity_key": "entity:p-david-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
@@ -20959,11 +20932,6 @@
       },
       {
         "canonical_entity_key": "entity:p-joshua-2",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-judah-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -21599,6 +21567,16 @@
       },
       {
         "canonical_entity_key": "entity:pl-zuph-a4d0250",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-benjamin",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -23126,8 +23104,8 @@
             "verse:1Sam.9.21"
           ],
           "record_keys": [
-            "attestation:wb-1sam-p-benjamin-1-9-21",
-            "attestation:wb-1sam-p-saul-1-9-21"
+            "attestation:wb-1sam-p-saul-1-9-21",
+            "attestation:wb-1sam-tribe-of-benjamin-9-21"
           ],
           "blocker_question_keys": []
         },
@@ -23348,8 +23326,8 @@
           ],
           "record_keys": [
             "attestation:wb-1sam-israelites-10-20",
-            "attestation:wb-1sam-p-benjamin-1-10-20",
-            "attestation:wb-1sam-p-samuel-2-10-20"
+            "attestation:wb-1sam-p-samuel-2-10-20",
+            "attestation:wb-1sam-tribe-of-benjamin-10-20"
           ],
           "blocker_question_keys": []
         },
@@ -23359,8 +23337,8 @@
             "verse:1Sam.10.21"
           ],
           "record_keys": [
-            "attestation:wb-1sam-p-benjamin-1-10-21",
-            "attestation:wb-1sam-p-saul-1-10-21"
+            "attestation:wb-1sam-p-saul-1-10-21",
+            "attestation:wb-1sam-tribe-of-benjamin-10-21"
           ],
           "blocker_question_keys": []
         },
@@ -23488,8 +23466,8 @@
           ],
           "record_keys": [
             "attestation:wb-1sam-israelites-11-8",
-            "attestation:wb-1sam-p-judah-1-11-8",
-            "attestation:wb-1sam-pl-bezek-2-a206291-11-8"
+            "attestation:wb-1sam-pl-bezek-2-a206291-11-8",
+            "attestation:wb-1sam-tribe-of-judah-11-8"
           ],
           "blocker_question_keys": []
         },

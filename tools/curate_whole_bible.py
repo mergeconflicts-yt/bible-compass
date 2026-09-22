@@ -234,8 +234,27 @@ def load_persons() -> tuple[dict, dict]:
     return persons, labels
 
 
+def load_source_identification_ids() -> set[str]:
+    """All OpenBible identification ids (internal, never names)."""
+    ids: set[str] = set()
+    path = QUARANTINE / "openbible" / "ancient.jsonl"
+    if not path.exists():
+        return ids
+    with path.open(encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            for ident in rec.get("identifications") or []:
+                if isinstance(ident, dict) and ident.get("id"):
+                    ids.add(str(ident["id"]))
+    return ids
+
+
 def load_places() -> dict:
     places: dict[str, dict] = {}
+    source_ids = load_source_identification_ids()
     path = QUARANTINE / "openbible" / "ancient.jsonl"
     if not path.exists():
         return places
@@ -266,9 +285,10 @@ def load_places() -> dict:
                     continue
                 # Internal OpenBible identification ids (e.g. a15257a) are
                 # source identifiers, not names: never store them as
-                # searchable aliases. Only human-readable names qualify.
+                # searchable aliases. Matching is by exact source-id set, so
+                # short lowercase words are never dropped as collateral.
                 alias = str(ident["id"]).strip()
-                if alias and not re.fullmatch(r"[a-z0-9]{4,10}", alias):
+                if alias and alias not in source_ids:
                     entry["aliases"].add(alias)
             extra = rec.get("extra")
             if extra:

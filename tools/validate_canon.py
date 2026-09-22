@@ -96,6 +96,7 @@ NOT_ATTEMPTED_CLASSES = [
     "canonical_term",
     "canonical_theme",
     "canonical_chronology",
+    "canonical_deity_attestation",
     "historical_context",
     "localized_entity_name",
     "map_timeline_projection",

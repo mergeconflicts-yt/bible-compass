@@ -522,7 +522,7 @@
     {
       "package_key": "draft:wb-rom-canonical",
       "revision": 1,
-      "digest": "sha256:fcbc14ca665c02b549a5b598fc8fea3236e913063b15f7fbb7a7a40c9a7ff3fe"
+      "digest": "sha256:07231c9db6cb84634811b3711985cd261835213654337ccb6ee738799d5e508b"
     }
   ],
   "records": {
@@ -1398,12 +1398,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Abram, Benjamin, David, Elijah.",
+            "text": "Present in this chapter: Abram, David, Elijah.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Zion.",
+            "text": "Places in this chapter: Tribe of Benjamin, Zion.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -2817,14 +2817,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Abram, Benjamin, David, Elijah.",
+            "text": "Present in this passage: Abram, David, Elijah.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: Tribe of Benjamin.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rom-11-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3774,16 +3774,6 @@
         "review_status": "draft"
       },
       {
-        "localization_key": "relevance-localization:en:wb-rom-11-p-benjamin-1",
-        "relevance_key": "relevance:wb-rom-11-p-benjamin-1",
-        "scope_key": "scope:wb-rom-11:refsys:eng-v22:rom.11.1-rom.11.36",
-        "entity_key": "entity:p-benjamin-1",
-        "language_tag": "en",
-        "role_text": "Named in Romans 11 at verse(s) 1.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "localization_key": "relevance-localization:en:wb-rom-5-p-moses-1",
         "relevance_key": "relevance:wb-rom-5-p-moses-1",
         "scope_key": "scope:wb-rom-5:refsys:eng-v22:rom.5.1-rom.5.21",
@@ -4432,6 +4422,16 @@
         "role_text": "Named in Romans 9 at verse(s) 27.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-rom-11-tribe-of-benjamin",
+        "relevance_key": "relevance:wb-rom-11-tribe-of-benjamin",
+        "scope_key": "scope:wb-rom-11:refsys:eng-v22:rom.11.1-rom.11.36",
+        "entity_key": "entity:tribe-of-benjamin",
+        "language_tag": "en",
+        "role_text": "Named in Romans 11 at verse(s) 1.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -4606,7 +4606,6 @@
             "question:wb-context-en-wb-rom-11-p1-before",
             "question:wb-context-en-wb-rom-11-p1-stakes",
             "question:wb-context-en-wb-rom-11-p1-when",
-            "question:wb-context-en-wb-rom-11-p1-where",
             "question:wb-context-en-wb-rom-11-p2-before",
             "question:wb-context-en-wb-rom-11-p2-stakes",
             "question:wb-context-en-wb-rom-11-p2-when",
@@ -6261,14 +6260,6 @@
       "record_key": "context:en:wb-rom-10-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rom-11-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rom-11-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

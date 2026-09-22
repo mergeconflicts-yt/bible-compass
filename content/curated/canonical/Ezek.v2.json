@@ -1462,7 +1462,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -2216,68 +2216,8 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-ezek-p-levi-1-40-46",
-        "reference_key": "verse:Ezek.40.46",
-        "entity_key": "entity:p-levi-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-ezek-p-judah-1-4-6",
-        "reference_key": "verse:Ezek.4.6",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-ezek-p-judah-1-8-17",
-        "reference_key": "verse:Ezek.8.17",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-ezek-p-judah-1-9-9",
         "reference_key": "verse:Ezek.9.9",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-ezek-p-judah-1-25-3",
-        "reference_key": "verse:Ezek.25.3",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-ezek-p-judah-1-25-8",
-        "reference_key": "verse:Ezek.25.8",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-ezek-p-judah-1-25-12",
-        "reference_key": "verse:Ezek.25.12",
         "entity_key": "entity:p-judah-1",
         "kind": "participant",
         "textual_basis": "explicit",
@@ -8354,6 +8294,66 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ezek-tribe-of-levi-40-46",
+        "reference_key": "verse:Ezek.40.46",
+        "entity_key": "entity:tribe-of-levi",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ezek-tribe-of-judah-4-6",
+        "reference_key": "verse:Ezek.4.6",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ezek-tribe-of-judah-8-17",
+        "reference_key": "verse:Ezek.8.17",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ezek-tribe-of-judah-25-3",
+        "reference_key": "verse:Ezek.25.3",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ezek-tribe-of-judah-25-8",
+        "reference_key": "verse:Ezek.25.8",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ezek-tribe-of-judah-25-12",
+        "reference_key": "verse:Ezek.25.12",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -9083,7 +9083,7 @@
         "participant_entity_keys": [
           "entity:p-ben-ammi-1",
           "entity:p-ezekiel-1",
-          "entity:p-judah-1"
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:pl-ammon-a6046fa",
@@ -9104,7 +9104,7 @@
         "event_type": "prophecy",
         "participant_entity_keys": [
           "entity:p-ben-ammi-1",
-          "entity:p-judah-1"
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:pl-ammon-a6046fa",
@@ -9128,7 +9128,7 @@
         "event_key": "event:wb-ezek-25-p3",
         "event_type": "prophecy",
         "participant_entity_keys": [
-          "entity:p-judah-1"
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:pl-dedan-a3a2a75",
@@ -9814,7 +9814,7 @@
         "participant_entity_keys": [
           "entity:israelites",
           "entity:p-ezekiel-1",
-          "entity:p-judah-1"
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:jerusalem"
@@ -9870,8 +9870,8 @@
         "event_key": "event:wb-ezek-40-p8",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-levi-1",
-          "entity:p-zadok-3"
+          "entity:p-zadok-3",
+          "entity:tribe-of-levi"
         ],
         "place_entity_keys": [],
         "scripture_accounts": [
@@ -10316,8 +10316,8 @@
           "entity:israelites",
           "entity:p-ezekiel-1",
           "entity:p-jaazaniah-3",
-          "entity:p-judah-1",
-          "entity:p-shaphan-3"
+          "entity:p-shaphan-3",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:jerusalem"
@@ -11041,46 +11041,10 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-ezek-40-p-levi-1",
-        "scope_key": "scope:wb-ezek-40:refsys:eng-v22:ezek.40.1-ezek.40.49",
-        "entity_key": "entity:p-levi-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-ezek-4-p-judah-1",
-        "scope_key": "scope:wb-ezek-4:refsys:eng-v22:ezek.4.1-ezek.4.17",
-        "entity_key": "entity:p-judah-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-ezek-8-p-judah-1",
-        "scope_key": "scope:wb-ezek-8:refsys:eng-v22:ezek.8.1-ezek.8.18",
-        "entity_key": "entity:p-judah-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-ezek-9-p-judah-1",
         "scope_key": "scope:wb-ezek-9:refsys:eng-v22:ezek.9.1-ezek.9.11",
         "entity_key": "entity:p-judah-1",
         "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-ezek-25-p-judah-1",
-        "scope_key": "scope:wb-ezek-25:refsys:eng-v22:ezek.25.1-ezek.25.17",
-        "entity_key": "entity:p-judah-1",
-        "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -13964,6 +13928,42 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-ezek-40-tribe-of-levi",
+        "scope_key": "scope:wb-ezek-40:refsys:eng-v22:ezek.40.1-ezek.40.49",
+        "entity_key": "entity:tribe-of-levi",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-ezek-4-tribe-of-judah",
+        "scope_key": "scope:wb-ezek-4:refsys:eng-v22:ezek.4.1-ezek.4.17",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-ezek-8-tribe-of-judah",
+        "scope_key": "scope:wb-ezek-8:refsys:eng-v22:ezek.8.1-ezek.8.18",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-ezek-25-tribe-of-judah",
+        "scope_key": "scope:wb-ezek-25:refsys:eng-v22:ezek.25.1-ezek.25.17",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -14069,11 +14069,6 @@
       },
       {
         "canonical_entity_key": "entity:p-judah-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-levi-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -14649,6 +14644,16 @@
       },
       {
         "canonical_entity_key": "entity:pl-zoan-ac31fee",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-levi",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -15783,7 +15788,7 @@
             "verse:Ezek.4.6"
           ],
           "record_keys": [
-            "attestation:wb-ezek-p-judah-1-4-6"
+            "attestation:wb-ezek-tribe-of-judah-4-6"
           ],
           "blocker_question_keys": []
         },
@@ -16017,7 +16022,7 @@
             "verse:Ezek.8.17"
           ],
           "record_keys": [
-            "attestation:wb-ezek-p-judah-1-8-17"
+            "attestation:wb-ezek-tribe-of-judah-8-17"
           ],
           "blocker_question_keys": []
         },
@@ -17364,8 +17369,8 @@
           ],
           "record_keys": [
             "attestation:wb-ezek-p-ben-ammi-1-25-3",
-            "attestation:wb-ezek-p-judah-1-25-3",
-            "attestation:wb-ezek-pl-ammon-a6046fa-25-3"
+            "attestation:wb-ezek-pl-ammon-a6046fa-25-3",
+            "attestation:wb-ezek-tribe-of-judah-25-3"
           ],
           "blocker_question_keys": []
         },
@@ -17397,9 +17402,9 @@
             "verse:Ezek.25.8"
           ],
           "record_keys": [
-            "attestation:wb-ezek-p-judah-1-25-8",
             "attestation:wb-ezek-pl-moab-1-aa0b1d6-25-8",
-            "attestation:wb-ezek-pl-mount-seir-1-ae981db-25-8"
+            "attestation:wb-ezek-pl-mount-seir-1-ae981db-25-8",
+            "attestation:wb-ezek-tribe-of-judah-25-8"
           ],
           "blocker_question_keys": []
         },
@@ -17445,8 +17450,8 @@
             "verse:Ezek.25.12"
           ],
           "record_keys": [
-            "attestation:wb-ezek-p-judah-1-25-12",
-            "attestation:wb-ezek-pl-edom-a2735ff-25-12"
+            "attestation:wb-ezek-pl-edom-a2735ff-25-12",
+            "attestation:wb-ezek-tribe-of-judah-25-12"
           ],
           "blocker_question_keys": []
         },
@@ -19182,8 +19187,8 @@
             "verse:Ezek.40.46"
           ],
           "record_keys": [
-            "attestation:wb-ezek-p-levi-1-40-46",
-            "attestation:wb-ezek-p-zadok-3-40-46"
+            "attestation:wb-ezek-p-zadok-3-40-46",
+            "attestation:wb-ezek-tribe-of-levi-40-46"
           ],
           "blocker_question_keys": []
         },

@@ -1111,7 +1111,7 @@
     {
       "package_key": "draft:wb-deut-canonical",
       "revision": 1,
-      "digest": "sha256:5c2fd414c474434f58cb519e6209baa34d48a3969fd17e06386ff1617c0315f7"
+      "digest": "sha256:50dea1159f0ca382dbe57c9e94968d54cc7573d6eefd007066b1fba54bc2c7da"
     }
   ],
   "records": {
@@ -2089,24 +2089,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:deut-p-jacob-1-33-4",
-        "verse_key": "verse:Deut.33.4",
-        "attestation_key": "attestation:wb-deut-p-jacob-1-33-4",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jacob",
-          "occurrence_ordinal": 1,
-          "prefix": " of the assembly of ",
-          "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:deut-p-jacob-1-34-4",
         "verse_key": "verse:Deut.34.4",
         "attestation_key": "attestation:wb-deut-p-jacob-1-34-4",
@@ -2408,42 +2390,6 @@
           "occurrence_ordinal": 1,
           "prefix": "And concerning ",
           "suffix": " he said: “O LORD, h"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:deut-p-levi-1-10-8",
-        "verse_key": "verse:Deut.10.8",
-        "attestation_key": "attestation:wb-deut-p-levi-1-10-8",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-levi-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Levi",
-          "occurrence_ordinal": 1,
-          "prefix": " apart the tribe of ",
-          "suffix": " to carry the ark of"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:deut-p-levi-1-18-1",
-        "verse_key": "verse:Deut.18.1",
-        "attestation_key": "attestation:wb-deut-p-levi-1-18-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-levi-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Levi",
-          "occurrence_ordinal": 1,
-          "prefix": " the whole tribe of ",
-          "suffix": "—shall have no porti"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -6965,6 +6911,60 @@
         },
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:deut-tribe-of-levi-10-8",
+        "verse_key": "verse:Deut.10.8",
+        "attestation_key": "attestation:wb-deut-tribe-of-levi-10-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-levi"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Levi",
+          "occurrence_ordinal": 1,
+          "prefix": " LORD set apart the ",
+          "suffix": " to carry the ark of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:deut-tribe-of-levi-18-1",
+        "verse_key": "verse:Deut.18.1",
+        "attestation_key": "attestation:wb-deut-tribe-of-levi-18-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-levi"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Levi",
+          "occurrence_ordinal": 1,
+          "prefix": "ts—indeed the whole ",
+          "suffix": "—shall have no porti"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:deut-tribe-of-reuben-11-6",
+        "verse_key": "verse:Deut.11.6",
+        "attestation_key": "attestation:wb-deut-tribe-of-reuben-11-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-reuben"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Reubenite",
+          "occurrence_ordinal": 1,
+          "prefix": "e sons of Eliab the ",
+          "suffix": ", when the earth ope"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -8750,7 +8750,7 @@
             "verse:Deut.10.8"
           ],
           "record_keys": [
-            "mention:wb:deut-p-levi-1-10-8"
+            "mention:wb:deut-tribe-of-levi-10-8"
           ],
           "blocker_question_keys": []
         },
@@ -8793,7 +8793,8 @@
           "record_keys": [
             "mention:wb:deut-p-abiram-1-11-6",
             "mention:wb:deut-p-dathan-1-11-6",
-            "mention:wb:deut-p-eliab-2-11-6"
+            "mention:wb:deut-p-eliab-2-11-6",
+            "mention:wb:deut-tribe-of-reuben-11-6"
           ],
           "blocker_question_keys": []
         },
@@ -8966,7 +8967,7 @@
             "verse:Deut.18.1"
           ],
           "record_keys": [
-            "mention:wb:deut-p-levi-1-18-1"
+            "mention:wb:deut-tribe-of-levi-18-1"
           ],
           "blocker_question_keys": []
         },
@@ -9588,7 +9589,6 @@
             "verse:Deut.33.4"
           ],
           "record_keys": [
-            "mention:wb:deut-p-jacob-1-33-4",
             "mention:wb:deut-p-moses-1-33-4"
           ],
           "blocker_question_keys": []

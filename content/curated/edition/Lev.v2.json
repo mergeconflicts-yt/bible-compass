@@ -983,7 +983,7 @@
     {
       "package_key": "draft:wb-lev-canonical",
       "revision": 1,
-      "digest": "sha256:02da29da599f221231a041ab6af211a536830f80880087fc763a76ddf692024e"
+      "digest": "sha256:90284758cf358563ffa4e09ab11706d9e359d7b163f4851fcb0811f5f276a733"
     }
   ],
   "records": {
@@ -3041,24 +3041,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:lev-p-dan-1-24-11",
-        "verse_key": "verse:Lev.24.11",
-        "attestation_key": "attestation:wb-lev-p-dan-1-24-11",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-dan-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Dan",
-          "occurrence_ordinal": 1,
-          "prefix": "ri, of the tribe of ",
-          "suffix": ".)"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:lev-p-dibri-1-24-11",
         "verse_key": "verse:Lev.24.11",
         "attestation_key": "attestation:wb-lev-p-dibri-1-24-11",
@@ -5052,6 +5034,24 @@
           "occurrence_ordinal": 1,
           "prefix": " to the LORD in the ",
           "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:lev-tribe-of-dan-24-11",
+        "verse_key": "verse:Lev.24.11",
+        "attestation_key": "attestation:wb-lev-tribe-of-dan-24-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-dan"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Dan",
+          "occurrence_ordinal": 1,
+          "prefix": "er of Dibri, of the ",
+          "suffix": ".)"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7303,10 +7303,10 @@
             "verse:Lev.24.11"
           ],
           "record_keys": [
-            "mention:wb:lev-p-dan-1-24-11",
             "mention:wb:lev-p-dibri-1-24-11",
             "mention:wb:lev-p-moses-1-24-11",
-            "mention:wb:lev-p-shelomith-1-24-11"
+            "mention:wb:lev-p-shelomith-1-24-11",
+            "mention:wb:lev-tribe-of-dan-24-11"
           ],
           "blocker_question_keys": []
         },

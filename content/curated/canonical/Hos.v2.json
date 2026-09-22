@@ -257,7 +257,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -474,26 +474,6 @@
         "attestation_key": "attestation:wb-hos-p-jacob-1-12-13",
         "reference_key": "verse:Hos.12.13",
         "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-hos-p-judah-1-1-7",
-        "reference_key": "verse:Hos.1.7",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-hos-p-judah-1-1-11",
-        "reference_key": "verse:Hos.1.11",
-        "entity_key": "entity:p-judah-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -1389,6 +1369,26 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-tribe-of-judah-1-7",
+        "reference_key": "verse:Hos.1.7",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-tribe-of-judah-1-11",
+        "reference_key": "verse:Hos.1.11",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -1544,9 +1544,9 @@
           "entity:p-jezreel-2",
           "entity:p-joash-4",
           "entity:p-jotham-2",
-          "entity:p-judah-1",
           "entity:p-lo-ammi-1",
-          "entity:p-lo-ruhamah-1"
+          "entity:p-lo-ruhamah-1",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:pl-jezreel-2-ae0bf4a",
@@ -2011,15 +2011,6 @@
         "relevance_key": "relevance:wb-hos-12-p-jacob-1",
         "scope_key": "scope:wb-hos-12:refsys:eng-v22:hos.12.1-hos.12.14",
         "entity_key": "entity:p-jacob-1",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-hos-1-p-judah-1",
-        "scope_key": "scope:wb-hos-1:refsys:eng-v22:hos.1.1-hos.1.11",
-        "entity_key": "entity:p-judah-1",
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
@@ -2681,6 +2672,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-tribe-of-judah",
+        "scope_key": "scope:wb-hos-1:refsys:eng-v22:hos.1.1-hos.1.11",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -2923,6 +2923,11 @@
         "canonical_entity_key": "entity:pl-zeboiim-abfbfb9",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
       }
     ]
   },
@@ -3150,7 +3155,7 @@
             "verse:Hos.1.7"
           ],
           "record_keys": [
-            "attestation:wb-hos-p-judah-1-1-7"
+            "attestation:wb-hos-tribe-of-judah-1-7"
           ],
           "blocker_question_keys": []
         },
@@ -3181,8 +3186,8 @@
           ],
           "record_keys": [
             "attestation:wb-hos-p-jacob-1-1-11",
-            "attestation:wb-hos-p-judah-1-1-11",
-            "attestation:wb-hos-pl-jezreel-2-ae0bf4a-1-11"
+            "attestation:wb-hos-pl-jezreel-2-ae0bf4a-1-11",
+            "attestation:wb-hos-tribe-of-judah-1-11"
           ],
           "blocker_question_keys": []
         },

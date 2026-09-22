@@ -810,7 +810,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -1486,16 +1486,6 @@
         "attestation_key": "attestation:wb-2sam-p-ben-ammi-1-17-27",
         "reference_key": "verse:2Sam.17.27",
         "entity_key": "entity:p-ben-ammi-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-2sam-p-benjamin-1-23-29",
-        "reference_key": "verse:2Sam.23.29",
-        "entity_key": "entity:p-benjamin-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -14181,6 +14171,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-2sam-tribe-of-benjamin-23-29",
+        "reference_key": "verse:2Sam.23.29",
+        "entity_key": "entity:tribe-of-benjamin",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -14796,28 +14796,6 @@
         "object_entity_key": "entity:p-jehoiada-1",
         "applicable_scope_keys": [
           "scope:wb-2sam-8:refsys:eng-v22:2sam.8.1-2sam.8.18"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2sam-p-benjamin-1-ancestor-p-ribai-1",
-        "subject_entity_key": "entity:p-benjamin-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-ribai-1",
-        "applicable_scope_keys": [
-          "scope:wb-2sam-23:refsys:eng-v22:2sam.23.1-2sam.23.39"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2sam-p-benjamin-1-ancestor-p-rimmon-1",
-        "subject_entity_key": "entity:p-benjamin-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-rimmon-1",
-        "applicable_scope_keys": [
-          "scope:wb-2sam-4:refsys:eng-v22:2sam.4.1-2sam.4.12"
         ],
         "claim_keys": [],
         "review_status": "draft"
@@ -15846,34 +15824,12 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-2sam-p-ribai-1-descendant-p-benjamin-1",
-        "subject_entity_key": "entity:p-ribai-1",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-benjamin-1",
-        "applicable_scope_keys": [
-          "scope:wb-2sam-23:refsys:eng-v22:2sam.23.1-2sam.23.39"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relationship_key": "relationship:wb-2sam-p-ribai-1-father-p-ittai-1",
         "subject_entity_key": "entity:p-ribai-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-ittai-1",
         "applicable_scope_keys": [
           "scope:wb-2sam-23:refsys:eng-v22:2sam.23.1-2sam.23.39"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2sam-p-rimmon-1-descendant-p-benjamin-1",
-        "subject_entity_key": "entity:p-rimmon-1",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-benjamin-1",
-        "applicable_scope_keys": [
-          "scope:wb-2sam-4:refsys:eng-v22:2sam.4.1-2sam.4.12"
         ],
         "claim_keys": [],
         "review_status": "draft"
@@ -17310,7 +17266,6 @@
           "entity:p-bani-1",
           "entity:p-benaiah-1",
           "entity:p-benaiah-2",
-          "entity:p-benjamin-1",
           "entity:p-david-1",
           "entity:p-dodo-2",
           "entity:p-eleazar-3",
@@ -17348,7 +17303,8 @@
           "entity:p-uriah-1",
           "entity:p-zalmon-1",
           "entity:p-zelek-1",
-          "entity:p-zeruiah-1"
+          "entity:p-zeruiah-1",
+          "entity:tribe-of-benjamin"
         ],
         "place_entity_keys": [
           "entity:pl-adullam-af82614",
@@ -18324,15 +18280,6 @@
         "relevance_key": "relevance:wb-2sam-17-p-ben-ammi-1",
         "scope_key": "scope:wb-2sam-17:refsys:eng-v22:2sam.17.1-2sam.17.29",
         "entity_key": "entity:p-ben-ammi-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-2sam-23-p-benjamin-1",
-        "scope_key": "scope:wb-2sam-23:refsys:eng-v22:2sam.23.1-2sam.23.39",
-        "entity_key": "entity:p-benjamin-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -22612,6 +22559,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2sam-23-tribe-of-benjamin",
+        "scope_key": "scope:wb-2sam-23:refsys:eng-v22:2sam.23.1-2sam.23.39",
+        "entity_key": "entity:tribe-of-benjamin",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -22832,11 +22788,6 @@
       },
       {
         "canonical_entity_key": "entity:p-benaiah-2",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-benjamin-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -23897,6 +23848,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-zobah-a4aa78a",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-benjamin",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -29709,12 +29665,12 @@
           ],
           "record_keys": [
             "attestation:wb-2sam-p-baanah-2-23-29",
-            "attestation:wb-2sam-p-benjamin-1-23-29",
             "attestation:wb-2sam-p-heleb-1-23-29",
             "attestation:wb-2sam-p-ittai-1-23-29",
             "attestation:wb-2sam-p-ribai-1-23-29",
             "attestation:wb-2sam-pl-gibeah-1-ac24f5f-23-29",
-            "attestation:wb-2sam-pl-netophah-a9ad5ae-23-29"
+            "attestation:wb-2sam-pl-netophah-a9ad5ae-23-29",
+            "attestation:wb-2sam-tribe-of-benjamin-23-29"
           ],
           "blocker_question_keys": []
         },

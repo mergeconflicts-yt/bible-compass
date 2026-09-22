@@ -991,7 +991,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -2894,26 +2894,6 @@
         "attestation_key": "attestation:wb-2chr-p-jacob-1-30-6",
         "reference_key": "verse:2Chr.30.6",
         "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-2chr-p-judah-1-13-18",
-        "reference_key": "verse:2Chr.13.18",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-2chr-p-ephraim-1-25-7",
-        "reference_key": "verse:2Chr.25.7",
-        "entity_key": "entity:p-ephraim-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -15129,6 +15109,26 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-2chr-tribe-of-judah-13-18",
+        "reference_key": "verse:2Chr.13.18",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-2chr-tribe-of-ephraim-25-7",
+        "reference_key": "verse:2Chr.25.7",
+        "entity_key": "entity:tribe-of-ephraim",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -15524,72 +15524,6 @@
         "object_entity_key": "entity:p-shimri-4",
         "applicable_scope_keys": [
           "scope:wb-2chr-29:refsys:eng-v22:2chr.29.1-2chr.29.36"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-ephraim-1-ancestor-p-hadlai-1",
-        "subject_entity_key": "entity:p-ephraim-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-hadlai-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-ephraim-1-ancestor-p-johanan-9",
-        "subject_entity_key": "entity:p-ephraim-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-johanan-9",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-ephraim-1-ancestor-p-meshillemoth-1",
-        "subject_entity_key": "entity:p-ephraim-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-meshillemoth-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-ephraim-1-ancestor-p-shallum-8",
-        "subject_entity_key": "entity:p-ephraim-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-shallum-8",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-ephraim-1-ancestor-p-zichri-10",
-        "subject_entity_key": "entity:p-ephraim-1",
-        "predicate_key": "relationship:ancestor",
-        "object_entity_key": "entity:p-zichri-10",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-hadlai-1-descendant-p-ephraim-1",
-        "subject_entity_key": "entity:p-hadlai-1",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-ephraim-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
         ],
         "claim_keys": [],
         "review_status": "draft"
@@ -16090,17 +16024,6 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-2chr-p-johanan-9-descendant-p-ephraim-1",
-        "subject_entity_key": "entity:p-johanan-9",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-ephraim-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relationship_key": "relationship:wb-2chr-p-johanan-9-father-p-azariah-12",
         "subject_entity_key": "entity:p-johanan-9",
         "predicate_key": "relationship:father",
@@ -16299,17 +16222,6 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-2chr-p-meshillemoth-1-descendant-p-ephraim-1",
-        "subject_entity_key": "entity:p-meshillemoth-1",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-ephraim-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relationship_key": "relationship:wb-2chr-p-meshillemoth-1-father-p-berechiah-4",
         "subject_entity_key": "entity:p-meshillemoth-1",
         "predicate_key": "relationship:father",
@@ -16470,17 +16382,6 @@
         "object_entity_key": "entity:p-jehoshaphat-3",
         "applicable_scope_keys": [
           "scope:wb-2chr-21:refsys:eng-v22:2chr.21.1-2chr.21.20"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-shallum-8-descendant-p-ephraim-1",
-        "subject_entity_key": "entity:p-shallum-8",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-ephraim-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
         ],
         "claim_keys": [],
         "review_status": "draft"
@@ -16701,17 +16602,6 @@
         "object_entity_key": "entity:p-asaph-2",
         "applicable_scope_keys": [
           "scope:wb-2chr-29:refsys:eng-v22:2chr.29.1-2chr.29.36"
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relationship_key": "relationship:wb-2chr-p-zichri-10-descendant-p-ephraim-1",
-        "subject_entity_key": "entity:p-zichri-10",
-        "predicate_key": "relationship:descendant",
-        "object_entity_key": "entity:p-ephraim-1",
-        "applicable_scope_keys": [
-          "scope:wb-2chr-28:refsys:eng-v22:2chr.28.1-2chr.28.27"
         ],
         "claim_keys": [],
         "review_status": "draft"
@@ -17040,10 +16930,10 @@
           "entity:p-david-1",
           "entity:p-iddo-4",
           "entity:p-jeroboam-1",
-          "entity:p-judah-1",
           "entity:p-nebat-1",
           "entity:p-rehoboam-1",
-          "entity:p-solomon-1"
+          "entity:p-solomon-1",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:pl-bethel-1-a64f355",
@@ -17905,7 +17795,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:p-amaziah-1",
-          "entity:p-ephraim-1"
+          "entity:tribe-of-ephraim"
         ],
         "place_entity_keys": [
           "entity:pl-beth-horon-a75b45e",
@@ -19697,24 +19587,6 @@
         "relevance_key": "relevance:wb-2chr-30-p-jacob-1",
         "scope_key": "scope:wb-2chr-30:refsys:eng-v22:2chr.30.1-2chr.30.27",
         "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-2chr-13-p-judah-1",
-        "scope_key": "scope:wb-2chr-13:refsys:eng-v22:2chr.13.1-2chr.13.22",
-        "entity_key": "entity:p-judah-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-2chr-25-p-ephraim-1",
-        "scope_key": "scope:wb-2chr-25:refsys:eng-v22:2chr.25.1-2chr.25.28",
-        "entity_key": "entity:p-ephraim-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -25308,6 +25180,24 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2chr-13-tribe-of-judah",
+        "scope_key": "scope:wb-2chr-13:refsys:eng-v22:2chr.13.1-2chr.13.22",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2chr-25-tribe-of-ephraim",
+        "scope_key": "scope:wb-2chr-25:refsys:eng-v22:2chr.25.1-2chr.25.28",
+        "entity_key": "entity:tribe-of-ephraim",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -25702,11 +25592,6 @@
         "review_status": "draft"
       },
       {
-        "canonical_entity_key": "entity:p-ephraim-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "canonical_entity_key": "entity:p-esarhaddon-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
@@ -26063,11 +25948,6 @@
       },
       {
         "canonical_entity_key": "entity:p-jozacar-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-judah-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -27148,6 +27028,16 @@
       },
       {
         "canonical_entity_key": "entity:pl-zorah-a08174b",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-ephraim",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -29231,7 +29121,7 @@
           ],
           "record_keys": [
             "attestation:wb-2chr-israelites-13-18",
-            "attestation:wb-2chr-p-judah-1-13-18"
+            "attestation:wb-2chr-tribe-of-judah-13-18"
           ],
           "blocker_question_keys": []
         },
@@ -31199,7 +31089,7 @@
             "verse:2Chr.25.7"
           ],
           "record_keys": [
-            "attestation:wb-2chr-p-ephraim-1-25-7"
+            "attestation:wb-2chr-tribe-of-ephraim-25-7"
           ],
           "blocker_question_keys": []
         },

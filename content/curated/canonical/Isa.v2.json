@@ -1505,7 +1505,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:b3f6781626fdccc76c91c19d67484aabe32ba2d70524b2882e74ec88852c454b"
     }
   ],
   "records": {
@@ -2143,16 +2143,6 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-isa-p-jacob-1-49-6",
-        "reference_key": "verse:Isa.49.6",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-isa-p-jacob-1-58-14",
         "reference_key": "verse:Isa.58.14",
         "entity_key": "entity:p-jacob-1",
@@ -2186,16 +2176,6 @@
         "attestation_key": "attestation:wb-isa-p-jacob-1-65-9",
         "reference_key": "verse:Isa.65.9",
         "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-isa-p-judah-1-37-31",
-        "reference_key": "verse:Isa.37.31",
-        "entity_key": "entity:p-judah-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -9163,6 +9143,16 @@
         "review_status": "draft"
       },
       {
+        "attestation_key": "attestation:wb-isa-israelites-49-6",
+        "reference_key": "verse:Isa.49.6",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "attestation_key": "attestation:wb-isa-israelites-58-1",
         "reference_key": "verse:Isa.58.1",
         "entity_key": "entity:israelites",
@@ -9176,6 +9166,16 @@
         "attestation_key": "attestation:wb-isa-israelites-63-7",
         "reference_key": "verse:Isa.63.7",
         "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-isa-tribe-of-judah-37-31",
+        "reference_key": "verse:Isa.37.31",
+        "entity_key": "entity:tribe-of-judah",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -10304,8 +10304,8 @@
           "entity:p-david-1",
           "entity:p-hezekiah-1",
           "entity:p-isaiah-1",
-          "entity:p-judah-1",
-          "entity:p-sennacherib-1"
+          "entity:p-sennacherib-1",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:jerusalem",
@@ -10702,6 +10702,7 @@
         "event_key": "event:wb-isa-49-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
+          "entity:israelites",
           "entity:p-jacob-1"
         ],
         "place_entity_keys": [
@@ -11845,15 +11846,6 @@
         "relevance_key": "relevance:wb-isa-65-p-jacob-1",
         "scope_key": "scope:wb-isa-65:refsys:eng-v22:isa.65.1-isa.65.25",
         "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-isa-37-p-judah-1",
-        "scope_key": "scope:wb-isa-37:refsys:eng-v22:isa.37.1-isa.37.38",
-        "entity_key": "entity:p-judah-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -15604,6 +15596,15 @@
         "review_status": "draft"
       },
       {
+        "relevance_key": "relevance:wb-isa-49-israelites",
+        "scope_key": "scope:wb-isa-49:refsys:eng-v22:isa.49.1-isa.49.26",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "relevance_key": "relevance:wb-isa-58-israelites",
         "scope_key": "scope:wb-isa-58:refsys:eng-v22:isa.58.1-isa.58.14",
         "entity_key": "entity:israelites",
@@ -15616,6 +15617,15 @@
         "relevance_key": "relevance:wb-isa-63-israelites",
         "scope_key": "scope:wb-isa-63:refsys:eng-v22:isa.63.1-isa.63.19",
         "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-isa-37-tribe-of-judah",
+        "scope_key": "scope:wb-isa-37:refsys:eng-v22:isa.37.1-isa.37.38",
+        "entity_key": "entity:tribe-of-judah",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -16545,6 +16555,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-zoar-aacfcda",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -20566,7 +20581,7 @@
             "verse:Isa.37.31"
           ],
           "record_keys": [
-            "attestation:wb-isa-p-judah-1-37-31"
+            "attestation:wb-isa-tribe-of-judah-37-31"
           ],
           "blocker_question_keys": []
         },
@@ -21231,7 +21246,7 @@
             "verse:Isa.49.6"
           ],
           "record_keys": [
-            "attestation:wb-isa-p-jacob-1-49-6"
+            "attestation:wb-isa-israelites-49-6"
           ],
           "blocker_question_keys": []
         },

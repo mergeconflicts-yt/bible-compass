@@ -257,7 +257,7 @@
     {
       "package_key": "draft:wb-hos-canonical",
       "revision": 1,
-      "digest": "sha256:11da58cd58a975c7154e336846b8c5479482457edee59a035e4a88b32fb453af"
+      "digest": "sha256:3ebe1371fa807e0298ab4e34fdf4ced4b09bc9ce3f210c5a014713b96c26bbca"
     }
   ],
   "records": {
@@ -654,42 +654,6 @@
           "occurrence_ordinal": 1,
           "prefix": "the days of Uzziah, ",
           "suffix": ", Ahaz, and Hezekiah"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:hos-p-judah-1-1-11",
-        "verse_key": "verse:Hos.1.11",
-        "attestation_key": "attestation:wb-hos-p-judah-1-1-11",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": "Then the people of ",
-          "suffix": " and of Israel will "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:hos-p-judah-1-1-7",
-        "verse_key": "verse:Hos.1.7",
-        "attestation_key": "attestation:wb-hos-p-judah-1-1-7",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": "ion on the house of ",
-          "suffix": ", and I will save th"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1406,6 +1370,7 @@
           "result": "complete_zero",
           "reference_keys": [
             "verse:Hos.1.10",
+            "verse:Hos.1.7",
             "verse:Hos.10.10",
             "verse:Hos.10.11",
             "verse:Hos.10.12",
@@ -1636,16 +1601,6 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
-            "verse:Hos.1.7"
-          ],
-          "record_keys": [
-            "mention:wb:hos-p-judah-1-1-7"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
             "verse:Hos.1.8"
           ],
           "record_keys": [
@@ -1669,8 +1624,7 @@
             "verse:Hos.1.11"
           ],
           "record_keys": [
-            "mention:wb:hos-p-jacob-1-1-11",
-            "mention:wb:hos-p-judah-1-1-11"
+            "mention:wb:hos-p-jacob-1-1-11"
           ],
           "blocker_question_keys": []
         },

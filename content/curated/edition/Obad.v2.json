@@ -51,7 +51,7 @@
     {
       "package_key": "draft:wb-obad-canonical",
       "revision": 1,
-      "digest": "sha256:769321c3dea934ff7a62d472447a7c927ffe5048992f7d1d497b7c76490e2098"
+      "digest": "sha256:bbb5e26e56629d3510c3f2181e08a1f123dbe787e33c7ffa86bff6f9f89d9075"
     }
   ],
   "records": {
@@ -124,42 +124,6 @@
           "occurrence_ordinal": 1,
           "prefix": "e; but the house of ",
           "suffix": " will be stubble— Ja"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:obad-p-joseph-1-1-18",
-        "verse_key": "verse:Obad.1.18",
-        "attestation_key": "attestation:wb-obad-p-joseph-1-1-18",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-joseph-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Joseph",
-          "occurrence_ordinal": 1,
-          "prefix": "e, and the house of ",
-          "suffix": " a burning flame; bu"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:obad-p-judah-1-1-12",
-        "verse_key": "verse:Obad.1.12",
-        "attestation_key": "attestation:wb-obad-p-judah-1-1-12",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": " over the people of ",
-          "suffix": " in the day of their"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -318,6 +282,7 @@
           "result": "complete_zero",
           "reference_keys": [
             "verse:Obad.1.10",
+            "verse:Obad.1.12",
             "verse:Obad.1.13",
             "verse:Obad.1.14",
             "verse:Obad.1.15",
@@ -377,16 +342,6 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
-            "verse:Obad.1.12"
-          ],
-          "record_keys": [
-            "mention:wb:obad-p-judah-1-1-12"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
             "verse:Obad.1.17"
           ],
           "record_keys": [
@@ -400,8 +355,7 @@
             "verse:Obad.1.18"
           ],
           "record_keys": [
-            "mention:wb:obad-p-esau-1-1-18",
-            "mention:wb:obad-p-joseph-1-1-18"
+            "mention:wb:obad-p-esau-1-1-18"
           ],
           "blocker_question_keys": []
         },

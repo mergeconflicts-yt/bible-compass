@@ -938,7 +938,7 @@
     {
       "package_key": "draft:wb-1sam-canonical",
       "revision": 1,
-      "digest": "sha256:215f9d9bf790c99dc9a9db3cd131cf434e1a7d11db5802972eea3fad2384cf3e"
+      "digest": "sha256:f394f79cb46c6517023776abcbacf57e0ffb4642dfb495028df8f4b04c9cb251"
     }
   ],
   "records": {
@@ -2631,60 +2631,6 @@
           "occurrence_ordinal": 1,
           "prefix": "f Zeror, the son of ",
           "suffix": ", the son of Aphiah "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1sam-p-benjamin-1-10-20",
-        "verse_key": "verse:1Sam.10.20",
-        "attestation_key": "attestation:wb-1sam-p-benjamin-1-10-20",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": "d, and the tribe of ",
-          "suffix": " was selected."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1sam-p-benjamin-1-10-21",
-        "verse_key": "verse:1Sam.10.21",
-        "attestation_key": "attestation:wb-1sam-p-benjamin-1-10-21",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": "he had the tribe of ",
-          "suffix": " come forward by its"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1sam-p-benjamin-1-9-21",
-        "verse_key": "verse:1Sam.9.21",
-        "attestation_key": "attestation:wb-1sam-p-benjamin-1-9-21",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": "of all the clans of ",
-          "suffix": "? So why would you s"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -9579,24 +9525,6 @@
           "occurrence_ordinal": 1,
           "prefix": "day in the field of ",
           "suffix": " of Beth-shemesh."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1sam-p-judah-1-11-8",
-        "verse_key": "verse:1Sam.11.8",
-        "attestation_key": "attestation:wb-1sam-p-judah-1-11-8",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-judah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Judah",
-          "occurrence_ordinal": 1,
-          "prefix": "s and 30,000 men of ",
-          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -19086,6 +19014,60 @@
         },
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1sam-tribe-of-benjamin-10-20",
+        "verse_key": "verse:1Sam.10.20",
+        "attestation_key": "attestation:wb-1sam-tribe-of-benjamin-10-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-benjamin"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": "me forward, and the ",
+          "suffix": " was selected."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1sam-tribe-of-benjamin-10-21",
+        "verse_key": "verse:1Sam.10.21",
+        "attestation_key": "attestation:wb-1sam-tribe-of-benjamin-10-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-benjamin"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": "Then he had the ",
+          "suffix": " come forward by its"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1sam-tribe-of-benjamin-9-21",
+        "verse_key": "verse:1Sam.9.21",
+        "attestation_key": "attestation:wb-1sam-tribe-of-benjamin-9-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-benjamin"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Benjamite",
+          "occurrence_ordinal": 1,
+          "prefix": "eplied, “Am I not a ",
+          "suffix": " from the smallest t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -20510,8 +20492,8 @@
             "verse:1Sam.9.21"
           ],
           "record_keys": [
-            "mention:wb:1sam-p-benjamin-1-9-21",
-            "mention:wb:1sam-p-saul-1-9-21"
+            "mention:wb:1sam-p-saul-1-9-21",
+            "mention:wb:1sam-tribe-of-benjamin-9-21"
           ],
           "blocker_question_keys": []
         },
@@ -20689,8 +20671,8 @@
             "verse:1Sam.10.20"
           ],
           "record_keys": [
-            "mention:wb:1sam-p-benjamin-1-10-20",
-            "mention:wb:1sam-p-samuel-2-10-20"
+            "mention:wb:1sam-p-samuel-2-10-20",
+            "mention:wb:1sam-tribe-of-benjamin-10-20"
           ],
           "blocker_question_keys": []
         },
@@ -20700,8 +20682,8 @@
             "verse:1Sam.10.21"
           ],
           "record_keys": [
-            "mention:wb:1sam-p-benjamin-1-10-21",
-            "mention:wb:1sam-p-saul-1-10-21"
+            "mention:wb:1sam-p-saul-1-10-21",
+            "mention:wb:1sam-tribe-of-benjamin-10-21"
           ],
           "blocker_question_keys": []
         },
@@ -20803,8 +20785,7 @@
             "verse:1Sam.11.8"
           ],
           "record_keys": [
-            "mention:wb:1sam-israelites-11-8",
-            "mention:wb:1sam-p-judah-1-11-8"
+            "mention:wb:1sam-israelites-11-8"
           ],
           "blocker_question_keys": []
         },

@@ -1168,7 +1168,7 @@
     {
       "package_key": "draft:wb-acts-canonical",
       "revision": 1,
-      "digest": "sha256:3e753d0c35e924cf9c4b0700c506d19c4cc00439f054f018df7ebd8c21c9ef8e"
+      "digest": "sha256:4361cffb613009fc1ec1e77f17c2526e7cde4c7e0a9fd943d30dccc9f132ba48"
     }
   ],
   "records": {
@@ -3113,24 +3113,6 @@
           "occurrence_ordinal": 1,
           "prefix": " Philip and Thomas, ",
           "suffix": " and Matthew, James "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:acts-p-benjamin-1-13-21",
-        "verse_key": "verse:Acts.13.21",
-        "attestation_key": "attestation:wb-acts-p-benjamin-1-13-21",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": ", from the tribe of ",
-          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -16544,6 +16526,24 @@
         },
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:acts-tribe-of-benjamin-13-21",
+        "verse_key": "verse:Acts.13.21",
+        "attestation_key": "attestation:wb-acts-tribe-of-benjamin-13-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-benjamin"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": "n of Kish, from the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -19404,8 +19404,8 @@
             "verse:Acts.13.21"
           ],
           "record_keys": [
-            "mention:wb:acts-p-benjamin-1-13-21",
-            "mention:wb:acts-p-saul-1-13-21"
+            "mention:wb:acts-p-saul-1-13-21",
+            "mention:wb:acts-tribe-of-benjamin-13-21"
           ],
           "blocker_question_keys": []
         },

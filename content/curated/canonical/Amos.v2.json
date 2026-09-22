@@ -196,7 +196,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -300,16 +300,6 @@
         "attestation_key": "attestation:wb-amos-p-ben-ammi-1-1-13",
         "reference_key": "verse:Amos.1.13",
         "entity_key": "entity:p-ben-ammi-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-amos-p-joseph-1-5-6",
-        "reference_key": "verse:Amos.5.6",
-        "entity_key": "entity:p-joseph-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -1445,6 +1435,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-amos-tribe-of-joseph-5-6",
+        "reference_key": "verse:Amos.5.6",
+        "entity_key": "entity:tribe-of-joseph",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -1582,7 +1582,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [
           "entity:israelites",
-          "entity:p-joseph-1"
+          "entity:tribe-of-joseph"
         ],
         "place_entity_keys": [
           "entity:pl-beersheba-1-ad2f6c2",
@@ -1866,15 +1866,6 @@
         "relevance_key": "relevance:wb-amos-1-p-ben-ammi-1",
         "scope_key": "scope:wb-amos-1:refsys:eng-v22:amos.1.1-amos.1.15",
         "entity_key": "entity:p-ben-ammi-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-amos-5-p-joseph-1",
-        "scope_key": "scope:wb-amos-5:refsys:eng-v22:amos.5.1-amos.5.27",
-        "entity_key": "entity:p-joseph-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -2626,6 +2617,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-amos-5-tribe-of-joseph",
+        "scope_key": "scope:wb-amos-5:refsys:eng-v22:amos.5.1-amos.5.27",
+        "entity_key": "entity:tribe-of-joseph",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -2686,11 +2686,6 @@
       },
       {
         "canonical_entity_key": "entity:p-joash-4",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-joseph-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -2901,6 +2896,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-joseph",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -3398,8 +3398,8 @@
             "verse:Amos.5.6"
           ],
           "record_keys": [
-            "attestation:wb-amos-p-joseph-1-5-6",
-            "attestation:wb-amos-pl-bethel-1-a64f355-5-6"
+            "attestation:wb-amos-pl-bethel-1-a64f355-5-6",
+            "attestation:wb-amos-tribe-of-joseph-5-6"
           ],
           "blocker_question_keys": []
         },

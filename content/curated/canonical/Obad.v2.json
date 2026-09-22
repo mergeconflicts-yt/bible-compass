@@ -51,7 +51,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -91,26 +91,6 @@
         "attestation_key": "attestation:wb-obad-p-esau-1-1-18",
         "reference_key": "verse:Obad.1.18",
         "entity_key": "entity:p-esau-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-obad-p-judah-1-1-12",
-        "reference_key": "verse:Obad.1.12",
-        "entity_key": "entity:p-judah-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-obad-p-joseph-1-1-18",
-        "reference_key": "verse:Obad.1.18",
-        "entity_key": "entity:p-joseph-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -406,6 +386,26 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-obad-tribe-of-judah-1-12",
+        "reference_key": "verse:Obad.1.12",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-obad-tribe-of-joseph-1-18",
+        "reference_key": "verse:Obad.1.18",
+        "entity_key": "entity:tribe-of-joseph",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -414,8 +414,8 @@
         "event_key": "event:wb-obad-1-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-judah-1",
-          "entity:p-obadiah-12"
+          "entity:p-obadiah-12",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:jerusalem",
@@ -438,7 +438,7 @@
         "participant_entity_keys": [
           "entity:israelites",
           "entity:p-esau-1",
-          "entity:p-joseph-1"
+          "entity:tribe-of-joseph"
         ],
         "place_entity_keys": [
           "entity:jerusalem",
@@ -494,24 +494,6 @@
         "relevance_key": "relevance:wb-obad-1-p-esau-1",
         "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
         "entity_key": "entity:p-esau-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-obad-1-p-judah-1",
-        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
-        "entity_key": "entity:p-judah-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-obad-1-p-joseph-1",
-        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
-        "entity_key": "entity:p-joseph-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -660,6 +642,24 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-obad-1-tribe-of-judah",
+        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-obad-1-tribe-of-joseph",
+        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
+        "entity_key": "entity:tribe-of-joseph",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -675,16 +675,6 @@
       },
       {
         "canonical_entity_key": "entity:p-esau-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-joseph-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-judah-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -755,6 +745,16 @@
       },
       {
         "canonical_entity_key": "entity:pl-zarephath-a6fa2d3",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-joseph",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -849,7 +849,7 @@
             "verse:Obad.1.12"
           ],
           "record_keys": [
-            "attestation:wb-obad-p-judah-1-1-12"
+            "attestation:wb-obad-tribe-of-judah-1-12"
           ],
           "blocker_question_keys": []
         },
@@ -872,8 +872,8 @@
           "record_keys": [
             "attestation:wb-obad-israelites-1-18",
             "attestation:wb-obad-p-esau-1-1-18",
-            "attestation:wb-obad-p-joseph-1-1-18",
-            "attestation:wb-obad-pl-edom-a2735ff-1-18"
+            "attestation:wb-obad-pl-edom-a2735ff-1-18",
+            "attestation:wb-obad-tribe-of-joseph-1-18"
           ],
           "blocker_question_keys": []
         },

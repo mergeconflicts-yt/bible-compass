@@ -864,7 +864,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
     }
   ],
   "records": {
@@ -1979,16 +1979,6 @@
         "attestation_key": "attestation:wb-2kgs-p-isaac-1-13-23",
         "reference_key": "verse:2Kgs.13.23",
         "entity_key": "entity:p-isaac-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-2kgs-p-judah-1-19-30",
-        "reference_key": "verse:2Kgs.19.30",
-        "entity_key": "entity:p-judah-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -14954,6 +14944,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-2kgs-tribe-of-judah-19-30",
+        "reference_key": "verse:2Kgs.19.30",
+        "entity_key": "entity:tribe-of-judah",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -17802,8 +17802,8 @@
           "entity:p-david-1",
           "entity:p-hezekiah-1",
           "entity:p-isaiah-1",
-          "entity:p-judah-1",
-          "entity:p-sennacherib-1"
+          "entity:p-sennacherib-1",
+          "entity:tribe-of-judah"
         ],
         "place_entity_keys": [
           "entity:jerusalem",
@@ -19538,15 +19538,6 @@
         "relevance_key": "relevance:wb-2kgs-13-p-isaac-1",
         "scope_key": "scope:wb-2kgs-13:refsys:eng-v22:2kgs.13.1-2kgs.13.25",
         "entity_key": "entity:p-isaac-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-2kgs-19-p-judah-1",
-        "scope_key": "scope:wb-2kgs-19:refsys:eng-v22:2kgs.19.1-2kgs.19.37",
-        "entity_key": "entity:p-judah-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -24105,6 +24096,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-2kgs-19-tribe-of-judah",
+        "scope_key": "scope:wb-2kgs-19:refsys:eng-v22:2kgs.19.1-2kgs.19.37",
+        "entity_key": "entity:tribe-of-judah",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -24545,11 +24545,6 @@
       },
       {
         "canonical_entity_key": "entity:p-jozacar-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-judah-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -25400,6 +25395,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-judah",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -30301,7 +30301,7 @@
             "verse:2Kgs.19.30"
           ],
           "record_keys": [
-            "attestation:wb-2kgs-p-judah-1-19-30"
+            "attestation:wb-2kgs-tribe-of-judah-19-30"
           ],
           "blocker_question_keys": []
         },

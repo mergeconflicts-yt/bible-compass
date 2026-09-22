@@ -150,7 +150,7 @@
     {
       "package_key": "draft:wb-phil-canonical",
       "revision": 1,
-      "digest": "sha256:7a59fafde2b018d564fa8a3fb7840bfaa83e0927559530201b6c32ed4b2e8818"
+      "digest": "sha256:b420afe57931a8a317a703ace33621ce6774ffb4686e577d911f9c8d230a9547"
     }
   ],
   "records": {
@@ -331,12 +331,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Benjamin.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-phil-3-who"
           },
           "where": {
-            "text": "Places in this chapter: The Israelites.",
+            "text": "Places in this chapter: The Israelites, Tribe of Benjamin.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -804,12 +804,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Benjamin.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-phil-3-p1-who"
           },
           "where": {
-            "text": "Places in this passage: The Israelites.",
+            "text": "Places in this passage: The Israelites, Tribe of Benjamin.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1059,16 +1059,6 @@
     ],
     "relevance_localizations": [
       {
-        "localization_key": "relevance-localization:en:wb-phil-3-p-benjamin-1",
-        "relevance_key": "relevance:wb-phil-3-p-benjamin-1",
-        "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
-        "entity_key": "entity:p-benjamin-1",
-        "language_tag": "en",
-        "role_text": "Named in Philippians 3 at verse(s) 5.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "localization_key": "relevance-localization:en:wb-phil-1-p-saul-2",
         "relevance_key": "relevance:wb-phil-1-p-saul-2",
         "scope_key": "scope:wb-phil-1:refsys:eng-v22:phil.1.1-phil.1.30",
@@ -1197,6 +1187,16 @@
         "role_text": "Named in Philippians 3 at verse(s) 5.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-phil-3-tribe-of-benjamin",
+        "relevance_key": "relevance:wb-phil-3-tribe-of-benjamin",
+        "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
+        "entity_key": "entity:tribe-of-benjamin",
+        "language_tag": "en",
+        "role_text": "Named in Philippians 3 at verse(s) 5.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -1309,6 +1309,7 @@
             "question:wb-context-en-wb-phil-3-p1-before",
             "question:wb-context-en-wb-phil-3-p1-stakes",
             "question:wb-context-en-wb-phil-3-p1-when",
+            "question:wb-context-en-wb-phil-3-p1-who",
             "question:wb-context-en-wb-phil-3-p2-before",
             "question:wb-context-en-wb-phil-3-p2-stakes",
             "question:wb-context-en-wb-phil-3-p2-when",
@@ -1321,6 +1322,7 @@
             "question:wb-context-en-wb-phil-3-p3-who",
             "question:wb-context-en-wb-phil-3-stakes",
             "question:wb-context-en-wb-phil-3-when",
+            "question:wb-context-en-wb-phil-3-who",
             "question:wb-context-en-wb-phil-4-p1-before",
             "question:wb-context-en-wb-phil-4-p1-stakes",
             "question:wb-context-en-wb-phil-4-p1-when",
@@ -1378,6 +1380,14 @@
       "record_key": "context:en:wb-phil-2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-phil-3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-phil-3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1746,6 +1756,14 @@
       "record_key": "context:en:wb-phil-2-p4",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-phil-3-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-phil-3-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

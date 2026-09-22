@@ -170,6 +170,73 @@ BEGIN
   IF rev_order IS DISTINCT FROM 66 THEN RAISE EXCEPTION 'FAIL: Revelation order % <> 66', rev_order; END IF;
 END $$;
 
+-- 6c. No stale identity rows survive an upgrade: source-ID names are gone
+-- and no alias is shared across distinct place entities.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n FROM private_staging.entity_names
+  WHERE normalized_form ~ '^[a-z0-9]{4,10}$' AND normalized_form ~ '[0-9]';
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % source-ID-like searchable names remain', n; END IF;
+  SELECT count(*) INTO n FROM (
+    SELECT n.normalized_form FROM private_staging.entity_names n
+    JOIN private_staging.entities e ON e.id = n.entity_id
+    WHERE e.type = 'place' AND n.language_tag = 'en'
+    GROUP BY n.normalized_form HAVING count(DISTINCT n.entity_id) > 1
+  ) s;
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % place aliases shared across entities', n; END IF;
+END $$;
+
+-- 6d. Collective and tribal identity: the cited verses resolve to the
+-- group, never to the patriarch, and no patriarch-person attestation sits
+-- on a verse whose text uses a collective or tribal phrase.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE e.key = 'entity:p-jacob-1' AND u.local_key IN ('ezra.6.16', 'judg.3.2');
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % collective-verse attestations still target Jacob', n; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE e.key = 'entity:israelites' AND u.local_key IN ('ezra.6.16', 'judg.3.2');
+  IF n <> 2 THEN RAISE EXCEPTION 'FAIL: Israelites attestations on Ezra 6:16 / Judg 3:2 = % (expected 2)', n; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE e.key IN ('entity:p-judah-1', 'entity:p-reuben-1', 'entity:p-gad-1')
+    AND u.local_key = 'rev.7.5';
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % Rev 7:5 attestations still target patriarchs', n; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE e.key IN ('entity:tribe-of-judah', 'entity:tribe-of-reuben', 'entity:tribe-of-gad')
+    AND u.local_key = 'rev.7.5';
+  IF n <> 3 THEN RAISE EXCEPTION 'FAIL: tribe attestations on Rev 7:5 = % (expected 3)', n; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  JOIN private_staging.translation_edition_verses v ON v.reference_unit_id = u.id
+  JOIN private_staging.translation_editions ed ON ed.id = v.edition_id
+  WHERE e.key = 'entity:p-jacob-1'
+    AND ed.key = 'edition:bsb@20260912:sha-b2898c49'
+    AND (v.text ~ '\y(people|children|sons|house|tribes|elders|men|generations|remnant|descendants|congregation|assembly|families|communities|God|Holy One|Redeemer|Glory|Rock|Strength|Shepherd|Prince|Firstborn) of Israel\y'
+      OR v.text ~ '\yall Israel\y|\yIsraelites\y'
+      OR v.text ~ '\y(house|descendants|offspring|tent|tribes|tribe|assembly|congregation) of Jacob\y'
+      OR v.text ~ '\ytribes? of the sons of Jacob\y'
+      OR v.text ~ '\yoffspring of His servant Israel\y');
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % Jacob attestations on collective-phrase verses', n; END IF;
+END $$;
+
 -- 7. Draft-only.
 DO $$
 DECLARE

@@ -94,7 +94,7 @@
     {
       "package_key": "draft:wb-mal-canonical",
       "revision": 1,
-      "digest": "sha256:d2ca53b5f2e96cf45b173ccb5002b8b0f8621621f6eab1cbea649a15acbe1276"
+      "digest": "sha256:ba4a7e41c3bb944a47c7054029e4cd0738e79794276888598d14ee0c40546c88"
     }
   ],
   "records": {
@@ -249,12 +249,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Levi.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-mal-3-who"
           },
           "where": {
-            "text": "Places in this chapter: Jerusalem, The Israelites.",
+            "text": "Places in this chapter: Jerusalem, The Israelites, Tribe of Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -507,12 +507,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Levi.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-mal-3-p1-who"
           },
           "where": {
-            "text": "Places in this passage: Jerusalem.",
+            "text": "Places in this passage: Jerusalem, Tribe of Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -706,16 +706,6 @@
         "review_status": "draft"
       },
       {
-        "localization_key": "relevance-localization:en:wb-mal-3-p-levi-1",
-        "relevance_key": "relevance:wb-mal-3-p-levi-1",
-        "scope_key": "scope:wb-mal-3:refsys:eng-v22:mal.3.1-mal.3.18",
-        "entity_key": "entity:p-levi-1",
-        "language_tag": "en",
-        "role_text": "Named in Malachi 3 at verse(s) 3.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "localization_key": "relevance-localization:en:wb-mal-4-p-moses-1",
         "relevance_key": "relevance:wb-mal-4-p-moses-1",
         "scope_key": "scope:wb-mal-4:refsys:eng-v22:mal.4.1-mal.4.6",
@@ -794,6 +784,16 @@
         "role_text": "Named in Malachi 3 at verse(s) 6.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-mal-3-tribe-of-levi",
+        "relevance_key": "relevance:wb-mal-3-tribe-of-levi",
+        "scope_key": "scope:wb-mal-3:refsys:eng-v22:mal.3.1-mal.3.18",
+        "entity_key": "entity:tribe-of-levi",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 3 at verse(s) 3.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -865,6 +865,7 @@
             "question:wb-context-en-wb-mal-3-p1-before",
             "question:wb-context-en-wb-mal-3-p1-stakes",
             "question:wb-context-en-wb-mal-3-p1-when",
+            "question:wb-context-en-wb-mal-3-p1-who",
             "question:wb-context-en-wb-mal-3-p2-before",
             "question:wb-context-en-wb-mal-3-p2-stakes",
             "question:wb-context-en-wb-mal-3-p2-when",
@@ -876,6 +877,7 @@
             "question:wb-context-en-wb-mal-3-p3-who",
             "question:wb-context-en-wb-mal-3-stakes",
             "question:wb-context-en-wb-mal-3-when",
+            "question:wb-context-en-wb-mal-3-who",
             "question:wb-context-en-wb-mal-4-p1-before",
             "question:wb-context-en-wb-mal-4-p1-stakes",
             "question:wb-context-en-wb-mal-4-p1-when",
@@ -917,6 +919,14 @@
       "record_key": "context:en:wb-mal-2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-mal-3-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-mal-3",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1077,6 +1087,14 @@
       "record_key": "context:en:wb-mal-2-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-mal-3-p1-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-mal-3-p1",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

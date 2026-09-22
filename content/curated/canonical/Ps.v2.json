@@ -2788,7 +2788,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
+      "digest": "sha256:b3f6781626fdccc76c91c19d67484aabe32ba2d70524b2882e74ec88852c454b"
     }
   ],
   "records": {
@@ -3091,16 +3091,6 @@
         "attestation_key": "attestation:wb-ps-p-jacob-1-149-2",
         "reference_key": "verse:Ps.149.2",
         "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-ps-p-levi-1-135-20",
-        "reference_key": "verse:Ps.135.20",
-        "entity_key": "entity:p-levi-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -5806,6 +5796,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-ps-tribe-of-levi-135-20",
+        "reference_key": "verse:Ps.135.20",
+        "entity_key": "entity:tribe-of-levi",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -6283,10 +6283,10 @@
         "participant_entity_keys": [
           "entity:israelites",
           "entity:p-aaron-1",
-          "entity:p-levi-1",
           "entity:p-og-1",
           "entity:p-pharaoh-4",
-          "entity:p-sihon-1"
+          "entity:p-sihon-1",
+          "entity:tribe-of-levi"
         ],
         "place_entity_keys": [
           "entity:jerusalem",
@@ -7459,15 +7459,6 @@
         "relevance_key": "relevance:wb-ps-149-p-jacob-1",
         "scope_key": "scope:wb-ps-149:refsys:eng-v22:ps.149.1-ps.149.9",
         "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-ps-135-p-levi-1",
-        "scope_key": "scope:wb-ps-135:refsys:eng-v22:ps.135.1-ps.135.21",
-        "entity_key": "entity:p-levi-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -9974,6 +9965,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-ps-135-tribe-of-levi",
+        "scope_key": "scope:wb-ps-135:refsys:eng-v22:ps.135.1-ps.135.21",
+        "entity_key": "entity:tribe-of-levi",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -10054,11 +10054,6 @@
       },
       {
         "canonical_entity_key": "entity:p-judah-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-levi-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -10424,6 +10419,11 @@
       },
       {
         "canonical_entity_key": "entity:pl-zobah-a4aa78a",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:tribe-of-levi",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -14618,7 +14618,7 @@
             "verse:Ps.135.20"
           ],
           "record_keys": [
-            "attestation:wb-ps-p-levi-1-135-20"
+            "attestation:wb-ps-tribe-of-levi-135-20"
           ],
           "blocker_question_keys": []
         },

@@ -16,11 +16,15 @@ the private_staging schema using stable keys.
 Guarantees (mirrors tools/import-neh2.py)
   * validation happens before any write
   * all writes run in ONE transaction (psql -1); any failure rolls back
-  * inserts are idempotent (on conflict / where not exists)
+  * revision-gated resync: the import deletes the rows owned by this
+    package (English wb-* scopes, the BSB edition's mentions, payload
+    entities/events/places/claims) and reinserts the payload, so an
+    upgrade converges to the clean-import state instead of leaving stale
+    rows beside new ones; identical replay is a no-op via the receipt
   * exactly one entity row per canonical key (the registry is authoritative)
   * book attestations, English localization and BSB mentions stay separate
   * a receipt in private_staging.curation_imports records the payload
-  * identical replay is a no-op; changed replay for the same package exits 3
+  * changed replay for the same package without a revision bump exits 3
   * drafts only; no publication, no anon access
 
 Usage
@@ -54,12 +58,17 @@ BSB_ARTIFACT_SHA = (
     "sha256:b2898c49cadb50fd8763feb9e2f74a90a3817e33408a24b6cbf09e7a950dde97"
 )
 IMPORT_PACKAGE_KEY = "import:english-canon:canonical-locale-edition"
-# Revision 3: canonical book order/testament repair + curated identity
-# corrections (collective Israel, Paul/Peter names) + context curation state
-# + membership delete-before-insert ordering (revision 2 deleted memberships
-# after re-inserting them, leaving the table empty).
+# Revision 4: resync migration. Revisions 1-3 used ON CONFLICT DO NOTHING /
+# WHERE NOT EXISTS for most tables, so an upgrade left stale rows beside new
+# ones (Jacob attestations next to Israelites ones, source-ID names,
+# superseded descriptions and mentions) while a clean import did not contain
+# them. Revision 4 deletes this package's owned rows before reinserting, so
+# an upgrade converges to the clean-import state. It also carries the
+# curated identity corrections (collective Israel including the tribes /
+# assembly of Jacob phrases, 14 tribe collectives, Paul/Peter names) and the
+# context curation_state columns.
 # A revision bump authorizes re-import over an older receipt.
-IMPORT_REVISION = 3
+IMPORT_REVISION = 4
 PROVENANCE = "draft import from content/curated English v2 packages (unverified curation)"
 UNKNOWN_LICENSE = "unknown"
 UNKNOWN_RELEASE_ID = str(uuid.uuid5(uuid.NAMESPACE_URL, "release:unknown:bsb"))
@@ -227,6 +236,29 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
     def add(sql: str) -> None:
         stmts.append(sql)
 
+    # Payload-owned key sets for the resync deletes below. Scoping deletes
+    # to these sets is what makes an upgrade converge without touching
+    # Nehemiah-2-package rows, which live under different scope keys (except
+    # the six neh-2 scopes this package reuses through the locked merge) and
+    # different entity keys.
+    payload_scope_keys: set[str] = set()
+    payload_event_keys: set[str] = set()
+    payload_place_keys: set[str] = set()
+    payload_claim_keys: set[str] = set()
+    for book in books:
+        canonical = load_json(CURATED / "canonical" / f"{book['osis']}.v2.json")
+        payload_scope_keys.update(canonical["scope"]["scope_keys"])
+        for ev in canonical["records"].get("events", []):
+            payload_event_keys.add("entity:" + ev["event_key"].split("event:", 1)[1])
+        for place in canonical["records"].get("places", []):
+            payload_place_keys.add(place["entity_key"])
+        for claim in canonical["records"].get("claims", []):
+            payload_claim_keys.add(claim["claim_key"])
+    payload_entity_keys = {e["entity_key"] for e in registry["entities"]} | payload_event_keys
+
+    def key_list(keys: set[str]) -> str:
+        return "(" + ",".join(esc(k) for k in sorted(keys)) + ")"
+
     # --- canon / works / reference system ---------------------------------
     add("insert into private_staging.canons (key, name) values ('canon:prot-66','Protestant 66') on conflict (key) do nothing;")
     # Repair-safe scaffolding: this importer owns the membership rows and the
@@ -236,6 +268,78 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
         "delete from private_staging.canon_work_memberships "
         "where canon_id = (select id from private_staging.canons where key='canon:prot-66');"
     )
+    # --- revision-4 resync -------------------------------------------------
+    # Delete this package's owned rows so the inserts below restore exactly
+    # the current payload: an upgrade from an older revision converges to
+    # the clean-import state. Every statement is a no-op on a clean
+    # database. FK order is respected (dependents before the rows they
+    # reference); entity, claim, scope, unit and verse rows themselves are
+    # never deleted, only upserted. A co-installed Nehemiah-2 package keeps
+    # its rows except where both packages genuinely share rows (the BSB
+    # edition's mentions, the six merged neh-2 scopes, identically-keyed
+    # claims): the supported test topology is one package per database.
+    eng_edition = f"(select id from private_staging.translation_editions where key={esc(EDITION_KEY)})"
+    owned_scopes = (
+        "(select id from private_staging.scripture_scopes where key in "
+        f"{key_list(payload_scope_keys)})"
+    )
+    owned_revisions = (
+        "select r.id from private_staging.context_revisions r "
+        "join private_staging.context_artifacts a on a.id = r.artifact_id "
+        f"where a.scope_id in {owned_scopes}"
+    )
+    add(
+        "delete from private_staging.edition_render_spans where mention_id in "
+        f"(select id from private_staging.edition_mentions where edition_id = {eng_edition});"
+    )
+    add(f"delete from private_staging.edition_mentions where edition_id = {eng_edition};")
+    add(f"delete from private_staging.reference_entity_attestations where scope_id in {owned_scopes};")
+    add(f"delete from private_staging.scope_entity_relevance where scope_id in {owned_scopes};")
+    add(f"delete from private_staging.entity_relationship_assertions where scope_id in {owned_scopes};")
+    add(f"delete from private_staging.event_scripture_accounts where scope_id in {owned_scopes};")
+    if payload_event_keys:
+        add(
+            "delete from private_staging.event_participants where event_id in "
+            f"(select entity_id from private_staging.events where entity_id in "
+            f"(select id from private_staging.entities where key in {key_list(payload_event_keys)}));"
+        )
+        add(
+            "delete from private_staging.event_places where event_id in "
+            f"(select entity_id from private_staging.events where entity_id in "
+            f"(select id from private_staging.entities where key in {key_list(payload_event_keys)}));"
+        )
+        add(
+            "delete from private_staging.events where entity_id in "
+            f"(select id from private_staging.entities where key in {key_list(payload_event_keys)});"
+        )
+    if payload_place_keys:
+        add(
+            "delete from private_staging.place_geometries where entity_id in "
+            f"(select id from private_staging.entities where key in {key_list(payload_place_keys)});"
+        )
+    add(
+        "delete from private_staging.entity_names where language_tag = 'en' and entity_id in "
+        f"(select id from private_staging.entities where key in {key_list(payload_entity_keys)});"
+    )
+    add(
+        "delete from private_staging.entity_descriptions where locale = 'en' and entity_id in "
+        f"(select id from private_staging.entities where key in {key_list(payload_entity_keys)});"
+    )
+    if payload_claim_keys:
+        # Only this importer's unknown-release citations: a co-installed
+        # Nehemiah-2 package cites the shared claim keys from its own
+        # releases and must keep them.
+        add(
+            "delete from private_staging.claim_citations where source_release_id = "
+            f"{esc(UNKNOWN_RELEASE_ID)}::uuid and claim_id in "
+            f"(select id from private_staging.claims where key in {key_list(payload_claim_keys)});"
+        )
+    add(f"delete from private_staging.context_sections where revision_id in ({owned_revisions});")
+    add(
+        "delete from private_staging.context_revisions where artifact_id in "
+        f"(select a.id from private_staging.context_artifacts a where a.scope_id in {owned_scopes});"
+    )
+    add(f"delete from private_staging.context_artifacts where scope_id in {owned_scopes};")
 
     for i, book in enumerate(books, start=1):
         osis = book["osis"]
@@ -349,10 +453,16 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
     )
 
     # --- entities (ONE row per canonical key; the registry is authoritative)
+    # Upsert (never delete: every other table references entities): an
+    # upgrade corrects a stale type/slug instead of keeping it.
+    entity_upsert = (
+        "on conflict (key) do update set slug = excluded.slug, type = excluded.type, "
+        "identification_status = excluded.identification_status, provenance = excluded.provenance"
+    )
     for e in sorted(registry["entities"], key=lambda x: x["entity_key"]):
         add(
             "insert into private_staging.entities (key, slug, type, identification_status, provenance) values ("
-            f"{esc(e['entity_key'])}, {esc(e['slug'])}, {esc(e['type'])}, 'established', {esc(PROVENANCE)}) on conflict (key) do nothing;"
+            f"{esc(e['entity_key'])}, {esc(e['slug'])}, {esc(e['type'])}, 'established', {esc(PROVENANCE)}) {entity_upsert};"
         )
     # event entities (canonical events are entities of type event)
     for book in books:
@@ -361,14 +471,15 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             slug = ev["event_key"].split("event:", 1)[1]
             add(
                 "insert into private_staging.entities (key, slug, type, identification_status, provenance) values ("
-                f"{esc('entity:' + slug)}, {esc(slug)}, 'event', 'established', {esc(PROVENANCE)}) on conflict (key) do nothing;"
+                f"{esc('entity:' + slug)}, {esc(slug)}, 'event', 'established', {esc(PROVENANCE)}) {entity_upsert};"
             )
     ent = lambda key: f"(select id from private_staging.entities where key={esc(key)})"
 
     # --- entity names + English descriptions ------------------------------
     # Source identifiers (e.g. OpenBible a15257a) are never searchable
-    # English names, even if one ever regresses into the registry.
-    source_id = re.compile(r"^[a-z0-9]{4,10}$")
+    # English names, even if one ever regresses into the registry. The
+    # digit-required shape is a backstop; the queue drops them by exact set.
+    source_id = re.compile(r"^(?=.*\d)[a-z0-9]{4,10}$")
     for e in sorted(registry["entities"], key=lambda x: x["entity_key"]):
         forms = [("preferred", e["preferred_name"])] + [
             ("alias", a)
@@ -411,10 +522,16 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
                 subject_type = "scope"
             else:
                 continue
+            # Claims are upserted, never deleted: attestations, citations and
+            # geometries reference them, including rows of a co-installed
+            # Nehemiah-2 package that shares claim keys.
             add(
                 "insert into private_staging.claims (key, subject_type, subject_id, predicate, object_type, object, evidence_status, textual_basis, review_state) values ("
                 f"{esc(claim['claim_key'])}, {esc(subject_type)}, {subject_id}, {esc(claim['predicate'])}, "
-                f"{esc(claim['object']['type'])}, {jsonb(claim['object'])}, {esc(claim['evidence_status'])}, {esc(claim['textual_basis'])}, 'draft') on conflict (key) do nothing;"
+                f"{esc(claim['object']['type'])}, {jsonb(claim['object'])}, {esc(claim['evidence_status'])}, {esc(claim['textual_basis'])}, 'draft') "
+                "on conflict (key) do update set subject_type = excluded.subject_type, subject_id = excluded.subject_id, "
+                "predicate = excluded.predicate, object_type = excluded.object_type, object = excluded.object, "
+                "evidence_status = excluded.evidence_status, textual_basis = excluded.textual_basis, review_state = excluded.review_state;"
             )
         claim_id = lambda key: f"(select id from private_staging.claims where key={esc(key)})"
         for citation in canonical["records"].get("citations", []):

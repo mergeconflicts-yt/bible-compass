@@ -150,29 +150,11 @@
     {
       "package_key": "draft:wb-phil-canonical",
       "revision": 1,
-      "digest": "sha256:7a59fafde2b018d564fa8a3fb7840bfaa83e0927559530201b6c32ed4b2e8818"
+      "digest": "sha256:b420afe57931a8a317a703ace33621ce6774ffb4686e577d911f9c8d230a9547"
     }
   ],
   "records": {
     "mentions": [
-      {
-        "mention_key": "mention:wb:phil-p-benjamin-1-3-5",
-        "verse_key": "verse:Phil.3.5",
-        "attestation_key": "attestation:wb-phil-p-benjamin-1-3-5",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-benjamin-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Benjamin",
-          "occurrence_ordinal": 1,
-          "prefix": "el, of the tribe of ",
-          "suffix": "; a Hebrew of Hebrew"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "mention_key": "mention:wb:phil-p-caesar-2-4-22",
         "verse_key": "verse:Phil.4.22",
@@ -388,6 +370,24 @@
         },
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:phil-tribe-of-benjamin-3-5",
+        "verse_key": "verse:Phil.3.5",
+        "attestation_key": "attestation:wb-phil-tribe-of-benjamin-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:tribe-of-benjamin"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "tribe of Benjamin",
+          "occurrence_ordinal": 1,
+          "prefix": "e of Israel, of the ",
+          "suffix": "; a Hebrew of Hebrew"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -534,7 +534,7 @@
             "verse:Phil.3.5"
           ],
           "record_keys": [
-            "mention:wb:phil-p-benjamin-1-3-5"
+            "mention:wb:phil-tribe-of-benjamin-3-5"
           ],
           "blocker_question_keys": []
         },

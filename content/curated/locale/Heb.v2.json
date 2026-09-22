@@ -377,7 +377,7 @@
     {
       "package_key": "draft:wb-heb-canonical",
       "revision": 1,
-      "digest": "sha256:337cb11ea0bb902229e937568155705aa0aface358448b5362dd74503d0831fe"
+      "digest": "sha256:8e869997033db75c14c0ed40986ef5eb8bd47dd24d71db50b34c1d848416b1da"
     }
   ],
   "records": {
@@ -722,7 +722,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Salem.",
+            "text": "Places in this chapter: Salem, Tribe of Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -760,12 +760,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Judah, Moses.",
+            "text": "Present in this chapter: Moses.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Egypt, The Israelites.",
+            "text": "Places in this chapter: Egypt, The Israelites, Tribe of Judah.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1539,7 +1539,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Salem.",
+            "text": "Places in this passage: Salem, Tribe of Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1663,12 +1663,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Judah.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-heb-8-p2-who"
           },
           "where": {
-            "text": "Places in this passage: Egypt, The Israelites.",
+            "text": "Places in this passage: Egypt, The Israelites, Tribe of Judah.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -2652,7 +2652,7 @@
         "scope_key": "scope:wb-heb-7:refsys:eng-v22:heb.7.1-heb.7.28",
         "entity_key": "entity:p-levi-1",
         "language_tag": "en",
-        "role_text": "Named in Hebrews 7 at verse(s) 5, 9.",
+        "role_text": "Named in Hebrews 7 at verse(s) 9.",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -2663,16 +2663,6 @@
         "entity_key": "entity:p-judah-1",
         "language_tag": "en",
         "role_text": "Named in Hebrews 7 at verse(s) 14.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "localization_key": "relevance-localization:en:wb-heb-8-p-judah-1",
-        "relevance_key": "relevance:wb-heb-8-p-judah-1",
-        "scope_key": "scope:wb-heb-8:refsys:eng-v22:heb.8.1-heb.8.13",
-        "entity_key": "entity:p-judah-1",
-        "language_tag": "en",
-        "role_text": "Named in Hebrews 8 at verse(s) 8.",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -3065,6 +3055,26 @@
         "role_text": "Named in Hebrews 11 at verse(s) 22.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-heb-7-tribe-of-levi",
+        "relevance_key": "relevance:wb-heb-7-tribe-of-levi",
+        "scope_key": "scope:wb-heb-7:refsys:eng-v22:heb.7.1-heb.7.28",
+        "entity_key": "entity:tribe-of-levi",
+        "language_tag": "en",
+        "role_text": "Named in Hebrews 7 at verse(s) 5.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-heb-8-tribe-of-judah",
+        "relevance_key": "relevance:wb-heb-8-tribe-of-judah",
+        "scope_key": "scope:wb-heb-8:refsys:eng-v22:heb.8.1-heb.8.13",
+        "entity_key": "entity:tribe-of-judah",
+        "language_tag": "en",
+        "role_text": "Named in Hebrews 8 at verse(s) 8.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -3342,6 +3352,7 @@
             "question:wb-context-en-wb-heb-8-p2-before",
             "question:wb-context-en-wb-heb-8-p2-stakes",
             "question:wb-context-en-wb-heb-8-p2-when",
+            "question:wb-context-en-wb-heb-8-p2-who",
             "question:wb-context-en-wb-heb-8-stakes",
             "question:wb-context-en-wb-heb-8-when",
             "question:wb-context-en-wb-heb-9-p1-before",
@@ -4124,6 +4135,14 @@
       "record_key": "context:en:wb-heb-8-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-heb-8-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-heb-8-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
