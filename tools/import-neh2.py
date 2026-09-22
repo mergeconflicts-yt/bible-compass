@@ -544,9 +544,17 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
     for context in locale["records"]["passage_contexts"]:
         scope_id = SCOPE(context["scope_key"])
         add("insert into private_staging.context_artifacts (scope_id, origin_package_id) values (" + scope_id + f", {PKG}) on conflict do nothing;")
+        artifact = "(select id from private_staging.context_artifacts where scope_id=" + scope_id + ")"
+        # A changed re-import creates a new context revision rather than
+        # reusing revision 1 (R1).
         add(
-            "insert into private_staging.context_revisions (artifact_id, revision) select (select id from private_staging.context_artifacts where scope_id="
-            + scope_id + "), 1 on conflict do nothing;"
+            "insert into private_staging.context_revisions (artifact_id, revision) select "
+            + artifact + ", 1 + coalesce((select max(revision) from private_staging.context_revisions where artifact_id=" + artifact + "), 0) "
+            "on conflict (artifact_id, revision) do nothing;"
+        )
+        latest_revision = (
+            "(select r.id from private_staging.context_revisions r where r.artifact_id="
+            + artifact + " order by r.revision desc limit 1)"
         )
         for kind, section in context["orientation"].items():
             if section["text"] is None:
@@ -557,11 +565,9 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
             ) + "]::uuid[]" if claims else "array[]::uuid[]"
             add(
                 "insert into private_staging.context_sections (revision_id, kind, text, claim_ids) "
-                "select (select r.id from private_staging.context_revisions r join private_staging.context_artifacts a on a.id=r.artifact_id where a.scope_id="
-                + scope_id + " and r.revision=1), "
+                f"select {latest_revision}, "
                 f"{esc(kind)}, {esc(section['text'])}, {claim_select} where not exists (select 1 from private_staging.context_sections s where s.revision_id="
-                "(select r.id from private_staging.context_revisions r join private_staging.context_artifacts a on a.id=r.artifact_id where a.scope_id="
-                + scope_id + " and r.revision=1) and s.kind=" + esc(kind) + ");"
+                f"{latest_revision} and s.kind=" + esc(kind) + ");"
             )
 
     # --- edition mentions + render spans ------------------------------------
@@ -609,6 +615,27 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
         add(
             "insert into private_staging.package_members (package_id, context_revision_id) "
             f"select {PKG}, {revision} where not exists (select 1 from private_staging.package_members pm where pm.package_id={PKG} and pm.context_revision_id={revision});"
+        )
+
+    # --- many-to-many row membership (R1) -----------------------------------
+    neh_row_kinds = [
+        ("entity_name", "n.id", "private_staging.entity_names n"),
+        ("entity_description", "d.id", "private_staging.entity_descriptions d"),
+        ("reference_entity_attestation", "a.id", "private_staging.reference_entity_attestations a"),
+        ("edition_mention", "em.id", "private_staging.edition_mentions em"),
+        ("scope_entity_relevance", "r.id", "private_staging.scope_entity_relevance r"),
+        ("entity_relationship_assertion", "ra.id", "private_staging.entity_relationship_assertions ra"),
+        ("event", "e.entity_id", "private_staging.events e"),
+        ("event_participant", "ep.id", "private_staging.event_participants ep"),
+        ("event_place", "epl.id", "private_staging.event_places epl"),
+        ("event_scripture_account", "esa.id", "private_staging.event_scripture_accounts esa"),
+        ("place_geometry", "pg.entity_id", "private_staging.place_geometries pg"),
+    ]
+    for kind, id_expr, from_expr in neh_row_kinds:
+        add(
+            "insert into private_staging.package_row_memberships (package_id, row_kind, row_id) "
+            f"select distinct {PKG}, {esc(kind)}, {id_expr} from {from_expr} where origin_package_id = {PKG} "
+            "on conflict do nothing;"
         )
 
     # --- verification + receipt --------------------------------------------

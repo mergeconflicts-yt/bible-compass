@@ -83,10 +83,12 @@ BEGIN
   INSERT INTO private_staging.publication_releases (locale, package_id, is_active) VALUES ('en', pkg_id, true);
   INSERT INTO private_staging.package_members (package_id, entity_id) VALUES (pkg_id, ent_id);
   INSERT INTO private_staging.package_members (package_id, claim_id) VALUES (pkg_id, pub_claim);
-  -- Attestations are published through direct ownership by the published
-  -- package (no claim membership required).
-  UPDATE private_staging.reference_entity_attestations SET origin_package_id = pkg_id
-    WHERE entity_id IN (SELECT id FROM private_staging.entities WHERE key = 'entity:probe-read-api');
+  -- Attestations are published through direct membership in the published
+  -- package (no claim membership required, no origin fallback).
+  INSERT INTO private_staging.package_row_memberships (package_id, row_kind, row_id)
+    SELECT pkg_id, 'reference_entity_attestation', a.id
+    FROM private_staging.reference_entity_attestations a
+    WHERE a.entity_id IN (SELECT id FROM private_staging.entities WHERE key = 'entity:probe-read-api');
 END $$;
 
 -- 2. Anonymous reads published verses with stable client keys.

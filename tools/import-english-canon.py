@@ -421,6 +421,7 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
     # but only for UNPUBLISHED manifests, so the published-membership guard in
     # those upserts still sees (and protects) published rows (blocker 2).
     add(f"delete from private_staging.package_members where package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.package_row_memberships where package_id in {stale_english_manifests};")
     add(f"delete from private_staging.edition_render_spans where mention_id in "
         f"(select id from private_staging.edition_mentions where origin_package_id in {stale_english_manifests});")
     add(f"delete from private_staging.edition_mentions where origin_package_id in {stale_english_manifests};")
@@ -769,11 +770,19 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
                 f"{sid}, {manifest}) on conflict (scope_id) do nothing;"
             )
             artifact = f"(select id from private_staging.context_artifacts where scope_id={sid})"
+            # Each changed import creates a NEW context revision instead of
+            # reusing revision 1, so revised context text is never silently
+            # ignored and the previous revision stays as the old package's
+            # history (R1). Identical replays are a no-op before any write.
             add(
                 "insert into private_staging.context_revisions (artifact_id, revision) values ("
-                f"{artifact}, 1) on conflict do nothing;"
+                f"{artifact}, 1 + coalesce((select max(revision) from private_staging.context_revisions where artifact_id={artifact}), 0)) "
+                "on conflict (artifact_id, revision) do nothing;"
             )
-            revision = f"(select id from private_staging.context_revisions where artifact_id={artifact} and revision=1)"
+            revision = (
+                f"(select cr.id from private_staging.context_revisions cr "
+                f"where cr.artifact_id={artifact} order by cr.revision desc limit 1)"
+            )
             for kind, section in ctx["orientation"].items():
                 text = section.get("text")
                 qkey = section.get("open_question_key")
@@ -817,13 +826,52 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         locale = load_json(CURATED / "locale" / f"{book['osis']}.v2.json")
         for ctx in locale["records"].get("passage_contexts", []):
             artifact = f"(select id from private_staging.context_artifacts where scope_id={scope_id(ctx['scope_key'])})"
-            revision = f"(select id from private_staging.context_revisions where artifact_id={artifact} and revision=1)"
+            revision = f"(select cr.id from private_staging.context_revisions cr where cr.artifact_id={artifact} order by cr.revision desc limit 1)"
             member_values.append(("context_revision_id", revision))
     for column, value in member_values:
         add(
             "insert into private_staging.package_members (package_id, " + column + ") "
             f"select {manifest}, {value} where not exists (select 1 from private_staging.package_members pm where "
             f"pm.package_id = {manifest} and pm.{column} = {value});"
+        )
+
+    # --- many-to-many row membership (R1) ---------------------------------
+    # Every publishable row is registered as a member of THIS package, so an
+    # unchanged row belongs to both the old and the new revision and survives a
+    # release transition (the public gates read membership in the ACTIVE
+    # package). Set-based, keyed by the package's entity/scope/edition members.
+    row_membership_kinds = [
+        ("entity_name", "n.id", "private_staging.entity_names n",
+         f"join private_staging.package_members pm on pm.entity_id = n.entity_id and pm.package_id = {manifest}"),
+        ("entity_description", "d.id", "private_staging.entity_descriptions d",
+         f"join private_staging.package_members pm on pm.entity_id = d.entity_id and pm.package_id = {manifest}"),
+        ("reference_entity_attestation", "a.id", "private_staging.reference_entity_attestations a",
+         f"join private_staging.package_members pm on pm.entity_id = a.entity_id and pm.package_id = {manifest}"),
+        ("edition_mention", "em.id", "private_staging.edition_mentions em",
+         f"where em.edition_id = {edition_id}"),
+        ("scope_entity_relevance", "r.id", "private_staging.scope_entity_relevance r",
+         "join private_staging.scripture_scopes sc on sc.id = r.scope_id where sc.key like 'scope:wb-%'"),
+        ("entity_relationship_assertion", "ra.id", "private_staging.entity_relationship_assertions ra",
+         "join private_staging.scripture_scopes sc on sc.id = ra.scope_id where sc.key like 'scope:wb-%'"),
+        ("event", "e.entity_id", "private_staging.events e",
+         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
+        ("event_participant", "ep.id", "private_staging.event_participants ep",
+         f"join private_staging.events e on e.entity_id = ep.event_id "
+         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
+        ("event_place", "epl.id", "private_staging.event_places epl",
+         f"join private_staging.events e on e.entity_id = epl.event_id "
+         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
+        ("event_scripture_account", "esa.id", "private_staging.event_scripture_accounts esa",
+         f"join private_staging.events e on e.entity_id = esa.event_id "
+         f"join private_staging.package_members pm on pm.entity_id = e.entity_id and pm.package_id = {manifest}"),
+        ("place_geometry", "pg.entity_id", "private_staging.place_geometries pg",
+         f"join private_staging.package_members pm on pm.entity_id = pg.entity_id and pm.package_id = {manifest}"),
+    ]
+    for kind, id_expr, from_expr, tail in row_membership_kinds:
+        add(
+            "insert into private_staging.package_row_memberships (package_id, row_kind, row_id) "
+            f"select distinct {manifest}, {esc(kind)}, {id_expr} from {from_expr} {tail} "
+            "on conflict do nothing;"
         )
 
     # --- receipt ----------------------------------------------------------

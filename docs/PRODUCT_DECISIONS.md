@@ -1,6 +1,8 @@
 # Product Decisions for Phase 0
 
-> **Status note (whole-Bible draft track).** PD-002's Nehemiah 2 corpus remains the only reviewed/publishable slice. A machine-generated, unreviewed *draft* whole-English track under `content/curated/` (`synthetic_fixture`) exists solely to prove the pipeline; it does not change product scope or the excluded-feature boundary.
+> **Deferred product request (logged, not approved).** "Post-it" author signature: display a contributor's name signed like a physical post-it note (e.g. a leading `- Name` line) on a user-authored surface. This is user-generated content; AGENTS.md excludes public reflections, journals, community feeds and user content from the first MVP, so it needs an explicit product decision (which surface, moderation/privacy model, and whether it attaches to existing on-device notes/bookmarks) before any implementation. Not built.
+
+> **Status note (whole-Bible draft track).** PD-002's Nehemiah 2 corpus remains the only reviewed/publishable slice. A machine-generated, unreviewed _draft_ whole-English track under `content/curated/` (`synthetic_fixture`) exists solely to prove the pipeline; it does not change product scope or the excluded-feature boundary.
 
 ## Purpose
 
