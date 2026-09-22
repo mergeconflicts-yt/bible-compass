@@ -194,14 +194,110 @@ def uncertain_person_slugs() -> set[str]:
 
 
 # ---------------------------------------------------------------------------
+# per-reference sense classification
+# ---------------------------------------------------------------------------
+#
+# A source verse link says "this verse involves name X". The sense of that
+# involvement is decided by X's own governing construction in the verse,
+# not by more whole-verse phrase lists. Three senses:
+#   group     — X denotes the tribe/people (tribal phrase, demonym, or an
+#               of-head distributed over an ellipsis coordination);
+#   territory — X denotes the land/kingdom (or its human king, who has his
+#               own entity): no curated collective denotes it;
+#   person    — X names the individual (bare narrative/genealogy use), or
+#               the verse gives no construction to judge by.
+# Bare-name refs stay on the person: a genealogy list genuinely names the
+# progenitor, and a narrative verse is about the man. Only an explicit
+# group/territory governing construction moves or drops a ref.
+
+_WORD = r"[A-Za-z'’\-]+"
+_CONJUNCT = r"(?:%s(?:\s*,\s*|\s+and\s+))*" % _WORD
+
+
+def _governed(heads: str, name: str) -> str:
+    """An of-head governing X, directly or across an ellipsis coordination.
+
+    Matches "sons of Judah", "children of Israel and of Judah", and
+    "tribes of Judah, Simeon, and Benjamin" (for X=Benjamin) alike, so a
+    coordinated conjunct is never misread as a bare-name person reference.
+    """
+    return r"\b(?:" + heads + r")\s+of\s+" + _CONJUNCT + r"(?:and\s+)?(?:of\s+)?" + name + r"\b"
+
+
+def sense_of_reference(
+    names: str | tuple[str, ...] | list[str],
+    text: str,
+    group_res: list,
+    territory_res: list,
+    nation_names: tuple[str, ...] = (),
+    nation_book: str | None = None,
+) -> tuple[str, str | None, int | None]:
+    """Classify one (name, verse-text) reference. Returns (sense, quote, start).
+
+    quote/start is the justifying surface span for group senses (retained so
+    the edition mention can anchor the exact phrase); otherwise (None, None).
+    A bare occurrence outside every group/territory span means the individual
+    is referenced somewhere in the verse, which wins over group phrases.
+
+    nation_names enables the nation backstop for names that double as the
+    nation (Israel): a bare token outside Genesis patriarchal narrative,
+    kinship lists, and the renaming formula denotes the nation, not the man.
+    The bare token itself is retained as the anchor.
+    """
+    if isinstance(names, str):
+        names = (names,)
+    group_spans: list[tuple[int, int, str]] = []
+    for pat in group_res:
+        for m in pat.finditer(text):
+            group_spans.append((m.start(), m.end(), m.group(0)))
+    territory_spans: list[tuple[int, int]] = []
+    for pat in territory_res:
+        for m in pat.finditer(text):
+            territory_spans.append((m.start(), m.end()))
+
+    def uncovered(token: str) -> list:
+        hits = []
+        for m in re.finditer(r"\b" + token + r"\b", text):
+            if any(s <= m.start() and m.end() <= e for s, e, _ in group_spans):
+                continue
+            if any(s <= m.start() and m.end() <= e for s, e in territory_spans):
+                continue
+            hits.append(m)
+        return hits
+
+    bare_person = False
+    for name in names:
+        if uncovered(name):
+            bare_person = True
+            break
+    if bare_person:
+        if nation_names and nation_book not in ("Gen",):
+            for token in nation_names:
+                for m in uncovered(token):
+                    if _nation_person_guard(token, text, m.start()):
+                        continue
+                    return "group", m.group(0), m.start()
+        return "person", None, None
+    if group_spans:
+        group_spans.sort(key=lambda t: (t[1] - t[0]), reverse=True)
+        return "group", group_spans[0][2], group_spans[0][0]
+    if territory_spans:
+        return "territory", None, None
+    return "person", None, None
+
+
+# ---------------------------------------------------------------------------
 # curated identity corrections and source enrichment
 # ---------------------------------------------------------------------------
 
-# BibleData names the apostle Paul "Saul" and the apostle Peter "Simon"; the
-# canonical preferred names are the names the church knows them by.
+# BibleData names the apostle Paul "Saul", the apostle Peter "Simon", and
+# Paul's fellow worker (Col 4:11) "Jesus"; the canonical preferred names are
+# the names the church knows them by. "Jesus Justus" keeps the Colossians
+# worker distinct from entity:jesus-christ (which carries the "Jesus" alias).
 PREFERRED_NAME_OVERRIDES: dict[str, str] = {
     "p-saul-2": "Paul",
     "p-simon-1": "Peter",
+    "p-jesus-1": "Jesus Justus",
 }
 
 # OpenBible identification ids (a15257a, m66c5b8, ...) are internal source
@@ -233,25 +329,96 @@ PROPER_NAME_LABEL = re.compile(r"^[A-Z][A-Za-z'\u2019-]*(?: [A-Z][A-Za-z'\u2019-
 
 # In the BSB text the surface "Israel" denotes the covenant people in these
 # phrases (not the patriarch Jacob): those references belong to the canonical
-# collective entity:israelites, never to entity:p-jacob-1.
+# collective entity:israelites, never to entity:p-jacob-1. Singular "tribe"
+# is included ("a thousand men from each tribe of Israel", Num 31:4).
+ISRAEL_OF_HEADS = (
+    r"people|children|sons|house|tribes|tribe|elders|men|generations|remnant|"
+    r"descendants|congregation|assembly|families|communities|princes|leaders|"
+    r"judges|officers|rulers|God|Holy One|"
+    r"Redeemer|Glory|Rock|Strength|Shepherd|Prince|Firstborn"
+)
+JACOB_OF_HEADS = (
+    r"house|descendants|offspring|tent|tribes|tribe|assembly|congregation"
+)
 ISRAEL_COLLECTIVE = re.compile(
-    r"\b(?:people|children|sons|house|tribes|elders|men|generations|remnant|"
-    r"descendants|congregation|assembly|families|communities|God|Holy One|"
-    r"Redeemer|Glory|Rock|Strength|Shepherd|Prince|Firstborn) of Israel\b"
-    r"|\ball Israel\b"
-    r"|\bIsraelites\b"
-    r"|\b(?:house|descendants|offspring|tent|tribes|tribe|assembly|"
-    r"congregation) of Jacob\b"
-    r"|\btribes? of the sons of Jacob\b"
-    r"|\boffspring of His servant Israel\b"
+    r"\b(?:" + ISRAEL_OF_HEADS + r") of Israel\b"
+    + r"|\ball Israel\b"
+    + r"|\bIsraelites\b"
+    + r"|\bO\s+(?:Israel|Jacob)\b"
+    + r"|\b(?:My|Your) people Israel\b"
+    + r"|\b(?:all|every)\s+(?:the\s+)?firstborn of Israel\b"
+    + r"|\b(?:" + JACOB_OF_HEADS + r") of Jacob\b"
+    + r"|\btribes? of the sons of Jacob\b"
+    + r"|\boffspring of His servant Israel\b"
+    + r"|" + _governed(ISRAEL_OF_HEADS, "Israel")
+    + r"|" + _governed(JACOB_OF_HEADS, "Jacob")
 )
 # These phrases use "Israel" for the territory, the kingdom, or its human
 # king: no patriarch (and no collective we curate) is the referent, so the
 # person reference is dropped.
-ISRAEL_NON_PERSON = re.compile(
-    r"\b(?:land|lands|cities|city|mountains|mountain|hills|borders|territory|"
-    r"coasts|wilderness|fields|kingdom|kings|king|days|streams|road|way) of Israel\b"
+ISRAEL_NON_PERSON_HEADS = (
+    r"land|lands|cities|city|mountains|mountain|hills|borders|territory|"
+    r"coasts|wilderness|fields|kingdom|kings|king|days|streams|road|way"
 )
+ISRAEL_NON_PERSON = re.compile(
+    r"\b(?:" + ISRAEL_NON_PERSON_HEADS + r") of Israel\b"
+    + r"|\b(?:throughout|through|across|around) Israel\b"
+    + r"|" + _governed(ISRAEL_NON_PERSON_HEADS, "Israel")
+)
+# Bare "Israel" outside Genesis patriarchal narrative denotes the nation,
+# not Jacob: "Israel did evil", "Israel journeyed". Bare "Jacob" outside
+# Genesis denotes the nation too ("restore Jacob", "Jacob will set it
+# ablaze"), except in kinship lists ("sons of Isaac: Esau and Israel"),
+# the patriarchal formula ("God of Abraham, Isaac, and Jacob"), servant
+# titles ("My servant Jacob"), motion-with scenes ("went to Egypt with
+# Jacob"), and the renaming formula ("whom He named Israel").
+NATION_KINSHIP_RE = re.compile(r"\b(?:son|sons|children|firstborn|seed|father|descended)\s+of\b")
+NATION_RENAME_RES = (
+    re.compile(r"Israel shall be your name"),
+    re.compile(r"\bcalled Israel\b"),
+    re.compile(r"\bnamed Israel\b"),
+    re.compile(r"\bnamed Jacob\b"),
+)
+NATION_PERSON_GUARDS = (
+    re.compile(r"\bGod of (?:Israel|Jacob)\b"),
+    re.compile(r"\b(?:My|His|Your|my|his|your)\s+servant\s+(?:Israel|Jacob)\b"),
+    re.compile(r"\b(?:Abraham|Isaac)\b"),
+)
+
+
+def _nation_person_guard(token: str, text: str, start: int) -> bool:
+    """True when a bare Israel/Jacob token still names the patriarch."""
+    window = text[max(0, start - 40) : start]
+    if NATION_KINSHIP_RE.search(window):
+        return True
+    if any(p.search(text) for p in NATION_RENAME_RES):
+        return True
+    if token == "Jacob":
+        # Servant titles, the God-of formula, and the patriarchal formula
+        # govern Jacob the man ("given to My servant Jacob", "the God of
+        # Jacob", "promised to Abraham, Isaac, and Jacob"). "God of Israel"
+        # is itself a group construction and must not guard Israel tokens.
+        governed = text[max(0, start - 40) : start + len(token)]
+        if any(p.search(governed) for p in NATION_PERSON_GUARDS):
+            return True
+    # Accompaniment ("went to Egypt with Jacob") names the man; the window
+    # is tight because instrumental "with" is everywhere.
+    if re.search(r"\b(?:with|accompanied|along with)\b.{0,12}$", window):
+        return True
+    # Apposition ("your father Jacob", "Jacob your father") names the man.
+    near = text[max(0, start - 12) : start + len(token) + 12]
+    if re.search(r"\bfather\b", near):
+        return True
+    # Biography ("worked for a wife", "Jacob fled", "blessed Jacob and
+    # Esau" is formula-covered) names the man, not the nation.
+    after = text[start : start + len(token) + 16]
+    if re.search(r"\b(?:wife|husband|married|marry|wedding)\b", after):
+        return True
+    if token == "Jacob" and re.search(
+        r"\b(?:fled|flee|fleeing|flight)\b", text[max(0, start - 16) : start + len(token) + 16]
+    ):
+        return True
+    return False
 
 # Patriarchs whose BibleData person refs conflate the individual with the
 # tribe (and sometimes the territory) named for him. Demonym spellings are
@@ -277,21 +444,27 @@ TRIBE_PEOPLES: dict[str, tuple[str, ...]] = {
 
 # Territorial phrases denote the land/kingdom (or its human king, who has his
 # own entity): no curated collective denotes them, so the person ref is
-# dropped rather than remapped.
+# dropped rather than remapped. Stick/staff/hand are tribal metonyms
+# ("the stick of Joseph", Ezek 37:19; "into the hand of Benjamin" = into
+# their power): they govern a group sense, never a bare person.
 _TRIBE_TERRITORY_HEADS = (
     r"land|lands|territory|territories|cities|city|mount|mountains|mountain|"
     r"hills|borders|coasts|wilderness|fields|kingdom|kings|king"
 )
-_TRIBE_FAMILY_HEADS = r"sons|children|descendants|house|people|men"
+_TRIBE_FAMILY_HEADS = (
+    r"sons|children|descendants|house|people|men|"
+    r"stick|sticks|staff|staves|hand"
+)
 
 
 def _tribe_matchers(name: str, demonyms: tuple[str, ...]) -> tuple[re.Pattern, re.Pattern, re.Pattern]:
-    tribal = re.compile(r"\b(?:half-tribe|tribes|tribe) of " + name + r"\b")
+    tribal = re.compile(_governed(r"half-tribe|tribes|tribe", name))
     group = re.compile(
-        r"\b(?:" + _TRIBE_FAMILY_HEADS + r") of " + name + r"\b"
+        _governed(_TRIBE_FAMILY_HEADS, name)
+        + r"|\ball " + name + r"\b"
         + (r"|\b(?:" + "|".join(demonyms) + r")\b" if demonyms else "")
     )
-    territory = re.compile(r"\b(?:" + _TRIBE_TERRITORY_HEADS + r") of " + name + r"\b")
+    territory = re.compile(_governed(_TRIBE_TERRITORY_HEADS, name))
     return tribal, group, territory
 
 
@@ -303,7 +476,19 @@ def load_verse_texts(books: list[dict]) -> dict[tuple[str, int, int], str]:
     return texts
 
 
-def redirect_collective_israel(persons: dict, places: dict, verse_texts: dict) -> dict:
+def redirect_collective_israel(
+    persons: dict,
+    places: dict,
+    verse_texts: dict,
+    surfaces: dict | None = None,
+) -> dict:
+    """Move covenant-people refs from Jacob the person to the Israelites.
+
+    Each (p-jacob-1, verse) reference is sense-classified by its own
+    governing construction; the justifying phrase is retained so the
+    edition mention anchors it. Bare "Jacob"/"Israel" narrative and
+    genealogy refs stay on the person.
+    """
     jacob = persons.get("p-jacob-1")
     israel = places.setdefault(
         "israelites",
@@ -316,20 +501,40 @@ def redirect_collective_israel(persons: dict, places: dict, verse_texts: dict) -
             "evidence": "evidence:locked-neh2:israelites",
         },
     )
+    group_res = [ISRAEL_COLLECTIVE]
+    territory_res = [ISRAEL_NON_PERSON]
     moved = dropped = 0
     keep: set = set()
     for ref in jacob["refs"] if jacob else ():
         text = verse_texts.get(ref, "")
-        if ISRAEL_COLLECTIVE.search(text):
+        sense, quote, start = sense_of_reference(
+            ("Israel", "Jacob"), text, group_res, territory_res,
+            nation_names=("Israel", "Jacob"), nation_book=ref[0],
+        )
+        if sense == "group":
             israel["refs"].add(ref)
+            if surfaces is not None and quote is not None and start is not None:
+                surfaces[("israelites", ref[0], ref[1], ref[2])] = (quote, start)
             moved += 1
-        elif ISRAEL_NON_PERSON.search(text):
+        elif sense == "territory":
             dropped += 1
         else:
             keep.add(ref)
     if jacob:
         jacob["refs"] = keep
-    israel["aliases"].add("Israelites")
+    israel["aliases"].update(
+        {
+            "Israelites",
+            "sons of Israel",
+            "children of Israel",
+            "people of Israel",
+            "house of Israel",
+            "men of Israel",
+            "tribes of Israel",
+            "tribe of Israel",
+            "all Israel",
+        }
+    )
     return {"moved_to_israelites": moved, "dropped_non_person": dropped}
 
 
@@ -356,18 +561,22 @@ def drop_source_id_aliases(places: dict, source_ids: set[str] | None = None) -> 
 
 
 def redirect_tribal_collectives(
-    persons: dict, places: dict, verse_texts: dict
+    persons: dict,
+    places: dict,
+    verse_texts: dict,
+    surfaces: dict | None = None,
 ) -> dict:
     """Remap patriarch person refs that denote the tribe or its territory.
 
     For every person entry named for a tribe head (Reuben ... Manasseh),
-    each referenced verse is classified by its BSB text:
-      * "tribe of X" / "half-tribe of X", "sons/children/descendants/house/
-        people/men of X", or an attested X-ites demonym -> the canonical
-        tribe collective entity:tribe-of-x (created on first use);
-      * "land/cities/kingdom/kings/... of X" -> the territory or its human
-        king, which no curated entity denotes -> the person ref is dropped;
-      * anything else (bare "X", narrative, genealogy) stays on the person.
+    each referenced verse is sense-classified by its own governing
+    construction (tribal phrase, demonym, family of-head with ellipsis
+    coordination, territorial phrase, or bare name). Group senses move to
+    the canonical tribe collective entity:tribe-of-x (created on first
+    use) with the justifying phrase retained for the edition mention;
+    territorial senses (land/kingdom/kings of X, which no curated entity
+    denotes) are dropped. Bare "X" narrative and genealogy refs stay on
+    the person.
     Refs that a same-named place entry also claims (e.g. the city Dan in
     "from Dan to Beersheba") are the place's, so the person ref is dropped.
     Returns per-tribe moved/dropped counts for the run report.
@@ -378,9 +587,22 @@ def redirect_tribal_collectives(
     }
     place_refs_by_name: dict[str, set] = collections.defaultdict(set)
     for entry in places.values():
-        name = (entry.get("name") or "").strip().lower()
-        if name:
-            place_refs_by_name[name] |= set(entry.get("refs", set()))
+        entry_name = (entry.get("name") or "").strip().lower()
+        if entry_name:
+            place_refs_by_name[entry_name] |= set(entry.get("refs", set()))
+    # Family-phrase referring expressions are searchable aliases: the
+    # edition surface "sons of Judah" must resolve to the tribe even where
+    # the mention slot went to a longer overlapping span. Metonym-only
+    # surfaces (stick/staff/hand of X) anchor through retained mentions.
+    tribe_alias_forms: dict[str, set[str]] = {}
+    for tribe_name, tribe_demonyms in TRIBE_PEOPLES.items():
+        forms = {f"Tribe of {tribe_name}", f"tribe of {tribe_name}"}
+        forms.update(tribe_demonyms)
+        for head in ("sons", "children", "descendants", "house", "people", "men", "tribes", "half-tribe"):
+            forms.add(f"{head} of {tribe_name}")
+        for head in ("stick", "sticks", "staff", "staves", "hand"):
+            forms.add(f"{head} of {tribe_name}")
+        tribe_alias_forms[tribe_name] = forms
     stats: dict[str, dict[str, int]] = {}
     for slug, entry in persons.items():
         name = entry.get("name", "")
@@ -394,20 +616,26 @@ def redirect_tribal_collectives(
                 "slug": tribe_slug,
                 "type": "collective",
                 "name": f"Tribe of {name}",
-                "aliases": {f"tribe of {name}", *TRIBE_PEOPLES[name]},
+                "aliases": set(tribe_alias_forms[name]),
                 "refs": set(),
                 "evidence": f"evidence:queue:tribal-phrase:{tribe_slug}",
             },
         )
+        tribe["aliases"].update(tribe_alias_forms[name])
         key = f"tribe:{tribe_slug}"
         stat = stats.setdefault(key, {"moved": 0, "dropped_territory": 0, "dropped_place": 0, "kept": 0})
         keep: set = set()
         for ref in entry["refs"]:
             text = verse_texts.get(ref, "")
-            if tribal.search(text) or group.search(text):
+            sense, quote, start = sense_of_reference(
+                name, text, [tribal, group], [territory]
+            )
+            if sense == "group":
                 tribe["refs"].add(ref)
+                if surfaces is not None and quote is not None and start is not None:
+                    surfaces[(tribe_slug, ref[0], ref[1], ref[2])] = (quote, start)
                 stat["moved"] += 1
-            elif territory.search(text):
+            elif sense == "territory":
                 stat["dropped_territory"] += 1
             elif ref in place_refs_by_name.get(name.lower(), set()):
                 stat["dropped_place"] += 1
@@ -446,6 +674,162 @@ def add_label_aliases(persons: dict, person_labels: dict) -> int:
                 entry["aliases"].add(label)
                 added += 1
     return added
+
+
+# ---------------------------------------------------------------------------
+# divine identities: Jesus Christ, God, and the Holy Spirit
+# ---------------------------------------------------------------------------
+#
+# BibleData routes every divine reference through two person rows that the
+# generic person loader excludes: YHVH_1 (11k refs: Old Testament LORD/God
+# titles and New Testament Jesus titles) and YHVH_2 (the Father). Excluding
+# them drops Jesus Christ himself, so this step curates three canonical
+# identities from the same source links instead:
+#   entity:jesus-christ (person) — YHVH_1 refs labeled with Jesus/Christ
+#     names, plus ambiguous divine titles gated to New Testament books;
+#   entity:god (deity) — all other YHVH_1 refs and all YHVH_2 (Father) refs;
+#   entity:holy-spirit (deity) — verses whose BSB text carries an explicit
+#     Spirit surface ("Holy Spirit", "Spirit of God", "Spirit of the LORD").
+# Source labels use "G-d"/"G-D" orthography; aliases are transliterated to
+# the BSB surfaces ("God"/"GOD"). Generic titles (Lord, Son, King, Master,
+# ...) never become searchable aliases: refs carrying only those labels
+# still attest, but grade as inferred rather than anchoring a wrong surface.
+
+# Labels that unambiguously name Jesus (matched by substring).
+JESUS_NAME_LABELS = ("Jesus", "Christ")
+
+# Ambiguous divine titles, resolved by testament. New Testament use names
+# Jesus; Old Testament "Lord"/"King"/"Savior" name YHWH (God). Any other
+# Old Testament occurrence has no curated referent and is dropped.
+NT_JESUS_TITLES = frozenset(
+    {
+        "Lord", "Son", "Son of Man", "Son of G-d", "Master", "Teacher",
+        "Rabbi", "Lamb", "Savior", "Nazarene", "Son of David",
+        "King of the Jews", "King",
+    }
+)
+OT_GOD_TITLES = frozenset({"Lord", "King", "Savior"})
+
+# Proper-name Jesus surfaces admitted as searchable aliases (distinctive
+# multi-word or unambiguous forms only; generic "Lord"/"Son" excluded).
+JESUS_ALIASES = (
+    "Jesus", "Jesus Christ", "Christ", "Christ Jesus", "Lord Jesus Christ",
+    "Lord Jesus", "Son of Man", "Son of God", "Son of David", "Nazarene",
+    "King of the Jews",
+)
+
+# Distinctive God surfaces admitted as searchable aliases. Generic or
+# human-colliding forms (Lord, Son, King, Rock, Master, Light, ...) are
+# excluded: their refs attest without an anchor and grade as inferred.
+GOD_ALIASES = (
+    "LORD", "God", "GOD", "LORD God", "Lord GOD", "LORD of Hosts",
+    "Lord GOD of Hosts", "God of Israel", "God of heaven", "God of Jacob",
+    "God of Hosts", "Almighty", "Most High", "Holy One",
+    "Holy One of Israel", "Maker", "Redeemer", "Savior", "Father",
+)
+
+SPIRIT_SURFACES = ("Holy Spirit", "Spirit of God", "Spirit of the LORD")
+
+
+def _transliterate_divine(label: str) -> str:
+    return label.replace("G-D", "GOD").replace("G-d", "God")
+
+
+def curate_divine_identities(
+    persons: dict,
+    places: dict,
+    person_labels: dict,
+    books: list[dict],
+    verse_texts: dict,
+    surfaces: dict | None = None,
+) -> dict:
+    """Build the Jesus / God / Holy Spirit entries from source links.
+
+    Returns counts for the run report. Jesus refs are labeled per-verse by
+    the source; Spirit refs come from explicit BSB surfaces (recorded for
+    mention anchoring like any other retained surface).
+    """
+    jesus_refs: set = set()
+    god_refs: set = set()
+    jesus_labels: set = set()
+    path = QUARANTINE / "bibledata" / "BibleData-PersonVerse.csv"
+    if path.exists():
+        with path.open(encoding="utf-8-sig", newline="") as fh:
+            for row in csv.DictReader(fh):
+                pid = (row.get("person_id") or "").strip()
+                if pid not in ("YHVH_1", "YHVH_2"):
+                    continue
+                ref = (row.get("reference_id") or "").strip()
+                label = (row.get("person_label") or "").strip()
+                parts = ref.split(" ")
+                if len(parts) != 2 or ":" not in parts[1]:
+                    continue
+                bsb_code, cv = parts
+                ch, _, vs = cv.partition(":")
+                if not ch.isdigit() or not vs.isdigit():
+                    continue
+                osis = cwb.BSB_TO_OSIS.get(bsb_code, bsb_code)
+                parsed = (osis, int(ch), int(vs))
+                if pid == "YHVH_2":
+                    god_refs.add(parsed)
+                    continue
+                if any(n in label for n in JESUS_NAME_LABELS):
+                    jesus_refs.add(parsed)
+                    if label:
+                        jesus_labels.add(label)
+                elif label in NT_JESUS_TITLES:
+                    testament = canon_order.TESTAMENT_BY_OSIS.get(osis)
+                    if testament == "NT":
+                        jesus_refs.add(parsed)
+                        if label:
+                            jesus_labels.add(label)
+                    elif label in OT_GOD_TITLES:
+                        god_refs.add(parsed)
+                else:
+                    god_refs.add(parsed)
+    jesus_aliases = set(JESUS_ALIASES) - {"Jesus Christ"}
+    persons["jesus-christ"] = {
+        "slug": "jesus-christ",
+        "type": "person",
+        "name": "Jesus Christ",
+        "aliases": jesus_aliases,
+        "refs": jesus_refs,
+    }
+    person_labels["jesus-christ"] = set(jesus_aliases)
+    places["god"] = {
+        "slug": "god",
+        "type": "deity",
+        "name": "God",
+        "aliases": set(GOD_ALIASES),
+        "refs": god_refs,
+        "evidence": "evidence:bibledata:YHVH",
+    }
+    spirit_refs: set = set()
+    bound = r"(?<![A-Za-z0-9])(?:%s)(?![A-Za-z0-9])" % "|".join(
+        re.escape(s) for s in SPIRIT_SURFACES
+    )
+    spirit_pat = re.compile(bound)
+    for (osis, ch, v), text in verse_texts.items():
+        m = spirit_pat.search(text)
+        if m is None:
+            continue
+        ref = (osis, ch, v)
+        spirit_refs.add(ref)
+        if surfaces is not None:
+            surfaces[("holy-spirit", osis, ch, v)] = (m.group(0), m.start())
+    places["holy-spirit"] = {
+        "slug": "holy-spirit",
+        "type": "deity",
+        "name": "Holy Spirit",
+        "aliases": {"Spirit of God", "Spirit of the LORD"},
+        "refs": spirit_refs,
+        "evidence": "evidence:queue:divine-surface:holy-spirit",
+    }
+    return {
+        "jesus_refs": len(jesus_refs),
+        "god_refs": len(god_refs),
+        "spirit_refs": len(spirit_refs),
+    }
 
 
 def load_person_extras() -> dict[str, dict]:
@@ -1008,14 +1392,19 @@ def enrich_book_data(
         first = entry.get("first_reference", "Scripture")
         last = entry.get("last_reference", "Scripture")
         if ekey in person_entity_keys:
-            kind = "person"
+            kind_word: str | None = "person"
         elif entry.get("type") == "collective":
-            kind = "people"
+            kind_word = "people"
+        elif entry.get("type") == "deity":
+            kind_word = None
         else:
-            kind = "place"
+            kind_word = "place"
         span = first if first == last else f"{first}\u2013{last}"
-        fallback = f"{prof['preferred_name']} is a {kind} named in Scripture ({span})."
-        if kind == "person" and person_extras is not None:
+        if kind_word is None:
+            fallback = f"{prof['preferred_name']} is named in Scripture ({span})."
+        else:
+            fallback = f"{prof['preferred_name']} is a {kind_word} named in Scripture ({span})."
+        if kind_word == "person" and person_extras is not None:
             extra = person_extras.get(slug, {})
             uniq = (extra.get("unique_attribute") or "").strip().rstrip("?").strip()
             tribe = (extra.get("tribe") or "").strip()
@@ -1068,6 +1457,10 @@ def enrich_book_data(
         {
             "code": "machine-generated-draft",
             "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json).",
+        },
+        {
+            "code": "segmentation-source",
+            "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph.",
         },
         {
             "code": "events-projected-from-headings",
@@ -1485,10 +1878,9 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
         # Explicit, per-annotation-class verse coverage. complete_zero is only
         # ever claimed for a class that was actually attempted; classes no
         # input produces are reported as not_attempted, never as zero. The
-        # canonical_entity_attestation class covers persons, places and
-        # collectives only: deity references are excluded by design (see
-        # canonical_deity_attestation in not_attempted_annotation_classes),
-        # so a complete_zero verse may still mention God.
+        # canonical_entity_attestation class covers persons, places,
+        # collectives and deities; an attestation without a verifiable
+        # edition surface is graded inferred, never explicit.
         def class_counts(layer: str) -> tuple[int, int]:
             zero = records = 0
             for block in data[layer]["coverage"]:
@@ -1582,7 +1974,6 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
         "canonical_term",
         "canonical_theme",
         "canonical_chronology",
-        "canonical_deity_attestation",
         "historical_context",
         "localized_entity_name",
         "map_timeline_projection",
@@ -1611,11 +2002,12 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
         "not_attempted_note": (
             "Objects, roles, practices, lexical terms, themes, chronology and "
             "meaningful historical context are required by the curation spec but "
-            "no approved input or pipeline produces them yet. Deity references "
-            "are likewise not curated: the person loader excludes God/YHWH by "
-            "design, so canonical_entity_attestation covers persons, places "
-            "and collectives only. Verses are NOT claimed complete for the "
-            "not_attempted classes, including verses that mention God."
+            "no approved input or pipeline produces them yet. Divine references "
+            "are curated from the BibleData YHWH source links (God, Jesus "
+            "Christ) and explicit BSB Spirit surfaces; verses whose only "
+            "deity surface is an unlisted epithet carry an inferred "
+            "attestation without an anchor. Verses are NOT claimed complete "
+            "for the not_attempted classes."
         ),
         "books": books_out,
     }
@@ -1653,21 +2045,33 @@ def main() -> int:
     )
 
     # Curated identity corrections over the reconciled entity set.
+    # retained_surfaces carries each disambiguation's justifying phrase
+    # forward so the edition mention anchors it (blocker 4).
     verse_texts = load_verse_texts(books)
-    collective = redirect_collective_israel(persons, places, verse_texts)
-    tribal = redirect_tribal_collectives(persons, places, verse_texts)
+    retained_surfaces: dict[tuple[str, str, int, int], tuple[str, int]] = {}
+    collective = redirect_collective_israel(persons, places, verse_texts, retained_surfaces)
+    tribal = redirect_tribal_collectives(persons, places, verse_texts, retained_surfaces)
+    divine = curate_divine_identities(
+        persons, places, person_labels, books, verse_texts, retained_surfaces
+    )
     source_ids = load_source_identification_ids()
     source_id_aliases_dropped = drop_source_id_aliases(places, source_ids)
     apply_preferred_names(persons)
     label_aliases_added = add_label_aliases(persons, person_labels)
     person_extras = load_person_extras()
+    # The God profile carries BibleData's own identifying attribute for the
+    # YHWH source row (the loader excludes YHVH rows from person extras).
+    person_extras.setdefault("god", {}).setdefault(
+        "unique_attribute", "Holy, Holy, Holy (ISA 6:3)"
+    )
     place_comments = load_place_comments()
+    uncertain = uncertain_person_slugs()
     valid_refs = {
         (b["osis"], c, v)
         for b in books
         for c, v, _ in cwb.book_verse_index(b)
     }
-    registry = cwb.build_registry(persons, places, valid_refs)
+    registry = cwb.build_registry(persons, places, valid_refs, uncertain)
     registry_by_slug = {e["slug"]: e for e in registry["entities"]}
     registry_keys = {f"entity:{slug}" for slug in registry_by_slug}
 
@@ -1703,7 +2107,6 @@ def main() -> int:
     for c in locked["canonical"]["records"]["entity_candidates"]:
         bridged_candidates[c["candidate_key"].split(":")[-1]] = c
 
-    uncertain = uncertain_person_slugs()
     knowledge_digest = cwb.sha256_file(KNOWLEDGE)
 
     selected = set(args.books) if args.books else set(books_by_osis)
@@ -1749,7 +2152,8 @@ def main() -> int:
 
         if need_generate:
             data = cwb.generate_book(
-                book, persons, person_labels, places, knowledge_books, registry_digest, cfg, None
+                book, persons, person_labels, places, knowledge_books, registry_digest, cfg, None,
+                retained_surfaces,
             )
             verse_text = {(c, v): t for c, v, t in cwb.book_verse_index(book)}
             data = enrich_book_data(

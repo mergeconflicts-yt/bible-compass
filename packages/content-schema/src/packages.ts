@@ -207,7 +207,14 @@ const pkgClaimSubjectSchema = z.discriminatedUnion("type", [
 const pkgClaimObjectSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("entity"), key: entityKeySchema }).strict(),
   z.object({ type: z.literal("scope"), key: scopeKeySchema }).strict(),
-  z.object({ type: z.literal("text"), value: z.string().min(1) }).strict(),
+  // Canonical-layer prose is never untagged: a text object always carries
+  // the language of its value so localized text cannot leak into the
+  // shared graph unmarked. New text objects must set value_language_tag.
+  z.object({
+    type: z.literal("text"),
+    value: z.string().min(1),
+    value_language_tag: z.enum(["en", "te", "ta"]).optional(),
+  }).strict(),
   z.object({ type: z.literal("number"), value: z.number() }).strict(),
   z.object({ type: z.literal("date_range"), key: z.string().min(1) }).strict(),
   z.object({ type: z.literal("geometry"), key: z.string().min(1) }).strict(),
@@ -220,7 +227,11 @@ export const pkgEntityCandidateSchema = z
   .object({
     candidate_key: candidateKeySchema,
     entity_type: entityTypeSchema,
+    // Source-derived display string. The locale layer owns localized
+    // display names; the tag records which language this label is in so
+    // canonical consumers never treat it as localized content.
     proposed_label: z.string().min(1),
+    label_language_tag: z.enum(["en", "te", "ta"]).optional(),
     possible_existing_entity_keys: z.array(entityKeySchema),
     identifying_claim_keys: z.array(claimKeySchema),
     resolution_status: z.literal("unresolved"),

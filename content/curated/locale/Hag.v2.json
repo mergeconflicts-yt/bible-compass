@@ -72,7 +72,7 @@
     {
       "package_key": "draft:wb-hag-canonical",
       "revision": 1,
-      "digest": "sha256:234ee6eafd01f9a7866694bd6a89b793bb94d95bffe65355c83b4fc09159b569"
+      "digest": "sha256:07b08ff2fb900663942a6758a632af5caa7bf7249a3afa5cc6b1826049f94bde"
     }
   ],
   "records": {
@@ -148,9 +148,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -191,7 +191,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Egypt.",
+            "text": "Places in this chapter: Egypt, God.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -234,9 +234,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-1-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -277,9 +277,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-1-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -320,7 +320,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Egypt.",
+            "text": "Places in this passage: Egypt, God.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -363,9 +363,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-2-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -406,9 +406,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-2-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -549,6 +549,26 @@
         "role_text": "Named in Haggai 2 at verse(s) 5.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-hag-1-god",
+        "relevance_key": "relevance:wb-hag-1-god",
+        "scope_key": "scope:wb-hag-1:refsys:eng-v22:hag.1.1-hag.1.15",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Haggai 1 at verse(s) 1, 2, 3, 5, 7, 8, 9, 12, 13, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-hag-2-god",
+        "relevance_key": "relevance:wb-hag-2-god",
+        "scope_key": "scope:wb-hag-2:refsys:eng-v22:hag.2.1-hag.2.23",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Haggai 2 at verse(s) 1, 4, 6, 7, 8, 9, 10, 11, 14, 15, 17, 18, among others.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -590,25 +610,20 @@
             "question:wb-context-en-wb-hag-1-p1-before",
             "question:wb-context-en-wb-hag-1-p1-stakes",
             "question:wb-context-en-wb-hag-1-p1-when",
-            "question:wb-context-en-wb-hag-1-p1-where",
             "question:wb-context-en-wb-hag-1-p2-before",
             "question:wb-context-en-wb-hag-1-p2-stakes",
             "question:wb-context-en-wb-hag-1-p2-when",
-            "question:wb-context-en-wb-hag-1-p2-where",
             "question:wb-context-en-wb-hag-1-stakes",
             "question:wb-context-en-wb-hag-1-when",
-            "question:wb-context-en-wb-hag-1-where",
             "question:wb-context-en-wb-hag-2-p1-before",
             "question:wb-context-en-wb-hag-2-p1-stakes",
             "question:wb-context-en-wb-hag-2-p1-when",
             "question:wb-context-en-wb-hag-2-p2-before",
             "question:wb-context-en-wb-hag-2-p2-stakes",
             "question:wb-context-en-wb-hag-2-p2-when",
-            "question:wb-context-en-wb-hag-2-p2-where",
             "question:wb-context-en-wb-hag-2-p3-before",
             "question:wb-context-en-wb-hag-2-p3-stakes",
             "question:wb-context-en-wb-hag-2-p3-when",
-            "question:wb-context-en-wb-hag-2-p3-where",
             "question:wb-context-en-wb-hag-2-stakes",
             "question:wb-context-en-wb-hag-2-when"
           ]
@@ -617,14 +632,6 @@
     }
   ],
   "open_questions": [
-    {
-      "question_key": "question:wb-context-en-wb-hag-1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
     {
       "question_key": "question:wb-context-en-wb-hag-1-when",
       "question_type": "uncertain_date",
@@ -658,14 +665,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-hag-1-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-1-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-hag-1-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-hag-1-p1",
@@ -687,14 +686,6 @@
       "record_key": "context:en:wb-hag-1-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-hag-1-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-1-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -746,14 +737,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-hag-2-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-2-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-hag-2-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-hag-2-p2",
@@ -775,14 +758,6 @@
       "record_key": "context:en:wb-hag-2-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-hag-2-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-2-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

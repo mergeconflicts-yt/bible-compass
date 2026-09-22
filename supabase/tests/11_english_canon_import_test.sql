@@ -229,12 +229,133 @@ BEGIN
   JOIN private_staging.translation_editions ed ON ed.id = v.edition_id
   WHERE e.key = 'entity:p-jacob-1'
     AND ed.key = 'edition:bsb@20260912:sha-b2898c49'
-    AND (v.text ~ '\y(people|children|sons|house|tribes|elders|men|generations|remnant|descendants|congregation|assembly|families|communities|God|Holy One|Redeemer|Glory|Rock|Strength|Shepherd|Prince|Firstborn) of Israel\y'
-      OR v.text ~ '\yall Israel\y|\yIsraelites\y'
+    AND (v.text ~ '\y(people|children|sons|house|tribes|tribe|elders|men|generations|remnant|descendants|congregation|assembly|families|communities|princes|leaders|judges|officers|rulers|God|Holy One|Redeemer|Glory|Rock|Strength|Shepherd|Prince|Firstborn) of Israel\y'
+      OR v.text ~ '\yall Israel\y|\yIsraelites\y|\yO Israel\y'
       OR v.text ~ '\y(house|descendants|offspring|tent|tribes|tribe|assembly|congregation) of Jacob\y'
       OR v.text ~ '\ytribes? of the sons of Jacob\y'
-      OR v.text ~ '\yoffspring of His servant Israel\y');
-  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % Jacob attestations on collective-phrase verses', n; END IF;
+      OR v.text ~ '\yoffspring of His servant Israel\y')
+    -- Mixed verses that genuinely name Jacob (genealogy, renaming formula,
+    -- patriarchal address) keep their person attestation by design; only a
+    -- Jacob-less group verse must never target him.
+    AND v.text !~ '\yJacob\y'
+    AND v.text !~ 'Israel shall be your name|\ynamed Israel\b|\ycalled Israel\b';
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % Jacob attestations on Jacob-less group verses', n; END IF;
+  -- The cited sense cases resolve to the group in full.
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE (e.key = 'entity:p-jacob-1' AND u.local_key IN ('hos.1.11', 'num.31.4', 'num.31.5', 'judg.3.8'))
+     OR (e.key = 'entity:p-judah-1' AND u.local_key IN ('jer.32.30', 'ezek.37.19', 'rev.7.5'))
+     OR (e.key IN ('entity:p-joseph-1', 'entity:p-ephraim-1') AND u.local_key = 'ezek.37.19');
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % cited-verse attestations still target patriarchs', n; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE (e.key = 'entity:israelites' AND u.local_key IN ('hos.1.11', 'num.31.4', 'num.31.5', 'judg.3.8', 'ezek.39.25', 'mic.1.5', 'obad.1.18'))
+     OR (e.key = 'entity:tribe-of-judah' AND u.local_key IN ('jer.32.30', 'ezek.37.19'));
+  IF n <> 9 THEN RAISE EXCEPTION 'FAIL: cited-verse group attestations = % (expected 9)', n; END IF;
+END $$;
+
+-- 6e. Central identities exist with anchored references: Jesus Christ
+-- (person), God (deity), and the Holy Spirit (deity) attest and anchor
+-- their explicit surfaces; corrected identities keep their mentions.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n FROM private_staging.entities
+  WHERE key = 'entity:jesus-christ' AND type = 'person' AND identification_status = 'established';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: entity:jesus-christ missing or mistyped'; END IF;
+  SELECT count(*) INTO n FROM private_staging.entities
+  WHERE key = 'entity:god' AND type = 'deity' AND identification_status = 'established';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: entity:god missing or mistyped'; END IF;
+  SELECT count(*) INTO n FROM private_staging.entities
+  WHERE key = 'entity:holy-spirit' AND type = 'deity' AND identification_status = 'established';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: entity:holy-spirit missing or mistyped'; END IF;
+
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE e.key = 'entity:god' AND u.local_key = 'gen.1.1' AND a.explicitness = 'explicit';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: Gen 1:1 has no explicit God attestation'; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.edition_mentions m
+  JOIN private_staging.entities e ON e.id = m.entity_id
+  JOIN private_staging.translation_edition_verses v ON v.id = m.verse_id
+  JOIN private_staging.scripture_works w ON w.id = v.book_id
+  WHERE e.key = 'entity:god' AND w.osis_code = 'Gen' AND v.chapter = 1 AND v.verse_number = 1
+    AND m.quote = 'God';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: Gen 1:1 has no anchored God mention'; END IF;
+
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  JOIN private_staging.reference_units u ON u.id = a.reference_unit_id
+  WHERE e.key = 'entity:jesus-christ' AND u.local_key = 'matt.1.1' AND a.explicitness = 'explicit';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: Matt 1:1 has no explicit Jesus attestation'; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.edition_mentions m
+  JOIN private_staging.entities e ON e.id = m.entity_id
+  JOIN private_staging.translation_edition_verses v ON v.id = m.verse_id
+  JOIN private_staging.scripture_works w ON w.id = v.book_id
+  WHERE e.key = 'entity:jesus-christ' AND w.osis_code = 'Matt' AND v.chapter = 1 AND v.verse_number = 1
+    AND m.quote = 'Jesus Christ';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: Matt 1:1 has no anchored Jesus mention'; END IF;
+
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  JOIN private_staging.entities e ON e.id = a.entity_id
+  WHERE e.key = 'entity:holy-spirit';
+  IF n < 100 THEN RAISE EXCEPTION 'FAIL: only % Holy Spirit attestations', n; END IF;
+
+  -- Corrected identities anchor their disambiguating phrases.
+  SELECT count(*) INTO n
+  FROM private_staging.edition_mentions m
+  JOIN private_staging.entities e ON e.id = m.entity_id
+  WHERE e.key = 'entity:israelites' AND m.quote IN ('people of Israel', 'generations of Israel')
+    AND m.form = 'collective';
+  IF n < 2 THEN RAISE EXCEPTION 'FAIL: Israelites retained-phrase mentions = %', n; END IF;
+  SELECT count(*) INTO n
+  FROM private_staging.edition_mentions m
+  JOIN private_staging.entities e ON e.id = m.entity_id
+  JOIN private_staging.translation_edition_verses v ON v.id = m.verse_id
+  JOIN private_staging.scripture_works w ON w.id = v.book_id
+  WHERE e.key = 'entity:tribe-of-judah' AND w.osis_code = 'Num' AND v.chapter = 1 AND v.verse_number = 26
+    AND m.quote = 'sons of Judah';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: Num 1:26 has no anchored tribe-of-Judah mention'; END IF;
+END $$;
+
+-- 6f. Attestation grading is honest and unresolved identities stay
+-- proposed: unanchored references grade inferred, and the eleven
+-- source-uncertain persons (e.g. Sheshbazzar) are never established.
+DO $$
+DECLARE
+  n integer;
+BEGIN
+  SELECT count(*) INTO n FROM private_staging.reference_entity_attestations
+  WHERE explicitness = 'inferred';
+  IF n < 1000 THEN RAISE EXCEPTION 'FAIL: only % inferred attestations', n; END IF;
+  -- Honesty property: every explicit attestation is anchored by an edition
+  -- mention over the same entity and verse. Reviewed locked grades
+  -- (strongly_implied) and inferred rows are legitimate as-is.
+  SELECT count(*) INTO n
+  FROM private_staging.reference_entity_attestations a
+  WHERE a.explicitness = 'explicit'
+    AND NOT EXISTS (
+      SELECT 1 FROM private_staging.edition_mentions m
+      JOIN private_staging.translation_edition_verses v ON v.id = m.verse_id
+      WHERE m.entity_id = a.entity_id AND v.reference_unit_id = a.reference_unit_id
+    );
+  IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % explicit attestations without an anchor', n; END IF;
+  SELECT count(*) INTO n FROM private_staging.entities
+  WHERE key = 'entity:p-sheshbazzar-1' AND identification_status = 'proposed';
+  IF n <> 1 THEN RAISE EXCEPTION 'FAIL: Sheshbazzar is not recorded as proposed'; END IF;
+  SELECT count(*) INTO n FROM private_staging.entities
+  WHERE identification_status = 'proposed';
+  IF n <> 11 THEN RAISE EXCEPTION 'FAIL: proposed entities = % (expected 11)', n; END IF;
 END $$;
 
 -- 7. Draft-only.

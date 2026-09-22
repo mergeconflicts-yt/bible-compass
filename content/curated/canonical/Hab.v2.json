@@ -93,7 +93,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
+      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
     }
   ],
   "records": {
@@ -102,6 +102,7 @@
         "candidate_key": "candidate:wb:p-habakkuk-1",
         "entity_type": "person",
         "proposed_label": "Habakkuk",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -111,6 +112,7 @@
         "candidate_key": "candidate:wb:pl-cushan-a567e0e",
         "entity_type": "place",
         "proposed_label": "Cushan",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -145,8 +147,8 @@
         "reference_key": "verse:Hab.1.6",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -199,6 +201,126 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-1-2",
+        "reference_key": "verse:Hab.1.2",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-1-12",
+        "reference_key": "verse:Hab.1.12",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-2-2",
+        "reference_key": "verse:Hab.2.2",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-2-13",
+        "reference_key": "verse:Hab.2.13",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-2-14",
+        "reference_key": "verse:Hab.2.14",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-2-16",
+        "reference_key": "verse:Hab.2.16",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-2-20",
+        "reference_key": "verse:Hab.2.20",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-3-2",
+        "reference_key": "verse:Hab.3.2",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-3-3",
+        "reference_key": "verse:Hab.3.3",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-3-8",
+        "reference_key": "verse:Hab.3.8",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-3-18",
+        "reference_key": "verse:Hab.3.18",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hab-god-3-19",
+        "reference_key": "verse:Hab.3.19",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -207,6 +329,7 @@
         "event_key": "event:wb-hab-1-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
+          "entity:god",
           "entity:p-habakkuk-1"
         ],
         "place_entity_keys": [],
@@ -236,9 +359,43 @@
         "review_status": "draft"
       },
       {
+        "event_key": "event:wb-hab-1-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:god"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-hab-1-p3:refsys:eng-v22:hab.1.12-hab.1.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-hab-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:god"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-hab-2-p1:refsys:eng-v22:hab.2.1-hab.2.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "event_key": "event:wb-hab-2-p2",
         "event_type": "narrative",
-        "participant_entity_keys": [],
+        "participant_entity_keys": [
+          "entity:god"
+        ],
         "place_entity_keys": [
           "entity:pl-lebanon-a730058"
         ],
@@ -255,6 +412,7 @@
         "event_key": "event:wb-hab-3-p1",
         "event_type": "prayer",
         "participant_entity_keys": [
+          "entity:god",
           "entity:p-habakkuk-1"
         ],
         "place_entity_keys": [
@@ -266,6 +424,22 @@
         "scripture_accounts": [
           {
             "scope_key": "scope:wb-hab-3-p1:refsys:eng-v22:hab.3.1-hab.3.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-hab-3-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:god"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-hab-3-p2:refsys:eng-v22:hab.3.17-hab.3.19",
             "relation": "reports"
           }
         ],
@@ -358,9 +532,41 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-1-god",
+        "scope_key": "scope:wb-hab-1:refsys:eng-v22:hab.1.1-hab.1.17",
+        "entity_key": "entity:god",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-2-god",
+        "scope_key": "scope:wb-hab-2:refsys:eng-v22:hab.2.1-hab.2.20",
+        "entity_key": "entity:god",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hab-3-god",
+        "scope_key": "scope:wb-hab-3:refsys:eng-v22:hab.3.1-hab.3.19",
+        "entity_key": "entity:god",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:god",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:p-habakkuk-1",
         "resolution_status": "resolved_existing",
@@ -407,13 +613,11 @@
           "reference_keys": [
             "verse:Hab.1.10",
             "verse:Hab.1.11",
-            "verse:Hab.1.12",
             "verse:Hab.1.13",
             "verse:Hab.1.14",
             "verse:Hab.1.15",
             "verse:Hab.1.16",
             "verse:Hab.1.17",
-            "verse:Hab.1.2",
             "verse:Hab.1.3",
             "verse:Hab.1.4",
             "verse:Hab.1.5",
@@ -424,14 +628,9 @@
             "verse:Hab.2.10",
             "verse:Hab.2.11",
             "verse:Hab.2.12",
-            "verse:Hab.2.13",
-            "verse:Hab.2.14",
             "verse:Hab.2.15",
-            "verse:Hab.2.16",
             "verse:Hab.2.18",
             "verse:Hab.2.19",
-            "verse:Hab.2.2",
-            "verse:Hab.2.20",
             "verse:Hab.2.3",
             "verse:Hab.2.4",
             "verse:Hab.2.5",
@@ -447,13 +646,9 @@
             "verse:Hab.3.15",
             "verse:Hab.3.16",
             "verse:Hab.3.17",
-            "verse:Hab.3.18",
-            "verse:Hab.3.19",
-            "verse:Hab.3.2",
             "verse:Hab.3.4",
             "verse:Hab.3.5",
             "verse:Hab.3.6",
-            "verse:Hab.3.8",
             "verse:Hab.3.9"
           ],
           "record_keys": [],
@@ -472,10 +667,70 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
+            "verse:Hab.1.2"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-1-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
             "verse:Hab.1.6"
           ],
           "record_keys": [
             "attestation:wb-hab-pl-chaldea-a32a4f8-1-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.1.12"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-1-12"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.2.2"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-2-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.2.13"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-2-13"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.2.14"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-2-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.2.16"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-2-16"
           ],
           "blocker_question_keys": []
         },
@@ -492,6 +747,16 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
+            "verse:Hab.2.20"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-2-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
             "verse:Hab.3.1"
           ],
           "record_keys": [
@@ -502,9 +767,20 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
+            "verse:Hab.3.2"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-3-2"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
             "verse:Hab.3.3"
           ],
           "record_keys": [
+            "attestation:wb-hab-god-3-3",
             "attestation:wb-hab-pl-mount-paran-af693b8-3-3",
             "attestation:wb-hab-pl-teman-a831506-3-3"
           ],
@@ -520,6 +796,36 @@
             "attestation:wb-hab-pl-midian-acc6d8e-3-7"
           ],
           "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.3.8"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-3-8"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.3.18"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-3-18"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Hab.3.19"
+          ],
+          "record_keys": [
+            "attestation:wb-hab-god-3-19"
+          ],
+          "blocker_question_keys": []
         }
       ]
     }
@@ -533,6 +839,10 @@
     {
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "segmentation-source",
+      "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
       "code": "events-projected-from-headings",

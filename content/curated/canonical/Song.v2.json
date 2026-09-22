@@ -188,7 +188,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
+      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
     }
   ],
   "records": {
@@ -197,6 +197,7 @@
         "candidate_key": "candidate:wb:pl-amana-ab428de",
         "entity_type": "place",
         "proposed_label": "Amana",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -206,6 +207,7 @@
         "candidate_key": "candidate:wb:pl-baal-hamon-a304bb7",
         "entity_type": "place",
         "proposed_label": "Baal-hamon",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -215,6 +217,7 @@
         "candidate_key": "candidate:wb:pl-bath-rabbim-abaa030",
         "entity_type": "place",
         "proposed_label": "Bath-rabbim",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -224,6 +227,7 @@
         "candidate_key": "candidate:wb:pl-bether-1-ac9fb6d",
         "entity_type": "place",
         "proposed_label": "Bether 1",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -358,8 +362,8 @@
         "reference_key": "verse:Song.2.17",
         "entity_key": "entity:pl-bether-1-ac9fb6d",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -378,8 +382,8 @@
         "reference_key": "verse:Song.1.14",
         "entity_key": "entity:pl-engedi-a51df0e",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -388,8 +392,8 @@
         "reference_key": "verse:Song.4.1",
         "entity_key": "entity:pl-gilead-1-ae73b90",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -398,8 +402,8 @@
         "reference_key": "verse:Song.6.5",
         "entity_key": "entity:pl-gilead-1-ae73b90",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -508,8 +512,8 @@
         "reference_key": "verse:Song.4.8",
         "entity_key": "entity:pl-mount-hermon-a341fe8",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -528,8 +532,8 @@
         "reference_key": "verse:Song.2.1",
         "entity_key": "entity:pl-sharon-1-a83fd43",
         "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -630,6 +634,16 @@
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-god-8-6",
+        "reference_key": "verse:Song.8.6",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
         "claim_keys": [],
         "review_status": "draft"
       }
@@ -906,6 +920,22 @@
         "scripture_accounts": [
           {
             "scope_key": "scope:wb-song-8-p1:refsys:eng-v22:song.8.1-song.8.4",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-song-8-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:god"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-song-8-p2:refsys:eng-v22:song.8.5-song.8.7",
             "relation": "reports"
           }
         ],
@@ -1265,9 +1295,23 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-8-god",
+        "scope_key": "scope:wb-song-8:refsys:eng-v22:song.8.1-song.8.14",
+        "entity_key": "entity:god",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:god",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -1467,7 +1511,6 @@
             "verse:Song.8.2",
             "verse:Song.8.3",
             "verse:Song.8.5",
-            "verse:Song.8.6",
             "verse:Song.8.7",
             "verse:Song.8.8",
             "verse:Song.8.9"
@@ -1749,6 +1792,16 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
+            "verse:Song.8.6"
+          ],
+          "record_keys": [
+            "attestation:wb-song-god-8-6"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
             "verse:Song.8.11"
           ],
           "record_keys": [
@@ -1779,6 +1832,10 @@
     {
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "segmentation-source",
+      "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
       "code": "events-projected-from-headings",

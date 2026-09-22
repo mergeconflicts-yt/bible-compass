@@ -94,7 +94,7 @@
     {
       "package_key": "draft:wb-mal-canonical",
       "revision": 1,
-      "digest": "sha256:ba4a7e41c3bb944a47c7054029e4cd0738e79794276888598d14ee0c40546c88"
+      "digest": "sha256:fa4af1677e6458bdb5526b5c2204895efae9e685128fca250aaf332253b72977"
     }
   ],
   "records": {
@@ -163,12 +163,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Esau, Jacob, Malachi.",
+            "text": "Present in this chapter: Esau, Malachi.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Edom.",
+            "text": "Places in this chapter: Edom, God, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -211,7 +211,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Jerusalem.",
+            "text": "Places in this chapter: God, Jerusalem.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -254,7 +254,7 @@
             "open_question_key": "question:wb-context-en-wb-mal-3-who"
           },
           "where": {
-            "text": "Places in this chapter: Jerusalem, The Israelites, Tribe of Levi.",
+            "text": "Places in this chapter: God, Jerusalem, The Israelites, Tribe of Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -297,7 +297,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Mount Horeb.",
+            "text": "Places in this chapter: God, Mount Horeb.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -335,12 +335,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Esau, Jacob, Malachi.",
+            "text": "Present in this passage: Esau, Malachi.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Edom.",
+            "text": "Places in this passage: Edom, God, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -383,9 +383,9 @@
             "open_question_key": "question:wb-context-en-wb-mal-1-p2-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-1-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -426,9 +426,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-2-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -469,7 +469,7 @@
             "open_question_key": "question:wb-context-en-wb-mal-2-p2-who"
           },
           "where": {
-            "text": "Places in this passage: Jerusalem.",
+            "text": "Places in this passage: God, Jerusalem.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -512,7 +512,7 @@
             "open_question_key": "question:wb-context-en-wb-mal-3-p1-who"
           },
           "where": {
-            "text": "Places in this passage: Jerusalem, Tribe of Levi.",
+            "text": "Places in this passage: God, Jerusalem, Tribe of Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -555,7 +555,7 @@
             "open_question_key": "question:wb-context-en-wb-mal-3-p2-who"
           },
           "where": {
-            "text": "Places in this passage: The Israelites.",
+            "text": "Places in this passage: God, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -598,9 +598,9 @@
             "open_question_key": "question:wb-context-en-wb-mal-3-p3-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-3-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -641,7 +641,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Mount Horeb.",
+            "text": "Places in this passage: God, Mount Horeb.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -682,16 +682,6 @@
         "entity_key": "entity:p-esau-1",
         "language_tag": "en",
         "role_text": "Named in Malachi 1 at verse(s) 2, 3.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "localization_key": "relevance-localization:en:wb-mal-1-p-jacob-1",
-        "relevance_key": "relevance:wb-mal-1-p-jacob-1",
-        "scope_key": "scope:wb-mal-1:refsys:eng-v22:mal.1.1-mal.1.14",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Malachi 1 at verse(s) 2.",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -776,6 +766,16 @@
         "review_status": "draft"
       },
       {
+        "localization_key": "relevance-localization:en:wb-mal-1-israelites",
+        "relevance_key": "relevance:wb-mal-1-israelites",
+        "scope_key": "scope:wb-mal-1:refsys:eng-v22:mal.1.1-mal.1.14",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 1 at verse(s) 2.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "localization_key": "relevance-localization:en:wb-mal-3-israelites",
         "relevance_key": "relevance:wb-mal-3-israelites",
         "scope_key": "scope:wb-mal-3:refsys:eng-v22:mal.3.1-mal.3.18",
@@ -792,6 +792,46 @@
         "entity_key": "entity:tribe-of-levi",
         "language_tag": "en",
         "role_text": "Named in Malachi 3 at verse(s) 3.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-mal-1-god",
+        "relevance_key": "relevance:wb-mal-1-god",
+        "scope_key": "scope:wb-mal-1:refsys:eng-v22:mal.1.1-mal.1.14",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 1 at verse(s) 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, among others.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-mal-2-god",
+        "relevance_key": "relevance:wb-mal-2-god",
+        "scope_key": "scope:wb-mal-2:refsys:eng-v22:mal.2.1-mal.2.17",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 2 at verse(s) 2, 4, 7, 8, 10, 11, 12, 13, 14, 16, 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-mal-3-god",
+        "relevance_key": "relevance:wb-mal-3-god",
+        "scope_key": "scope:wb-mal-3:refsys:eng-v22:mal.3.1-mal.3.18",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 3 at verse(s) 1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, among others.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-mal-4-god",
+        "relevance_key": "relevance:wb-mal-4-god",
+        "scope_key": "scope:wb-mal-4:refsys:eng-v22:mal.4.1-mal.4.6",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 4 at verse(s) 1, 3, 5.",
         "claim_keys": [],
         "review_status": "draft"
       }
@@ -848,14 +888,12 @@
             "question:wb-context-en-wb-mal-1-p2-before",
             "question:wb-context-en-wb-mal-1-p2-stakes",
             "question:wb-context-en-wb-mal-1-p2-when",
-            "question:wb-context-en-wb-mal-1-p2-where",
             "question:wb-context-en-wb-mal-1-p2-who",
             "question:wb-context-en-wb-mal-1-stakes",
             "question:wb-context-en-wb-mal-1-when",
             "question:wb-context-en-wb-mal-2-p1-before",
             "question:wb-context-en-wb-mal-2-p1-stakes",
             "question:wb-context-en-wb-mal-2-p1-when",
-            "question:wb-context-en-wb-mal-2-p1-where",
             "question:wb-context-en-wb-mal-2-p2-before",
             "question:wb-context-en-wb-mal-2-p2-stakes",
             "question:wb-context-en-wb-mal-2-p2-when",
@@ -873,7 +911,6 @@
             "question:wb-context-en-wb-mal-3-p3-before",
             "question:wb-context-en-wb-mal-3-p3-stakes",
             "question:wb-context-en-wb-mal-3-p3-when",
-            "question:wb-context-en-wb-mal-3-p3-where",
             "question:wb-context-en-wb-mal-3-p3-who",
             "question:wb-context-en-wb-mal-3-stakes",
             "question:wb-context-en-wb-mal-3-when",
@@ -994,14 +1031,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-mal-1-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-1-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-mal-1-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-mal-1-p2",
@@ -1023,14 +1052,6 @@
       "record_key": "context:en:wb-mal-1-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-mal-2-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-2-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1159,14 +1180,6 @@
       "record_key": "context:en:wb-mal-3-p3",
       "field_path": "/records/passage_contexts/orientation/who",
       "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-mal-3-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-3-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

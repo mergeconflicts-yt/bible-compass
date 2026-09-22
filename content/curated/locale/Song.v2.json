@@ -188,7 +188,7 @@
     {
       "package_key": "draft:wb-song-canonical",
       "revision": 1,
-      "digest": "sha256:6b16e05f756d303dad414df434b69ccc7ca15684185915c4193fe4351c81244f"
+      "digest": "sha256:af0e6e785ec50a7e066e45a3f5ecf1fea1e0bad0e50c1d9829bc5d03866c3d7a"
     }
   ],
   "records": {
@@ -602,7 +602,7 @@
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Baal-hamon, Jerusalem.",
+            "text": "Places in this chapter: Baal-hamon, God, Jerusalem.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1978,9 +1978,9 @@
             "open_question_key": "question:wb-context-en-wb-song-8-p2-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-song-8-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2503,6 +2503,16 @@
         "role_text": "Named in Song of Songs 8 at verse(s) 4.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-song-8-god",
+        "relevance_key": "relevance:wb-song-8-god",
+        "scope_key": "scope:wb-song-8:refsys:eng-v22:song.8.1-song.8.14",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Song of Songs 8 at verse(s) 6.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -2772,7 +2782,6 @@
             "question:wb-context-en-wb-song-8-p2-before",
             "question:wb-context-en-wb-song-8-p2-stakes",
             "question:wb-context-en-wb-song-8-p2-when",
-            "question:wb-context-en-wb-song-8-p2-where",
             "question:wb-context-en-wb-song-8-p2-who",
             "question:wb-context-en-wb-song-8-p3-before",
             "question:wb-context-en-wb-song-8-p3-stakes",
@@ -4054,14 +4063,6 @@
       "record_key": "context:en:wb-song-8-p2",
       "field_path": "/records/passage_contexts/orientation/who",
       "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-song-8-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-song-8-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

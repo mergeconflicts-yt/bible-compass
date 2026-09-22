@@ -57,7 +57,7 @@
     {
       "package_key": "draft:wb-jude-canonical",
       "revision": 1,
-      "digest": "sha256:ce6d4ded0fcb0748cd408a43d5be224ea462ce9034694e1b5bcb17cc996ef376"
+      "digest": "sha256:002aa68163757774a2dfbab99737ae728a86e2fe81029c4c71516fa7e41eceaa"
     }
   ],
   "records": {
@@ -128,12 +128,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Adam, Balaam, Cain, Enoch, James, Judas, Korah, Michael.",
+            "text": "Present in this chapter: Adam, Balaam, Cain, Enoch, James, Jesus Christ, Judas, Korah.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Egypt, Gomorrah, Sodom.",
+            "text": "Places in this chapter: Egypt, God, Gomorrah, Holy Spirit, Sodom.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -171,14 +171,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: James, Judas.",
+            "text": "Present in this passage: James, Jesus Christ, Judas.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jude-1-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -214,12 +214,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Adam, Balaam, Cain, Enoch, Korah, Michael, Moses, Satan.",
+            "text": "Present in this passage: Adam, Balaam, Cain, Enoch, Jesus Christ, Korah, Michael, Moses.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Egypt, Gomorrah, Sodom.",
+            "text": "Places in this passage: Egypt, God, Gomorrah, Sodom.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -257,14 +257,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jude-1-p3-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jude-1-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -300,14 +300,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jude-1-p4-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jude-1-p4-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -440,6 +440,16 @@
         "review_status": "draft"
       },
       {
+        "localization_key": "relevance-localization:en:wb-jude-1-jesus-christ",
+        "relevance_key": "relevance:wb-jude-1-jesus-christ",
+        "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in Jude 1 at verse(s) 1, 4, 9, 17, 21, 25.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "localization_key": "relevance-localization:en:wb-jude-1-pl-egypt-af301ca",
         "relevance_key": "relevance:wb-jude-1-pl-egypt-af301ca",
         "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
@@ -466,6 +476,26 @@
         "entity_key": "entity:pl-sodom-a0aa664",
         "language_tag": "en",
         "role_text": "Named in Jude 1 at verse(s) 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-jude-1-god",
+        "relevance_key": "relevance:wb-jude-1-god",
+        "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in Jude 1 at verse(s) 1, 4, 5, 14, 21, 25.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-jude-1-holy-spirit",
+        "relevance_key": "relevance:wb-jude-1-holy-spirit",
+        "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "role_text": "Named in Jude 1 at verse(s) 20.",
         "claim_keys": [],
         "review_status": "draft"
       }
@@ -505,20 +535,15 @@
             "question:wb-context-en-wb-jude-1-p1-before",
             "question:wb-context-en-wb-jude-1-p1-stakes",
             "question:wb-context-en-wb-jude-1-p1-when",
-            "question:wb-context-en-wb-jude-1-p1-where",
             "question:wb-context-en-wb-jude-1-p2-before",
             "question:wb-context-en-wb-jude-1-p2-stakes",
             "question:wb-context-en-wb-jude-1-p2-when",
             "question:wb-context-en-wb-jude-1-p3-before",
             "question:wb-context-en-wb-jude-1-p3-stakes",
             "question:wb-context-en-wb-jude-1-p3-when",
-            "question:wb-context-en-wb-jude-1-p3-where",
-            "question:wb-context-en-wb-jude-1-p3-who",
             "question:wb-context-en-wb-jude-1-p4-before",
             "question:wb-context-en-wb-jude-1-p4-stakes",
             "question:wb-context-en-wb-jude-1-p4-when",
-            "question:wb-context-en-wb-jude-1-p4-where",
-            "question:wb-context-en-wb-jude-1-p4-who",
             "question:wb-context-en-wb-jude-1-stakes",
             "question:wb-context-en-wb-jude-1-when"
           ]
@@ -541,14 +566,6 @@
       "record_key": "context:en:wb-jude-1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jude-1-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jude-1-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -600,22 +617,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-jude-1-p3-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jude-1-p3",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jude-1-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jude-1-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-jude-1-p3-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-jude-1-p3",
@@ -637,22 +638,6 @@
       "record_key": "context:en:wb-jude-1-p3",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jude-1-p4-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jude-1-p4",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jude-1-p4-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jude-1-p4",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

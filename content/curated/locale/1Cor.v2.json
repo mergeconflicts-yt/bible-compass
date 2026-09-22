@@ -525,7 +525,7 @@
     {
       "package_key": "draft:wb-1cor-canonical",
       "revision": 1,
-      "digest": "sha256:add174f3923be59c19d5681985879f7b21300ca37a71ff2ded6521a63e815f27"
+      "digest": "sha256:649108f46ca71f1f651529c082aef4a1f3e40014981860b2592f1b610715d119"
     }
   ],
   "records": {
@@ -727,6 +727,30 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:jesus-christ",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "preferred_name": "Jesus Christ",
+        "aliases": [
+          "Christ",
+          "Christ Jesus",
+          "Jesus",
+          "King of the Jews",
+          "Lord Jesus",
+          "Lord Jesus Christ",
+          "Nazarene",
+          "Son of David",
+          "Son of God",
+          "Son of Man"
+        ],
+        "short_description": {
+          "text": "Jesus Christ is a person named in Scripture (1Cor.1.1–Titus.3.6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-achaia-aef4242",
         "entity_key": "entity:pl-achaia-aef4242",
         "language_tag": "en",
@@ -803,6 +827,22 @@
         },
         "extended_description": null,
         "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:holy-spirit",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "preferred_name": "Holy Spirit",
+        "aliases": [
+          "Spirit of God",
+          "Spirit of the LORD"
+        ],
+        "short_description": {
+          "text": "Holy Spirit is named in Scripture (1Cor.2.11–Titus.3.5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
       }
     ],
     "passage_contexts": [
@@ -855,12 +895,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Apollos, Chloe, Crispus, Gaius, Paul, Peter, Stephanas.",
+            "text": "Present in this chapter: Apollos, Chloe, Crispus, Gaius, Jesus Christ, Paul, Peter, Stephanas.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Corinth.",
+            "text": "Places in this chapter: Corinth, God.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -898,14 +938,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this chapter: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -941,14 +981,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Apollos, Paul, Peter.",
+            "text": "Present in this chapter: Apollos, Jesus Christ, Paul, Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -984,14 +1024,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Apollos, Timothy.",
+            "text": "Present in this chapter: Apollos, Jesus Christ, Timothy.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-4-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1027,14 +1067,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Satan.",
+            "text": "Present in this chapter: Jesus Christ, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-5-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1070,14 +1110,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this chapter: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-6-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-6-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1113,14 +1153,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Satan.",
+            "text": "Present in this chapter: Jesus Christ, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-7-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1156,14 +1196,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this chapter: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-8-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-8-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1199,14 +1239,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Joseph, Moses, Peter.",
+            "text": "Present in this chapter: Jesus Christ, Joseph, Moses, Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-9-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1242,14 +1282,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Moses.",
+            "text": "Present in this chapter: Jesus Christ, Moses.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-10-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1285,14 +1325,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this chapter: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-11-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-11-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1328,14 +1368,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this chapter: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1414,14 +1454,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this chapter: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-14-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-14-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1457,12 +1497,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Adam, James, Peter.",
+            "text": "Present in this chapter: Adam, James, Jesus Christ, Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Ephesus.",
+            "text": "Places in this chapter: Ephesus, God.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1500,7 +1540,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Achaicus, Apollos, Aquila, Forunatus, Paul, Priscilla, Stephanas, Timothy.",
+            "text": "Present in this chapter: Achaicus, Apollos, Aquila, Forunatus, Jesus Christ, Paul, Priscilla, Stephanas.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1543,12 +1583,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Crispus, Paul.",
+            "text": "Present in this passage: Crispus, Jesus Christ, Paul.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Corinth.",
+            "text": "Places in this passage: Corinth, God.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1586,14 +1626,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1629,14 +1669,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Apollos, Chloe, Crispus, Gaius, Paul, Peter, Stephanas.",
+            "text": "Present in this passage: Apollos, Chloe, Crispus, Gaius, Jesus Christ, Paul, Peter, Stephanas.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1672,14 +1712,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p4-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p4-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1715,14 +1755,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p5-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-1-p5-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1758,14 +1798,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-2-p1-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-2-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1801,14 +1841,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-2-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-2-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1844,14 +1884,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Apollos, Paul.",
+            "text": "Present in this passage: Apollos, Jesus Christ, Paul.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-3-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1887,14 +1927,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-3-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-3-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1930,14 +1970,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Apollos, Paul, Peter.",
+            "text": "Present in this passage: Apollos, Jesus Christ, Paul, Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-3-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1973,14 +2013,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Apollos.",
+            "text": "Present in this passage: Apollos, Jesus Christ.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-4-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2016,14 +2056,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Timothy.",
+            "text": "Present in this passage: Jesus Christ, Timothy.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-4-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2059,7 +2099,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Satan.",
+            "text": "Present in this passage: Jesus Christ, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -2107,9 +2147,9 @@
             "open_question_key": "question:wb-context-en-wb-1cor-5-p2-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-5-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2188,14 +2228,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-6-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-6-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2236,9 +2276,9 @@
             "open_question_key": "question:wb-context-en-wb-1cor-6-p3-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-6-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2274,14 +2314,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Satan.",
+            "text": "Present in this passage: Jesus Christ, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-7-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2317,14 +2357,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-7-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-7-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2360,14 +2400,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-7-p3-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-7-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2403,14 +2443,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-8-p1-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-8-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2446,14 +2486,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Joseph, Moses, Peter.",
+            "text": "Present in this passage: Jesus Christ, Joseph, Moses, Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-9-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2489,14 +2529,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-9-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-9-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2575,14 +2615,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Moses.",
+            "text": "Present in this passage: Jesus Christ, Moses.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-10-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2618,14 +2658,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-10-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-10-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2666,9 +2706,9 @@
             "open_question_key": "question:wb-context-en-wb-1cor-10-p3-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-10-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2704,14 +2744,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-11-p1-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-11-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2747,14 +2787,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-11-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-11-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2790,14 +2830,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-p1-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God, Holy Spirit.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2833,14 +2873,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2876,14 +2916,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-p3-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-12-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -2962,14 +3002,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-14-p1-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-14-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3005,14 +3045,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-14-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-14-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3048,14 +3088,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: James, Peter.",
+            "text": "Present in this passage: James, Jesus Christ, Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-15-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3091,14 +3131,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-15-p2-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-15-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3134,12 +3174,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Adam.",
+            "text": "Present in this passage: Adam, Jesus Christ.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Ephesus.",
+            "text": "Places in this passage: Ephesus, God.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -3182,9 +3222,9 @@
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-15-p4-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3220,14 +3260,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-15-p5-who"
+            "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-15-p5-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -3306,9 +3346,9 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": null,
+            "text": "Present in this passage: Jesus Christ.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1cor-16-p2-who"
+            "open_question_key": null
           },
           "where": {
             "text": "Places in this passage: Ephesus, Macedonia.",
@@ -3349,7 +3389,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Apollos, Timothy.",
+            "text": "Present in this passage: Apollos, Jesus Christ, Timothy.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -3435,7 +3475,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Aquila, Paul, Priscilla.",
+            "text": "Present in this passage: Aquila, Jesus Christ, Paul, Priscilla.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -3765,6 +3805,156 @@
         "review_status": "draft"
       },
       {
+        "localization_key": "relevance-localization:en:wb-1cor-1-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-1-jesus-christ",
+        "scope_key": "scope:wb-1cor-1:refsys:eng-v22:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 1 at verse(s) 1, 2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 17, among others.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-2-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-2-jesus-christ",
+        "scope_key": "scope:wb-1cor-2:refsys:eng-v22:1cor.2.1-1cor.2.16",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 2 at verse(s) 2, 8, 16.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-3-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-3-jesus-christ",
+        "scope_key": "scope:wb-1cor-3:refsys:eng-v22:1cor.3.1-1cor.3.23",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 3 at verse(s) 1, 5, 11, 23.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-4-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-4-jesus-christ",
+        "scope_key": "scope:wb-1cor-4:refsys:eng-v22:1cor.4.1-1cor.4.21",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 4 at verse(s) 1, 4, 5, 10, 15, 17, 19.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-5-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-5-jesus-christ",
+        "scope_key": "scope:wb-1cor-5:refsys:eng-v22:1cor.5.1-1cor.5.13",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 5 at verse(s) 4, 5, 7.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-6-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-6-jesus-christ",
+        "scope_key": "scope:wb-1cor-6:refsys:eng-v22:1cor.6.1-1cor.6.20",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 6 at verse(s) 11, 13, 14, 15, 17.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-7-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-7-jesus-christ",
+        "scope_key": "scope:wb-1cor-7:refsys:eng-v22:1cor.7.1-1cor.7.40",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 7 at verse(s) 10, 12, 17, 22, 25, 32, 34, 35, 39.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-8-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-8-jesus-christ",
+        "scope_key": "scope:wb-1cor-8:refsys:eng-v22:1cor.8.1-1cor.8.13",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 8 at verse(s) 6, 11, 12.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-9-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-9-jesus-christ",
+        "scope_key": "scope:wb-1cor-9:refsys:eng-v22:1cor.9.1-1cor.9.27",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 9 at verse(s) 1, 2, 5, 12, 14, 21.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-10-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-10-jesus-christ",
+        "scope_key": "scope:wb-1cor-10:refsys:eng-v22:1cor.10.1-1cor.10.33",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 10 at verse(s) 4, 9, 16, 21, 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-11-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-11-jesus-christ",
+        "scope_key": "scope:wb-1cor-11:refsys:eng-v22:1cor.11.1-1cor.11.34",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 11 at verse(s) 1, 3, 11, 20, 23, 26, 27, 32.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-12-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-12-jesus-christ",
+        "scope_key": "scope:wb-1cor-12:refsys:eng-v22:1cor.12.1-1cor.12.31",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 12 at verse(s) 3, 5, 12, 27.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-14-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-14-jesus-christ",
+        "scope_key": "scope:wb-1cor-14:refsys:eng-v22:1cor.14.1-1cor.14.40",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 14 at verse(s) 21, 37.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-15-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-15-jesus-christ",
+        "scope_key": "scope:wb-1cor-15:refsys:eng-v22:1cor.15.1-1cor.15.58",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 15 at verse(s) 3, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, among others.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-16-jesus-christ",
+        "relevance_key": "relevance:wb-1cor-16-jesus-christ",
+        "scope_key": "scope:wb-1cor-16:refsys:eng-v22:1cor.16.1-1cor.16.24",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 16 at verse(s) 7, 10, 19, 22, 23, 24.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "localization_key": "relevance-localization:en:wb-1cor-16-pl-achaia-aef4242",
         "relevance_key": "relevance:wb-1cor-16-pl-achaia-aef4242",
         "scope_key": "scope:wb-1cor-16:refsys:eng-v22:1cor.16.1-1cor.16.24",
@@ -3841,6 +4031,186 @@
         "entity_key": "entity:jerusalem",
         "language_tag": "en",
         "role_text": "Named in 1 Corinthians 16 at verse(s) 1, 3.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-1-god",
+        "relevance_key": "relevance:wb-1cor-1-god",
+        "scope_key": "scope:wb-1cor-1:refsys:eng-v22:1cor.1.1-1cor.1.31",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 1 at verse(s) 1, 2, 3, 4, 9, 14, 18, 20, 21, 24, 25, 27, among others.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-2-god",
+        "relevance_key": "relevance:wb-1cor-2-god",
+        "scope_key": "scope:wb-1cor-2:refsys:eng-v22:1cor.2.1-1cor.2.16",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 2 at verse(s) 1, 5, 7, 9, 10, 11, 12, 14, 16.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-3-god",
+        "relevance_key": "relevance:wb-1cor-3-god",
+        "scope_key": "scope:wb-1cor-3:refsys:eng-v22:1cor.3.1-1cor.3.23",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 3 at verse(s) 6, 7, 9, 10, 16, 17, 19, 20, 23.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-4-god",
+        "relevance_key": "relevance:wb-1cor-4-god",
+        "scope_key": "scope:wb-1cor-4:refsys:eng-v22:1cor.4.1-1cor.4.21",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 4 at verse(s) 1, 5, 9, 20.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-5-god",
+        "relevance_key": "relevance:wb-1cor-5-god",
+        "scope_key": "scope:wb-1cor-5:refsys:eng-v22:1cor.5.1-1cor.5.13",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 5 at verse(s) 13.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-6-god",
+        "relevance_key": "relevance:wb-1cor-6-god",
+        "scope_key": "scope:wb-1cor-6:refsys:eng-v22:1cor.6.1-1cor.6.20",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 6 at verse(s) 9, 10, 11, 13, 14, 19, 20.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-7-god",
+        "relevance_key": "relevance:wb-1cor-7-god",
+        "scope_key": "scope:wb-1cor-7:refsys:eng-v22:1cor.7.1-1cor.7.40",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 7 at verse(s) 7, 15, 17, 19, 24, 40.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-8-god",
+        "relevance_key": "relevance:wb-1cor-8-god",
+        "scope_key": "scope:wb-1cor-8:refsys:eng-v22:1cor.8.1-1cor.8.13",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 8 at verse(s) 3, 4, 6, 8.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-9-god",
+        "relevance_key": "relevance:wb-1cor-9-god",
+        "scope_key": "scope:wb-1cor-9:refsys:eng-v22:1cor.9.1-1cor.9.27",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 9 at verse(s) 9, 21.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-10-god",
+        "relevance_key": "relevance:wb-1cor-10-god",
+        "scope_key": "scope:wb-1cor-10:refsys:eng-v22:1cor.10.1-1cor.10.33",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 10 at verse(s) 5, 13, 20, 26, 31, 32.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-11-god",
+        "relevance_key": "relevance:wb-1cor-11-god",
+        "scope_key": "scope:wb-1cor-11:refsys:eng-v22:1cor.11.1-1cor.11.34",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 11 at verse(s) 3, 7, 12, 13, 16, 22.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-12-god",
+        "relevance_key": "relevance:wb-1cor-12-god",
+        "scope_key": "scope:wb-1cor-12:refsys:eng-v22:1cor.12.1-1cor.12.31",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 12 at verse(s) 3, 6, 18, 24, 28.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-14-god",
+        "relevance_key": "relevance:wb-1cor-14-god",
+        "scope_key": "scope:wb-1cor-14:refsys:eng-v22:1cor.14.1-1cor.14.40",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 14 at verse(s) 2, 18, 25, 28, 33, 36.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-15-god",
+        "relevance_key": "relevance:wb-1cor-15-god",
+        "scope_key": "scope:wb-1cor-15:refsys:eng-v22:1cor.15.1-1cor.15.58",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 15 at verse(s) 9, 10, 15, 24, 28, 34, 38, 45, 50, 57.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-2-holy-spirit",
+        "relevance_key": "relevance:wb-1cor-2-holy-spirit",
+        "scope_key": "scope:wb-1cor-2:refsys:eng-v22:1cor.2.1-1cor.2.16",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 2 at verse(s) 11, 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-6-holy-spirit",
+        "relevance_key": "relevance:wb-1cor-6-holy-spirit",
+        "scope_key": "scope:wb-1cor-6:refsys:eng-v22:1cor.6.1-1cor.6.20",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 6 at verse(s) 19.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-7-holy-spirit",
+        "relevance_key": "relevance:wb-1cor-7-holy-spirit",
+        "scope_key": "scope:wb-1cor-7:refsys:eng-v22:1cor.7.1-1cor.7.40",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 7 at verse(s) 40.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-1cor-12-holy-spirit",
+        "relevance_key": "relevance:wb-1cor-12-holy-spirit",
+        "scope_key": "scope:wb-1cor-12:refsys:eng-v22:1cor.12.1-1cor.12.31",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "role_text": "Named in 1 Corinthians 12 at verse(s) 3.",
         "claim_keys": [],
         "review_status": "draft"
       }
@@ -3995,74 +4365,48 @@
             "question:wb-context-en-wb-1cor-1-p2-before",
             "question:wb-context-en-wb-1cor-1-p2-stakes",
             "question:wb-context-en-wb-1cor-1-p2-when",
-            "question:wb-context-en-wb-1cor-1-p2-where",
-            "question:wb-context-en-wb-1cor-1-p2-who",
             "question:wb-context-en-wb-1cor-1-p3-before",
             "question:wb-context-en-wb-1cor-1-p3-stakes",
             "question:wb-context-en-wb-1cor-1-p3-when",
-            "question:wb-context-en-wb-1cor-1-p3-where",
             "question:wb-context-en-wb-1cor-1-p4-before",
             "question:wb-context-en-wb-1cor-1-p4-stakes",
             "question:wb-context-en-wb-1cor-1-p4-when",
-            "question:wb-context-en-wb-1cor-1-p4-where",
-            "question:wb-context-en-wb-1cor-1-p4-who",
             "question:wb-context-en-wb-1cor-1-p5-before",
             "question:wb-context-en-wb-1cor-1-p5-stakes",
             "question:wb-context-en-wb-1cor-1-p5-when",
-            "question:wb-context-en-wb-1cor-1-p5-where",
-            "question:wb-context-en-wb-1cor-1-p5-who",
             "question:wb-context-en-wb-1cor-1-stakes",
             "question:wb-context-en-wb-1cor-1-when",
             "question:wb-context-en-wb-1cor-10-p1-before",
             "question:wb-context-en-wb-1cor-10-p1-stakes",
             "question:wb-context-en-wb-1cor-10-p1-when",
-            "question:wb-context-en-wb-1cor-10-p1-where",
             "question:wb-context-en-wb-1cor-10-p2-before",
             "question:wb-context-en-wb-1cor-10-p2-stakes",
             "question:wb-context-en-wb-1cor-10-p2-when",
-            "question:wb-context-en-wb-1cor-10-p2-where",
-            "question:wb-context-en-wb-1cor-10-p2-who",
             "question:wb-context-en-wb-1cor-10-p3-before",
             "question:wb-context-en-wb-1cor-10-p3-stakes",
             "question:wb-context-en-wb-1cor-10-p3-when",
-            "question:wb-context-en-wb-1cor-10-p3-where",
             "question:wb-context-en-wb-1cor-10-p3-who",
             "question:wb-context-en-wb-1cor-10-stakes",
             "question:wb-context-en-wb-1cor-10-when",
-            "question:wb-context-en-wb-1cor-10-where",
             "question:wb-context-en-wb-1cor-11-p1-before",
             "question:wb-context-en-wb-1cor-11-p1-stakes",
             "question:wb-context-en-wb-1cor-11-p1-when",
-            "question:wb-context-en-wb-1cor-11-p1-where",
-            "question:wb-context-en-wb-1cor-11-p1-who",
             "question:wb-context-en-wb-1cor-11-p2-before",
             "question:wb-context-en-wb-1cor-11-p2-stakes",
             "question:wb-context-en-wb-1cor-11-p2-when",
-            "question:wb-context-en-wb-1cor-11-p2-where",
-            "question:wb-context-en-wb-1cor-11-p2-who",
             "question:wb-context-en-wb-1cor-11-stakes",
             "question:wb-context-en-wb-1cor-11-when",
-            "question:wb-context-en-wb-1cor-11-where",
-            "question:wb-context-en-wb-1cor-11-who",
             "question:wb-context-en-wb-1cor-12-p1-before",
             "question:wb-context-en-wb-1cor-12-p1-stakes",
             "question:wb-context-en-wb-1cor-12-p1-when",
-            "question:wb-context-en-wb-1cor-12-p1-where",
-            "question:wb-context-en-wb-1cor-12-p1-who",
             "question:wb-context-en-wb-1cor-12-p2-before",
             "question:wb-context-en-wb-1cor-12-p2-stakes",
             "question:wb-context-en-wb-1cor-12-p2-when",
-            "question:wb-context-en-wb-1cor-12-p2-where",
-            "question:wb-context-en-wb-1cor-12-p2-who",
             "question:wb-context-en-wb-1cor-12-p3-before",
             "question:wb-context-en-wb-1cor-12-p3-stakes",
             "question:wb-context-en-wb-1cor-12-p3-when",
-            "question:wb-context-en-wb-1cor-12-p3-where",
-            "question:wb-context-en-wb-1cor-12-p3-who",
             "question:wb-context-en-wb-1cor-12-stakes",
             "question:wb-context-en-wb-1cor-12-when",
-            "question:wb-context-en-wb-1cor-12-where",
-            "question:wb-context-en-wb-1cor-12-who",
             "question:wb-context-en-wb-1cor-13-p1-before",
             "question:wb-context-en-wb-1cor-13-p1-stakes",
             "question:wb-context-en-wb-1cor-13-p1-when",
@@ -4075,38 +4419,26 @@
             "question:wb-context-en-wb-1cor-14-p1-before",
             "question:wb-context-en-wb-1cor-14-p1-stakes",
             "question:wb-context-en-wb-1cor-14-p1-when",
-            "question:wb-context-en-wb-1cor-14-p1-where",
-            "question:wb-context-en-wb-1cor-14-p1-who",
             "question:wb-context-en-wb-1cor-14-p2-before",
             "question:wb-context-en-wb-1cor-14-p2-stakes",
             "question:wb-context-en-wb-1cor-14-p2-when",
-            "question:wb-context-en-wb-1cor-14-p2-where",
-            "question:wb-context-en-wb-1cor-14-p2-who",
             "question:wb-context-en-wb-1cor-14-stakes",
             "question:wb-context-en-wb-1cor-14-when",
-            "question:wb-context-en-wb-1cor-14-where",
-            "question:wb-context-en-wb-1cor-14-who",
             "question:wb-context-en-wb-1cor-15-p1-before",
             "question:wb-context-en-wb-1cor-15-p1-stakes",
             "question:wb-context-en-wb-1cor-15-p1-when",
-            "question:wb-context-en-wb-1cor-15-p1-where",
             "question:wb-context-en-wb-1cor-15-p2-before",
             "question:wb-context-en-wb-1cor-15-p2-stakes",
             "question:wb-context-en-wb-1cor-15-p2-when",
-            "question:wb-context-en-wb-1cor-15-p2-where",
-            "question:wb-context-en-wb-1cor-15-p2-who",
             "question:wb-context-en-wb-1cor-15-p3-before",
             "question:wb-context-en-wb-1cor-15-p3-stakes",
             "question:wb-context-en-wb-1cor-15-p3-when",
             "question:wb-context-en-wb-1cor-15-p4-before",
             "question:wb-context-en-wb-1cor-15-p4-stakes",
             "question:wb-context-en-wb-1cor-15-p4-when",
-            "question:wb-context-en-wb-1cor-15-p4-where",
             "question:wb-context-en-wb-1cor-15-p5-before",
             "question:wb-context-en-wb-1cor-15-p5-stakes",
             "question:wb-context-en-wb-1cor-15-p5-when",
-            "question:wb-context-en-wb-1cor-15-p5-where",
-            "question:wb-context-en-wb-1cor-15-p5-who",
             "question:wb-context-en-wb-1cor-15-stakes",
             "question:wb-context-en-wb-1cor-15-when",
             "question:wb-context-en-wb-1cor-16-p1-before",
@@ -4116,7 +4448,6 @@
             "question:wb-context-en-wb-1cor-16-p2-before",
             "question:wb-context-en-wb-1cor-16-p2-stakes",
             "question:wb-context-en-wb-1cor-16-p2-when",
-            "question:wb-context-en-wb-1cor-16-p2-who",
             "question:wb-context-en-wb-1cor-16-p3-before",
             "question:wb-context-en-wb-1cor-16-p3-stakes",
             "question:wb-context-en-wb-1cor-16-p3-when",
@@ -4132,44 +4463,30 @@
             "question:wb-context-en-wb-1cor-2-p1-before",
             "question:wb-context-en-wb-1cor-2-p1-stakes",
             "question:wb-context-en-wb-1cor-2-p1-when",
-            "question:wb-context-en-wb-1cor-2-p1-where",
-            "question:wb-context-en-wb-1cor-2-p1-who",
             "question:wb-context-en-wb-1cor-2-p2-before",
             "question:wb-context-en-wb-1cor-2-p2-stakes",
             "question:wb-context-en-wb-1cor-2-p2-when",
-            "question:wb-context-en-wb-1cor-2-p2-where",
-            "question:wb-context-en-wb-1cor-2-p2-who",
             "question:wb-context-en-wb-1cor-2-stakes",
             "question:wb-context-en-wb-1cor-2-when",
-            "question:wb-context-en-wb-1cor-2-where",
-            "question:wb-context-en-wb-1cor-2-who",
             "question:wb-context-en-wb-1cor-3-p1-before",
             "question:wb-context-en-wb-1cor-3-p1-stakes",
             "question:wb-context-en-wb-1cor-3-p1-when",
-            "question:wb-context-en-wb-1cor-3-p1-where",
             "question:wb-context-en-wb-1cor-3-p2-before",
             "question:wb-context-en-wb-1cor-3-p2-stakes",
             "question:wb-context-en-wb-1cor-3-p2-when",
-            "question:wb-context-en-wb-1cor-3-p2-where",
-            "question:wb-context-en-wb-1cor-3-p2-who",
             "question:wb-context-en-wb-1cor-3-p3-before",
             "question:wb-context-en-wb-1cor-3-p3-stakes",
             "question:wb-context-en-wb-1cor-3-p3-when",
-            "question:wb-context-en-wb-1cor-3-p3-where",
             "question:wb-context-en-wb-1cor-3-stakes",
             "question:wb-context-en-wb-1cor-3-when",
-            "question:wb-context-en-wb-1cor-3-where",
             "question:wb-context-en-wb-1cor-4-p1-before",
             "question:wb-context-en-wb-1cor-4-p1-stakes",
             "question:wb-context-en-wb-1cor-4-p1-when",
-            "question:wb-context-en-wb-1cor-4-p1-where",
             "question:wb-context-en-wb-1cor-4-p2-before",
             "question:wb-context-en-wb-1cor-4-p2-stakes",
             "question:wb-context-en-wb-1cor-4-p2-when",
-            "question:wb-context-en-wb-1cor-4-p2-where",
             "question:wb-context-en-wb-1cor-4-stakes",
             "question:wb-context-en-wb-1cor-4-when",
-            "question:wb-context-en-wb-1cor-4-where",
             "question:wb-context-en-wb-1cor-5-p1-before",
             "question:wb-context-en-wb-1cor-5-p1-stakes",
             "question:wb-context-en-wb-1cor-5-p1-when",
@@ -4177,11 +4494,9 @@
             "question:wb-context-en-wb-1cor-5-p2-before",
             "question:wb-context-en-wb-1cor-5-p2-stakes",
             "question:wb-context-en-wb-1cor-5-p2-when",
-            "question:wb-context-en-wb-1cor-5-p2-where",
             "question:wb-context-en-wb-1cor-5-p2-who",
             "question:wb-context-en-wb-1cor-5-stakes",
             "question:wb-context-en-wb-1cor-5-when",
-            "question:wb-context-en-wb-1cor-5-where",
             "question:wb-context-en-wb-1cor-6-p1-before",
             "question:wb-context-en-wb-1cor-6-p1-stakes",
             "question:wb-context-en-wb-1cor-6-p1-when",
@@ -4190,60 +4505,41 @@
             "question:wb-context-en-wb-1cor-6-p2-before",
             "question:wb-context-en-wb-1cor-6-p2-stakes",
             "question:wb-context-en-wb-1cor-6-p2-when",
-            "question:wb-context-en-wb-1cor-6-p2-where",
-            "question:wb-context-en-wb-1cor-6-p2-who",
             "question:wb-context-en-wb-1cor-6-p3-before",
             "question:wb-context-en-wb-1cor-6-p3-stakes",
             "question:wb-context-en-wb-1cor-6-p3-when",
-            "question:wb-context-en-wb-1cor-6-p3-where",
             "question:wb-context-en-wb-1cor-6-p3-who",
             "question:wb-context-en-wb-1cor-6-stakes",
             "question:wb-context-en-wb-1cor-6-when",
-            "question:wb-context-en-wb-1cor-6-where",
-            "question:wb-context-en-wb-1cor-6-who",
             "question:wb-context-en-wb-1cor-7-p1-before",
             "question:wb-context-en-wb-1cor-7-p1-stakes",
             "question:wb-context-en-wb-1cor-7-p1-when",
-            "question:wb-context-en-wb-1cor-7-p1-where",
             "question:wb-context-en-wb-1cor-7-p2-before",
             "question:wb-context-en-wb-1cor-7-p2-stakes",
             "question:wb-context-en-wb-1cor-7-p2-when",
-            "question:wb-context-en-wb-1cor-7-p2-where",
-            "question:wb-context-en-wb-1cor-7-p2-who",
             "question:wb-context-en-wb-1cor-7-p3-before",
             "question:wb-context-en-wb-1cor-7-p3-stakes",
             "question:wb-context-en-wb-1cor-7-p3-when",
-            "question:wb-context-en-wb-1cor-7-p3-where",
-            "question:wb-context-en-wb-1cor-7-p3-who",
             "question:wb-context-en-wb-1cor-7-stakes",
             "question:wb-context-en-wb-1cor-7-when",
-            "question:wb-context-en-wb-1cor-7-where",
             "question:wb-context-en-wb-1cor-8-p1-before",
             "question:wb-context-en-wb-1cor-8-p1-stakes",
             "question:wb-context-en-wb-1cor-8-p1-when",
-            "question:wb-context-en-wb-1cor-8-p1-where",
-            "question:wb-context-en-wb-1cor-8-p1-who",
             "question:wb-context-en-wb-1cor-8-stakes",
             "question:wb-context-en-wb-1cor-8-when",
-            "question:wb-context-en-wb-1cor-8-where",
-            "question:wb-context-en-wb-1cor-8-who",
             "question:wb-context-en-wb-1cor-9-p1-before",
             "question:wb-context-en-wb-1cor-9-p1-stakes",
             "question:wb-context-en-wb-1cor-9-p1-when",
-            "question:wb-context-en-wb-1cor-9-p1-where",
             "question:wb-context-en-wb-1cor-9-p2-before",
             "question:wb-context-en-wb-1cor-9-p2-stakes",
             "question:wb-context-en-wb-1cor-9-p2-when",
-            "question:wb-context-en-wb-1cor-9-p2-where",
-            "question:wb-context-en-wb-1cor-9-p2-who",
             "question:wb-context-en-wb-1cor-9-p3-before",
             "question:wb-context-en-wb-1cor-9-p3-stakes",
             "question:wb-context-en-wb-1cor-9-p3-when",
             "question:wb-context-en-wb-1cor-9-p3-where",
             "question:wb-context-en-wb-1cor-9-p3-who",
             "question:wb-context-en-wb-1cor-9-stakes",
-            "question:wb-context-en-wb-1cor-9-when",
-            "question:wb-context-en-wb-1cor-9-where"
+            "question:wb-context-en-wb-1cor-9-when"
           ]
         }
       ]
@@ -4267,22 +4563,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-2",
@@ -4296,14 +4576,6 @@
       "record_key": "context:en:wb-1cor-2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4323,14 +4595,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-4-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-4",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-4-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-4",
@@ -4344,14 +4608,6 @@
       "record_key": "context:en:wb-1cor-4",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-5-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-5",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4371,22 +4627,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-6-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-6",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-6-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-6",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-6-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-6",
@@ -4400,14 +4640,6 @@
       "record_key": "context:en:wb-1cor-6",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-7-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-7",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4427,22 +4659,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-8-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-8",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-8-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-8",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-8-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-8",
@@ -4456,14 +4672,6 @@
       "record_key": "context:en:wb-1cor-8",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-9-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-9",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4483,14 +4691,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-10-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-10",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-10-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-10",
@@ -4507,22 +4707,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-11-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-11",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-11-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-11",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-11-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-11",
@@ -4536,22 +4720,6 @@
       "record_key": "context:en:wb-1cor-11",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4600,22 +4768,6 @@
       "record_key": "context:en:wb-1cor-13",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-14-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-14",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-14-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-14",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4691,22 +4843,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-1-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-1-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-1-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-1-p2",
@@ -4728,14 +4864,6 @@
       "record_key": "context:en:wb-1cor-1-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-1-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4763,22 +4891,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-1-p4-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p4",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-1-p4-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p4",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-1-p4-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-1-p4",
@@ -4800,22 +4912,6 @@
       "record_key": "context:en:wb-1cor-1-p4",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-1-p5-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p5",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-1-p5-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-1-p5",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4843,22 +4939,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-2-p1-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-2-p1",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-2-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-2-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-2-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-2-p1",
@@ -4880,22 +4960,6 @@
       "record_key": "context:en:wb-1cor-2-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-2-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-2-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-2-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-2-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4923,14 +4987,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-3-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-3-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-3-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-3-p1",
@@ -4952,22 +5008,6 @@
       "record_key": "context:en:wb-1cor-3-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-3-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-3-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-3-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-3-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -4995,14 +5035,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-3-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-3-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-3-p3-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-3-p3",
@@ -5027,14 +5059,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-4-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-4-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-4-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-4-p1",
@@ -5056,14 +5080,6 @@
       "record_key": "context:en:wb-1cor-4-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-4-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-4-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5131,14 +5147,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-5-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-5-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-5-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-5-p2",
@@ -5203,22 +5211,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-6-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-6-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-6-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-6-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-6-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-6-p2",
@@ -5251,14 +5243,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-6-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-6-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-6-p3-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-6-p3",
@@ -5280,14 +5264,6 @@
       "record_key": "context:en:wb-1cor-6-p3",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-7-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-7-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5315,22 +5291,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-7-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-7-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-7-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-7-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-7-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-7-p2",
@@ -5352,22 +5312,6 @@
       "record_key": "context:en:wb-1cor-7-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-7-p3-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-7-p3",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-7-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-7-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5395,22 +5339,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-8-p1-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-8-p1",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-8-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-8-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-8-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-8-p1",
@@ -5435,14 +5363,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-9-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-9-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-9-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-9-p1",
@@ -5464,22 +5384,6 @@
       "record_key": "context:en:wb-1cor-9-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-9-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-9-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-9-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-9-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5547,14 +5451,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-10-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-10-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-10-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-10-p1",
@@ -5576,22 +5472,6 @@
       "record_key": "context:en:wb-1cor-10-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-10-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-10-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-10-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-10-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5627,14 +5507,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-10-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-10-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-10-p3-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-10-p3",
@@ -5656,22 +5528,6 @@
       "record_key": "context:en:wb-1cor-10-p3",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-11-p1-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-11-p1",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-11-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-11-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5699,22 +5555,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-11-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-11-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-11-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-11-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-11-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-11-p2",
@@ -5736,22 +5576,6 @@
       "record_key": "context:en:wb-1cor-11-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-p1-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12-p1",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5779,22 +5603,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-12-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-12-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-12-p2",
@@ -5816,22 +5624,6 @@
       "record_key": "context:en:wb-1cor-12-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-p3-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12-p3",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-12-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-12-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5899,22 +5691,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-14-p1-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-14-p1",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-14-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-14-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-14-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-14-p1",
@@ -5936,22 +5712,6 @@
       "record_key": "context:en:wb-1cor-14-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-14-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-14-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-14-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-14-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5979,14 +5739,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-15-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-15-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-15-p1-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-15-p1",
@@ -6008,22 +5760,6 @@
       "record_key": "context:en:wb-1cor-15-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-15-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-15-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-15-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-15-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -6075,14 +5811,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1cor-15-p4-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-15-p4",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1cor-15-p4-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-1cor-15-p4",
@@ -6104,22 +5832,6 @@
       "record_key": "context:en:wb-1cor-15-p4",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-15-p5-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-15-p5",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-15-p5-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-15-p5",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -6176,14 +5888,6 @@
       "record_key": "context:en:wb-1cor-16-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1cor-16-p2-who",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1cor-16-p2",
-      "field_path": "/records/passage_contexts/orientation/who",
-      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

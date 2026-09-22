@@ -58,17 +58,16 @@ BSB_ARTIFACT_SHA = (
     "sha256:b2898c49cadb50fd8763feb9e2f74a90a3817e33408a24b6cbf09e7a950dde97"
 )
 IMPORT_PACKAGE_KEY = "import:english-canon:canonical-locale-edition"
-# Revision 4: resync migration. Revisions 1-3 used ON CONFLICT DO NOTHING /
-# WHERE NOT EXISTS for most tables, so an upgrade left stale rows beside new
-# ones (Jacob attestations next to Israelites ones, source-ID names,
-# superseded descriptions and mentions) while a clean import did not contain
-# them. Revision 4 deletes this package's owned rows before reinserting, so
-# an upgrade converges to the clean-import state. It also carries the
-# curated identity corrections (collective Israel including the tribes /
-# assembly of Jacob phrases, 14 tribe collectives, Paul/Peter names) and the
-# context curation_state columns.
+# Revision 5: divine identities (Jesus Christ, God, Holy Spirit) with
+# anchor-graded attestations (explicit only with an edition surface, else
+# inferred), retained-phrase edition mentions, per-reference sense
+# classification, registry identification statuses, and canonical language
+# tags. Revisions 1-3 used ON CONFLICT DO NOTHING / WHERE NOT EXISTS for
+# most tables, so an upgrade left stale rows beside new ones; revision 4
+# added the owned-row resync so an upgrade converges to the clean-import
+# state, which revision 5 retains.
 # A revision bump authorizes re-import over an older receipt.
-IMPORT_REVISION = 4
+IMPORT_REVISION = 5
 PROVENANCE = "draft import from content/curated English v2 packages (unverified curation)"
 UNKNOWN_LICENSE = "unknown"
 UNKNOWN_RELEASE_ID = str(uuid.uuid5(uuid.NAMESPACE_URL, "release:unknown:bsb"))
@@ -140,6 +139,14 @@ def validate(books: list[dict], registry: dict) -> dict:
     reg_keys = {e["entity_key"] for e in registry["entities"]}
     reg_slugs = {e["slug"] for e in registry["entities"]}
     chapter_scope_re = re.compile(r"^scope:(wb-[a-z0-9]+-\d+):")
+    # Registry identification status is authoritative: unresolved source
+    # identities must never validate as established.
+    allowed_status = {"established", "traditional", "proposed", "disputed", "unknown"}
+    for e in registry["entities"]:
+        if e.get("identification_status") not in allowed_status:
+            errors.append(f"registry {e.get('entity_key')}: invalid identification_status")
+        if e.get("language_tag") != "en":
+            errors.append(f"registry {e.get('entity_key')}: untagged display name")
     total_mentions = 0
     total_attest = 0
     for book in books:
@@ -454,7 +461,9 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
 
     # --- entities (ONE row per canonical key; the registry is authoritative)
     # Upsert (never delete: every other table references entities): an
-    # upgrade corrects a stale type/slug instead of keeping it.
+    # upgrade corrects a stale type/slug/status instead of keeping it. The
+    # identification status comes from the registry, so source-unresolved
+    # identities (proposed) are never written as established.
     entity_upsert = (
         "on conflict (key) do update set slug = excluded.slug, type = excluded.type, "
         "identification_status = excluded.identification_status, provenance = excluded.provenance"
@@ -462,7 +471,7 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
     for e in sorted(registry["entities"], key=lambda x: x["entity_key"]):
         add(
             "insert into private_staging.entities (key, slug, type, identification_status, provenance) values ("
-            f"{esc(e['entity_key'])}, {esc(e['slug'])}, {esc(e['type'])}, 'established', {esc(PROVENANCE)}) {entity_upsert};"
+            f"{esc(e['entity_key'])}, {esc(e['slug'])}, {esc(e['type'])}, {esc(e.get('identification_status', 'established'))}, {esc(PROVENANCE)}) {entity_upsert};"
         )
     # event entities (canonical events are entities of type event)
     for book in books:

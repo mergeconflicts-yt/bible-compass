@@ -96,7 +96,6 @@ NOT_ATTEMPTED_CLASSES = [
     "canonical_term",
     "canonical_theme",
     "canonical_chronology",
-    "canonical_deity_attestation",
     "historical_context",
     "localized_entity_name",
     "map_timeline_projection",
@@ -226,6 +225,18 @@ def check_identities(books: list[str], report: dict, errors: list[str]) -> None:
         if edition["scope"]["translation_edition_key"] is None:
             errors.append(f"{book}/edition: missing translation_edition_key")
         edition_keys.add(edition["scope"]["translation_edition_key"])
+        # Canonical-layer language neutrality: source-derived labels and any
+        # embedded prose must carry their language tag.
+        for c in canonical["records"].get("entity_candidates", []):
+            if c.get("label_language_tag") != "en":
+                errors.append(f"{book}/canonical: candidate {c.get('candidate_key')} untagged label")
+        for claim in canonical["records"].get("claims", []):
+            for side in ("subject", "object"):
+                part = claim.get(side, {})
+                if part.get("type") == "text" and part.get("value_language_tag") != "en":
+                    errors.append(
+                        f"{book}/canonical: claim {claim.get('claim_key')} untagged {side} prose"
+                    )
     report["identities"] = {
         "translation_neutral_canonical": True,
         "edition_keys": sorted(edition_keys),
@@ -235,6 +246,23 @@ def check_identities(books: list[str], report: dict, errors: list[str]) -> None:
 def check_registry_references(books: list[str], report: dict, errors: list[str]) -> None:
     registry = json.loads((CUR / "registry" / "entities.json").read_text(encoding="utf-8"))
     reg_keys = {e["entity_key"] for e in registry["entities"]}
+    bad_status = sorted(
+        e["entity_key"]
+        for e in registry["entities"]
+        if e.get("identification_status") not in (
+            "established", "traditional", "proposed", "disputed", "unknown",
+        )
+    )
+    proposed = sorted(
+        e["entity_key"]
+        for e in registry["entities"]
+        if e.get("identification_status") == "proposed"
+    )
+    untagged = sorted(
+        e["entity_key"]
+        for e in registry["entities"]
+        if e.get("language_tag") != "en"
+    )
     missing_candidates = 0
     missing_recon = 0
     for book in books:
@@ -251,12 +279,92 @@ def check_registry_references(books: list[str], report: dict, errors: list[str])
         "registry_entities": len(reg_keys),
         "candidates_not_in_registry": missing_candidates,
         "reconciliation_not_in_registry": missing_recon,
+        "identification_status_proposed": proposed,
+        "untagged_display_names": untagged,
+        "invalid_identification_status": bad_status,
     }
     if missing_candidates or missing_recon:
         errors.append(
             f"registry references: {missing_candidates} candidate(s) and {missing_recon} "
             "reconciliation record(s) do not reference the global registry"
         )
+    if bad_status:
+        errors.append(
+            f"registry: {len(bad_status)} entit(ies) with invalid identification_status "
+            f"(e.g. {bad_status[:3]})"
+        )
+    if untagged:
+        errors.append(
+            f"registry: {len(untagged)} entit(ies) with untagged display names "
+            f"(e.g. {untagged[:3]})"
+        )
+
+
+def check_sense_spotchecks(books: list[str], report: dict, errors: list[str]) -> None:
+    """Regression guard for per-reference sense classification.
+
+    Each cited verse must attest the group/collective/deity identity and
+    must not attest the displaced patriarch/person identity.
+    """
+    by_book: dict[str, dict[str, set[str]]] = {}
+    for book in books:
+        canonical = json.loads((CUR / "canonical" / f"{book}.v2.json").read_text(encoding="utf-8"))
+        ref_map: dict[str, set[str]] = collections.defaultdict(set)
+        for a in canonical["records"].get("attestations", []):
+            ref_map[a["reference_key"]].add(a["entity_key"])
+        by_book[book] = ref_map
+    by_book_edition: dict[str, dict] = {}
+    for book in books:
+        edition = json.loads((CUR / "edition" / f"{book}.v2.json").read_text(encoding="utf-8"))
+        by_book_edition[book] = {
+            (m["verse_key"], m["target"]["key"]): m["selector"]["exact_quote"]
+            for m in edition["records"].get("mentions", [])
+        }
+
+    def attest_entities(book: str, ref: str) -> set[str]:
+        return set(by_book.get(book, {}).get(ref, set()))
+
+    checks: list[tuple[str, str, set[str], set[str]]] = [
+        # (book, verse_key, must_have, must_not_have)
+        ("Hos", "verse:Hos.1.11", {"entity:israelites"}, {"entity:p-jacob-1"}),
+        ("Jer", "verse:Jer.32.30", {"entity:israelites", "entity:tribe-of-judah"}, {"entity:p-judah-1"}),
+        ("Ezek", "verse:Ezek.37.19",
+         {"entity:israelites", "entity:tribe-of-joseph", "entity:tribe-of-judah", "entity:tribe-of-ephraim"},
+         {"entity:p-judah-1", "entity:p-joseph-1", "entity:p-ephraim-1"}),
+        ("Num", "verse:Num.31.4", {"entity:israelites"}, {"entity:p-jacob-1"}),
+        ("Num", "verse:Num.31.5", {"entity:israelites"}, {"entity:p-jacob-1"}),
+        ("Num", "verse:Num.1.26", {"entity:tribe-of-judah"}, set()),
+        ("Ezra", "verse:Ezra.6.16", {"entity:israelites"}, {"entity:p-jacob-1"}),
+        ("Judg", "verse:Judg.3.2", {"entity:israelites"}, {"entity:p-jacob-1"}),
+        ("Rev", "verse:Rev.7.5",
+         {"entity:tribe-of-judah", "entity:tribe-of-reuben", "entity:tribe-of-gad"},
+         {"entity:p-judah-1", "entity:p-reuben-1", "entity:p-gad-1"}),
+        ("Gen", "verse:Gen.1.1", {"entity:god"}, set()),
+        ("Matt", "verse:Matt.1.1", {"entity:jesus-christ"}, set()),
+    ]
+    for book, ref, must_have, must_not_have in checks:
+        have = attest_entities(book, ref)
+        missing = must_have - have
+        if missing:
+            errors.append(f"sense {ref}: missing {sorted(missing)}")
+        wrong = must_not_have & have
+        if wrong:
+            errors.append(f"sense {ref}: displaced identity still attested {sorted(wrong)}")
+    # Retained-phrase mentions anchor the corrected identities.
+    mention_checks: list[tuple[str, str, str, str]] = [
+        ("Ezra", "verse:Ezra.6.16", "entity:israelites", "people of Israel"),
+        ("Judg", "verse:Judg.3.2", "entity:israelites", "generations of Israel"),
+        ("Num", "verse:Num.1.26", "entity:tribe-of-judah", "sons of Judah"),
+        ("Gen", "verse:Gen.1.1", "entity:god", "God"),
+        ("Matt", "verse:Matt.1.1", "entity:jesus-christ", "Jesus Christ"),
+    ]
+    for book, ref, entity, quote in mention_checks:
+        got = by_book_edition.get(book, {}).get((ref, entity))
+        if got != quote:
+            errors.append(
+                f"sense {ref}: expected {entity} mention {quote!r}, found {got!r}"
+            )
+    report["sense_spotchecks"] = "checked"
 
 
 def check_coverage_partitions(books: list[str], report: dict, errors: list[str]) -> None:
@@ -333,6 +441,7 @@ def main() -> int:
     check_identities(books, report, errors)
     check_registry_references(books, report, errors)
     check_coverage_partitions(books, report, errors)
+    check_sense_spotchecks(books, report, errors)
     check_coverage(books, report, errors)
     report["errors"] = errors
     report["status"] = "PASS" if not errors else "FAIL"

@@ -406,6 +406,34 @@ def reference_groups(verse_to_records: dict[str, list[str]]) -> list[dict]:
     return groups
 
 
+def search_quote_at(
+    text: str,
+    quote: str,
+    start: int,
+    boundary: str = "[A-Za-z0-9]",
+) -> tuple[str, int, str, str] | None:
+    """Locate the occurrence of an exact quote at (or nearest) a char offset.
+
+    Used for disambiguation-retained surface forms: the classifier recorded
+    which occurrence justified the reference, so the mention anchors that
+    occurrence rather than defaulting to the first one."""
+    pattern = re.compile(f"(?<!{boundary})" + re.escape(quote) + f"(?!{boundary})")
+    matches = list(pattern.finditer(text))
+    if not matches:
+        return None
+    ordinal = 1
+    for i, m in enumerate(matches):
+        if m.start() == start:
+            ordinal = i + 1
+            break
+    else:
+        # Recorded offset not reproducible (text drifted): anchor the first
+        # occurrence rather than emitting nothing.
+        ordinal = 1
+    match = matches[ordinal - 1]
+    return quote, ordinal, text[max(0, match.start() - 20) : match.start()], text[match.end() : match.end() + 20]
+
+
 def search_quote(
     text: str,
     candidates: list[str],
@@ -450,7 +478,16 @@ def generate_book(
     registry_digest: str,
     config: dict,
     locale_names: dict[str, str] | None = None,
+    retained_surfaces: dict[tuple[str, str, int, int], tuple[str, int]] | None = None,
 ) -> dict:
+    """Build canonical / edition / locale draft packages for one book.
+
+    retained_surfaces maps (entity_slug, osis, chapter, verse) to the
+    (quote, char_offset) of the surface form that justified the reference
+    during reference-level disambiguation. Those surfaces are anchored
+    first, so a corrected identity keeps its interactive edition mention
+    instead of losing it to global name search.
+    """
     osis = book["osis"]
     lang = config["lang"]
     refsys = config["refsys"]
@@ -519,7 +556,11 @@ def generate_book(
             {
                 "candidate_key": candidate,
                 "entity_type": entry["type"],
+                # Source-derived English display string. The locale layer
+                # owns localized display names; the tag records the label's
+                # language so canonical consumers never treat it as content.
                 "proposed_label": entry["name"],
+                "label_language_tag": "en",
                 "possible_existing_entity_keys": [],
                 "identifying_claim_keys": [],
                 "resolution_status": "unresolved",
@@ -601,7 +642,13 @@ def generate_book(
         [],
     )
 
-    # edition mentions: locate each entity's surface form in the BSB verse text
+    # edition mentions: locate each entity's surface form in the BSB verse text.
+    # A reference-level disambiguation that retained its justifying phrase
+    # anchors that exact phrase first (form "collective"), so a corrected
+    # identity keeps its interactive mention. Otherwise the preferred name
+    # is tried first, then aliases longest-first so a fuller surface form
+    # ("Simon Peter") wins over a shorter one ("Peter").
+    retained_surfaces = retained_surfaces or {}
     mentions: list[dict] = []
     verse_to_mention: dict[str, list[str]] = {vk: [] for vk in all_verse_keys}
     attestation_index = {a["attestation_key"]: a for a in attestations}
@@ -610,27 +657,38 @@ def generate_book(
         text = verse_text.get((int(c), int(v)), "")
         slug = a["entity_key"].split("entity:", 1)[1]
         entry = entity_in_book[slug]["entry"]
-        if lang == "en":
-            if entry["type"] == "person":
-                candidates_forms = [entry["name"]] + sorted(person_labels.get(slug, []))
+        found: tuple[str, int, str, str] | None = None
+        form = "explicit_name"
+        retained = retained_surfaces.get((slug, b, int(c), int(v)))
+        if lang == "en" and retained is not None:
+            quote, start = retained
+            found = search_quote_at(text, quote, start)
+            if found is not None:
+                form = "collective"
+        if found is None:
+            if lang == "en":
+                if entry["type"] == "person":
+                    candidates_forms = [entry["name"]] + sorted(person_labels.get(slug, []))
+                else:
+                    candidates_forms = [entry["name"]] + sorted(
+                        entry.get("aliases", []), key=len, reverse=True
+                    )
             else:
-                candidates_forms = [entry["name"]] + sorted(entry.get("aliases", []))
-        else:
-            # Non-English editions locate the translation-specific surface form
-            # discovered from the translation's own verse text.
-            local = locale_names.get(slug)
-            if not local:
-                continue
-            candidates_forms = [local]
-        if lang == "en":
-            found = search_quote(text, candidates_forms)
-        else:
-            found = search_quote(
-                text,
-                candidates_forms,
-                boundary="[\u0c00-\u0c7f]",
-                require_tail=False,
-            )
+                # Non-English editions locate the translation-specific surface form
+                # discovered from the translation's own verse text.
+                local = locale_names.get(slug)
+                if not local:
+                    continue
+                candidates_forms = [local]
+            if lang == "en":
+                found = search_quote(text, candidates_forms)
+            else:
+                found = search_quote(
+                    text,
+                    candidates_forms,
+                    boundary="[\u0c00-\u0c7f]",
+                    require_tail=False,
+                )
         if not found:
             continue
         quote, ordinal, prefix, suffix = found
@@ -642,7 +700,7 @@ def generate_book(
                 "verse_key": a["reference_key"],
                 "attestation_key": akey,
                 "target": {"type": "entity", "key": a["entity_key"]},
-                "mention_form": "explicit_name",
+                "mention_form": form,
                 "selector": {
                     "exact_quote": quote,
                     "occurrence_ordinal": ordinal,
@@ -660,6 +718,39 @@ def generate_book(
     valid_mention_keys = {m["mention_key"] for m in mentions}
     for vk in verse_to_mention:
         verse_to_mention[vk] = [k for k in verse_to_mention[vk] if k in valid_mention_keys]
+
+    # Honest attestation grading: a reference is explicit when the edition
+    # verse carries one of the entity's surfaces (preferred name, alias,
+    # label, or the disambiguation-retained phrase) — whether or not that
+    # surface won an interactive mention slot (overlapping spans admit only
+    # the longest mention per verse). A reference carried only by the
+    # source datasets, with no verifiable surface in this edition, grades
+    # inferred/proposed, never explicit/established.
+    for a in attestations:
+        b, c, v = a["reference_key"].split(":")[1].split(".")
+        text = verse_text.get((int(c), int(v)), "")
+        slug = a["entity_key"].split("entity:", 1)[1]
+        entry = entity_in_book[slug]["entry"]
+        surface = retained_surfaces.get((slug, b, int(c), int(v)))
+        if surface is not None and search_quote_at(text, surface[0], surface[1]) is not None:
+            quoted = True
+        elif lang == "en":
+            if entry["type"] == "person":
+                forms = [entry["name"]] + sorted(person_labels.get(slug, []))
+            else:
+                forms = [entry["name"]] + sorted(entry.get("aliases", []))
+            quoted = search_quote(text, forms) is not None
+        else:
+            local = locale_names.get(slug)
+            quoted = local is not None and search_quote(
+                text, [local], boundary="[\u0c00-\u0c7f]", require_tail=False
+            ) is not None
+        if quoted:
+            a["textual_basis"] = "explicit"
+            a["identification_status"] = "established"
+        else:
+            a["textual_basis"] = "inferred"
+            a["identification_status"] = "proposed"
 
     edition = envelope(
         osis,
@@ -964,7 +1055,20 @@ def generate_book(
 # registry + status
 # ---------------------------------------------------------------------------
 
-def build_registry(persons: dict, places: dict, verse_key_set: set[str]) -> dict:
+def build_registry(
+    persons: dict,
+    places: dict,
+    verse_key_set: set[str],
+    uncertain_slugs: set[str] | frozenset = frozenset(),
+) -> dict:
+    """Build the canon-scoped entity registry.
+
+    identification_status is per-entity, never assumed: slugs whose source
+    identity is explicitly uncertain (the "possibly the same as" persons)
+    are recorded as proposed so the importer cannot publish them as
+    established. Display names are source-derived English; language_tag
+    records that fact for canonical consumers.
+    """
     entries = []
     for slug, entry in list(persons.items()) + list(places.items()):
         refs = sorted(r for r in entry["refs"] if r in verse_key_set)
@@ -976,6 +1080,8 @@ def build_registry(persons: dict, places: dict, verse_key_set: set[str]) -> dict
                 "slug": slug,
                 "type": entry["type"],
                 "preferred_name": entry["name"],
+                "language_tag": "en",
+                "identification_status": "proposed" if slug in uncertain_slugs else "established",
                 "aliases": sorted(a for a in entry.get("aliases", set()) if a and a != entry["name"]),
                 "verse_count": len(refs),
                 "first_reference": f"{refs[0][0]}.{refs[0][1]}.{refs[0][2]}",
@@ -984,7 +1090,7 @@ def build_registry(persons: dict, places: dict, verse_key_set: set[str]) -> dict
         )
     entries.sort(key=lambda e: e["entity_key"])
     return {
-        "registry_version": "1.0.0",
+        "registry_version": "1.1.0",
         "data_classification": DATA_CLASSIFICATION,
         "attribution": SOURCE_ATTRIBUTION,
         "entity_count": len(entries),
@@ -1180,7 +1286,14 @@ def main() -> int:
                 cfg,
                 locale_names,
             )
-            for layer in ("canonical", "edition", "locale"):
+            # The canonical graph is translation-neutral and produced once
+            # (English). Per-translation canonical packages would duplicate
+            # (and, where versification differs, invalidate) the shared
+            # graph, so only edition and locale layers are written for
+            # other translations. Versification alignment across reference
+            # systems belongs in reference mappings, not in a copied graph.
+            layers = ("canonical", "edition", "locale") if cfg["lang"] == "en" else ("edition", "locale")
+            for layer in layers:
                 layer_dir = out_trans / layer
                 layer_dir.mkdir(parents=True, exist_ok=True)
                 path = layer_dir / f"{book['osis']}.v2.json"

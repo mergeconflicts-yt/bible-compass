@@ -57,7 +57,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:c35a7ed7694667ae5e402fb02cb2753e087e344e17d949832aadbd488e66d09f"
+      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
     }
   ],
   "records": {
@@ -66,6 +66,7 @@
         "candidate_key": "candidate:wb:p-judas-2",
         "entity_type": "person",
         "proposed_label": "Judas",
+        "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -176,6 +177,66 @@
         "review_status": "draft"
       },
       {
+        "attestation_key": "attestation:wb-jude-jesus-christ-1-1",
+        "reference_key": "verse:Jude.1.1",
+        "entity_key": "entity:jesus-christ",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-jesus-christ-1-4",
+        "reference_key": "verse:Jude.1.4",
+        "entity_key": "entity:jesus-christ",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-jesus-christ-1-9",
+        "reference_key": "verse:Jude.1.9",
+        "entity_key": "entity:jesus-christ",
+        "kind": "participant",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-jesus-christ-1-17",
+        "reference_key": "verse:Jude.1.17",
+        "entity_key": "entity:jesus-christ",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-jesus-christ-1-21",
+        "reference_key": "verse:Jude.1.21",
+        "entity_key": "entity:jesus-christ",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-jesus-christ-1-25",
+        "reference_key": "verse:Jude.1.25",
+        "entity_key": "entity:jesus-christ",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "attestation_key": "attestation:wb-jude-pl-egypt-af301ca-1-5",
         "reference_key": "verse:Jude.1.5",
         "entity_key": "entity:pl-egypt-af301ca",
@@ -204,6 +265,76 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-god-1-1",
+        "reference_key": "verse:Jude.1.1",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-god-1-4",
+        "reference_key": "verse:Jude.1.4",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-god-1-5",
+        "reference_key": "verse:Jude.1.5",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-god-1-14",
+        "reference_key": "verse:Jude.1.14",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "inferred",
+        "identification_status": "proposed",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-god-1-21",
+        "reference_key": "verse:Jude.1.21",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-god-1-25",
+        "reference_key": "verse:Jude.1.25",
+        "entity_key": "entity:god",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-jude-holy-spirit-1-20",
+        "reference_key": "verse:Jude.1.20",
+        "entity_key": "entity:holy-spirit",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -212,6 +343,8 @@
         "event_key": "event:wb-jude-1-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
+          "entity:god",
+          "entity:jesus-christ",
           "entity:p-james-3",
           "entity:p-judas-2"
         ],
@@ -229,6 +362,8 @@
         "event_key": "event:wb-jude-1-p2",
         "event_type": "judgment",
         "participant_entity_keys": [
+          "entity:god",
+          "entity:jesus-christ",
           "entity:p-adam-1",
           "entity:p-balaam-1",
           "entity:p-cain-1",
@@ -246,6 +381,41 @@
         "scripture_accounts": [
           {
             "scope_key": "scope:wb-jude-1-p2:refsys:eng-v22:jude.1.3-jude.1.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-jude-1-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:god",
+          "entity:holy-spirit",
+          "entity:jesus-christ"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-jude-1-p3:refsys:eng-v22:jude.1.17-jude.1.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-jude-1-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:god",
+          "entity:jesus-christ"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-jude-1-p4:refsys:eng-v22:jude.1.24-jude.1.25",
             "relation": "reports"
           }
         ],
@@ -346,6 +516,15 @@
         "review_status": "draft"
       },
       {
+        "relevance_key": "relevance:wb-jude-1-jesus-christ",
+        "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
+        "entity_key": "entity:jesus-christ",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "relevance_key": "relevance:wb-jude-1-pl-egypt-af301ca",
         "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
         "entity_key": "entity:pl-egypt-af301ca",
@@ -371,9 +550,42 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-jude-1-god",
+        "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
+        "entity_key": "entity:god",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-jude-1-holy-spirit",
+        "scope_key": "scope:wb-jude-1:refsys:eng-v22:jude.1.1-jude.1.25",
+        "entity_key": "entity:holy-spirit",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:god",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:holy-spirit",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:jesus-christ",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:p-adam-1",
         "resolution_status": "resolved_existing",
@@ -453,18 +665,13 @@
             "verse:Jude.1.13",
             "verse:Jude.1.15",
             "verse:Jude.1.16",
-            "verse:Jude.1.17",
             "verse:Jude.1.18",
             "verse:Jude.1.19",
             "verse:Jude.1.2",
-            "verse:Jude.1.20",
-            "verse:Jude.1.21",
             "verse:Jude.1.22",
             "verse:Jude.1.23",
             "verse:Jude.1.24",
-            "verse:Jude.1.25",
             "verse:Jude.1.3",
-            "verse:Jude.1.4",
             "verse:Jude.1.6",
             "verse:Jude.1.8"
           ],
@@ -477,8 +684,21 @@
             "verse:Jude.1.1"
           ],
           "record_keys": [
+            "attestation:wb-jude-god-1-1",
+            "attestation:wb-jude-jesus-christ-1-1",
             "attestation:wb-jude-p-james-3-1-1",
             "attestation:wb-jude-p-judas-2-1-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Jude.1.4"
+          ],
+          "record_keys": [
+            "attestation:wb-jude-god-1-4",
+            "attestation:wb-jude-jesus-christ-1-4"
           ],
           "blocker_question_keys": []
         },
@@ -488,6 +708,7 @@
             "verse:Jude.1.5"
           ],
           "record_keys": [
+            "attestation:wb-jude-god-1-5",
             "attestation:wb-jude-pl-egypt-af301ca-1-5"
           ],
           "blocker_question_keys": []
@@ -509,6 +730,7 @@
             "verse:Jude.1.9"
           ],
           "record_keys": [
+            "attestation:wb-jude-jesus-christ-1-9",
             "attestation:wb-jude-p-michael-9-1-9",
             "attestation:wb-jude-p-moses-1-1-9",
             "attestation:wb-jude-p-satan-1-1-9"
@@ -533,8 +755,51 @@
             "verse:Jude.1.14"
           ],
           "record_keys": [
+            "attestation:wb-jude-god-1-14",
             "attestation:wb-jude-p-adam-1-1-14",
             "attestation:wb-jude-p-enoch-2-1-14"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Jude.1.17"
+          ],
+          "record_keys": [
+            "attestation:wb-jude-jesus-christ-1-17"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Jude.1.20"
+          ],
+          "record_keys": [
+            "attestation:wb-jude-holy-spirit-1-20"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Jude.1.21"
+          ],
+          "record_keys": [
+            "attestation:wb-jude-god-1-21",
+            "attestation:wb-jude-jesus-christ-1-21"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:Jude.1.25"
+          ],
+          "record_keys": [
+            "attestation:wb-jude-god-1-25",
+            "attestation:wb-jude-jesus-christ-1-25"
           ],
           "blocker_question_keys": []
         }
@@ -550,6 +815,10 @@
     {
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "segmentation-source",
+      "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
       "code": "events-projected-from-headings",

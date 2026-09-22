@@ -45,7 +45,7 @@
     {
       "package_key": "draft:wb-2john-canonical",
       "revision": 1,
-      "digest": "sha256:82638680d8a962bec6d1f671496a3e9ebb0b4655de70d374cba8c960f2839b00"
+      "digest": "sha256:b78b3cdc1cb743fdb6b41ee5f6c72d0a29b164b876338b9414637e9a8c509022"
     }
   ],
   "records": {
@@ -116,14 +116,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Antichrist, John, Satan.",
+            "text": "Present in this chapter: Antichrist, Jesus Christ, John, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-2john-1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -159,14 +159,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: John.",
+            "text": "Present in this passage: Jesus Christ, John.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-2john-1-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -207,9 +207,9 @@
             "open_question_key": "question:wb-context-en-wb-2john-1-p2-who"
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-2john-1-p2-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -245,14 +245,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Antichrist, Satan.",
+            "text": "Present in this passage: Antichrist, Jesus Christ, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: God.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-2john-1-p3-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -356,6 +356,26 @@
         "role_text": "Named in 2 John 1 at verse(s) 7.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-2john-1-jesus-christ",
+        "relevance_key": "relevance:wb-2john-1-jesus-christ",
+        "scope_key": "scope:wb-2john-1:refsys:eng-v22:2john.1.1-2john.1.13",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "role_text": "Named in 2 John 1 at verse(s) 3, 7, 9.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-2john-1-god",
+        "relevance_key": "relevance:wb-2john-1-god",
+        "scope_key": "scope:wb-2john-1:refsys:eng-v22:2john.1.1-2john.1.13",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "role_text": "Named in 2 John 1 at verse(s) 3, 4, 9.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -393,38 +413,26 @@
             "question:wb-context-en-wb-2john-1-p1-before",
             "question:wb-context-en-wb-2john-1-p1-stakes",
             "question:wb-context-en-wb-2john-1-p1-when",
-            "question:wb-context-en-wb-2john-1-p1-where",
             "question:wb-context-en-wb-2john-1-p2-before",
             "question:wb-context-en-wb-2john-1-p2-stakes",
             "question:wb-context-en-wb-2john-1-p2-when",
-            "question:wb-context-en-wb-2john-1-p2-where",
             "question:wb-context-en-wb-2john-1-p2-who",
             "question:wb-context-en-wb-2john-1-p3-before",
             "question:wb-context-en-wb-2john-1-p3-stakes",
             "question:wb-context-en-wb-2john-1-p3-when",
-            "question:wb-context-en-wb-2john-1-p3-where",
             "question:wb-context-en-wb-2john-1-p4-before",
             "question:wb-context-en-wb-2john-1-p4-stakes",
             "question:wb-context-en-wb-2john-1-p4-when",
             "question:wb-context-en-wb-2john-1-p4-where",
             "question:wb-context-en-wb-2john-1-p4-who",
             "question:wb-context-en-wb-2john-1-stakes",
-            "question:wb-context-en-wb-2john-1-when",
-            "question:wb-context-en-wb-2john-1-where"
+            "question:wb-context-en-wb-2john-1-when"
           ]
         }
       ]
     }
   ],
   "open_questions": [
-    {
-      "question_key": "question:wb-context-en-wb-2john-1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-2john-1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
     {
       "question_key": "question:wb-context-en-wb-2john-1-when",
       "question_type": "uncertain_date",
@@ -439,14 +447,6 @@
       "record_key": "context:en:wb-2john-1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-2john-1-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-2john-1-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -482,14 +482,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-2john-1-p2-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-2john-1-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-2john-1-p2-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-2john-1-p2",
@@ -511,14 +503,6 @@
       "record_key": "context:en:wb-2john-1-p2",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-2john-1-p3-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-2john-1-p3",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
