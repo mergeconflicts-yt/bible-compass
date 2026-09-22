@@ -403,50 +403,54 @@ def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, 
         "on conflict (key) do update set checksum = excluded.checksum, content_version = excluded.content_version;"
     )
     manifest = f"(select id from private_staging.package_manifests where key={esc(manifest_key)})"
-    # The whole-English package is ONE logical package across revisions. Each
-    # revision gets a new manifest key (key contains revision + digest), so
-    # cleanup must target EVERY English manifest, not only the new one: a
-    # revision-7 import would otherwise own nothing and leave revision-6 rows
-    # (and their ownership) behind (blocker 2). Rows first written by another
-    # package keep a NULL origin and are never removed.
-    english_manifests = (
-        "(select id from private_staging.package_manifests where key like 'en.bsb.all@%')"
+    # The whole-English package is ONE logical package across revisions. Cleanup
+    # targets every UNPUBLISHED English manifest (blocker 1): a published
+    # manifest's rows and memberships are immutable history for rollback/audit
+    # and are never touched by a later draft import. A row first written by
+    # another package keeps a NULL origin and is never removed.
+    stale_english_manifests = (
+        "(select id from private_staging.package_manifests "
+        "where key like 'en.bsb.all@%' and published_at is null)"
     )
 
     # --- ownership-scoped resync (revision-safe coexistence) --------------
-    # Delete ONLY rows this logical package owns across all its revisions.
-    # Dependent rows are deleted before the rows they reference (restrict).
+    # FK order matters: package_members references context_revisions, so its
+    # rows are deleted BEFORE the context rows they reference (blocker 1);
+    # dependent rows are deleted before the rows they reference (restrict).
+    # Package memberships are deleted here, before the entity/claim upserts,
+    # but only for UNPUBLISHED manifests, so the published-membership guard in
+    # those upserts still sees (and protects) published rows (blocker 2).
+    add(f"delete from private_staging.package_members where package_id in {stale_english_manifests};")
     add(f"delete from private_staging.edition_render_spans where mention_id in "
-        f"(select id from private_staging.edition_mentions where origin_package_id in {english_manifests});")
-    add(f"delete from private_staging.edition_mentions where origin_package_id in {english_manifests};")
+        f"(select id from private_staging.edition_mentions where origin_package_id in {stale_english_manifests});")
+    add(f"delete from private_staging.edition_mentions where origin_package_id in {stale_english_manifests};")
     add(f"delete from private_staging.reference_entity_attestation_claims where attestation_id in "
-        f"(select id from private_staging.reference_entity_attestations where origin_package_id in {english_manifests});")
-    add(f"delete from private_staging.reference_entity_attestations where origin_package_id in {english_manifests};")
+        f"(select id from private_staging.reference_entity_attestations where origin_package_id in {stale_english_manifests});")
+    add(f"delete from private_staging.reference_entity_attestations where origin_package_id in {stale_english_manifests};")
     add(f"delete from private_staging.entity_relationship_assertion_claims where assertion_id in "
-        f"(select id from private_staging.entity_relationship_assertions where origin_package_id in {english_manifests});")
-    add(f"delete from private_staging.entity_relationship_assertions where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.scope_entity_relevance where origin_package_id in {english_manifests};")
+        f"(select id from private_staging.entity_relationship_assertions where origin_package_id in {stale_english_manifests});")
+    add(f"delete from private_staging.entity_relationship_assertions where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.scope_entity_relevance where origin_package_id in {stale_english_manifests};")
     add(f"delete from private_staging.event_participant_claims where (event_id, entity_id, role) in "
-        f"(select event_id, entity_id, role from private_staging.event_participants where origin_package_id in {english_manifests});")
+        f"(select event_id, entity_id, role from private_staging.event_participants where origin_package_id in {stale_english_manifests});")
     add(f"delete from private_staging.event_place_claims where (event_id, place_id) in "
-        f"(select event_id, place_id from private_staging.event_places where origin_package_id in {english_manifests});")
+        f"(select event_id, place_id from private_staging.event_places where origin_package_id in {stale_english_manifests});")
     add(f"delete from private_staging.event_scripture_account_claims where (event_id, scope_id) in "
-        f"(select event_id, scope_id from private_staging.event_scripture_accounts where origin_package_id in {english_manifests});")
-    add(f"delete from private_staging.event_participants where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.event_places where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.event_scripture_accounts where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.events where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.place_geometries where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.entity_names where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.entity_descriptions where origin_package_id in {english_manifests};")
+        f"(select event_id, scope_id from private_staging.event_scripture_accounts where origin_package_id in {stale_english_manifests});")
+    add(f"delete from private_staging.event_participants where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.event_places where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.event_scripture_accounts where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.events where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.place_geometries where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.entity_names where origin_package_id in {stale_english_manifests};")
+    add(f"delete from private_staging.entity_descriptions where origin_package_id in {stale_english_manifests};")
     add(f"delete from private_staging.context_sections where revision_id in "
         f"(select cr.id from private_staging.context_revisions cr "
         f"join private_staging.context_artifacts ca on ca.id = cr.artifact_id "
-        f"where ca.origin_package_id in {english_manifests});")
+        f"where ca.origin_package_id in {stale_english_manifests});")
     add(f"delete from private_staging.context_revisions where artifact_id in "
-        f"(select id from private_staging.context_artifacts where origin_package_id in {english_manifests});")
-    add(f"delete from private_staging.context_artifacts where origin_package_id in {english_manifests};")
-    add(f"delete from private_staging.package_members where package_id in {english_manifests};")
+        f"(select id from private_staging.context_artifacts where origin_package_id in {stale_english_manifests});")
+    add(f"delete from private_staging.context_artifacts where origin_package_id in {stale_english_manifests};")
 
     # --- entities (ONE row per canonical key; the registry is authoritative)
     # A draft import must never mutate an entity that is already a member of a

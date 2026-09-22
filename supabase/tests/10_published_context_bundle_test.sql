@@ -152,6 +152,36 @@ BEGIN
     VALUES (event_entity, pub_place, 'location');
   INSERT INTO private_staging.event_scripture_accounts (event_id, scope_id, relation)
     VALUES (event_entity, scope_id, 'reports');
+
+  -- Ownership: the API exposes only rows owned by a PUBLISHED package, so
+  -- every seeded attached row is assigned this package as its origin.
+  UPDATE private_staging.entity_names SET origin_package_id = pkg_id
+    WHERE entity_id IN (SELECT id FROM private_staging.entities
+      WHERE key IN ('entity:probe-pub', 'entity:probe-pub-2', 'entity:probe-place'));
+  UPDATE private_staging.entity_descriptions SET origin_package_id = pkg_id
+    WHERE entity_id IN (SELECT id FROM private_staging.entities
+      WHERE key IN ('entity:probe-pub', 'entity:probe-pub-2', 'entity:probe-place'));
+  UPDATE private_staging.context_artifacts SET origin_package_id = pkg_id
+    WHERE scope_id IN (SELECT id FROM private_staging.scripture_scopes
+      WHERE key = 'scope:probe-ctx:refsys:eng-v22:Neh.2.4');
+  UPDATE private_staging.edition_mentions SET origin_package_id = pkg_id
+    WHERE verse_id IN (SELECT v.id FROM private_staging.translation_edition_verses v
+      JOIN private_staging.translation_editions e ON e.id = v.edition_id
+      WHERE e.key = 'edition:bsb@20260912:sha-cccccccc' AND v.chapter = 2 AND v.verse_number = 4);
+  UPDATE private_staging.scope_entity_relevance SET origin_package_id = pkg_id
+    WHERE scope_id IN (SELECT id FROM private_staging.scripture_scopes
+      WHERE key = 'scope:probe-ctx:refsys:eng-v22:Neh.2.4');
+  UPDATE private_staging.entity_relationship_assertions SET origin_package_id = pkg_id
+    WHERE scope_id IN (SELECT id FROM private_staging.scripture_scopes
+      WHERE key = 'scope:probe-ctx:refsys:eng-v22:Neh.2.4');
+  UPDATE private_staging.events SET origin_package_id = pkg_id
+    WHERE entity_id IN (SELECT id FROM private_staging.entities WHERE key = 'entity:probe-event');
+  UPDATE private_staging.event_participants SET origin_package_id = pkg_id
+    WHERE event_id IN (SELECT id FROM private_staging.entities WHERE key = 'entity:probe-event');
+  UPDATE private_staging.event_places SET origin_package_id = pkg_id
+    WHERE event_id IN (SELECT id FROM private_staging.entities WHERE key = 'entity:probe-event');
+  UPDATE private_staging.event_scripture_accounts SET origin_package_id = pkg_id
+    WHERE event_id IN (SELECT id FROM private_staging.entities WHERE key = 'entity:probe-event');
 END $$;
 
 -- Anon fetches the complete bundle.

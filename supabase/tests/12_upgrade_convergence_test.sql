@@ -59,10 +59,12 @@ BEGIN
     (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state, origin_package_id)
     VALUES (e, s, u, 'implied_referent', 'inferred', NULL, 'draft', NULL);
 
-  -- Exactly the resync delete: every English manifest, not only the newest.
+  -- Exactly the resync delete: every UNPUBLISHED English manifest, not only the
+  -- newest. A published manifest's rows are immutable history and are spared.
   DELETE FROM private_staging.reference_entity_attestations
    WHERE origin_package_id IN (
-     SELECT id FROM private_staging.package_manifests WHERE key LIKE 'en.bsb.all@%'
+     SELECT id FROM private_staging.package_manifests
+     WHERE key LIKE 'en.bsb.all@%' AND published_at IS NULL
    );
 
   SELECT count(*) INTO n FROM private_staging.reference_entity_attestations

@@ -389,6 +389,21 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
             f"{EDITION_ID}, {unit(f'Neh.2.{n}')}, {WORK_ID}, 2, {n}, {esc(text)}, {esc(sha256_text(text))}) on conflict do nothing;"
         )
 
+    # --- draft manifest (row ownership anchor) ------------------------------
+    # The locked Nehemiah 2 package is an unpublished draft manifest. Its rows
+    # carry origin_package_id so that, once this manifest is published, only its
+    # own rows are exposed by the public API (NULL-origin rows are never
+    # treated as publishable).
+    digest8 = payload_digest.split("sha256:", 1)[-1][:8]
+    manifest_key = f"en.bsb.neh-2@1:sha-{digest8}"
+    add(
+        "insert into private_staging.package_manifests "
+        "(key, locale, translation_edition_id, scope_id, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at, rights_status) values ("
+        f"{esc(manifest_key)}, 'en', {EDITION_ID}, null, '2.0.0', 1, {esc(payload_digest)}, '0.0.0', null, null, 'unknown') "
+        "on conflict (key) do update set checksum = excluded.checksum;"
+    )
+    PKG = f"(select id from private_staging.package_manifests where key={esc(manifest_key)})"
+
     # --- entities -----------------------------------------------------------
     def entity_rows(pairs: list[tuple[str, str, str, str]]) -> None:
         for key, slug, etype, ident in pairs:
@@ -417,14 +432,14 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
             if not normalized:
                 continue
             add(
-                "insert into private_staging.entity_names (entity_id, language_tag, form, normalized_form, kind) values ("
-                f"{ENT(entity_key)}, 'en', {esc(form)}, {esc(normalized)}, {esc(kind)}) on conflict do nothing;"
+                "insert into private_staging.entity_names (entity_id, language_tag, form, normalized_form, kind, origin_package_id) values ("
+                f"{ENT(entity_key)}, 'en', {esc(form)}, {esc(normalized)}, {esc(kind)}, {PKG}) on conflict do nothing;"
             )
         extended = profile.get("extended_description")
         add(
-            "insert into private_staging.entity_descriptions (entity_id, locale, revision, short_desc, extended_desc, source_locale, review_state) values ("
+            "insert into private_staging.entity_descriptions (entity_id, locale, revision, short_desc, extended_desc, source_locale, review_state, origin_package_id) values ("
             f"{ENT(entity_key)}, 'en', 1, {esc(profile['short_description']['text'])}, "
-            f"{esc(extended['text']) if extended else 'null'}, 'en', 'draft') on conflict do nothing;"
+            f"{esc(extended['text']) if extended else 'null'}, 'en', 'draft', {PKG}) on conflict do nothing;"
         )
 
     # --- claims -------------------------------------------------------------
@@ -462,8 +477,8 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
         verse = attestation["reference_key"].rsplit(".", 1)[1]
         claim_id = CLAIM(attestation["claim_keys"][0]) if attestation["claim_keys"] else "null"
         add(
-            "insert into private_staging.reference_entity_attestations (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state) values ("
-            f"{ENT(attestation['entity_key'])}, {SCOPE(chapter_scope)}, {unit(f'Neh.2.{verse}')}, {esc(attestation['kind'])}, {esc(attestation['textual_basis'])}, {claim_id}, 'draft') on conflict do nothing;"
+            "insert into private_staging.reference_entity_attestations (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state, origin_package_id) values ("
+            f"{ENT(attestation['entity_key'])}, {SCOPE(chapter_scope)}, {unit(f'Neh.2.{verse}')}, {esc(attestation['kind'])}, {esc(attestation['textual_basis'])}, {claim_id}, 'draft', {PKG}) on conflict do nothing;"
         )
 
     # --- relationship predicates + assertions -------------------------------
@@ -477,8 +492,8 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
         predicate = rel["predicate_key"].split("relationship:", 1)[1]
         scope_id = SCOPE(rel["applicable_scope_keys"][0])
         add(
-            "insert into private_staging.entity_relationship_assertions (subject_entity_id, predicate, object_entity_id, scope_id, certainty) "
-            f"select {ENT(rel['subject_entity_key'])}, {esc(predicate)}, {ENT(rel['object_entity_key'])}, {scope_id}, 'established' "
+            "insert into private_staging.entity_relationship_assertions (subject_entity_id, predicate, object_entity_id, scope_id, certainty, origin_package_id) "
+            f"select {ENT(rel['subject_entity_key'])}, {esc(predicate)}, {ENT(rel['object_entity_key'])}, {scope_id}, 'established', {PKG} "
             "where not exists (select 1 from private_staging.entity_relationship_assertions a where "
             f"a.subject_entity_id={ENT(rel['subject_entity_key'])} and a.predicate={esc(predicate)} and a.object_entity_id={ENT(rel['object_entity_key'])} and a.scope_id={scope_id});"
         )
@@ -487,23 +502,23 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
     for event in canonical["records"]["events"]:
         event_entity = f"entity:{event['event_key'].split('event:', 1)[1]}"
         add(
-            "insert into private_staging.events (entity_id, event_kind) values ("
-            f"{ENT(event_entity)}, {esc(event['event_type'])}) on conflict (entity_id) do nothing;"
+            "insert into private_staging.events (entity_id, event_kind, origin_package_id) values ("
+            f"{ENT(event_entity)}, {esc(event['event_type'])}, {PKG}) on conflict (entity_id) do nothing;"
         )
         for participant in event["participant_entity_keys"]:
             add(
-                "insert into private_staging.event_participants (event_id, entity_id, role) values ("
-                f"{ENT(event_entity)}, {ENT(participant)}, 'participant') on conflict do nothing;"
+                "insert into private_staging.event_participants (event_id, entity_id, role, origin_package_id) values ("
+                f"{ENT(event_entity)}, {ENT(participant)}, 'participant', {PKG}) on conflict do nothing;"
             )
         for place in event["place_entity_keys"]:
             add(
-                "insert into private_staging.event_places (event_id, place_id) values ("
-                f"{ENT(event_entity)}, {ENT(place)}) on conflict do nothing;"
+                "insert into private_staging.event_places (event_id, place_id, origin_package_id) values ("
+                f"{ENT(event_entity)}, {ENT(place)}, {PKG}) on conflict do nothing;"
             )
         for account in event["scripture_accounts"]:
             add(
-                "insert into private_staging.event_scripture_accounts (event_id, scope_id, relation) values ("
-                f"{ENT(event_entity)}, {SCOPE(account['scope_key'])}, {esc(account['relation'])}) on conflict do nothing;"
+                "insert into private_staging.event_scripture_accounts (event_id, scope_id, relation, origin_package_id) values ("
+                f"{ENT(event_entity)}, {SCOPE(account['scope_key'])}, {esc(account['relation'])}, {PKG}) on conflict do nothing;"
             )
 
     # --- place geometries ---------------------------------------------------
@@ -511,8 +526,8 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
         position = place["geographic_positions"][0]
         claim_id = CLAIM(position["claim_keys"][0]) if position["claim_keys"] else "null"
         add(
-            "insert into private_staging.place_geometries (entity_id, crs, precision, evidence_claim_id, component_license) values ("
-            f"{ENT(place['entity_key'])}, 'EPSG:4326', {esc(position['precision'])}, {claim_id}, {esc(UNKNOWN_LICENSE)}) on conflict (entity_id) do nothing;"
+            "insert into private_staging.place_geometries (entity_id, crs, precision, evidence_claim_id, component_license, origin_package_id) values ("
+            f"{ENT(place['entity_key'])}, 'EPSG:4326', {esc(position['precision'])}, {claim_id}, {esc(UNKNOWN_LICENSE)}, {PKG}) on conflict (entity_id) do nothing;"
         )
 
     # --- relevance (English role text) --------------------------------------
@@ -521,14 +536,14 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
         loc = localizations.get((relevance["scope_key"], relevance["entity_key"]))
         role_text = loc["role_text"] if loc else ""
         add(
-            "insert into private_staging.scope_entity_relevance (scope_id, entity_id, role_in_passage, importance, is_attested) values ("
-            f"{SCOPE(relevance['scope_key'])}, {ENT(relevance['entity_key'])}, {esc(role_text)}, {esc(relevance['importance'])}, {str(relevance['is_attested']).lower()}) on conflict do nothing;"
+            "insert into private_staging.scope_entity_relevance (scope_id, entity_id, role_in_passage, importance, is_attested, origin_package_id) values ("
+            f"{SCOPE(relevance['scope_key'])}, {ENT(relevance['entity_key'])}, {esc(role_text)}, {esc(relevance['importance'])}, {str(relevance['is_attested']).lower()}, {PKG}) on conflict do nothing;"
         )
 
     # --- passage contexts (English) -----------------------------------------
     for context in locale["records"]["passage_contexts"]:
         scope_id = SCOPE(context["scope_key"])
-        add("insert into private_staging.context_artifacts (scope_id) values (" + scope_id + ") on conflict do nothing;")
+        add("insert into private_staging.context_artifacts (scope_id, origin_package_id) values (" + scope_id + f", {PKG}) on conflict do nothing;")
         add(
             "insert into private_staging.context_revisions (artifact_id, revision) select (select id from private_staging.context_artifacts where scope_id="
             + scope_id + "), 1 on conflict do nothing;"
@@ -564,8 +579,8 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
         start_utf16 = len(text[: m.start()].encode("utf-16-le")) // 2
         end_utf16 = len(text[: m.end()].encode("utf-16-le")) // 2
         add(
-            "insert into private_staging.edition_mentions (edition_id, verse_id, entity_id, form, quote, occurrence_ordinal, pipeline_text_sha256, review_state) "
-            f"select {EDITION_ID}, {verse_id(verse)}, {ENT(mention['target']['key'])}, {esc(mention['mention_form'])}, {esc(sel['exact_quote'])}, {sel['occurrence_ordinal']}, {esc(sha256_text(text))}, 'draft' "
+            "insert into private_staging.edition_mentions (edition_id, verse_id, entity_id, form, quote, occurrence_ordinal, pipeline_text_sha256, review_state, origin_package_id) "
+            f"select {EDITION_ID}, {verse_id(verse)}, {ENT(mention['target']['key'])}, {esc(mention['mention_form'])}, {esc(sel['exact_quote'])}, {sel['occurrence_ordinal']}, {esc(sha256_text(text))}, 'draft', {PKG} "
             "where not exists (select 1 from private_staging.edition_mentions em where "
             f"em.edition_id={EDITION_ID} and em.verse_id={verse_id(verse)} and em.entity_id={ENT(mention['target']['key'])} and em.quote={esc(sel['exact_quote'])} and em.occurrence_ordinal={sel['occurrence_ordinal']});"
         )
@@ -575,6 +590,25 @@ def build_sql(canonical: dict, locale: dict, edition: dict, catalog: dict, verse
             "from private_staging.edition_mentions em where "
             f"em.edition_id={EDITION_ID} and em.verse_id={verse_id(verse)} and em.entity_id={ENT(mention['target']['key'])} and em.quote={esc(sel['exact_quote'])} and em.occurrence_ordinal={sel['occurrence_ordinal']} "
             "on conflict (mention_id) do nothing;"
+        )
+
+    # --- package membership (entities, claims, context revisions) -----------
+    for key, _slug, _etype, _ident in entity_pairs:
+        add(
+            "insert into private_staging.package_members (package_id, entity_id) "
+            f"select {PKG}, {ENT(key)} where not exists (select 1 from private_staging.package_members pm where pm.package_id={PKG} and pm.entity_id={ENT(key)});"
+        )
+    for claim in canonical["records"]["claims"]:
+        add(
+            "insert into private_staging.package_members (package_id, claim_id) "
+            f"select {PKG}, {CLAIM(claim['claim_key'])} where not exists (select 1 from private_staging.package_members pm where pm.package_id={PKG} and pm.claim_id={CLAIM(claim['claim_key'])});"
+        )
+    for context in locale["records"]["passage_contexts"]:
+        artifact = "(select id from private_staging.context_artifacts where scope_id=" + SCOPE(context["scope_key"]) + ")"
+        revision = f"(select id from private_staging.context_revisions where artifact_id={artifact} and revision=1)"
+        add(
+            "insert into private_staging.package_members (package_id, context_revision_id) "
+            f"select {PKG}, {revision} where not exists (select 1 from private_staging.package_members pm where pm.package_id={PKG} and pm.context_revision_id={revision});"
         )
 
     # --- verification + receipt --------------------------------------------

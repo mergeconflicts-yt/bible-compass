@@ -48,9 +48,21 @@ grant select on public_content.published_verses to anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- 3. A source external id maps to at most one entity. YHVH_1 was mapped to both
---    entity:god and entity:jesus-christ; the registry now assigns it only to
---    entity:god (jesus-christ carries no unambiguous source row), and this index
---    makes any future duplicate fail loudly.
+--    entity:god and entity:jesus-christ. Reconcile existing duplicates to a
+--    single canonical owner (the lexically smallest entity key) BEFORE creating
+--    the unique index, so an upgrade with legacy duplicates cannot fail.
 -- ---------------------------------------------------------------------------
+delete from private_staging.entity_external_ids x
+using (
+  select eei.source, eei.external_id, min(e.key) as keep_key
+  from private_staging.entity_external_ids eei
+  join private_staging.entities e on e.id = eei.entity_id
+  group by eei.source, eei.external_id
+  having count(*) > 1
+) d
+where x.source = d.source
+  and x.external_id = d.external_id
+  and (select e2.key from private_staging.entities e2 where e2.id = x.entity_id) <> d.keep_key;
+
 create unique index if not exists uq_entity_external_ids_source
   on private_staging.entity_external_ids (source, external_id);
