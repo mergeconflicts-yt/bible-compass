@@ -92,13 +92,31 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-mal-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:8d9b1691fdc4cc69780b226a0d516d9de462dbe1ca6271f6c59a6690a02624e4"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:p-elijah-1-4-5",
+        "verse_key": "verse:Mal.4.5",
+        "attestation_key": "attestation:wb-p-elijah-1-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Elijah",
+          "occurrence_ordinal": 1,
+          "prefix": "ld, I will send you ",
+          "suffix": " the prophet before "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:p-esau-1-1-2",
         "verse_key": "verse:Mal.1.2",
@@ -226,42 +244,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-moses-1-4-4",
-        "verse_key": "verse:Mal.4.4",
-        "attestation_key": "attestation:wb-p-moses-1-4-4",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-moses-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Moses",
-          "occurrence_ordinal": 1,
-          "prefix": "e law of My servant ",
-          "suffix": ", the statutes and o"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-elijah-1-4-5",
-        "verse_key": "verse:Mal.4.5",
-        "attestation_key": "attestation:wb-p-elijah-1-4-5",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-elijah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Elijah",
-          "occurrence_ordinal": 1,
-          "prefix": "ld, I will send you ",
-          "suffix": " the prophet before "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:p-malachi-1-1-1",
         "verse_key": "verse:Mal.1.1",
         "attestation_key": "attestation:wb-p-malachi-1-1-1",
@@ -275,6 +257,24 @@
           "occurrence_ordinal": 1,
           "prefix": "D to Israel through ",
           "suffix": ":"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-4-4",
+        "verse_key": "verse:Mal.4.4",
+        "attestation_key": "attestation:wb-p-moses-1-4-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "e law of My servant ",
+          "suffix": ", the statutes and o"
         },
         "claim_keys": [],
         "review_status": "draft"

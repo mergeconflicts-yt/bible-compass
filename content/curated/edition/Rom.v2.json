@@ -520,27 +520,27 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-rom-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:fd629e7d00be932956a0c34dc361b14e8c3063c8e7b96bdb86502f716d7e10cd"
     }
   ],
   "records": {
     "mentions": [
       {
-        "mention_key": "mention:wb:p-adam-1-5-14",
-        "verse_key": "verse:Rom.5.14",
-        "attestation_key": "attestation:wb-p-adam-1-5-14",
+        "mention_key": "mention:wb:p-abram-1-11-1",
+        "verse_key": "verse:Rom.11.1",
+        "attestation_key": "attestation:wb-p-abram-1-11-1",
         "target": {
           "type": "entity",
-          "key": "entity:p-adam-1"
+          "key": "entity:p-abram-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Adam",
+          "exact_quote": "Abraham",
           "occurrence_ordinal": 1,
-          "prefix": " death reigned from ",
-          "suffix": " until Moses, even o"
+          "prefix": "lf, a descendant of ",
+          "suffix": ", from the tribe of "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -559,60 +559,6 @@
           "occurrence_ordinal": 1,
           "prefix": "n shall we say that ",
           "suffix": ", our forefather, ha"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-abram-1-4-2",
-        "verse_key": "verse:Rom.4.2",
-        "attestation_key": "attestation:wb-p-abram-1-4-2",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-abram-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Abraham",
-          "occurrence_ordinal": 1,
-          "prefix": "If ",
-          "suffix": " was indeed justifie"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-abram-1-4-3",
-        "verse_key": "verse:Rom.4.3",
-        "attestation_key": "attestation:wb-p-abram-1-4-3",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-abram-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Abraham",
-          "occurrence_ordinal": 1,
-          "prefix": "the Scripture say? “",
-          "suffix": " believed God, and i"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-abram-1-4-9",
-        "verse_key": "verse:Rom.4.9",
-        "attestation_key": "attestation:wb-p-abram-1-4-9",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-abram-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Abraham",
-          "occurrence_ordinal": 1,
-          "prefix": "ve been saying that ",
-          "suffix": "’s faith was credite"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -672,6 +618,60 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-abram-1-4-2",
+        "verse_key": "verse:Rom.4.2",
+        "attestation_key": "attestation:wb-p-abram-1-4-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "If ",
+          "suffix": " was indeed justifie"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-3",
+        "verse_key": "verse:Rom.4.3",
+        "attestation_key": "attestation:wb-p-abram-1-4-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "the Scripture say? “",
+          "suffix": " believed God, and i"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-abram-1-4-9",
+        "verse_key": "verse:Rom.4.9",
+        "attestation_key": "attestation:wb-p-abram-1-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 1,
+          "prefix": "ve been saying that ",
+          "suffix": "’s faith was credite"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-abram-1-9-7",
         "verse_key": "verse:Rom.9.7",
         "attestation_key": "attestation:wb-p-abram-1-9-7",
@@ -690,163 +690,109 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-abram-1-11-1",
-        "verse_key": "verse:Rom.11.1",
-        "attestation_key": "attestation:wb-p-abram-1-11-1",
+        "mention_key": "mention:wb:p-adam-1-5-14",
+        "verse_key": "verse:Rom.5.14",
+        "attestation_key": "attestation:wb-p-adam-1-5-14",
         "target": {
           "type": "entity",
-          "key": "entity:p-abram-1"
+          "key": "entity:p-adam-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Abraham",
+          "exact_quote": "Adam",
           "occurrence_ordinal": 1,
-          "prefix": "lf, a descendant of ",
-          "suffix": ", from the tribe of "
+          "prefix": " death reigned from ",
+          "suffix": " until Moses, even o"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-sarai-1-4-19",
-        "verse_key": "verse:Rom.4.19",
-        "attestation_key": "attestation:wb-p-sarai-1-4-19",
+        "mention_key": "mention:wb:p-ampliatus-1-16-8",
+        "verse_key": "verse:Rom.16.8",
+        "attestation_key": "attestation:wb-p-ampliatus-1-16-8",
         "target": {
           "type": "entity",
-          "key": "entity:p-sarai-1"
+          "key": "entity:p-ampliatus-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Sarah",
+          "exact_quote": "Ampliatus",
           "occurrence_ordinal": 1,
-          "prefix": "the lifelessness of ",
-          "suffix": "’s womb."
+          "prefix": "Greet ",
+          "suffix": ", my beloved in the "
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-sarai-1-9-9",
-        "verse_key": "verse:Rom.9.9",
-        "attestation_key": "attestation:wb-p-sarai-1-9-9",
+        "mention_key": "mention:wb:p-andronicus-1-16-7",
+        "verse_key": "verse:Rom.16.7",
+        "attestation_key": "attestation:wb-p-andronicus-1-16-7",
         "target": {
           "type": "entity",
-          "key": "entity:p-sarai-1"
+          "key": "entity:p-andronicus-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Sarah",
+          "exact_quote": "Andronicus",
           "occurrence_ordinal": 1,
-          "prefix": " I will return, and ",
-          "suffix": " will have a son.”"
+          "prefix": "Greet ",
+          "suffix": " and Junia, my fello"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-isaac-1-9-7",
-        "verse_key": "verse:Rom.9.7",
-        "attestation_key": "attestation:wb-p-isaac-1-9-7",
+        "mention_key": "mention:wb:p-apelles-1-16-10",
+        "verse_key": "verse:Rom.16.10",
+        "attestation_key": "attestation:wb-p-apelles-1-16-10",
         "target": {
           "type": "entity",
-          "key": "entity:p-isaac-1"
+          "key": "entity:p-apelles-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Isaac",
+          "exact_quote": "Apelles",
           "occurrence_ordinal": 1,
-          "prefix": " contrary, “Through ",
-          "suffix": " your offspring will"
+          "prefix": "Greet ",
+          "suffix": ", who is approved in"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-isaac-1-9-10",
-        "verse_key": "verse:Rom.9.10",
-        "attestation_key": "attestation:wb-p-isaac-1-9-10",
+        "mention_key": "mention:wb:p-aquila-1-16-3",
+        "verse_key": "verse:Rom.16.3",
+        "attestation_key": "attestation:wb-p-aquila-1-16-3",
         "target": {
           "type": "entity",
-          "key": "entity:p-isaac-1"
+          "key": "entity:p-aquila-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Isaac",
+          "exact_quote": "Aquila",
           "occurrence_ordinal": 1,
-          "prefix": "one man, our father ",
+          "prefix": "Greet Prisca and ",
+          "suffix": ", my fellow workers "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-aristobulus-1-16-10",
+        "verse_key": "verse:Rom.16.10",
+        "attestation_key": "attestation:wb-p-aristobulus-1-16-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-aristobulus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Aristobulus",
+          "occurrence_ordinal": 1,
+          "prefix": "to the household of ",
           "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-esau-1-9-13",
-        "verse_key": "verse:Rom.9.13",
-        "attestation_key": "attestation:wb-p-esau-1-9-13",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-esau-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Esau",
-          "occurrence_ordinal": 1,
-          "prefix": "“Jacob I loved, but ",
-          "suffix": " I hated.”"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-jacob-1-9-6",
-        "verse_key": "verse:Rom.9.6",
-        "attestation_key": "attestation:wb-p-jacob-1-9-6",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": " are descended from ",
-          "suffix": " are Israel."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-jacob-1-9-13",
-        "verse_key": "verse:Rom.9.13",
-        "attestation_key": "attestation:wb-p-jacob-1-9-13",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jacob",
-          "occurrence_ordinal": 1,
-          "prefix": "So it is written: “",
-          "suffix": " I loved, but Esau I"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-jacob-1-9-27",
-        "verse_key": "verse:Rom.9.27",
-        "attestation_key": "attestation:wb-p-jacob-1-9-27",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "ries out concerning ",
-          "suffix": ": “Though the number"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -870,114 +816,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-moses-1-5-14",
-        "verse_key": "verse:Rom.5.14",
-        "attestation_key": "attestation:wb-p-moses-1-5-14",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-moses-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Moses",
-          "occurrence_ordinal": 1,
-          "prefix": "ned from Adam until ",
-          "suffix": ", even over those wh"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-moses-1-9-15",
-        "verse_key": "verse:Rom.9.15",
-        "attestation_key": "attestation:wb-p-moses-1-9-15",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-moses-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Moses",
-          "occurrence_ordinal": 1,
-          "prefix": "For He says to ",
-          "suffix": ": “I will have mercy"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-moses-1-10-5",
-        "verse_key": "verse:Rom.10.5",
-        "attestation_key": "attestation:wb-p-moses-1-10-5",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-moses-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Moses",
-          "occurrence_ordinal": 1,
-          "prefix": "that is by the law, ",
-          "suffix": " writes: “The man wh"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-moses-1-10-19",
-        "verse_key": "verse:Rom.10.19",
-        "attestation_key": "attestation:wb-p-moses-1-10-19",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-moses-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Moses",
-          "occurrence_ordinal": 1,
-          "prefix": " understand? First, ",
-          "suffix": " says: “I will make "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-pharaoh-4-9-17",
-        "verse_key": "verse:Rom.9.17",
-        "attestation_key": "attestation:wb-p-pharaoh-4-9-17",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-pharaoh-4"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Pharaoh",
-          "occurrence_ordinal": 1,
-          "prefix": "e Scripture says to ",
-          "suffix": ": “I raised you up f"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-jesse-1-15-12",
-        "verse_key": "verse:Rom.15.12",
-        "attestation_key": "attestation:wb-p-jesse-1-15-12",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jesse-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jesse",
-          "occurrence_ordinal": 1,
-          "prefix": " says: “The Root of ",
-          "suffix": " will appear, One wh"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:p-david-1-1-3",
         "verse_key": "verse:Rom.1.3",
         "attestation_key": "attestation:wb-p-david-1-1-3",
@@ -991,24 +829,6 @@
           "occurrence_ordinal": 1,
           "prefix": "was a descendant of ",
           "suffix": " according to the fl"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-david-1-4-6",
-        "verse_key": "verse:Rom.4.6",
-        "attestation_key": "attestation:wb-p-david-1-4-6",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-david-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "David",
-          "occurrence_ordinal": 1,
-          "prefix": "And ",
-          "suffix": " speaks likewise of "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1032,6 +852,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-david-1-4-6",
+        "verse_key": "verse:Rom.4.6",
+        "attestation_key": "attestation:wb-p-david-1-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "And ",
+          "suffix": " speaks likewise of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-elijah-1-11-2",
         "verse_key": "verse:Rom.11.2",
         "attestation_key": "attestation:wb-p-elijah-1-11-2",
@@ -1050,37 +888,145 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-isaiah-1-9-27",
-        "verse_key": "verse:Rom.9.27",
-        "attestation_key": "attestation:wb-p-isaiah-1-9-27",
+        "mention_key": "mention:wb:p-erastus-2-16-23",
+        "verse_key": "verse:Rom.16.23",
+        "attestation_key": "attestation:wb-p-erastus-2-16-23",
         "target": {
           "type": "entity",
-          "key": "entity:p-isaiah-1"
+          "key": "entity:p-erastus-2"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Isaiah",
+          "exact_quote": "Erastus",
           "occurrence_ordinal": 1,
-          "prefix": "",
-          "suffix": " cries out concernin"
+          "prefix": "ends you greetings. ",
+          "suffix": ", the city treasurer"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-isaiah-1-9-29",
-        "verse_key": "verse:Rom.9.29",
-        "attestation_key": "attestation:wb-p-isaiah-1-9-29",
+        "mention_key": "mention:wb:p-esau-1-9-13",
+        "verse_key": "verse:Rom.9.13",
+        "attestation_key": "attestation:wb-p-esau-1-9-13",
         "target": {
           "type": "entity",
-          "key": "entity:p-isaiah-1"
+          "key": "entity:p-esau-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Isaiah",
+          "exact_quote": "Esau",
           "occurrence_ordinal": 1,
-          "prefix": "It is just as ",
-          "suffix": " foretold: “Unless t"
+          "prefix": "“Jacob I loved, but ",
+          "suffix": " I hated.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-gaius-1-16-23",
+        "verse_key": "verse:Rom.16.23",
+        "attestation_key": "attestation:wb-p-gaius-1-16-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-gaius-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gaius",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", who has hosted me "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hermas-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-hermas-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hermas-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hermas",
+          "occurrence_ordinal": 1,
+          "prefix": ", Hermes, Patrobas, ",
+          "suffix": ", and the brothers w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hermes-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-hermes-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hermes-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hermes",
+          "occurrence_ordinal": 1,
+          "prefix": "syncritus, Phlegon, ",
+          "suffix": ", Patrobas, Hermas, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hosea-1-9-25",
+        "verse_key": "verse:Rom.9.25",
+        "attestation_key": "attestation:wb-p-hosea-1-9-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hosea-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hosea",
+          "occurrence_ordinal": 1,
+          "prefix": "As He says in ",
+          "suffix": ": “I will call them "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-9-10",
+        "verse_key": "verse:Rom.9.10",
+        "attestation_key": "attestation:wb-p-isaac-1-9-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": "one man, our father ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-isaac-1-9-7",
+        "verse_key": "verse:Rom.9.7",
+        "attestation_key": "attestation:wb-p-isaac-1-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 1,
+          "prefix": " contrary, “Through ",
+          "suffix": " your offspring will"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1122,91 +1068,91 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-satan-1-16-20",
-        "verse_key": "verse:Rom.16.20",
-        "attestation_key": "attestation:wb-p-satan-1-16-20",
+        "mention_key": "mention:wb:p-isaiah-1-9-27",
+        "verse_key": "verse:Rom.9.27",
+        "attestation_key": "attestation:wb-p-isaiah-1-9-27",
         "target": {
           "type": "entity",
-          "key": "entity:p-satan-1"
+          "key": "entity:p-isaiah-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Satan",
-          "occurrence_ordinal": 1,
-          "prefix": "ace will soon crush ",
-          "suffix": " under your feet. Th"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-hosea-1-9-25",
-        "verse_key": "verse:Rom.9.25",
-        "attestation_key": "attestation:wb-p-hosea-1-9-25",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-hosea-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Hosea",
-          "occurrence_ordinal": 1,
-          "prefix": "As He says in ",
-          "suffix": ": “I will call them "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-rufus-1-16-13",
-        "verse_key": "verse:Rom.16.13",
-        "attestation_key": "attestation:wb-p-rufus-1-16-13",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-rufus-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Rufus",
-          "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": ", chosen in the Lord"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-saul-2-1-1",
-        "verse_key": "verse:Rom.1.1",
-        "attestation_key": "attestation:wb-p-saul-2-1-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-saul-2"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Paul",
+          "exact_quote": "Isaiah",
           "occurrence_ordinal": 1,
           "prefix": "",
-          "suffix": ", a servant of Chris"
+          "suffix": " cries out concernin"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-timothy-1-16-21",
-        "verse_key": "verse:Rom.16.21",
-        "attestation_key": "attestation:wb-p-timothy-1-16-21",
+        "mention_key": "mention:wb:p-isaiah-1-9-29",
+        "verse_key": "verse:Rom.9.29",
+        "attestation_key": "attestation:wb-p-isaiah-1-9-29",
         "target": {
           "type": "entity",
-          "key": "entity:p-timothy-1"
+          "key": "entity:p-isaiah-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Timothy",
+          "exact_quote": "Isaiah",
           "occurrence_ordinal": 1,
-          "prefix": "",
-          "suffix": ", my fellow worker, "
+          "prefix": "It is just as ",
+          "suffix": " foretold: “Unless t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-13",
+        "verse_key": "verse:Rom.9.13",
+        "attestation_key": "attestation:wb-p-jacob-1-9-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 1,
+          "prefix": "So it is written: “",
+          "suffix": " I loved, but Esau I"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-27",
+        "verse_key": "verse:Rom.9.27",
+        "attestation_key": "attestation:wb-p-jacob-1-9-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "ries out concerning ",
+          "suffix": ": “Though the number"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jacob-1-9-6",
+        "verse_key": "verse:Rom.9.6",
+        "attestation_key": "attestation:wb-p-jacob-1-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": " are descended from ",
+          "suffix": " are Israel."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1230,73 +1176,55 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-aquila-1-16-3",
-        "verse_key": "verse:Rom.16.3",
-        "attestation_key": "attestation:wb-p-aquila-1-16-3",
+        "mention_key": "mention:wb:p-jesse-1-15-12",
+        "verse_key": "verse:Rom.15.12",
+        "attestation_key": "attestation:wb-p-jesse-1-15-12",
         "target": {
           "type": "entity",
-          "key": "entity:p-aquila-1"
+          "key": "entity:p-jesse-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Aquila",
+          "exact_quote": "Jesse",
           "occurrence_ordinal": 1,
-          "prefix": "Greet Prisca and ",
-          "suffix": ", my fellow workers "
+          "prefix": " says: “The Root of ",
+          "suffix": " will appear, One wh"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-priscilla-1-16-3",
-        "verse_key": "verse:Rom.16.3",
-        "attestation_key": "attestation:wb-p-priscilla-1-16-3",
+        "mention_key": "mention:wb:p-julia-1-16-15",
+        "verse_key": "verse:Rom.16.15",
+        "attestation_key": "attestation:wb-p-julia-1-16-15",
         "target": {
           "type": "entity",
-          "key": "entity:p-priscilla-1"
+          "key": "entity:p-julia-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Prisca",
+          "exact_quote": "Julia",
           "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": " and Aquila, my fell"
+          "prefix": "reet Philologus and ",
+          "suffix": ", Nereus and his sis"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-gaius-1-16-23",
-        "verse_key": "verse:Rom.16.23",
-        "attestation_key": "attestation:wb-p-gaius-1-16-23",
+        "mention_key": "mention:wb:p-lucius-2-16-21",
+        "verse_key": "verse:Rom.16.21",
+        "attestation_key": "attestation:wb-p-lucius-2-16-21",
         "target": {
           "type": "entity",
-          "key": "entity:p-gaius-1"
+          "key": "entity:p-lucius-2"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Gaius",
+          "exact_quote": "Lucius",
           "occurrence_ordinal": 1,
-          "prefix": "",
-          "suffix": ", who has hosted me "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-phoebe-1-16-1",
-        "verse_key": "verse:Rom.16.1",
-        "attestation_key": "attestation:wb-p-phoebe-1-16-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-phoebe-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Phoebe",
-          "occurrence_ordinal": 1,
-          "prefix": "d to you our sister ",
-          "suffix": ", a servant of the c"
+          "prefix": "ou greetings, as do ",
+          "suffix": ", Jason, and Sosipat"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1320,109 +1248,73 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-andronicus-1-16-7",
-        "verse_key": "verse:Rom.16.7",
-        "attestation_key": "attestation:wb-p-andronicus-1-16-7",
+        "mention_key": "mention:wb:p-moses-1-10-19",
+        "verse_key": "verse:Rom.10.19",
+        "attestation_key": "attestation:wb-p-moses-1-10-19",
         "target": {
           "type": "entity",
-          "key": "entity:p-andronicus-1"
+          "key": "entity:p-moses-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Andronicus",
+          "exact_quote": "Moses",
           "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": " and Junia, my fello"
+          "prefix": " understand? First, ",
+          "suffix": " says: “I will make "
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-ampliatus-1-16-8",
-        "verse_key": "verse:Rom.16.8",
-        "attestation_key": "attestation:wb-p-ampliatus-1-16-8",
+        "mention_key": "mention:wb:p-moses-1-10-5",
+        "verse_key": "verse:Rom.10.5",
+        "attestation_key": "attestation:wb-p-moses-1-10-5",
         "target": {
           "type": "entity",
-          "key": "entity:p-ampliatus-1"
+          "key": "entity:p-moses-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Ampliatus",
+          "exact_quote": "Moses",
           "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": ", my beloved in the "
+          "prefix": "that is by the law, ",
+          "suffix": " writes: “The man wh"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-urbanus-1-16-9",
-        "verse_key": "verse:Rom.16.9",
-        "attestation_key": "attestation:wb-p-urbanus-1-16-9",
+        "mention_key": "mention:wb:p-moses-1-5-14",
+        "verse_key": "verse:Rom.5.14",
+        "attestation_key": "attestation:wb-p-moses-1-5-14",
         "target": {
           "type": "entity",
-          "key": "entity:p-urbanus-1"
+          "key": "entity:p-moses-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Urbanus",
+          "exact_quote": "Moses",
           "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": ", our fellow worker "
+          "prefix": "ned from Adam until ",
+          "suffix": ", even over those wh"
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-stachys-1-16-9",
-        "verse_key": "verse:Rom.16.9",
-        "attestation_key": "attestation:wb-p-stachys-1-16-9",
+        "mention_key": "mention:wb:p-moses-1-9-15",
+        "verse_key": "verse:Rom.9.15",
+        "attestation_key": "attestation:wb-p-moses-1-9-15",
         "target": {
           "type": "entity",
-          "key": "entity:p-stachys-1"
+          "key": "entity:p-moses-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Stachys",
+          "exact_quote": "Moses",
           "occurrence_ordinal": 1,
-          "prefix": "ist, and my beloved ",
-          "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-apelles-1-16-10",
-        "verse_key": "verse:Rom.16.10",
-        "attestation_key": "attestation:wb-p-apelles-1-16-10",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-apelles-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Apelles",
-          "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": ", who is approved in"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-aristobulus-1-16-10",
-        "verse_key": "verse:Rom.16.10",
-        "attestation_key": "attestation:wb-p-aristobulus-1-16-10",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-aristobulus-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Aristobulus",
-          "occurrence_ordinal": 1,
-          "prefix": "to the household of ",
-          "suffix": "."
+          "prefix": "For He says to ",
+          "suffix": ": “I will have mercy"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1441,150 +1333,6 @@
           "occurrence_ordinal": 1,
           "prefix": "om the household of ",
           "suffix": " who are in the Lord"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-tryphosa-1-16-12",
-        "verse_key": "verse:Rom.16.12",
-        "attestation_key": "attestation:wb-p-tryphosa-1-16-12",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-tryphosa-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Tryphosa",
-          "occurrence_ordinal": 1,
-          "prefix": "Greet Tryphena and ",
-          "suffix": ", women who have wor"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-persis-1-16-12",
-        "verse_key": "verse:Rom.16.12",
-        "attestation_key": "attestation:wb-p-persis-1-16-12",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-persis-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Persis",
-          "occurrence_ordinal": 1,
-          "prefix": "d. Greet my beloved ",
-          "suffix": ", who has worked ver"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-phlegon-1-16-14",
-        "verse_key": "verse:Rom.16.14",
-        "attestation_key": "attestation:wb-p-phlegon-1-16-14",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-phlegon-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Phlegon",
-          "occurrence_ordinal": 1,
-          "prefix": "Greet Asyncritus, ",
-          "suffix": ", Hermes, Patrobas, "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-hermes-1-16-14",
-        "verse_key": "verse:Rom.16.14",
-        "attestation_key": "attestation:wb-p-hermes-1-16-14",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-hermes-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Hermes",
-          "occurrence_ordinal": 1,
-          "prefix": "syncritus, Phlegon, ",
-          "suffix": ", Patrobas, Hermas, "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-patrobas-1-16-14",
-        "verse_key": "verse:Rom.16.14",
-        "attestation_key": "attestation:wb-p-patrobas-1-16-14",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-patrobas-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Patrobas",
-          "occurrence_ordinal": 1,
-          "prefix": "s, Phlegon, Hermes, ",
-          "suffix": ", Hermas, and the br"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-hermas-1-16-14",
-        "verse_key": "verse:Rom.16.14",
-        "attestation_key": "attestation:wb-p-hermas-1-16-14",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-hermas-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Hermas",
-          "occurrence_ordinal": 1,
-          "prefix": ", Hermes, Patrobas, ",
-          "suffix": ", and the brothers w"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-philologus-1-16-15",
-        "verse_key": "verse:Rom.16.15",
-        "attestation_key": "attestation:wb-p-philologus-1-16-15",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-philologus-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Philologus",
-          "occurrence_ordinal": 1,
-          "prefix": "Greet ",
-          "suffix": " and Julia, Nereus a"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-julia-1-16-15",
-        "verse_key": "verse:Rom.16.15",
-        "attestation_key": "attestation:wb-p-julia-1-16-15",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-julia-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Julia",
-          "occurrence_ordinal": 1,
-          "prefix": "reet Philologus and ",
-          "suffix": ", Nereus and his sis"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1626,19 +1374,235 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-lucius-2-16-21",
-        "verse_key": "verse:Rom.16.21",
-        "attestation_key": "attestation:wb-p-lucius-2-16-21",
+        "mention_key": "mention:wb:p-patrobas-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-patrobas-1-16-14",
         "target": {
           "type": "entity",
-          "key": "entity:p-lucius-2"
+          "key": "entity:p-patrobas-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Lucius",
+          "exact_quote": "Patrobas",
           "occurrence_ordinal": 1,
-          "prefix": "ou greetings, as do ",
-          "suffix": ", Jason, and Sosipat"
+          "prefix": "s, Phlegon, Hermes, ",
+          "suffix": ", Hermas, and the br"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-persis-1-16-12",
+        "verse_key": "verse:Rom.16.12",
+        "attestation_key": "attestation:wb-p-persis-1-16-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-persis-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persis",
+          "occurrence_ordinal": 1,
+          "prefix": "d. Greet my beloved ",
+          "suffix": ", who has worked ver"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pharaoh-4-9-17",
+        "verse_key": "verse:Rom.9.17",
+        "attestation_key": "attestation:wb-p-pharaoh-4-9-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pharaoh-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pharaoh",
+          "occurrence_ordinal": 1,
+          "prefix": "e Scripture says to ",
+          "suffix": ": “I raised you up f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-philologus-1-16-15",
+        "verse_key": "verse:Rom.16.15",
+        "attestation_key": "attestation:wb-p-philologus-1-16-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-philologus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Philologus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": " and Julia, Nereus a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-phlegon-1-16-14",
+        "verse_key": "verse:Rom.16.14",
+        "attestation_key": "attestation:wb-p-phlegon-1-16-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-phlegon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Phlegon",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet Asyncritus, ",
+          "suffix": ", Hermes, Patrobas, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-phoebe-1-16-1",
+        "verse_key": "verse:Rom.16.1",
+        "attestation_key": "attestation:wb-p-phoebe-1-16-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-phoebe-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Phoebe",
+          "occurrence_ordinal": 1,
+          "prefix": "d to you our sister ",
+          "suffix": ", a servant of the c"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-priscilla-1-16-3",
+        "verse_key": "verse:Rom.16.3",
+        "attestation_key": "attestation:wb-p-priscilla-1-16-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-priscilla-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Prisca",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": " and Aquila, my fell"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-quartus-1-16-23",
+        "verse_key": "verse:Rom.16.23",
+        "attestation_key": "attestation:wb-p-quartus-1-16-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-quartus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Quartus",
+          "occurrence_ordinal": 1,
+          "prefix": "as does our brother ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-rufus-1-16-13",
+        "verse_key": "verse:Rom.16.13",
+        "attestation_key": "attestation:wb-p-rufus-1-16-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-rufus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rufus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", chosen in the Lord"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sarai-1-4-19",
+        "verse_key": "verse:Rom.4.19",
+        "attestation_key": "attestation:wb-p-sarai-1-4-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sarai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sarah",
+          "occurrence_ordinal": 1,
+          "prefix": "the lifelessness of ",
+          "suffix": "’s womb."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-sarai-1-9-9",
+        "verse_key": "verse:Rom.9.9",
+        "attestation_key": "attestation:wb-p-sarai-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-sarai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Sarah",
+          "occurrence_ordinal": 1,
+          "prefix": " I will return, and ",
+          "suffix": " will have a son.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-16-20",
+        "verse_key": "verse:Rom.16.20",
+        "attestation_key": "attestation:wb-p-satan-1-16-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 1,
+          "prefix": "ace will soon crush ",
+          "suffix": " under your feet. Th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-saul-2-1-1",
+        "verse_key": "verse:Rom.1.1",
+        "attestation_key": "attestation:wb-p-saul-2-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-saul-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Paul",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": ", a servant of Chris"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1662,6 +1626,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-stachys-1-16-9",
+        "verse_key": "verse:Rom.16.9",
+        "attestation_key": "attestation:wb-p-stachys-1-16-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-stachys-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Stachys",
+          "occurrence_ordinal": 1,
+          "prefix": "ist, and my beloved ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-tertius-1-16-22",
         "verse_key": "verse:Rom.16.22",
         "attestation_key": "attestation:wb-p-tertius-1-16-22",
@@ -1680,37 +1662,55 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-erastus-2-16-23",
-        "verse_key": "verse:Rom.16.23",
-        "attestation_key": "attestation:wb-p-erastus-2-16-23",
+        "mention_key": "mention:wb:p-timothy-1-16-21",
+        "verse_key": "verse:Rom.16.21",
+        "attestation_key": "attestation:wb-p-timothy-1-16-21",
         "target": {
           "type": "entity",
-          "key": "entity:p-erastus-2"
+          "key": "entity:p-timothy-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Erastus",
+          "exact_quote": "Timothy",
           "occurrence_ordinal": 1,
-          "prefix": "ends you greetings. ",
-          "suffix": ", the city treasurer"
+          "prefix": "",
+          "suffix": ", my fellow worker, "
         },
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-quartus-1-16-23",
-        "verse_key": "verse:Rom.16.23",
-        "attestation_key": "attestation:wb-p-quartus-1-16-23",
+        "mention_key": "mention:wb:p-tryphosa-1-16-12",
+        "verse_key": "verse:Rom.16.12",
+        "attestation_key": "attestation:wb-p-tryphosa-1-16-12",
         "target": {
           "type": "entity",
-          "key": "entity:p-quartus-1"
+          "key": "entity:p-tryphosa-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Quartus",
+          "exact_quote": "Tryphosa",
           "occurrence_ordinal": 1,
-          "prefix": "as does our brother ",
-          "suffix": "."
+          "prefix": "Greet Tryphena and ",
+          "suffix": ", women who have wor"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-urbanus-1-16-9",
+        "verse_key": "verse:Rom.16.9",
+        "attestation_key": "attestation:wb-p-urbanus-1-16-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-urbanus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Urbanus",
+          "occurrence_ordinal": 1,
+          "prefix": "Greet ",
+          "suffix": ", our fellow worker "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1878,24 +1878,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-rome-afc8e7a-1-7",
-        "verse_key": "verse:Rom.1.7",
-        "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-7",
-        "target": {
-          "type": "entity",
-          "key": "entity:pl-rome-afc8e7a"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Rome",
-          "occurrence_ordinal": 1,
-          "prefix": "To all in ",
-          "suffix": " who are loved by Go"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:pl-rome-afc8e7a-1-15",
         "verse_key": "verse:Rom.1.15",
         "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-15",
@@ -1909,6 +1891,24 @@
           "occurrence_ordinal": 1,
           "prefix": "o to you who are in ",
           "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-rome-afc8e7a-1-7",
+        "verse_key": "verse:Rom.1.7",
+        "attestation_key": "attestation:wb-pl-rome-afc8e7a-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-rome-afc8e7a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rome",
+          "occurrence_ordinal": 1,
+          "prefix": "To all in ",
+          "suffix": " who are loved by Go"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1968,24 +1968,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-zion-af20c46-9-33",
-        "verse_key": "verse:Rom.9.33",
-        "attestation_key": "attestation:wb-pl-zion-af20c46-9-33",
-        "target": {
-          "type": "entity",
-          "key": "entity:pl-zion-af20c46"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Zion",
-          "occurrence_ordinal": 1,
-          "prefix": "ten: “See, I lay in ",
-          "suffix": " a stone of stumblin"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:pl-zion-af20c46-11-26",
         "verse_key": "verse:Rom.11.26",
         "attestation_key": "attestation:wb-pl-zion-af20c46-11-26",
@@ -1999,6 +1981,24 @@
           "occurrence_ordinal": 1,
           "prefix": "erer will come from ",
           "suffix": "; He will remove god"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-zion-af20c46-9-33",
+        "verse_key": "verse:Rom.9.33",
+        "attestation_key": "attestation:wb-pl-zion-af20c46-9-33",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-zion-af20c46"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zion",
+          "occurrence_ordinal": 1,
+          "prefix": "ten: “See, I lay in ",
+          "suffix": " a stone of stumblin"
         },
         "claim_keys": [],
         "review_status": "draft"

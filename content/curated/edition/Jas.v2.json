@@ -153,9 +153,9 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-jas-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:4a5e31a6c1e2743aa71b24281038c92f2d49cd97ac7c2db304a3a0de73310616"
     }
   ],
   "records": {
@@ -197,6 +197,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-elijah-1-5-17",
+        "verse_key": "verse:Jas.5.17",
+        "attestation_key": "attestation:wb-p-elijah-1-5-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elijah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Elijah",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " was a man just like"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-isaac-1-2-21",
         "verse_key": "verse:Jas.2.21",
         "attestation_key": "attestation:wb-p-isaac-1-2-21",
@@ -215,37 +233,19 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-rahab-1-2-25",
-        "verse_key": "verse:Jas.2.25",
-        "attestation_key": "attestation:wb-p-rahab-1-2-25",
+        "mention_key": "mention:wb:p-james-3-1-1",
+        "verse_key": "verse:Jas.1.1",
+        "attestation_key": "attestation:wb-p-james-3-1-1",
         "target": {
           "type": "entity",
-          "key": "entity:p-rahab-1"
+          "key": "entity:p-james-3"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Rahab",
-          "occurrence_ordinal": 1,
-          "prefix": "e way, was not even ",
-          "suffix": " the prostitute just"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-elijah-1-5-17",
-        "verse_key": "verse:Jas.5.17",
-        "attestation_key": "attestation:wb-p-elijah-1-5-17",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-elijah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Elijah",
+          "exact_quote": "James",
           "occurrence_ordinal": 1,
           "prefix": "",
-          "suffix": " was a man just like"
+          "suffix": ", a servant of God a"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -269,19 +269,19 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-james-3-1-1",
-        "verse_key": "verse:Jas.1.1",
-        "attestation_key": "attestation:wb-p-james-3-1-1",
+        "mention_key": "mention:wb:p-rahab-1-2-25",
+        "verse_key": "verse:Jas.2.25",
+        "attestation_key": "attestation:wb-p-rahab-1-2-25",
         "target": {
           "type": "entity",
-          "key": "entity:p-james-3"
+          "key": "entity:p-rahab-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "James",
+          "exact_quote": "Rahab",
           "occurrence_ordinal": 1,
-          "prefix": "",
-          "suffix": ", a servant of God a"
+          "prefix": "e way, was not even ",
+          "suffix": " the prostitute just"
         },
         "claim_keys": [],
         "review_status": "draft"

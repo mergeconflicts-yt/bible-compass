@@ -164,9 +164,9 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-1tim-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:ac9441bd84c38b0abdcf9fda1f3b2eea4043d069a95c0e0910b8147622215f08"
     }
   ],
   "records": {
@@ -208,6 +208,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-alexander-4-1-20",
+        "verse_key": "verse:1Tim.1.20",
+        "attestation_key": "attestation:wb-p-alexander-4-1-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-alexander-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Alexander",
+          "occurrence_ordinal": 1,
+          "prefix": "m are Hymenaeus and ",
+          "suffix": ", whom I have handed"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-eve-1-2-13",
         "verse_key": "verse:1Tim.2.13",
         "attestation_key": "attestation:wb-p-eve-1-2-13",
@@ -221,6 +239,42 @@
           "occurrence_ordinal": 1,
           "prefix": "med first, and then ",
           "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-hymenaeus-1-1-20",
+        "verse_key": "verse:1Tim.1.20",
+        "attestation_key": "attestation:wb-p-hymenaeus-1-1-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hymenaeus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hymenaeus",
+          "occurrence_ordinal": 1,
+          "prefix": "Among them are ",
+          "suffix": " and Alexander, whom"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pilate-1-6-13",
+        "verse_key": "verse:1Tim.6.13",
+        "attestation_key": "attestation:wb-p-pilate-1-6-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pilate",
+          "occurrence_ordinal": 1,
+          "prefix": "mony before Pontius ",
+          "suffix": ":"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -298,24 +352,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-pilate-1-6-13",
-        "verse_key": "verse:1Tim.6.13",
-        "attestation_key": "attestation:wb-p-pilate-1-6-13",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-pilate-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Pilate",
-          "occurrence_ordinal": 1,
-          "prefix": "mony before Pontius ",
-          "suffix": ":"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:p-saul-2-1-1",
         "verse_key": "verse:1Tim.1.1",
         "attestation_key": "attestation:wb-p-saul-2-1-1",
@@ -329,24 +365,6 @@
           "occurrence_ordinal": 1,
           "prefix": "",
           "suffix": ", an apostle of Chri"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-timothy-1-1-2",
-        "verse_key": "verse:1Tim.1.2",
-        "attestation_key": "attestation:wb-p-timothy-1-1-2",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-timothy-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Timothy",
-          "occurrence_ordinal": 1,
-          "prefix": "To ",
-          "suffix": ", my true child in t"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -370,6 +388,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-timothy-1-1-2",
+        "verse_key": "verse:1Tim.1.2",
+        "attestation_key": "attestation:wb-p-timothy-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-timothy-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Timothy",
+          "occurrence_ordinal": 1,
+          "prefix": "To ",
+          "suffix": ", my true child in t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-timothy-1-6-20",
         "verse_key": "verse:1Tim.6.20",
         "attestation_key": "attestation:wb-p-timothy-1-6-20",
@@ -383,42 +419,6 @@
           "occurrence_ordinal": 1,
           "prefix": "O ",
           "suffix": ", guard what has bee"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-hymenaeus-1-1-20",
-        "verse_key": "verse:1Tim.1.20",
-        "attestation_key": "attestation:wb-p-hymenaeus-1-1-20",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-hymenaeus-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Hymenaeus",
-          "occurrence_ordinal": 1,
-          "prefix": "Among them are ",
-          "suffix": " and Alexander, whom"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-alexander-4-1-20",
-        "verse_key": "verse:1Tim.1.20",
-        "attestation_key": "attestation:wb-p-alexander-4-1-20",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-alexander-4"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Alexander",
-          "occurrence_ordinal": 1,
-          "prefix": "m are Hymenaeus and ",
-          "suffix": ", whom I have handed"
         },
         "claim_keys": [],
         "review_status": "draft"

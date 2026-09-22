@@ -507,7 +507,72 @@
       }
     ],
     "relationships": [],
-    "events": [],
+    "events": [
+      {
+        "event_key": "event:wb-nah-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-nahum-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-assyria-a3d1321",
+          "entity:pl-bashan-aa7a40a",
+          "entity:pl-elkosh-a221d82",
+          "entity:pl-lebanon-a730058",
+          "entity:pl-mount-carmel-a3e21c6",
+          "entity:pl-nineveh-a70fd5d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-nah-1-p1:refsys:eng-v22:nah.1.1-nah.1.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-nah-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-nineveh-a70fd5d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-nah-2-p1:refsys:eng-v22:nah.2.1-nah.2.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-nah-3-p1",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-sennacherib-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-assyria-a3d1321",
+          "entity:pl-cush-1-ac5a1ec",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-libya-ac12af9",
+          "entity:pl-nile-a012705",
+          "entity:pl-nineveh-a70fd5d",
+          "entity:pl-put-ad0520f",
+          "entity:pl-thebes-a9674fc"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-nah-3-p1:refsys:eng-v22:nah.3.1-nah.3.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-assyria-a3d1321",
@@ -801,85 +866,85 @@
       {
         "candidate_key": "candidate:wb:p-sennacherib-1",
         "canonical_entity_key": "entity:p-sennacherib-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-nahum-1",
         "canonical_entity_key": "entity:p-nahum-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-assyria-a3d1321",
         "canonical_entity_key": "entity:pl-assyria-a3d1321",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-bashan-aa7a40a",
         "canonical_entity_key": "entity:pl-bashan-aa7a40a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cush-1-ac5a1ec",
         "canonical_entity_key": "entity:pl-cush-1-ac5a1ec",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-elkosh-a221d82",
         "canonical_entity_key": "entity:pl-elkosh-a221d82",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lebanon-a730058",
         "canonical_entity_key": "entity:pl-lebanon-a730058",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-libya-ac12af9",
         "canonical_entity_key": "entity:pl-libya-ac12af9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-carmel-a3e21c6",
         "canonical_entity_key": "entity:pl-mount-carmel-a3e21c6",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-nile-a012705",
         "canonical_entity_key": "entity:pl-nile-a012705",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-nineveh-a70fd5d",
         "canonical_entity_key": "entity:pl-nineveh-a70fd5d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-put-ad0520f",
         "canonical_entity_key": "entity:pl-put-ad0520f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-thebes-a9674fc",
         "canonical_entity_key": "entity:pl-thebes-a9674fc",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -1142,7 +1207,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

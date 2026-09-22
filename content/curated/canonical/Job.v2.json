@@ -2427,8 +2427,768 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-barachel-1-descendant-p-ram-3",
+        "subject_entity_key": "entity:p-barachel-1",
+        "predicate_key": "relationship:descendant",
+        "object_entity_key": "entity:p-ram-3",
+        "applicable_scope_keys": [
+          "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-barachel-1-father-p-elihu-5",
+        "subject_entity_key": "entity:p-barachel-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-elihu-5",
+        "applicable_scope_keys": [
+          "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-elihu-5-son-p-barachel-1",
+        "subject_entity_key": "entity:p-elihu-5",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-barachel-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-jemimah-1-daughter-p-job-1",
+        "subject_entity_key": "entity:p-jemimah-1",
+        "predicate_key": "relationship:daughter",
+        "object_entity_key": "entity:p-job-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-job-1-father-p-jemimah-1",
+        "subject_entity_key": "entity:p-job-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-jemimah-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-job-1-father-p-keren-happuch-1",
+        "subject_entity_key": "entity:p-job-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-keren-happuch-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-job-1-father-p-keziah-1",
+        "subject_entity_key": "entity:p-job-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-keziah-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-keren-happuch-1-daughter-p-job-1",
+        "subject_entity_key": "entity:p-keren-happuch-1",
+        "predicate_key": "relationship:daughter",
+        "object_entity_key": "entity:p-job-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-keziah-1-daughter-p-job-1",
+        "subject_entity_key": "entity:p-keziah-1",
+        "predicate_key": "relationship:daughter",
+        "object_entity_key": "entity:p-job-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-ram-3-ancestor-p-barachel-1",
+        "subject_entity_key": "entity:p-ram-3",
+        "predicate_key": "relationship:ancestor",
+        "object_entity_key": "entity:p-barachel-1",
+        "applicable_scope_keys": [
+          "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-job-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-east-ab0b2dd",
+          "entity:pl-uz-a324c4d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-1-p1:refsys:eng-v22:job.1.1-job.1.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-1-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1",
+          "entity:p-satan-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-1-p2:refsys:eng-v22:job.1.6-job.1.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-1-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-chaldea-a32a4f8"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-1-p3:refsys:eng-v22:job.1.13-job.1.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-11-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-zophar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-naamah-2-ac6b210"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-11-p1:refsys:eng-v22:job.11.1-job.11.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-12-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-12-p1:refsys:eng-v22:job.12.1-job.12.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-15-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-eliphaz-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-15-p1:refsys:eng-v22:job.15.1-job.15.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-16-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-16-p1:refsys:eng-v22:job.16.1-job.16.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-18-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-bildad-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-18-p1:refsys:eng-v22:job.18.1-job.18.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-19-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-19-p1:refsys:eng-v22:job.19.1-job.19.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1",
+          "entity:p-satan-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-2-p1:refsys:eng-v22:job.2.1-job.2.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-2-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-bildad-1",
+          "entity:p-eliphaz-2",
+          "entity:p-job-1",
+          "entity:p-zophar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-naamah-2-ac6b210"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-2-p2:refsys:eng-v22:job.2.11-job.2.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-20-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-zophar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-naamah-2-ac6b210"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-20-p1:refsys:eng-v22:job.20.1-job.20.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-21-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-21-p1:refsys:eng-v22:job.21.1-job.21.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-22-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-eliphaz-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-ophir-a104820"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-22-p1:refsys:eng-v22:job.22.1-job.22.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-23-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-23-p1:refsys:eng-v22:job.23.1-job.23.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-25-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-bildad-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-25-p1:refsys:eng-v22:job.25.1-job.25.6",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-26-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-zaphon-2-a78e845"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-26-p1:refsys:eng-v22:job.26.1-job.26.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-27-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-27-p1:refsys:eng-v22:job.27.1-job.27.6",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-28-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-ethiopia-ab45bd3",
+          "entity:pl-ophir-a104820"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-28-p1:refsys:eng-v22:job.28.1-job.28.28",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-29-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-29-p1:refsys:eng-v22:job.29.1-job.29.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-3-p1",
+        "event_type": "birth",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-3-p1:refsys:eng-v22:job.3.1-job.3.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-31-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-adam-1",
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-31-p1:refsys:eng-v22:job.31.1-job.31.40",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-32-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-barachel-1",
+          "entity:p-elihu-5",
+          "entity:p-job-1",
+          "entity:p-ram-3"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-32-p1:refsys:eng-v22:job.32.1-job.32.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-33-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-33-p1:refsys:eng-v22:job.33.1-job.33.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-34-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-elihu-5",
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-34-p1:refsys:eng-v22:job.34.1-job.34.37",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-35-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-elihu-5",
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-35-p1:refsys:eng-v22:job.35.1-job.35.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-36-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-elihu-5"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-36-p1:refsys:eng-v22:job.36.1-job.36.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-37-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-37-p1:refsys:eng-v22:job.37.1-job.37.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-38-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-38-p1:refsys:eng-v22:job.38.1-job.38.41",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-4-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-eliphaz-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-4-p1:refsys:eng-v22:job.4.1-job.4.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-40-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-40-p1:refsys:eng-v22:job.40.1-job.40.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-40-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jordan-ae686c9"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-40-p2:refsys:eng-v22:job.40.6-job.40.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-42-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-42-p1:refsys:eng-v22:job.42.1-job.42.6",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-42-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-bildad-1",
+          "entity:p-eliphaz-2",
+          "entity:p-job-1",
+          "entity:p-zophar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-naamah-2-ac6b210"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-42-p2:refsys:eng-v22:job.42.7-job.42.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-42-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jemimah-1",
+          "entity:p-job-1",
+          "entity:p-keren-happuch-1",
+          "entity:p-keziah-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-42-p3:refsys:eng-v22:job.42.10-job.42.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-6-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-sheba-1-a81ab85",
+          "entity:pl-tema-acd48d6"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-6-p1:refsys:eng-v22:job.6.1-job.6.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-8-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-bildad-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-8-p1:refsys:eng-v22:job.8.1-job.8.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-job-9-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-job-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-job-9-p1:refsys:eng-v22:job.9.1-job.9.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-chaldea-a32a4f8",
@@ -3105,133 +3865,133 @@
       {
         "candidate_key": "candidate:wb:p-adam-1",
         "canonical_entity_key": "entity:p-adam-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-satan-1",
         "canonical_entity_key": "entity:p-satan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-job-1",
         "canonical_entity_key": "entity:p-job-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-eliphaz-2",
         "canonical_entity_key": "entity:p-eliphaz-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-bildad-1",
         "canonical_entity_key": "entity:p-bildad-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-zophar-1",
         "canonical_entity_key": "entity:p-zophar-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-elihu-5",
         "canonical_entity_key": "entity:p-elihu-5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-barachel-1",
         "canonical_entity_key": "entity:p-barachel-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ram-3",
         "canonical_entity_key": "entity:p-ram-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jemimah-1",
         "canonical_entity_key": "entity:p-jemimah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-keziah-1",
         "canonical_entity_key": "entity:p-keziah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-keren-happuch-1",
         "canonical_entity_key": "entity:p-keren-happuch-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
         "canonical_entity_key": "entity:pl-chaldea-a32a4f8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-east-ab0b2dd",
         "canonical_entity_key": "entity:pl-east-ab0b2dd",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ethiopia-ab45bd3",
         "canonical_entity_key": "entity:pl-ethiopia-ab45bd3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jordan-ae686c9",
         "canonical_entity_key": "entity:pl-jordan-ae686c9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-naamah-2-ac6b210",
         "canonical_entity_key": "entity:pl-naamah-2-ac6b210",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ophir-a104820",
         "canonical_entity_key": "entity:pl-ophir-a104820",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sheba-1-a81ab85",
         "canonical_entity_key": "entity:pl-sheba-1-a81ab85",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tema-acd48d6",
         "canonical_entity_key": "entity:pl-tema-acd48d6",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-uz-a324c4d",
         "canonical_entity_key": "entity:pl-uz-a324c4d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-zaphon-2-a78e845",
         "canonical_entity_key": "entity:pl-zaphon-2-a78e845",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -5063,7 +5823,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

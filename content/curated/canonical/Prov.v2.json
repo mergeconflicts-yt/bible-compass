@@ -1250,8 +1250,133 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-agur-1-son-p-jakeh-1",
+        "subject_entity_key": "entity:p-agur-1",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-jakeh-1",
+        "applicable_scope_keys": [
+          "scope:wb-prov-30:refsys:eng-v22:prov.30.1-prov.30.33"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-jakeh-1-father-p-agur-1",
+        "subject_entity_key": "entity:p-jakeh-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-agur-1",
+        "applicable_scope_keys": [
+          "scope:wb-prov-30:refsys:eng-v22:prov.30.1-prov.30.33"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-prov-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-solomon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-prov-1-p1:refsys:eng-v22:prov.1.1-prov.1.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-prov-10-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-solomon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-prov-10-p1:refsys:eng-v22:prov.10.1-prov.10.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-prov-25-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-hezekiah-1",
+          "entity:p-solomon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-prov-25-p1:refsys:eng-v22:prov.25.1-prov.25.28",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-prov-30-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agur-1",
+          "entity:p-ithiel-2",
+          "entity:p-jakeh-1",
+          "entity:p-ucal-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-prov-30-p1:refsys:eng-v22:prov.30.1-prov.30.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-prov-31-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-lemuel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-prov-31-p1:refsys:eng-v22:prov.31.1-prov.31.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-prov-7-p1",
+        "event_type": "battle",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-prov-7-p1:refsys:eng-v22:prov.7.1-prov.7.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-egypt-af301ca",
@@ -1370,55 +1495,55 @@
       {
         "candidate_key": "candidate:wb:p-david-1",
         "canonical_entity_key": "entity:p-david-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-solomon-1",
         "canonical_entity_key": "entity:p-solomon-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hezekiah-1",
         "canonical_entity_key": "entity:p-hezekiah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-agur-1",
         "canonical_entity_key": "entity:p-agur-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jakeh-1",
         "canonical_entity_key": "entity:p-jakeh-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ithiel-2",
         "canonical_entity_key": "entity:p-ithiel-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ucal-1",
         "canonical_entity_key": "entity:p-ucal-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-lemuel-1",
         "canonical_entity_key": "entity:p-lemuel-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -2428,7 +2553,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

@@ -186,31 +186,13 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-song-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:a9c4f7f21c2ae6260bc3b4fd35d7e8cac1262de7db07ea0e56acda8bfa01a3d6"
     }
   ],
   "records": {
     "mentions": [
-      {
-        "mention_key": "mention:wb:p-pharaoh-4-1-9",
-        "verse_key": "verse:Song.1.9",
-        "attestation_key": "attestation:wb-p-pharaoh-4-1-9",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-pharaoh-4"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Pharaoh",
-          "occurrence_ordinal": 1,
-          "prefix": "ng, to a mare among ",
-          "suffix": "’s chariots."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "mention_key": "mention:wb:p-david-1-4-4",
         "verse_key": "verse:Song.4.4",
@@ -225,6 +207,24 @@
           "occurrence_ordinal": 1,
           "prefix": "s like the tower of ",
           "suffix": ", built with rows of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-pharaoh-4-1-9",
+        "verse_key": "verse:Song.1.9",
+        "attestation_key": "attestation:wb-p-pharaoh-4-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pharaoh-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pharaoh",
+          "occurrence_ordinal": 1,
+          "prefix": "ng, to a mare among ",
+          "suffix": "’s chariots."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -266,6 +266,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:p-solomon-1-3-11",
+        "verse_key": "verse:Song.3.11",
+        "attestation_key": "attestation:wb-p-solomon-1-3-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Solomon",
+          "occurrence_ordinal": 1,
+          "prefix": "n, and gaze at King ",
+          "suffix": ", wearing the crown "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:p-solomon-1-3-7",
         "verse_key": "verse:Song.3.7",
         "attestation_key": "attestation:wb-p-solomon-1-3-7",
@@ -297,24 +315,6 @@
           "occurrence_ordinal": 1,
           "prefix": "King ",
           "suffix": " has made his carria"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-solomon-1-3-11",
-        "verse_key": "verse:Song.3.11",
-        "attestation_key": "attestation:wb-p-solomon-1-3-11",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-solomon-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Solomon",
-          "occurrence_ordinal": 1,
-          "prefix": "n, and gaze at King ",
-          "suffix": ", wearing the crown "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -482,6 +482,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-3-10",
+        "verse_key": "verse:Song.3.10",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-jerusalem-a15257a"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 1,
+          "prefix": "by the daughters of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:pl-jerusalem-a15257a-3-5",
         "verse_key": "verse:Song.3.5",
         "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-5",
@@ -500,9 +518,9 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-3-10",
-        "verse_key": "verse:Song.3.10",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-10",
+        "mention_key": "mention:wb:pl-jerusalem-a15257a-5-16",
+        "verse_key": "verse:Song.5.16",
+        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-16",
         "target": {
           "type": "entity",
           "key": "entity:pl-jerusalem-a15257a"
@@ -511,7 +529,7 @@
         "selector": {
           "exact_quote": "Jerusalem",
           "occurrence_ordinal": 1,
-          "prefix": "by the daughters of ",
+          "prefix": "end, O daughters of ",
           "suffix": "."
         },
         "claim_keys": [],
@@ -531,24 +549,6 @@
           "occurrence_ordinal": 1,
           "prefix": "O daughters of ",
           "suffix": ", I adjure you, if y"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-5-16",
-        "verse_key": "verse:Song.5.16",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-16",
-        "target": {
-          "type": "entity",
-          "key": "entity:pl-jerusalem-a15257a"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jerusalem",
-          "occurrence_ordinal": 1,
-          "prefix": "end, O daughters of ",
-          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -626,24 +626,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-lebanon-a730058-4-8",
-        "verse_key": "verse:Song.4.8",
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-8",
-        "target": {
-          "type": "entity",
-          "key": "entity:pl-lebanon-a730058"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Lebanon",
-          "occurrence_ordinal": 1,
-          "prefix": "Come with me from ",
-          "suffix": ", my bride, come wit"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:pl-lebanon-a730058-4-11",
         "verse_key": "verse:Song.4.11",
         "attestation_key": "attestation:wb-pl-lebanon-a730058-4-11",
@@ -675,6 +657,24 @@
           "occurrence_ordinal": 1,
           "prefix": "r flowing down from ",
           "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:pl-lebanon-a730058-4-8",
+        "verse_key": "verse:Song.4.8",
+        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-lebanon-a730058"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lebanon",
+          "occurrence_ordinal": 1,
+          "prefix": "Come with me from ",
+          "suffix": ", my bride, come wit"
         },
         "claim_keys": [],
         "review_status": "draft"

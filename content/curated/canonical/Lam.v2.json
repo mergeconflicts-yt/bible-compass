@@ -685,7 +685,101 @@
       }
     ],
     "relationships": [],
-    "events": [],
+    "events": [
+      {
+        "event_key": "event:wb-lam-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lam-1-p1:refsys:eng-v22:lam.1.1-lam.1.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lam-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lam-2-p1:refsys:eng-v22:lam.2.1-lam.2.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lam-3-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lam-3-p3:refsys:eng-v22:lam.3.37-lam.3.66",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lam-4-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-edom-a2735ff",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-sodom-a0aa664",
+          "entity:pl-uz-a324c4d",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lam-4-p1:refsys:eng-v22:lam.4.1-lam.4.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lam-5-p1",
+        "event_type": "prayer",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-assyria-a3d1321",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-mount-zion-abd9596",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lam-5-p1:refsys:eng-v22:lam.5.1-lam.5.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-assyria-a3d1321",
@@ -926,55 +1020,55 @@
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-assyria-a3d1321",
         "canonical_entity_key": "entity:pl-assyria-a3d1321",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-edom-a2735ff",
         "canonical_entity_key": "entity:pl-edom-a2735ff",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
         "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-zion-abd9596",
         "canonical_entity_key": "entity:pl-mount-zion-abd9596",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sodom-a0aa664",
         "canonical_entity_key": "entity:pl-sodom-a0aa664",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-uz-a324c4d",
         "canonical_entity_key": "entity:pl-uz-a324c4d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -1451,7 +1545,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

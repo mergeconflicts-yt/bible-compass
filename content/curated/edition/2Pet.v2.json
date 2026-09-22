@@ -96,49 +96,13 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-2pet-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:a6863506f624e2c410debd28fbb3b42b157130eaab0da9548f476f6298b2c686"
     }
   ],
   "records": {
     "mentions": [
-      {
-        "mention_key": "mention:wb:p-noah-1-2-5",
-        "verse_key": "verse:2Pet.2.5",
-        "attestation_key": "attestation:wb-p-noah-1-2-5",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-noah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Noah",
-          "occurrence_ordinal": 1,
-          "prefix": "ople, but preserved ",
-          "suffix": ", a preacher of righ"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-lot-1-2-7",
-        "verse_key": "verse:2Pet.2.7",
-        "attestation_key": "attestation:wb-p-lot-1-2-7",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-lot-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Lot",
-          "occurrence_ordinal": 1,
-          "prefix": "and if He rescued ",
-          "suffix": ", a righteous man di"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "mention_key": "mention:wb:p-balaam-1-2-15",
         "verse_key": "verse:2Pet.2.15",
@@ -176,19 +140,37 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-simon-1-1-1",
-        "verse_key": "verse:2Pet.1.1",
-        "attestation_key": "attestation:wb-p-simon-1-1-1",
+        "mention_key": "mention:wb:p-lot-1-2-7",
+        "verse_key": "verse:2Pet.2.7",
+        "attestation_key": "attestation:wb-p-lot-1-2-7",
         "target": {
           "type": "entity",
-          "key": "entity:p-simon-1"
+          "key": "entity:p-lot-1"
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Simon",
+          "exact_quote": "Lot",
           "occurrence_ordinal": 1,
-          "prefix": "",
-          "suffix": " Peter, a servant an"
+          "prefix": "and if He rescued ",
+          "suffix": ", a righteous man di"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-noah-1-2-5",
+        "verse_key": "verse:2Pet.2.5",
+        "attestation_key": "attestation:wb-p-noah-1-2-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-noah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Noah",
+          "occurrence_ordinal": 1,
+          "prefix": "ople, but preserved ",
+          "suffix": ", a preacher of righ"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -207,6 +189,24 @@
           "occurrence_ordinal": 1,
           "prefix": "our beloved brother ",
           "suffix": " also wrote you with"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-simon-1-1-1",
+        "verse_key": "verse:2Pet.1.1",
+        "attestation_key": "attestation:wb-p-simon-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Simon",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " Peter, a servant an"
         },
         "claim_keys": [],
         "review_status": "draft"

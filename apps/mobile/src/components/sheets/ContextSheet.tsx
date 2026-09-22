@@ -31,6 +31,8 @@ interface ContextSheetProps {
   onOpenEntity: (slug: string) => void;
   onOpenTimeline: () => void;
   onOpenPassage: (passageKey: string) => void;
+  /** Modal entrance animation; 'none' when this sheet swaps in the context flow. */
+  animationType?: 'none' | 'slide' | 'fade';
   onOpenEvent?: (event: PreviewEvent) => void;
 }
 
@@ -50,6 +52,7 @@ export function ContextSheet({
   onOpenTimeline,
   onOpenPassage,
   onOpenEvent,
+  animationType,
 }: ContextSheetProps) {
   const { colors } = useTheme();
   const preferences = useOptionalPreferences();
@@ -66,6 +69,7 @@ export function ContextSheet({
       onClose={onClose}
       title={`${bookNameFor('Neh', translationId)} 2 Context · Preview`}
       full
+      animationType={animationType}
       testID="context-sheet"
     >
       <Segmented

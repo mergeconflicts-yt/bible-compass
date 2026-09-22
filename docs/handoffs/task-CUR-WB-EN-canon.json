@@ -1,0 +1,85 @@
+{
+  "attempt_id": "task:CUR-WB-EN-canon:attempt-1",
+  "task_id": "CUR-WB-EN-CANON",
+  "task_title": "Autonomous resumable curation of the complete English Bible (66 books, 1,189 chapters)",
+  "result": "PASS — resumable queue executed for all 66 books; every job validated and checkpointed; book-level canonical/edition/locale v2 packages merged; cross-book reconciliation (per book and canon) written; the Zod package contract validates all 66 books; importer dry run passes.",
+  "user_visible_outcome": "The English BSB canon now has machine-generated draft v2 packages with meaningful passage boundaries, people, places, relationships, structural events, attestations, passage relevance, book/chapter/passage contexts and exact BSB mention selectors. Every one of the 66 books and 1,189 chapters has an explicit coverage result, and every verse is either complete_with_records or complete_zero. Nothing is approved or published.",
+  "approach": {
+    "queue": "tools/curate_canon_queue.py defines jobs as bounded contiguous chapter groups (never splitting a chapter), resumes from per-job checkpoints under content/curation/queue/bsb/, validates each job before merging into the book packages, and is retryable without repeating or modifying completed jobs.",
+    "quality_reference": "content/nehemiah-2 v2 packages; contract/schema 2.0.0, vocabulary/coverage 1.0.0.",
+    "sources": "BSB bundled text and section headings; BibleData Person/PersonRelationship/PersonVerse (CC BY 4.0); OpenBible ancient places (CC BY 4.0); authored book knowledge tools/whole_bible_knowledge.json.",
+    "identity": "Reuses the global registry content/curated/registry/entities.json. 7,728 entities resolved_existing; 0 created_new_canonical; 19 uncertain identities kept as unresolved candidates with no attestations.",
+    "no_filler": "Unsupported historical/chronological/interpretive orientation remains blocking open questions, never invented prose. Event records are structural projections of BSB headings with attested participants and carry no independent historical claim."
+  },
+  "files_changed": [
+    "tools/curate_canon_queue.py (new: resumable queue, per-job validation, merge, reconciliation, coverage)",
+    ".prettierignore (exclude generated content/curation/queue, /reconciliation, canon-coverage.json)",
+    "content/curated/canonical/*.v2.json (66 regenerated)",
+    "content/curated/edition/*.v2.json (66 regenerated)",
+    "content/curated/locale/*.v2.json (66 regenerated)",
+    "content/curation/queue/bsb/manifest.json + 335 job checkpoints",
+    "content/curation/reconciliation/<OSIS>.json (66) + canon.json",
+    "content/curation/canon-coverage.json (per-chapter and per-verse coverage register)",
+    "content/curation/queue/bsb/run-report.json"
+  ],
+  "counts": {
+    "books_total": 66,
+    "chapters_total": 1189,
+    "verses_total": 31086,
+    "jobs_total": 335,
+    "jobs_done": 335,
+    "verses_complete_zero": 18838,
+    "verses_complete_with_records": 12248,
+    "entity_candidates": 7747,
+    "entities_resolved_existing": 7728,
+    "entities_created": 0,
+    "entities_distinct": 4264,
+    "entities_in_multiple_books": 1388,
+    "unresolved_candidates": 19,
+    "attestations": 25900,
+    "mentions": 20615,
+    "relationships": 5142,
+    "events": 2330,
+    "passage_contexts": 4338,
+    "entity_profiles": 7728,
+    "claims": 0,
+    "citations": 0
+  },
+  "validation": {
+    "job_schema_dependency_identifier_anchor_overlap": "335/335 jobs valid (envelope versions/layer/family, registry digest, key grammar, word-bounded BSB anchor resolution with occurrence ordinal and 20-char prefix/suffix, per-verse mention non-overlap).",
+    "book_level": "66/66 books pass the book validator (coverage partition of every book verse, relationships/events/profile/localization/question reference closure, unique keys).",
+    "contract_zod": "packages/content-schema jest: 8 suites, 254 tests passed, including wholeBibleGenerated for all 66 BSB books (and the unchanged Telugu corpus).",
+    "deterministic_generation": "Regenerating Gen with --force reproduced byte-identical canonical/edition/locale packages.",
+    "importer_dry_run": "python3 tools/import-neh2.py --check -> validated counts={\"entities\":37,\"claims\":33,\"citations\":56,\"attestations\":86,\"mentions\":74}.",
+    "preview_drift": "npm run verify:preview -> preview asset is up to date.",
+    "repo": "root typecheck exit 0; root lint exit 0; npx prettier --check . -> 3 known pre-existing warnings (AGENTS.md, apps/mobile/expo-env.d.ts, .claude/settings.local.json)."
+  },
+  "unresolved_ambiguities": {
+    "count": 19,
+    "policy": "Source persons whose notes/unique_attribute explicitly signal uncertainty (\"possibly the same as\", \"likely the same\", \"may be\") are emitted as unresolved candidates with no attestations, relevance, profiles or mentions.",
+    "candidates": [
+      "p-ahinoam-2 (1Chr, 1Sam, 2Sam)",
+      "p-azariah-18 (Dan)",
+      "p-ethan-1 (1Chr, 1Kgs)",
+      "p-jedaiah-6 (Zech)",
+      "p-jehozadak-2 (Hag, Zech)",
+      "p-king-of-arad-2 (Josh)",
+      "p-kish-1 (1Chr, 1Sam, 2Sam, Acts)",
+      "p-mishael-3 (Dan)",
+      "p-sheshbazzar-1 (Ezra)",
+      "p-zephaniah-4 (Zech)",
+      "p-zur-2 (Josh, Num)"
+    ],
+    "cross_book_type_conflicts": 0,
+    "ambiguous_mention_spans_dropped": "Surface forms shared or nested between two entities in one verse (e.g. person Haran / place Haran; person David / place City of David) are dropped rather than guessed; the verse keeps an explicit complete_zero result. Recorded per book in editorial_observations (code ambiguous-mention-referents-dropped)."
+  },
+  "known_limitations": [
+    "No importer exists for the whole-Bible draft packages; the only available importer dry run is Nehemiah-2 (tools/import-neh2.py --check). The canon packages are not wired to a staging import.",
+    "Historical, chronological and interpretive orientation stays a blocking open question wherever the allowed inputs do not support it; those contexts report blocked, not filler.",
+    "Event records are deterministic projections of BSB section headings plus attested participants/places; they are not independently sourced event identities and carry no historical claim.",
+    "Objects, roles, practices, terms, themes, maps and chronology are not fabricated and remain uncurated.",
+    "Machine-generated drafts only: no independent review, approval or publication occurred; content/curation/whole-bible-status.json was not rewritten.",
+    "Task scoped to the English BSB canon; the Telugu IRV corpus under content/curated/tel is unchanged."
+  ],
+  "stop_condition": "Stopped after all 66 books / 1,189 chapters / 31,086 verses had explicit coverage, every job and book validated, the full-canon reconciliation completed, and the Zod contract tests plus importer dry run passed. No review, approval or publication was performed."
+}

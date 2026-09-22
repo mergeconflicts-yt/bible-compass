@@ -83,13 +83,31 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-jon-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:63bf6ddab96da532656efe6bcb36f97826f21d6160dcef7cdc7c87997f929277"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:p-amittai-1-1-1",
+        "verse_key": "verse:Jon.1.1",
+        "attestation_key": "attestation:wb-p-amittai-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amittai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amittai",
+          "occurrence_ordinal": 1,
+          "prefix": "ame to Jonah son of ",
+          "suffix": ", saying,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:p-jonah-1-1-1",
         "verse_key": "verse:Jon.1.1",
@@ -104,6 +122,42 @@
           "occurrence_ordinal": 1,
           "prefix": "of the LORD came to ",
           "suffix": " son of Amittai, say"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jonah-1-1-15",
+        "verse_key": "verse:Jon.1.15",
+        "attestation_key": "attestation:wb-p-jonah-1-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jonah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jonah",
+          "occurrence_ordinal": 1,
+          "prefix": "his, they picked up ",
+          "suffix": " and cast him into t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-jonah-1-1-17",
+        "verse_key": "verse:Jon.1.17",
+        "attestation_key": "attestation:wb-p-jonah-1-1-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jonah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jonah",
+          "occurrence_ordinal": 1,
+          "prefix": "eat fish to swallow ",
+          "suffix": ", and Jonah spent th"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -158,42 +212,6 @@
           "occurrence_ordinal": 1,
           "prefix": "and the lot fell on ",
           "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-jonah-1-1-15",
-        "verse_key": "verse:Jon.1.15",
-        "attestation_key": "attestation:wb-p-jonah-1-1-15",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jonah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jonah",
-          "occurrence_ordinal": 1,
-          "prefix": "his, they picked up ",
-          "suffix": " and cast him into t"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-jonah-1-1-17",
-        "verse_key": "verse:Jon.1.17",
-        "attestation_key": "attestation:wb-p-jonah-1-1-17",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jonah-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jonah",
-          "occurrence_ordinal": 1,
-          "prefix": "eat fish to swallow ",
-          "suffix": ", and Jonah spent th"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -374,24 +392,6 @@
           "occurrence_ordinal": 1,
           "prefix": "Then God asked ",
           "suffix": ", “Have you any righ"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-amittai-1-1-1",
-        "verse_key": "verse:Jon.1.1",
-        "attestation_key": "attestation:wb-p-amittai-1-1-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-amittai-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Amittai",
-          "occurrence_ordinal": 1,
-          "prefix": "ame to Jonah son of ",
-          "suffix": ", saying,"
         },
         "claim_keys": [],
         "review_status": "draft"

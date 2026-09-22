@@ -55,9 +55,9 @@
   "review_status": "draft",
   "dependencies": [
     {
-      "package_key": "registry:wb:entities",
+      "package_key": "draft:wb-bsb-jude-canonical",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:57fa7bdab95521609f1ad098f635fa53729b60e751b4971c7918a815729407b0"
     }
   ],
   "records": {
@@ -76,6 +76,24 @@
           "occurrence_ordinal": 1,
           "prefix": "h, the seventh from ",
           "suffix": ", also prophesied ab"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-balaam-1-1-11",
+        "verse_key": "verse:Jude.1.11",
+        "attestation_key": "attestation:wb-p-balaam-1-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-balaam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Balaam",
+          "occurrence_ordinal": 1,
+          "prefix": "g into the error of ",
+          "suffix": "; they have perished"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -117,96 +135,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:p-moses-1-1-9",
-        "verse_key": "verse:Jude.1.9",
-        "attestation_key": "attestation:wb-p-moses-1-1-9",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-moses-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Moses",
-          "occurrence_ordinal": 1,
-          "prefix": "il over the body of ",
-          "suffix": ", did not presume to"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-korah-3-1-11",
-        "verse_key": "verse:Jude.1.11",
-        "attestation_key": "attestation:wb-p-korah-3-1-11",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-korah-3"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Korah",
-          "occurrence_ordinal": 1,
-          "prefix": "ey have perished in ",
-          "suffix": "’s rebellion."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-balaam-1-1-11",
-        "verse_key": "verse:Jude.1.11",
-        "attestation_key": "attestation:wb-p-balaam-1-1-11",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-balaam-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Balaam",
-          "occurrence_ordinal": 1,
-          "prefix": "g into the error of ",
-          "suffix": "; they have perished"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-satan-1-1-9",
-        "verse_key": "verse:Jude.1.9",
-        "attestation_key": "attestation:wb-p-satan-1-1-9",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-satan-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "the devil",
-          "occurrence_ordinal": 1,
-          "prefix": "en he disputed with ",
-          "suffix": " over the body of Mo"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:p-michael-9-1-9",
-        "verse_key": "verse:Jude.1.9",
-        "attestation_key": "attestation:wb-p-michael-9-1-9",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-michael-9"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Michael",
-          "occurrence_ordinal": 1,
-          "prefix": " even the archangel ",
-          "suffix": ", when he disputed w"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:p-james-3-1-1",
         "verse_key": "verse:Jude.1.1",
         "attestation_key": "attestation:wb-p-james-3-1-1",
@@ -238,6 +166,78 @@
           "occurrence_ordinal": 1,
           "prefix": "",
           "suffix": ", a servant of Jesus"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-korah-3-1-11",
+        "verse_key": "verse:Jude.1.11",
+        "attestation_key": "attestation:wb-p-korah-3-1-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-korah-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Korah",
+          "occurrence_ordinal": 1,
+          "prefix": "ey have perished in ",
+          "suffix": "’s rebellion."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-michael-9-1-9",
+        "verse_key": "verse:Jude.1.9",
+        "attestation_key": "attestation:wb-p-michael-9-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-michael-9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Michael",
+          "occurrence_ordinal": 1,
+          "prefix": " even the archangel ",
+          "suffix": ", when he disputed w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-moses-1-1-9",
+        "verse_key": "verse:Jude.1.9",
+        "attestation_key": "attestation:wb-p-moses-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-moses-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Moses",
+          "occurrence_ordinal": 1,
+          "prefix": "il over the body of ",
+          "suffix": ", did not presume to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:p-satan-1-1-9",
+        "verse_key": "verse:Jude.1.9",
+        "attestation_key": "attestation:wb-p-satan-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 1,
+          "prefix": "en he disputed with ",
+          "suffix": " over the body of Mo"
         },
         "claim_keys": [],
         "review_status": "draft"

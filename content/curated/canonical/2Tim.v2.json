@@ -964,8 +964,237 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-eunice-1-mother-p-timothy-1",
+        "subject_entity_key": "entity:p-eunice-1",
+        "predicate_key": "relationship:mother",
+        "object_entity_key": "entity:p-timothy-1",
+        "applicable_scope_keys": [
+          "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-lois-1-grandmother-p-timothy-1",
+        "subject_entity_key": "entity:p-lois-1",
+        "predicate_key": "relationship:grandmother",
+        "object_entity_key": "entity:p-timothy-1",
+        "applicable_scope_keys": [
+          "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-timothy-1-grandson-p-lois-1",
+        "subject_entity_key": "entity:p-timothy-1",
+        "predicate_key": "relationship:grandson",
+        "object_entity_key": "entity:p-lois-1",
+        "applicable_scope_keys": [
+          "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-timothy-1-son-p-eunice-1",
+        "subject_entity_key": "entity:p-timothy-1",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-eunice-1",
+        "applicable_scope_keys": [
+          "scope:wb-2tim-1:refsys:eng-v22:2tim.1.1-2tim.1.18"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-2tim-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-1-p1:refsys:eng-v22:2tim.1.1-2tim.1.2",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-1-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-eunice-1",
+          "entity:p-lois-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-1-p2:refsys:eng-v22:2tim.1.3-2tim.1.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-1-p3",
+        "event_type": "teaching",
+        "participant_entity_keys": [
+          "entity:p-hermogenes-1",
+          "entity:p-onesiphorus-1",
+          "entity:p-phygelus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-1-p3:refsys:eng-v22:2tim.1.13-2tim.1.18",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-2-p1:refsys:eng-v22:2tim.2.1-2tim.2.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-2-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-hymenaeus-1",
+          "entity:p-philetus-1",
+          "entity:p-satan-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-2-p2:refsys:eng-v22:2tim.2.14-2tim.2.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-3-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jambres-1",
+          "entity:p-jannes-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-3-p1:refsys:eng-v22:2tim.3.1-2tim.3.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-3-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-2-a6c704a",
+          "entity:pl-iconium-ae425aa",
+          "entity:pl-lystra-af0719d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-3-p2:refsys:eng-v22:2tim.3.10-2tim.3.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-4-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-alexander-4",
+          "entity:p-crescens-1",
+          "entity:p-demas-1",
+          "entity:p-john-5",
+          "entity:p-luke-1",
+          "entity:p-titus-1",
+          "entity:p-tychicus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-dalmatia-ae86cd7",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-galatia-a0f440a",
+          "entity:pl-thessalonica-afa9d8e",
+          "entity:pl-troas-a91c509"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-4-p2:refsys:eng-v22:2tim.4.9-2tim.4.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-2tim-4-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aquila-1",
+          "entity:p-claudia-1",
+          "entity:p-erastus-2",
+          "entity:p-eubulus-1",
+          "entity:p-linus-1",
+          "entity:p-onesiphorus-1",
+          "entity:p-priscilla-1",
+          "entity:p-pudens-1",
+          "entity:p-trophimus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-corinth-a6f437a",
+          "entity:pl-miletus-a55027d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-2tim-4-p4:refsys:eng-v22:2tim.4.19-2tim.4.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-antioch-2-a6c704a",
@@ -1502,247 +1731,247 @@
       {
         "candidate_key": "candidate:wb:p-moses-1",
         "canonical_entity_key": "entity:p-moses-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-david-1",
         "canonical_entity_key": "entity:p-david-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-satan-1",
         "canonical_entity_key": "entity:p-satan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-saul-2",
         "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-john-5",
         "canonical_entity_key": "entity:p-john-5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-timothy-1",
         "canonical_entity_key": "entity:p-timothy-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aquila-1",
         "canonical_entity_key": "entity:p-aquila-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-priscilla-1",
         "canonical_entity_key": "entity:p-priscilla-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tychicus-1",
         "canonical_entity_key": "entity:p-tychicus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-trophimus-1",
         "canonical_entity_key": "entity:p-trophimus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-erastus-2",
         "canonical_entity_key": "entity:p-erastus-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-titus-1",
         "canonical_entity_key": "entity:p-titus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-luke-1",
         "canonical_entity_key": "entity:p-luke-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-demas-1",
         "canonical_entity_key": "entity:p-demas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hymenaeus-1",
         "canonical_entity_key": "entity:p-hymenaeus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-alexander-4",
         "canonical_entity_key": "entity:p-alexander-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-lois-1",
         "canonical_entity_key": "entity:p-lois-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-eunice-1",
         "canonical_entity_key": "entity:p-eunice-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-phygelus-1",
         "canonical_entity_key": "entity:p-phygelus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hermogenes-1",
         "canonical_entity_key": "entity:p-hermogenes-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-onesiphorus-1",
         "canonical_entity_key": "entity:p-onesiphorus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-philetus-1",
         "canonical_entity_key": "entity:p-philetus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jannes-1",
         "canonical_entity_key": "entity:p-jannes-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jambres-1",
         "canonical_entity_key": "entity:p-jambres-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-crescens-1",
         "canonical_entity_key": "entity:p-crescens-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-eubulus-1",
         "canonical_entity_key": "entity:p-eubulus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pudens-1",
         "canonical_entity_key": "entity:p-pudens-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-linus-1",
         "canonical_entity_key": "entity:p-linus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-claudia-1",
         "canonical_entity_key": "entity:p-claudia-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-antioch-2-a6c704a",
         "canonical_entity_key": "entity:pl-antioch-2-a6c704a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-asia-a197f19",
         "canonical_entity_key": "entity:pl-asia-a197f19",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-corinth-a6f437a",
         "canonical_entity_key": "entity:pl-corinth-a6f437a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-dalmatia-ae86cd7",
         "canonical_entity_key": "entity:pl-dalmatia-ae86cd7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
         "canonical_entity_key": "entity:pl-ephesus-a5feb15",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-galatia-a0f440a",
         "canonical_entity_key": "entity:pl-galatia-a0f440a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-iconium-ae425aa",
         "canonical_entity_key": "entity:pl-iconium-ae425aa",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lystra-af0719d",
         "canonical_entity_key": "entity:pl-lystra-af0719d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-miletus-a55027d",
         "canonical_entity_key": "entity:pl-miletus-a55027d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rome-afc8e7a",
         "canonical_entity_key": "entity:pl-rome-afc8e7a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-thessalonica-afa9d8e",
         "canonical_entity_key": "entity:pl-thessalonica-afa9d8e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-troas-a91c509",
         "canonical_entity_key": "entity:pl-troas-a91c509",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -2082,7 +2311,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

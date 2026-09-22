@@ -3791,8 +3791,1034 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-dan-1-ancestor-p-dibri-1",
+        "subject_entity_key": "entity:p-dan-1",
+        "predicate_key": "relationship:ancestor",
+        "object_entity_key": "entity:p-dibri-1",
+        "applicable_scope_keys": [
+          "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-dibri-1-descendant-p-dan-1",
+        "subject_entity_key": "entity:p-dibri-1",
+        "predicate_key": "relationship:descendant",
+        "object_entity_key": "entity:p-dan-1",
+        "applicable_scope_keys": [
+          "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-dibri-1-father-p-shelomith-1",
+        "subject_entity_key": "entity:p-dibri-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-shelomith-1",
+        "applicable_scope_keys": [
+          "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-shelomith-1-daughter-p-dibri-1",
+        "subject_entity_key": "entity:p-shelomith-1",
+        "predicate_key": "relationship:daughter",
+        "object_entity_key": "entity:p-dibri-1",
+        "applicable_scope_keys": [
+          "scope:wb-lev-24:refsys:eng-v22:lev.24.1-lev.24.23"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-lev-1-p1",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-1-p1:refsys:eng-v22:lev.1.1-lev.1.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-10-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-abihu-1",
+          "entity:p-eleazar-1",
+          "entity:p-elzaphan-1",
+          "entity:p-ithamar-1",
+          "entity:p-jacob-1",
+          "entity:p-mishael-1",
+          "entity:p-moses-1",
+          "entity:p-nadab-1",
+          "entity:p-uzziel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-10-p1:refsys:eng-v22:lev.10.1-lev.10.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-10-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-eleazar-1",
+          "entity:p-ithamar-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-holy-place-1-a13cde9"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-10-p2:refsys:eng-v22:lev.10.8-lev.10.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-11-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-11-p1:refsys:eng-v22:lev.11.1-lev.11.47",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-12-p1",
+        "event_type": "birth",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-12-p1:refsys:eng-v22:lev.12.1-lev.12.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-13-p1",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-13-p1:refsys:eng-v22:lev.13.1-lev.13.46",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-14-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-14-p1:refsys:eng-v22:lev.14.1-lev.14.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-14-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-canaan-a581f0c"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-14-p2:refsys:eng-v22:lev.14.33-lev.14.47",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-15-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-15-p1:refsys:eng-v22:lev.15.1-lev.15.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-15-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-15-p4:refsys:eng-v22:lev.15.28-lev.15.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-16-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-azazel-ab9a5ec",
+          "entity:pl-holy-place-1-a13cde9",
+          "entity:pl-most-holy-place-1-a378ddd"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-16-p1:refsys:eng-v22:lev.16.1-lev.16.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-17-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-17-p1:refsys:eng-v22:lev.17.1-lev.17.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-17-p2",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-17-p2:refsys:eng-v22:lev.17.10-lev.17.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-18-p1",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-canaan-a581f0c",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-18-p1:refsys:eng-v22:lev.18.1-lev.18.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-19-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-19-p1:refsys:eng-v22:lev.19.1-lev.19.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-19-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-19-p3:refsys:eng-v22:lev.19.19-lev.19.37",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-2-p1",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-aaron-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-2-p1:refsys:eng-v22:lev.2.1-lev.2.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-20-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-20-p1:refsys:eng-v22:lev.20.1-lev.20.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-21-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-21-p1:refsys:eng-v22:lev.21.1-lev.21.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-21-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-21-p2:refsys:eng-v22:lev.21.16-lev.21.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-22-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-22-p1:refsys:eng-v22:lev.22.1-lev.22.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-22-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-22-p2:refsys:eng-v22:lev.22.17-lev.22.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-23-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-23-p1:refsys:eng-v22:lev.23.1-lev.23.3",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-23-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-23-p3:refsys:eng-v22:lev.23.9-lev.23.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-23-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-23-p5:refsys:eng-v22:lev.23.23-lev.23.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-23-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-23-p6:refsys:eng-v22:lev.23.26-lev.23.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-23-p7",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-23-p7:refsys:eng-v22:lev.23.33-lev.23.44",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-24-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-24-p1:refsys:eng-v22:lev.24.1-lev.24.4",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-24-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-24-p2:refsys:eng-v22:lev.24.5-lev.24.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-24-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-dan-1",
+          "entity:p-dibri-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1",
+          "entity:p-shelomith-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-24-p3:refsys:eng-v22:lev.24.10-lev.24.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-24-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-24-p4:refsys:eng-v22:lev.24.17-lev.24.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-25-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-mount-sinai-abfba2a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-25-p1:refsys:eng-v22:lev.25.1-lev.25.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-25-p5",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-25-p5:refsys:eng-v22:lev.25.23-lev.25.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-25-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-canaan-a581f0c",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-25-p6:refsys:eng-v22:lev.25.35-lev.25.38",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-25-p7",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-25-p7:refsys:eng-v22:lev.25.39-lev.25.46",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-25-p8",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-25-p8:refsys:eng-v22:lev.25.47-lev.25.55",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-26-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-26-p1:refsys:eng-v22:lev.26.1-lev.26.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-26-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-isaac-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca",
+          "entity:pl-mount-sinai-abfba2a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-26-p3:refsys:eng-v22:lev.26.40-lev.26.46",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-27-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-27-p1:refsys:eng-v22:lev.27.1-lev.27.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-27-p2",
+        "event_type": "teaching",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-mount-sinai-abfba2a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-27-p2:refsys:eng-v22:lev.27.30-lev.27.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-3-p1",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-aaron-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-3-p1:refsys:eng-v22:lev.3.1-lev.3.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-4-p1",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-4-p1:refsys:eng-v22:lev.4.1-lev.4.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-5-p2",
+        "event_type": "law",
+        "participant_entity_keys": [
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-5-p2:refsys:eng-v22:lev.5.14-lev.5.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-6-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-6-p1:refsys:eng-v22:lev.6.1-lev.6.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-6-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-6-p2:refsys:eng-v22:lev.6.8-lev.6.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-6-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-6-p3:refsys:eng-v22:lev.6.14-lev.6.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-6-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-holy-place-1-a13cde9"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-6-p4:refsys:eng-v22:lev.6.24-lev.6.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-7-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-7-p1:refsys:eng-v22:lev.7.1-lev.7.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-7-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-7-p3:refsys:eng-v22:lev.7.22-lev.7.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-7-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-mount-sinai-abfba2a",
+          "entity:pl-wilderness-of-sinai-ae50cf1"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-7-p4:refsys:eng-v22:lev.7.28-lev.7.38",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-8-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-8-p1:refsys:eng-v22:lev.8.1-lev.8.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-8-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-8-p2:refsys:eng-v22:lev.8.14-lev.8.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-8-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-8-p3:refsys:eng-v22:lev.8.18-lev.8.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-8-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-8-p4:refsys:eng-v22:lev.8.22-lev.8.36",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-lev-9-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-lev-9-p1:refsys:eng-v22:lev.9.1-lev.9.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-azazel-ab9a5ec",
@@ -4724,133 +5750,133 @@
       {
         "candidate_key": "candidate:wb:p-abram-1",
         "canonical_entity_key": "entity:p-abram-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-isaac-1",
         "canonical_entity_key": "entity:p-isaac-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-dan-1",
         "canonical_entity_key": "entity:p-dan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-moses-1",
         "canonical_entity_key": "entity:p-moses-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aaron-1",
         "canonical_entity_key": "entity:p-aaron-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-uzziel-1",
         "canonical_entity_key": "entity:p-uzziel-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-mishael-1",
         "canonical_entity_key": "entity:p-mishael-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-elzaphan-1",
         "canonical_entity_key": "entity:p-elzaphan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-nadab-1",
         "canonical_entity_key": "entity:p-nadab-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-abihu-1",
         "canonical_entity_key": "entity:p-abihu-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-eleazar-1",
         "canonical_entity_key": "entity:p-eleazar-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ithamar-1",
         "canonical_entity_key": "entity:p-ithamar-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-shelomith-1",
         "canonical_entity_key": "entity:p-shelomith-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-dibri-1",
         "canonical_entity_key": "entity:p-dibri-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-azazel-ab9a5ec",
         "canonical_entity_key": "entity:pl-azazel-ab9a5ec",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-canaan-a581f0c",
         "canonical_entity_key": "entity:pl-canaan-a581f0c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-holy-place-1-a13cde9",
         "canonical_entity_key": "entity:pl-holy-place-1-a13cde9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-most-holy-place-1-a378ddd",
         "canonical_entity_key": "entity:pl-most-holy-place-1-a378ddd",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-sinai-abfba2a",
         "canonical_entity_key": "entity:pl-mount-sinai-abfba2a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-wilderness-of-sinai-ae50cf1",
         "canonical_entity_key": "entity:pl-wilderness-of-sinai-ae50cf1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -7516,7 +8542,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

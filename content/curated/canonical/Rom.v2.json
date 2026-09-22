@@ -2028,8 +2028,353 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-benjamin-1-ancestor-p-saul-2",
+        "subject_entity_key": "entity:p-benjamin-1",
+        "predicate_key": "relationship:ancestor",
+        "object_entity_key": "entity:p-saul-2",
+        "applicable_scope_keys": [
+          "scope:wb-rom-11:refsys:eng-v22:rom.11.1-rom.11.36"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-saul-2-descendant-p-benjamin-1",
+        "subject_entity_key": "entity:p-saul-2",
+        "predicate_key": "relationship:descendant",
+        "object_entity_key": "entity:p-benjamin-1",
+        "applicable_scope_keys": [
+          "scope:wb-rom-11:refsys:eng-v22:rom.11.1-rom.11.36"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-rom-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-1-p1:refsys:eng-v22:rom.1.1-rom.1.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-1-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-1-p2:refsys:eng-v22:rom.1.8-rom.1.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-10-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-isaiah-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-10-p1:refsys:eng-v22:rom.10.1-rom.10.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-11-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-benjamin-1",
+          "entity:p-david-1",
+          "entity:p-elijah-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-11-p1:refsys:eng-v22:rom.11.1-rom.11.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-11-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-11-p3:refsys:eng-v22:rom.11.25-rom.11.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-15-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-isaiah-1",
+          "entity:p-jesse-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-15-p2:refsys:eng-v22:rom.15.7-rom.15.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-15-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-illyricum-ac405c0",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-15-p3:refsys:eng-v22:rom.15.14-rom.15.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-15-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-achaia-aef4242",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-macedonia-a69e1b8",
+          "entity:pl-rome-afc8e7a",
+          "entity:pl-spain-a3f0f69"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-15-p4:refsys:eng-v22:rom.15.23-rom.15.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-16-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ampliatus-1",
+          "entity:p-andronicus-1",
+          "entity:p-apelles-1",
+          "entity:p-aquila-1",
+          "entity:p-aristobulus-1",
+          "entity:p-asynchritus-1",
+          "entity:p-epanetus-1",
+          "entity:p-hermas-1",
+          "entity:p-hermes-1",
+          "entity:p-herodian-1",
+          "entity:p-julia-1",
+          "entity:p-junias-1",
+          "entity:p-mary-6",
+          "entity:p-narcissus-1",
+          "entity:p-nereus-1",
+          "entity:p-olympas-1",
+          "entity:p-patrobas-1",
+          "entity:p-persis-1",
+          "entity:p-philologus-1",
+          "entity:p-phlegon-1",
+          "entity:p-phoebe-1",
+          "entity:p-priscilla-1",
+          "entity:p-rufus-1",
+          "entity:p-stachys-1",
+          "entity:p-tryphaena-1",
+          "entity:p-tryphosa-1",
+          "entity:p-urbanus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-cenchreae-aa31dd3"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-16-p1:refsys:eng-v22:rom.16.1-rom.16.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-16-p2",
+        "event_type": "vision",
+        "participant_entity_keys": [
+          "entity:p-satan-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-16-p2:refsys:eng-v22:rom.16.17-rom.16.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-16-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-erastus-2",
+          "entity:p-gaius-1",
+          "entity:p-jason-1",
+          "entity:p-lucius-2",
+          "entity:p-quartus-1",
+          "entity:p-sosipater-1",
+          "entity:p-tertius-1",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-16-p3:refsys:eng-v22:rom.16.21-rom.16.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-4-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-david-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-4-p1:refsys:eng-v22:rom.4.1-rom.4.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-4-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-sarai-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-4-p2:refsys:eng-v22:rom.4.13-rom.4.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-5-p3",
+        "event_type": "death",
+        "participant_entity_keys": [
+          "entity:p-adam-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-5-p3:refsys:eng-v22:rom.5.12-rom.5.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-9-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-esau-1",
+          "entity:p-hosea-1",
+          "entity:p-isaac-1",
+          "entity:p-isaiah-1",
+          "entity:p-jacob-1",
+          "entity:p-moses-1",
+          "entity:p-pharaoh-4",
+          "entity:p-rebekah-1",
+          "entity:p-sarai-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-gomorrah-aa572e2",
+          "entity:pl-sodom-a0aa664"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-9-p2:refsys:eng-v22:rom.9.6-rom.9.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-rom-9-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-rom-9-p3:refsys:eng-v22:rom.9.30-rom.9.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-achaia-aef4242",
@@ -2845,385 +3190,385 @@
       {
         "candidate_key": "candidate:wb:p-adam-1",
         "canonical_entity_key": "entity:p-adam-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-abram-1",
         "canonical_entity_key": "entity:p-abram-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-sarai-1",
         "canonical_entity_key": "entity:p-sarai-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-isaac-1",
         "canonical_entity_key": "entity:p-isaac-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-rebekah-1",
         "canonical_entity_key": "entity:p-rebekah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-esau-1",
         "canonical_entity_key": "entity:p-esau-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-benjamin-1",
         "canonical_entity_key": "entity:p-benjamin-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-moses-1",
         "canonical_entity_key": "entity:p-moses-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pharaoh-4",
         "canonical_entity_key": "entity:p-pharaoh-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jesse-1",
         "canonical_entity_key": "entity:p-jesse-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-david-1",
         "canonical_entity_key": "entity:p-david-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-elijah-1",
         "canonical_entity_key": "entity:p-elijah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-isaiah-1",
         "canonical_entity_key": "entity:p-isaiah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-satan-1",
         "canonical_entity_key": "entity:p-satan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hosea-1",
         "canonical_entity_key": "entity:p-hosea-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-rufus-1",
         "canonical_entity_key": "entity:p-rufus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-saul-2",
         "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-timothy-1",
         "canonical_entity_key": "entity:p-timothy-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jason-1",
         "canonical_entity_key": "entity:p-jason-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aquila-1",
         "canonical_entity_key": "entity:p-aquila-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-priscilla-1",
         "canonical_entity_key": "entity:p-priscilla-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-gaius-1",
         "canonical_entity_key": "entity:p-gaius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-phoebe-1",
         "canonical_entity_key": "entity:p-phoebe-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-epanetus-1",
         "canonical_entity_key": "entity:p-epanetus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-mary-6",
         "canonical_entity_key": "entity:p-mary-6",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-andronicus-1",
         "canonical_entity_key": "entity:p-andronicus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-junias-1",
         "canonical_entity_key": "entity:p-junias-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ampliatus-1",
         "canonical_entity_key": "entity:p-ampliatus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-urbanus-1",
         "canonical_entity_key": "entity:p-urbanus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-stachys-1",
         "canonical_entity_key": "entity:p-stachys-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-apelles-1",
         "canonical_entity_key": "entity:p-apelles-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aristobulus-1",
         "canonical_entity_key": "entity:p-aristobulus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-herodian-1",
         "canonical_entity_key": "entity:p-herodian-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-narcissus-1",
         "canonical_entity_key": "entity:p-narcissus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tryphaena-1",
         "canonical_entity_key": "entity:p-tryphaena-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tryphosa-1",
         "canonical_entity_key": "entity:p-tryphosa-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-persis-1",
         "canonical_entity_key": "entity:p-persis-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-asynchritus-1",
         "canonical_entity_key": "entity:p-asynchritus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-phlegon-1",
         "canonical_entity_key": "entity:p-phlegon-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hermes-1",
         "canonical_entity_key": "entity:p-hermes-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-patrobas-1",
         "canonical_entity_key": "entity:p-patrobas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hermas-1",
         "canonical_entity_key": "entity:p-hermas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-philologus-1",
         "canonical_entity_key": "entity:p-philologus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-julia-1",
         "canonical_entity_key": "entity:p-julia-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-nereus-1",
         "canonical_entity_key": "entity:p-nereus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-olympas-1",
         "canonical_entity_key": "entity:p-olympas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-lucius-2",
         "canonical_entity_key": "entity:p-lucius-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-sosipater-1",
         "canonical_entity_key": "entity:p-sosipater-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tertius-1",
         "canonical_entity_key": "entity:p-tertius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-erastus-2",
         "canonical_entity_key": "entity:p-erastus-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-quartus-1",
         "canonical_entity_key": "entity:p-quartus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-achaia-aef4242",
         "canonical_entity_key": "entity:pl-achaia-aef4242",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-asia-a197f19",
         "canonical_entity_key": "entity:pl-asia-a197f19",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cenchreae-aa31dd3",
         "canonical_entity_key": "entity:pl-cenchreae-aa31dd3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-gomorrah-aa572e2",
         "canonical_entity_key": "entity:pl-gomorrah-aa572e2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-illyricum-ac405c0",
         "canonical_entity_key": "entity:pl-illyricum-ac405c0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
         "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-judea-1-a149f13",
         "canonical_entity_key": "entity:pl-judea-1-a149f13",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
         "canonical_entity_key": "entity:pl-macedonia-a69e1b8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rome-afc8e7a",
         "canonical_entity_key": "entity:pl-rome-afc8e7a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sodom-a0aa664",
         "canonical_entity_key": "entity:pl-sodom-a0aa664",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-spain-a3f0f69",
         "canonical_entity_key": "entity:pl-spain-a3f0f69",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -4230,7 +4575,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

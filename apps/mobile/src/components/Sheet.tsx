@@ -26,6 +26,8 @@ interface SheetProps {
   headerContent?: ReactNode;
   /** Lets content drive the scroll position (e.g. land on an item). */
   scrollRef?: RefObject<ScrollView | null>;
+  /** Modal entrance animation. Use 'none' when sheets swap in place. */
+  animationType?: 'none' | 'slide' | 'fade';
   children: ReactNode;
 }
 
@@ -44,6 +46,7 @@ export function Sheet({
   closeOnly,
   headerContent,
   scrollRef,
+  animationType = 'slide',
   children,
 }: SheetProps) {
   const { colors } = useTheme();
@@ -99,7 +102,7 @@ export function Sheet({
     <Modal
       visible={visible}
       transparent
-      animationType="slide"
+      animationType={animationType}
       onRequestClose={onClose}
       testID={testID}
     >

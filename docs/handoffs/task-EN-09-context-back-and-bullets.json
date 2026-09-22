@@ -1,18 +1,22 @@
 {
-  "attempt_id": "task:EN-09-context-back-and-bullets:attempt-2",
+  "attempt_id": "task:EN-09-context-back-and-bullets:attempt-5",
   "task_id": "EN-09",
   "task_title": "Context sheet back navigation and bullet splitting for verse references",
   "result": "PASS — back-stack navigation added, toBullets no longer splits verse references; all tests pass.",
-  "user_visible_outcome": "Tapping a person, place, event or the timeline in the Passage Context sheet opens the sheet (one sheet at a time), and Back unwinds one sheet at a time back to the context sheet. The Essential brief keeps reference such as (Neh.1) in one bullet.",
+  "user_visible_outcome": "In the passage-context flow, Back (and the card's X) unwinds one card at a time: from a connected person you return to the person you came from, and only the first card exits to reading. The context sheet does not pop back up, and cards appear without animation.",
   "files_changed": [
     "apps/mobile/src/components/sheets/ContextFlow.tsx (context navigation stack; Back unwinds one sheet; close clears it)",
     "apps/mobile/src/content/neh2Draft.ts (toBullets splits only on real sentence ends)",
     "apps/mobile/__tests__/entitychip.test.tsx (backs out of an entity sheet to the context sheet)",
-    "apps/mobile/__tests__/draft.test.ts (dotted verse references stay in one bullet)"
+    "apps/mobile/__tests__/draft.test.ts (dotted verse references stay in one bullet)",
+    "apps/mobile/src/components/Sheet.tsx (animationType prop)",
+    "apps/mobile/src/components/sheets/ContextFlow.tsx (animationType='none' for context-flow sheets)",
+    "apps/mobile/src/components/sheets/ContextSheet.tsx, EntitySheet.tsx, TimelineSheet.tsx (forward animationType)"
   ],
   "fixes": {
-    "back_navigation": "ContextFlow keeps a stack and shows only ONE sheet at a time: the context sheet is visible only when the stack is empty, otherwise the top entity/event/timeline sheet is visible. This avoids stacking React Native Modals (a second Modal silently failed to present, so taps looked dead) while still letting Back pop one level. Closing the flow clears the stack.",
-    "bullet_splitting": "toBullets now splits only where a sentence terminator is followed by whitespace and a capital letter/opening quote (Hermes-safe, no lookbehind). Book-abbreviation periods such as 'Neh.1' no longer split; '(Neh.1).' followed by a new sentence still does."
+    "back_navigation": "ContextFlow.pop now exits the flow when the stack has one card and otherwise drops the top card. EntitySheet onClose/onBack and TimelineSheet onClose all call pop, so both the X and the card Back button unwind one level; the context sheet (entry point) is never restored as a step. Timeline button relabelled 'Back'. Context sheets appear instantly (animationType='none').",
+    "bullet_splitting": "toBullets now splits only where a sentence terminator is followed by whitespace and a capital letter/opening quote (Hermes-safe, no lookbehind). Book-abbreviation periods such as 'Neh.1' no longer split; '(Neh.1).' followed by a new sentence still does.",
+    "animation": "Sheet gained an animationType prop (default 'slide'). ContextFlow passes 'none' to the ContextSheet, EntitySheet and TimelineSheet it manages, so swaps between them are instantaneous; other sheets (e.g. the reader peek card) keep the slide animation."
   },
   "commands_executed": [
     {
@@ -22,7 +26,7 @@
     }
   ],
   "tests": {
-    "back_navigation": "Opening a person from the context sheet shows the entity sheet; pressing Back hides it and the context sheet remains to continue from.",
+    "back_navigation": "Opening a person from the context sheet then a connected person: Back returns to the first person; Back again exits to reading with neither the entity nor the context sheet visible.",
     "bullet_splitting": "toBullets('Ruined (Neh.1). Earlier work was stopped (Ezra 4:17-23).') returns exactly two bullets, keeping each reference intact."
   },
   "known_limitations": [

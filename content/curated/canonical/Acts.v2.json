@@ -3782,16 +3782,6 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-kish-1-13-21",
-        "reference_key": "verse:Acts.13.21",
-        "entity_key": "entity:p-kish-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-p-saul-1-13-21",
         "reference_key": "verse:Acts.13.21",
         "entity_key": "entity:p-saul-1",
@@ -13012,8 +13002,2543 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-aaron-1-ancestor-p-alexander-2",
+        "subject_entity_key": "entity:p-aaron-1",
+        "predicate_key": "relationship:ancestor",
+        "object_entity_key": "entity:p-alexander-2",
+        "applicable_scope_keys": [
+          "scope:wb-acts-4:refsys:eng-v22:acts.4.1-acts.4.37"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-aaron-1-ancestor-p-john-4",
+        "subject_entity_key": "entity:p-aaron-1",
+        "predicate_key": "relationship:ancestor",
+        "object_entity_key": "entity:p-john-4",
+        "applicable_scope_keys": [
+          "scope:wb-acts-4:refsys:eng-v22:acts.4.1-acts.4.37"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-alexander-2-descendant-p-aaron-1",
+        "subject_entity_key": "entity:p-alexander-2",
+        "predicate_key": "relationship:descendant",
+        "object_entity_key": "entity:p-aaron-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-4:refsys:eng-v22:acts.4.1-acts.4.37"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-ananias-1-husband-p-sapphira-1",
+        "subject_entity_key": "entity:p-ananias-1",
+        "predicate_key": "relationship:husband",
+        "object_entity_key": "entity:p-sapphira-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-5:refsys:eng-v22:acts.5.1-acts.5.42"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-aquila-1-husband-p-priscilla-1",
+        "subject_entity_key": "entity:p-aquila-1",
+        "predicate_key": "relationship:husband",
+        "object_entity_key": "entity:p-priscilla-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-18:refsys:eng-v22:acts.18.1-acts.18.28"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-blastus-1-chamberlain-p-herod-3",
+        "subject_entity_key": "entity:p-blastus-1",
+        "predicate_key": "relationship:chamberlain",
+        "object_entity_key": "entity:p-herod-3",
+        "applicable_scope_keys": [
+          "scope:wb-acts-12:refsys:eng-v22:acts.12.1-acts.12.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-herod-3-king-p-blastus-1",
+        "subject_entity_key": "entity:p-herod-3",
+        "predicate_key": "relationship:king",
+        "object_entity_key": "entity:p-blastus-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-12:refsys:eng-v22:acts.12.1-acts.12.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-john-4-descendant-p-aaron-1",
+        "subject_entity_key": "entity:p-john-4",
+        "predicate_key": "relationship:descendant",
+        "object_entity_key": "entity:p-aaron-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-4:refsys:eng-v22:acts.4.1-acts.4.37"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-john-5-son-p-mary-5",
+        "subject_entity_key": "entity:p-john-5",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-mary-5",
+        "applicable_scope_keys": [
+          "scope:wb-acts-12:refsys:eng-v22:acts.12.1-acts.12.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-mary-5-master-p-rhoda-1",
+        "subject_entity_key": "entity:p-mary-5",
+        "predicate_key": "relationship:master",
+        "object_entity_key": "entity:p-rhoda-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-12:refsys:eng-v22:acts.12.1-acts.12.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-mary-5-mother-p-john-5",
+        "subject_entity_key": "entity:p-mary-5",
+        "predicate_key": "relationship:mother",
+        "object_entity_key": "entity:p-john-5",
+        "applicable_scope_keys": [
+          "scope:wb-acts-12:refsys:eng-v22:acts.12.1-acts.12.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-priscilla-1-wife-p-aquila-1",
+        "subject_entity_key": "entity:p-priscilla-1",
+        "predicate_key": "relationship:wife",
+        "object_entity_key": "entity:p-aquila-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-18:refsys:eng-v22:acts.18.1-acts.18.28"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-pyrrhus-1-father-p-sopater-1",
+        "subject_entity_key": "entity:p-pyrrhus-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-sopater-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-20:refsys:eng-v22:acts.20.1-acts.20.38"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-rhoda-1-servant-p-mary-5",
+        "subject_entity_key": "entity:p-rhoda-1",
+        "predicate_key": "relationship:servant",
+        "object_entity_key": "entity:p-mary-5",
+        "applicable_scope_keys": [
+          "scope:wb-acts-12:refsys:eng-v22:acts.12.1-acts.12.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-sapphira-1-wife-p-ananias-1",
+        "subject_entity_key": "entity:p-sapphira-1",
+        "predicate_key": "relationship:wife",
+        "object_entity_key": "entity:p-ananias-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-5:refsys:eng-v22:acts.5.1-acts.5.42"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-sopater-1-son-p-pyrrhus-1",
+        "subject_entity_key": "entity:p-sopater-1",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-pyrrhus-1",
+        "applicable_scope_keys": [
+          "scope:wb-acts-20:refsys:eng-v22:acts.20.1-acts.20.38"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-acts-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-john-1",
+          "entity:p-theophilus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-1-p1:refsys:eng-v22:acts.1.1-acts.1.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-1-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-galilee-1-a9cf1e8",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-samaria-2-a282dce"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-1-p2:refsys:eng-v22:acts.1.6-acts.1.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-1-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-alphaeus-1",
+          "entity:p-andrew-1",
+          "entity:p-bartholomew-1",
+          "entity:p-david-1",
+          "entity:p-james-1",
+          "entity:p-james-2",
+          "entity:p-james-4",
+          "entity:p-john-1",
+          "entity:p-john-2",
+          "entity:p-joseph-11",
+          "entity:p-judas-1",
+          "entity:p-mary-1",
+          "entity:p-matthew-1",
+          "entity:p-matthias-1",
+          "entity:p-philip-1",
+          "entity:p-simon-1",
+          "entity:p-simon-2",
+          "entity:p-thaddaeus-1",
+          "entity:p-thomas-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-akeldama-a040ba5",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-mount-of-olives-ac2c4c5"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-1-p3:refsys:eng-v22:acts.1.12-acts.1.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-10-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-cornelius-1",
+          "entity:p-simon-1",
+          "entity:p-simon-9"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-joppa-ae023a9"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-10-p1:refsys:eng-v22:acts.10.1-acts.10.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-10-p2",
+        "event_type": "vision",
+        "participant_entity_keys": [
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-10-p2:refsys:eng-v22:acts.10.9-acts.10.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-10-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-cornelius-1",
+          "entity:p-simon-1",
+          "entity:p-simon-9"
+        ],
+        "place_entity_keys": [
+          "entity:pl-joppa-ae023a9"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-10-p3:refsys:eng-v22:acts.10.17-acts.10.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-10-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-cornelius-1",
+          "entity:p-simon-1",
+          "entity:p-simon-9"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-joppa-ae023a9"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-10-p4:refsys:eng-v22:acts.10.24-acts.10.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-10-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-john-1",
+          "entity:p-satan-1",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-galilee-1-a9cf1e8",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-nazareth-af5884f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-10-p5:refsys:eng-v22:acts.10.34-acts.10.43",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-10-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-10-p6:refsys:eng-v22:acts.10.44-acts.10.48",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-11-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-john-1",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-joppa-ae023a9",
+          "entity:pl-judea-1-a149f13"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-11-p1:refsys:eng-v22:acts.11.1-acts.11.18",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-11-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agabus-1",
+          "entity:p-claudius-1",
+          "entity:p-joseph-12",
+          "entity:p-saul-2",
+          "entity:p-stephen-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-cyrene-a81cdb5",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-phoenicia-a33d53e",
+          "entity:pl-tarsus-a666ea0"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-11-p2:refsys:eng-v22:acts.11.19-acts.11.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-12-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-herod-3",
+          "entity:p-james-1",
+          "entity:p-john-2",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-12-p1:refsys:eng-v22:acts.12.1-acts.12.4",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-12-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-herod-3",
+          "entity:p-james-1",
+          "entity:p-john-5",
+          "entity:p-mary-5",
+          "entity:p-rhoda-1",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-judea-1-a149f13"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-12-p2:refsys:eng-v22:acts.12.5-acts.12.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-12-p3",
+        "event_type": "death",
+        "participant_entity_keys": [
+          "entity:p-blastus-1",
+          "entity:p-herod-3",
+          "entity:p-john-5",
+          "entity:p-joseph-12",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-sidon-a98e4d7",
+          "entity:pl-tyre-a160272"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-12-p3:refsys:eng-v22:acts.12.20-acts.12.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-13-p1",
+        "event_type": "journey",
+        "participant_entity_keys": [
+          "entity:p-herod-2",
+          "entity:p-joseph-12",
+          "entity:p-lucius-1",
+          "entity:p-manaen-1",
+          "entity:p-saul-2",
+          "entity:p-simeon-4"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-cyrene-a81cdb5"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-13-p1:refsys:eng-v22:acts.13.1-acts.13.3",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-13-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-bar-jesus-1",
+          "entity:p-john-5",
+          "entity:p-joseph-12",
+          "entity:p-satan-1",
+          "entity:p-saul-2",
+          "entity:p-sergius-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-paphos-a314765",
+          "entity:pl-salamis-afa863b",
+          "entity:pl-seleucia-a6d306d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-13-p2:refsys:eng-v22:acts.13.4-acts.13.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-13-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-benjamin-1",
+          "entity:p-david-1",
+          "entity:p-jesse-1",
+          "entity:p-john-1",
+          "entity:p-john-5",
+          "entity:p-moses-1",
+          "entity:p-pilate-1",
+          "entity:p-samuel-2",
+          "entity:p-saul-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-2-a6c704a",
+          "entity:pl-canaan-a581f0c",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-galilee-1-a9cf1e8",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-pamphylia-aa95188",
+          "entity:pl-paphos-a314765",
+          "entity:pl-perga-aff04b8",
+          "entity:pl-pisidia-a55aded"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-13-p3:refsys:eng-v22:acts.13.13-acts.13.41",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-13-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joseph-12",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-iconium-ae425aa"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-13-p4:refsys:eng-v22:acts.13.42-acts.13.52",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-14-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-derbe-aa401a9",
+          "entity:pl-iconium-ae425aa",
+          "entity:pl-lycaonia-a3668b6",
+          "entity:pl-lystra-af0719d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-14-p1:refsys:eng-v22:acts.14.1-acts.14.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-14-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joseph-12",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-2-a6c704a",
+          "entity:pl-derbe-aa401a9",
+          "entity:pl-iconium-ae425aa",
+          "entity:pl-lycaonia-a3668b6",
+          "entity:pl-lystra-af0719d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-14-p2:refsys:eng-v22:acts.14.8-acts.14.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-14-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-antioch-2-a6c704a",
+          "entity:pl-attalia-ac744c1",
+          "entity:pl-derbe-aa401a9",
+          "entity:pl-iconium-ae425aa",
+          "entity:pl-lystra-af0719d",
+          "entity:pl-pamphylia-aa95188",
+          "entity:pl-perga-aff04b8",
+          "entity:pl-pisidia-a55aded"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-14-p3:refsys:eng-v22:acts.14.21-acts.14.28",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-15-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joseph-12",
+          "entity:p-moses-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-phoenicia-a33d53e",
+          "entity:pl-samaria-2-a282dce"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-15-p1:refsys:eng-v22:acts.15.1-acts.15.4",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-15-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-james-1",
+          "entity:p-joseph-12",
+          "entity:p-moses-1",
+          "entity:p-saul-2",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-15-p2:refsys:eng-v22:acts.15.5-acts.15.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-15-p3",
+        "event_type": "letter",
+        "participant_entity_keys": [
+          "entity:p-joseph-12",
+          "entity:p-judas-5",
+          "entity:p-saul-2",
+          "entity:p-silas-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-cilicia-ad63819",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-syria-2-a890adf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-15-p3:refsys:eng-v22:acts.15.22-acts.15.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-15-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joseph-12",
+          "entity:p-judas-5",
+          "entity:p-saul-2",
+          "entity:p-silas-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-15-p4:refsys:eng-v22:acts.15.30-acts.15.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-15-p5",
+        "event_type": "journey",
+        "participant_entity_keys": [
+          "entity:p-john-5",
+          "entity:p-joseph-12",
+          "entity:p-saul-2",
+          "entity:p-silas-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cilicia-ad63819",
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-pamphylia-aa95188",
+          "entity:pl-syria-2-a890adf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-15-p5:refsys:eng-v22:acts.15.36-acts.15.41",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-16-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-derbe-aa401a9",
+          "entity:pl-iconium-ae425aa",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-lystra-af0719d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-16-p1:refsys:eng-v22:acts.16.1-acts.16.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-16-p2",
+        "event_type": "vision",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-bithynia-a5c0cb0",
+          "entity:pl-galatia-a0f440a",
+          "entity:pl-greece-a4492a0",
+          "entity:pl-macedonia-a69e1b8",
+          "entity:pl-mysia-a2d9bc8",
+          "entity:pl-phrygia-ab8ae56",
+          "entity:pl-troas-a91c509"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-16-p2:refsys:eng-v22:acts.16.6-acts.16.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-16-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-lydia-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-macedonia-a69e1b8",
+          "entity:pl-neapolis-a6a7150",
+          "entity:pl-philippi-a49e1d0",
+          "entity:pl-samothrace-a68750d",
+          "entity:pl-thyatira-a94b661",
+          "entity:pl-troas-a91c509"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-16-p3:refsys:eng-v22:acts.16.11-acts.16.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-16-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-silas-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-16-p4:refsys:eng-v22:acts.16.16-acts.16.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-16-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-silas-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-16-p5:refsys:eng-v22:acts.16.25-acts.16.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-16-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-lydia-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-16-p6:refsys:eng-v22:acts.16.35-acts.16.40",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-17-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-claudius-1",
+          "entity:p-jason-1",
+          "entity:p-saul-2",
+          "entity:p-silas-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-amphipolis-a4bdea7",
+          "entity:pl-apollonia-ab20df9",
+          "entity:pl-thessalonica-afa9d8e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-17-p1:refsys:eng-v22:acts.17.1-acts.17.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-17-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-silas-1",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-athens-a1fe6e7",
+          "entity:pl-berea-a62fe31",
+          "entity:pl-thessalonica-afa9d8e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-17-p2:refsys:eng-v22:acts.17.10-acts.17.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-17-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-areopagus-a815d89",
+          "entity:pl-athens-a1fe6e7"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-17-p3:refsys:eng-v22:acts.17.16-acts.17.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-17-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-damaris-1",
+          "entity:p-dionysius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-areopagus-a815d89",
+          "entity:pl-athens-a1fe6e7"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-17-p4:refsys:eng-v22:acts.17.22-acts.17.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-18-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aquila-1",
+          "entity:p-claudius-1",
+          "entity:p-crispus-1",
+          "entity:p-priscilla-1",
+          "entity:p-saul-2",
+          "entity:p-silas-1",
+          "entity:p-timothy-1",
+          "entity:p-titius-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-athens-a1fe6e7",
+          "entity:pl-corinth-a6f437a",
+          "entity:pl-italy-a7184a7",
+          "entity:pl-macedonia-a69e1b8",
+          "entity:pl-pontus-a83a43e",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-18-p1:refsys:eng-v22:acts.18.1-acts.18.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-18-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-crispus-1",
+          "entity:p-gallio-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-achaia-aef4242",
+          "entity:pl-corinth-a6f437a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-18-p2:refsys:eng-v22:acts.18.12-acts.18.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-18-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aquila-1",
+          "entity:p-priscilla-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-cenchreae-aa31dd3",
+          "entity:pl-corinth-a6f437a",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-syria-2-a890adf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-18-p3:refsys:eng-v22:acts.18.18-acts.18.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-18-p4",
+        "event_type": "journey",
+        "participant_entity_keys": [
+          "entity:p-apollos-1",
+          "entity:p-aquila-1",
+          "entity:p-john-1",
+          "entity:p-priscilla-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-achaia-aef4242",
+          "entity:pl-alexandria-aee7248",
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-galatia-a0f440a",
+          "entity:pl-phrygia-ab8ae56"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-18-p4:refsys:eng-v22:acts.18.23-acts.18.28",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-19-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-apollos-1",
+          "entity:p-john-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-corinth-a6f437a",
+          "entity:pl-ephesus-a5feb15"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-19-p1:refsys:eng-v22:acts.19.1-acts.19.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-19-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-tyrannus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-19-p2:refsys:eng-v22:acts.19.8-acts.19.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-19-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-sceva-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-ephesus-a5feb15"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-19-p3:refsys:eng-v22:acts.19.13-acts.19.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-19-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-alexander-3",
+          "entity:p-aristarchus-1",
+          "entity:p-demetrius-1",
+          "entity:p-erastus-1",
+          "entity:p-gaius-1",
+          "entity:p-saul-2",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-achaia-aef4242",
+          "entity:pl-asia-a197f19",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-macedonia-a69e1b8",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-19-p4:refsys:eng-v22:acts.19.21-acts.19.41",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-cappadocia-a33fbde",
+          "entity:pl-cyrene-a81cdb5",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-galilee-1-a9cf1e8",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-libya-ac12af9",
+          "entity:pl-mesopotamia-a43f60f",
+          "entity:pl-pamphylia-aa95188",
+          "entity:pl-phrygia-ab8ae56",
+          "entity:pl-pontus-a83a43e",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-2-p1:refsys:eng-v22:acts.2.1-acts.2.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-2-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-joel-11",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-nazareth-af5884f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-2-p2:refsys:eng-v22:acts.2.14-acts.2.36",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-2-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-2-p3:refsys:eng-v22:acts.2.37-acts.2.41",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-20-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aristarchus-1",
+          "entity:p-gaius-2",
+          "entity:p-pyrrhus-1",
+          "entity:p-saul-2",
+          "entity:p-secundus-1",
+          "entity:p-sopater-1",
+          "entity:p-timothy-1",
+          "entity:p-trophimus-1",
+          "entity:p-tychicus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-berea-a62fe31",
+          "entity:pl-derbe-aa401a9",
+          "entity:pl-greece-a4492a0",
+          "entity:pl-macedonia-a69e1b8",
+          "entity:pl-philippi-a49e1d0",
+          "entity:pl-syria-2-a890adf",
+          "entity:pl-thessalonica-afa9d8e",
+          "entity:pl-troas-a91c509"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-20-p1:refsys:eng-v22:acts.20.1-acts.20.6",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-20-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-eutychus-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-20-p2:refsys:eng-v22:acts.20.7-acts.20.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-20-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-assos-a0a2ca7",
+          "entity:pl-chios-a4c2c75",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-miletus-a55027d",
+          "entity:pl-mitylene-a33910d",
+          "entity:pl-samos-acf6ec0",
+          "entity:pl-trogyllium-a6f61d3"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-20-p3:refsys:eng-v22:acts.20.13-acts.20.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-20-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-miletus-a55027d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-20-p4:refsys:eng-v22:acts.20.17-acts.20.38",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-21-p1",
+        "event_type": "journey",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cos-a398e5d",
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-patara-ade301b",
+          "entity:pl-phoenicia-a33d53e",
+          "entity:pl-ptolemais-abc2af0",
+          "entity:pl-rhodes-1-a4218ee",
+          "entity:pl-syria-2-a890adf",
+          "entity:pl-tyre-a160272"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-21-p1:refsys:eng-v22:acts.21.1-acts.21.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-21-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agabus-1",
+          "entity:p-mnason-1",
+          "entity:p-philip-3",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-21-p2:refsys:eng-v22:acts.21.8-acts.21.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-21-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-james-1",
+          "entity:p-moses-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-21-p3:refsys:eng-v22:acts.21.17-acts.21.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-21-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-trophimus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-21-p4:refsys:eng-v22:acts.21.27-acts.21.36",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-21-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cilicia-ad63819",
+          "entity:pl-tarsus-a666ea0"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-21-p5:refsys:eng-v22:acts.21.37-acts.21.40",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-22-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ananias-2",
+          "entity:p-gamaliel-2",
+          "entity:p-saul-2",
+          "entity:p-stephen-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cilicia-ad63819",
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-nazareth-af5884f",
+          "entity:pl-tarsus-a666ea0"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-22-p1:refsys:eng-v22:acts.22.1-acts.22.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-22-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-22-p2:refsys:eng-v22:acts.22.22-acts.22.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-23-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ananias-3",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-23-p1:refsys:eng-v22:acts.23.1-acts.23.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-23-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-23-p2:refsys:eng-v22:acts.23.12-acts.23.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-23-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-claudius-2",
+          "entity:p-felix-1",
+          "entity:p-herod-3",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-aphek-2-a7b2e63",
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-cilicia-ad63819"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-23-p3:refsys:eng-v22:acts.23.23-acts.23.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-24-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ananias-3",
+          "entity:p-claudius-2",
+          "entity:p-felix-1",
+          "entity:p-saul-2",
+          "entity:p-tertullus-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-24-p1:refsys:eng-v22:acts.24.1-acts.24.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-24-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-asia-a197f19",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-24-p2:refsys:eng-v22:acts.24.10-acts.24.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-24-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-claudius-2",
+          "entity:p-drusilla-1",
+          "entity:p-felix-1",
+          "entity:p-porcius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-24-p3:refsys:eng-v22:acts.24.22-acts.24.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-25-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-caesar-2",
+          "entity:p-porcius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-25-p1:refsys:eng-v22:acts.25.1-acts.25.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-25-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-caesar-2",
+          "entity:p-porcius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-25-p2:refsys:eng-v22:acts.25.10-acts.25.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-25-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agrippa-1",
+          "entity:p-bernice-1",
+          "entity:p-caesar-2",
+          "entity:p-felix-1",
+          "entity:p-porcius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-25-p3:refsys:eng-v22:acts.25.13-acts.25.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-25-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agrippa-1",
+          "entity:p-bernice-1",
+          "entity:p-caesar-2",
+          "entity:p-porcius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-25-p4:refsys:eng-v22:acts.25.23-acts.25.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-26-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agrippa-1",
+          "entity:p-moses-1",
+          "entity:p-satan-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-nazareth-af5884f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-26-p1:refsys:eng-v22:acts.26.1-acts.26.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-26-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-agrippa-1",
+          "entity:p-bernice-1",
+          "entity:p-caesar-2",
+          "entity:p-porcius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-26-p2:refsys:eng-v22:acts.26.24-acts.26.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-27-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aristarchus-1",
+          "entity:p-julius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-adramyttium-a184f3a",
+          "entity:pl-alexandria-aee7248",
+          "entity:pl-asia-a197f19",
+          "entity:pl-cilicia-ad63819",
+          "entity:pl-cnidus-ab793ce",
+          "entity:pl-crete-a26aa94",
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-fair-havens-aae626a",
+          "entity:pl-italy-a7184a7",
+          "entity:pl-lasea-a56788c",
+          "entity:pl-lycia-a19fd03",
+          "entity:pl-myra-aa4b3e2",
+          "entity:pl-pamphylia-aa95188",
+          "entity:pl-phoenix-a9ee958",
+          "entity:pl-salmone-a1c44ea",
+          "entity:pl-sidon-a98e4d7",
+          "entity:pl-thessalonica-afa9d8e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-27-p1:refsys:eng-v22:acts.27.1-acts.27.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-27-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-caesar-2",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cauda-aca2b0a",
+          "entity:pl-crete-a26aa94",
+          "entity:pl-syrtis-ad36371"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-27-p2:refsys:eng-v22:acts.27.13-acts.27.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-27-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-adriatic-sea-adc77fb"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-27-p3:refsys:eng-v22:acts.27.27-acts.27.44",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-28-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-publius-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-malta-a57835d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-28-p1:refsys:eng-v22:acts.28.1-acts.28.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-28-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-alexandria-aee7248",
+          "entity:pl-forum-of-appius-a121d5e",
+          "entity:pl-puteoli-a4488e9",
+          "entity:pl-rhegium-a63bb26",
+          "entity:pl-rome-afc8e7a",
+          "entity:pl-syracuse-a1e3697",
+          "entity:pl-three-taverns-afef438"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-28-p2:refsys:eng-v22:acts.28.11-acts.28.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-28-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-caesar-2",
+          "entity:p-jacob-1",
+          "entity:p-moses-1",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-rome-afc8e7a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-28-p3:refsys:eng-v22:acts.28.16-acts.28.31",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-3-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-john-2",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-beautiful-gate-a5c37fd",
+          "entity:pl-nazareth-af5884f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-3-p1:refsys:eng-v22:acts.3.1-acts.3.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-3-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-john-2",
+          "entity:p-moses-1",
+          "entity:p-pilate-1",
+          "entity:p-samuel-2",
+          "entity:p-simon-1",
+          "entity:p-solomon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-solomon-s-portico-a47c817"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-3-p2:refsys:eng-v22:acts.3.11-acts.3.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-4-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-alexander-2",
+          "entity:p-annas-1",
+          "entity:p-caiaphas-1",
+          "entity:p-john-4",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-nazareth-af5884f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-4-p1:refsys:eng-v22:acts.4.1-acts.4.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-4-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-john-2",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-4-p2:refsys:eng-v22:acts.4.13-acts.4.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-4-p3",
+        "event_type": "prayer",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-herod-2",
+          "entity:p-pilate-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-4-p3:refsys:eng-v22:acts.4.23-acts.4.31",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-4-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joseph-12"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cyprus-a2e7601"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-4-p4:refsys:eng-v22:acts.4.32-acts.4.37",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-5-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ananias-1",
+          "entity:p-sapphira-1",
+          "entity:p-satan-1",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-5-p1:refsys:eng-v22:acts.5.1-acts.5.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-5-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-simon-1",
+          "entity:p-solomon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-solomon-s-portico-a47c817"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-5-p2:refsys:eng-v22:acts.5.12-acts.5.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-5-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-5-p4:refsys:eng-v22:acts.5.24-acts.5.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-5-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-gamaliel-2",
+          "entity:p-judas-3",
+          "entity:p-theudas-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-galilee-1-a9cf1e8"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-5-p5:refsys:eng-v22:acts.5.33-acts.5.42",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-6-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-nicanor-1",
+          "entity:p-nicolas-1",
+          "entity:p-parmenas-1",
+          "entity:p-philip-3",
+          "entity:p-prochorus-1",
+          "entity:p-stephen-1",
+          "entity:p-timon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-antioch-1-ae41ab4",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-6-p1:refsys:eng-v22:acts.6.1-acts.6.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-6-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-moses-1",
+          "entity:p-stephen-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-alexandria-aee7248",
+          "entity:pl-asia-a197f19",
+          "entity:pl-cilicia-ad63819",
+          "entity:pl-cyrene-a81cdb5",
+          "entity:pl-nazareth-af5884f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-6-p2:refsys:eng-v22:acts.6.8-acts.6.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-isaac-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-haran-a6d9af3",
+          "entity:pl-mesopotamia-a43f60f"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p1:refsys:eng-v22:acts.7.1-acts.7.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-joseph-1",
+          "entity:p-pharaoh-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-canaan-a581f0c",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p2:refsys:eng-v22:acts.7.9-acts.7.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-hamor-1",
+          "entity:p-jacob-1",
+          "entity:p-joseph-1",
+          "entity:p-pharaoh-3"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca",
+          "entity:pl-nile-a012705",
+          "entity:pl-shechem-adf74d4"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p3:refsys:eng-v22:acts.7.15-acts.7.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p4",
+        "event_type": "birth",
+        "participant_entity_keys": [
+          "entity:p-moses-1",
+          "entity:p-pharaoh-3"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p4:refsys:eng-v22:acts.7.20-acts.7.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-midian-acc6d8e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p5:refsys:eng-v22:acts.7.23-acts.7.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca",
+          "entity:pl-mount-sinai-abfba2a",
+          "entity:pl-red-sea-1-a3d18b2"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p6:refsys:eng-v22:acts.7.30-acts.7.38",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p7",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aaron-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p7:refsys:eng-v22:acts.7.39-acts.7.43",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p8",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-joshua-1",
+          "entity:p-moses-1",
+          "entity:p-solomon-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p8:refsys:eng-v22:acts.7.44-acts.7.53",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-7-p9",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-stephen-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-7-p9:refsys:eng-v22:acts.7.54-acts.7.60",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-8-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-stephen-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-samaria-2-a282dce"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-8-p1:refsys:eng-v22:acts.8.1-acts.8.3",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-8-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-philip-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-samaria-2-a282dce"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-8-p2:refsys:eng-v22:acts.8.4-acts.8.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-8-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-john-2",
+          "entity:p-philip-1",
+          "entity:p-simon-1",
+          "entity:p-simon-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-samaria-2-a282dce"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-8-p3:refsys:eng-v22:acts.8.9-acts.8.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-8-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-candace-1",
+          "entity:p-isaiah-1",
+          "entity:p-philip-1",
+          "entity:p-the-ethiopian-eunuch-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-ashdod-a30c937",
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-ethiopia-ab45bd3",
+          "entity:pl-gaza-aa8edd2",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-8-p4:refsys:eng-v22:acts.8.26-acts.8.40",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p1:refsys:eng-v22:acts.9.1-acts.9.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ananias-2",
+          "entity:p-judas-4",
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-straight-street-af23dbb",
+          "entity:pl-tarsus-a666ea0"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p2:refsys:eng-v22:acts.9.10-acts.9.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p3:refsys:eng-v22:acts.9.20-acts.9.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p4:refsys:eng-v22:acts.9.23-acts.9.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joseph-12"
+        ],
+        "place_entity_keys": [
+          "entity:pl-caesarea-a58735e",
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-tarsus-a666ea0"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p5:refsys:eng-v22:acts.9.26-acts.9.30",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-aeneas-1",
+          "entity:p-simon-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-galilee-1-a9cf1e8",
+          "entity:pl-judea-1-a149f13",
+          "entity:pl-lod-a2c5cc7",
+          "entity:pl-samaria-2-a282dce",
+          "entity:pl-sharon-1-a83fd43"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p6:refsys:eng-v22:acts.9.31-acts.9.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-acts-9-p7",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-simon-1",
+          "entity:p-simon-9",
+          "entity:p-tabitha-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-joppa-ae023a9",
+          "entity:pl-lod-a2c5cc7"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-acts-9-p7:refsys:eng-v22:acts.9.36-acts.9.43",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-achaia-aef4242",
@@ -14459,15 +16984,6 @@
         "relevance_key": "relevance:wb-acts-13-p-samuel-2",
         "scope_key": "scope:wb-acts-13:refsys:eng-v22:acts.13.1-acts.13.52",
         "entity_key": "entity:p-samuel-2",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-acts-13-p-kish-1",
-        "scope_key": "scope:wb-acts-13:refsys:eng-v22:acts.13.1-acts.13.52",
-        "entity_key": "entity:p-kish-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -18474,1357 +20990,1356 @@
       {
         "candidate_key": "candidate:wb:p-abram-1",
         "canonical_entity_key": "entity:p-abram-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-isaac-1",
         "canonical_entity_key": "entity:p-isaac-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joseph-1",
         "canonical_entity_key": "entity:p-joseph-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hamor-1",
         "canonical_entity_key": "entity:p-hamor-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-benjamin-1",
         "canonical_entity_key": "entity:p-benjamin-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pharaoh-2",
         "canonical_entity_key": "entity:p-pharaoh-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pharaoh-3",
         "canonical_entity_key": "entity:p-pharaoh-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-moses-1",
         "canonical_entity_key": "entity:p-moses-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aaron-1",
         "canonical_entity_key": "entity:p-aaron-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joshua-1",
         "canonical_entity_key": "entity:p-joshua-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jesse-1",
         "canonical_entity_key": "entity:p-jesse-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-david-1",
         "canonical_entity_key": "entity:p-david-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-samuel-2",
         "canonical_entity_key": "entity:p-samuel-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-kish-1",
-        "canonical_entity_key": "entity:p-kish-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "unresolved",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-saul-1",
         "canonical_entity_key": "entity:p-saul-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-solomon-1",
         "canonical_entity_key": "entity:p-solomon-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-isaiah-1",
         "canonical_entity_key": "entity:p-isaiah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-satan-1",
         "canonical_entity_key": "entity:p-satan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joel-11",
         "canonical_entity_key": "entity:p-joel-11",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-mary-1",
         "canonical_entity_key": "entity:p-mary-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-john-1",
         "canonical_entity_key": "entity:p-john-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-simon-1",
         "canonical_entity_key": "entity:p-simon-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-andrew-1",
         "canonical_entity_key": "entity:p-andrew-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-james-1",
         "canonical_entity_key": "entity:p-james-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-john-2",
         "canonical_entity_key": "entity:p-john-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-matthew-1",
         "canonical_entity_key": "entity:p-matthew-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-philip-1",
         "canonical_entity_key": "entity:p-philip-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-bartholomew-1",
         "canonical_entity_key": "entity:p-bartholomew-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-thomas-1",
         "canonical_entity_key": "entity:p-thomas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-james-2",
         "canonical_entity_key": "entity:p-james-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-alphaeus-1",
         "canonical_entity_key": "entity:p-alphaeus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-thaddaeus-1",
         "canonical_entity_key": "entity:p-thaddaeus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-simon-2",
         "canonical_entity_key": "entity:p-simon-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-judas-1",
         "canonical_entity_key": "entity:p-judas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-herod-2",
         "canonical_entity_key": "entity:p-herod-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-caiaphas-1",
         "canonical_entity_key": "entity:p-caiaphas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pilate-1",
         "canonical_entity_key": "entity:p-pilate-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-theophilus-1",
         "canonical_entity_key": "entity:p-theophilus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-annas-1",
         "canonical_entity_key": "entity:p-annas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-james-4",
         "canonical_entity_key": "entity:p-james-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joseph-11",
         "canonical_entity_key": "entity:p-joseph-11",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-matthias-1",
         "canonical_entity_key": "entity:p-matthias-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-john-4",
         "canonical_entity_key": "entity:p-john-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-alexander-2",
         "canonical_entity_key": "entity:p-alexander-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joseph-12",
         "canonical_entity_key": "entity:p-joseph-12",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ananias-1",
         "canonical_entity_key": "entity:p-ananias-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-sapphira-1",
         "canonical_entity_key": "entity:p-sapphira-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-gamaliel-2",
         "canonical_entity_key": "entity:p-gamaliel-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-theudas-1",
         "canonical_entity_key": "entity:p-theudas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-judas-3",
         "canonical_entity_key": "entity:p-judas-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-stephen-1",
         "canonical_entity_key": "entity:p-stephen-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-philip-3",
         "canonical_entity_key": "entity:p-philip-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-prochorus-1",
         "canonical_entity_key": "entity:p-prochorus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-nicanor-1",
         "canonical_entity_key": "entity:p-nicanor-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-timon-1",
         "canonical_entity_key": "entity:p-timon-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-parmenas-1",
         "canonical_entity_key": "entity:p-parmenas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-nicolas-1",
         "canonical_entity_key": "entity:p-nicolas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-saul-2",
         "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-simon-8",
         "canonical_entity_key": "entity:p-simon-8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-the-ethiopian-eunuch-1",
         "canonical_entity_key": "entity:p-the-ethiopian-eunuch-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-candace-1",
         "canonical_entity_key": "entity:p-candace-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ananias-2",
         "canonical_entity_key": "entity:p-ananias-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-judas-4",
         "canonical_entity_key": "entity:p-judas-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aeneas-1",
         "canonical_entity_key": "entity:p-aeneas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tabitha-1",
         "canonical_entity_key": "entity:p-tabitha-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-simon-9",
         "canonical_entity_key": "entity:p-simon-9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-cornelius-1",
         "canonical_entity_key": "entity:p-cornelius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-agabus-1",
         "canonical_entity_key": "entity:p-agabus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-claudius-1",
         "canonical_entity_key": "entity:p-claudius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-herod-3",
         "canonical_entity_key": "entity:p-herod-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-mary-5",
         "canonical_entity_key": "entity:p-mary-5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-john-5",
         "canonical_entity_key": "entity:p-john-5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-rhoda-1",
         "canonical_entity_key": "entity:p-rhoda-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-blastus-1",
         "canonical_entity_key": "entity:p-blastus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-simeon-4",
         "canonical_entity_key": "entity:p-simeon-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-lucius-1",
         "canonical_entity_key": "entity:p-lucius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-manaen-1",
         "canonical_entity_key": "entity:p-manaen-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-bar-jesus-1",
         "canonical_entity_key": "entity:p-bar-jesus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-sergius-1",
         "canonical_entity_key": "entity:p-sergius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-judas-5",
         "canonical_entity_key": "entity:p-judas-5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-silas-1",
         "canonical_entity_key": "entity:p-silas-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-timothy-1",
         "canonical_entity_key": "entity:p-timothy-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-lydia-1",
         "canonical_entity_key": "entity:p-lydia-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jason-1",
         "canonical_entity_key": "entity:p-jason-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-dionysius-1",
         "canonical_entity_key": "entity:p-dionysius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-damaris-1",
         "canonical_entity_key": "entity:p-damaris-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aquila-1",
         "canonical_entity_key": "entity:p-aquila-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-priscilla-1",
         "canonical_entity_key": "entity:p-priscilla-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-titius-1",
         "canonical_entity_key": "entity:p-titius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-crispus-1",
         "canonical_entity_key": "entity:p-crispus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-gallio-1",
         "canonical_entity_key": "entity:p-gallio-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-apollos-1",
         "canonical_entity_key": "entity:p-apollos-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tyrannus-1",
         "canonical_entity_key": "entity:p-tyrannus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-sceva-1",
         "canonical_entity_key": "entity:p-sceva-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-erastus-1",
         "canonical_entity_key": "entity:p-erastus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-demetrius-1",
         "canonical_entity_key": "entity:p-demetrius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-gaius-1",
         "canonical_entity_key": "entity:p-gaius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-aristarchus-1",
         "canonical_entity_key": "entity:p-aristarchus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-alexander-3",
         "canonical_entity_key": "entity:p-alexander-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-sopater-1",
         "canonical_entity_key": "entity:p-sopater-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pyrrhus-1",
         "canonical_entity_key": "entity:p-pyrrhus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-secundus-1",
         "canonical_entity_key": "entity:p-secundus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-gaius-2",
         "canonical_entity_key": "entity:p-gaius-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tychicus-1",
         "canonical_entity_key": "entity:p-tychicus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-trophimus-1",
         "canonical_entity_key": "entity:p-trophimus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-eutychus-1",
         "canonical_entity_key": "entity:p-eutychus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-mnason-1",
         "canonical_entity_key": "entity:p-mnason-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ananias-3",
         "canonical_entity_key": "entity:p-ananias-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-felix-1",
         "canonical_entity_key": "entity:p-felix-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-claudius-2",
         "canonical_entity_key": "entity:p-claudius-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tertullus-1",
         "canonical_entity_key": "entity:p-tertullus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-drusilla-1",
         "canonical_entity_key": "entity:p-drusilla-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-porcius-1",
         "canonical_entity_key": "entity:p-porcius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-caesar-2",
         "canonical_entity_key": "entity:p-caesar-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-agrippa-1",
         "canonical_entity_key": "entity:p-agrippa-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-bernice-1",
         "canonical_entity_key": "entity:p-bernice-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-julius-1",
         "canonical_entity_key": "entity:p-julius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-publius-1",
         "canonical_entity_key": "entity:p-publius-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-achaia-aef4242",
         "canonical_entity_key": "entity:pl-achaia-aef4242",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-adramyttium-a184f3a",
         "canonical_entity_key": "entity:pl-adramyttium-a184f3a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-adriatic-sea-adc77fb",
         "canonical_entity_key": "entity:pl-adriatic-sea-adc77fb",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-akeldama-a040ba5",
         "canonical_entity_key": "entity:pl-akeldama-a040ba5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-alexandria-aee7248",
         "canonical_entity_key": "entity:pl-alexandria-aee7248",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-amphipolis-a4bdea7",
         "canonical_entity_key": "entity:pl-amphipolis-a4bdea7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-antioch-1-ae41ab4",
         "canonical_entity_key": "entity:pl-antioch-1-ae41ab4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-antioch-2-a6c704a",
         "canonical_entity_key": "entity:pl-antioch-2-a6c704a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-aphek-2-a7b2e63",
         "canonical_entity_key": "entity:pl-aphek-2-a7b2e63",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-apollonia-ab20df9",
         "canonical_entity_key": "entity:pl-apollonia-ab20df9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-areopagus-a815d89",
         "canonical_entity_key": "entity:pl-areopagus-a815d89",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ashdod-a30c937",
         "canonical_entity_key": "entity:pl-ashdod-a30c937",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-asia-a197f19",
         "canonical_entity_key": "entity:pl-asia-a197f19",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-assos-a0a2ca7",
         "canonical_entity_key": "entity:pl-assos-a0a2ca7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-athens-a1fe6e7",
         "canonical_entity_key": "entity:pl-athens-a1fe6e7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-attalia-ac744c1",
         "canonical_entity_key": "entity:pl-attalia-ac744c1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-babylon-1-a217d18",
         "canonical_entity_key": "entity:pl-babylon-1-a217d18",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-beautiful-gate-a5c37fd",
         "canonical_entity_key": "entity:pl-beautiful-gate-a5c37fd",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-berea-a62fe31",
         "canonical_entity_key": "entity:pl-berea-a62fe31",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-bithynia-a5c0cb0",
         "canonical_entity_key": "entity:pl-bithynia-a5c0cb0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-caesarea-a58735e",
         "canonical_entity_key": "entity:pl-caesarea-a58735e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-canaan-a581f0c",
         "canonical_entity_key": "entity:pl-canaan-a581f0c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cappadocia-a33fbde",
         "canonical_entity_key": "entity:pl-cappadocia-a33fbde",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cauda-aca2b0a",
         "canonical_entity_key": "entity:pl-cauda-aca2b0a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cenchreae-aa31dd3",
         "canonical_entity_key": "entity:pl-cenchreae-aa31dd3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
         "canonical_entity_key": "entity:pl-chaldea-a32a4f8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-chios-a4c2c75",
         "canonical_entity_key": "entity:pl-chios-a4c2c75",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cilicia-ad63819",
         "canonical_entity_key": "entity:pl-cilicia-ad63819",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cnidus-ab793ce",
         "canonical_entity_key": "entity:pl-cnidus-ab793ce",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-corinth-a6f437a",
         "canonical_entity_key": "entity:pl-corinth-a6f437a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cos-a398e5d",
         "canonical_entity_key": "entity:pl-cos-a398e5d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-crete-a26aa94",
         "canonical_entity_key": "entity:pl-crete-a26aa94",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cyprus-a2e7601",
         "canonical_entity_key": "entity:pl-cyprus-a2e7601",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cyrene-a81cdb5",
         "canonical_entity_key": "entity:pl-cyrene-a81cdb5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-damascus-a69c1d4",
         "canonical_entity_key": "entity:pl-damascus-a69c1d4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-derbe-aa401a9",
         "canonical_entity_key": "entity:pl-derbe-aa401a9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
         "canonical_entity_key": "entity:pl-ephesus-a5feb15",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ethiopia-ab45bd3",
         "canonical_entity_key": "entity:pl-ethiopia-ab45bd3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-fair-havens-aae626a",
         "canonical_entity_key": "entity:pl-fair-havens-aae626a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-forum-of-appius-a121d5e",
         "canonical_entity_key": "entity:pl-forum-of-appius-a121d5e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-galatia-a0f440a",
         "canonical_entity_key": "entity:pl-galatia-a0f440a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-galilee-1-a9cf1e8",
         "canonical_entity_key": "entity:pl-galilee-1-a9cf1e8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-gaza-aa8edd2",
         "canonical_entity_key": "entity:pl-gaza-aa8edd2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-greece-a4492a0",
         "canonical_entity_key": "entity:pl-greece-a4492a0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-haran-a6d9af3",
         "canonical_entity_key": "entity:pl-haran-a6d9af3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-iconium-ae425aa",
         "canonical_entity_key": "entity:pl-iconium-ae425aa",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-italy-a7184a7",
         "canonical_entity_key": "entity:pl-italy-a7184a7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
         "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-joppa-ae023a9",
         "canonical_entity_key": "entity:pl-joppa-ae023a9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-judea-1-a149f13",
         "canonical_entity_key": "entity:pl-judea-1-a149f13",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lasea-a56788c",
         "canonical_entity_key": "entity:pl-lasea-a56788c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-libya-ac12af9",
         "canonical_entity_key": "entity:pl-libya-ac12af9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lod-a2c5cc7",
         "canonical_entity_key": "entity:pl-lod-a2c5cc7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lycaonia-a3668b6",
         "canonical_entity_key": "entity:pl-lycaonia-a3668b6",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lycia-a19fd03",
         "canonical_entity_key": "entity:pl-lycia-a19fd03",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lystra-af0719d",
         "canonical_entity_key": "entity:pl-lystra-af0719d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
         "canonical_entity_key": "entity:pl-macedonia-a69e1b8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-malta-a57835d",
         "canonical_entity_key": "entity:pl-malta-a57835d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mesopotamia-a43f60f",
         "canonical_entity_key": "entity:pl-mesopotamia-a43f60f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-midian-acc6d8e",
         "canonical_entity_key": "entity:pl-midian-acc6d8e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-miletus-a55027d",
         "canonical_entity_key": "entity:pl-miletus-a55027d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mitylene-a33910d",
         "canonical_entity_key": "entity:pl-mitylene-a33910d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-of-olives-ac2c4c5",
         "canonical_entity_key": "entity:pl-mount-of-olives-ac2c4c5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-sinai-abfba2a",
         "canonical_entity_key": "entity:pl-mount-sinai-abfba2a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-myra-aa4b3e2",
         "canonical_entity_key": "entity:pl-myra-aa4b3e2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mysia-a2d9bc8",
         "canonical_entity_key": "entity:pl-mysia-a2d9bc8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-nazareth-af5884f",
         "canonical_entity_key": "entity:pl-nazareth-af5884f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-neapolis-a6a7150",
         "canonical_entity_key": "entity:pl-neapolis-a6a7150",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-nile-a012705",
         "canonical_entity_key": "entity:pl-nile-a012705",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pamphylia-aa95188",
         "canonical_entity_key": "entity:pl-pamphylia-aa95188",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-paphos-a314765",
         "canonical_entity_key": "entity:pl-paphos-a314765",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-patara-ade301b",
         "canonical_entity_key": "entity:pl-patara-ade301b",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-perga-aff04b8",
         "canonical_entity_key": "entity:pl-perga-aff04b8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-philippi-a49e1d0",
         "canonical_entity_key": "entity:pl-philippi-a49e1d0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-phoenicia-a33d53e",
         "canonical_entity_key": "entity:pl-phoenicia-a33d53e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-phoenix-a9ee958",
         "canonical_entity_key": "entity:pl-phoenix-a9ee958",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-phrygia-ab8ae56",
         "canonical_entity_key": "entity:pl-phrygia-ab8ae56",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pisidia-a55aded",
         "canonical_entity_key": "entity:pl-pisidia-a55aded",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pontus-a83a43e",
         "canonical_entity_key": "entity:pl-pontus-a83a43e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ptolemais-abc2af0",
         "canonical_entity_key": "entity:pl-ptolemais-abc2af0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-puteoli-a4488e9",
         "canonical_entity_key": "entity:pl-puteoli-a4488e9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-red-sea-1-a3d18b2",
         "canonical_entity_key": "entity:pl-red-sea-1-a3d18b2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rhegium-a63bb26",
         "canonical_entity_key": "entity:pl-rhegium-a63bb26",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rhodes-1-a4218ee",
         "canonical_entity_key": "entity:pl-rhodes-1-a4218ee",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rome-afc8e7a",
         "canonical_entity_key": "entity:pl-rome-afc8e7a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-salamis-afa863b",
         "canonical_entity_key": "entity:pl-salamis-afa863b",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-salmone-a1c44ea",
         "canonical_entity_key": "entity:pl-salmone-a1c44ea",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-samaria-2-a282dce",
         "canonical_entity_key": "entity:pl-samaria-2-a282dce",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-samos-acf6ec0",
         "canonical_entity_key": "entity:pl-samos-acf6ec0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-samothrace-a68750d",
         "canonical_entity_key": "entity:pl-samothrace-a68750d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-seleucia-a6d306d",
         "canonical_entity_key": "entity:pl-seleucia-a6d306d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sharon-1-a83fd43",
         "canonical_entity_key": "entity:pl-sharon-1-a83fd43",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-shechem-adf74d4",
         "canonical_entity_key": "entity:pl-shechem-adf74d4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sidon-a98e4d7",
         "canonical_entity_key": "entity:pl-sidon-a98e4d7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-solomon-s-portico-a47c817",
         "canonical_entity_key": "entity:pl-solomon-s-portico-a47c817",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-straight-street-af23dbb",
         "canonical_entity_key": "entity:pl-straight-street-af23dbb",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-syracuse-a1e3697",
         "canonical_entity_key": "entity:pl-syracuse-a1e3697",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-syria-2-a890adf",
         "canonical_entity_key": "entity:pl-syria-2-a890adf",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-syrtis-ad36371",
         "canonical_entity_key": "entity:pl-syrtis-ad36371",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tarsus-a666ea0",
         "canonical_entity_key": "entity:pl-tarsus-a666ea0",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-thessalonica-afa9d8e",
         "canonical_entity_key": "entity:pl-thessalonica-afa9d8e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-three-taverns-afef438",
         "canonical_entity_key": "entity:pl-three-taverns-afef438",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-thyatira-a94b661",
         "canonical_entity_key": "entity:pl-thyatira-a94b661",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-troas-a91c509",
         "canonical_entity_key": "entity:pl-troas-a91c509",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-trogyllium-a6f61d3",
         "canonical_entity_key": "entity:pl-trogyllium-a6f61d3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tyre-a160272",
         "canonical_entity_key": "entity:pl-tyre-a160272",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -22817,7 +25332,6 @@
           ],
           "record_keys": [
             "attestation:wb-p-benjamin-1-13-21",
-            "attestation:wb-p-kish-1-13-21",
             "attestation:wb-p-saul-1-13-21"
           ],
           "blocker_question_keys": []
@@ -26138,7 +28652,15 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+    },
+    {
+      "code": "ambiguous-mention-referents-dropped",
+      "note": "6 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
   ]
 }

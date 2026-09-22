@@ -8986,8 +8986,1999 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-azzur-3-father-p-jaazaniah-4",
+        "subject_entity_key": "entity:p-azzur-3",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-jaazaniah-4",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-11:refsys:eng-v22:ezek.11.1-ezek.11.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-benaiah-11-father-p-pelatiah-4",
+        "subject_entity_key": "entity:p-benaiah-11",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-pelatiah-4",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-11:refsys:eng-v22:ezek.11.1-ezek.11.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-buzi-1-father-p-ezekiel-1",
+        "subject_entity_key": "entity:p-buzi-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-ezekiel-1",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-1:refsys:eng-v22:ezek.1.1-ezek.1.28"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-ezekiel-1-son-p-buzi-1",
+        "subject_entity_key": "entity:p-ezekiel-1",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-buzi-1",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-1:refsys:eng-v22:ezek.1.1-ezek.1.28"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-jaazaniah-3-son-p-shaphan-3",
+        "subject_entity_key": "entity:p-jaazaniah-3",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-shaphan-3",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-8:refsys:eng-v22:ezek.8.1-ezek.8.18"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-jaazaniah-4-son-p-azzur-3",
+        "subject_entity_key": "entity:p-jaazaniah-4",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-azzur-3",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-11:refsys:eng-v22:ezek.11.1-ezek.11.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-pelatiah-4-son-p-benaiah-11",
+        "subject_entity_key": "entity:p-pelatiah-4",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-benaiah-11",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-11:refsys:eng-v22:ezek.11.1-ezek.11.25"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-shaphan-3-father-p-jaazaniah-3",
+        "subject_entity_key": "entity:p-shaphan-3",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-jaazaniah-3",
+        "applicable_scope_keys": [
+          "scope:wb-ezek-8:refsys:eng-v22:ezek.8.1-ezek.8.18"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-ezek-1-p1",
+        "event_type": "vision",
+        "participant_entity_keys": [
+          "entity:p-buzi-1",
+          "entity:p-ezekiel-1",
+          "entity:p-jehoiachin-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-chebar-a3d2f0a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-1-p1:refsys:eng-v22:ezek.1.1-ezek.1.3",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-10-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-chebar-a3d2f0a",
+          "entity:pl-tarshish-1-a5f43dd"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-10-p1:refsys:eng-v22:ezek.10.1-ezek.10.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-11-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-azzur-3",
+          "entity:p-benaiah-11",
+          "entity:p-ezekiel-1",
+          "entity:p-jaazaniah-4",
+          "entity:p-pelatiah-4"
+        ],
+        "place_entity_keys": [
+          "entity:pl-east-gate-a4e8401",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-11-p1:refsys:eng-v22:ezek.11.1-ezek.11.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-11-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-benaiah-11",
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1",
+          "entity:p-pelatiah-4"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-11-p2:refsys:eng-v22:ezek.11.13-ezek.11.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-11-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-11-p3:refsys:eng-v22:ezek.11.22-ezek.11.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-12-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-12-p1:refsys:eng-v22:ezek.12.1-ezek.12.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-12-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-12-p2:refsys:eng-v22:ezek.12.21-ezek.12.28",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-13-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-13-p1:refsys:eng-v22:ezek.13.1-ezek.13.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-14-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-14-p1:refsys:eng-v22:ezek.14.1-ezek.14.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-14-p2",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-daniel-2",
+          "entity:p-ezekiel-1",
+          "entity:p-job-1",
+          "entity:p-noah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-14-p2:refsys:eng-v22:ezek.14.12-ezek.14.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-15-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-15-p1:refsys:eng-v22:ezek.15.1-ezek.15.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-16-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-canaan-a581f0c",
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-16-p1:refsys:eng-v22:ezek.16.1-ezek.16.34",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-16-p2",
+        "event_type": "judgment",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-philistia-ac71e65",
+          "entity:pl-samaria-1-a041bb3",
+          "entity:pl-sodom-a0aa664",
+          "entity:pl-syria-1-a159fa4"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-16-p2:refsys:eng-v22:ezek.16.35-ezek.16.58",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-16-p3",
+        "event_type": "covenant",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-samaria-1-a041bb3",
+          "entity:pl-sodom-a0aa664"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-16-p3:refsys:eng-v22:ezek.16.59-ezek.16.63",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-17-p1",
+        "event_type": "teaching",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-canaan-a581f0c",
+          "entity:pl-lebanon-a730058"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-17-p1:refsys:eng-v22:ezek.17.1-ezek.17.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-17-p2",
+        "event_type": "teaching",
+        "participant_entity_keys": [
+          "entity:p-nebuchadnezzar-1",
+          "entity:p-pharaoh-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-17-p2:refsys:eng-v22:ezek.17.11-ezek.17.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-18-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-18-p1:refsys:eng-v22:ezek.18.1-ezek.18.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-19-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-nebuchadnezzar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-19-p1:refsys:eng-v22:ezek.19.1-ezek.19.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-2-p1:refsys:eng-v22:ezek.2.1-ezek.2.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-20-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-20-p1:refsys:eng-v22:ezek.20.1-ezek.20.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-20-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-20-p2:refsys:eng-v22:ezek.20.10-ezek.20.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-20-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-bamah-a849ca2"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-20-p3:refsys:eng-v22:ezek.20.27-ezek.20.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-20-p4",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-20-p4:refsys:eng-v22:ezek.20.33-ezek.20.44",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-20-p5",
+        "event_type": "prophecy",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-negeb-a1cb244"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-20-p5:refsys:eng-v22:ezek.20.45-ezek.20.49",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-21-p1",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-ben-ammi-1",
+          "entity:p-ezekiel-1",
+          "entity:p-mattaniah-1",
+          "entity:p-nebuchadnezzar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-ammon-a6046fa",
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-rabbah-1-ae067b5"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-21-p1:refsys:eng-v22:ezek.21.1-ezek.21.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-22-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-22-p1:refsys:eng-v22:ezek.22.1-ezek.22.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-22-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-22-p2:refsys:eng-v22:ezek.22.17-ezek.22.22",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-22-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-22-p3:refsys:eng-v22:ezek.22.23-ezek.22.31",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-23-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-assyria-a3d1321",
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-samaria-1-a041bb3"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-23-p1:refsys:eng-v22:ezek.23.1-ezek.23.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-23-p2",
+        "event_type": "judgment",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-chaldea-a32a4f8",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-koa-afe6972",
+          "entity:pl-pekod-a4b9865",
+          "entity:pl-samaria-1-a041bb3",
+          "entity:pl-shoa-aa3bc1e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-23-p2:refsys:eng-v22:ezek.23.22-ezek.23.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-23-p3",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-23-p3:refsys:eng-v22:ezek.23.36-ezek.23.49",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-24-p1",
+        "event_type": "teaching",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-nebuchadnezzar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-24-p1:refsys:eng-v22:ezek.24.1-ezek.24.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-24-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-24-p2:refsys:eng-v22:ezek.24.15-ezek.24.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-25-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ben-ammi-1",
+          "entity:p-ezekiel-1",
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-ammon-a6046fa",
+          "entity:pl-east-ab0b2dd",
+          "entity:pl-rabbah-1-ae067b5"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-25-p1:refsys:eng-v22:ezek.25.1-ezek.25.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-25-p2",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ben-ammi-1",
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-ammon-a6046fa",
+          "entity:pl-baal-meon-a76f7b7",
+          "entity:pl-beth-jeshimoth-a30f37b",
+          "entity:pl-east-ab0b2dd",
+          "entity:pl-kiriathaim-1-ad54201",
+          "entity:pl-moab-1-aa0b1d6",
+          "entity:pl-mount-seir-1-ae981db"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-25-p2:refsys:eng-v22:ezek.25.8-ezek.25.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-25-p3",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-dedan-a3a2a75",
+          "entity:pl-edom-a2735ff",
+          "entity:pl-teman-a831506"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-25-p3:refsys:eng-v22:ezek.25.12-ezek.25.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-25-p4",
+        "event_type": "prophecy",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-philistia-ac71e65"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-25-p4:refsys:eng-v22:ezek.25.15-ezek.25.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-26-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-nebuchadnezzar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-tyre-a160272"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-26-p1:refsys:eng-v22:ezek.26.1-ezek.26.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-27-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-javan-1",
+          "entity:p-meshech-1",
+          "entity:p-tubal-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-arabia-1-a59f6f5",
+          "entity:pl-arvad-afbf1b5",
+          "entity:pl-asshur-a874951",
+          "entity:pl-bashan-aa7a40a",
+          "entity:pl-beth-togarmah-a263e60",
+          "entity:pl-canneh-ae83efa",
+          "entity:pl-chilmad-a961693",
+          "entity:pl-cyprus-a2e7601",
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-dan-a513646",
+          "entity:pl-dedan-a3a2a75",
+          "entity:pl-eden-2-a7409b9",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-elishah-a71d65f",
+          "entity:pl-gamad-a764256",
+          "entity:pl-gebal-1-a9a2541",
+          "entity:pl-haran-a6d9af3",
+          "entity:pl-helbon-a8a8e54",
+          "entity:pl-helech-ab5f357",
+          "entity:pl-javan-a116c5c",
+          "entity:pl-kedar-a68d1a9",
+          "entity:pl-lebanon-a730058",
+          "entity:pl-lud-1-a38776a",
+          "entity:pl-meshech-a5f9092",
+          "entity:pl-minnith-a222545",
+          "entity:pl-persia-ab9696f",
+          "entity:pl-put-ad0520f",
+          "entity:pl-raamah-a57bb2e",
+          "entity:pl-rhodes-2-a8c207b",
+          "entity:pl-sahar-af9e903",
+          "entity:pl-senir-ad27e17",
+          "entity:pl-sheba-1-a81ab85",
+          "entity:pl-sidon-a98e4d7",
+          "entity:pl-syria-1-a159fa4",
+          "entity:pl-tarshish-1-a5f43dd",
+          "entity:pl-tubal-aaaaead",
+          "entity:pl-tyre-a160272",
+          "entity:pl-uzal-a217cc5"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-27-p1:refsys:eng-v22:ezek.27.1-ezek.27.36",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-28-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-daniel-2",
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-tyre-a160272"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-28-p1:refsys:eng-v22:ezek.28.1-ezek.28.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-28-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-eden-1-af3daeb",
+          "entity:pl-tyre-a160272"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-28-p2:refsys:eng-v22:ezek.28.11-ezek.28.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-28-p3",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-sidon-a98e4d7"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-28-p3:refsys:eng-v22:ezek.28.20-ezek.28.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-28-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-28-p4:refsys:eng-v22:ezek.28.25-ezek.28.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-29-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1",
+          "entity:p-pharaoh-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-egypt-af301ca",
+          "entity:pl-nile-a012705"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-29-p1:refsys:eng-v22:ezek.29.1-ezek.29.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-29-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-cush-1-ac5a1ec",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-migdol-3-a15973c",
+          "entity:pl-nile-a012705",
+          "entity:pl-pathros-aab30ec",
+          "entity:pl-syene-a8a6a5b"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-29-p2:refsys:eng-v22:ezek.29.8-ezek.29.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-29-p3",
+        "event_type": "battle",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1",
+          "entity:p-nebuchadnezzar-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-tyre-a160272"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-29-p3:refsys:eng-v22:ezek.29.17-ezek.29.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-3-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-chebar-a3d2f0a",
+          "entity:pl-tel-abib-a10147d"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-3-p1:refsys:eng-v22:ezek.3.1-ezek.3.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-3-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-chebar-a3d2f0a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-3-p2:refsys:eng-v22:ezek.3.16-ezek.3.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-30-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-arabia-1-a59f6f5",
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-cush-1-ac5a1ec",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-heliopolis-acd9137",
+          "entity:pl-libya-ac12af9",
+          "entity:pl-lud-2-a359997",
+          "entity:pl-memphis-a8ec269",
+          "entity:pl-migdol-3-a15973c",
+          "entity:pl-nile-a012705",
+          "entity:pl-pathros-aab30ec",
+          "entity:pl-pelusium-aa32a17",
+          "entity:pl-pi-beseth-a2cd991",
+          "entity:pl-put-ad0520f",
+          "entity:pl-syene-a8a6a5b",
+          "entity:pl-tahpanhes-adb008c",
+          "entity:pl-thebes-a9674fc",
+          "entity:pl-zoan-ac31fee"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-30-p1:refsys:eng-v22:ezek.30.1-ezek.30.19",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-30-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-nebuchadnezzar-1",
+          "entity:p-pharaoh-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-30-p2:refsys:eng-v22:ezek.30.20-ezek.30.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-31-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-pharaoh-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-assyria-a3d1321",
+          "entity:pl-eden-1-af3daeb",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-lebanon-a730058"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-31-p1:refsys:eng-v22:ezek.31.1-ezek.31.18",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-32-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-nebuchadnezzar-1",
+          "entity:p-pharaoh-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-babylon-1-a217d18",
+          "entity:pl-egypt-af301ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-32-p1:refsys:eng-v22:ezek.32.1-ezek.32.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-32-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-pharaoh-8"
+        ],
+        "place_entity_keys": [
+          "entity:pl-assyria-a3d1321",
+          "entity:pl-edom-a2735ff",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-elam-a7e3a59",
+          "entity:pl-meshech-a5f9092"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-32-p2:refsys:eng-v22:ezek.32.17-ezek.32.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-33-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-33-p1:refsys:eng-v22:ezek.33.1-ezek.33.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-33-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-33-p2:refsys:eng-v22:ezek.33.10-ezek.33.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-33-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-abram-1",
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-33-p3:refsys:eng-v22:ezek.33.21-ezek.33.33",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-34-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-34-p1:refsys:eng-v22:ezek.34.1-ezek.34.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-34-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-34-p2:refsys:eng-v22:ezek.34.11-ezek.34.24",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-34-p3",
+        "event_type": "covenant",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-34-p3:refsys:eng-v22:ezek.34.25-ezek.34.31",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-35-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-edom-a2735ff",
+          "entity:pl-mount-seir-1-ae981db"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-35-p1:refsys:eng-v22:ezek.35.1-ezek.35.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-36-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-edom-a2735ff"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-36-p1:refsys:eng-v22:ezek.36.1-ezek.36.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-36-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-eden-1-af3daeb",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-36-p2:refsys:eng-v22:ezek.36.16-ezek.36.38",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-37-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-37-p1:refsys:eng-v22:ezek.37.1-ezek.37.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-37-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-david-1",
+          "entity:p-ephraim-1",
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1",
+          "entity:p-joseph-1",
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-37-p2:refsys:eng-v22:ezek.37.15-ezek.37.28",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-38-p1",
+        "event_type": "prophecy",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-gog-2"
+        ],
+        "place_entity_keys": [
+          "entity:pl-beth-togarmah-a263e60",
+          "entity:pl-cush-1-ac5a1ec",
+          "entity:pl-dedan-a3a2a75",
+          "entity:pl-gomer-a80bf37",
+          "entity:pl-magog-ae3d487",
+          "entity:pl-meshech-a5f9092",
+          "entity:pl-persia-ab9696f",
+          "entity:pl-put-ad0520f",
+          "entity:pl-sheba-1-a81ab85",
+          "entity:pl-tarshish-1-a5f43dd",
+          "entity:pl-tubal-aaaaead"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-38-p1:refsys:eng-v22:ezek.38.1-ezek.38.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-39-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-gog-2",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-bashan-aa7a40a",
+          "entity:pl-hamonah-a154d7b",
+          "entity:pl-magog-ae3d487",
+          "entity:pl-meshech-a5f9092",
+          "entity:pl-salt-sea-abed304",
+          "entity:pl-tubal-aaaaead",
+          "entity:pl-valley-of-hamon-gog-a2109c3"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-39-p1:refsys:eng-v22:ezek.39.1-ezek.39.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-39-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-39-p2:refsys:eng-v22:ezek.39.21-ezek.39.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-4-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1",
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-4-p1:refsys:eng-v22:ezek.4.1-ezek.4.8",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-4-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-4-p2:refsys:eng-v22:ezek.4.9-ezek.4.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-40-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-40-p1:refsys:eng-v22:ezek.40.1-ezek.40.4",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-40-p8",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-levi-1",
+          "entity:p-zadok-3"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-40-p8:refsys:eng-v22:ezek.40.44-ezek.40.46",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-41-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-most-holy-place-2-a9acaaf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-41-p1:refsys:eng-v22:ezek.41.1-ezek.41.4",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-41-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-holy-place-2-ab60a74"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-41-p3:refsys:eng-v22:ezek.41.15-ezek.41.26",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-42-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-holy-place-2-ab60a74"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-42-p1:refsys:eng-v22:ezek.42.1-ezek.42.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-43-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-chebar-a3d2f0a",
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-43-p1:refsys:eng-v22:ezek.43.1-ezek.43.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-43-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-zadok-3"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-43-p2:refsys:eng-v22:ezek.43.13-ezek.43.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-44-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-44-p1:refsys:eng-v22:ezek.44.1-ezek.44.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-44-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-most-holy-place-2-a9acaaf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-44-p2:refsys:eng-v22:ezek.44.6-ezek.44.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-44-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-zadok-3"
+        ],
+        "place_entity_keys": [
+          "entity:pl-holy-place-2-ab60a74"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-44-p3:refsys:eng-v22:ezek.44.15-ezek.44.31",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-45-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-most-holy-place-2-a9acaaf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-45-p1:refsys:eng-v22:ezek.45.1-ezek.45.6",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-45-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-45-p4:refsys:eng-v22:ezek.45.13-ezek.45.25",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-47-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-arabah-a2bb5ef",
+          "entity:pl-eneglaim-ad44943",
+          "entity:pl-engedi-a51df0e",
+          "entity:pl-great-sea-aa805fb",
+          "entity:pl-salt-sea-abed304"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-47-p1:refsys:eng-v22:ezek.47.1-ezek.47.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-47-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-joseph-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-berothah-a14b9f1",
+          "entity:pl-brook-of-egypt-a7a59b4",
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-gilead-1-ae73b90",
+          "entity:pl-great-sea-aa805fb",
+          "entity:pl-hamath-1-ac62cbc",
+          "entity:pl-hauran-a0e8903",
+          "entity:pl-hazar-enan-a1ce1b7",
+          "entity:pl-hazer-hatticon-aae18d7",
+          "entity:pl-hethlon-a1ab517",
+          "entity:pl-jordan-ae686c9",
+          "entity:pl-lebo-hamath-a5eb047",
+          "entity:pl-meribah-1-a505743",
+          "entity:pl-negeb-a1cb244",
+          "entity:pl-salt-sea-abed304",
+          "entity:pl-sibraim-ab5d319",
+          "entity:pl-tamar-2-a5947d7",
+          "entity:pl-zedad-aab92ca"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-47-p2:refsys:eng-v22:ezek.47.13-ezek.47.23",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-48-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-dan-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-damascus-a69c1d4",
+          "entity:pl-hamath-1-ac62cbc",
+          "entity:pl-hazar-enan-a1ce1b7",
+          "entity:pl-hethlon-a1ab517",
+          "entity:pl-lebo-hamath-a5eb047"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-48-p1:refsys:eng-v22:ezek.48.1-ezek.48.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-48-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-zadok-3"
+        ],
+        "place_entity_keys": [
+          "entity:pl-most-holy-place-2-a9acaaf"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-48-p2:refsys:eng-v22:ezek.48.8-ezek.48.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-48-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-48-p3:refsys:eng-v22:ezek.48.15-ezek.48.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-48-p5",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-brook-of-egypt-a7a59b4",
+          "entity:pl-great-sea-aa805fb",
+          "entity:pl-meribah-1-a505743",
+          "entity:pl-negeb-a1cb244",
+          "entity:pl-tamar-2-a5947d7"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-48-p5:refsys:eng-v22:ezek.48.23-ezek.48.29",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-48-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-the-lord-is-there-a012194"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-48-p6:refsys:eng-v22:ezek.48.30-ezek.48.35",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-5-p1",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-5-p1:refsys:eng-v22:ezek.5.1-ezek.5.10",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-5-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-5-p2:refsys:eng-v22:ezek.5.11-ezek.5.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-6-p1",
+        "event_type": "judgment",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-6-p1:refsys:eng-v22:ezek.6.1-ezek.6.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-6-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-riblah-1-ab2bde8"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-6-p2:refsys:eng-v22:ezek.6.8-ezek.6.14",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-7-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-7-p1:refsys:eng-v22:ezek.7.1-ezek.7.13",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-7-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-7-p2:refsys:eng-v22:ezek.7.14-ezek.7.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-8-p1",
+        "event_type": "vision",
+        "participant_entity_keys": [
+          "entity:p-ezekiel-1",
+          "entity:p-jaazaniah-3",
+          "entity:p-jacob-1",
+          "entity:p-judah-1",
+          "entity:p-shaphan-3"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-8-p1:refsys:eng-v22:ezek.8.1-ezek.8.18",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-ezek-9-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-ezek-9-p1:refsys:eng-v22:ezek.9.1-ezek.9.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-ammon-a6046fa",
@@ -13161,817 +15152,817 @@
       {
         "candidate_key": "candidate:wb:p-noah-1",
         "canonical_entity_key": "entity:p-noah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-javan-1",
         "canonical_entity_key": "entity:p-javan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-tubal-1",
         "canonical_entity_key": "entity:p-tubal-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-meshech-1",
         "canonical_entity_key": "entity:p-meshech-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-abram-1",
         "canonical_entity_key": "entity:p-abram-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ben-ammi-1",
         "canonical_entity_key": "entity:p-ben-ammi-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-levi-1",
         "canonical_entity_key": "entity:p-levi-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-judah-1",
         "canonical_entity_key": "entity:p-judah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-dan-1",
         "canonical_entity_key": "entity:p-dan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joseph-1",
         "canonical_entity_key": "entity:p-joseph-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ephraim-1",
         "canonical_entity_key": "entity:p-ephraim-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-david-1",
         "canonical_entity_key": "entity:p-david-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-nebuchadnezzar-1",
         "canonical_entity_key": "entity:p-nebuchadnezzar-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jehoiachin-1",
         "canonical_entity_key": "entity:p-jehoiachin-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-mattaniah-1",
         "canonical_entity_key": "entity:p-mattaniah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-zadok-3",
         "canonical_entity_key": "entity:p-zadok-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-job-1",
         "canonical_entity_key": "entity:p-job-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pharaoh-8",
         "canonical_entity_key": "entity:p-pharaoh-8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-ezekiel-1",
         "canonical_entity_key": "entity:p-ezekiel-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-buzi-1",
         "canonical_entity_key": "entity:p-buzi-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jaazaniah-3",
         "canonical_entity_key": "entity:p-jaazaniah-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-shaphan-3",
         "canonical_entity_key": "entity:p-shaphan-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jaazaniah-4",
         "canonical_entity_key": "entity:p-jaazaniah-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-azzur-3",
         "canonical_entity_key": "entity:p-azzur-3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pelatiah-4",
         "canonical_entity_key": "entity:p-pelatiah-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-benaiah-11",
         "canonical_entity_key": "entity:p-benaiah-11",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-daniel-2",
         "canonical_entity_key": "entity:p-daniel-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-gog-2",
         "canonical_entity_key": "entity:p-gog-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ammon-a6046fa",
         "canonical_entity_key": "entity:pl-ammon-a6046fa",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-arabah-a2bb5ef",
         "canonical_entity_key": "entity:pl-arabah-a2bb5ef",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-arabia-1-a59f6f5",
         "canonical_entity_key": "entity:pl-arabia-1-a59f6f5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-arvad-afbf1b5",
         "canonical_entity_key": "entity:pl-arvad-afbf1b5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-asshur-a874951",
         "canonical_entity_key": "entity:pl-asshur-a874951",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-assyria-a3d1321",
         "canonical_entity_key": "entity:pl-assyria-a3d1321",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-baal-meon-a76f7b7",
         "canonical_entity_key": "entity:pl-baal-meon-a76f7b7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-babylon-1-a217d18",
         "canonical_entity_key": "entity:pl-babylon-1-a217d18",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-bamah-a849ca2",
         "canonical_entity_key": "entity:pl-bamah-a849ca2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-bashan-aa7a40a",
         "canonical_entity_key": "entity:pl-bashan-aa7a40a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-berothah-a14b9f1",
         "canonical_entity_key": "entity:pl-berothah-a14b9f1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-beth-jeshimoth-a30f37b",
         "canonical_entity_key": "entity:pl-beth-jeshimoth-a30f37b",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-beth-togarmah-a263e60",
         "canonical_entity_key": "entity:pl-beth-togarmah-a263e60",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-brook-of-egypt-a7a59b4",
         "canonical_entity_key": "entity:pl-brook-of-egypt-a7a59b4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-canaan-a581f0c",
         "canonical_entity_key": "entity:pl-canaan-a581f0c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-canneh-ae83efa",
         "canonical_entity_key": "entity:pl-canneh-ae83efa",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
         "canonical_entity_key": "entity:pl-chaldea-a32a4f8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-chebar-a3d2f0a",
         "canonical_entity_key": "entity:pl-chebar-a3d2f0a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-chilmad-a961693",
         "canonical_entity_key": "entity:pl-chilmad-a961693",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cush-1-ac5a1ec",
         "canonical_entity_key": "entity:pl-cush-1-ac5a1ec",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-cyprus-a2e7601",
         "canonical_entity_key": "entity:pl-cyprus-a2e7601",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-damascus-a69c1d4",
         "canonical_entity_key": "entity:pl-damascus-a69c1d4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-dan-a513646",
         "canonical_entity_key": "entity:pl-dan-a513646",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-dedan-a3a2a75",
         "canonical_entity_key": "entity:pl-dedan-a3a2a75",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-east-ab0b2dd",
         "canonical_entity_key": "entity:pl-east-ab0b2dd",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-east-gate-a4e8401",
         "canonical_entity_key": "entity:pl-east-gate-a4e8401",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-eden-1-af3daeb",
         "canonical_entity_key": "entity:pl-eden-1-af3daeb",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-eden-2-a7409b9",
         "canonical_entity_key": "entity:pl-eden-2-a7409b9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-edom-a2735ff",
         "canonical_entity_key": "entity:pl-edom-a2735ff",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-elam-a7e3a59",
         "canonical_entity_key": "entity:pl-elam-a7e3a59",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-elishah-a71d65f",
         "canonical_entity_key": "entity:pl-elishah-a71d65f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-eneglaim-ad44943",
         "canonical_entity_key": "entity:pl-eneglaim-ad44943",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-engedi-a51df0e",
         "canonical_entity_key": "entity:pl-engedi-a51df0e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-gamad-a764256",
         "canonical_entity_key": "entity:pl-gamad-a764256",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-gebal-1-a9a2541",
         "canonical_entity_key": "entity:pl-gebal-1-a9a2541",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-gilead-1-ae73b90",
         "canonical_entity_key": "entity:pl-gilead-1-ae73b90",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-gomer-a80bf37",
         "canonical_entity_key": "entity:pl-gomer-a80bf37",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-great-sea-aa805fb",
         "canonical_entity_key": "entity:pl-great-sea-aa805fb",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-hamath-1-ac62cbc",
         "canonical_entity_key": "entity:pl-hamath-1-ac62cbc",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-hamonah-a154d7b",
         "canonical_entity_key": "entity:pl-hamonah-a154d7b",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-haran-a6d9af3",
         "canonical_entity_key": "entity:pl-haran-a6d9af3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-hauran-a0e8903",
         "canonical_entity_key": "entity:pl-hauran-a0e8903",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-hazar-enan-a1ce1b7",
         "canonical_entity_key": "entity:pl-hazar-enan-a1ce1b7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-hazer-hatticon-aae18d7",
         "canonical_entity_key": "entity:pl-hazer-hatticon-aae18d7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-helbon-a8a8e54",
         "canonical_entity_key": "entity:pl-helbon-a8a8e54",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-helech-ab5f357",
         "canonical_entity_key": "entity:pl-helech-ab5f357",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-heliopolis-acd9137",
         "canonical_entity_key": "entity:pl-heliopolis-acd9137",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-hethlon-a1ab517",
         "canonical_entity_key": "entity:pl-hethlon-a1ab517",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-holy-place-2-ab60a74",
         "canonical_entity_key": "entity:pl-holy-place-2-ab60a74",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-javan-a116c5c",
         "canonical_entity_key": "entity:pl-javan-a116c5c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
         "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jordan-ae686c9",
         "canonical_entity_key": "entity:pl-jordan-ae686c9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-kedar-a68d1a9",
         "canonical_entity_key": "entity:pl-kedar-a68d1a9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-kiriathaim-1-ad54201",
         "canonical_entity_key": "entity:pl-kiriathaim-1-ad54201",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-koa-afe6972",
         "canonical_entity_key": "entity:pl-koa-afe6972",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lebanon-a730058",
         "canonical_entity_key": "entity:pl-lebanon-a730058",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lebo-hamath-a5eb047",
         "canonical_entity_key": "entity:pl-lebo-hamath-a5eb047",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-libya-ac12af9",
         "canonical_entity_key": "entity:pl-libya-ac12af9",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lud-1-a38776a",
         "canonical_entity_key": "entity:pl-lud-1-a38776a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-lud-2-a359997",
         "canonical_entity_key": "entity:pl-lud-2-a359997",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-magog-ae3d487",
         "canonical_entity_key": "entity:pl-magog-ae3d487",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-memphis-a8ec269",
         "canonical_entity_key": "entity:pl-memphis-a8ec269",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-meribah-1-a505743",
         "canonical_entity_key": "entity:pl-meribah-1-a505743",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-meshech-a5f9092",
         "canonical_entity_key": "entity:pl-meshech-a5f9092",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-migdol-3-a15973c",
         "canonical_entity_key": "entity:pl-migdol-3-a15973c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-minnith-a222545",
         "canonical_entity_key": "entity:pl-minnith-a222545",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-moab-1-aa0b1d6",
         "canonical_entity_key": "entity:pl-moab-1-aa0b1d6",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-most-holy-place-2-a9acaaf",
         "canonical_entity_key": "entity:pl-most-holy-place-2-a9acaaf",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-seir-1-ae981db",
         "canonical_entity_key": "entity:pl-mount-seir-1-ae981db",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-negeb-a1cb244",
         "canonical_entity_key": "entity:pl-negeb-a1cb244",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-nile-a012705",
         "canonical_entity_key": "entity:pl-nile-a012705",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pathros-aab30ec",
         "canonical_entity_key": "entity:pl-pathros-aab30ec",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pekod-a4b9865",
         "canonical_entity_key": "entity:pl-pekod-a4b9865",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pelusium-aa32a17",
         "canonical_entity_key": "entity:pl-pelusium-aa32a17",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-persia-ab9696f",
         "canonical_entity_key": "entity:pl-persia-ab9696f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-philistia-ac71e65",
         "canonical_entity_key": "entity:pl-philistia-ac71e65",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-pi-beseth-a2cd991",
         "canonical_entity_key": "entity:pl-pi-beseth-a2cd991",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-put-ad0520f",
         "canonical_entity_key": "entity:pl-put-ad0520f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-raamah-a57bb2e",
         "canonical_entity_key": "entity:pl-raamah-a57bb2e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rabbah-1-ae067b5",
         "canonical_entity_key": "entity:pl-rabbah-1-ae067b5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-rhodes-2-a8c207b",
         "canonical_entity_key": "entity:pl-rhodes-2-a8c207b",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-riblah-1-ab2bde8",
         "canonical_entity_key": "entity:pl-riblah-1-ab2bde8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sahar-af9e903",
         "canonical_entity_key": "entity:pl-sahar-af9e903",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-salt-sea-abed304",
         "canonical_entity_key": "entity:pl-salt-sea-abed304",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-samaria-1-a041bb3",
         "canonical_entity_key": "entity:pl-samaria-1-a041bb3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-senir-ad27e17",
         "canonical_entity_key": "entity:pl-senir-ad27e17",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sheba-1-a81ab85",
         "canonical_entity_key": "entity:pl-sheba-1-a81ab85",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-shoa-aa3bc1e",
         "canonical_entity_key": "entity:pl-shoa-aa3bc1e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sibraim-ab5d319",
         "canonical_entity_key": "entity:pl-sibraim-ab5d319",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sidon-a98e4d7",
         "canonical_entity_key": "entity:pl-sidon-a98e4d7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sodom-a0aa664",
         "canonical_entity_key": "entity:pl-sodom-a0aa664",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-syene-a8a6a5b",
         "canonical_entity_key": "entity:pl-syene-a8a6a5b",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-syria-1-a159fa4",
         "canonical_entity_key": "entity:pl-syria-1-a159fa4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tahpanhes-adb008c",
         "canonical_entity_key": "entity:pl-tahpanhes-adb008c",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tamar-2-a5947d7",
         "canonical_entity_key": "entity:pl-tamar-2-a5947d7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tarshish-1-a5f43dd",
         "canonical_entity_key": "entity:pl-tarshish-1-a5f43dd",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tel-abib-a10147d",
         "canonical_entity_key": "entity:pl-tel-abib-a10147d",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-teman-a831506",
         "canonical_entity_key": "entity:pl-teman-a831506",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-thebes-a9674fc",
         "canonical_entity_key": "entity:pl-thebes-a9674fc",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-the-lord-is-there-a012194",
         "canonical_entity_key": "entity:pl-the-lord-is-there-a012194",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tubal-aaaaead",
         "canonical_entity_key": "entity:pl-tubal-aaaaead",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tyre-a160272",
         "canonical_entity_key": "entity:pl-tyre-a160272",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-uzal-a217cc5",
         "canonical_entity_key": "entity:pl-uzal-a217cc5",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-valley-of-hamon-gog-a2109c3",
         "canonical_entity_key": "entity:pl-valley-of-hamon-gog-a2109c3",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-zedad-aab92ca",
         "canonical_entity_key": "entity:pl-zedad-aab92ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-zoan-ac31fee",
         "canonical_entity_key": "entity:pl-zoan-ac31fee",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -18940,7 +20931,15 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+    },
+    {
+      "code": "ambiguous-mention-referents-dropped",
+      "note": "4 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
   ]
 }

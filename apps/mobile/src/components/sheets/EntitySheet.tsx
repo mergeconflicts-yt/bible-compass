@@ -28,8 +28,12 @@ interface EntitySheetProps {
   /** Direct event record for event full cards (bypasses slug lookup). */
   event?: PreviewEvent | null;
   onClose: () => void;
+  /** Returns to the previous sheet; defaults to onClose when standalone. */
+  onBack?: () => void;
   onOpenEntity: (slug: string) => void;
   onOpenPassage: (passageKey: string) => void;
+  /** Modal entrance animation; 'none' when this sheet swaps in the context flow. */
+  animationType?: 'none' | 'slide' | 'fade';
   onOpenTimeline?: () => void;
 }
 
@@ -86,6 +90,8 @@ export function EntitySheet({
   slug,
   event = null,
   onClose,
+  onBack,
+  animationType,
   onOpenEntity,
   onOpenPassage,
   onOpenTimeline,
@@ -108,6 +114,7 @@ export function EntitySheet({
       onClose={onClose}
       full
       closeOnly
+      animationType={animationType}
       headerContent={
         entity || event ? (
           <View style={styles.headerRow}>
@@ -140,7 +147,7 @@ export function EntitySheet({
           onOpenEntity={onOpenEntity}
           onOpenPassage={onOpenPassage}
           onOpenTimeline={onOpenTimeline}
-          onBack={onClose}
+          onBack={onBack ?? onClose}
         />
       )}
     </Sheet>

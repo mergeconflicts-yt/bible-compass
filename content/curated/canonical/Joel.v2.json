@@ -613,8 +613,165 @@
         "review_status": "draft"
       }
     ],
-    "relationships": [],
-    "events": [],
+    "relationships": [
+      {
+        "relationship_key": "relationship:wb-p-joel-11-son-p-pethuel-1",
+        "subject_entity_key": "entity:p-joel-11",
+        "predicate_key": "relationship:son",
+        "object_entity_key": "entity:p-pethuel-1",
+        "applicable_scope_keys": [
+          "scope:wb-joel-1:refsys:eng-v22:joel.1.1-joel.1.20"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relationship_key": "relationship:wb-p-pethuel-1-father-p-joel-11",
+        "subject_entity_key": "entity:p-pethuel-1",
+        "predicate_key": "relationship:father",
+        "object_entity_key": "entity:p-joel-11",
+        "applicable_scope_keys": [
+          "scope:wb-joel-1:refsys:eng-v22:joel.1.1-joel.1.20"
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
+    "events": [
+      {
+        "event_key": "event:wb-joel-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-joel-11",
+          "entity:p-pethuel-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-1-p1:refsys:eng-v22:joel.1.1-joel.1.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-joel-2-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-eden-1-af3daeb",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-2-p1:refsys:eng-v22:joel.2.1-joel.2.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-joel-2-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-2-p2:refsys:eng-v22:joel.2.12-joel.2.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-joel-2-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-great-sea-aa805fb",
+          "entity:pl-salt-sea-abed304",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-2-p3:refsys:eng-v22:joel.2.18-joel.2.27",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-joel-2-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-mount-zion-abd9596"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-2-p4:refsys:eng-v22:joel.2.28-joel.2.32",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-joel-3-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1",
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-philistia-ac71e65",
+          "entity:pl-sheba-1-a81ab85",
+          "entity:pl-sidon-a98e4d7",
+          "entity:pl-tyre-a160272",
+          "entity:pl-valley-of-decision-a49037e",
+          "entity:pl-valley-of-jehoshaphat-a324282",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-3-p1:refsys:eng-v22:joel.3.1-joel.3.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-joel-3-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-judah-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-edom-a2735ff",
+          "entity:pl-egypt-af301ca",
+          "entity:pl-jerusalem-a15257a",
+          "entity:pl-valley-of-shittim-a01769f",
+          "entity:pl-zion-af20c46"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-joel-3-p2:refsys:eng-v22:joel.3.17-joel.3.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-eden-1-af3daeb",
@@ -977,115 +1134,115 @@
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-judah-1",
         "canonical_entity_key": "entity:p-judah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-joel-11",
         "canonical_entity_key": "entity:p-joel-11",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pethuel-1",
         "canonical_entity_key": "entity:p-pethuel-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-eden-1-af3daeb",
         "canonical_entity_key": "entity:pl-eden-1-af3daeb",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-edom-a2735ff",
         "canonical_entity_key": "entity:pl-edom-a2735ff",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-great-sea-aa805fb",
         "canonical_entity_key": "entity:pl-great-sea-aa805fb",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
         "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-zion-abd9596",
         "canonical_entity_key": "entity:pl-mount-zion-abd9596",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-philistia-ac71e65",
         "canonical_entity_key": "entity:pl-philistia-ac71e65",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-salt-sea-abed304",
         "canonical_entity_key": "entity:pl-salt-sea-abed304",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sheba-1-a81ab85",
         "canonical_entity_key": "entity:pl-sheba-1-a81ab85",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-sidon-a98e4d7",
         "canonical_entity_key": "entity:pl-sidon-a98e4d7",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-tyre-a160272",
         "canonical_entity_key": "entity:pl-tyre-a160272",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-valley-of-decision-a49037e",
         "canonical_entity_key": "entity:pl-valley-of-decision-a49037e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-valley-of-jehoshaphat-a324282",
         "canonical_entity_key": "entity:pl-valley-of-jehoshaphat-a324282",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-valley-of-shittim-a01769f",
         "canonical_entity_key": "entity:pl-valley-of-shittim-a01769f",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -1377,7 +1534,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

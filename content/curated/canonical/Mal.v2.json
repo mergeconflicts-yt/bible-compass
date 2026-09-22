@@ -326,7 +326,113 @@
       }
     ],
     "relationships": [],
-    "events": [],
+    "events": [
+      {
+        "event_key": "event:wb-mal-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-esau-1",
+          "entity:p-jacob-1",
+          "entity:p-malachi-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-edom-a2735ff"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-mal-1-p1:refsys:eng-v22:mal.1.1-mal.1.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-mal-2-p1",
+        "event_type": "battle",
+        "participant_entity_keys": [
+          "entity:p-levi-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-mal-2-p1:refsys:eng-v22:mal.2.1-mal.2.9",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-mal-2-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-mal-2-p2:refsys:eng-v22:mal.2.10-mal.2.17",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-mal-3-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-levi-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-jerusalem-a15257a"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-mal-3-p1:refsys:eng-v22:mal.3.1-mal.3.5",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-mal-3-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-jacob-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-mal-3-p2:refsys:eng-v22:mal.3.6-mal.3.12",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-mal-4-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-elijah-1",
+          "entity:p-moses-1"
+        ],
+        "place_entity_keys": [
+          "entity:pl-mount-horeb-a9bb03e"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-mal-4-p1:refsys:eng-v22:mal.4.1-mal.4.6",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-edom-a2735ff",
@@ -476,55 +582,55 @@
       {
         "candidate_key": "candidate:wb:p-esau-1",
         "canonical_entity_key": "entity:p-esau-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-jacob-1",
         "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-levi-1",
         "canonical_entity_key": "entity:p-levi-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-moses-1",
         "canonical_entity_key": "entity:p-moses-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-elijah-1",
         "canonical_entity_key": "entity:p-elijah-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-malachi-1",
         "canonical_entity_key": "entity:p-malachi-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-edom-a2735ff",
         "canonical_entity_key": "entity:pl-edom-a2735ff",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
         "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-mount-horeb-a9bb03e",
         "canonical_entity_key": "entity:pl-mount-horeb-a9bb03e",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -716,7 +822,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

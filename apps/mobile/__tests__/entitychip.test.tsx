@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from '@testing-library/react-native';
+import { useState } from 'react';
+import { fireEvent, render, screen, within } from '@testing-library/react-native';
 import { EntityChip, EventChip } from '@/components/EntityChip';
 import { ContextSheet } from '@/components/sheets/ContextSheet';
 import { ContextFlow } from '@/components/sheets/ContextFlow';
@@ -86,14 +87,37 @@ describe('ContextSheet entity chips', () => {
     expect(sheetProps.onOpenEvent).toHaveBeenCalledTimes(1);
   });
 
-  it('backs out of an entity sheet to the context sheet', () => {
-    render(<ContextFlow visible onClose={jest.fn()} />);
+  it('closes the whole flow from the person sheet close control', () => {
+    function Flow() {
+      const [open, setOpen] = useState(true);
+      return <ContextFlow visible={open} onClose={() => setOpen(false)} />;
+    }
+    render(<Flow />);
     fireEvent.press(screen.getByTestId('context-person-nehemiah-governor'));
     expect(screen.getByTestId('entity-sheet')).toBeTruthy();
+    // Close (X) exits to reading; the context sheet must not pop back up.
+    fireEvent.press(screen.getByTestId('entity-sheet-close'));
+    expect(screen.queryByTestId('entity-sheet')).toBeNull();
+    expect(screen.queryByTestId('context-sheet')).toBeNull();
+  });
+
+  it('unwinds one card at a time and exits from the first', () => {
+    function Flow() {
+      const [open, setOpen] = useState(true);
+      return <ContextFlow visible={open} onClose={() => setOpen(false)} />;
+    }
+    render(<Flow />);
+    fireEvent.press(screen.getByTestId('context-person-nehemiah-governor'));
+    fireEvent.press(screen.getByTestId('connected-artaxerxes-i'));
+    // On Artaxerxes I; Back returns to the previous card (Nehemiah).
+    fireEvent.press(screen.getByTestId('fullcard-back'));
+    const sheet = screen.getByTestId('entity-sheet');
+    expect(within(sheet).getAllByText('Nehemiah').length).toBeGreaterThanOrEqual(1);
+    // Back from the first card exits to reading; the context sheet does not
+    // pop back up.
     fireEvent.press(screen.getByTestId('fullcard-back'));
     expect(screen.queryByTestId('entity-sheet')).toBeNull();
-    // The context sheet is still there to continue from.
-    expect(screen.getByTestId('context-sheet')).toBeTruthy();
+    expect(screen.queryByTestId('context-sheet')).toBeNull();
   });
 
   it('opens an event full card from a History event chip', () => {

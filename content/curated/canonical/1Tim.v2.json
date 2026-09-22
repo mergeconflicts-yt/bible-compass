@@ -437,7 +437,143 @@
       }
     ],
     "relationships": [],
-    "events": [],
+    "events": [
+      {
+        "event_key": "event:wb-1tim-1-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-saul-2",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-1-p1:refsys:eng-v22:1tim.1.1-1tim.1.2",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-1-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [],
+        "place_entity_keys": [
+          "entity:pl-ephesus-a5feb15",
+          "entity:pl-macedonia-a69e1b8"
+        ],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-1-p2:refsys:eng-v22:1tim.1.3-1tim.1.11",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-1-p3",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-alexander-4",
+          "entity:p-hymenaeus-1",
+          "entity:p-satan-1",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-1-p3:refsys:eng-v22:1tim.1.12-1tim.1.20",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-2-p2",
+        "event_type": "teaching",
+        "participant_entity_keys": [
+          "entity:p-adam-1",
+          "entity:p-eve-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-2-p2:refsys:eng-v22:1tim.2.9-1tim.2.15",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-3-p1",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-satan-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-3-p1:refsys:eng-v22:1tim.3.1-1tim.3.7",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-5-p2",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-satan-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-5-p2:refsys:eng-v22:1tim.5.3-1tim.5.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-6-p4",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-pilate-1",
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-6-p4:refsys:eng-v22:1tim.6.11-1tim.6.16",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "event_key": "event:wb-1tim-6-p6",
+        "event_type": "narrative",
+        "participant_entity_keys": [
+          "entity:p-timothy-1"
+        ],
+        "place_entity_keys": [],
+        "scripture_accounts": [
+          {
+            "scope_key": "scope:wb-1tim-6-p6:refsys:eng-v22:1tim.6.20-1tim.6.21",
+            "relation": "reports"
+          }
+        ],
+        "claim_keys": [],
+        "review_status": "draft"
+      }
+    ],
     "places": [
       {
         "entity_key": "entity:pl-ephesus-a5feb15",
@@ -585,61 +721,61 @@
       {
         "candidate_key": "candidate:wb:p-adam-1",
         "canonical_entity_key": "entity:p-adam-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-eve-1",
         "canonical_entity_key": "entity:p-eve-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-satan-1",
         "canonical_entity_key": "entity:p-satan-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-pilate-1",
         "canonical_entity_key": "entity:p-pilate-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-saul-2",
         "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-timothy-1",
         "canonical_entity_key": "entity:p-timothy-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-hymenaeus-1",
         "canonical_entity_key": "entity:p-hymenaeus-1",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:p-alexander-4",
         "canonical_entity_key": "entity:p-alexander-4",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
         "canonical_entity_key": "entity:pl-ephesus-a5feb15",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
         "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
         "canonical_entity_key": "entity:pl-macedonia-a69e1b8",
-        "resolution_status": "created_new_canonical",
+        "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
     ]
@@ -900,7 +1036,11 @@
     },
     {
       "code": "machine-generated-draft",
-      "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
+      "note": "Generated by tools/curate_canon_queue.py from BSB structure and headings, BibleData persons/relationships, OpenBible places (CC BY 4.0), and authored book knowledge (tools/whole_bible_knowledge.json)."
+    },
+    {
+      "code": "events-projected-from-headings",
+      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
     }
   ]
 }

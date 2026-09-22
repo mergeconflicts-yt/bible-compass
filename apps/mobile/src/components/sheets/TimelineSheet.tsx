@@ -12,6 +12,8 @@ interface TimelineSheetProps {
   visible: boolean;
   onClose: () => void;
   onOpenPassage?: (passageKey: string) => void;
+  /** Modal entrance animation; 'none' when this sheet swaps in the context flow. */
+  animationType?: 'none' | 'slide' | 'fade';
 }
 
 /**
@@ -22,7 +24,12 @@ interface TimelineSheetProps {
  * reference range. Everything here is unverified draft content (see
  * previewNotice).
  */
-export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheetProps) {
+export function TimelineSheet({
+  visible,
+  onClose,
+  onOpenPassage,
+  animationType,
+}: TimelineSheetProps) {
   const { colors } = useTheme();
   // The sheet is mounted even when hidden; never let invalid preview data
   // throw during render. Show an honest unavailable state instead.
@@ -55,6 +62,7 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
       eyebrow="Timeline · Draft preview"
       title="Events in Nehemiah 2"
       full
+      animationType={animationType}
       testID="timeline-sheet"
       scrollRef={scrollRef}
     >
@@ -143,7 +151,7 @@ export function TimelineSheet({ visible, onClose, onOpenPassage }: TimelineSheet
         {previewNotice()}
       </AppText>
       <View style={styles.action}>
-        <Button title="Back to reading" onPress={onClose} testID="timeline-back" />
+        <Button title="Back" onPress={onClose} testID="timeline-back" />
       </View>
     </Sheet>
   );

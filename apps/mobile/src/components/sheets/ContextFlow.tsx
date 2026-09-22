@@ -25,12 +25,22 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
   const [stack, setStack] = useState<ContextTarget[]>([]);
 
   const push = (target: ContextTarget) => setStack((current) => [...current, target]);
-  const pop = () => setStack((current) => current.slice(0, -1));
   const reset = () => setStack([]);
   // Closing the flow clears the stack so the next open starts fresh.
   const handleClose = () => {
     reset();
     onClose();
+  };
+  // Back unwinds one card at a time; from the first card it exits to reading.
+  // The context sheet is the entry point, not a step you bounce back into.
+  const pop = () => {
+    setStack((current) => {
+      if (current.length <= 1) {
+        onClose();
+        return [];
+      }
+      return current.slice(0, -1);
+    });
   };
 
   const current = stack[stack.length - 1] ?? null;
@@ -43,6 +53,9 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
           tap; swapping instead keeps taps working and Back returns here. */}
       <ContextSheet
         visible={visible && stack.length === 0}
+        // Sheets in this flow appear instantly (no modal slide) so swapping
+        // between the context sheet and a card has no animation delay.
+        animationType="none"
         onClose={handleClose}
         onOpenEntity={(slug) => push({ kind: 'entity', slug })}
         onOpenEvent={(event) => push({ kind: 'event', event })}
@@ -57,7 +70,10 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
         visible={visible && entityTarget !== null}
         slug={entityTarget?.kind === 'entity' ? entityTarget.slug : null}
         event={entityTarget?.kind === 'event' ? entityTarget.event : null}
+        animationType="none"
+        // X and Back both unwind: previous card, or reading from the first.
         onClose={pop}
+        onBack={pop}
         onOpenEntity={(slug) => push({ kind: 'entity', slug })}
         onOpenPassage={(key) => {
           reset();
@@ -68,6 +84,7 @@ export function ContextFlow({ visible, onClose, onOpenPassage }: ContextFlowProp
       />
       <TimelineSheet
         visible={visible && current?.kind === 'timeline'}
+        animationType="none"
         onClose={pop}
         onOpenPassage={(key) => {
           reset();
