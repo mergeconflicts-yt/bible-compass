@@ -2,13 +2,41 @@
   "register_version": "1.0.0",
   "register_kind": "whole-canon-coverage",
   "data_classification": "synthetic_fixture",
-  "status": "DRAFT MACHINE-GENERATED — every chapter and verse carries an explicit coverage result; nothing reviewed, approved or published.",
+  "status": "DRAFT MACHINE-GENERATED — per-annotation-class coverage; classes marked not_attempted were never curated and are not claimed complete; nothing reviewed, approved or published.",
   "generated_by": "tools/curate_canon_queue.py",
   "books_total": 66,
   "chapters_total": 1189,
   "verses_total": 31086,
-  "verses_complete_zero": 18838,
-  "verses_complete_with_records": 12248,
+  "annotation_class_coverage": {
+    "canonical_entity_attestation": {
+      "verses_complete_zero": 18831,
+      "verses_complete_with_records": 12255
+    },
+    "translation_mention": {
+      "verses_complete_zero": 20251,
+      "verses_complete_with_records": 10835
+    }
+  },
+  "attempted_annotation_classes": [
+    "canonical_entity_attestation",
+    "translation_mention",
+    "canonical_relationship",
+    "canonical_event",
+    "canonical_entity_relevance",
+    "passage_context_localization"
+  ],
+  "not_attempted_annotation_classes": [
+    "canonical_object",
+    "canonical_role",
+    "canonical_practice",
+    "canonical_term",
+    "canonical_theme",
+    "canonical_chronology",
+    "historical_context",
+    "localized_entity_name",
+    "map_timeline_projection"
+  ],
+  "not_attempted_note": "Objects, roles, practices, lexical terms, themes, chronology and meaningful historical context are required by the curation spec but no approved input or pipeline produces them yet. Verses are NOT claimed complete for these classes.",
   "books": [
     {
       "osis": "1Chr",
@@ -257,10 +285,17 @@
       "relationships": 1778,
       "events": 83,
       "contexts": 114,
-      "profiles": 1530,
-      "verses_total": 942,
-      "verses_complete_zero": 140,
-      "verses_complete_with_records": 802
+      "profiles": 1529,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 140,
+          "verses_complete_with_records": 802
+        },
+        "translation_mention": {
+          "verses_complete_zero": 166,
+          "verses_complete_with_records": 776
+        }
+      }
     },
     {
       "osis": "1Cor",
@@ -405,10 +440,17 @@
       "relationships": 0,
       "events": 18,
       "contexts": 62,
-      "profiles": 24,
-      "verses_total": 437,
-      "verses_complete_zero": 403,
-      "verses_complete_with_records": 34
+      "profiles": 20,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 403,
+          "verses_complete_with_records": 34
+        },
+        "translation_mention": {
+          "verses_complete_zero": 403,
+          "verses_complete_with_records": 34
+        }
+      }
     },
     {
       "osis": "1John",
@@ -465,10 +507,17 @@
       "relationships": 0,
       "events": 4,
       "contexts": 21,
-      "profiles": 3,
-      "verses_total": 105,
-      "verses_complete_zero": 100,
-      "verses_complete_with_records": 5
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 100,
+          "verses_complete_with_records": 5
+        },
+        "translation_mention": {
+          "verses_complete_zero": 103,
+          "verses_complete_with_records": 2
+        }
+      }
     },
     {
       "osis": "1Kgs",
@@ -661,10 +710,17 @@
       "relationships": 124,
       "events": 87,
       "contexts": 117,
-      "profiles": 248,
-      "verses_total": 816,
-      "verses_complete_zero": 267,
-      "verses_complete_with_records": 549
+      "profiles": 157,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 267,
+          "verses_complete_with_records": 549
+        },
+        "translation_mention": {
+          "verses_complete_zero": 318,
+          "verses_complete_with_records": 498
+        }
+      }
     },
     {
       "osis": "1Pet",
@@ -721,10 +777,17 @@
       "relationships": 0,
       "events": 5,
       "contexts": 21,
-      "profiles": 13,
-      "verses_total": 105,
-      "verses_complete_zero": 99,
-      "verses_complete_with_records": 6
+      "profiles": 7,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 99,
+          "verses_complete_with_records": 6
+        },
+        "translation_mention": {
+          "verses_complete_zero": 99,
+          "verses_complete_with_records": 6
+        }
+      }
     },
     {
       "osis": "1Sam",
@@ -989,10 +1052,17 @@
       "relationships": 95,
       "events": 70,
       "contexts": 102,
-      "profiles": 175,
-      "verses_total": 810,
-      "verses_complete_zero": 197,
-      "verses_complete_with_records": 613
+      "profiles": 93,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 197,
+          "verses_complete_with_records": 613
+        },
+        "translation_mention": {
+          "verses_complete_zero": 245,
+          "verses_complete_with_records": 565
+        }
+      }
     },
     {
       "osis": "1Thess",
@@ -1049,10 +1119,17 @@
       "relationships": 0,
       "events": 6,
       "contexts": 16,
-      "profiles": 11,
-      "verses_total": 89,
-      "verses_complete_zero": 79,
-      "verses_complete_with_records": 10
+      "profiles": 5,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 79,
+          "verses_complete_with_records": 10
+        },
+        "translation_mention": {
+          "verses_complete_zero": 80,
+          "verses_complete_with_records": 9
+        }
+      }
     },
     {
       "osis": "1Tim",
@@ -1117,10 +1194,17 @@
       "relationships": 0,
       "events": 8,
       "contexts": 27,
-      "profiles": 10,
-      "verses_total": 113,
-      "verses_complete_zero": 100,
-      "verses_complete_with_records": 13
+      "profiles": 4,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 100,
+          "verses_complete_with_records": 13
+        },
+        "translation_mention": {
+          "verses_complete_zero": 101,
+          "verses_complete_with_records": 12
+        }
+      }
     },
     {
       "osis": "2Chr",
@@ -1425,10 +1509,17 @@
       "relationships": 148,
       "events": 103,
       "contexts": 143,
-      "profiles": 368,
-      "verses_total": 822,
-      "verses_complete_zero": 257,
-      "verses_complete_with_records": 565
+      "profiles": 200,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 257,
+          "verses_complete_with_records": 565
+        },
+        "translation_mention": {
+          "verses_complete_zero": 304,
+          "verses_complete_with_records": 518
+        }
+      }
     },
     {
       "osis": "2Cor",
@@ -1549,10 +1640,17 @@
       "relationships": 0,
       "events": 15,
       "contexts": 39,
-      "profiles": 18,
-      "verses_total": 257,
-      "verses_complete_zero": 222,
-      "verses_complete_with_records": 35
+      "profiles": 3,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 222,
+          "verses_complete_with_records": 35
+        },
+        "translation_mention": {
+          "verses_complete_zero": 228,
+          "verses_complete_with_records": 29
+        }
+      }
     },
     {
       "osis": "2John",
@@ -1577,10 +1675,17 @@
       "relationships": 0,
       "events": 2,
       "contexts": 6,
-      "profiles": 3,
-      "verses_total": 13,
-      "verses_complete_zero": 11,
-      "verses_complete_with_records": 2
+      "profiles": 1,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 11,
+          "verses_complete_with_records": 2
+        },
+        "translation_mention": {
+          "verses_complete_zero": 13,
+          "verses_complete_with_records": 0
+        }
+      }
     },
     {
       "osis": "2Kgs",
@@ -1797,10 +1902,17 @@
       "relationships": 168,
       "events": 93,
       "contexts": 119,
-      "profiles": 259,
-      "verses_total": 719,
-      "verses_complete_zero": 175,
-      "verses_complete_with_records": 544
+      "profiles": 118,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 175,
+          "verses_complete_with_records": 544
+        },
+        "translation_mention": {
+          "verses_complete_zero": 235,
+          "verses_complete_with_records": 484
+        }
+      }
     },
     {
       "osis": "2Pet",
@@ -1841,10 +1953,17 @@
       "relationships": 0,
       "events": 3,
       "contexts": 11,
-      "profiles": 8,
-      "verses_total": 61,
-      "verses_complete_zero": 55,
-      "verses_complete_with_records": 6
+      "profiles": 5,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 55,
+          "verses_complete_with_records": 6
+        },
+        "translation_mention": {
+          "verses_complete_zero": 55,
+          "verses_complete_with_records": 6
+        }
+      }
     },
     {
       "osis": "2Sam",
@@ -2053,10 +2172,17 @@
       "relationships": 194,
       "events": 64,
       "contexts": 89,
-      "profiles": 257,
-      "verses_total": 695,
-      "verses_complete_zero": 167,
-      "verses_complete_with_records": 528
+      "profiles": 57,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 167,
+          "verses_complete_with_records": 528
+        },
+        "translation_mention": {
+          "verses_complete_zero": 186,
+          "verses_complete_with_records": 509
+        }
+      }
     },
     {
       "osis": "2Thess",
@@ -2097,10 +2223,17 @@
       "relationships": 0,
       "events": 3,
       "contexts": 11,
-      "profiles": 5,
-      "verses_total": 47,
-      "verses_complete_zero": 44,
-      "verses_complete_with_records": 3
+      "profiles": 0,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 44,
+          "verses_complete_with_records": 3
+        },
+        "translation_mention": {
+          "verses_complete_zero": 44,
+          "verses_complete_with_records": 3
+        }
+      }
     },
     {
       "osis": "2Tim",
@@ -2149,10 +2282,17 @@
       "relationships": 4,
       "events": 9,
       "contexts": 16,
-      "profiles": 41,
-      "verses_total": 83,
-      "verses_complete_zero": 60,
-      "verses_complete_with_records": 23
+      "profiles": 24,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 60,
+          "verses_complete_with_records": 23
+        },
+        "translation_mention": {
+          "verses_complete_zero": 62,
+          "verses_complete_with_records": 21
+        }
+      }
     },
     {
       "osis": "3John",
@@ -2177,10 +2317,17 @@
       "relationships": 0,
       "events": 2,
       "contexts": 6,
-      "profiles": 4,
-      "verses_total": 14,
-      "verses_complete_zero": 11,
-      "verses_complete_with_records": 3
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 11,
+          "verses_complete_with_records": 3
+        },
+        "translation_mention": {
+          "verses_complete_zero": 11,
+          "verses_complete_with_records": 3
+        }
+      }
     },
     {
       "osis": "Acts",
@@ -2421,10 +2568,17 @@
       "relationships": 16,
       "events": 108,
       "contexts": 139,
-      "profiles": 225,
-      "verses_total": 1003,
-      "verses_complete_zero": 465,
-      "verses_complete_with_records": 538
+      "profiles": 153,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 465,
+          "verses_complete_with_records": 538
+        },
+        "translation_mention": {
+          "verses_complete_zero": 490,
+          "verses_complete_with_records": 513
+        }
+      }
     },
     {
       "osis": "Amos",
@@ -2513,10 +2667,17 @@
       "relationships": 0,
       "events": 14,
       "contexts": 24,
-      "profiles": 55,
-      "verses_total": 146,
-      "verses_complete_zero": 84,
-      "verses_complete_with_records": 62
+      "profiles": 9,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 84,
+          "verses_complete_with_records": 62
+        },
+        "translation_mention": {
+          "verses_complete_zero": 96,
+          "verses_complete_with_records": 50
+        }
+      }
     },
     {
       "osis": "Col",
@@ -2565,10 +2726,17 @@
       "relationships": 0,
       "events": 6,
       "contexts": 17,
-      "profiles": 16,
-      "verses_total": 95,
-      "verses_complete_zero": 79,
-      "verses_complete_with_records": 16
+      "profiles": 8,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 79,
+          "verses_complete_with_records": 16
+        },
+        "translation_mention": {
+          "verses_complete_zero": 79,
+          "verses_complete_with_records": 16
+        }
+      }
     },
     {
       "osis": "Dan",
@@ -2681,10 +2849,17 @@
       "relationships": 8,
       "events": 31,
       "contexts": 46,
-      "profiles": 47,
-      "verses_total": 357,
-      "verses_complete_zero": 189,
-      "verses_complete_with_records": 168
+      "profiles": 26,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 189,
+          "verses_complete_with_records": 168
+        },
+        "translation_mention": {
+          "verses_complete_zero": 214,
+          "verses_complete_with_records": 143
+        }
+      }
     },
     {
       "osis": "Deut",
@@ -2973,10 +3148,17 @@
       "relationships": 0,
       "events": 58,
       "contexts": 126,
-      "profiles": 118,
-      "verses_total": 959,
-      "verses_complete_zero": 748,
-      "verses_complete_with_records": 211
+      "profiles": 44,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 748,
+          "verses_complete_with_records": 211
+        },
+        "translation_mention": {
+          "verses_complete_zero": 773,
+          "verses_complete_with_records": 186
+        }
+      }
     },
     {
       "osis": "Eccl",
@@ -3089,10 +3271,17 @@
       "relationships": 0,
       "events": 6,
       "contexts": 39,
-      "profiles": 3,
-      "verses_total": 222,
-      "verses_complete_zero": 212,
-      "verses_complete_with_records": 10
+      "profiles": 0,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 212,
+          "verses_complete_with_records": 10
+        },
+        "translation_mention": {
+          "verses_complete_zero": 217,
+          "verses_complete_with_records": 5
+        }
+      }
     },
     {
       "osis": "Eph",
@@ -3157,10 +3346,17 @@
       "relationships": 0,
       "events": 5,
       "contexts": 24,
-      "profiles": 4,
-      "verses_total": 155,
-      "verses_complete_zero": 150,
-      "verses_complete_with_records": 5
+      "profiles": 0,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 150,
+          "verses_complete_with_records": 5
+        },
+        "translation_mention": {
+          "verses_complete_zero": 150,
+          "verses_complete_with_records": 5
+        }
+      }
     },
     {
       "osis": "Esth",
@@ -3257,10 +3453,17 @@
       "relationships": 38,
       "events": 20,
       "contexts": 31,
-      "profiles": 49,
-      "verses_total": 167,
-      "verses_complete_zero": 39,
-      "verses_complete_with_records": 128
+      "profiles": 40,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 39,
+          "verses_complete_with_records": 128
+        },
+        "translation_mention": {
+          "verses_complete_zero": 47,
+          "verses_complete_with_records": 120
+        }
+      }
     },
     {
       "osis": "Exod",
@@ -3597,10 +3800,17 @@
       "relationships": 83,
       "events": 99,
       "contexts": 164,
-      "profiles": 108,
-      "verses_total": 1213,
-      "verses_complete_zero": 645,
-      "verses_complete_with_records": 568
+      "profiles": 30,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 645,
+          "verses_complete_with_records": 568
+        },
+        "translation_mention": {
+          "verses_complete_zero": 712,
+          "verses_complete_with_records": 501
+        }
+      }
     },
     {
       "osis": "Ezek",
@@ -4001,10 +4211,17 @@
       "relationships": 8,
       "events": 96,
       "contexts": 163,
-      "profiles": 136,
-      "verses_total": 1273,
-      "verses_complete_zero": 893,
-      "verses_complete_with_records": 380
+      "profiles": 66,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 893,
+          "verses_complete_with_records": 380
+        },
+        "translation_mention": {
+          "verses_complete_zero": 989,
+          "verses_complete_with_records": 284
+        }
+      }
     },
     {
       "osis": "Ezra",
@@ -4040,7 +4257,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 50,
-          "mentions": 36,
+          "mentions": 41,
           "contexts": 4
         },
         {
@@ -4048,7 +4265,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 35,
-          "mentions": 26,
+          "mentions": 27,
           "contexts": 3
         },
         {
@@ -4056,7 +4273,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 36,
-          "mentions": 30,
+          "mentions": 32,
           "contexts": 5
         },
         {
@@ -4064,7 +4281,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 50,
-          "mentions": 40,
+          "mentions": 42,
           "contexts": 4
         },
         {
@@ -4072,7 +4289,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 84,
-          "mentions": 75,
+          "mentions": 76,
           "contexts": 6
         },
         {
@@ -4097,14 +4314,21 @@
       "jobs_done": 3,
       "entities": 364,
       "attestations": 589,
-      "mentions": 510,
+      "mentions": 521,
       "relationships": 476,
       "events": 27,
       "contexts": 39,
-      "profiles": 363,
-      "verses_total": 280,
-      "verses_complete_zero": 73,
-      "verses_complete_with_records": 207
+      "profiles": 289,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 73,
+          "verses_complete_with_records": 207
+        },
+        "translation_mention": {
+          "verses_complete_zero": 81,
+          "verses_complete_with_records": 199
+        }
+      }
     },
     {
       "osis": "Gal",
@@ -4169,10 +4393,17 @@
       "relationships": 0,
       "events": 10,
       "contexts": 23,
-      "profiles": 17,
-      "verses_total": 149,
-      "verses_complete_zero": 120,
-      "verses_complete_with_records": 29
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 120,
+          "verses_complete_with_records": 29
+        },
+        "translation_mention": {
+          "verses_complete_zero": 121,
+          "verses_complete_with_records": 28
+        }
+      }
     },
     {
       "osis": "Gen",
@@ -4589,10 +4820,17 @@
       "relationships": 960,
       "events": 136,
       "contexts": 199,
-      "profiles": 460,
-      "verses_total": 1533,
-      "verses_complete_zero": 505,
-      "verses_complete_with_records": 1028
+      "profiles": 139,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 505,
+          "verses_complete_with_records": 1028
+        },
+        "translation_mention": {
+          "verses_complete_zero": 554,
+          "verses_complete_with_records": 979
+        }
+      }
     },
     {
       "osis": "Hab",
@@ -4633,10 +4871,17 @@
       "relationships": 0,
       "events": 4,
       "contexts": 11,
-      "profiles": 7,
-      "verses_total": 56,
-      "verses_complete_zero": 50,
-      "verses_complete_with_records": 6
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 50,
+          "verses_complete_with_records": 6
+        },
+        "translation_mention": {
+          "verses_complete_zero": 51,
+          "verses_complete_with_records": 5
+        }
+      }
     },
     {
       "osis": "Hag",
@@ -4669,10 +4914,17 @@
       "relationships": 0,
       "events": 5,
       "contexts": 8,
-      "profiles": 6,
-      "verses_total": 38,
-      "verses_complete_zero": 23,
-      "verses_complete_with_records": 15
+      "profiles": 1,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 23,
+          "verses_complete_with_records": 15
+        },
+        "translation_mention": {
+          "verses_complete_zero": 23,
+          "verses_complete_with_records": 15
+        }
+      }
     },
     {
       "osis": "Heb",
@@ -4793,10 +5045,17 @@
       "relationships": 0,
       "events": 22,
       "contexts": 48,
-      "profiles": 36,
-      "verses_total": 303,
-      "verses_complete_zero": 236,
-      "verses_complete_with_records": 67
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 236,
+          "verses_complete_with_records": 67
+        },
+        "translation_mention": {
+          "verses_complete_zero": 249,
+          "verses_complete_with_records": 54
+        }
+      }
     },
     {
       "osis": "Hos",
@@ -4925,10 +5184,17 @@
       "relationships": 12,
       "events": 17,
       "contexts": 34,
-      "profiles": 47,
-      "verses_total": 197,
-      "verses_complete_zero": 136,
-      "verses_complete_with_records": 61
+      "profiles": 16,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 136,
+          "verses_complete_with_records": 61
+        },
+        "translation_mention": {
+          "verses_complete_zero": 154,
+          "verses_complete_with_records": 43
+        }
+      }
     },
     {
       "osis": "Isa",
@@ -5473,10 +5739,17 @@
       "relationships": 10,
       "events": 97,
       "contexts": 187,
-      "profiles": 184,
-      "verses_total": 1292,
-      "verses_complete_zero": 890,
-      "verses_complete_with_records": 402
+      "profiles": 42,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 890,
+          "verses_complete_with_records": 402
+        },
+        "translation_mention": {
+          "verses_complete_zero": 975,
+          "verses_complete_with_records": 317
+        }
+      }
     },
     {
       "osis": "Jas",
@@ -5533,10 +5806,17 @@
       "relationships": 0,
       "events": 4,
       "contexts": 21,
-      "profiles": 6,
-      "verses_total": 108,
-      "verses_complete_zero": 102,
-      "verses_complete_with_records": 6
+      "profiles": 1,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 102,
+          "verses_complete_with_records": 6
+        },
+        "translation_mention": {
+          "verses_complete_zero": 102,
+          "verses_complete_with_records": 6
+        }
+      }
     },
     {
       "osis": "Jer",
@@ -5969,10 +6249,17 @@
       "relationships": 80,
       "events": 113,
       "contexts": 175,
-      "profiles": 263,
-      "verses_total": 1364,
-      "verses_complete_zero": 660,
-      "verses_complete_with_records": 704
+      "profiles": 102,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 660,
+          "verses_complete_with_records": 704
+        },
+        "translation_mention": {
+          "verses_complete_zero": 844,
+          "verses_complete_with_records": 520
+        }
+      }
     },
     {
       "osis": "Job",
@@ -6325,10 +6612,17 @@
       "relationships": 10,
       "events": 38,
       "contexts": 93,
-      "profiles": 22,
-      "verses_total": 1070,
-      "verses_complete_zero": 991,
-      "verses_complete_with_records": 79
+      "profiles": 10,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 991,
+          "verses_complete_with_records": 79
+        },
+        "translation_mention": {
+          "verses_complete_zero": 997,
+          "verses_complete_with_records": 73
+        }
+      }
     },
     {
       "osis": "Joel",
@@ -6369,10 +6663,17 @@
       "relationships": 2,
       "events": 7,
       "contexts": 13,
-      "profiles": 19,
-      "verses_total": 73,
-      "verses_complete_zero": 53,
-      "verses_complete_with_records": 20
+      "profiles": 4,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 53,
+          "verses_complete_with_records": 20
+        },
+        "translation_mention": {
+          "verses_complete_zero": 57,
+          "verses_complete_with_records": 16
+        }
+      }
     },
     {
       "osis": "John",
@@ -6557,10 +6858,17 @@
       "relationships": 12,
       "events": 60,
       "contexts": 106,
-      "profiles": 65,
-      "verses_total": 878,
-      "verses_complete_zero": 658,
-      "verses_complete_with_records": 220
+      "profiles": 32,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 658,
+          "verses_complete_with_records": 220
+        },
+        "translation_mention": {
+          "verses_complete_zero": 681,
+          "verses_complete_with_records": 197
+        }
+      }
     },
     {
       "osis": "Jon",
@@ -6609,10 +6917,17 @@
       "relationships": 0,
       "events": 6,
       "contexts": 11,
-      "profiles": 3,
-      "verses_total": 48,
-      "verses_complete_zero": 31,
-      "verses_complete_with_records": 17
+      "profiles": 1,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 31,
+          "verses_complete_with_records": 17
+        },
+        "translation_mention": {
+          "verses_complete_zero": 32,
+          "verses_complete_with_records": 16
+        }
+      }
     },
     {
       "osis": "Josh",
@@ -6821,10 +7136,17 @@
       "relationships": 18,
       "events": 51,
       "contexts": 76,
-      "profiles": 536,
-      "verses_total": 658,
-      "verses_complete_zero": 115,
-      "verses_complete_with_records": 543
+      "profiles": 310,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 115,
+          "verses_complete_with_records": 543
+        },
+        "translation_mention": {
+          "verses_complete_zero": 164,
+          "verses_complete_with_records": 494
+        }
+      }
     },
     {
       "osis": "Jude",
@@ -6849,10 +7171,17 @@
       "relationships": 0,
       "events": 2,
       "contexts": 6,
-      "profiles": 13,
-      "verses_total": 25,
-      "verses_complete_zero": 19,
-      "verses_complete_with_records": 6
+      "profiles": 1,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 19,
+          "verses_complete_with_records": 6
+        },
+        "translation_mention": {
+          "verses_complete_zero": 19,
+          "verses_complete_with_records": 6
+        }
+      }
     },
     {
       "osis": "Judg",
@@ -7037,10 +7366,17 @@
       "relationships": 52,
       "events": 52,
       "contexts": 74,
-      "profiles": 225,
-      "verses_total": 618,
-      "verses_complete_zero": 164,
-      "verses_complete_with_records": 454
+      "profiles": 95,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 164,
+          "verses_complete_with_records": 454
+        },
+        "translation_mention": {
+          "verses_complete_zero": 256,
+          "verses_complete_with_records": 362
+        }
+      }
     },
     {
       "osis": "Lam",
@@ -7097,10 +7433,17 @@
       "relationships": 0,
       "events": 5,
       "contexts": 13,
-      "profiles": 9,
-      "verses_total": 154,
-      "verses_complete_zero": 122,
-      "verses_complete_with_records": 32
+      "profiles": 0,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 122,
+          "verses_complete_with_records": 32
+        },
+        "translation_mention": {
+          "verses_complete_zero": 131,
+          "verses_complete_with_records": 23
+        }
+      }
     },
     {
       "osis": "Lev",
@@ -7333,10 +7676,17 @@
       "relationships": 4,
       "events": 55,
       "contexts": 98,
-      "profiles": 22,
-      "verses_total": 859,
-      "verses_complete_zero": 669,
-      "verses_complete_with_records": 190
+      "profiles": 3,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 669,
+          "verses_complete_with_records": 190
+        },
+        "translation_mention": {
+          "verses_complete_zero": 709,
+          "verses_complete_with_records": 150
+        }
+      }
     },
     {
       "osis": "Luke",
@@ -7545,10 +7895,17 @@
       "relationships": 104,
       "events": 93,
       "contexts": 179,
-      "profiles": 176,
-      "verses_total": 1149,
-      "verses_complete_zero": 867,
-      "verses_complete_with_records": 282
+      "profiles": 75,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 867,
+          "verses_complete_with_records": 282
+        },
+        "translation_mention": {
+          "verses_complete_zero": 906,
+          "verses_complete_with_records": 243
+        }
+      }
     },
     {
       "osis": "Mal",
@@ -7597,10 +7954,17 @@
       "relationships": 0,
       "events": 6,
       "contexts": 13,
-      "profiles": 9,
-      "verses_total": 55,
-      "verses_complete_zero": 43,
-      "verses_complete_with_records": 12
+      "profiles": 1,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 43,
+          "verses_complete_with_records": 12
+        },
+        "translation_mention": {
+          "verses_complete_zero": 43,
+          "verses_complete_with_records": 12
+        }
+      }
     },
     {
       "osis": "Mark",
@@ -7745,10 +8109,17 @@
       "relationships": 8,
       "events": 67,
       "contexts": 113,
-      "profiles": 73,
-      "verses_total": 673,
-      "verses_complete_zero": 521,
-      "verses_complete_with_records": 152
+      "profiles": 14,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 521,
+          "verses_complete_with_records": 152
+        },
+        "translation_mention": {
+          "verses_complete_zero": 539,
+          "verses_complete_with_records": 134
+        }
+      }
     },
     {
       "osis": "Matt",
@@ -7989,10 +8360,17 @@
       "relationships": 48,
       "events": 87,
       "contexts": 182,
-      "profiles": 131,
-      "verses_total": 1068,
-      "verses_complete_zero": 844,
-      "verses_complete_with_records": 224
+      "profiles": 14,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 844,
+          "verses_complete_with_records": 224
+        },
+        "translation_mention": {
+          "verses_complete_zero": 872,
+          "verses_complete_with_records": 196
+        }
+      }
     },
     {
       "osis": "Mic",
@@ -8065,10 +8443,17 @@
       "relationships": 0,
       "events": 12,
       "contexts": 23,
-      "profiles": 41,
-      "verses_total": 105,
-      "verses_complete_zero": 69,
-      "verses_complete_with_records": 36
+      "profiles": 6,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 69,
+          "verses_complete_with_records": 36
+        },
+        "translation_mention": {
+          "verses_complete_zero": 77,
+          "verses_complete_with_records": 28
+        }
+      }
     },
     {
       "osis": "Nah",
@@ -8109,10 +8494,17 @@
       "relationships": 0,
       "events": 3,
       "contexts": 7,
-      "profiles": 14,
-      "verses_total": 47,
-      "verses_complete_zero": 27,
-      "verses_complete_with_records": 20
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 27,
+          "verses_complete_with_records": 20
+        },
+        "translation_mention": {
+          "verses_complete_zero": 36,
+          "verses_complete_with_records": 11
+        }
+      }
     },
     {
       "osis": "Neh",
@@ -8131,8 +8523,8 @@
           "chapter": 2,
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
-          "attestations": 21,
-          "mentions": 16,
+          "attestations": 139,
+          "mentions": 74,
           "contexts": 3
         },
         {
@@ -8140,7 +8532,7 @@
           "annotation_coverage_result": "complete_with_records",
           "context_coverage_result": "complete_with_records",
           "attestations": 122,
-          "mentions": 101,
+          "mentions": 102,
           "contexts": 2
         },
         {
@@ -8227,16 +8619,23 @@
       "chapters_curated": 13,
       "jobs": 4,
       "jobs_done": 4,
-      "entities": 506,
-      "attestations": 833,
-      "mentions": 748,
-      "relationships": 426,
-      "events": 27,
-      "contexts": 42,
-      "profiles": 506,
-      "verses_total": 406,
-      "verses_complete_zero": 130,
-      "verses_complete_with_records": 276
+      "entities": 526,
+      "attestations": 951,
+      "mentions": 807,
+      "relationships": 443,
+      "events": 33,
+      "contexts": 48,
+      "profiles": 304,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 123,
+          "verses_complete_with_records": 283
+        },
+        "translation_mention": {
+          "verses_complete_zero": 134,
+          "verses_complete_with_records": 272
+        }
+      }
     },
     {
       "osis": "Num",
@@ -8541,10 +8940,17 @@
       "relationships": 207,
       "events": 106,
       "contexts": 150,
-      "profiles": 353,
-      "verses_total": 1288,
-      "verses_complete_zero": 507,
-      "verses_complete_with_records": 781
+      "profiles": 121,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 507,
+          "verses_complete_with_records": 781
+        },
+        "translation_mention": {
+          "verses_complete_zero": 604,
+          "verses_complete_with_records": 684
+        }
+      }
     },
     {
       "osis": "Obad",
@@ -8569,10 +8975,17 @@
       "relationships": 0,
       "events": 2,
       "contexts": 4,
-      "profiles": 19,
-      "verses_total": 21,
-      "verses_complete_zero": 9,
-      "verses_complete_with_records": 12
+      "profiles": 3,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 9,
+          "verses_complete_with_records": 12
+        },
+        "translation_mention": {
+          "verses_complete_zero": 12,
+          "verses_complete_with_records": 9
+        }
+      }
     },
     {
       "osis": "Phil",
@@ -8621,10 +9034,17 @@
       "relationships": 0,
       "events": 6,
       "contexts": 20,
-      "profiles": 12,
-      "verses_total": 104,
-      "verses_complete_zero": 94,
-      "verses_complete_with_records": 10
+      "profiles": 3,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 94,
+          "verses_complete_with_records": 10
+        },
+        "translation_mention": {
+          "verses_complete_zero": 94,
+          "verses_complete_with_records": 10
+        }
+      }
     },
     {
       "osis": "Phlm",
@@ -8649,10 +9069,17 @@
       "relationships": 0,
       "events": 3,
       "contexts": 6,
-      "profiles": 11,
-      "verses_total": 25,
-      "verses_complete_zero": 18,
-      "verses_complete_with_records": 7
+      "profiles": 2,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 18,
+          "verses_complete_with_records": 7
+        },
+        "translation_mention": {
+          "verses_complete_zero": 18,
+          "verses_complete_with_records": 7
+        }
+      }
     },
     {
       "osis": "Prov",
@@ -8917,10 +9344,17 @@
       "relationships": 2,
       "events": 6,
       "contexts": 98,
-      "profiles": 9,
-      "verses_total": 915,
-      "verses_complete_zero": 908,
-      "verses_complete_with_records": 7
+      "profiles": 5,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 908,
+          "verses_complete_with_records": 7
+        },
+        "translation_mention": {
+          "verses_complete_zero": 908,
+          "verses_complete_with_records": 7
+        }
+      }
     },
     {
       "osis": "Ps",
@@ -10137,10 +10571,17 @@
       "relationships": 0,
       "events": 76,
       "contexts": 301,
-      "profiles": 89,
-      "verses_total": 2461,
-      "verses_complete_zero": 2255,
-      "verses_complete_with_records": 206
+      "profiles": 10,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 2255,
+          "verses_complete_with_records": 206
+        },
+        "translation_mention": {
+          "verses_complete_zero": 2310,
+          "verses_complete_with_records": 151
+        }
+      }
     },
     {
       "osis": "Rev",
@@ -10333,10 +10774,17 @@
       "relationships": 0,
       "events": 33,
       "contexts": 84,
-      "profiles": 43,
-      "verses_total": 404,
-      "verses_complete_zero": 342,
-      "verses_complete_with_records": 62
+      "profiles": 12,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 342,
+          "verses_complete_with_records": 62
+        },
+        "translation_mention": {
+          "verses_complete_zero": 360,
+          "verses_complete_with_records": 44
+        }
+      }
     },
     {
       "osis": "Rom",
@@ -10481,10 +10929,17 @@
       "relationships": 2,
       "events": 16,
       "contexts": 64,
-      "profiles": 64,
-      "verses_total": 432,
-      "verses_complete_zero": 375,
-      "verses_complete_with_records": 57
+      "profiles": 30,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 375,
+          "verses_complete_with_records": 57
+        },
+        "translation_mention": {
+          "verses_complete_zero": 376,
+          "verses_complete_with_records": 56
+        }
+      }
     },
     {
       "osis": "Ruth",
@@ -10533,10 +10988,17 @@
       "relationships": 33,
       "events": 8,
       "contexts": 13,
-      "profiles": 23,
-      "verses_total": 85,
-      "verses_complete_zero": 34,
-      "verses_complete_with_records": 51
+      "profiles": 5,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 34,
+          "verses_complete_with_records": 51
+        },
+        "translation_mention": {
+          "verses_complete_zero": 36,
+          "verses_complete_with_records": 49
+        }
+      }
     },
     {
       "osis": "Song",
@@ -10617,10 +11079,17 @@
       "relationships": 0,
       "events": 17,
       "contexts": 45,
-      "profiles": 21,
-      "verses_total": 117,
-      "verses_complete_zero": 89,
-      "verses_complete_with_records": 28
+      "profiles": 4,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 89,
+          "verses_complete_with_records": 28
+        },
+        "translation_mention": {
+          "verses_complete_zero": 94,
+          "verses_complete_with_records": 23
+        }
+      }
     },
     {
       "osis": "Titus",
@@ -10661,10 +11130,17 @@
       "relationships": 0,
       "events": 4,
       "contexts": 12,
-      "profiles": 8,
-      "verses_total": 46,
-      "verses_complete_zero": 40,
-      "verses_complete_with_records": 6
+      "profiles": 3,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 40,
+          "verses_complete_with_records": 6
+        },
+        "translation_mention": {
+          "verses_complete_zero": 41,
+          "verses_complete_with_records": 5
+        }
+      }
     },
     {
       "osis": "Zech",
@@ -10793,10 +11269,17 @@
       "relationships": 4,
       "events": 20,
       "contexts": 40,
-      "profiles": 59,
-      "verses_total": 211,
-      "verses_complete_zero": 123,
-      "verses_complete_with_records": 88
+      "profiles": 9,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 123,
+          "verses_complete_with_records": 88
+        },
+        "translation_mention": {
+          "verses_complete_zero": 129,
+          "verses_complete_with_records": 82
+        }
+      }
     },
     {
       "osis": "Zeph",
@@ -10837,10 +11320,17 @@
       "relationships": 8,
       "events": 9,
       "contexts": 14,
-      "profiles": 26,
-      "verses_total": 53,
-      "verses_complete_zero": 35,
-      "verses_complete_with_records": 18
+      "profiles": 6,
+      "coverage_by_class": {
+        "canonical_entity_attestation": {
+          "verses_complete_zero": 35,
+          "verses_complete_with_records": 18
+        },
+        "translation_mention": {
+          "verses_complete_zero": 42,
+          "verses_complete_with_records": 11
+        }
+      }
     }
   ]
 }

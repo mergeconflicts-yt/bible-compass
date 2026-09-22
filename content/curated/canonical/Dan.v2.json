@@ -429,7 +429,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -759,15 +759,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-kittim-aeb46a8",
         "entity_type": "place",
         "proposed_label": "Kittim",
@@ -840,15 +831,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-susa-a033b84",
-        "entity_type": "place",
-        "proposed_label": "Susa",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-tigris-a38ebfd",
         "entity_type": "place",
         "proposed_label": "Tigris",
@@ -874,13 +856,31 @@
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:susa",
+        "entity_type": "place",
+        "proposed_label": "Susa",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
       }
     ],
     "claims": [],
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-ben-ammi-1-11-41",
+        "attestation_key": "attestation:wb-dan-p-ben-ammi-1-11-41",
         "reference_key": "verse:Dan.11.41",
         "entity_key": "entity:p-ben-ammi-1",
         "kind": "participant",
@@ -890,7 +890,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jacob-1-1-3",
+        "attestation_key": "attestation:wb-dan-p-jacob-1-1-3",
         "reference_key": "verse:Dan.1.3",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -900,7 +900,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-judah-1-1-6",
+        "attestation_key": "attestation:wb-dan-p-judah-1-1-6",
         "reference_key": "verse:Dan.1.6",
         "entity_key": "entity:p-judah-1",
         "kind": "participant",
@@ -910,7 +910,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-moses-1-9-11",
+        "attestation_key": "attestation:wb-dan-p-moses-1-9-11",
         "reference_key": "verse:Dan.9.11",
         "entity_key": "entity:p-moses-1",
         "kind": "participant",
@@ -920,7 +920,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-moses-1-9-13",
+        "attestation_key": "attestation:wb-dan-p-moses-1-9-13",
         "reference_key": "verse:Dan.9.13",
         "entity_key": "entity:p-moses-1",
         "kind": "participant",
@@ -930,7 +930,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-eliakim-2-1-1",
+        "attestation_key": "attestation:wb-dan-p-eliakim-2-1-1",
         "reference_key": "verse:Dan.1.1",
         "entity_key": "entity:p-eliakim-2",
         "kind": "participant",
@@ -940,7 +940,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-eliakim-2-1-2",
+        "attestation_key": "attestation:wb-dan-p-eliakim-2-1-2",
         "reference_key": "verse:Dan.1.2",
         "entity_key": "entity:p-eliakim-2",
         "kind": "participant",
@@ -950,7 +950,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-1-1",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-1-1",
         "reference_key": "verse:Dan.1.1",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -960,7 +960,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-1-18",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-1-18",
         "reference_key": "verse:Dan.1.18",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -970,7 +970,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-1",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-2-1",
         "reference_key": "verse:Dan.2.1",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -980,7 +980,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-28",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-2-28",
         "reference_key": "verse:Dan.2.28",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -990,7 +990,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-37",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-2-37",
         "reference_key": "verse:Dan.2.37",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1000,7 +1000,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-46",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-2-46",
         "reference_key": "verse:Dan.2.46",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1010,7 +1010,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-1",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-1",
         "reference_key": "verse:Dan.3.1",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1020,7 +1020,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-2",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-2",
         "reference_key": "verse:Dan.3.2",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1030,7 +1030,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-5",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-5",
         "reference_key": "verse:Dan.3.5",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1040,7 +1040,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-7",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-7",
         "reference_key": "verse:Dan.3.7",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1050,7 +1050,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-9",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-9",
         "reference_key": "verse:Dan.3.9",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1060,7 +1060,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-13",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-13",
         "reference_key": "verse:Dan.3.13",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1070,7 +1070,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-14",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-14",
         "reference_key": "verse:Dan.3.14",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1080,7 +1080,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-16",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-16",
         "reference_key": "verse:Dan.3.16",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1090,7 +1090,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-19",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-19",
         "reference_key": "verse:Dan.3.19",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1100,7 +1100,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-24",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-24",
         "reference_key": "verse:Dan.3.24",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1110,7 +1110,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-26",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-26",
         "reference_key": "verse:Dan.3.26",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1120,7 +1120,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-3-28",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-3-28",
         "reference_key": "verse:Dan.3.28",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1130,7 +1130,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-1",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-1",
         "reference_key": "verse:Dan.4.1",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1140,7 +1140,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-4",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-4",
         "reference_key": "verse:Dan.4.4",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1150,7 +1150,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-18",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-18",
         "reference_key": "verse:Dan.4.18",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1160,7 +1160,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-28",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-28",
         "reference_key": "verse:Dan.4.28",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1170,7 +1170,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-31",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-31",
         "reference_key": "verse:Dan.4.31",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1180,7 +1180,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-33",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-33",
         "reference_key": "verse:Dan.4.33",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1190,7 +1190,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-34",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-34",
         "reference_key": "verse:Dan.4.34",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1200,7 +1200,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-4-37",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-4-37",
         "reference_key": "verse:Dan.4.37",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1210,7 +1210,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-5-2",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-5-2",
         "reference_key": "verse:Dan.5.2",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1220,7 +1220,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-5-11",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-5-11",
         "reference_key": "verse:Dan.5.11",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1230,7 +1230,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-5-18",
+        "attestation_key": "attestation:wb-dan-p-nebuchadnezzar-1-5-18",
         "reference_key": "verse:Dan.5.18",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -1240,7 +1240,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jeremiah-6-9-2",
+        "attestation_key": "attestation:wb-dan-p-jeremiah-6-9-2",
         "reference_key": "verse:Dan.9.2",
         "entity_key": "entity:p-jeremiah-6",
         "kind": "participant",
@@ -1250,7 +1250,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-cyrus-1-1-21",
+        "attestation_key": "attestation:wb-dan-p-cyrus-1-1-21",
         "reference_key": "verse:Dan.1.21",
         "entity_key": "entity:p-cyrus-1",
         "kind": "participant",
@@ -1260,7 +1260,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-cyrus-1-6-28",
+        "attestation_key": "attestation:wb-dan-p-cyrus-1-6-28",
         "reference_key": "verse:Dan.6.28",
         "entity_key": "entity:p-cyrus-1",
         "kind": "participant",
@@ -1270,7 +1270,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-cyrus-1-10-1",
+        "attestation_key": "attestation:wb-dan-p-cyrus-1-10-1",
         "reference_key": "verse:Dan.10.1",
         "entity_key": "entity:p-cyrus-1",
         "kind": "participant",
@@ -1280,7 +1280,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-5-31",
+        "attestation_key": "attestation:wb-dan-p-darius-1-5-31",
         "reference_key": "verse:Dan.5.31",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1290,7 +1290,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-6-1",
+        "attestation_key": "attestation:wb-dan-p-darius-1-6-1",
         "reference_key": "verse:Dan.6.1",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1300,7 +1300,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-6-6",
+        "attestation_key": "attestation:wb-dan-p-darius-1-6-6",
         "reference_key": "verse:Dan.6.6",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1310,7 +1310,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-6-9",
+        "attestation_key": "attestation:wb-dan-p-darius-1-6-9",
         "reference_key": "verse:Dan.6.9",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1320,7 +1320,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-6-25",
+        "attestation_key": "attestation:wb-dan-p-darius-1-6-25",
         "reference_key": "verse:Dan.6.25",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1330,7 +1330,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-6-28",
+        "attestation_key": "attestation:wb-dan-p-darius-1-6-28",
         "reference_key": "verse:Dan.6.28",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1340,7 +1340,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-1-11-1",
+        "attestation_key": "attestation:wb-dan-p-darius-1-11-1",
         "reference_key": "verse:Dan.11.1",
         "entity_key": "entity:p-darius-1",
         "kind": "participant",
@@ -1350,7 +1350,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-9-1",
+        "attestation_key": "attestation:wb-dan-p-ahasuerus-1-9-1",
         "reference_key": "verse:Dan.9.1",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -1360,7 +1360,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-6",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-6",
         "reference_key": "verse:Dan.1.6",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1370,7 +1370,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-7",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-7",
         "reference_key": "verse:Dan.1.7",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1380,7 +1380,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-8",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-8",
         "reference_key": "verse:Dan.1.8",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1390,7 +1390,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-9",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-9",
         "reference_key": "verse:Dan.1.9",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1400,7 +1400,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-10",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-10",
         "reference_key": "verse:Dan.1.10",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1410,7 +1410,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-11",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-11",
         "reference_key": "verse:Dan.1.11",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1420,7 +1420,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-17",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-17",
         "reference_key": "verse:Dan.1.17",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1430,7 +1430,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-19",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-19",
         "reference_key": "verse:Dan.1.19",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1440,7 +1440,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-1-21",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-1-21",
         "reference_key": "verse:Dan.1.21",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1450,7 +1450,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-13",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-13",
         "reference_key": "verse:Dan.2.13",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1460,7 +1460,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-14",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-14",
         "reference_key": "verse:Dan.2.14",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1470,7 +1470,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-15",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-15",
         "reference_key": "verse:Dan.2.15",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1480,7 +1480,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-16",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-16",
         "reference_key": "verse:Dan.2.16",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1490,7 +1490,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-17",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-17",
         "reference_key": "verse:Dan.2.17",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1500,7 +1500,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-18",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-18",
         "reference_key": "verse:Dan.2.18",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1510,7 +1510,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-19",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-19",
         "reference_key": "verse:Dan.2.19",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1520,7 +1520,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-20",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-20",
         "reference_key": "verse:Dan.2.20",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1530,7 +1530,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-24",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-24",
         "reference_key": "verse:Dan.2.24",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1540,7 +1540,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-25",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-25",
         "reference_key": "verse:Dan.2.25",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1550,7 +1550,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-26",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-26",
         "reference_key": "verse:Dan.2.26",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1560,7 +1560,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-27",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-27",
         "reference_key": "verse:Dan.2.27",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1570,7 +1570,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-46",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-46",
         "reference_key": "verse:Dan.2.46",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1580,7 +1580,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-47",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-47",
         "reference_key": "verse:Dan.2.47",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1590,7 +1590,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-48",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-48",
         "reference_key": "verse:Dan.2.48",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1600,7 +1600,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-2-49",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-2-49",
         "reference_key": "verse:Dan.2.49",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1610,7 +1610,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-4-8",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-4-8",
         "reference_key": "verse:Dan.4.8",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1620,7 +1620,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-4-9",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-4-9",
         "reference_key": "verse:Dan.4.9",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1630,7 +1630,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-4-18",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-4-18",
         "reference_key": "verse:Dan.4.18",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1640,7 +1640,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-4-19",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-4-19",
         "reference_key": "verse:Dan.4.19",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1650,7 +1650,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-5-12",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-5-12",
         "reference_key": "verse:Dan.5.12",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1660,7 +1660,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-5-13",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-5-13",
         "reference_key": "verse:Dan.5.13",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1670,7 +1670,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-5-17",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-5-17",
         "reference_key": "verse:Dan.5.17",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1680,7 +1680,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-5-22",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-5-22",
         "reference_key": "verse:Dan.5.22",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1690,7 +1690,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-5-29",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-5-29",
         "reference_key": "verse:Dan.5.29",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1700,7 +1700,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-2",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-2",
         "reference_key": "verse:Dan.6.2",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1710,7 +1710,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-3",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-3",
         "reference_key": "verse:Dan.6.3",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1720,7 +1720,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-4",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-4",
         "reference_key": "verse:Dan.6.4",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1730,7 +1730,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-5",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-5",
         "reference_key": "verse:Dan.6.5",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1740,7 +1740,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-10",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-10",
         "reference_key": "verse:Dan.6.10",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1750,7 +1750,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-11",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-11",
         "reference_key": "verse:Dan.6.11",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1760,7 +1760,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-13",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-13",
         "reference_key": "verse:Dan.6.13",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1770,7 +1770,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-14",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-14",
         "reference_key": "verse:Dan.6.14",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1780,7 +1780,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-16",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-16",
         "reference_key": "verse:Dan.6.16",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1790,7 +1790,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-17",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-17",
         "reference_key": "verse:Dan.6.17",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1800,7 +1800,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-20",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-20",
         "reference_key": "verse:Dan.6.20",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1810,7 +1810,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-21",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-21",
         "reference_key": "verse:Dan.6.21",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1820,7 +1820,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-23",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-23",
         "reference_key": "verse:Dan.6.23",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1830,7 +1830,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-24",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-24",
         "reference_key": "verse:Dan.6.24",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1840,7 +1840,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-27",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-27",
         "reference_key": "verse:Dan.6.27",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1850,7 +1850,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-6-28",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-6-28",
         "reference_key": "verse:Dan.6.28",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1860,7 +1860,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-7-1",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-7-1",
         "reference_key": "verse:Dan.7.1",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1870,7 +1870,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-7-2",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-7-2",
         "reference_key": "verse:Dan.7.2",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1880,7 +1880,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-7-15",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-7-15",
         "reference_key": "verse:Dan.7.15",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1890,7 +1890,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-7-28",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-7-28",
         "reference_key": "verse:Dan.7.28",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1900,7 +1900,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-8-1",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-8-1",
         "reference_key": "verse:Dan.8.1",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1910,7 +1910,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-8-15",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-8-15",
         "reference_key": "verse:Dan.8.15",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1920,7 +1920,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-8-17",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-8-17",
         "reference_key": "verse:Dan.8.17",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1930,7 +1930,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-8-27",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-8-27",
         "reference_key": "verse:Dan.8.27",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1940,7 +1940,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-9-2",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-9-2",
         "reference_key": "verse:Dan.9.2",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1950,7 +1950,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-9-22",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-9-22",
         "reference_key": "verse:Dan.9.22",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1960,7 +1960,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-10-1",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-10-1",
         "reference_key": "verse:Dan.10.1",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1970,7 +1970,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-10-2",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-10-2",
         "reference_key": "verse:Dan.10.2",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1980,7 +1980,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-10-7",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-10-7",
         "reference_key": "verse:Dan.10.7",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -1990,7 +1990,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-10-11",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-10-11",
         "reference_key": "verse:Dan.10.11",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -2000,7 +2000,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-10-12",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-10-12",
         "reference_key": "verse:Dan.10.12",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -2010,7 +2010,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-12-4",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-12-4",
         "reference_key": "verse:Dan.12.4",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -2020,7 +2020,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-12-5",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-12-5",
         "reference_key": "verse:Dan.12.5",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -2030,7 +2030,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daniel-2-12-9",
+        "attestation_key": "attestation:wb-dan-p-daniel-2-12-9",
         "reference_key": "verse:Dan.12.9",
         "entity_key": "entity:p-daniel-2",
         "kind": "participant",
@@ -2040,7 +2040,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ashpenaz-1-1-3",
+        "attestation_key": "attestation:wb-dan-p-ashpenaz-1-1-3",
         "reference_key": "verse:Dan.1.3",
         "entity_key": "entity:p-ashpenaz-1",
         "kind": "participant",
@@ -2050,7 +2050,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-1-6",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-1-6",
         "reference_key": "verse:Dan.1.6",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2060,7 +2060,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-1-7",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-1-7",
         "reference_key": "verse:Dan.1.7",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2070,7 +2070,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-1-11",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-1-11",
         "reference_key": "verse:Dan.1.11",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2080,7 +2080,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-1-19",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-1-19",
         "reference_key": "verse:Dan.1.19",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2090,7 +2090,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-2-17",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-2-17",
         "reference_key": "verse:Dan.2.17",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2100,7 +2100,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-2-49",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-2-49",
         "reference_key": "verse:Dan.2.49",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2110,7 +2110,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-12",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-12",
         "reference_key": "verse:Dan.3.12",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2120,7 +2120,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-13",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-13",
         "reference_key": "verse:Dan.3.13",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2130,7 +2130,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-14",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-14",
         "reference_key": "verse:Dan.3.14",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2140,7 +2140,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-16",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-16",
         "reference_key": "verse:Dan.3.16",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2150,7 +2150,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-19",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-19",
         "reference_key": "verse:Dan.3.19",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2160,7 +2160,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-20",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-20",
         "reference_key": "verse:Dan.3.20",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2170,7 +2170,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-22",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-22",
         "reference_key": "verse:Dan.3.22",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2180,7 +2180,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-23",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-23",
         "reference_key": "verse:Dan.3.23",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2190,7 +2190,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-26",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-26",
         "reference_key": "verse:Dan.3.26",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2200,7 +2200,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hananiah-12-3-30",
+        "attestation_key": "attestation:wb-dan-p-hananiah-12-3-30",
         "reference_key": "verse:Dan.3.30",
         "entity_key": "entity:p-hananiah-12",
         "kind": "participant",
@@ -2210,7 +2210,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-arioch-2-2-14",
+        "attestation_key": "attestation:wb-dan-p-arioch-2-2-14",
         "reference_key": "verse:Dan.2.14",
         "entity_key": "entity:p-arioch-2",
         "kind": "participant",
@@ -2220,7 +2220,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-arioch-2-2-15",
+        "attestation_key": "attestation:wb-dan-p-arioch-2-2-15",
         "reference_key": "verse:Dan.2.15",
         "entity_key": "entity:p-arioch-2",
         "kind": "participant",
@@ -2230,7 +2230,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-arioch-2-2-24",
+        "attestation_key": "attestation:wb-dan-p-arioch-2-2-24",
         "reference_key": "verse:Dan.2.24",
         "entity_key": "entity:p-arioch-2",
         "kind": "participant",
@@ -2240,7 +2240,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-arioch-2-2-25",
+        "attestation_key": "attestation:wb-dan-p-arioch-2-2-25",
         "reference_key": "verse:Dan.2.25",
         "entity_key": "entity:p-arioch-2",
         "kind": "participant",
@@ -2250,7 +2250,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-5-1",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-5-1",
         "reference_key": "verse:Dan.5.1",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2260,7 +2260,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-5-2",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-5-2",
         "reference_key": "verse:Dan.5.2",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2270,7 +2270,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-5-9",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-5-9",
         "reference_key": "verse:Dan.5.9",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2280,7 +2280,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-5-29",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-5-29",
         "reference_key": "verse:Dan.5.29",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2290,7 +2290,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-5-30",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-5-30",
         "reference_key": "verse:Dan.5.30",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2300,7 +2300,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-7-1",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-7-1",
         "reference_key": "verse:Dan.7.1",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2310,7 +2310,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-belshazzar-1-8-1",
+        "attestation_key": "attestation:wb-dan-p-belshazzar-1-8-1",
         "reference_key": "verse:Dan.8.1",
         "entity_key": "entity:p-belshazzar-1",
         "kind": "participant",
@@ -2320,7 +2320,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-gabriel-1-8-16",
+        "attestation_key": "attestation:wb-dan-p-gabriel-1-8-16",
         "reference_key": "verse:Dan.8.16",
         "entity_key": "entity:p-gabriel-1",
         "kind": "participant",
@@ -2330,7 +2330,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-gabriel-1-9-21",
+        "attestation_key": "attestation:wb-dan-p-gabriel-1-9-21",
         "reference_key": "verse:Dan.9.21",
         "entity_key": "entity:p-gabriel-1",
         "kind": "participant",
@@ -2340,7 +2340,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-darius-2-9-1",
+        "attestation_key": "attestation:wb-dan-p-darius-2-9-1",
         "reference_key": "verse:Dan.9.1",
         "entity_key": "entity:p-darius-2",
         "kind": "participant",
@@ -2350,7 +2350,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-prince-of-the-kingdom-of-persia-1-10-13",
+        "attestation_key": "attestation:wb-dan-p-prince-of-the-kingdom-of-persia-1-10-13",
         "reference_key": "verse:Dan.10.13",
         "entity_key": "entity:p-prince-of-the-kingdom-of-persia-1",
         "kind": "participant",
@@ -2360,7 +2360,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-prince-of-the-kingdom-of-persia-1-10-20",
+        "attestation_key": "attestation:wb-dan-p-prince-of-the-kingdom-of-persia-1-10-20",
         "reference_key": "verse:Dan.10.20",
         "entity_key": "entity:p-prince-of-the-kingdom-of-persia-1",
         "kind": "participant",
@@ -2370,7 +2370,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-michael-9-10-13",
+        "attestation_key": "attestation:wb-dan-p-michael-9-10-13",
         "reference_key": "verse:Dan.10.13",
         "entity_key": "entity:p-michael-9",
         "kind": "participant",
@@ -2380,7 +2380,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-michael-9-10-21",
+        "attestation_key": "attestation:wb-dan-p-michael-9-10-21",
         "reference_key": "verse:Dan.10.21",
         "entity_key": "entity:p-michael-9",
         "kind": "participant",
@@ -2390,7 +2390,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-michael-9-12-1",
+        "attestation_key": "attestation:wb-dan-p-michael-9-12-1",
         "reference_key": "verse:Dan.12.1",
         "entity_key": "entity:p-michael-9",
         "kind": "participant",
@@ -2400,7 +2400,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-prince-of-greece-1-10-20",
+        "attestation_key": "attestation:wb-dan-p-prince-of-greece-1-10-20",
         "reference_key": "verse:Dan.10.20",
         "entity_key": "entity:p-prince-of-greece-1",
         "kind": "participant",
@@ -2410,7 +2410,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-south-1-11-5",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-south-1-11-5",
         "reference_key": "verse:Dan.11.5",
         "entity_key": "entity:p-king-of-the-south-1",
         "kind": "participant",
@@ -2420,7 +2420,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-south-1-11-9",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-south-1-11-9",
         "reference_key": "verse:Dan.11.9",
         "entity_key": "entity:p-king-of-the-south-1",
         "kind": "participant",
@@ -2430,7 +2430,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-south-1-11-11",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-south-1-11-11",
         "reference_key": "verse:Dan.11.11",
         "entity_key": "entity:p-king-of-the-south-1",
         "kind": "participant",
@@ -2440,7 +2440,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-south-1-11-14",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-south-1-11-14",
         "reference_key": "verse:Dan.11.14",
         "entity_key": "entity:p-king-of-the-south-1",
         "kind": "participant",
@@ -2450,7 +2450,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-south-1-11-25",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-south-1-11-25",
         "reference_key": "verse:Dan.11.25",
         "entity_key": "entity:p-king-of-the-south-1",
         "kind": "participant",
@@ -2460,7 +2460,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-south-1-11-40",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-south-1-11-40",
         "reference_key": "verse:Dan.11.40",
         "entity_key": "entity:p-king-of-the-south-1",
         "kind": "participant",
@@ -2470,7 +2470,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-daughter-of-the-king-of-the-south-1-11-6",
+        "attestation_key": "attestation:wb-dan-p-daughter-of-the-king-of-the-south-1-11-6",
         "reference_key": "verse:Dan.11.6",
         "entity_key": "entity:p-daughter-of-the-king-of-the-south-1",
         "kind": "participant",
@@ -2480,7 +2480,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-6",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-6",
         "reference_key": "verse:Dan.11.6",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2490,7 +2490,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-7",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-7",
         "reference_key": "verse:Dan.11.7",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2500,7 +2500,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-8",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-8",
         "reference_key": "verse:Dan.11.8",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2510,7 +2510,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-11",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-11",
         "reference_key": "verse:Dan.11.11",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2520,7 +2520,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-13",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-13",
         "reference_key": "verse:Dan.11.13",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2530,7 +2530,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-15",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-15",
         "reference_key": "verse:Dan.11.15",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2540,7 +2540,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-king-of-the-north-1-11-40",
+        "attestation_key": "attestation:wb-dan-p-king-of-the-north-1-11-40",
         "reference_key": "verse:Dan.11.40",
         "entity_key": "entity:p-king-of-the-north-1",
         "kind": "participant",
@@ -2550,7 +2550,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-a-despicable-person-1-11-21",
+        "attestation_key": "attestation:wb-dan-p-a-despicable-person-1-11-21",
         "reference_key": "verse:Dan.11.21",
         "entity_key": "entity:p-a-despicable-person-1",
         "kind": "participant",
@@ -2560,7 +2560,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ammon-a6046fa-11-41",
+        "attestation_key": "attestation:wb-dan-pl-ammon-a6046fa-11-41",
         "reference_key": "verse:Dan.11.41",
         "entity_key": "entity:pl-ammon-a6046fa",
         "kind": "location",
@@ -2570,7 +2570,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-1-1",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-1-1",
         "reference_key": "verse:Dan.1.1",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2580,7 +2580,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-1-3",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-1-3",
         "reference_key": "verse:Dan.1.3",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2590,7 +2590,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-12",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-2-12",
         "reference_key": "verse:Dan.2.12",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2600,7 +2600,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-14",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-2-14",
         "reference_key": "verse:Dan.2.14",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2610,7 +2610,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-18",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-2-18",
         "reference_key": "verse:Dan.2.18",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2620,7 +2620,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-24",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-2-24",
         "reference_key": "verse:Dan.2.24",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2630,7 +2630,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-48",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-2-48",
         "reference_key": "verse:Dan.2.48",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2640,7 +2640,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-49",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-2-49",
         "reference_key": "verse:Dan.2.49",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2650,7 +2650,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-3-1",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-3-1",
         "reference_key": "verse:Dan.3.1",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2660,7 +2660,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-3-12",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-3-12",
         "reference_key": "verse:Dan.3.12",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2670,7 +2670,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-3-30",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-3-30",
         "reference_key": "verse:Dan.3.30",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2680,7 +2680,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-6",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-4-6",
         "reference_key": "verse:Dan.4.6",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2690,7 +2690,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-29",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-4-29",
         "reference_key": "verse:Dan.4.29",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2700,7 +2700,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-4-30",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-4-30",
         "reference_key": "verse:Dan.4.30",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2710,7 +2710,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-5-7",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-5-7",
         "reference_key": "verse:Dan.5.7",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2720,7 +2720,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-5-11",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-5-11",
         "reference_key": "verse:Dan.5.11",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2730,7 +2730,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-7-1",
+        "attestation_key": "attestation:wb-dan-pl-babylon-1-a217d18-7-1",
         "reference_key": "verse:Dan.7.1",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -2740,7 +2740,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-canaan-a581f0c-8-9",
+        "attestation_key": "attestation:wb-dan-pl-canaan-a581f0c-8-9",
         "reference_key": "verse:Dan.8.9",
         "entity_key": "entity:pl-canaan-a581f0c",
         "kind": "location",
@@ -2750,7 +2750,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-canaan-a581f0c-11-16",
+        "attestation_key": "attestation:wb-dan-pl-canaan-a581f0c-11-16",
         "reference_key": "verse:Dan.11.16",
         "entity_key": "entity:pl-canaan-a581f0c",
         "kind": "location",
@@ -2760,7 +2760,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-canaan-a581f0c-11-41",
+        "attestation_key": "attestation:wb-dan-pl-canaan-a581f0c-11-41",
         "reference_key": "verse:Dan.11.41",
         "entity_key": "entity:pl-canaan-a581f0c",
         "kind": "location",
@@ -2770,7 +2770,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-1-4",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-1-4",
         "reference_key": "verse:Dan.1.4",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2780,7 +2780,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-2-2",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-2-2",
         "reference_key": "verse:Dan.2.2",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2790,7 +2790,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-2-4",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-2-4",
         "reference_key": "verse:Dan.2.4",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2800,7 +2800,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-2-5",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-2-5",
         "reference_key": "verse:Dan.2.5",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2810,7 +2810,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-2-10",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-2-10",
         "reference_key": "verse:Dan.2.10",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2820,7 +2820,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-3-8",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-3-8",
         "reference_key": "verse:Dan.3.8",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2830,7 +2830,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-4-7",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-4-7",
         "reference_key": "verse:Dan.4.7",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2840,7 +2840,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-5-7",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-5-7",
         "reference_key": "verse:Dan.5.7",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2850,7 +2850,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-5-11",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-5-11",
         "reference_key": "verse:Dan.5.11",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2860,7 +2860,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-chaldea-a32a4f8-9-1",
+        "attestation_key": "attestation:wb-dan-pl-chaldea-a32a4f8-9-1",
         "reference_key": "verse:Dan.9.1",
         "entity_key": "entity:pl-chaldea-a32a4f8",
         "kind": "location",
@@ -2870,7 +2870,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-dura-a3bcd66-3-1",
+        "attestation_key": "attestation:wb-dan-pl-dura-a3bcd66-3-1",
         "reference_key": "verse:Dan.3.1",
         "entity_key": "entity:pl-dura-a3bcd66",
         "kind": "location",
@@ -2880,7 +2880,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-11-41",
+        "attestation_key": "attestation:wb-dan-pl-edom-a2735ff-11-41",
         "reference_key": "verse:Dan.11.41",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -2890,7 +2890,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-egypt-af301ca-9-15",
+        "attestation_key": "attestation:wb-dan-pl-egypt-af301ca-9-15",
         "reference_key": "verse:Dan.9.15",
         "entity_key": "entity:pl-egypt-af301ca",
         "kind": "location",
@@ -2900,7 +2900,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-8",
+        "attestation_key": "attestation:wb-dan-pl-egypt-af301ca-11-8",
         "reference_key": "verse:Dan.11.8",
         "entity_key": "entity:pl-egypt-af301ca",
         "kind": "location",
@@ -2910,7 +2910,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-42",
+        "attestation_key": "attestation:wb-dan-pl-egypt-af301ca-11-42",
         "reference_key": "verse:Dan.11.42",
         "entity_key": "entity:pl-egypt-af301ca",
         "kind": "location",
@@ -2920,7 +2920,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-egypt-af301ca-11-43",
+        "attestation_key": "attestation:wb-dan-pl-egypt-af301ca-11-43",
         "reference_key": "verse:Dan.11.43",
         "entity_key": "entity:pl-egypt-af301ca",
         "kind": "location",
@@ -2930,7 +2930,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-elam-a7e3a59-8-2",
+        "attestation_key": "attestation:wb-dan-pl-elam-a7e3a59-8-2",
         "reference_key": "verse:Dan.8.2",
         "entity_key": "entity:pl-elam-a7e3a59",
         "kind": "location",
@@ -2940,7 +2940,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-great-sea-aa805fb-7-2",
+        "attestation_key": "attestation:wb-dan-pl-great-sea-aa805fb-7-2",
         "reference_key": "verse:Dan.7.2",
         "entity_key": "entity:pl-great-sea-aa805fb",
         "kind": "location",
@@ -2950,7 +2950,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-greece-a4492a0-8-21",
+        "attestation_key": "attestation:wb-dan-pl-greece-a4492a0-8-21",
         "reference_key": "verse:Dan.8.21",
         "entity_key": "entity:pl-greece-a4492a0",
         "kind": "location",
@@ -2960,7 +2960,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-greece-a4492a0-10-20",
+        "attestation_key": "attestation:wb-dan-pl-greece-a4492a0-10-20",
         "reference_key": "verse:Dan.10.20",
         "entity_key": "entity:pl-greece-a4492a0",
         "kind": "location",
@@ -2970,7 +2970,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-greece-a4492a0-11-2",
+        "attestation_key": "attestation:wb-dan-pl-greece-a4492a0-11-2",
         "reference_key": "verse:Dan.11.2",
         "entity_key": "entity:pl-greece-a4492a0",
         "kind": "location",
@@ -2980,107 +2980,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-1",
-        "reference_key": "verse:Dan.1.1",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-2",
-        "reference_key": "verse:Dan.5.2",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-3",
-        "reference_key": "verse:Dan.5.3",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-6-10",
-        "reference_key": "verse:Dan.6.10",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-9-2",
-        "reference_key": "verse:Dan.9.2",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-9-7",
-        "reference_key": "verse:Dan.9.7",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-9-12",
-        "reference_key": "verse:Dan.9.12",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-9-16",
-        "reference_key": "verse:Dan.9.16",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-9-20",
-        "reference_key": "verse:Dan.9.20",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-9-25",
-        "reference_key": "verse:Dan.9.25",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-kittim-aeb46a8-11-30",
+        "attestation_key": "attestation:wb-dan-pl-kittim-aeb46a8-11-30",
         "reference_key": "verse:Dan.11.30",
         "entity_key": "entity:pl-kittim-aeb46a8",
         "kind": "location",
@@ -3090,7 +2990,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-media-ad2fadf-8-20",
+        "attestation_key": "attestation:wb-dan-pl-media-ad2fadf-8-20",
         "reference_key": "verse:Dan.8.20",
         "entity_key": "entity:pl-media-ad2fadf",
         "kind": "location",
@@ -3100,7 +3000,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-moab-1-aa0b1d6-11-41",
+        "attestation_key": "attestation:wb-dan-pl-moab-1-aa0b1d6-11-41",
         "reference_key": "verse:Dan.11.41",
         "entity_key": "entity:pl-moab-1-aa0b1d6",
         "kind": "location",
@@ -3110,7 +3010,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-most-holy-place-2-a9acaaf-9-24",
+        "attestation_key": "attestation:wb-dan-pl-most-holy-place-2-a9acaaf-9-24",
         "reference_key": "verse:Dan.9.24",
         "entity_key": "entity:pl-most-holy-place-2-a9acaaf",
         "kind": "location",
@@ -3120,7 +3020,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-6",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-6",
         "reference_key": "verse:Dan.11.6",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3130,7 +3030,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-7",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-7",
         "reference_key": "verse:Dan.11.7",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3140,7 +3040,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-8",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-8",
         "reference_key": "verse:Dan.11.8",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3150,7 +3050,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-9",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-9",
         "reference_key": "verse:Dan.11.9",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3160,7 +3060,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-11",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-11",
         "reference_key": "verse:Dan.11.11",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3170,7 +3070,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-13",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-13",
         "reference_key": "verse:Dan.11.13",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3180,7 +3080,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-15",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-15",
         "reference_key": "verse:Dan.11.15",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3190,7 +3090,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-16",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-16",
         "reference_key": "verse:Dan.11.16",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3200,7 +3100,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-28",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-28",
         "reference_key": "verse:Dan.11.28",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3210,7 +3110,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-north-a244929-11-40",
+        "attestation_key": "attestation:wb-dan-pl-north-a244929-11-40",
         "reference_key": "verse:Dan.11.40",
         "entity_key": "entity:pl-north-a244929",
         "kind": "location",
@@ -3220,7 +3120,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-8-20",
+        "attestation_key": "attestation:wb-dan-pl-persia-ab9696f-8-20",
         "reference_key": "verse:Dan.8.20",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3230,7 +3130,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-1",
+        "attestation_key": "attestation:wb-dan-pl-persia-ab9696f-10-1",
         "reference_key": "verse:Dan.10.1",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3240,7 +3140,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-13",
+        "attestation_key": "attestation:wb-dan-pl-persia-ab9696f-10-13",
         "reference_key": "verse:Dan.10.13",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3250,7 +3150,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-20",
+        "attestation_key": "attestation:wb-dan-pl-persia-ab9696f-10-20",
         "reference_key": "verse:Dan.10.20",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3260,7 +3160,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-11-2",
+        "attestation_key": "attestation:wb-dan-pl-persia-ab9696f-11-2",
         "reference_key": "verse:Dan.11.2",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3270,7 +3170,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-shinar-af725b1-1-2",
+        "attestation_key": "attestation:wb-dan-pl-shinar-af725b1-1-2",
         "reference_key": "verse:Dan.1.2",
         "entity_key": "entity:pl-shinar-af725b1",
         "kind": "location",
@@ -3280,7 +3180,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-5",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-5",
         "reference_key": "verse:Dan.11.5",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3290,7 +3190,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-6",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-6",
         "reference_key": "verse:Dan.11.6",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3300,7 +3200,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-7",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-7",
         "reference_key": "verse:Dan.11.7",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3310,7 +3210,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-9",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-9",
         "reference_key": "verse:Dan.11.9",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3320,7 +3220,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-11",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-11",
         "reference_key": "verse:Dan.11.11",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3330,7 +3230,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-12",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-12",
         "reference_key": "verse:Dan.11.12",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3340,7 +3240,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-14",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-14",
         "reference_key": "verse:Dan.11.14",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3350,7 +3250,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-15",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-15",
         "reference_key": "verse:Dan.11.15",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3360,7 +3260,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-17",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-17",
         "reference_key": "verse:Dan.11.17",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3370,7 +3270,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-25",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-25",
         "reference_key": "verse:Dan.11.25",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3380,7 +3280,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-29",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-29",
         "reference_key": "verse:Dan.11.29",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3390,7 +3290,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-south-3-a1c0469-11-40",
+        "attestation_key": "attestation:wb-dan-pl-south-3-a1c0469-11-40",
         "reference_key": "verse:Dan.11.40",
         "entity_key": "entity:pl-south-3-a1c0469",
         "kind": "location",
@@ -3400,17 +3300,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-8-2",
-        "reference_key": "verse:Dan.8.2",
-        "entity_key": "entity:pl-susa-a033b84",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-tigris-a38ebfd-10-4",
+        "attestation_key": "attestation:wb-dan-pl-tigris-a38ebfd-10-4",
         "reference_key": "verse:Dan.10.4",
         "entity_key": "entity:pl-tigris-a38ebfd",
         "kind": "location",
@@ -3420,7 +3310,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ulai-a7a7549-8-2",
+        "attestation_key": "attestation:wb-dan-pl-ulai-a7a7549-8-2",
         "reference_key": "verse:Dan.8.2",
         "entity_key": "entity:pl-ulai-a7a7549",
         "kind": "location",
@@ -3430,7 +3320,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ulai-a7a7549-8-16",
+        "attestation_key": "attestation:wb-dan-pl-ulai-a7a7549-8-16",
         "reference_key": "verse:Dan.8.16",
         "entity_key": "entity:pl-ulai-a7a7549",
         "kind": "location",
@@ -3440,9 +3330,119 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-uphaz-af55829-10-5",
+        "attestation_key": "attestation:wb-dan-pl-uphaz-af55829-10-5",
         "reference_key": "verse:Dan.10.5",
         "entity_key": "entity:pl-uphaz-af55829",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-susa-8-2",
+        "reference_key": "verse:Dan.8.2",
+        "entity_key": "entity:susa",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-1-1",
+        "reference_key": "verse:Dan.1.1",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-5-2",
+        "reference_key": "verse:Dan.5.2",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-5-3",
+        "reference_key": "verse:Dan.5.3",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-6-10",
+        "reference_key": "verse:Dan.6.10",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-9-2",
+        "reference_key": "verse:Dan.9.2",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-9-7",
+        "reference_key": "verse:Dan.9.7",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-9-12",
+        "reference_key": "verse:Dan.9.12",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-9-16",
+        "reference_key": "verse:Dan.9.16",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-9-20",
+        "reference_key": "verse:Dan.9.20",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-jerusalem-9-25",
+        "reference_key": "verse:Dan.9.25",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3452,7 +3452,7 @@
     ],
     "relationships": [
       {
-        "relationship_key": "relationship:wb-p-ahasuerus-1-ancestor-p-darius-2",
+        "relationship_key": "relationship:wb-dan-p-ahasuerus-1-ancestor-p-darius-2",
         "subject_entity_key": "entity:p-ahasuerus-1",
         "predicate_key": "relationship:ancestor",
         "object_entity_key": "entity:p-darius-2",
@@ -3463,7 +3463,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-ashpenaz-1-chief-official-p-nebuchadnezzar-1",
+        "relationship_key": "relationship:wb-dan-p-ashpenaz-1-chief-official-p-nebuchadnezzar-1",
         "subject_entity_key": "entity:p-ashpenaz-1",
         "predicate_key": "relationship:chief-official",
         "object_entity_key": "entity:p-nebuchadnezzar-1",
@@ -3474,7 +3474,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-belshazzar-1-son-p-nebuchadnezzar-1",
+        "relationship_key": "relationship:wb-dan-p-belshazzar-1-son-p-nebuchadnezzar-1",
         "subject_entity_key": "entity:p-belshazzar-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-nebuchadnezzar-1",
@@ -3485,7 +3485,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-darius-2-descendant-p-ahasuerus-1",
+        "relationship_key": "relationship:wb-dan-p-darius-2-descendant-p-ahasuerus-1",
         "subject_entity_key": "entity:p-darius-2",
         "predicate_key": "relationship:descendant",
         "object_entity_key": "entity:p-ahasuerus-1",
@@ -3496,7 +3496,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-daughter-of-the-king-of-the-south-1-daughter-p-king-of-the-south-1",
+        "relationship_key": "relationship:wb-dan-p-daughter-of-the-king-of-the-south-1-daughter-p-king-of-the-south-1",
         "subject_entity_key": "entity:p-daughter-of-the-king-of-the-south-1",
         "predicate_key": "relationship:daughter",
         "object_entity_key": "entity:p-king-of-the-south-1",
@@ -3507,7 +3507,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-king-of-the-south-1-father-p-daughter-of-the-king-of-the-south-1",
+        "relationship_key": "relationship:wb-dan-p-king-of-the-south-1-father-p-daughter-of-the-king-of-the-south-1",
         "subject_entity_key": "entity:p-king-of-the-south-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-daughter-of-the-king-of-the-south-1",
@@ -3518,7 +3518,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-nebuchadnezzar-1-father-p-belshazzar-1",
+        "relationship_key": "relationship:wb-dan-p-nebuchadnezzar-1-father-p-belshazzar-1",
         "subject_entity_key": "entity:p-nebuchadnezzar-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-belshazzar-1",
@@ -3529,7 +3529,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-nebuchadnezzar-1-king-p-ashpenaz-1",
+        "relationship_key": "relationship:wb-dan-p-nebuchadnezzar-1-king-p-ashpenaz-1",
         "subject_entity_key": "entity:p-nebuchadnezzar-1",
         "predicate_key": "relationship:king",
         "object_entity_key": "entity:p-ashpenaz-1",
@@ -3554,9 +3554,9 @@
           "entity:p-nebuchadnezzar-1"
         ],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-babylon-1-a217d18",
           "entity:pl-chaldea-a32a4f8",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-shinar-af725b1"
         ],
         "scripture_accounts": [
@@ -3932,7 +3932,7 @@
           "entity:p-nebuchadnezzar-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -4007,7 +4007,7 @@
           "entity:p-daniel-2"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -4082,8 +4082,8 @@
         "place_entity_keys": [
           "entity:pl-canaan-a581f0c",
           "entity:pl-elam-a7e3a59",
-          "entity:pl-susa-a033b84",
-          "entity:pl-ulai-a7a7549"
+          "entity:pl-ulai-a7a7549",
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -4127,9 +4127,9 @@
           "entity:p-moses-1"
         ],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-chaldea-a32a4f8",
-          "entity:pl-egypt-af301ca",
-          "entity:pl-jerusalem-a15257a"
+          "entity:pl-egypt-af301ca"
         ],
         "scripture_accounts": [
           {
@@ -4148,7 +4148,7 @@
           "entity:p-gabriel-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-most-holy-place-2-a9acaaf"
         ],
         "scripture_accounts": [
@@ -4273,17 +4273,6 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-kittim-aeb46a8",
         "geographic_positions": [
           {
@@ -4372,17 +4361,6 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-susa-a033b84",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-susa-a033b84",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-tigris-a38ebfd",
         "geographic_positions": [
           {
@@ -4409,6 +4387,28 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-uphaz-af55829",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:susa",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-susa-a033b84",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -5057,42 +5057,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-dan-1-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-dan-1:refsys:eng-v22:dan.1.1-dan.1.21",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-dan-5-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-dan-5:refsys:eng-v22:dan.5.1-dan.5.31",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-dan-6-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-dan-6:refsys:eng-v22:dan.6.1-dan.6.28",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-dan-9-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-dan-9:refsys:eng-v22:dan.9.1-dan.9.27",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "central",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-dan-11-pl-kittim-aeb46a8",
         "scope_key": "scope:wb-dan-11:refsys:eng-v22:dan.11.1-dan.11.45",
         "entity_key": "entity:pl-kittim-aeb46a8",
@@ -5183,15 +5147,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-dan-8-pl-susa-a033b84",
-        "scope_key": "scope:wb-dan-8:refsys:eng-v22:dan.8.1-dan.8.27",
-        "entity_key": "entity:pl-susa-a033b84",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-dan-10-pl-tigris-a38ebfd",
         "scope_key": "scope:wb-dan-10:refsys:eng-v22:dan.10.1-dan.10.21",
         "entity_key": "entity:pl-tigris-a38ebfd",
@@ -5214,6 +5169,51 @@
         "scope_key": "scope:wb-dan-10:refsys:eng-v22:dan.10.1-dan.10.21",
         "entity_key": "entity:pl-uphaz-af55829",
         "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-dan-8-susa",
+        "scope_key": "scope:wb-dan-8:refsys:eng-v22:dan.8.1-dan.8.27",
+        "entity_key": "entity:susa",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-dan-1-jerusalem",
+        "scope_key": "scope:wb-dan-1:refsys:eng-v22:dan.1.1-dan.1.21",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-dan-5-jerusalem",
+        "scope_key": "scope:wb-dan-5:refsys:eng-v22:dan.5.1-dan.5.31",
+        "entity_key": "entity:jerusalem",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-dan-6-jerusalem",
+        "scope_key": "scope:wb-dan-6:refsys:eng-v22:dan.6.1-dan.6.28",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-dan-9-jerusalem",
+        "scope_key": "scope:wb-dan-9:refsys:eng-v22:dan.9.1-dan.9.27",
+        "entity_key": "entity:jerusalem",
+        "importance": "central",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -5435,12 +5435,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-kittim-aeb46a8",
         "canonical_entity_key": "entity:pl-kittim-aeb46a8",
         "resolution_status": "resolved_existing",
@@ -5489,12 +5483,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-susa-a033b84",
-        "canonical_entity_key": "entity:pl-susa-a033b84",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-tigris-a38ebfd",
         "canonical_entity_key": "entity:pl-tigris-a38ebfd",
         "resolution_status": "resolved_existing",
@@ -5509,6 +5497,18 @@
       {
         "candidate_key": "candidate:wb:pl-uphaz-af55829",
         "canonical_entity_key": "entity:pl-uphaz-af55829",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:susa",
+        "canonical_entity_key": "entity:susa",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -5720,10 +5720,10 @@
             "verse:Dan.1.1"
           ],
           "record_keys": [
-            "attestation:wb-p-eliakim-2-1-1",
-            "attestation:wb-p-nebuchadnezzar-1-1-1",
-            "attestation:wb-pl-babylon-1-a217d18-1-1",
-            "attestation:wb-pl-jerusalem-a15257a-1-1"
+            "attestation:wb-dan-jerusalem-1-1",
+            "attestation:wb-dan-p-eliakim-2-1-1",
+            "attestation:wb-dan-p-nebuchadnezzar-1-1-1",
+            "attestation:wb-dan-pl-babylon-1-a217d18-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -5733,8 +5733,8 @@
             "verse:Dan.1.2"
           ],
           "record_keys": [
-            "attestation:wb-p-eliakim-2-1-2",
-            "attestation:wb-pl-shinar-af725b1-1-2"
+            "attestation:wb-dan-p-eliakim-2-1-2",
+            "attestation:wb-dan-pl-shinar-af725b1-1-2"
           ],
           "blocker_question_keys": []
         },
@@ -5744,9 +5744,9 @@
             "verse:Dan.1.3"
           ],
           "record_keys": [
-            "attestation:wb-p-ashpenaz-1-1-3",
-            "attestation:wb-p-jacob-1-1-3",
-            "attestation:wb-pl-babylon-1-a217d18-1-3"
+            "attestation:wb-dan-p-ashpenaz-1-1-3",
+            "attestation:wb-dan-p-jacob-1-1-3",
+            "attestation:wb-dan-pl-babylon-1-a217d18-1-3"
           ],
           "blocker_question_keys": []
         },
@@ -5756,7 +5756,7 @@
             "verse:Dan.1.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-1-4"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-1-4"
           ],
           "blocker_question_keys": []
         },
@@ -5766,9 +5766,9 @@
             "verse:Dan.1.6"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-6",
-            "attestation:wb-p-hananiah-12-1-6",
-            "attestation:wb-p-judah-1-1-6"
+            "attestation:wb-dan-p-daniel-2-1-6",
+            "attestation:wb-dan-p-hananiah-12-1-6",
+            "attestation:wb-dan-p-judah-1-1-6"
           ],
           "blocker_question_keys": []
         },
@@ -5778,8 +5778,8 @@
             "verse:Dan.1.7"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-7",
-            "attestation:wb-p-hananiah-12-1-7"
+            "attestation:wb-dan-p-daniel-2-1-7",
+            "attestation:wb-dan-p-hananiah-12-1-7"
           ],
           "blocker_question_keys": []
         },
@@ -5789,7 +5789,7 @@
             "verse:Dan.1.8"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-8"
+            "attestation:wb-dan-p-daniel-2-1-8"
           ],
           "blocker_question_keys": []
         },
@@ -5799,7 +5799,7 @@
             "verse:Dan.1.9"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-9"
+            "attestation:wb-dan-p-daniel-2-1-9"
           ],
           "blocker_question_keys": []
         },
@@ -5809,7 +5809,7 @@
             "verse:Dan.1.10"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-10"
+            "attestation:wb-dan-p-daniel-2-1-10"
           ],
           "blocker_question_keys": []
         },
@@ -5819,8 +5819,8 @@
             "verse:Dan.1.11"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-11",
-            "attestation:wb-p-hananiah-12-1-11"
+            "attestation:wb-dan-p-daniel-2-1-11",
+            "attestation:wb-dan-p-hananiah-12-1-11"
           ],
           "blocker_question_keys": []
         },
@@ -5830,7 +5830,7 @@
             "verse:Dan.1.17"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-17"
+            "attestation:wb-dan-p-daniel-2-1-17"
           ],
           "blocker_question_keys": []
         },
@@ -5840,7 +5840,7 @@
             "verse:Dan.1.18"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-1-18"
+            "attestation:wb-dan-p-nebuchadnezzar-1-1-18"
           ],
           "blocker_question_keys": []
         },
@@ -5850,8 +5850,8 @@
             "verse:Dan.1.19"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-1-19",
-            "attestation:wb-p-hananiah-12-1-19"
+            "attestation:wb-dan-p-daniel-2-1-19",
+            "attestation:wb-dan-p-hananiah-12-1-19"
           ],
           "blocker_question_keys": []
         },
@@ -5861,8 +5861,8 @@
             "verse:Dan.1.21"
           ],
           "record_keys": [
-            "attestation:wb-p-cyrus-1-1-21",
-            "attestation:wb-p-daniel-2-1-21"
+            "attestation:wb-dan-p-cyrus-1-1-21",
+            "attestation:wb-dan-p-daniel-2-1-21"
           ],
           "blocker_question_keys": []
         },
@@ -5872,7 +5872,7 @@
             "verse:Dan.2.1"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-2-1"
+            "attestation:wb-dan-p-nebuchadnezzar-1-2-1"
           ],
           "blocker_question_keys": []
         },
@@ -5882,7 +5882,7 @@
             "verse:Dan.2.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-2-2"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-2-2"
           ],
           "blocker_question_keys": []
         },
@@ -5892,7 +5892,7 @@
             "verse:Dan.2.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-2-4"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-2-4"
           ],
           "blocker_question_keys": []
         },
@@ -5902,7 +5902,7 @@
             "verse:Dan.2.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-2-5"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-2-5"
           ],
           "blocker_question_keys": []
         },
@@ -5912,7 +5912,7 @@
             "verse:Dan.2.10"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-2-10"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-2-10"
           ],
           "blocker_question_keys": []
         },
@@ -5922,7 +5922,7 @@
             "verse:Dan.2.12"
           ],
           "record_keys": [
-            "attestation:wb-pl-babylon-1-a217d18-2-12"
+            "attestation:wb-dan-pl-babylon-1-a217d18-2-12"
           ],
           "blocker_question_keys": []
         },
@@ -5932,7 +5932,7 @@
             "verse:Dan.2.13"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-13"
+            "attestation:wb-dan-p-daniel-2-2-13"
           ],
           "blocker_question_keys": []
         },
@@ -5942,9 +5942,9 @@
             "verse:Dan.2.14"
           ],
           "record_keys": [
-            "attestation:wb-p-arioch-2-2-14",
-            "attestation:wb-p-daniel-2-2-14",
-            "attestation:wb-pl-babylon-1-a217d18-2-14"
+            "attestation:wb-dan-p-arioch-2-2-14",
+            "attestation:wb-dan-p-daniel-2-2-14",
+            "attestation:wb-dan-pl-babylon-1-a217d18-2-14"
           ],
           "blocker_question_keys": []
         },
@@ -5954,8 +5954,8 @@
             "verse:Dan.2.15"
           ],
           "record_keys": [
-            "attestation:wb-p-arioch-2-2-15",
-            "attestation:wb-p-daniel-2-2-15"
+            "attestation:wb-dan-p-arioch-2-2-15",
+            "attestation:wb-dan-p-daniel-2-2-15"
           ],
           "blocker_question_keys": []
         },
@@ -5965,7 +5965,7 @@
             "verse:Dan.2.16"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-16"
+            "attestation:wb-dan-p-daniel-2-2-16"
           ],
           "blocker_question_keys": []
         },
@@ -5975,8 +5975,8 @@
             "verse:Dan.2.17"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-17",
-            "attestation:wb-p-hananiah-12-2-17"
+            "attestation:wb-dan-p-daniel-2-2-17",
+            "attestation:wb-dan-p-hananiah-12-2-17"
           ],
           "blocker_question_keys": []
         },
@@ -5986,8 +5986,8 @@
             "verse:Dan.2.18"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-18",
-            "attestation:wb-pl-babylon-1-a217d18-2-18"
+            "attestation:wb-dan-p-daniel-2-2-18",
+            "attestation:wb-dan-pl-babylon-1-a217d18-2-18"
           ],
           "blocker_question_keys": []
         },
@@ -5997,7 +5997,7 @@
             "verse:Dan.2.19"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-19"
+            "attestation:wb-dan-p-daniel-2-2-19"
           ],
           "blocker_question_keys": []
         },
@@ -6007,7 +6007,7 @@
             "verse:Dan.2.20"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-20"
+            "attestation:wb-dan-p-daniel-2-2-20"
           ],
           "blocker_question_keys": []
         },
@@ -6017,9 +6017,9 @@
             "verse:Dan.2.24"
           ],
           "record_keys": [
-            "attestation:wb-p-arioch-2-2-24",
-            "attestation:wb-p-daniel-2-2-24",
-            "attestation:wb-pl-babylon-1-a217d18-2-24"
+            "attestation:wb-dan-p-arioch-2-2-24",
+            "attestation:wb-dan-p-daniel-2-2-24",
+            "attestation:wb-dan-pl-babylon-1-a217d18-2-24"
           ],
           "blocker_question_keys": []
         },
@@ -6029,8 +6029,8 @@
             "verse:Dan.2.25"
           ],
           "record_keys": [
-            "attestation:wb-p-arioch-2-2-25",
-            "attestation:wb-p-daniel-2-2-25"
+            "attestation:wb-dan-p-arioch-2-2-25",
+            "attestation:wb-dan-p-daniel-2-2-25"
           ],
           "blocker_question_keys": []
         },
@@ -6040,7 +6040,7 @@
             "verse:Dan.2.26"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-26"
+            "attestation:wb-dan-p-daniel-2-2-26"
           ],
           "blocker_question_keys": []
         },
@@ -6050,7 +6050,7 @@
             "verse:Dan.2.27"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-27"
+            "attestation:wb-dan-p-daniel-2-2-27"
           ],
           "blocker_question_keys": []
         },
@@ -6060,7 +6060,7 @@
             "verse:Dan.2.28"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-2-28"
+            "attestation:wb-dan-p-nebuchadnezzar-1-2-28"
           ],
           "blocker_question_keys": []
         },
@@ -6070,7 +6070,7 @@
             "verse:Dan.2.37"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-2-37"
+            "attestation:wb-dan-p-nebuchadnezzar-1-2-37"
           ],
           "blocker_question_keys": []
         },
@@ -6080,8 +6080,8 @@
             "verse:Dan.2.46"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-46",
-            "attestation:wb-p-nebuchadnezzar-1-2-46"
+            "attestation:wb-dan-p-daniel-2-2-46",
+            "attestation:wb-dan-p-nebuchadnezzar-1-2-46"
           ],
           "blocker_question_keys": []
         },
@@ -6091,7 +6091,7 @@
             "verse:Dan.2.47"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-47"
+            "attestation:wb-dan-p-daniel-2-2-47"
           ],
           "blocker_question_keys": []
         },
@@ -6101,8 +6101,8 @@
             "verse:Dan.2.48"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-48",
-            "attestation:wb-pl-babylon-1-a217d18-2-48"
+            "attestation:wb-dan-p-daniel-2-2-48",
+            "attestation:wb-dan-pl-babylon-1-a217d18-2-48"
           ],
           "blocker_question_keys": []
         },
@@ -6112,9 +6112,9 @@
             "verse:Dan.2.49"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-2-49",
-            "attestation:wb-p-hananiah-12-2-49",
-            "attestation:wb-pl-babylon-1-a217d18-2-49"
+            "attestation:wb-dan-p-daniel-2-2-49",
+            "attestation:wb-dan-p-hananiah-12-2-49",
+            "attestation:wb-dan-pl-babylon-1-a217d18-2-49"
           ],
           "blocker_question_keys": []
         },
@@ -6124,9 +6124,9 @@
             "verse:Dan.3.1"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-1",
-            "attestation:wb-pl-babylon-1-a217d18-3-1",
-            "attestation:wb-pl-dura-a3bcd66-3-1"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-1",
+            "attestation:wb-dan-pl-babylon-1-a217d18-3-1",
+            "attestation:wb-dan-pl-dura-a3bcd66-3-1"
           ],
           "blocker_question_keys": []
         },
@@ -6136,7 +6136,7 @@
             "verse:Dan.3.2"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-2"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-2"
           ],
           "blocker_question_keys": []
         },
@@ -6146,7 +6146,7 @@
             "verse:Dan.3.5"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-5"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-5"
           ],
           "blocker_question_keys": []
         },
@@ -6156,7 +6156,7 @@
             "verse:Dan.3.7"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-7"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-7"
           ],
           "blocker_question_keys": []
         },
@@ -6166,7 +6166,7 @@
             "verse:Dan.3.8"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-3-8"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-3-8"
           ],
           "blocker_question_keys": []
         },
@@ -6176,7 +6176,7 @@
             "verse:Dan.3.9"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-9"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-9"
           ],
           "blocker_question_keys": []
         },
@@ -6186,8 +6186,8 @@
             "verse:Dan.3.12"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-12",
-            "attestation:wb-pl-babylon-1-a217d18-3-12"
+            "attestation:wb-dan-p-hananiah-12-3-12",
+            "attestation:wb-dan-pl-babylon-1-a217d18-3-12"
           ],
           "blocker_question_keys": []
         },
@@ -6197,8 +6197,8 @@
             "verse:Dan.3.13"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-13",
-            "attestation:wb-p-nebuchadnezzar-1-3-13"
+            "attestation:wb-dan-p-hananiah-12-3-13",
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-13"
           ],
           "blocker_question_keys": []
         },
@@ -6208,8 +6208,8 @@
             "verse:Dan.3.14"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-14",
-            "attestation:wb-p-nebuchadnezzar-1-3-14"
+            "attestation:wb-dan-p-hananiah-12-3-14",
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-14"
           ],
           "blocker_question_keys": []
         },
@@ -6219,8 +6219,8 @@
             "verse:Dan.3.16"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-16",
-            "attestation:wb-p-nebuchadnezzar-1-3-16"
+            "attestation:wb-dan-p-hananiah-12-3-16",
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-16"
           ],
           "blocker_question_keys": []
         },
@@ -6230,8 +6230,8 @@
             "verse:Dan.3.19"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-19",
-            "attestation:wb-p-nebuchadnezzar-1-3-19"
+            "attestation:wb-dan-p-hananiah-12-3-19",
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-19"
           ],
           "blocker_question_keys": []
         },
@@ -6241,7 +6241,7 @@
             "verse:Dan.3.20"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-20"
+            "attestation:wb-dan-p-hananiah-12-3-20"
           ],
           "blocker_question_keys": []
         },
@@ -6251,7 +6251,7 @@
             "verse:Dan.3.22"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-22"
+            "attestation:wb-dan-p-hananiah-12-3-22"
           ],
           "blocker_question_keys": []
         },
@@ -6261,7 +6261,7 @@
             "verse:Dan.3.23"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-23"
+            "attestation:wb-dan-p-hananiah-12-3-23"
           ],
           "blocker_question_keys": []
         },
@@ -6271,7 +6271,7 @@
             "verse:Dan.3.24"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-24"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-24"
           ],
           "blocker_question_keys": []
         },
@@ -6281,8 +6281,8 @@
             "verse:Dan.3.26"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-26",
-            "attestation:wb-p-nebuchadnezzar-1-3-26"
+            "attestation:wb-dan-p-hananiah-12-3-26",
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-26"
           ],
           "blocker_question_keys": []
         },
@@ -6292,7 +6292,7 @@
             "verse:Dan.3.28"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-3-28"
+            "attestation:wb-dan-p-nebuchadnezzar-1-3-28"
           ],
           "blocker_question_keys": []
         },
@@ -6302,8 +6302,8 @@
             "verse:Dan.3.30"
           ],
           "record_keys": [
-            "attestation:wb-p-hananiah-12-3-30",
-            "attestation:wb-pl-babylon-1-a217d18-3-30"
+            "attestation:wb-dan-p-hananiah-12-3-30",
+            "attestation:wb-dan-pl-babylon-1-a217d18-3-30"
           ],
           "blocker_question_keys": []
         },
@@ -6313,7 +6313,7 @@
             "verse:Dan.4.1"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-1"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-1"
           ],
           "blocker_question_keys": []
         },
@@ -6323,7 +6323,7 @@
             "verse:Dan.4.4"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-4"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-4"
           ],
           "blocker_question_keys": []
         },
@@ -6333,7 +6333,7 @@
             "verse:Dan.4.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-babylon-1-a217d18-4-6"
+            "attestation:wb-dan-pl-babylon-1-a217d18-4-6"
           ],
           "blocker_question_keys": []
         },
@@ -6343,7 +6343,7 @@
             "verse:Dan.4.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-chaldea-a32a4f8-4-7"
+            "attestation:wb-dan-pl-chaldea-a32a4f8-4-7"
           ],
           "blocker_question_keys": []
         },
@@ -6353,7 +6353,7 @@
             "verse:Dan.4.8"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-4-8"
+            "attestation:wb-dan-p-daniel-2-4-8"
           ],
           "blocker_question_keys": []
         },
@@ -6363,7 +6363,7 @@
             "verse:Dan.4.9"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-4-9"
+            "attestation:wb-dan-p-daniel-2-4-9"
           ],
           "blocker_question_keys": []
         },
@@ -6373,8 +6373,8 @@
             "verse:Dan.4.18"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-4-18",
-            "attestation:wb-p-nebuchadnezzar-1-4-18"
+            "attestation:wb-dan-p-daniel-2-4-18",
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-18"
           ],
           "blocker_question_keys": []
         },
@@ -6384,7 +6384,7 @@
             "verse:Dan.4.19"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-4-19"
+            "attestation:wb-dan-p-daniel-2-4-19"
           ],
           "blocker_question_keys": []
         },
@@ -6394,7 +6394,7 @@
             "verse:Dan.4.28"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-28"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-28"
           ],
           "blocker_question_keys": []
         },
@@ -6404,7 +6404,7 @@
             "verse:Dan.4.29"
           ],
           "record_keys": [
-            "attestation:wb-pl-babylon-1-a217d18-4-29"
+            "attestation:wb-dan-pl-babylon-1-a217d18-4-29"
           ],
           "blocker_question_keys": []
         },
@@ -6414,7 +6414,7 @@
             "verse:Dan.4.30"
           ],
           "record_keys": [
-            "attestation:wb-pl-babylon-1-a217d18-4-30"
+            "attestation:wb-dan-pl-babylon-1-a217d18-4-30"
           ],
           "blocker_question_keys": []
         },
@@ -6424,7 +6424,7 @@
             "verse:Dan.4.31"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-31"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-31"
           ],
           "blocker_question_keys": []
         },
@@ -6434,7 +6434,7 @@
             "verse:Dan.4.33"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-33"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-33"
           ],
           "blocker_question_keys": []
         },
@@ -6444,7 +6444,7 @@
             "verse:Dan.4.34"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-34"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-34"
           ],
           "blocker_question_keys": []
         },
@@ -6454,7 +6454,7 @@
             "verse:Dan.4.37"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-4-37"
+            "attestation:wb-dan-p-nebuchadnezzar-1-4-37"
           ],
           "blocker_question_keys": []
         },
@@ -6464,7 +6464,7 @@
             "verse:Dan.5.1"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-5-1"
+            "attestation:wb-dan-p-belshazzar-1-5-1"
           ],
           "blocker_question_keys": []
         },
@@ -6474,9 +6474,9 @@
             "verse:Dan.5.2"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-5-2",
-            "attestation:wb-p-nebuchadnezzar-1-5-2",
-            "attestation:wb-pl-jerusalem-a15257a-5-2"
+            "attestation:wb-dan-jerusalem-5-2",
+            "attestation:wb-dan-p-belshazzar-1-5-2",
+            "attestation:wb-dan-p-nebuchadnezzar-1-5-2"
           ],
           "blocker_question_keys": []
         },
@@ -6486,7 +6486,7 @@
             "verse:Dan.5.3"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-5-3"
+            "attestation:wb-dan-jerusalem-5-3"
           ],
           "blocker_question_keys": []
         },
@@ -6496,8 +6496,8 @@
             "verse:Dan.5.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-babylon-1-a217d18-5-7",
-            "attestation:wb-pl-chaldea-a32a4f8-5-7"
+            "attestation:wb-dan-pl-babylon-1-a217d18-5-7",
+            "attestation:wb-dan-pl-chaldea-a32a4f8-5-7"
           ],
           "blocker_question_keys": []
         },
@@ -6507,7 +6507,7 @@
             "verse:Dan.5.9"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-5-9"
+            "attestation:wb-dan-p-belshazzar-1-5-9"
           ],
           "blocker_question_keys": []
         },
@@ -6517,9 +6517,9 @@
             "verse:Dan.5.11"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-5-11",
-            "attestation:wb-pl-babylon-1-a217d18-5-11",
-            "attestation:wb-pl-chaldea-a32a4f8-5-11"
+            "attestation:wb-dan-p-nebuchadnezzar-1-5-11",
+            "attestation:wb-dan-pl-babylon-1-a217d18-5-11",
+            "attestation:wb-dan-pl-chaldea-a32a4f8-5-11"
           ],
           "blocker_question_keys": []
         },
@@ -6529,7 +6529,7 @@
             "verse:Dan.5.12"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-5-12"
+            "attestation:wb-dan-p-daniel-2-5-12"
           ],
           "blocker_question_keys": []
         },
@@ -6539,7 +6539,7 @@
             "verse:Dan.5.13"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-5-13"
+            "attestation:wb-dan-p-daniel-2-5-13"
           ],
           "blocker_question_keys": []
         },
@@ -6549,7 +6549,7 @@
             "verse:Dan.5.17"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-5-17"
+            "attestation:wb-dan-p-daniel-2-5-17"
           ],
           "blocker_question_keys": []
         },
@@ -6559,7 +6559,7 @@
             "verse:Dan.5.18"
           ],
           "record_keys": [
-            "attestation:wb-p-nebuchadnezzar-1-5-18"
+            "attestation:wb-dan-p-nebuchadnezzar-1-5-18"
           ],
           "blocker_question_keys": []
         },
@@ -6569,7 +6569,7 @@
             "verse:Dan.5.22"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-5-22"
+            "attestation:wb-dan-p-daniel-2-5-22"
           ],
           "blocker_question_keys": []
         },
@@ -6579,8 +6579,8 @@
             "verse:Dan.5.29"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-5-29",
-            "attestation:wb-p-daniel-2-5-29"
+            "attestation:wb-dan-p-belshazzar-1-5-29",
+            "attestation:wb-dan-p-daniel-2-5-29"
           ],
           "blocker_question_keys": []
         },
@@ -6590,7 +6590,7 @@
             "verse:Dan.5.30"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-5-30"
+            "attestation:wb-dan-p-belshazzar-1-5-30"
           ],
           "blocker_question_keys": []
         },
@@ -6600,7 +6600,7 @@
             "verse:Dan.5.31"
           ],
           "record_keys": [
-            "attestation:wb-p-darius-1-5-31"
+            "attestation:wb-dan-p-darius-1-5-31"
           ],
           "blocker_question_keys": []
         },
@@ -6610,7 +6610,7 @@
             "verse:Dan.6.1"
           ],
           "record_keys": [
-            "attestation:wb-p-darius-1-6-1"
+            "attestation:wb-dan-p-darius-1-6-1"
           ],
           "blocker_question_keys": []
         },
@@ -6620,7 +6620,7 @@
             "verse:Dan.6.2"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-2"
+            "attestation:wb-dan-p-daniel-2-6-2"
           ],
           "blocker_question_keys": []
         },
@@ -6630,7 +6630,7 @@
             "verse:Dan.6.3"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-3"
+            "attestation:wb-dan-p-daniel-2-6-3"
           ],
           "blocker_question_keys": []
         },
@@ -6640,7 +6640,7 @@
             "verse:Dan.6.4"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-4"
+            "attestation:wb-dan-p-daniel-2-6-4"
           ],
           "blocker_question_keys": []
         },
@@ -6650,7 +6650,7 @@
             "verse:Dan.6.5"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-5"
+            "attestation:wb-dan-p-daniel-2-6-5"
           ],
           "blocker_question_keys": []
         },
@@ -6660,7 +6660,7 @@
             "verse:Dan.6.6"
           ],
           "record_keys": [
-            "attestation:wb-p-darius-1-6-6"
+            "attestation:wb-dan-p-darius-1-6-6"
           ],
           "blocker_question_keys": []
         },
@@ -6670,7 +6670,7 @@
             "verse:Dan.6.9"
           ],
           "record_keys": [
-            "attestation:wb-p-darius-1-6-9"
+            "attestation:wb-dan-p-darius-1-6-9"
           ],
           "blocker_question_keys": []
         },
@@ -6680,8 +6680,8 @@
             "verse:Dan.6.10"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-10",
-            "attestation:wb-pl-jerusalem-a15257a-6-10"
+            "attestation:wb-dan-jerusalem-6-10",
+            "attestation:wb-dan-p-daniel-2-6-10"
           ],
           "blocker_question_keys": []
         },
@@ -6691,7 +6691,7 @@
             "verse:Dan.6.11"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-11"
+            "attestation:wb-dan-p-daniel-2-6-11"
           ],
           "blocker_question_keys": []
         },
@@ -6701,7 +6701,7 @@
             "verse:Dan.6.13"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-13"
+            "attestation:wb-dan-p-daniel-2-6-13"
           ],
           "blocker_question_keys": []
         },
@@ -6711,7 +6711,7 @@
             "verse:Dan.6.14"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-14"
+            "attestation:wb-dan-p-daniel-2-6-14"
           ],
           "blocker_question_keys": []
         },
@@ -6721,7 +6721,7 @@
             "verse:Dan.6.16"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-16"
+            "attestation:wb-dan-p-daniel-2-6-16"
           ],
           "blocker_question_keys": []
         },
@@ -6731,7 +6731,7 @@
             "verse:Dan.6.17"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-17"
+            "attestation:wb-dan-p-daniel-2-6-17"
           ],
           "blocker_question_keys": []
         },
@@ -6741,7 +6741,7 @@
             "verse:Dan.6.20"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-20"
+            "attestation:wb-dan-p-daniel-2-6-20"
           ],
           "blocker_question_keys": []
         },
@@ -6751,7 +6751,7 @@
             "verse:Dan.6.21"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-21"
+            "attestation:wb-dan-p-daniel-2-6-21"
           ],
           "blocker_question_keys": []
         },
@@ -6761,7 +6761,7 @@
             "verse:Dan.6.23"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-23"
+            "attestation:wb-dan-p-daniel-2-6-23"
           ],
           "blocker_question_keys": []
         },
@@ -6771,7 +6771,7 @@
             "verse:Dan.6.24"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-24"
+            "attestation:wb-dan-p-daniel-2-6-24"
           ],
           "blocker_question_keys": []
         },
@@ -6781,7 +6781,7 @@
             "verse:Dan.6.25"
           ],
           "record_keys": [
-            "attestation:wb-p-darius-1-6-25"
+            "attestation:wb-dan-p-darius-1-6-25"
           ],
           "blocker_question_keys": []
         },
@@ -6791,7 +6791,7 @@
             "verse:Dan.6.27"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-6-27"
+            "attestation:wb-dan-p-daniel-2-6-27"
           ],
           "blocker_question_keys": []
         },
@@ -6801,9 +6801,9 @@
             "verse:Dan.6.28"
           ],
           "record_keys": [
-            "attestation:wb-p-cyrus-1-6-28",
-            "attestation:wb-p-daniel-2-6-28",
-            "attestation:wb-p-darius-1-6-28"
+            "attestation:wb-dan-p-cyrus-1-6-28",
+            "attestation:wb-dan-p-daniel-2-6-28",
+            "attestation:wb-dan-p-darius-1-6-28"
           ],
           "blocker_question_keys": []
         },
@@ -6813,9 +6813,9 @@
             "verse:Dan.7.1"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-7-1",
-            "attestation:wb-p-daniel-2-7-1",
-            "attestation:wb-pl-babylon-1-a217d18-7-1"
+            "attestation:wb-dan-p-belshazzar-1-7-1",
+            "attestation:wb-dan-p-daniel-2-7-1",
+            "attestation:wb-dan-pl-babylon-1-a217d18-7-1"
           ],
           "blocker_question_keys": []
         },
@@ -6825,8 +6825,8 @@
             "verse:Dan.7.2"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-7-2",
-            "attestation:wb-pl-great-sea-aa805fb-7-2"
+            "attestation:wb-dan-p-daniel-2-7-2",
+            "attestation:wb-dan-pl-great-sea-aa805fb-7-2"
           ],
           "blocker_question_keys": []
         },
@@ -6836,7 +6836,7 @@
             "verse:Dan.7.15"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-7-15"
+            "attestation:wb-dan-p-daniel-2-7-15"
           ],
           "blocker_question_keys": []
         },
@@ -6846,7 +6846,7 @@
             "verse:Dan.7.28"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-7-28"
+            "attestation:wb-dan-p-daniel-2-7-28"
           ],
           "blocker_question_keys": []
         },
@@ -6856,8 +6856,8 @@
             "verse:Dan.8.1"
           ],
           "record_keys": [
-            "attestation:wb-p-belshazzar-1-8-1",
-            "attestation:wb-p-daniel-2-8-1"
+            "attestation:wb-dan-p-belshazzar-1-8-1",
+            "attestation:wb-dan-p-daniel-2-8-1"
           ],
           "blocker_question_keys": []
         },
@@ -6867,9 +6867,9 @@
             "verse:Dan.8.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-elam-a7e3a59-8-2",
-            "attestation:wb-pl-susa-a033b84-8-2",
-            "attestation:wb-pl-ulai-a7a7549-8-2"
+            "attestation:wb-dan-pl-elam-a7e3a59-8-2",
+            "attestation:wb-dan-pl-ulai-a7a7549-8-2",
+            "attestation:wb-dan-susa-8-2"
           ],
           "blocker_question_keys": []
         },
@@ -6879,7 +6879,7 @@
             "verse:Dan.8.9"
           ],
           "record_keys": [
-            "attestation:wb-pl-canaan-a581f0c-8-9"
+            "attestation:wb-dan-pl-canaan-a581f0c-8-9"
           ],
           "blocker_question_keys": []
         },
@@ -6889,7 +6889,7 @@
             "verse:Dan.8.15"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-8-15"
+            "attestation:wb-dan-p-daniel-2-8-15"
           ],
           "blocker_question_keys": []
         },
@@ -6899,8 +6899,8 @@
             "verse:Dan.8.16"
           ],
           "record_keys": [
-            "attestation:wb-p-gabriel-1-8-16",
-            "attestation:wb-pl-ulai-a7a7549-8-16"
+            "attestation:wb-dan-p-gabriel-1-8-16",
+            "attestation:wb-dan-pl-ulai-a7a7549-8-16"
           ],
           "blocker_question_keys": []
         },
@@ -6910,7 +6910,7 @@
             "verse:Dan.8.17"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-8-17"
+            "attestation:wb-dan-p-daniel-2-8-17"
           ],
           "blocker_question_keys": []
         },
@@ -6920,8 +6920,8 @@
             "verse:Dan.8.20"
           ],
           "record_keys": [
-            "attestation:wb-pl-media-ad2fadf-8-20",
-            "attestation:wb-pl-persia-ab9696f-8-20"
+            "attestation:wb-dan-pl-media-ad2fadf-8-20",
+            "attestation:wb-dan-pl-persia-ab9696f-8-20"
           ],
           "blocker_question_keys": []
         },
@@ -6931,7 +6931,7 @@
             "verse:Dan.8.21"
           ],
           "record_keys": [
-            "attestation:wb-pl-greece-a4492a0-8-21"
+            "attestation:wb-dan-pl-greece-a4492a0-8-21"
           ],
           "blocker_question_keys": []
         },
@@ -6941,7 +6941,7 @@
             "verse:Dan.8.27"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-8-27"
+            "attestation:wb-dan-p-daniel-2-8-27"
           ],
           "blocker_question_keys": []
         },
@@ -6951,9 +6951,9 @@
             "verse:Dan.9.1"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-9-1",
-            "attestation:wb-p-darius-2-9-1",
-            "attestation:wb-pl-chaldea-a32a4f8-9-1"
+            "attestation:wb-dan-p-ahasuerus-1-9-1",
+            "attestation:wb-dan-p-darius-2-9-1",
+            "attestation:wb-dan-pl-chaldea-a32a4f8-9-1"
           ],
           "blocker_question_keys": []
         },
@@ -6963,9 +6963,9 @@
             "verse:Dan.9.2"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-9-2",
-            "attestation:wb-p-jeremiah-6-9-2",
-            "attestation:wb-pl-jerusalem-a15257a-9-2"
+            "attestation:wb-dan-jerusalem-9-2",
+            "attestation:wb-dan-p-daniel-2-9-2",
+            "attestation:wb-dan-p-jeremiah-6-9-2"
           ],
           "blocker_question_keys": []
         },
@@ -6975,7 +6975,7 @@
             "verse:Dan.9.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-9-7"
+            "attestation:wb-dan-jerusalem-9-7"
           ],
           "blocker_question_keys": []
         },
@@ -6985,7 +6985,7 @@
             "verse:Dan.9.11"
           ],
           "record_keys": [
-            "attestation:wb-p-moses-1-9-11"
+            "attestation:wb-dan-p-moses-1-9-11"
           ],
           "blocker_question_keys": []
         },
@@ -6995,7 +6995,7 @@
             "verse:Dan.9.12"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-9-12"
+            "attestation:wb-dan-jerusalem-9-12"
           ],
           "blocker_question_keys": []
         },
@@ -7005,7 +7005,7 @@
             "verse:Dan.9.13"
           ],
           "record_keys": [
-            "attestation:wb-p-moses-1-9-13"
+            "attestation:wb-dan-p-moses-1-9-13"
           ],
           "blocker_question_keys": []
         },
@@ -7015,7 +7015,7 @@
             "verse:Dan.9.15"
           ],
           "record_keys": [
-            "attestation:wb-pl-egypt-af301ca-9-15"
+            "attestation:wb-dan-pl-egypt-af301ca-9-15"
           ],
           "blocker_question_keys": []
         },
@@ -7025,7 +7025,7 @@
             "verse:Dan.9.16"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-9-16"
+            "attestation:wb-dan-jerusalem-9-16"
           ],
           "blocker_question_keys": []
         },
@@ -7035,7 +7035,7 @@
             "verse:Dan.9.20"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-9-20"
+            "attestation:wb-dan-jerusalem-9-20"
           ],
           "blocker_question_keys": []
         },
@@ -7045,7 +7045,7 @@
             "verse:Dan.9.21"
           ],
           "record_keys": [
-            "attestation:wb-p-gabriel-1-9-21"
+            "attestation:wb-dan-p-gabriel-1-9-21"
           ],
           "blocker_question_keys": []
         },
@@ -7055,7 +7055,7 @@
             "verse:Dan.9.22"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-9-22"
+            "attestation:wb-dan-p-daniel-2-9-22"
           ],
           "blocker_question_keys": []
         },
@@ -7065,7 +7065,7 @@
             "verse:Dan.9.24"
           ],
           "record_keys": [
-            "attestation:wb-pl-most-holy-place-2-a9acaaf-9-24"
+            "attestation:wb-dan-pl-most-holy-place-2-a9acaaf-9-24"
           ],
           "blocker_question_keys": []
         },
@@ -7075,7 +7075,7 @@
             "verse:Dan.9.25"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-9-25"
+            "attestation:wb-dan-jerusalem-9-25"
           ],
           "blocker_question_keys": []
         },
@@ -7085,9 +7085,9 @@
             "verse:Dan.10.1"
           ],
           "record_keys": [
-            "attestation:wb-p-cyrus-1-10-1",
-            "attestation:wb-p-daniel-2-10-1",
-            "attestation:wb-pl-persia-ab9696f-10-1"
+            "attestation:wb-dan-p-cyrus-1-10-1",
+            "attestation:wb-dan-p-daniel-2-10-1",
+            "attestation:wb-dan-pl-persia-ab9696f-10-1"
           ],
           "blocker_question_keys": []
         },
@@ -7097,7 +7097,7 @@
             "verse:Dan.10.2"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-10-2"
+            "attestation:wb-dan-p-daniel-2-10-2"
           ],
           "blocker_question_keys": []
         },
@@ -7107,7 +7107,7 @@
             "verse:Dan.10.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-tigris-a38ebfd-10-4"
+            "attestation:wb-dan-pl-tigris-a38ebfd-10-4"
           ],
           "blocker_question_keys": []
         },
@@ -7117,7 +7117,7 @@
             "verse:Dan.10.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-uphaz-af55829-10-5"
+            "attestation:wb-dan-pl-uphaz-af55829-10-5"
           ],
           "blocker_question_keys": []
         },
@@ -7127,7 +7127,7 @@
             "verse:Dan.10.7"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-10-7"
+            "attestation:wb-dan-p-daniel-2-10-7"
           ],
           "blocker_question_keys": []
         },
@@ -7137,7 +7137,7 @@
             "verse:Dan.10.11"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-10-11"
+            "attestation:wb-dan-p-daniel-2-10-11"
           ],
           "blocker_question_keys": []
         },
@@ -7147,7 +7147,7 @@
             "verse:Dan.10.12"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-10-12"
+            "attestation:wb-dan-p-daniel-2-10-12"
           ],
           "blocker_question_keys": []
         },
@@ -7157,9 +7157,9 @@
             "verse:Dan.10.13"
           ],
           "record_keys": [
-            "attestation:wb-p-michael-9-10-13",
-            "attestation:wb-p-prince-of-the-kingdom-of-persia-1-10-13",
-            "attestation:wb-pl-persia-ab9696f-10-13"
+            "attestation:wb-dan-p-michael-9-10-13",
+            "attestation:wb-dan-p-prince-of-the-kingdom-of-persia-1-10-13",
+            "attestation:wb-dan-pl-persia-ab9696f-10-13"
           ],
           "blocker_question_keys": []
         },
@@ -7169,10 +7169,10 @@
             "verse:Dan.10.20"
           ],
           "record_keys": [
-            "attestation:wb-p-prince-of-greece-1-10-20",
-            "attestation:wb-p-prince-of-the-kingdom-of-persia-1-10-20",
-            "attestation:wb-pl-greece-a4492a0-10-20",
-            "attestation:wb-pl-persia-ab9696f-10-20"
+            "attestation:wb-dan-p-prince-of-greece-1-10-20",
+            "attestation:wb-dan-p-prince-of-the-kingdom-of-persia-1-10-20",
+            "attestation:wb-dan-pl-greece-a4492a0-10-20",
+            "attestation:wb-dan-pl-persia-ab9696f-10-20"
           ],
           "blocker_question_keys": []
         },
@@ -7182,7 +7182,7 @@
             "verse:Dan.10.21"
           ],
           "record_keys": [
-            "attestation:wb-p-michael-9-10-21"
+            "attestation:wb-dan-p-michael-9-10-21"
           ],
           "blocker_question_keys": []
         },
@@ -7192,7 +7192,7 @@
             "verse:Dan.11.1"
           ],
           "record_keys": [
-            "attestation:wb-p-darius-1-11-1"
+            "attestation:wb-dan-p-darius-1-11-1"
           ],
           "blocker_question_keys": []
         },
@@ -7202,8 +7202,8 @@
             "verse:Dan.11.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-greece-a4492a0-11-2",
-            "attestation:wb-pl-persia-ab9696f-11-2"
+            "attestation:wb-dan-pl-greece-a4492a0-11-2",
+            "attestation:wb-dan-pl-persia-ab9696f-11-2"
           ],
           "blocker_question_keys": []
         },
@@ -7213,8 +7213,8 @@
             "verse:Dan.11.5"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-south-1-11-5",
-            "attestation:wb-pl-south-3-a1c0469-11-5"
+            "attestation:wb-dan-p-king-of-the-south-1-11-5",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-5"
           ],
           "blocker_question_keys": []
         },
@@ -7224,10 +7224,10 @@
             "verse:Dan.11.6"
           ],
           "record_keys": [
-            "attestation:wb-p-daughter-of-the-king-of-the-south-1-11-6",
-            "attestation:wb-p-king-of-the-north-1-11-6",
-            "attestation:wb-pl-north-a244929-11-6",
-            "attestation:wb-pl-south-3-a1c0469-11-6"
+            "attestation:wb-dan-p-daughter-of-the-king-of-the-south-1-11-6",
+            "attestation:wb-dan-p-king-of-the-north-1-11-6",
+            "attestation:wb-dan-pl-north-a244929-11-6",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-6"
           ],
           "blocker_question_keys": []
         },
@@ -7237,9 +7237,9 @@
             "verse:Dan.11.7"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-north-1-11-7",
-            "attestation:wb-pl-north-a244929-11-7",
-            "attestation:wb-pl-south-3-a1c0469-11-7"
+            "attestation:wb-dan-p-king-of-the-north-1-11-7",
+            "attestation:wb-dan-pl-north-a244929-11-7",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-7"
           ],
           "blocker_question_keys": []
         },
@@ -7249,9 +7249,9 @@
             "verse:Dan.11.8"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-north-1-11-8",
-            "attestation:wb-pl-egypt-af301ca-11-8",
-            "attestation:wb-pl-north-a244929-11-8"
+            "attestation:wb-dan-p-king-of-the-north-1-11-8",
+            "attestation:wb-dan-pl-egypt-af301ca-11-8",
+            "attestation:wb-dan-pl-north-a244929-11-8"
           ],
           "blocker_question_keys": []
         },
@@ -7261,9 +7261,9 @@
             "verse:Dan.11.9"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-south-1-11-9",
-            "attestation:wb-pl-north-a244929-11-9",
-            "attestation:wb-pl-south-3-a1c0469-11-9"
+            "attestation:wb-dan-p-king-of-the-south-1-11-9",
+            "attestation:wb-dan-pl-north-a244929-11-9",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-9"
           ],
           "blocker_question_keys": []
         },
@@ -7273,10 +7273,10 @@
             "verse:Dan.11.11"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-north-1-11-11",
-            "attestation:wb-p-king-of-the-south-1-11-11",
-            "attestation:wb-pl-north-a244929-11-11",
-            "attestation:wb-pl-south-3-a1c0469-11-11"
+            "attestation:wb-dan-p-king-of-the-north-1-11-11",
+            "attestation:wb-dan-p-king-of-the-south-1-11-11",
+            "attestation:wb-dan-pl-north-a244929-11-11",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-11"
           ],
           "blocker_question_keys": []
         },
@@ -7286,7 +7286,7 @@
             "verse:Dan.11.12"
           ],
           "record_keys": [
-            "attestation:wb-pl-south-3-a1c0469-11-12"
+            "attestation:wb-dan-pl-south-3-a1c0469-11-12"
           ],
           "blocker_question_keys": []
         },
@@ -7296,8 +7296,8 @@
             "verse:Dan.11.13"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-north-1-11-13",
-            "attestation:wb-pl-north-a244929-11-13"
+            "attestation:wb-dan-p-king-of-the-north-1-11-13",
+            "attestation:wb-dan-pl-north-a244929-11-13"
           ],
           "blocker_question_keys": []
         },
@@ -7307,8 +7307,8 @@
             "verse:Dan.11.14"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-south-1-11-14",
-            "attestation:wb-pl-south-3-a1c0469-11-14"
+            "attestation:wb-dan-p-king-of-the-south-1-11-14",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-14"
           ],
           "blocker_question_keys": []
         },
@@ -7318,9 +7318,9 @@
             "verse:Dan.11.15"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-north-1-11-15",
-            "attestation:wb-pl-north-a244929-11-15",
-            "attestation:wb-pl-south-3-a1c0469-11-15"
+            "attestation:wb-dan-p-king-of-the-north-1-11-15",
+            "attestation:wb-dan-pl-north-a244929-11-15",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-15"
           ],
           "blocker_question_keys": []
         },
@@ -7330,8 +7330,8 @@
             "verse:Dan.11.16"
           ],
           "record_keys": [
-            "attestation:wb-pl-canaan-a581f0c-11-16",
-            "attestation:wb-pl-north-a244929-11-16"
+            "attestation:wb-dan-pl-canaan-a581f0c-11-16",
+            "attestation:wb-dan-pl-north-a244929-11-16"
           ],
           "blocker_question_keys": []
         },
@@ -7341,7 +7341,7 @@
             "verse:Dan.11.17"
           ],
           "record_keys": [
-            "attestation:wb-pl-south-3-a1c0469-11-17"
+            "attestation:wb-dan-pl-south-3-a1c0469-11-17"
           ],
           "blocker_question_keys": []
         },
@@ -7351,7 +7351,7 @@
             "verse:Dan.11.21"
           ],
           "record_keys": [
-            "attestation:wb-p-a-despicable-person-1-11-21"
+            "attestation:wb-dan-p-a-despicable-person-1-11-21"
           ],
           "blocker_question_keys": []
         },
@@ -7361,8 +7361,8 @@
             "verse:Dan.11.25"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-south-1-11-25",
-            "attestation:wb-pl-south-3-a1c0469-11-25"
+            "attestation:wb-dan-p-king-of-the-south-1-11-25",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-25"
           ],
           "blocker_question_keys": []
         },
@@ -7372,7 +7372,7 @@
             "verse:Dan.11.28"
           ],
           "record_keys": [
-            "attestation:wb-pl-north-a244929-11-28"
+            "attestation:wb-dan-pl-north-a244929-11-28"
           ],
           "blocker_question_keys": []
         },
@@ -7382,7 +7382,7 @@
             "verse:Dan.11.29"
           ],
           "record_keys": [
-            "attestation:wb-pl-south-3-a1c0469-11-29"
+            "attestation:wb-dan-pl-south-3-a1c0469-11-29"
           ],
           "blocker_question_keys": []
         },
@@ -7392,7 +7392,7 @@
             "verse:Dan.11.30"
           ],
           "record_keys": [
-            "attestation:wb-pl-kittim-aeb46a8-11-30"
+            "attestation:wb-dan-pl-kittim-aeb46a8-11-30"
           ],
           "blocker_question_keys": []
         },
@@ -7402,10 +7402,10 @@
             "verse:Dan.11.40"
           ],
           "record_keys": [
-            "attestation:wb-p-king-of-the-north-1-11-40",
-            "attestation:wb-p-king-of-the-south-1-11-40",
-            "attestation:wb-pl-north-a244929-11-40",
-            "attestation:wb-pl-south-3-a1c0469-11-40"
+            "attestation:wb-dan-p-king-of-the-north-1-11-40",
+            "attestation:wb-dan-p-king-of-the-south-1-11-40",
+            "attestation:wb-dan-pl-north-a244929-11-40",
+            "attestation:wb-dan-pl-south-3-a1c0469-11-40"
           ],
           "blocker_question_keys": []
         },
@@ -7415,11 +7415,11 @@
             "verse:Dan.11.41"
           ],
           "record_keys": [
-            "attestation:wb-p-ben-ammi-1-11-41",
-            "attestation:wb-pl-ammon-a6046fa-11-41",
-            "attestation:wb-pl-canaan-a581f0c-11-41",
-            "attestation:wb-pl-edom-a2735ff-11-41",
-            "attestation:wb-pl-moab-1-aa0b1d6-11-41"
+            "attestation:wb-dan-p-ben-ammi-1-11-41",
+            "attestation:wb-dan-pl-ammon-a6046fa-11-41",
+            "attestation:wb-dan-pl-canaan-a581f0c-11-41",
+            "attestation:wb-dan-pl-edom-a2735ff-11-41",
+            "attestation:wb-dan-pl-moab-1-aa0b1d6-11-41"
           ],
           "blocker_question_keys": []
         },
@@ -7429,7 +7429,7 @@
             "verse:Dan.11.42"
           ],
           "record_keys": [
-            "attestation:wb-pl-egypt-af301ca-11-42"
+            "attestation:wb-dan-pl-egypt-af301ca-11-42"
           ],
           "blocker_question_keys": []
         },
@@ -7439,7 +7439,7 @@
             "verse:Dan.11.43"
           ],
           "record_keys": [
-            "attestation:wb-pl-egypt-af301ca-11-43"
+            "attestation:wb-dan-pl-egypt-af301ca-11-43"
           ],
           "blocker_question_keys": []
         },
@@ -7449,7 +7449,7 @@
             "verse:Dan.12.1"
           ],
           "record_keys": [
-            "attestation:wb-p-michael-9-12-1"
+            "attestation:wb-dan-p-michael-9-12-1"
           ],
           "blocker_question_keys": []
         },
@@ -7459,7 +7459,7 @@
             "verse:Dan.12.4"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-12-4"
+            "attestation:wb-dan-p-daniel-2-12-4"
           ],
           "blocker_question_keys": []
         },
@@ -7469,7 +7469,7 @@
             "verse:Dan.12.5"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-12-5"
+            "attestation:wb-dan-p-daniel-2-12-5"
           ],
           "blocker_question_keys": []
         },
@@ -7479,7 +7479,7 @@
             "verse:Dan.12.9"
           ],
           "record_keys": [
-            "attestation:wb-p-daniel-2-12-9"
+            "attestation:wb-dan-p-daniel-2-12-9"
           ],
           "blocker_question_keys": []
         }

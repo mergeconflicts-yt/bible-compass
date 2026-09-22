@@ -224,7 +224,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -635,15 +635,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-media-ad2fadf",
         "entity_type": "place",
         "proposed_label": "Media",
@@ -662,9 +653,18 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-susa-a033b84",
+        "candidate_key": "candidate:wb:susa",
         "entity_type": "place",
         "proposed_label": "Susa",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -675,7 +675,7 @@
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-nebuchadnezzar-1-2-6",
+        "attestation_key": "attestation:wb-esth-p-nebuchadnezzar-1-2-6",
         "reference_key": "verse:Esth.2.6",
         "entity_key": "entity:p-nebuchadnezzar-1",
         "kind": "participant",
@@ -685,7 +685,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jehoiachin-1-2-6",
+        "attestation_key": "attestation:wb-esth-p-jehoiachin-1-2-6",
         "reference_key": "verse:Esth.2.6",
         "entity_key": "entity:p-jehoiachin-1",
         "kind": "participant",
@@ -695,7 +695,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-1",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-1",
         "reference_key": "verse:Esth.1.1",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -705,7 +705,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-2",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-2",
         "reference_key": "verse:Esth.1.2",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -715,7 +715,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-9",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-9",
         "reference_key": "verse:Esth.1.9",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -725,7 +725,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -735,7 +735,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-15",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-15",
         "reference_key": "verse:Esth.1.15",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -745,7 +745,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-16",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-16",
         "reference_key": "verse:Esth.1.16",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -755,7 +755,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-17",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-17",
         "reference_key": "verse:Esth.1.17",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -765,7 +765,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-1-19",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-1-19",
         "reference_key": "verse:Esth.1.19",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -775,7 +775,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-2-1",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-2-1",
         "reference_key": "verse:Esth.2.1",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -785,7 +785,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-2-12",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-2-12",
         "reference_key": "verse:Esth.2.12",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -795,7 +795,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-2-16",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-2-16",
         "reference_key": "verse:Esth.2.16",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -805,7 +805,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-2-21",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-2-21",
         "reference_key": "verse:Esth.2.21",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -815,7 +815,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-3-1",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-3-1",
         "reference_key": "verse:Esth.3.1",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -825,7 +825,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-3-6",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-3-6",
         "reference_key": "verse:Esth.3.6",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -835,7 +835,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-3-7",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-3-7",
         "reference_key": "verse:Esth.3.7",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -845,7 +845,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-3-8",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-3-8",
         "reference_key": "verse:Esth.3.8",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -855,7 +855,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-3-12",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-3-12",
         "reference_key": "verse:Esth.3.12",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -865,7 +865,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-6-2",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-6-2",
         "reference_key": "verse:Esth.6.2",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -875,7 +875,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-7-5",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-7-5",
         "reference_key": "verse:Esth.7.5",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -885,7 +885,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-8-1",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-8-1",
         "reference_key": "verse:Esth.8.1",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -895,7 +895,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-8-7",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-8-7",
         "reference_key": "verse:Esth.8.7",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -905,7 +905,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-8-10",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-8-10",
         "reference_key": "verse:Esth.8.10",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -915,7 +915,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-8-12",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-8-12",
         "reference_key": "verse:Esth.8.12",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -925,7 +925,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-9-2",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-9-2",
         "reference_key": "verse:Esth.9.2",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -935,7 +935,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-9-20",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-9-20",
         "reference_key": "verse:Esth.9.20",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -945,7 +945,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-9-30",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-9-30",
         "reference_key": "verse:Esth.9.30",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -955,7 +955,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-10-1",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-10-1",
         "reference_key": "verse:Esth.10.1",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -965,7 +965,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ahasuerus-1-10-3",
+        "attestation_key": "attestation:wb-esth-p-ahasuerus-1-10-3",
         "reference_key": "verse:Esth.10.3",
         "entity_key": "entity:p-ahasuerus-1",
         "kind": "participant",
@@ -975,7 +975,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-9",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-9",
         "reference_key": "verse:Esth.1.9",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -985,7 +985,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-11",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-11",
         "reference_key": "verse:Esth.1.11",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -995,7 +995,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-12",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-12",
         "reference_key": "verse:Esth.1.12",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1005,7 +1005,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-15",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-15",
         "reference_key": "verse:Esth.1.15",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1015,7 +1015,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-16",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-16",
         "reference_key": "verse:Esth.1.16",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1025,7 +1025,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-17",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-17",
         "reference_key": "verse:Esth.1.17",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1035,7 +1035,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-1-19",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-1-19",
         "reference_key": "verse:Esth.1.19",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1045,7 +1045,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-2-1",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-2-1",
         "reference_key": "verse:Esth.2.1",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1055,7 +1055,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-2-4",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-2-4",
         "reference_key": "verse:Esth.2.4",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1065,7 +1065,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vashti-1-2-17",
+        "attestation_key": "attestation:wb-esth-p-vashti-1-2-17",
         "reference_key": "verse:Esth.2.17",
         "entity_key": "entity:p-vashti-1",
         "kind": "participant",
@@ -1075,7 +1075,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mehuman-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-mehuman-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-mehuman-1",
         "kind": "participant",
@@ -1085,7 +1085,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-biztha-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-biztha-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-biztha-1",
         "kind": "participant",
@@ -1095,7 +1095,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-harbona-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-harbona-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-harbona-1",
         "kind": "participant",
@@ -1105,7 +1105,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-harbona-1-7-9",
+        "attestation_key": "attestation:wb-esth-p-harbona-1-7-9",
         "reference_key": "verse:Esth.7.9",
         "entity_key": "entity:p-harbona-1",
         "kind": "participant",
@@ -1115,7 +1115,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-bigtha-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-bigtha-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-bigtha-1",
         "kind": "participant",
@@ -1125,7 +1125,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-abagtha-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-abagtha-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-abagtha-1",
         "kind": "participant",
@@ -1135,7 +1135,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-zethar-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-zethar-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-zethar-1",
         "kind": "participant",
@@ -1145,7 +1145,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-carkas-1-1-10",
+        "attestation_key": "attestation:wb-esth-p-carkas-1-1-10",
         "reference_key": "verse:Esth.1.10",
         "entity_key": "entity:p-carkas-1",
         "kind": "participant",
@@ -1155,7 +1155,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-carshena-1-1-14",
+        "attestation_key": "attestation:wb-esth-p-carshena-1-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-carshena-1",
         "kind": "participant",
@@ -1165,7 +1165,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-shethar-1-1-14",
+        "attestation_key": "attestation:wb-esth-p-shethar-1-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-shethar-1",
         "kind": "participant",
@@ -1175,7 +1175,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-admatha-1-1-14",
+        "attestation_key": "attestation:wb-esth-p-admatha-1-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-admatha-1",
         "kind": "participant",
@@ -1185,7 +1185,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-tarshish-3-1-14",
+        "attestation_key": "attestation:wb-esth-p-tarshish-3-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-tarshish-3",
         "kind": "participant",
@@ -1195,7 +1195,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-meres-1-1-14",
+        "attestation_key": "attestation:wb-esth-p-meres-1-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-meres-1",
         "kind": "participant",
@@ -1205,7 +1205,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-marsena-1-1-14",
+        "attestation_key": "attestation:wb-esth-p-marsena-1-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-marsena-1",
         "kind": "participant",
@@ -1215,7 +1215,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-memucan-1-1-14",
+        "attestation_key": "attestation:wb-esth-p-memucan-1-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:p-memucan-1",
         "kind": "participant",
@@ -1225,7 +1225,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-memucan-1-1-16",
+        "attestation_key": "attestation:wb-esth-p-memucan-1-1-16",
         "reference_key": "verse:Esth.1.16",
         "entity_key": "entity:p-memucan-1",
         "kind": "participant",
@@ -1235,7 +1235,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-memucan-1-1-21",
+        "attestation_key": "attestation:wb-esth-p-memucan-1-1-21",
         "reference_key": "verse:Esth.1.21",
         "entity_key": "entity:p-memucan-1",
         "kind": "participant",
@@ -1245,7 +1245,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hegai-1-2-3",
+        "attestation_key": "attestation:wb-esth-p-hegai-1-2-3",
         "reference_key": "verse:Esth.2.3",
         "entity_key": "entity:p-hegai-1",
         "kind": "participant",
@@ -1255,7 +1255,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hegai-1-2-8",
+        "attestation_key": "attestation:wb-esth-p-hegai-1-2-8",
         "reference_key": "verse:Esth.2.8",
         "entity_key": "entity:p-hegai-1",
         "kind": "participant",
@@ -1265,7 +1265,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hegai-1-2-15",
+        "attestation_key": "attestation:wb-esth-p-hegai-1-2-15",
         "reference_key": "verse:Esth.2.15",
         "entity_key": "entity:p-hegai-1",
         "kind": "participant",
@@ -1275,7 +1275,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-5",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-5",
         "reference_key": "verse:Esth.2.5",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1285,7 +1285,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-7",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-7",
         "reference_key": "verse:Esth.2.7",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1295,7 +1295,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-10",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-10",
         "reference_key": "verse:Esth.2.10",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1305,7 +1305,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-11",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-11",
         "reference_key": "verse:Esth.2.11",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1315,7 +1315,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-15",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-15",
         "reference_key": "verse:Esth.2.15",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1325,7 +1325,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-19",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-19",
         "reference_key": "verse:Esth.2.19",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1335,7 +1335,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-20",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-20",
         "reference_key": "verse:Esth.2.20",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1345,7 +1345,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-21",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-21",
         "reference_key": "verse:Esth.2.21",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1355,7 +1355,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-2-22",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-2-22",
         "reference_key": "verse:Esth.2.22",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1365,7 +1365,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-3-2",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-3-2",
         "reference_key": "verse:Esth.3.2",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1375,7 +1375,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-3-3",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-3-3",
         "reference_key": "verse:Esth.3.3",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1385,7 +1385,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-3-4",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-3-4",
         "reference_key": "verse:Esth.3.4",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1395,7 +1395,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-3-5",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-3-5",
         "reference_key": "verse:Esth.3.5",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1405,7 +1405,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-3-6",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-3-6",
         "reference_key": "verse:Esth.3.6",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1415,7 +1415,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-1",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-1",
         "reference_key": "verse:Esth.4.1",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1425,7 +1425,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-4",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-4",
         "reference_key": "verse:Esth.4.4",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1435,7 +1435,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-5",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-5",
         "reference_key": "verse:Esth.4.5",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1445,7 +1445,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-6",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-6",
         "reference_key": "verse:Esth.4.6",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1455,7 +1455,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-7",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-7",
         "reference_key": "verse:Esth.4.7",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1465,7 +1465,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-9",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-9",
         "reference_key": "verse:Esth.4.9",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1475,7 +1475,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-10",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-10",
         "reference_key": "verse:Esth.4.10",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1485,7 +1485,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-12",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-12",
         "reference_key": "verse:Esth.4.12",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1495,7 +1495,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-13",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-13",
         "reference_key": "verse:Esth.4.13",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1505,7 +1505,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-15",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-15",
         "reference_key": "verse:Esth.4.15",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1515,7 +1515,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-4-17",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-4-17",
         "reference_key": "verse:Esth.4.17",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1525,7 +1525,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-5-9",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-5-9",
         "reference_key": "verse:Esth.5.9",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1535,7 +1535,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-5-13",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-5-13",
         "reference_key": "verse:Esth.5.13",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1545,7 +1545,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-5-14",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-5-14",
         "reference_key": "verse:Esth.5.14",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1555,7 +1555,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-2",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-2",
         "reference_key": "verse:Esth.6.2",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1565,7 +1565,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-3",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-3",
         "reference_key": "verse:Esth.6.3",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1575,7 +1575,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-4",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-4",
         "reference_key": "verse:Esth.6.4",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1585,7 +1585,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-10",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-10",
         "reference_key": "verse:Esth.6.10",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1595,7 +1595,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-11",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-11",
         "reference_key": "verse:Esth.6.11",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1605,7 +1605,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-12",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-12",
         "reference_key": "verse:Esth.6.12",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1615,7 +1615,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-6-13",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-6-13",
         "reference_key": "verse:Esth.6.13",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1625,7 +1625,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-7-9",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-7-9",
         "reference_key": "verse:Esth.7.9",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1635,7 +1635,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-7-10",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-7-10",
         "reference_key": "verse:Esth.7.10",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1645,7 +1645,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-8-1",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-8-1",
         "reference_key": "verse:Esth.8.1",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1655,7 +1655,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-8-2",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-8-2",
         "reference_key": "verse:Esth.8.2",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1665,7 +1665,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-8-7",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-8-7",
         "reference_key": "verse:Esth.8.7",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1675,7 +1675,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-8-9",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-8-9",
         "reference_key": "verse:Esth.8.9",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1685,7 +1685,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-8-15",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-8-15",
         "reference_key": "verse:Esth.8.15",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1695,7 +1695,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-9-3",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-9-3",
         "reference_key": "verse:Esth.9.3",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1705,7 +1705,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-9-4",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-9-4",
         "reference_key": "verse:Esth.9.4",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1715,7 +1715,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-9-20",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-9-20",
         "reference_key": "verse:Esth.9.20",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1725,7 +1725,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-9-23",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-9-23",
         "reference_key": "verse:Esth.9.23",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1735,7 +1735,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-9-29",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-9-29",
         "reference_key": "verse:Esth.9.29",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1745,7 +1745,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-9-31",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-9-31",
         "reference_key": "verse:Esth.9.31",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1755,7 +1755,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-10-2",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-10-2",
         "reference_key": "verse:Esth.10.2",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1765,7 +1765,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-mordecai-2-10-3",
+        "attestation_key": "attestation:wb-esth-p-mordecai-2-10-3",
         "reference_key": "verse:Esth.10.3",
         "entity_key": "entity:p-mordecai-2",
         "kind": "participant",
@@ -1775,7 +1775,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jair-3-2-5",
+        "attestation_key": "attestation:wb-esth-p-jair-3-2-5",
         "reference_key": "verse:Esth.2.5",
         "entity_key": "entity:p-jair-3",
         "kind": "participant",
@@ -1785,7 +1785,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-shimei-17-2-5",
+        "attestation_key": "attestation:wb-esth-p-shimei-17-2-5",
         "reference_key": "verse:Esth.2.5",
         "entity_key": "entity:p-shimei-17",
         "kind": "participant",
@@ -1795,7 +1795,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-kish-4-2-5",
+        "attestation_key": "attestation:wb-esth-p-kish-4-2-5",
         "reference_key": "verse:Esth.2.5",
         "entity_key": "entity:p-kish-4",
         "kind": "participant",
@@ -1805,7 +1805,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-7",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-7",
         "reference_key": "verse:Esth.2.7",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1815,7 +1815,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-8",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-8",
         "reference_key": "verse:Esth.2.8",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1825,7 +1825,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-10",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-10",
         "reference_key": "verse:Esth.2.10",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1835,7 +1835,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-11",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-11",
         "reference_key": "verse:Esth.2.11",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1845,7 +1845,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-15",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-15",
         "reference_key": "verse:Esth.2.15",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1855,7 +1855,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-16",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-16",
         "reference_key": "verse:Esth.2.16",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1865,7 +1865,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-17",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-17",
         "reference_key": "verse:Esth.2.17",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1875,7 +1875,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-18",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-18",
         "reference_key": "verse:Esth.2.18",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1885,7 +1885,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-20",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-20",
         "reference_key": "verse:Esth.2.20",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1895,7 +1895,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-2-22",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-2-22",
         "reference_key": "verse:Esth.2.22",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1905,7 +1905,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-4",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-4",
         "reference_key": "verse:Esth.4.4",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1915,7 +1915,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-5",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-5",
         "reference_key": "verse:Esth.4.5",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1925,7 +1925,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-8",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-8",
         "reference_key": "verse:Esth.4.8",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1935,7 +1935,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-9",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-9",
         "reference_key": "verse:Esth.4.9",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1945,7 +1945,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-10",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-10",
         "reference_key": "verse:Esth.4.10",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1955,7 +1955,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-12",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-12",
         "reference_key": "verse:Esth.4.12",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1965,7 +1965,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-13",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-13",
         "reference_key": "verse:Esth.4.13",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1975,7 +1975,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-15",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-15",
         "reference_key": "verse:Esth.4.15",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1985,7 +1985,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-4-17",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-4-17",
         "reference_key": "verse:Esth.4.17",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -1995,7 +1995,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-1",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-1",
         "reference_key": "verse:Esth.5.1",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2005,7 +2005,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-2",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-2",
         "reference_key": "verse:Esth.5.2",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2015,7 +2015,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-3",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-3",
         "reference_key": "verse:Esth.5.3",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2025,7 +2025,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-4",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-4",
         "reference_key": "verse:Esth.5.4",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2035,7 +2035,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-5",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-5",
         "reference_key": "verse:Esth.5.5",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2045,7 +2045,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-6",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-6",
         "reference_key": "verse:Esth.5.6",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2055,7 +2055,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-7",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-7",
         "reference_key": "verse:Esth.5.7",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2065,7 +2065,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-5-12",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-5-12",
         "reference_key": "verse:Esth.5.12",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2075,7 +2075,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-6-14",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-6-14",
         "reference_key": "verse:Esth.6.14",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2085,7 +2085,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-1",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-1",
         "reference_key": "verse:Esth.7.1",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2095,7 +2095,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-2",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-2",
         "reference_key": "verse:Esth.7.2",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2105,7 +2105,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-3",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-3",
         "reference_key": "verse:Esth.7.3",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2115,7 +2115,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-5",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-5",
         "reference_key": "verse:Esth.7.5",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2125,7 +2125,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-6",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-6",
         "reference_key": "verse:Esth.7.6",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2135,7 +2135,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-7",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-7",
         "reference_key": "verse:Esth.7.7",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2145,7 +2145,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-7-8",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-7-8",
         "reference_key": "verse:Esth.7.8",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2155,7 +2155,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-8-1",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-8-1",
         "reference_key": "verse:Esth.8.1",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2165,7 +2165,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-8-2",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-8-2",
         "reference_key": "verse:Esth.8.2",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2175,7 +2175,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-8-3",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-8-3",
         "reference_key": "verse:Esth.8.3",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2185,7 +2185,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-8-4",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-8-4",
         "reference_key": "verse:Esth.8.4",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2195,7 +2195,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-8-7",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-8-7",
         "reference_key": "verse:Esth.8.7",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2205,7 +2205,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-9-12",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-9-12",
         "reference_key": "verse:Esth.9.12",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2215,7 +2215,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-9-13",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-9-13",
         "reference_key": "verse:Esth.9.13",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2225,7 +2225,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-9-29",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-9-29",
         "reference_key": "verse:Esth.9.29",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2235,7 +2235,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-9-31",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-9-31",
         "reference_key": "verse:Esth.9.31",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2245,7 +2245,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hadassah-1-9-32",
+        "attestation_key": "attestation:wb-esth-p-hadassah-1-9-32",
         "reference_key": "verse:Esth.9.32",
         "entity_key": "entity:p-hadassah-1",
         "kind": "participant",
@@ -2255,7 +2255,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-shaashgaz-1-2-14",
+        "attestation_key": "attestation:wb-esth-p-shaashgaz-1-2-14",
         "reference_key": "verse:Esth.2.14",
         "entity_key": "entity:p-shaashgaz-1",
         "kind": "participant",
@@ -2265,7 +2265,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-abihail-5-2-15",
+        "attestation_key": "attestation:wb-esth-p-abihail-5-2-15",
         "reference_key": "verse:Esth.2.15",
         "entity_key": "entity:p-abihail-5",
         "kind": "participant",
@@ -2275,7 +2275,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-abihail-5-9-29",
+        "attestation_key": "attestation:wb-esth-p-abihail-5-9-29",
         "reference_key": "verse:Esth.9.29",
         "entity_key": "entity:p-abihail-5",
         "kind": "participant",
@@ -2285,7 +2285,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-bigthan-1-2-21",
+        "attestation_key": "attestation:wb-esth-p-bigthan-1-2-21",
         "reference_key": "verse:Esth.2.21",
         "entity_key": "entity:p-bigthan-1",
         "kind": "participant",
@@ -2295,7 +2295,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-bigthan-1-6-2",
+        "attestation_key": "attestation:wb-esth-p-bigthan-1-6-2",
         "reference_key": "verse:Esth.6.2",
         "entity_key": "entity:p-bigthan-1",
         "kind": "participant",
@@ -2305,7 +2305,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-teresh-1-2-21",
+        "attestation_key": "attestation:wb-esth-p-teresh-1-2-21",
         "reference_key": "verse:Esth.2.21",
         "entity_key": "entity:p-teresh-1",
         "kind": "participant",
@@ -2315,7 +2315,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-teresh-1-6-2",
+        "attestation_key": "attestation:wb-esth-p-teresh-1-6-2",
         "reference_key": "verse:Esth.6.2",
         "entity_key": "entity:p-teresh-1",
         "kind": "participant",
@@ -2325,7 +2325,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-1",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-1",
         "reference_key": "verse:Esth.3.1",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2335,7 +2335,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-2",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-2",
         "reference_key": "verse:Esth.3.2",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2345,7 +2345,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-4",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-4",
         "reference_key": "verse:Esth.3.4",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2355,7 +2355,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-5",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-5",
         "reference_key": "verse:Esth.3.5",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2365,7 +2365,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-6",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-6",
         "reference_key": "verse:Esth.3.6",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2375,7 +2375,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-7",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-7",
         "reference_key": "verse:Esth.3.7",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2385,7 +2385,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-8",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-8",
         "reference_key": "verse:Esth.3.8",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2395,7 +2395,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-10",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-10",
         "reference_key": "verse:Esth.3.10",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2405,7 +2405,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-11",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-11",
         "reference_key": "verse:Esth.3.11",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2415,7 +2415,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-12",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-12",
         "reference_key": "verse:Esth.3.12",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2425,7 +2425,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-3-15",
+        "attestation_key": "attestation:wb-esth-p-haman-1-3-15",
         "reference_key": "verse:Esth.3.15",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2435,7 +2435,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-4-7",
+        "attestation_key": "attestation:wb-esth-p-haman-1-4-7",
         "reference_key": "verse:Esth.4.7",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2445,7 +2445,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-4",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-4",
         "reference_key": "verse:Esth.5.4",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2455,7 +2455,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-5",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-5",
         "reference_key": "verse:Esth.5.5",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2465,7 +2465,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-8",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-8",
         "reference_key": "verse:Esth.5.8",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2475,7 +2475,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-9",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-9",
         "reference_key": "verse:Esth.5.9",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2485,7 +2485,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-10",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-10",
         "reference_key": "verse:Esth.5.10",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2495,7 +2495,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-11",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-11",
         "reference_key": "verse:Esth.5.11",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2505,7 +2505,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-12",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-12",
         "reference_key": "verse:Esth.5.12",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2515,7 +2515,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-5-14",
+        "attestation_key": "attestation:wb-esth-p-haman-1-5-14",
         "reference_key": "verse:Esth.5.14",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2525,7 +2525,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-4",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-4",
         "reference_key": "verse:Esth.6.4",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2535,7 +2535,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-5",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-5",
         "reference_key": "verse:Esth.6.5",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2545,7 +2545,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-6",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-6",
         "reference_key": "verse:Esth.6.6",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2555,7 +2555,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-7",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-7",
         "reference_key": "verse:Esth.6.7",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2565,7 +2565,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-10",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-10",
         "reference_key": "verse:Esth.6.10",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2575,7 +2575,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-11",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-11",
         "reference_key": "verse:Esth.6.11",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2585,7 +2585,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-12",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-12",
         "reference_key": "verse:Esth.6.12",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2595,7 +2595,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-13",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-13",
         "reference_key": "verse:Esth.6.13",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2605,7 +2605,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-6-14",
+        "attestation_key": "attestation:wb-esth-p-haman-1-6-14",
         "reference_key": "verse:Esth.6.14",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2615,7 +2615,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-7-1",
+        "attestation_key": "attestation:wb-esth-p-haman-1-7-1",
         "reference_key": "verse:Esth.7.1",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2625,7 +2625,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-7-6",
+        "attestation_key": "attestation:wb-esth-p-haman-1-7-6",
         "reference_key": "verse:Esth.7.6",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2635,7 +2635,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-7-7",
+        "attestation_key": "attestation:wb-esth-p-haman-1-7-7",
         "reference_key": "verse:Esth.7.7",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2645,7 +2645,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-7-8",
+        "attestation_key": "attestation:wb-esth-p-haman-1-7-8",
         "reference_key": "verse:Esth.7.8",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2655,7 +2655,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-7-9",
+        "attestation_key": "attestation:wb-esth-p-haman-1-7-9",
         "reference_key": "verse:Esth.7.9",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2665,7 +2665,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-7-10",
+        "attestation_key": "attestation:wb-esth-p-haman-1-7-10",
         "reference_key": "verse:Esth.7.10",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2675,7 +2675,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-8-1",
+        "attestation_key": "attestation:wb-esth-p-haman-1-8-1",
         "reference_key": "verse:Esth.8.1",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2685,7 +2685,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-8-2",
+        "attestation_key": "attestation:wb-esth-p-haman-1-8-2",
         "reference_key": "verse:Esth.8.2",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2695,7 +2695,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-8-3",
+        "attestation_key": "attestation:wb-esth-p-haman-1-8-3",
         "reference_key": "verse:Esth.8.3",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2705,7 +2705,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-8-5",
+        "attestation_key": "attestation:wb-esth-p-haman-1-8-5",
         "reference_key": "verse:Esth.8.5",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2715,7 +2715,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-8-7",
+        "attestation_key": "attestation:wb-esth-p-haman-1-8-7",
         "reference_key": "verse:Esth.8.7",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2725,7 +2725,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-9-10",
+        "attestation_key": "attestation:wb-esth-p-haman-1-9-10",
         "reference_key": "verse:Esth.9.10",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2735,7 +2735,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-9-12",
+        "attestation_key": "attestation:wb-esth-p-haman-1-9-12",
         "reference_key": "verse:Esth.9.12",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2745,7 +2745,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-9-13",
+        "attestation_key": "attestation:wb-esth-p-haman-1-9-13",
         "reference_key": "verse:Esth.9.13",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2755,7 +2755,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-9-14",
+        "attestation_key": "attestation:wb-esth-p-haman-1-9-14",
         "reference_key": "verse:Esth.9.14",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2765,7 +2765,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-haman-1-9-24",
+        "attestation_key": "attestation:wb-esth-p-haman-1-9-24",
         "reference_key": "verse:Esth.9.24",
         "entity_key": "entity:p-haman-1",
         "kind": "participant",
@@ -2775,7 +2775,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hammedatha-1-3-1",
+        "attestation_key": "attestation:wb-esth-p-hammedatha-1-3-1",
         "reference_key": "verse:Esth.3.1",
         "entity_key": "entity:p-hammedatha-1",
         "kind": "participant",
@@ -2785,7 +2785,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hammedatha-1-3-10",
+        "attestation_key": "attestation:wb-esth-p-hammedatha-1-3-10",
         "reference_key": "verse:Esth.3.10",
         "entity_key": "entity:p-hammedatha-1",
         "kind": "participant",
@@ -2795,7 +2795,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hammedatha-1-8-5",
+        "attestation_key": "attestation:wb-esth-p-hammedatha-1-8-5",
         "reference_key": "verse:Esth.8.5",
         "entity_key": "entity:p-hammedatha-1",
         "kind": "participant",
@@ -2805,7 +2805,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hammedatha-1-9-10",
+        "attestation_key": "attestation:wb-esth-p-hammedatha-1-9-10",
         "reference_key": "verse:Esth.9.10",
         "entity_key": "entity:p-hammedatha-1",
         "kind": "participant",
@@ -2815,7 +2815,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hammedatha-1-9-24",
+        "attestation_key": "attestation:wb-esth-p-hammedatha-1-9-24",
         "reference_key": "verse:Esth.9.24",
         "entity_key": "entity:p-hammedatha-1",
         "kind": "participant",
@@ -2825,7 +2825,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hathach-1-4-5",
+        "attestation_key": "attestation:wb-esth-p-hathach-1-4-5",
         "reference_key": "verse:Esth.4.5",
         "entity_key": "entity:p-hathach-1",
         "kind": "participant",
@@ -2835,7 +2835,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hathach-1-4-6",
+        "attestation_key": "attestation:wb-esth-p-hathach-1-4-6",
         "reference_key": "verse:Esth.4.6",
         "entity_key": "entity:p-hathach-1",
         "kind": "participant",
@@ -2845,7 +2845,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hathach-1-4-9",
+        "attestation_key": "attestation:wb-esth-p-hathach-1-4-9",
         "reference_key": "verse:Esth.4.9",
         "entity_key": "entity:p-hathach-1",
         "kind": "participant",
@@ -2855,7 +2855,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hathach-1-4-10",
+        "attestation_key": "attestation:wb-esth-p-hathach-1-4-10",
         "reference_key": "verse:Esth.4.10",
         "entity_key": "entity:p-hathach-1",
         "kind": "participant",
@@ -2865,7 +2865,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-zeresh-1-5-10",
+        "attestation_key": "attestation:wb-esth-p-zeresh-1-5-10",
         "reference_key": "verse:Esth.5.10",
         "entity_key": "entity:p-zeresh-1",
         "kind": "participant",
@@ -2875,7 +2875,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-zeresh-1-5-14",
+        "attestation_key": "attestation:wb-esth-p-zeresh-1-5-14",
         "reference_key": "verse:Esth.5.14",
         "entity_key": "entity:p-zeresh-1",
         "kind": "participant",
@@ -2885,7 +2885,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-zeresh-1-6-13",
+        "attestation_key": "attestation:wb-esth-p-zeresh-1-6-13",
         "reference_key": "verse:Esth.6.13",
         "entity_key": "entity:p-zeresh-1",
         "kind": "participant",
@@ -2895,7 +2895,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-parshandatha-1-9-7",
+        "attestation_key": "attestation:wb-esth-p-parshandatha-1-9-7",
         "reference_key": "verse:Esth.9.7",
         "entity_key": "entity:p-parshandatha-1",
         "kind": "participant",
@@ -2905,7 +2905,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-dalphon-1-9-7",
+        "attestation_key": "attestation:wb-esth-p-dalphon-1-9-7",
         "reference_key": "verse:Esth.9.7",
         "entity_key": "entity:p-dalphon-1",
         "kind": "participant",
@@ -2915,7 +2915,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-aspatha-1-9-7",
+        "attestation_key": "attestation:wb-esth-p-aspatha-1-9-7",
         "reference_key": "verse:Esth.9.7",
         "entity_key": "entity:p-aspatha-1",
         "kind": "participant",
@@ -2925,7 +2925,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-poratha-1-9-8",
+        "attestation_key": "attestation:wb-esth-p-poratha-1-9-8",
         "reference_key": "verse:Esth.9.8",
         "entity_key": "entity:p-poratha-1",
         "kind": "participant",
@@ -2935,7 +2935,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-adalia-1-9-8",
+        "attestation_key": "attestation:wb-esth-p-adalia-1-9-8",
         "reference_key": "verse:Esth.9.8",
         "entity_key": "entity:p-adalia-1",
         "kind": "participant",
@@ -2945,7 +2945,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-aridatha-1-9-8",
+        "attestation_key": "attestation:wb-esth-p-aridatha-1-9-8",
         "reference_key": "verse:Esth.9.8",
         "entity_key": "entity:p-aridatha-1",
         "kind": "participant",
@@ -2955,7 +2955,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-parmashta-1-9-9",
+        "attestation_key": "attestation:wb-esth-p-parmashta-1-9-9",
         "reference_key": "verse:Esth.9.9",
         "entity_key": "entity:p-parmashta-1",
         "kind": "participant",
@@ -2965,7 +2965,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-arisai-1-9-9",
+        "attestation_key": "attestation:wb-esth-p-arisai-1-9-9",
         "reference_key": "verse:Esth.9.9",
         "entity_key": "entity:p-arisai-1",
         "kind": "participant",
@@ -2975,7 +2975,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-aridai-1-9-9",
+        "attestation_key": "attestation:wb-esth-p-aridai-1-9-9",
         "reference_key": "verse:Esth.9.9",
         "entity_key": "entity:p-aridai-1",
         "kind": "participant",
@@ -2985,7 +2985,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-vaizatha-1-9-9",
+        "attestation_key": "attestation:wb-esth-p-vaizatha-1-9-9",
         "reference_key": "verse:Esth.9.9",
         "entity_key": "entity:p-vaizatha-1",
         "kind": "participant",
@@ -2995,7 +2995,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-babylon-1-a217d18-2-6",
+        "attestation_key": "attestation:wb-esth-pl-babylon-1-a217d18-2-6",
         "reference_key": "verse:Esth.2.6",
         "entity_key": "entity:pl-babylon-1-a217d18",
         "kind": "location",
@@ -3005,7 +3005,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ethiopia-ab45bd3-1-1",
+        "attestation_key": "attestation:wb-esth-pl-ethiopia-ab45bd3-1-1",
         "reference_key": "verse:Esth.1.1",
         "entity_key": "entity:pl-ethiopia-ab45bd3",
         "kind": "location",
@@ -3015,7 +3015,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ethiopia-ab45bd3-8-9",
+        "attestation_key": "attestation:wb-esth-pl-ethiopia-ab45bd3-8-9",
         "reference_key": "verse:Esth.8.9",
         "entity_key": "entity:pl-ethiopia-ab45bd3",
         "kind": "location",
@@ -3025,7 +3025,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-india-a878481-1-1",
+        "attestation_key": "attestation:wb-esth-pl-india-a878481-1-1",
         "reference_key": "verse:Esth.1.1",
         "entity_key": "entity:pl-india-a878481",
         "kind": "location",
@@ -3035,7 +3035,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-india-a878481-8-9",
+        "attestation_key": "attestation:wb-esth-pl-india-a878481-8-9",
         "reference_key": "verse:Esth.8.9",
         "entity_key": "entity:pl-india-a878481",
         "kind": "location",
@@ -3045,17 +3045,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-6",
-        "reference_key": "verse:Esth.2.6",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-3",
+        "attestation_key": "attestation:wb-esth-pl-media-ad2fadf-1-3",
         "reference_key": "verse:Esth.1.3",
         "entity_key": "entity:pl-media-ad2fadf",
         "kind": "location",
@@ -3065,7 +3055,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-14",
+        "attestation_key": "attestation:wb-esth-pl-media-ad2fadf-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:pl-media-ad2fadf",
         "kind": "location",
@@ -3075,7 +3065,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-18",
+        "attestation_key": "attestation:wb-esth-pl-media-ad2fadf-1-18",
         "reference_key": "verse:Esth.1.18",
         "entity_key": "entity:pl-media-ad2fadf",
         "kind": "location",
@@ -3085,7 +3075,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-media-ad2fadf-1-19",
+        "attestation_key": "attestation:wb-esth-pl-media-ad2fadf-1-19",
         "reference_key": "verse:Esth.1.19",
         "entity_key": "entity:pl-media-ad2fadf",
         "kind": "location",
@@ -3095,7 +3085,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-media-ad2fadf-10-2",
+        "attestation_key": "attestation:wb-esth-pl-media-ad2fadf-10-2",
         "reference_key": "verse:Esth.10.2",
         "entity_key": "entity:pl-media-ad2fadf",
         "kind": "location",
@@ -3105,7 +3095,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-3",
+        "attestation_key": "attestation:wb-esth-pl-persia-ab9696f-1-3",
         "reference_key": "verse:Esth.1.3",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3115,7 +3105,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-14",
+        "attestation_key": "attestation:wb-esth-pl-persia-ab9696f-1-14",
         "reference_key": "verse:Esth.1.14",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3125,7 +3115,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-18",
+        "attestation_key": "attestation:wb-esth-pl-persia-ab9696f-1-18",
         "reference_key": "verse:Esth.1.18",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3135,7 +3125,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-1-19",
+        "attestation_key": "attestation:wb-esth-pl-persia-ab9696f-1-19",
         "reference_key": "verse:Esth.1.19",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3145,7 +3135,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-persia-ab9696f-10-2",
+        "attestation_key": "attestation:wb-esth-pl-persia-ab9696f-10-2",
         "reference_key": "verse:Esth.10.2",
         "entity_key": "entity:pl-persia-ab9696f",
         "kind": "location",
@@ -3155,9 +3145,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-1-2",
+        "attestation_key": "attestation:wb-esth-susa-1-2",
         "reference_key": "verse:Esth.1.2",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3165,9 +3155,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-1-5",
+        "attestation_key": "attestation:wb-esth-susa-1-5",
         "reference_key": "verse:Esth.1.5",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3175,9 +3165,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-2-3",
+        "attestation_key": "attestation:wb-esth-susa-2-3",
         "reference_key": "verse:Esth.2.3",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3185,9 +3175,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-2-5",
+        "attestation_key": "attestation:wb-esth-susa-2-5",
         "reference_key": "verse:Esth.2.5",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3195,9 +3185,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-2-8",
+        "attestation_key": "attestation:wb-esth-susa-2-8",
         "reference_key": "verse:Esth.2.8",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3205,9 +3195,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-3-15",
+        "attestation_key": "attestation:wb-esth-susa-3-15",
         "reference_key": "verse:Esth.3.15",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3215,9 +3205,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-4-8",
+        "attestation_key": "attestation:wb-esth-susa-4-8",
         "reference_key": "verse:Esth.4.8",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3225,9 +3215,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-4-16",
+        "attestation_key": "attestation:wb-esth-susa-4-16",
         "reference_key": "verse:Esth.4.16",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3235,9 +3225,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-8-14",
+        "attestation_key": "attestation:wb-esth-susa-8-14",
         "reference_key": "verse:Esth.8.14",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3245,9 +3235,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-8-15",
+        "attestation_key": "attestation:wb-esth-susa-8-15",
         "reference_key": "verse:Esth.8.15",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3255,9 +3245,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-6",
+        "attestation_key": "attestation:wb-esth-susa-9-6",
         "reference_key": "verse:Esth.9.6",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3265,9 +3255,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-11",
+        "attestation_key": "attestation:wb-esth-susa-9-11",
         "reference_key": "verse:Esth.9.11",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3275,9 +3265,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-12",
+        "attestation_key": "attestation:wb-esth-susa-9-12",
         "reference_key": "verse:Esth.9.12",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3285,9 +3275,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-13",
+        "attestation_key": "attestation:wb-esth-susa-9-13",
         "reference_key": "verse:Esth.9.13",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3295,9 +3285,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-14",
+        "attestation_key": "attestation:wb-esth-susa-9-14",
         "reference_key": "verse:Esth.9.14",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3305,9 +3295,9 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-15",
+        "attestation_key": "attestation:wb-esth-susa-9-15",
         "reference_key": "verse:Esth.9.15",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3315,9 +3305,19 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-susa-a033b84-9-18",
+        "attestation_key": "attestation:wb-esth-susa-9-18",
         "reference_key": "verse:Esth.9.18",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-esth-jerusalem-2-6",
+        "reference_key": "verse:Esth.2.6",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3327,7 +3327,7 @@
     ],
     "relationships": [
       {
-        "relationship_key": "relationship:wb-p-abihail-5-father-p-hadassah-1",
+        "relationship_key": "relationship:wb-esth-p-abihail-5-father-p-hadassah-1",
         "subject_entity_key": "entity:p-abihail-5",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-hadassah-1",
@@ -3338,7 +3338,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-adalia-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-adalia-1-son-p-haman-1",
         "subject_entity_key": "entity:p-adalia-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3349,7 +3349,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-ahasuerus-1-husband-p-vashti-1",
+        "relationship_key": "relationship:wb-esth-p-ahasuerus-1-husband-p-vashti-1",
         "subject_entity_key": "entity:p-ahasuerus-1",
         "predicate_key": "relationship:husband",
         "object_entity_key": "entity:p-vashti-1",
@@ -3360,7 +3360,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-aridai-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-aridai-1-son-p-haman-1",
         "subject_entity_key": "entity:p-aridai-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3371,7 +3371,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-aridatha-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-aridatha-1-son-p-haman-1",
         "subject_entity_key": "entity:p-aridatha-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3382,7 +3382,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-arisai-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-arisai-1-son-p-haman-1",
         "subject_entity_key": "entity:p-arisai-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3393,7 +3393,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-aspatha-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-aspatha-1-son-p-haman-1",
         "subject_entity_key": "entity:p-aspatha-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3404,7 +3404,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-dalphon-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-dalphon-1-son-p-haman-1",
         "subject_entity_key": "entity:p-dalphon-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3415,7 +3415,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-hadassah-1-cousin-p-mordecai-2",
+        "relationship_key": "relationship:wb-esth-p-hadassah-1-cousin-p-mordecai-2",
         "subject_entity_key": "entity:p-hadassah-1",
         "predicate_key": "relationship:cousin",
         "object_entity_key": "entity:p-mordecai-2",
@@ -3426,7 +3426,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-hadassah-1-daughter-p-abihail-5",
+        "relationship_key": "relationship:wb-esth-p-hadassah-1-daughter-p-abihail-5",
         "subject_entity_key": "entity:p-hadassah-1",
         "predicate_key": "relationship:daughter",
         "object_entity_key": "entity:p-abihail-5",
@@ -3437,7 +3437,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-hadassah-1-daughter-p-mordecai-2",
+        "relationship_key": "relationship:wb-esth-p-hadassah-1-daughter-p-mordecai-2",
         "subject_entity_key": "entity:p-hadassah-1",
         "predicate_key": "relationship:daughter",
         "object_entity_key": "entity:p-mordecai-2",
@@ -3448,7 +3448,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-adalia-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-adalia-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-adalia-1",
@@ -3459,7 +3459,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-aridai-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-aridai-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-aridai-1",
@@ -3470,7 +3470,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-aridatha-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-aridatha-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-aridatha-1",
@@ -3481,7 +3481,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-arisai-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-arisai-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-arisai-1",
@@ -3492,7 +3492,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-aspatha-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-aspatha-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-aspatha-1",
@@ -3503,7 +3503,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-dalphon-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-dalphon-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-dalphon-1",
@@ -3514,7 +3514,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-parmashta-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-parmashta-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-parmashta-1",
@@ -3525,7 +3525,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-parshandatha-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-parshandatha-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-parshandatha-1",
@@ -3536,7 +3536,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-poratha-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-poratha-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-poratha-1",
@@ -3547,7 +3547,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-father-p-vaizatha-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-father-p-vaizatha-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-vaizatha-1",
@@ -3558,7 +3558,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-haman-1-son-p-hammedatha-1",
+        "relationship_key": "relationship:wb-esth-p-haman-1-son-p-hammedatha-1",
         "subject_entity_key": "entity:p-haman-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-hammedatha-1",
@@ -3569,7 +3569,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-hammedatha-1-father-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-hammedatha-1-father-p-haman-1",
         "subject_entity_key": "entity:p-hammedatha-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-haman-1",
@@ -3580,7 +3580,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-jair-3-father-p-mordecai-2",
+        "relationship_key": "relationship:wb-esth-p-jair-3-father-p-mordecai-2",
         "subject_entity_key": "entity:p-jair-3",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-mordecai-2",
@@ -3591,7 +3591,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-jair-3-son-p-shimei-17",
+        "relationship_key": "relationship:wb-esth-p-jair-3-son-p-shimei-17",
         "subject_entity_key": "entity:p-jair-3",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-shimei-17",
@@ -3602,7 +3602,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-jehoiachin-1-exiled-by-p-nebuchadnezzar-1",
+        "relationship_key": "relationship:wb-esth-p-jehoiachin-1-exiled-by-p-nebuchadnezzar-1",
         "subject_entity_key": "entity:p-jehoiachin-1",
         "predicate_key": "relationship:exiled-by",
         "object_entity_key": "entity:p-nebuchadnezzar-1",
@@ -3613,7 +3613,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-kish-4-father-p-shimei-17",
+        "relationship_key": "relationship:wb-esth-p-kish-4-father-p-shimei-17",
         "subject_entity_key": "entity:p-kish-4",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-shimei-17",
@@ -3624,7 +3624,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-mordecai-2-cousin-p-hadassah-1",
+        "relationship_key": "relationship:wb-esth-p-mordecai-2-cousin-p-hadassah-1",
         "subject_entity_key": "entity:p-mordecai-2",
         "predicate_key": "relationship:cousin",
         "object_entity_key": "entity:p-hadassah-1",
@@ -3635,7 +3635,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-mordecai-2-father-p-hadassah-1",
+        "relationship_key": "relationship:wb-esth-p-mordecai-2-father-p-hadassah-1",
         "subject_entity_key": "entity:p-mordecai-2",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-hadassah-1",
@@ -3646,7 +3646,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-mordecai-2-son-p-jair-3",
+        "relationship_key": "relationship:wb-esth-p-mordecai-2-son-p-jair-3",
         "subject_entity_key": "entity:p-mordecai-2",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-jair-3",
@@ -3657,7 +3657,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-nebuchadnezzar-1-exiled-p-jehoiachin-1",
+        "relationship_key": "relationship:wb-esth-p-nebuchadnezzar-1-exiled-p-jehoiachin-1",
         "subject_entity_key": "entity:p-nebuchadnezzar-1",
         "predicate_key": "relationship:exiled",
         "object_entity_key": "entity:p-jehoiachin-1",
@@ -3668,7 +3668,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-parmashta-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-parmashta-1-son-p-haman-1",
         "subject_entity_key": "entity:p-parmashta-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3679,7 +3679,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-parshandatha-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-parshandatha-1-son-p-haman-1",
         "subject_entity_key": "entity:p-parshandatha-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3690,7 +3690,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-poratha-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-poratha-1-son-p-haman-1",
         "subject_entity_key": "entity:p-poratha-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3701,7 +3701,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-shimei-17-father-p-jair-3",
+        "relationship_key": "relationship:wb-esth-p-shimei-17-father-p-jair-3",
         "subject_entity_key": "entity:p-shimei-17",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-jair-3",
@@ -3712,7 +3712,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-shimei-17-son-p-kish-4",
+        "relationship_key": "relationship:wb-esth-p-shimei-17-son-p-kish-4",
         "subject_entity_key": "entity:p-shimei-17",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-kish-4",
@@ -3723,7 +3723,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-vaizatha-1-son-p-haman-1",
+        "relationship_key": "relationship:wb-esth-p-vaizatha-1-son-p-haman-1",
         "subject_entity_key": "entity:p-vaizatha-1",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-haman-1",
@@ -3734,7 +3734,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-vashti-1-wife-p-ahasuerus-1",
+        "relationship_key": "relationship:wb-esth-p-vashti-1-wife-p-ahasuerus-1",
         "subject_entity_key": "entity:p-vashti-1",
         "predicate_key": "relationship:wife",
         "object_entity_key": "entity:p-ahasuerus-1",
@@ -3757,7 +3757,7 @@
           "entity:pl-india-a878481",
           "entity:pl-media-ad2fadf",
           "entity:pl-persia-ab9696f",
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -3848,7 +3848,7 @@
           "entity:p-vashti-1"
         ],
         "place_entity_keys": [
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -3876,9 +3876,9 @@
           "entity:p-shimei-17"
         ],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-babylon-1-a217d18",
-          "entity:pl-jerusalem-a15257a",
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -3937,7 +3937,7 @@
           "entity:p-mordecai-2"
         ],
         "place_entity_keys": [
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -3958,7 +3958,7 @@
           "entity:p-mordecai-2"
         ],
         "place_entity_keys": [
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -4096,7 +4096,7 @@
         "place_entity_keys": [
           "entity:pl-ethiopia-ab45bd3",
           "entity:pl-india-a878481",
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -4127,7 +4127,7 @@
           "entity:p-vaizatha-1"
         ],
         "place_entity_keys": [
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -4146,7 +4146,7 @@
           "entity:p-haman-1"
         ],
         "place_entity_keys": [
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -4169,7 +4169,7 @@
           "entity:p-mordecai-2"
         ],
         "place_entity_keys": [
-          "entity:pl-susa-a033b84"
+          "entity:susa"
         ],
         "scripture_accounts": [
           {
@@ -4216,17 +4216,6 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-media-ad2fadf",
         "geographic_positions": [
           {
@@ -4249,10 +4238,21 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-susa-a033b84",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -5000,15 +5000,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-2-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-esth-2:refsys:eng-v22:esth.2.1-esth.2.23",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-esth-1-pl-media-ad2fadf",
         "scope_key": "scope:wb-esth-1:refsys:eng-v22:esth.1.1-esth.1.22",
         "entity_key": "entity:pl-media-ad2fadf",
@@ -5045,55 +5036,64 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-1-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-1-susa",
         "scope_key": "scope:wb-esth-1:refsys:eng-v22:esth.1.1-esth.1.22",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-2-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-2-susa",
         "scope_key": "scope:wb-esth-2:refsys:eng-v22:esth.2.1-esth.2.23",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-3-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-3-susa",
         "scope_key": "scope:wb-esth-3:refsys:eng-v22:esth.3.1-esth.3.15",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-4-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-4-susa",
         "scope_key": "scope:wb-esth-4:refsys:eng-v22:esth.4.1-esth.4.17",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-8-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-8-susa",
         "scope_key": "scope:wb-esth-8:refsys:eng-v22:esth.8.1-esth.8.17",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-esth-9-pl-susa-a033b84",
+        "relevance_key": "relevance:wb-esth-9-susa",
         "scope_key": "scope:wb-esth-9:refsys:eng-v22:esth.9.1-esth.9.32",
-        "entity_key": "entity:pl-susa-a033b84",
+        "entity_key": "entity:susa",
         "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-esth-2-jerusalem",
+        "scope_key": "scope:wb-esth-2:refsys:eng-v22:esth.2.1-esth.2.23",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -5371,12 +5371,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-media-ad2fadf",
         "canonical_entity_key": "entity:pl-media-ad2fadf",
         "resolution_status": "resolved_existing",
@@ -5389,8 +5383,14 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-susa-a033b84",
-        "canonical_entity_key": "entity:pl-susa-a033b84",
+        "candidate_key": "candidate:wb:susa",
+        "canonical_entity_key": "entity:susa",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -5452,9 +5452,9 @@
             "verse:Esth.1.1"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-1",
-            "attestation:wb-pl-ethiopia-ab45bd3-1-1",
-            "attestation:wb-pl-india-a878481-1-1"
+            "attestation:wb-esth-p-ahasuerus-1-1-1",
+            "attestation:wb-esth-pl-ethiopia-ab45bd3-1-1",
+            "attestation:wb-esth-pl-india-a878481-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -5464,8 +5464,8 @@
             "verse:Esth.1.2"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-2",
-            "attestation:wb-pl-susa-a033b84-1-2"
+            "attestation:wb-esth-p-ahasuerus-1-1-2",
+            "attestation:wb-esth-susa-1-2"
           ],
           "blocker_question_keys": []
         },
@@ -5475,8 +5475,8 @@
             "verse:Esth.1.3"
           ],
           "record_keys": [
-            "attestation:wb-pl-media-ad2fadf-1-3",
-            "attestation:wb-pl-persia-ab9696f-1-3"
+            "attestation:wb-esth-pl-media-ad2fadf-1-3",
+            "attestation:wb-esth-pl-persia-ab9696f-1-3"
           ],
           "blocker_question_keys": []
         },
@@ -5486,7 +5486,7 @@
             "verse:Esth.1.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-1-5"
+            "attestation:wb-esth-susa-1-5"
           ],
           "blocker_question_keys": []
         },
@@ -5496,8 +5496,8 @@
             "verse:Esth.1.9"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-9",
-            "attestation:wb-p-vashti-1-1-9"
+            "attestation:wb-esth-p-ahasuerus-1-1-9",
+            "attestation:wb-esth-p-vashti-1-1-9"
           ],
           "blocker_question_keys": []
         },
@@ -5507,14 +5507,14 @@
             "verse:Esth.1.10"
           ],
           "record_keys": [
-            "attestation:wb-p-abagtha-1-1-10",
-            "attestation:wb-p-ahasuerus-1-1-10",
-            "attestation:wb-p-bigtha-1-1-10",
-            "attestation:wb-p-biztha-1-1-10",
-            "attestation:wb-p-carkas-1-1-10",
-            "attestation:wb-p-harbona-1-1-10",
-            "attestation:wb-p-mehuman-1-1-10",
-            "attestation:wb-p-zethar-1-1-10"
+            "attestation:wb-esth-p-abagtha-1-1-10",
+            "attestation:wb-esth-p-ahasuerus-1-1-10",
+            "attestation:wb-esth-p-bigtha-1-1-10",
+            "attestation:wb-esth-p-biztha-1-1-10",
+            "attestation:wb-esth-p-carkas-1-1-10",
+            "attestation:wb-esth-p-harbona-1-1-10",
+            "attestation:wb-esth-p-mehuman-1-1-10",
+            "attestation:wb-esth-p-zethar-1-1-10"
           ],
           "blocker_question_keys": []
         },
@@ -5524,7 +5524,7 @@
             "verse:Esth.1.11"
           ],
           "record_keys": [
-            "attestation:wb-p-vashti-1-1-11"
+            "attestation:wb-esth-p-vashti-1-1-11"
           ],
           "blocker_question_keys": []
         },
@@ -5534,7 +5534,7 @@
             "verse:Esth.1.12"
           ],
           "record_keys": [
-            "attestation:wb-p-vashti-1-1-12"
+            "attestation:wb-esth-p-vashti-1-1-12"
           ],
           "blocker_question_keys": []
         },
@@ -5544,15 +5544,15 @@
             "verse:Esth.1.14"
           ],
           "record_keys": [
-            "attestation:wb-p-admatha-1-1-14",
-            "attestation:wb-p-carshena-1-1-14",
-            "attestation:wb-p-marsena-1-1-14",
-            "attestation:wb-p-memucan-1-1-14",
-            "attestation:wb-p-meres-1-1-14",
-            "attestation:wb-p-shethar-1-1-14",
-            "attestation:wb-p-tarshish-3-1-14",
-            "attestation:wb-pl-media-ad2fadf-1-14",
-            "attestation:wb-pl-persia-ab9696f-1-14"
+            "attestation:wb-esth-p-admatha-1-1-14",
+            "attestation:wb-esth-p-carshena-1-1-14",
+            "attestation:wb-esth-p-marsena-1-1-14",
+            "attestation:wb-esth-p-memucan-1-1-14",
+            "attestation:wb-esth-p-meres-1-1-14",
+            "attestation:wb-esth-p-shethar-1-1-14",
+            "attestation:wb-esth-p-tarshish-3-1-14",
+            "attestation:wb-esth-pl-media-ad2fadf-1-14",
+            "attestation:wb-esth-pl-persia-ab9696f-1-14"
           ],
           "blocker_question_keys": []
         },
@@ -5562,8 +5562,8 @@
             "verse:Esth.1.15"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-15",
-            "attestation:wb-p-vashti-1-1-15"
+            "attestation:wb-esth-p-ahasuerus-1-1-15",
+            "attestation:wb-esth-p-vashti-1-1-15"
           ],
           "blocker_question_keys": []
         },
@@ -5573,9 +5573,9 @@
             "verse:Esth.1.16"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-16",
-            "attestation:wb-p-memucan-1-1-16",
-            "attestation:wb-p-vashti-1-1-16"
+            "attestation:wb-esth-p-ahasuerus-1-1-16",
+            "attestation:wb-esth-p-memucan-1-1-16",
+            "attestation:wb-esth-p-vashti-1-1-16"
           ],
           "blocker_question_keys": []
         },
@@ -5585,8 +5585,8 @@
             "verse:Esth.1.17"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-17",
-            "attestation:wb-p-vashti-1-1-17"
+            "attestation:wb-esth-p-ahasuerus-1-1-17",
+            "attestation:wb-esth-p-vashti-1-1-17"
           ],
           "blocker_question_keys": []
         },
@@ -5596,8 +5596,8 @@
             "verse:Esth.1.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-media-ad2fadf-1-18",
-            "attestation:wb-pl-persia-ab9696f-1-18"
+            "attestation:wb-esth-pl-media-ad2fadf-1-18",
+            "attestation:wb-esth-pl-persia-ab9696f-1-18"
           ],
           "blocker_question_keys": []
         },
@@ -5607,10 +5607,10 @@
             "verse:Esth.1.19"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-1-19",
-            "attestation:wb-p-vashti-1-1-19",
-            "attestation:wb-pl-media-ad2fadf-1-19",
-            "attestation:wb-pl-persia-ab9696f-1-19"
+            "attestation:wb-esth-p-ahasuerus-1-1-19",
+            "attestation:wb-esth-p-vashti-1-1-19",
+            "attestation:wb-esth-pl-media-ad2fadf-1-19",
+            "attestation:wb-esth-pl-persia-ab9696f-1-19"
           ],
           "blocker_question_keys": []
         },
@@ -5620,7 +5620,7 @@
             "verse:Esth.1.21"
           ],
           "record_keys": [
-            "attestation:wb-p-memucan-1-1-21"
+            "attestation:wb-esth-p-memucan-1-1-21"
           ],
           "blocker_question_keys": []
         },
@@ -5630,8 +5630,8 @@
             "verse:Esth.2.1"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-2-1",
-            "attestation:wb-p-vashti-1-2-1"
+            "attestation:wb-esth-p-ahasuerus-1-2-1",
+            "attestation:wb-esth-p-vashti-1-2-1"
           ],
           "blocker_question_keys": []
         },
@@ -5641,8 +5641,8 @@
             "verse:Esth.2.3"
           ],
           "record_keys": [
-            "attestation:wb-p-hegai-1-2-3",
-            "attestation:wb-pl-susa-a033b84-2-3"
+            "attestation:wb-esth-p-hegai-1-2-3",
+            "attestation:wb-esth-susa-2-3"
           ],
           "blocker_question_keys": []
         },
@@ -5652,7 +5652,7 @@
             "verse:Esth.2.4"
           ],
           "record_keys": [
-            "attestation:wb-p-vashti-1-2-4"
+            "attestation:wb-esth-p-vashti-1-2-4"
           ],
           "blocker_question_keys": []
         },
@@ -5662,11 +5662,11 @@
             "verse:Esth.2.5"
           ],
           "record_keys": [
-            "attestation:wb-p-jair-3-2-5",
-            "attestation:wb-p-kish-4-2-5",
-            "attestation:wb-p-mordecai-2-2-5",
-            "attestation:wb-p-shimei-17-2-5",
-            "attestation:wb-pl-susa-a033b84-2-5"
+            "attestation:wb-esth-p-jair-3-2-5",
+            "attestation:wb-esth-p-kish-4-2-5",
+            "attestation:wb-esth-p-mordecai-2-2-5",
+            "attestation:wb-esth-p-shimei-17-2-5",
+            "attestation:wb-esth-susa-2-5"
           ],
           "blocker_question_keys": []
         },
@@ -5676,10 +5676,10 @@
             "verse:Esth.2.6"
           ],
           "record_keys": [
-            "attestation:wb-p-jehoiachin-1-2-6",
-            "attestation:wb-p-nebuchadnezzar-1-2-6",
-            "attestation:wb-pl-babylon-1-a217d18-2-6",
-            "attestation:wb-pl-jerusalem-a15257a-2-6"
+            "attestation:wb-esth-jerusalem-2-6",
+            "attestation:wb-esth-p-jehoiachin-1-2-6",
+            "attestation:wb-esth-p-nebuchadnezzar-1-2-6",
+            "attestation:wb-esth-pl-babylon-1-a217d18-2-6"
           ],
           "blocker_question_keys": []
         },
@@ -5689,8 +5689,8 @@
             "verse:Esth.2.7"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-7",
-            "attestation:wb-p-mordecai-2-2-7"
+            "attestation:wb-esth-p-hadassah-1-2-7",
+            "attestation:wb-esth-p-mordecai-2-2-7"
           ],
           "blocker_question_keys": []
         },
@@ -5700,9 +5700,9 @@
             "verse:Esth.2.8"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-8",
-            "attestation:wb-p-hegai-1-2-8",
-            "attestation:wb-pl-susa-a033b84-2-8"
+            "attestation:wb-esth-p-hadassah-1-2-8",
+            "attestation:wb-esth-p-hegai-1-2-8",
+            "attestation:wb-esth-susa-2-8"
           ],
           "blocker_question_keys": []
         },
@@ -5712,8 +5712,8 @@
             "verse:Esth.2.10"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-10",
-            "attestation:wb-p-mordecai-2-2-10"
+            "attestation:wb-esth-p-hadassah-1-2-10",
+            "attestation:wb-esth-p-mordecai-2-2-10"
           ],
           "blocker_question_keys": []
         },
@@ -5723,8 +5723,8 @@
             "verse:Esth.2.11"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-11",
-            "attestation:wb-p-mordecai-2-2-11"
+            "attestation:wb-esth-p-hadassah-1-2-11",
+            "attestation:wb-esth-p-mordecai-2-2-11"
           ],
           "blocker_question_keys": []
         },
@@ -5734,7 +5734,7 @@
             "verse:Esth.2.12"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-2-12"
+            "attestation:wb-esth-p-ahasuerus-1-2-12"
           ],
           "blocker_question_keys": []
         },
@@ -5744,7 +5744,7 @@
             "verse:Esth.2.14"
           ],
           "record_keys": [
-            "attestation:wb-p-shaashgaz-1-2-14"
+            "attestation:wb-esth-p-shaashgaz-1-2-14"
           ],
           "blocker_question_keys": []
         },
@@ -5754,10 +5754,10 @@
             "verse:Esth.2.15"
           ],
           "record_keys": [
-            "attestation:wb-p-abihail-5-2-15",
-            "attestation:wb-p-hadassah-1-2-15",
-            "attestation:wb-p-hegai-1-2-15",
-            "attestation:wb-p-mordecai-2-2-15"
+            "attestation:wb-esth-p-abihail-5-2-15",
+            "attestation:wb-esth-p-hadassah-1-2-15",
+            "attestation:wb-esth-p-hegai-1-2-15",
+            "attestation:wb-esth-p-mordecai-2-2-15"
           ],
           "blocker_question_keys": []
         },
@@ -5767,8 +5767,8 @@
             "verse:Esth.2.16"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-2-16",
-            "attestation:wb-p-hadassah-1-2-16"
+            "attestation:wb-esth-p-ahasuerus-1-2-16",
+            "attestation:wb-esth-p-hadassah-1-2-16"
           ],
           "blocker_question_keys": []
         },
@@ -5778,8 +5778,8 @@
             "verse:Esth.2.17"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-17",
-            "attestation:wb-p-vashti-1-2-17"
+            "attestation:wb-esth-p-hadassah-1-2-17",
+            "attestation:wb-esth-p-vashti-1-2-17"
           ],
           "blocker_question_keys": []
         },
@@ -5789,7 +5789,7 @@
             "verse:Esth.2.18"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-18"
+            "attestation:wb-esth-p-hadassah-1-2-18"
           ],
           "blocker_question_keys": []
         },
@@ -5799,7 +5799,7 @@
             "verse:Esth.2.19"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-2-19"
+            "attestation:wb-esth-p-mordecai-2-2-19"
           ],
           "blocker_question_keys": []
         },
@@ -5809,8 +5809,8 @@
             "verse:Esth.2.20"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-20",
-            "attestation:wb-p-mordecai-2-2-20"
+            "attestation:wb-esth-p-hadassah-1-2-20",
+            "attestation:wb-esth-p-mordecai-2-2-20"
           ],
           "blocker_question_keys": []
         },
@@ -5820,10 +5820,10 @@
             "verse:Esth.2.21"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-2-21",
-            "attestation:wb-p-bigthan-1-2-21",
-            "attestation:wb-p-mordecai-2-2-21",
-            "attestation:wb-p-teresh-1-2-21"
+            "attestation:wb-esth-p-ahasuerus-1-2-21",
+            "attestation:wb-esth-p-bigthan-1-2-21",
+            "attestation:wb-esth-p-mordecai-2-2-21",
+            "attestation:wb-esth-p-teresh-1-2-21"
           ],
           "blocker_question_keys": []
         },
@@ -5833,8 +5833,8 @@
             "verse:Esth.2.22"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-2-22",
-            "attestation:wb-p-mordecai-2-2-22"
+            "attestation:wb-esth-p-hadassah-1-2-22",
+            "attestation:wb-esth-p-mordecai-2-2-22"
           ],
           "blocker_question_keys": []
         },
@@ -5844,9 +5844,9 @@
             "verse:Esth.3.1"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-3-1",
-            "attestation:wb-p-haman-1-3-1",
-            "attestation:wb-p-hammedatha-1-3-1"
+            "attestation:wb-esth-p-ahasuerus-1-3-1",
+            "attestation:wb-esth-p-haman-1-3-1",
+            "attestation:wb-esth-p-hammedatha-1-3-1"
           ],
           "blocker_question_keys": []
         },
@@ -5856,8 +5856,8 @@
             "verse:Esth.3.2"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-3-2",
-            "attestation:wb-p-mordecai-2-3-2"
+            "attestation:wb-esth-p-haman-1-3-2",
+            "attestation:wb-esth-p-mordecai-2-3-2"
           ],
           "blocker_question_keys": []
         },
@@ -5867,7 +5867,7 @@
             "verse:Esth.3.3"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-3-3"
+            "attestation:wb-esth-p-mordecai-2-3-3"
           ],
           "blocker_question_keys": []
         },
@@ -5877,8 +5877,8 @@
             "verse:Esth.3.4"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-3-4",
-            "attestation:wb-p-mordecai-2-3-4"
+            "attestation:wb-esth-p-haman-1-3-4",
+            "attestation:wb-esth-p-mordecai-2-3-4"
           ],
           "blocker_question_keys": []
         },
@@ -5888,8 +5888,8 @@
             "verse:Esth.3.5"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-3-5",
-            "attestation:wb-p-mordecai-2-3-5"
+            "attestation:wb-esth-p-haman-1-3-5",
+            "attestation:wb-esth-p-mordecai-2-3-5"
           ],
           "blocker_question_keys": []
         },
@@ -5899,9 +5899,9 @@
             "verse:Esth.3.6"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-3-6",
-            "attestation:wb-p-haman-1-3-6",
-            "attestation:wb-p-mordecai-2-3-6"
+            "attestation:wb-esth-p-ahasuerus-1-3-6",
+            "attestation:wb-esth-p-haman-1-3-6",
+            "attestation:wb-esth-p-mordecai-2-3-6"
           ],
           "blocker_question_keys": []
         },
@@ -5911,8 +5911,8 @@
             "verse:Esth.3.7"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-3-7",
-            "attestation:wb-p-haman-1-3-7"
+            "attestation:wb-esth-p-ahasuerus-1-3-7",
+            "attestation:wb-esth-p-haman-1-3-7"
           ],
           "blocker_question_keys": []
         },
@@ -5922,8 +5922,8 @@
             "verse:Esth.3.8"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-3-8",
-            "attestation:wb-p-haman-1-3-8"
+            "attestation:wb-esth-p-ahasuerus-1-3-8",
+            "attestation:wb-esth-p-haman-1-3-8"
           ],
           "blocker_question_keys": []
         },
@@ -5933,8 +5933,8 @@
             "verse:Esth.3.10"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-3-10",
-            "attestation:wb-p-hammedatha-1-3-10"
+            "attestation:wb-esth-p-haman-1-3-10",
+            "attestation:wb-esth-p-hammedatha-1-3-10"
           ],
           "blocker_question_keys": []
         },
@@ -5944,7 +5944,7 @@
             "verse:Esth.3.11"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-3-11"
+            "attestation:wb-esth-p-haman-1-3-11"
           ],
           "blocker_question_keys": []
         },
@@ -5954,8 +5954,8 @@
             "verse:Esth.3.12"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-3-12",
-            "attestation:wb-p-haman-1-3-12"
+            "attestation:wb-esth-p-ahasuerus-1-3-12",
+            "attestation:wb-esth-p-haman-1-3-12"
           ],
           "blocker_question_keys": []
         },
@@ -5965,8 +5965,8 @@
             "verse:Esth.3.15"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-3-15",
-            "attestation:wb-pl-susa-a033b84-3-15"
+            "attestation:wb-esth-p-haman-1-3-15",
+            "attestation:wb-esth-susa-3-15"
           ],
           "blocker_question_keys": []
         },
@@ -5976,7 +5976,7 @@
             "verse:Esth.4.1"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-4-1"
+            "attestation:wb-esth-p-mordecai-2-4-1"
           ],
           "blocker_question_keys": []
         },
@@ -5986,8 +5986,8 @@
             "verse:Esth.4.4"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-4",
-            "attestation:wb-p-mordecai-2-4-4"
+            "attestation:wb-esth-p-hadassah-1-4-4",
+            "attestation:wb-esth-p-mordecai-2-4-4"
           ],
           "blocker_question_keys": []
         },
@@ -5997,9 +5997,9 @@
             "verse:Esth.4.5"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-5",
-            "attestation:wb-p-hathach-1-4-5",
-            "attestation:wb-p-mordecai-2-4-5"
+            "attestation:wb-esth-p-hadassah-1-4-5",
+            "attestation:wb-esth-p-hathach-1-4-5",
+            "attestation:wb-esth-p-mordecai-2-4-5"
           ],
           "blocker_question_keys": []
         },
@@ -6009,8 +6009,8 @@
             "verse:Esth.4.6"
           ],
           "record_keys": [
-            "attestation:wb-p-hathach-1-4-6",
-            "attestation:wb-p-mordecai-2-4-6"
+            "attestation:wb-esth-p-hathach-1-4-6",
+            "attestation:wb-esth-p-mordecai-2-4-6"
           ],
           "blocker_question_keys": []
         },
@@ -6020,8 +6020,8 @@
             "verse:Esth.4.7"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-4-7",
-            "attestation:wb-p-mordecai-2-4-7"
+            "attestation:wb-esth-p-haman-1-4-7",
+            "attestation:wb-esth-p-mordecai-2-4-7"
           ],
           "blocker_question_keys": []
         },
@@ -6031,8 +6031,8 @@
             "verse:Esth.4.8"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-8",
-            "attestation:wb-pl-susa-a033b84-4-8"
+            "attestation:wb-esth-p-hadassah-1-4-8",
+            "attestation:wb-esth-susa-4-8"
           ],
           "blocker_question_keys": []
         },
@@ -6042,9 +6042,9 @@
             "verse:Esth.4.9"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-9",
-            "attestation:wb-p-hathach-1-4-9",
-            "attestation:wb-p-mordecai-2-4-9"
+            "attestation:wb-esth-p-hadassah-1-4-9",
+            "attestation:wb-esth-p-hathach-1-4-9",
+            "attestation:wb-esth-p-mordecai-2-4-9"
           ],
           "blocker_question_keys": []
         },
@@ -6054,9 +6054,9 @@
             "verse:Esth.4.10"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-10",
-            "attestation:wb-p-hathach-1-4-10",
-            "attestation:wb-p-mordecai-2-4-10"
+            "attestation:wb-esth-p-hadassah-1-4-10",
+            "attestation:wb-esth-p-hathach-1-4-10",
+            "attestation:wb-esth-p-mordecai-2-4-10"
           ],
           "blocker_question_keys": []
         },
@@ -6066,8 +6066,8 @@
             "verse:Esth.4.12"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-12",
-            "attestation:wb-p-mordecai-2-4-12"
+            "attestation:wb-esth-p-hadassah-1-4-12",
+            "attestation:wb-esth-p-mordecai-2-4-12"
           ],
           "blocker_question_keys": []
         },
@@ -6077,8 +6077,8 @@
             "verse:Esth.4.13"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-13",
-            "attestation:wb-p-mordecai-2-4-13"
+            "attestation:wb-esth-p-hadassah-1-4-13",
+            "attestation:wb-esth-p-mordecai-2-4-13"
           ],
           "blocker_question_keys": []
         },
@@ -6088,8 +6088,8 @@
             "verse:Esth.4.15"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-15",
-            "attestation:wb-p-mordecai-2-4-15"
+            "attestation:wb-esth-p-hadassah-1-4-15",
+            "attestation:wb-esth-p-mordecai-2-4-15"
           ],
           "blocker_question_keys": []
         },
@@ -6099,7 +6099,7 @@
             "verse:Esth.4.16"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-4-16"
+            "attestation:wb-esth-susa-4-16"
           ],
           "blocker_question_keys": []
         },
@@ -6109,8 +6109,8 @@
             "verse:Esth.4.17"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-4-17",
-            "attestation:wb-p-mordecai-2-4-17"
+            "attestation:wb-esth-p-hadassah-1-4-17",
+            "attestation:wb-esth-p-mordecai-2-4-17"
           ],
           "blocker_question_keys": []
         },
@@ -6120,7 +6120,7 @@
             "verse:Esth.5.1"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-1"
+            "attestation:wb-esth-p-hadassah-1-5-1"
           ],
           "blocker_question_keys": []
         },
@@ -6130,7 +6130,7 @@
             "verse:Esth.5.2"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-2"
+            "attestation:wb-esth-p-hadassah-1-5-2"
           ],
           "blocker_question_keys": []
         },
@@ -6140,7 +6140,7 @@
             "verse:Esth.5.3"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-3"
+            "attestation:wb-esth-p-hadassah-1-5-3"
           ],
           "blocker_question_keys": []
         },
@@ -6150,8 +6150,8 @@
             "verse:Esth.5.4"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-4",
-            "attestation:wb-p-haman-1-5-4"
+            "attestation:wb-esth-p-hadassah-1-5-4",
+            "attestation:wb-esth-p-haman-1-5-4"
           ],
           "blocker_question_keys": []
         },
@@ -6161,8 +6161,8 @@
             "verse:Esth.5.5"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-5",
-            "attestation:wb-p-haman-1-5-5"
+            "attestation:wb-esth-p-hadassah-1-5-5",
+            "attestation:wb-esth-p-haman-1-5-5"
           ],
           "blocker_question_keys": []
         },
@@ -6172,7 +6172,7 @@
             "verse:Esth.5.6"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-6"
+            "attestation:wb-esth-p-hadassah-1-5-6"
           ],
           "blocker_question_keys": []
         },
@@ -6182,7 +6182,7 @@
             "verse:Esth.5.7"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-7"
+            "attestation:wb-esth-p-hadassah-1-5-7"
           ],
           "blocker_question_keys": []
         },
@@ -6192,7 +6192,7 @@
             "verse:Esth.5.8"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-5-8"
+            "attestation:wb-esth-p-haman-1-5-8"
           ],
           "blocker_question_keys": []
         },
@@ -6202,8 +6202,8 @@
             "verse:Esth.5.9"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-5-9",
-            "attestation:wb-p-mordecai-2-5-9"
+            "attestation:wb-esth-p-haman-1-5-9",
+            "attestation:wb-esth-p-mordecai-2-5-9"
           ],
           "blocker_question_keys": []
         },
@@ -6213,8 +6213,8 @@
             "verse:Esth.5.10"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-5-10",
-            "attestation:wb-p-zeresh-1-5-10"
+            "attestation:wb-esth-p-haman-1-5-10",
+            "attestation:wb-esth-p-zeresh-1-5-10"
           ],
           "blocker_question_keys": []
         },
@@ -6224,7 +6224,7 @@
             "verse:Esth.5.11"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-5-11"
+            "attestation:wb-esth-p-haman-1-5-11"
           ],
           "blocker_question_keys": []
         },
@@ -6234,8 +6234,8 @@
             "verse:Esth.5.12"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-5-12",
-            "attestation:wb-p-haman-1-5-12"
+            "attestation:wb-esth-p-hadassah-1-5-12",
+            "attestation:wb-esth-p-haman-1-5-12"
           ],
           "blocker_question_keys": []
         },
@@ -6245,7 +6245,7 @@
             "verse:Esth.5.13"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-5-13"
+            "attestation:wb-esth-p-mordecai-2-5-13"
           ],
           "blocker_question_keys": []
         },
@@ -6255,9 +6255,9 @@
             "verse:Esth.5.14"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-5-14",
-            "attestation:wb-p-mordecai-2-5-14",
-            "attestation:wb-p-zeresh-1-5-14"
+            "attestation:wb-esth-p-haman-1-5-14",
+            "attestation:wb-esth-p-mordecai-2-5-14",
+            "attestation:wb-esth-p-zeresh-1-5-14"
           ],
           "blocker_question_keys": []
         },
@@ -6267,10 +6267,10 @@
             "verse:Esth.6.2"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-6-2",
-            "attestation:wb-p-bigthan-1-6-2",
-            "attestation:wb-p-mordecai-2-6-2",
-            "attestation:wb-p-teresh-1-6-2"
+            "attestation:wb-esth-p-ahasuerus-1-6-2",
+            "attestation:wb-esth-p-bigthan-1-6-2",
+            "attestation:wb-esth-p-mordecai-2-6-2",
+            "attestation:wb-esth-p-teresh-1-6-2"
           ],
           "blocker_question_keys": []
         },
@@ -6280,7 +6280,7 @@
             "verse:Esth.6.3"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-6-3"
+            "attestation:wb-esth-p-mordecai-2-6-3"
           ],
           "blocker_question_keys": []
         },
@@ -6290,8 +6290,8 @@
             "verse:Esth.6.4"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-4",
-            "attestation:wb-p-mordecai-2-6-4"
+            "attestation:wb-esth-p-haman-1-6-4",
+            "attestation:wb-esth-p-mordecai-2-6-4"
           ],
           "blocker_question_keys": []
         },
@@ -6301,7 +6301,7 @@
             "verse:Esth.6.5"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-5"
+            "attestation:wb-esth-p-haman-1-6-5"
           ],
           "blocker_question_keys": []
         },
@@ -6311,7 +6311,7 @@
             "verse:Esth.6.6"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-6"
+            "attestation:wb-esth-p-haman-1-6-6"
           ],
           "blocker_question_keys": []
         },
@@ -6321,7 +6321,7 @@
             "verse:Esth.6.7"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-7"
+            "attestation:wb-esth-p-haman-1-6-7"
           ],
           "blocker_question_keys": []
         },
@@ -6331,8 +6331,8 @@
             "verse:Esth.6.10"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-10",
-            "attestation:wb-p-mordecai-2-6-10"
+            "attestation:wb-esth-p-haman-1-6-10",
+            "attestation:wb-esth-p-mordecai-2-6-10"
           ],
           "blocker_question_keys": []
         },
@@ -6342,8 +6342,8 @@
             "verse:Esth.6.11"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-11",
-            "attestation:wb-p-mordecai-2-6-11"
+            "attestation:wb-esth-p-haman-1-6-11",
+            "attestation:wb-esth-p-mordecai-2-6-11"
           ],
           "blocker_question_keys": []
         },
@@ -6353,8 +6353,8 @@
             "verse:Esth.6.12"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-12",
-            "attestation:wb-p-mordecai-2-6-12"
+            "attestation:wb-esth-p-haman-1-6-12",
+            "attestation:wb-esth-p-mordecai-2-6-12"
           ],
           "blocker_question_keys": []
         },
@@ -6364,9 +6364,9 @@
             "verse:Esth.6.13"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-6-13",
-            "attestation:wb-p-mordecai-2-6-13",
-            "attestation:wb-p-zeresh-1-6-13"
+            "attestation:wb-esth-p-haman-1-6-13",
+            "attestation:wb-esth-p-mordecai-2-6-13",
+            "attestation:wb-esth-p-zeresh-1-6-13"
           ],
           "blocker_question_keys": []
         },
@@ -6376,8 +6376,8 @@
             "verse:Esth.6.14"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-6-14",
-            "attestation:wb-p-haman-1-6-14"
+            "attestation:wb-esth-p-hadassah-1-6-14",
+            "attestation:wb-esth-p-haman-1-6-14"
           ],
           "blocker_question_keys": []
         },
@@ -6387,8 +6387,8 @@
             "verse:Esth.7.1"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-7-1",
-            "attestation:wb-p-haman-1-7-1"
+            "attestation:wb-esth-p-hadassah-1-7-1",
+            "attestation:wb-esth-p-haman-1-7-1"
           ],
           "blocker_question_keys": []
         },
@@ -6398,7 +6398,7 @@
             "verse:Esth.7.2"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-7-2"
+            "attestation:wb-esth-p-hadassah-1-7-2"
           ],
           "blocker_question_keys": []
         },
@@ -6408,7 +6408,7 @@
             "verse:Esth.7.3"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-7-3"
+            "attestation:wb-esth-p-hadassah-1-7-3"
           ],
           "blocker_question_keys": []
         },
@@ -6418,8 +6418,8 @@
             "verse:Esth.7.5"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-7-5",
-            "attestation:wb-p-hadassah-1-7-5"
+            "attestation:wb-esth-p-ahasuerus-1-7-5",
+            "attestation:wb-esth-p-hadassah-1-7-5"
           ],
           "blocker_question_keys": []
         },
@@ -6429,8 +6429,8 @@
             "verse:Esth.7.6"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-7-6",
-            "attestation:wb-p-haman-1-7-6"
+            "attestation:wb-esth-p-hadassah-1-7-6",
+            "attestation:wb-esth-p-haman-1-7-6"
           ],
           "blocker_question_keys": []
         },
@@ -6440,8 +6440,8 @@
             "verse:Esth.7.7"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-7-7",
-            "attestation:wb-p-haman-1-7-7"
+            "attestation:wb-esth-p-hadassah-1-7-7",
+            "attestation:wb-esth-p-haman-1-7-7"
           ],
           "blocker_question_keys": []
         },
@@ -6451,8 +6451,8 @@
             "verse:Esth.7.8"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-7-8",
-            "attestation:wb-p-haman-1-7-8"
+            "attestation:wb-esth-p-hadassah-1-7-8",
+            "attestation:wb-esth-p-haman-1-7-8"
           ],
           "blocker_question_keys": []
         },
@@ -6462,9 +6462,9 @@
             "verse:Esth.7.9"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-7-9",
-            "attestation:wb-p-harbona-1-7-9",
-            "attestation:wb-p-mordecai-2-7-9"
+            "attestation:wb-esth-p-haman-1-7-9",
+            "attestation:wb-esth-p-harbona-1-7-9",
+            "attestation:wb-esth-p-mordecai-2-7-9"
           ],
           "blocker_question_keys": []
         },
@@ -6474,8 +6474,8 @@
             "verse:Esth.7.10"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-7-10",
-            "attestation:wb-p-mordecai-2-7-10"
+            "attestation:wb-esth-p-haman-1-7-10",
+            "attestation:wb-esth-p-mordecai-2-7-10"
           ],
           "blocker_question_keys": []
         },
@@ -6485,10 +6485,10 @@
             "verse:Esth.8.1"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-8-1",
-            "attestation:wb-p-hadassah-1-8-1",
-            "attestation:wb-p-haman-1-8-1",
-            "attestation:wb-p-mordecai-2-8-1"
+            "attestation:wb-esth-p-ahasuerus-1-8-1",
+            "attestation:wb-esth-p-hadassah-1-8-1",
+            "attestation:wb-esth-p-haman-1-8-1",
+            "attestation:wb-esth-p-mordecai-2-8-1"
           ],
           "blocker_question_keys": []
         },
@@ -6498,9 +6498,9 @@
             "verse:Esth.8.2"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-8-2",
-            "attestation:wb-p-haman-1-8-2",
-            "attestation:wb-p-mordecai-2-8-2"
+            "attestation:wb-esth-p-hadassah-1-8-2",
+            "attestation:wb-esth-p-haman-1-8-2",
+            "attestation:wb-esth-p-mordecai-2-8-2"
           ],
           "blocker_question_keys": []
         },
@@ -6510,8 +6510,8 @@
             "verse:Esth.8.3"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-8-3",
-            "attestation:wb-p-haman-1-8-3"
+            "attestation:wb-esth-p-hadassah-1-8-3",
+            "attestation:wb-esth-p-haman-1-8-3"
           ],
           "blocker_question_keys": []
         },
@@ -6521,7 +6521,7 @@
             "verse:Esth.8.4"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-8-4"
+            "attestation:wb-esth-p-hadassah-1-8-4"
           ],
           "blocker_question_keys": []
         },
@@ -6531,8 +6531,8 @@
             "verse:Esth.8.5"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-8-5",
-            "attestation:wb-p-hammedatha-1-8-5"
+            "attestation:wb-esth-p-haman-1-8-5",
+            "attestation:wb-esth-p-hammedatha-1-8-5"
           ],
           "blocker_question_keys": []
         },
@@ -6542,10 +6542,10 @@
             "verse:Esth.8.7"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-8-7",
-            "attestation:wb-p-hadassah-1-8-7",
-            "attestation:wb-p-haman-1-8-7",
-            "attestation:wb-p-mordecai-2-8-7"
+            "attestation:wb-esth-p-ahasuerus-1-8-7",
+            "attestation:wb-esth-p-hadassah-1-8-7",
+            "attestation:wb-esth-p-haman-1-8-7",
+            "attestation:wb-esth-p-mordecai-2-8-7"
           ],
           "blocker_question_keys": []
         },
@@ -6555,9 +6555,9 @@
             "verse:Esth.8.9"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-8-9",
-            "attestation:wb-pl-ethiopia-ab45bd3-8-9",
-            "attestation:wb-pl-india-a878481-8-9"
+            "attestation:wb-esth-p-mordecai-2-8-9",
+            "attestation:wb-esth-pl-ethiopia-ab45bd3-8-9",
+            "attestation:wb-esth-pl-india-a878481-8-9"
           ],
           "blocker_question_keys": []
         },
@@ -6567,7 +6567,7 @@
             "verse:Esth.8.10"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-8-10"
+            "attestation:wb-esth-p-ahasuerus-1-8-10"
           ],
           "blocker_question_keys": []
         },
@@ -6577,7 +6577,7 @@
             "verse:Esth.8.12"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-8-12"
+            "attestation:wb-esth-p-ahasuerus-1-8-12"
           ],
           "blocker_question_keys": []
         },
@@ -6587,7 +6587,7 @@
             "verse:Esth.8.14"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-8-14"
+            "attestation:wb-esth-susa-8-14"
           ],
           "blocker_question_keys": []
         },
@@ -6597,8 +6597,8 @@
             "verse:Esth.8.15"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-8-15",
-            "attestation:wb-pl-susa-a033b84-8-15"
+            "attestation:wb-esth-p-mordecai-2-8-15",
+            "attestation:wb-esth-susa-8-15"
           ],
           "blocker_question_keys": []
         },
@@ -6608,7 +6608,7 @@
             "verse:Esth.9.2"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-9-2"
+            "attestation:wb-esth-p-ahasuerus-1-9-2"
           ],
           "blocker_question_keys": []
         },
@@ -6618,7 +6618,7 @@
             "verse:Esth.9.3"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-9-3"
+            "attestation:wb-esth-p-mordecai-2-9-3"
           ],
           "blocker_question_keys": []
         },
@@ -6628,7 +6628,7 @@
             "verse:Esth.9.4"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-9-4"
+            "attestation:wb-esth-p-mordecai-2-9-4"
           ],
           "blocker_question_keys": []
         },
@@ -6638,7 +6638,7 @@
             "verse:Esth.9.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-9-6"
+            "attestation:wb-esth-susa-9-6"
           ],
           "blocker_question_keys": []
         },
@@ -6648,9 +6648,9 @@
             "verse:Esth.9.7"
           ],
           "record_keys": [
-            "attestation:wb-p-aspatha-1-9-7",
-            "attestation:wb-p-dalphon-1-9-7",
-            "attestation:wb-p-parshandatha-1-9-7"
+            "attestation:wb-esth-p-aspatha-1-9-7",
+            "attestation:wb-esth-p-dalphon-1-9-7",
+            "attestation:wb-esth-p-parshandatha-1-9-7"
           ],
           "blocker_question_keys": []
         },
@@ -6660,9 +6660,9 @@
             "verse:Esth.9.8"
           ],
           "record_keys": [
-            "attestation:wb-p-adalia-1-9-8",
-            "attestation:wb-p-aridatha-1-9-8",
-            "attestation:wb-p-poratha-1-9-8"
+            "attestation:wb-esth-p-adalia-1-9-8",
+            "attestation:wb-esth-p-aridatha-1-9-8",
+            "attestation:wb-esth-p-poratha-1-9-8"
           ],
           "blocker_question_keys": []
         },
@@ -6672,10 +6672,10 @@
             "verse:Esth.9.9"
           ],
           "record_keys": [
-            "attestation:wb-p-aridai-1-9-9",
-            "attestation:wb-p-arisai-1-9-9",
-            "attestation:wb-p-parmashta-1-9-9",
-            "attestation:wb-p-vaizatha-1-9-9"
+            "attestation:wb-esth-p-aridai-1-9-9",
+            "attestation:wb-esth-p-arisai-1-9-9",
+            "attestation:wb-esth-p-parmashta-1-9-9",
+            "attestation:wb-esth-p-vaizatha-1-9-9"
           ],
           "blocker_question_keys": []
         },
@@ -6685,8 +6685,8 @@
             "verse:Esth.9.10"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-9-10",
-            "attestation:wb-p-hammedatha-1-9-10"
+            "attestation:wb-esth-p-haman-1-9-10",
+            "attestation:wb-esth-p-hammedatha-1-9-10"
           ],
           "blocker_question_keys": []
         },
@@ -6696,7 +6696,7 @@
             "verse:Esth.9.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-9-11"
+            "attestation:wb-esth-susa-9-11"
           ],
           "blocker_question_keys": []
         },
@@ -6706,9 +6706,9 @@
             "verse:Esth.9.12"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-9-12",
-            "attestation:wb-p-haman-1-9-12",
-            "attestation:wb-pl-susa-a033b84-9-12"
+            "attestation:wb-esth-p-hadassah-1-9-12",
+            "attestation:wb-esth-p-haman-1-9-12",
+            "attestation:wb-esth-susa-9-12"
           ],
           "blocker_question_keys": []
         },
@@ -6718,9 +6718,9 @@
             "verse:Esth.9.13"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-9-13",
-            "attestation:wb-p-haman-1-9-13",
-            "attestation:wb-pl-susa-a033b84-9-13"
+            "attestation:wb-esth-p-hadassah-1-9-13",
+            "attestation:wb-esth-p-haman-1-9-13",
+            "attestation:wb-esth-susa-9-13"
           ],
           "blocker_question_keys": []
         },
@@ -6730,8 +6730,8 @@
             "verse:Esth.9.14"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-9-14",
-            "attestation:wb-pl-susa-a033b84-9-14"
+            "attestation:wb-esth-p-haman-1-9-14",
+            "attestation:wb-esth-susa-9-14"
           ],
           "blocker_question_keys": []
         },
@@ -6741,7 +6741,7 @@
             "verse:Esth.9.15"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-9-15"
+            "attestation:wb-esth-susa-9-15"
           ],
           "blocker_question_keys": []
         },
@@ -6751,7 +6751,7 @@
             "verse:Esth.9.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-susa-a033b84-9-18"
+            "attestation:wb-esth-susa-9-18"
           ],
           "blocker_question_keys": []
         },
@@ -6761,8 +6761,8 @@
             "verse:Esth.9.20"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-9-20",
-            "attestation:wb-p-mordecai-2-9-20"
+            "attestation:wb-esth-p-ahasuerus-1-9-20",
+            "attestation:wb-esth-p-mordecai-2-9-20"
           ],
           "blocker_question_keys": []
         },
@@ -6772,7 +6772,7 @@
             "verse:Esth.9.23"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-9-23"
+            "attestation:wb-esth-p-mordecai-2-9-23"
           ],
           "blocker_question_keys": []
         },
@@ -6782,8 +6782,8 @@
             "verse:Esth.9.24"
           ],
           "record_keys": [
-            "attestation:wb-p-haman-1-9-24",
-            "attestation:wb-p-hammedatha-1-9-24"
+            "attestation:wb-esth-p-haman-1-9-24",
+            "attestation:wb-esth-p-hammedatha-1-9-24"
           ],
           "blocker_question_keys": []
         },
@@ -6793,9 +6793,9 @@
             "verse:Esth.9.29"
           ],
           "record_keys": [
-            "attestation:wb-p-abihail-5-9-29",
-            "attestation:wb-p-hadassah-1-9-29",
-            "attestation:wb-p-mordecai-2-9-29"
+            "attestation:wb-esth-p-abihail-5-9-29",
+            "attestation:wb-esth-p-hadassah-1-9-29",
+            "attestation:wb-esth-p-mordecai-2-9-29"
           ],
           "blocker_question_keys": []
         },
@@ -6805,7 +6805,7 @@
             "verse:Esth.9.30"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-9-30"
+            "attestation:wb-esth-p-ahasuerus-1-9-30"
           ],
           "blocker_question_keys": []
         },
@@ -6815,8 +6815,8 @@
             "verse:Esth.9.31"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-9-31",
-            "attestation:wb-p-mordecai-2-9-31"
+            "attestation:wb-esth-p-hadassah-1-9-31",
+            "attestation:wb-esth-p-mordecai-2-9-31"
           ],
           "blocker_question_keys": []
         },
@@ -6826,7 +6826,7 @@
             "verse:Esth.9.32"
           ],
           "record_keys": [
-            "attestation:wb-p-hadassah-1-9-32"
+            "attestation:wb-esth-p-hadassah-1-9-32"
           ],
           "blocker_question_keys": []
         },
@@ -6836,7 +6836,7 @@
             "verse:Esth.10.1"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-10-1"
+            "attestation:wb-esth-p-ahasuerus-1-10-1"
           ],
           "blocker_question_keys": []
         },
@@ -6846,9 +6846,9 @@
             "verse:Esth.10.2"
           ],
           "record_keys": [
-            "attestation:wb-p-mordecai-2-10-2",
-            "attestation:wb-pl-media-ad2fadf-10-2",
-            "attestation:wb-pl-persia-ab9696f-10-2"
+            "attestation:wb-esth-p-mordecai-2-10-2",
+            "attestation:wb-esth-pl-media-ad2fadf-10-2",
+            "attestation:wb-esth-pl-persia-ab9696f-10-2"
           ],
           "blocker_question_keys": []
         },
@@ -6858,8 +6858,8 @@
             "verse:Esth.10.3"
           ],
           "record_keys": [
-            "attestation:wb-p-ahasuerus-1-10-3",
-            "attestation:wb-p-mordecai-2-10-3"
+            "attestation:wb-esth-p-ahasuerus-1-10-3",
+            "attestation:wb-esth-p-mordecai-2-10-3"
           ],
           "blocker_question_keys": []
         }

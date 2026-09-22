@@ -93,7 +93,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -270,15 +270,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-moab-1-aa0b1d6",
         "entity_type": "place",
         "proposed_label": "Moab 1",
@@ -331,13 +322,22 @@
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
       }
     ],
     "claims": [],
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-ben-ammi-1-2-8",
+        "attestation_key": "attestation:wb-zeph-p-ben-ammi-1-2-8",
         "reference_key": "verse:Zeph.2.8",
         "entity_key": "entity:p-ben-ammi-1",
         "kind": "participant",
@@ -347,7 +347,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-ben-ammi-1-2-9",
+        "attestation_key": "attestation:wb-zeph-p-ben-ammi-1-2-9",
         "reference_key": "verse:Zeph.2.9",
         "entity_key": "entity:p-ben-ammi-1",
         "kind": "participant",
@@ -357,7 +357,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-josiah-1-1-1",
+        "attestation_key": "attestation:wb-zeph-p-josiah-1-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-josiah-1",
         "kind": "participant",
@@ -367,7 +367,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-amon-2-1-1",
+        "attestation_key": "attestation:wb-zeph-p-amon-2-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-amon-2",
         "kind": "participant",
@@ -377,7 +377,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-zephaniah-3-1-1",
+        "attestation_key": "attestation:wb-zeph-p-zephaniah-3-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-zephaniah-3",
         "kind": "participant",
@@ -387,7 +387,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-cushi-2-1-1",
+        "attestation_key": "attestation:wb-zeph-p-cushi-2-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-cushi-2",
         "kind": "participant",
@@ -397,7 +397,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-gedaliah-5-1-1",
+        "attestation_key": "attestation:wb-zeph-p-gedaliah-5-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-gedaliah-5",
         "kind": "participant",
@@ -407,7 +407,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-amariah-8-1-1",
+        "attestation_key": "attestation:wb-zeph-p-amariah-8-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-amariah-8",
         "kind": "participant",
@@ -417,7 +417,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-hezekiah-3-1-1",
+        "attestation_key": "attestation:wb-zeph-p-hezekiah-3-1-1",
         "reference_key": "verse:Zeph.1.1",
         "entity_key": "entity:p-hezekiah-3",
         "kind": "participant",
@@ -427,7 +427,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ammon-a6046fa-2-8",
+        "attestation_key": "attestation:wb-zeph-pl-ammon-a6046fa-2-8",
         "reference_key": "verse:Zeph.2.8",
         "entity_key": "entity:pl-ammon-a6046fa",
         "kind": "location",
@@ -437,7 +437,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ammon-a6046fa-2-9",
+        "attestation_key": "attestation:wb-zeph-pl-ammon-a6046fa-2-9",
         "reference_key": "verse:Zeph.2.9",
         "entity_key": "entity:pl-ammon-a6046fa",
         "kind": "location",
@@ -447,7 +447,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ashdod-a30c937-2-4",
+        "attestation_key": "attestation:wb-zeph-pl-ashdod-a30c937-2-4",
         "reference_key": "verse:Zeph.2.4",
         "entity_key": "entity:pl-ashdod-a30c937",
         "kind": "location",
@@ -457,7 +457,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ashkelon-ac87d4c-2-4",
+        "attestation_key": "attestation:wb-zeph-pl-ashkelon-ac87d4c-2-4",
         "reference_key": "verse:Zeph.2.4",
         "entity_key": "entity:pl-ashkelon-ac87d4c",
         "kind": "location",
@@ -467,7 +467,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ashkelon-ac87d4c-2-7",
+        "attestation_key": "attestation:wb-zeph-pl-ashkelon-ac87d4c-2-7",
         "reference_key": "verse:Zeph.2.7",
         "entity_key": "entity:pl-ashkelon-ac87d4c",
         "kind": "location",
@@ -477,7 +477,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-assyria-a3d1321-2-13",
+        "attestation_key": "attestation:wb-zeph-pl-assyria-a3d1321-2-13",
         "reference_key": "verse:Zeph.2.13",
         "entity_key": "entity:pl-assyria-a3d1321",
         "kind": "location",
@@ -487,7 +487,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-canaan-a581f0c-1-11",
+        "attestation_key": "attestation:wb-zeph-pl-canaan-a581f0c-1-11",
         "reference_key": "verse:Zeph.1.11",
         "entity_key": "entity:pl-canaan-a581f0c",
         "kind": "location",
@@ -497,7 +497,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-canaan-a581f0c-2-5",
+        "attestation_key": "attestation:wb-zeph-pl-canaan-a581f0c-2-5",
         "reference_key": "verse:Zeph.2.5",
         "entity_key": "entity:pl-canaan-a581f0c",
         "kind": "location",
@@ -507,7 +507,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-crete-a26aa94-2-5",
+        "attestation_key": "attestation:wb-zeph-pl-crete-a26aa94-2-5",
         "reference_key": "verse:Zeph.2.5",
         "entity_key": "entity:pl-crete-a26aa94",
         "kind": "location",
@@ -517,7 +517,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-cush-1-ac5a1ec-3-10",
+        "attestation_key": "attestation:wb-zeph-pl-cush-1-ac5a1ec-3-10",
         "reference_key": "verse:Zeph.3.10",
         "entity_key": "entity:pl-cush-1-ac5a1ec",
         "kind": "location",
@@ -527,7 +527,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-ekron-a3fc47a-2-4",
+        "attestation_key": "attestation:wb-zeph-pl-ekron-a3fc47a-2-4",
         "reference_key": "verse:Zeph.2.4",
         "entity_key": "entity:pl-ekron-a3fc47a",
         "kind": "location",
@@ -537,7 +537,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-fish-gate-a6057f5-1-10",
+        "attestation_key": "attestation:wb-zeph-pl-fish-gate-a6057f5-1-10",
         "reference_key": "verse:Zeph.1.10",
         "entity_key": "entity:pl-fish-gate-a6057f5",
         "kind": "location",
@@ -547,7 +547,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-gaza-aa8edd2-2-4",
+        "attestation_key": "attestation:wb-zeph-pl-gaza-aa8edd2-2-4",
         "reference_key": "verse:Zeph.2.4",
         "entity_key": "entity:pl-gaza-aa8edd2",
         "kind": "location",
@@ -557,7 +557,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-gomorrah-aa572e2-2-9",
+        "attestation_key": "attestation:wb-zeph-pl-gomorrah-aa572e2-2-9",
         "reference_key": "verse:Zeph.2.9",
         "entity_key": "entity:pl-gomorrah-aa572e2",
         "kind": "location",
@@ -567,77 +567,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-4",
-        "reference_key": "verse:Zeph.1.4",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-12",
-        "reference_key": "verse:Zeph.1.12",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-1",
-        "reference_key": "verse:Zeph.3.1",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-7",
-        "reference_key": "verse:Zeph.3.7",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-11",
-        "reference_key": "verse:Zeph.3.11",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-14",
-        "reference_key": "verse:Zeph.3.14",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-16",
-        "reference_key": "verse:Zeph.3.16",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-moab-1-aa0b1d6-2-8",
+        "attestation_key": "attestation:wb-zeph-pl-moab-1-aa0b1d6-2-8",
         "reference_key": "verse:Zeph.2.8",
         "entity_key": "entity:pl-moab-1-aa0b1d6",
         "kind": "location",
@@ -647,7 +577,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-moab-1-aa0b1d6-2-9",
+        "attestation_key": "attestation:wb-zeph-pl-moab-1-aa0b1d6-2-9",
         "reference_key": "verse:Zeph.2.9",
         "entity_key": "entity:pl-moab-1-aa0b1d6",
         "kind": "location",
@@ -657,7 +587,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mortar-abcd5f2-1-11",
+        "attestation_key": "attestation:wb-zeph-pl-mortar-abcd5f2-1-11",
         "reference_key": "verse:Zeph.1.11",
         "entity_key": "entity:pl-mortar-abcd5f2",
         "kind": "location",
@@ -667,7 +597,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-nineveh-a70fd5d-2-13",
+        "attestation_key": "attestation:wb-zeph-pl-nineveh-a70fd5d-2-13",
         "reference_key": "verse:Zeph.2.13",
         "entity_key": "entity:pl-nineveh-a70fd5d",
         "kind": "location",
@@ -677,7 +607,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-second-quarter-a5ab519-1-10",
+        "attestation_key": "attestation:wb-zeph-pl-second-quarter-a5ab519-1-10",
         "reference_key": "verse:Zeph.1.10",
         "entity_key": "entity:pl-second-quarter-a5ab519",
         "kind": "location",
@@ -687,7 +617,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-sodom-a0aa664-2-9",
+        "attestation_key": "attestation:wb-zeph-pl-sodom-a0aa664-2-9",
         "reference_key": "verse:Zeph.2.9",
         "entity_key": "entity:pl-sodom-a0aa664",
         "kind": "location",
@@ -697,7 +627,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-14",
+        "attestation_key": "attestation:wb-zeph-pl-zion-af20c46-3-14",
         "reference_key": "verse:Zeph.3.14",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -707,7 +637,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-16",
+        "attestation_key": "attestation:wb-zeph-pl-zion-af20c46-3-16",
         "reference_key": "verse:Zeph.3.16",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -717,9 +647,79 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-18",
+        "attestation_key": "attestation:wb-zeph-pl-zion-af20c46-3-18",
         "reference_key": "verse:Zeph.3.18",
         "entity_key": "entity:pl-zion-af20c46",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-1-4",
+        "reference_key": "verse:Zeph.1.4",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-1-12",
+        "reference_key": "verse:Zeph.1.12",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-3-1",
+        "reference_key": "verse:Zeph.3.1",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-3-7",
+        "reference_key": "verse:Zeph.3.7",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-3-11",
+        "reference_key": "verse:Zeph.3.11",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-3-14",
+        "reference_key": "verse:Zeph.3.14",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zeph-jerusalem-3-16",
+        "reference_key": "verse:Zeph.3.16",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -729,7 +729,7 @@
     ],
     "relationships": [
       {
-        "relationship_key": "relationship:wb-p-amariah-8-father-p-gedaliah-5",
+        "relationship_key": "relationship:wb-zeph-p-amariah-8-father-p-gedaliah-5",
         "subject_entity_key": "entity:p-amariah-8",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-gedaliah-5",
@@ -740,7 +740,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-amariah-8-son-p-hezekiah-3",
+        "relationship_key": "relationship:wb-zeph-p-amariah-8-son-p-hezekiah-3",
         "subject_entity_key": "entity:p-amariah-8",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-hezekiah-3",
@@ -751,7 +751,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-cushi-2-father-p-zephaniah-3",
+        "relationship_key": "relationship:wb-zeph-p-cushi-2-father-p-zephaniah-3",
         "subject_entity_key": "entity:p-cushi-2",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-zephaniah-3",
@@ -762,7 +762,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-cushi-2-son-p-gedaliah-5",
+        "relationship_key": "relationship:wb-zeph-p-cushi-2-son-p-gedaliah-5",
         "subject_entity_key": "entity:p-cushi-2",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-gedaliah-5",
@@ -773,7 +773,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-gedaliah-5-father-p-cushi-2",
+        "relationship_key": "relationship:wb-zeph-p-gedaliah-5-father-p-cushi-2",
         "subject_entity_key": "entity:p-gedaliah-5",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-cushi-2",
@@ -784,7 +784,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-gedaliah-5-son-p-amariah-8",
+        "relationship_key": "relationship:wb-zeph-p-gedaliah-5-son-p-amariah-8",
         "subject_entity_key": "entity:p-gedaliah-5",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-amariah-8",
@@ -795,7 +795,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-hezekiah-3-father-p-amariah-8",
+        "relationship_key": "relationship:wb-zeph-p-hezekiah-3-father-p-amariah-8",
         "subject_entity_key": "entity:p-hezekiah-3",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-amariah-8",
@@ -806,7 +806,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-zephaniah-3-son-p-cushi-2",
+        "relationship_key": "relationship:wb-zeph-p-zephaniah-3-son-p-cushi-2",
         "subject_entity_key": "entity:p-zephaniah-3",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-cushi-2",
@@ -831,7 +831,7 @@
           "entity:p-zephaniah-3"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -847,9 +847,9 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-canaan-a581f0c",
           "entity:pl-fish-gate-a6057f5",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-mortar-abcd5f2",
           "entity:pl-second-quarter-a5ab519"
         ],
@@ -926,7 +926,7 @@
         "event_type": "judgment",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -942,7 +942,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -958,8 +958,8 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-cush-1-ac5a1ec",
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem",
+          "entity:pl-cush-1-ac5a1ec"
         ],
         "scripture_accounts": [
           {
@@ -975,7 +975,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-zion-af20c46"
         ],
         "scripture_accounts": [
@@ -1111,17 +1111,6 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-moab-1-aa0b1d6",
         "geographic_positions": [
           {
@@ -1181,6 +1170,17 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -1370,24 +1370,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-zeph-1-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-zeph-3-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-zeph-3:refsys:eng-v22:zeph.3.1-zeph.3.20",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "central",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-zeph-2-pl-moab-1-aa0b1d6",
         "scope_key": "scope:wb-zeph-2:refsys:eng-v22:zeph.2.1-zeph.2.15",
         "entity_key": "entity:pl-moab-1-aa0b1d6",
@@ -1437,6 +1419,24 @@
         "scope_key": "scope:wb-zeph-3:refsys:eng-v22:zeph.3.1-zeph.3.20",
         "entity_key": "entity:pl-zion-af20c46",
         "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-zeph-1-jerusalem",
+        "scope_key": "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18",
+        "entity_key": "entity:jerusalem",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-zeph-3-jerusalem",
+        "scope_key": "scope:wb-zeph-3:refsys:eng-v22:zeph.3.1-zeph.3.20",
+        "entity_key": "entity:jerusalem",
+        "importance": "central",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -1558,12 +1558,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-moab-1-aa0b1d6",
         "canonical_entity_key": "entity:pl-moab-1-aa0b1d6",
         "resolution_status": "resolved_existing",
@@ -1596,6 +1590,12 @@
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -1653,13 +1653,13 @@
             "verse:Zeph.1.1"
           ],
           "record_keys": [
-            "attestation:wb-p-amariah-8-1-1",
-            "attestation:wb-p-amon-2-1-1",
-            "attestation:wb-p-cushi-2-1-1",
-            "attestation:wb-p-gedaliah-5-1-1",
-            "attestation:wb-p-hezekiah-3-1-1",
-            "attestation:wb-p-josiah-1-1-1",
-            "attestation:wb-p-zephaniah-3-1-1"
+            "attestation:wb-zeph-p-amariah-8-1-1",
+            "attestation:wb-zeph-p-amon-2-1-1",
+            "attestation:wb-zeph-p-cushi-2-1-1",
+            "attestation:wb-zeph-p-gedaliah-5-1-1",
+            "attestation:wb-zeph-p-hezekiah-3-1-1",
+            "attestation:wb-zeph-p-josiah-1-1-1",
+            "attestation:wb-zeph-p-zephaniah-3-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -1669,7 +1669,7 @@
             "verse:Zeph.1.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-4"
+            "attestation:wb-zeph-jerusalem-1-4"
           ],
           "blocker_question_keys": []
         },
@@ -1679,8 +1679,8 @@
             "verse:Zeph.1.10"
           ],
           "record_keys": [
-            "attestation:wb-pl-fish-gate-a6057f5-1-10",
-            "attestation:wb-pl-second-quarter-a5ab519-1-10"
+            "attestation:wb-zeph-pl-fish-gate-a6057f5-1-10",
+            "attestation:wb-zeph-pl-second-quarter-a5ab519-1-10"
           ],
           "blocker_question_keys": []
         },
@@ -1690,8 +1690,8 @@
             "verse:Zeph.1.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-canaan-a581f0c-1-11",
-            "attestation:wb-pl-mortar-abcd5f2-1-11"
+            "attestation:wb-zeph-pl-canaan-a581f0c-1-11",
+            "attestation:wb-zeph-pl-mortar-abcd5f2-1-11"
           ],
           "blocker_question_keys": []
         },
@@ -1701,7 +1701,7 @@
             "verse:Zeph.1.12"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-12"
+            "attestation:wb-zeph-jerusalem-1-12"
           ],
           "blocker_question_keys": []
         },
@@ -1711,10 +1711,10 @@
             "verse:Zeph.2.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-ashdod-a30c937-2-4",
-            "attestation:wb-pl-ashkelon-ac87d4c-2-4",
-            "attestation:wb-pl-ekron-a3fc47a-2-4",
-            "attestation:wb-pl-gaza-aa8edd2-2-4"
+            "attestation:wb-zeph-pl-ashdod-a30c937-2-4",
+            "attestation:wb-zeph-pl-ashkelon-ac87d4c-2-4",
+            "attestation:wb-zeph-pl-ekron-a3fc47a-2-4",
+            "attestation:wb-zeph-pl-gaza-aa8edd2-2-4"
           ],
           "blocker_question_keys": []
         },
@@ -1724,8 +1724,8 @@
             "verse:Zeph.2.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-canaan-a581f0c-2-5",
-            "attestation:wb-pl-crete-a26aa94-2-5"
+            "attestation:wb-zeph-pl-canaan-a581f0c-2-5",
+            "attestation:wb-zeph-pl-crete-a26aa94-2-5"
           ],
           "blocker_question_keys": []
         },
@@ -1735,7 +1735,7 @@
             "verse:Zeph.2.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-ashkelon-ac87d4c-2-7"
+            "attestation:wb-zeph-pl-ashkelon-ac87d4c-2-7"
           ],
           "blocker_question_keys": []
         },
@@ -1745,9 +1745,9 @@
             "verse:Zeph.2.8"
           ],
           "record_keys": [
-            "attestation:wb-p-ben-ammi-1-2-8",
-            "attestation:wb-pl-ammon-a6046fa-2-8",
-            "attestation:wb-pl-moab-1-aa0b1d6-2-8"
+            "attestation:wb-zeph-p-ben-ammi-1-2-8",
+            "attestation:wb-zeph-pl-ammon-a6046fa-2-8",
+            "attestation:wb-zeph-pl-moab-1-aa0b1d6-2-8"
           ],
           "blocker_question_keys": []
         },
@@ -1757,11 +1757,11 @@
             "verse:Zeph.2.9"
           ],
           "record_keys": [
-            "attestation:wb-p-ben-ammi-1-2-9",
-            "attestation:wb-pl-ammon-a6046fa-2-9",
-            "attestation:wb-pl-gomorrah-aa572e2-2-9",
-            "attestation:wb-pl-moab-1-aa0b1d6-2-9",
-            "attestation:wb-pl-sodom-a0aa664-2-9"
+            "attestation:wb-zeph-p-ben-ammi-1-2-9",
+            "attestation:wb-zeph-pl-ammon-a6046fa-2-9",
+            "attestation:wb-zeph-pl-gomorrah-aa572e2-2-9",
+            "attestation:wb-zeph-pl-moab-1-aa0b1d6-2-9",
+            "attestation:wb-zeph-pl-sodom-a0aa664-2-9"
           ],
           "blocker_question_keys": []
         },
@@ -1771,8 +1771,8 @@
             "verse:Zeph.2.13"
           ],
           "record_keys": [
-            "attestation:wb-pl-assyria-a3d1321-2-13",
-            "attestation:wb-pl-nineveh-a70fd5d-2-13"
+            "attestation:wb-zeph-pl-assyria-a3d1321-2-13",
+            "attestation:wb-zeph-pl-nineveh-a70fd5d-2-13"
           ],
           "blocker_question_keys": []
         },
@@ -1782,7 +1782,7 @@
             "verse:Zeph.3.1"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-1"
+            "attestation:wb-zeph-jerusalem-3-1"
           ],
           "blocker_question_keys": []
         },
@@ -1792,7 +1792,7 @@
             "verse:Zeph.3.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-7"
+            "attestation:wb-zeph-jerusalem-3-7"
           ],
           "blocker_question_keys": []
         },
@@ -1802,7 +1802,7 @@
             "verse:Zeph.3.10"
           ],
           "record_keys": [
-            "attestation:wb-pl-cush-1-ac5a1ec-3-10"
+            "attestation:wb-zeph-pl-cush-1-ac5a1ec-3-10"
           ],
           "blocker_question_keys": []
         },
@@ -1812,7 +1812,7 @@
             "verse:Zeph.3.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-11"
+            "attestation:wb-zeph-jerusalem-3-11"
           ],
           "blocker_question_keys": []
         },
@@ -1822,8 +1822,8 @@
             "verse:Zeph.3.14"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-14",
-            "attestation:wb-pl-zion-af20c46-3-14"
+            "attestation:wb-zeph-jerusalem-3-14",
+            "attestation:wb-zeph-pl-zion-af20c46-3-14"
           ],
           "blocker_question_keys": []
         },
@@ -1833,8 +1833,8 @@
             "verse:Zeph.3.16"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-16",
-            "attestation:wb-pl-zion-af20c46-3-16"
+            "attestation:wb-zeph-jerusalem-3-16",
+            "attestation:wb-zeph-pl-zion-af20c46-3-16"
           ],
           "blocker_question_keys": []
         },
@@ -1844,7 +1844,7 @@
             "verse:Zeph.3.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-3-18"
+            "attestation:wb-zeph-pl-zion-af20c46-3-18"
           ],
           "blocker_question_keys": []
         }

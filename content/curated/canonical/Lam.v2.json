@@ -193,7 +193,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -235,15 +235,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-mount-zion-abd9596",
         "entity_type": "place",
         "proposed_label": "Mount Zion",
@@ -278,13 +269,22 @@
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
       }
     ],
     "claims": [],
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-jacob-1-1-17",
+        "attestation_key": "attestation:wb-lam-p-jacob-1-1-17",
         "reference_key": "verse:Lam.1.17",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -294,7 +294,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jacob-1-2-1",
+        "attestation_key": "attestation:wb-lam-p-jacob-1-2-1",
         "reference_key": "verse:Lam.2.1",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -304,7 +304,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jacob-1-2-3",
+        "attestation_key": "attestation:wb-lam-p-jacob-1-2-3",
         "reference_key": "verse:Lam.2.3",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -314,7 +314,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-assyria-a3d1321-5-6",
+        "attestation_key": "attestation:wb-lam-pl-assyria-a3d1321-5-6",
         "reference_key": "verse:Lam.5.6",
         "entity_key": "entity:pl-assyria-a3d1321",
         "kind": "location",
@@ -324,7 +324,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-4-21",
+        "attestation_key": "attestation:wb-lam-pl-edom-a2735ff-4-21",
         "reference_key": "verse:Lam.4.21",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -334,7 +334,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-4-22",
+        "attestation_key": "attestation:wb-lam-pl-edom-a2735ff-4-22",
         "reference_key": "verse:Lam.4.22",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -344,7 +344,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-egypt-af301ca-5-6",
+        "attestation_key": "attestation:wb-lam-pl-egypt-af301ca-5-6",
         "reference_key": "verse:Lam.5.6",
         "entity_key": "entity:pl-egypt-af301ca",
         "kind": "location",
@@ -354,157 +354,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-1",
-        "reference_key": "verse:Lam.1.1",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-5",
-        "reference_key": "verse:Lam.1.5",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-7",
-        "reference_key": "verse:Lam.1.7",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-8",
-        "reference_key": "verse:Lam.1.8",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-17",
-        "reference_key": "verse:Lam.1.17",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-18",
-        "reference_key": "verse:Lam.1.18",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-2",
-        "reference_key": "verse:Lam.2.2",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-5",
-        "reference_key": "verse:Lam.2.5",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-7",
-        "reference_key": "verse:Lam.2.7",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-10",
-        "reference_key": "verse:Lam.2.10",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-13",
-        "reference_key": "verse:Lam.2.13",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-15",
-        "reference_key": "verse:Lam.2.15",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-17",
-        "reference_key": "verse:Lam.2.17",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-51",
-        "reference_key": "verse:Lam.3.51",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-4-12",
-        "reference_key": "verse:Lam.4.12",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-5-18",
+        "attestation_key": "attestation:wb-lam-pl-mount-zion-abd9596-5-18",
         "reference_key": "verse:Lam.5.18",
         "entity_key": "entity:pl-mount-zion-abd9596",
         "kind": "location",
@@ -514,7 +364,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-sodom-a0aa664-4-6",
+        "attestation_key": "attestation:wb-lam-pl-sodom-a0aa664-4-6",
         "reference_key": "verse:Lam.4.6",
         "entity_key": "entity:pl-sodom-a0aa664",
         "kind": "location",
@@ -524,7 +374,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-uz-a324c4d-4-21",
+        "attestation_key": "attestation:wb-lam-pl-uz-a324c4d-4-21",
         "reference_key": "verse:Lam.4.21",
         "entity_key": "entity:pl-uz-a324c4d",
         "kind": "location",
@@ -534,7 +384,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-1-4",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-1-4",
         "reference_key": "verse:Lam.1.4",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -544,7 +394,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-1-6",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-1-6",
         "reference_key": "verse:Lam.1.6",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -554,7 +404,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-1-17",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-1-17",
         "reference_key": "verse:Lam.1.17",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -564,7 +414,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-1",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-1",
         "reference_key": "verse:Lam.2.1",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -574,7 +424,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-4",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-4",
         "reference_key": "verse:Lam.2.4",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -584,7 +434,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-6",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-6",
         "reference_key": "verse:Lam.2.6",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -594,7 +444,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-8",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-8",
         "reference_key": "verse:Lam.2.8",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -604,7 +454,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-9",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-9",
         "reference_key": "verse:Lam.2.9",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -614,7 +464,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-10",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-10",
         "reference_key": "verse:Lam.2.10",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -624,7 +474,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-13",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-13",
         "reference_key": "verse:Lam.2.13",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -634,7 +484,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-18",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-2-18",
         "reference_key": "verse:Lam.2.18",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -644,7 +494,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-4-2",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-4-2",
         "reference_key": "verse:Lam.4.2",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -654,7 +504,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-4-11",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-4-11",
         "reference_key": "verse:Lam.4.11",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -664,7 +514,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-4-22",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-4-22",
         "reference_key": "verse:Lam.4.22",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -674,9 +524,159 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-5-11",
+        "attestation_key": "attestation:wb-lam-pl-zion-af20c46-5-11",
         "reference_key": "verse:Lam.5.11",
         "entity_key": "entity:pl-zion-af20c46",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-1-1",
+        "reference_key": "verse:Lam.1.1",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-1-5",
+        "reference_key": "verse:Lam.1.5",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-1-7",
+        "reference_key": "verse:Lam.1.7",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-1-8",
+        "reference_key": "verse:Lam.1.8",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-1-17",
+        "reference_key": "verse:Lam.1.17",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-1-18",
+        "reference_key": "verse:Lam.1.18",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-2",
+        "reference_key": "verse:Lam.2.2",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-5",
+        "reference_key": "verse:Lam.2.5",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-7",
+        "reference_key": "verse:Lam.2.7",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-10",
+        "reference_key": "verse:Lam.2.10",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-13",
+        "reference_key": "verse:Lam.2.13",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-15",
+        "reference_key": "verse:Lam.2.15",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-2-17",
+        "reference_key": "verse:Lam.2.17",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-3-51",
+        "reference_key": "verse:Lam.3.51",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-lam-jerusalem-4-12",
+        "reference_key": "verse:Lam.4.12",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -693,7 +693,7 @@
           "entity:p-jacob-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-zion-af20c46"
         ],
         "scripture_accounts": [
@@ -712,7 +712,7 @@
           "entity:p-jacob-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-zion-af20c46"
         ],
         "scripture_accounts": [
@@ -729,7 +729,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -745,8 +745,8 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-edom-a2735ff",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-sodom-a0aa664",
           "entity:pl-uz-a324c4d",
           "entity:pl-zion-af20c46"
@@ -815,17 +815,6 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-mount-zion-abd9596",
         "geographic_positions": [
           {
@@ -863,6 +852,17 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -911,42 +911,6 @@
         "relevance_key": "relevance:wb-lam-5-pl-egypt-af301ca",
         "scope_key": "scope:wb-lam-5:refsys:eng-v22:lam.5.1-lam.5.22",
         "entity_key": "entity:pl-egypt-af301ca",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-lam-1-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-lam-1:refsys:eng-v22:lam.1.1-lam.1.22",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "central",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-lam-2-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-lam-2:refsys:eng-v22:lam.2.1-lam.2.22",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "central",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-lam-3-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-lam-3:refsys:eng-v22:lam.3.1-lam.3.66",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-lam-4-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-lam-4:refsys:eng-v22:lam.4.1-lam.4.22",
-        "entity_key": "entity:pl-jerusalem-a15257a",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -1014,6 +978,42 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-lam-1-jerusalem",
+        "scope_key": "scope:wb-lam-1:refsys:eng-v22:lam.1.1-lam.1.22",
+        "entity_key": "entity:jerusalem",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-lam-2-jerusalem",
+        "scope_key": "scope:wb-lam-2:refsys:eng-v22:lam.2.1-lam.2.22",
+        "entity_key": "entity:jerusalem",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-lam-3-jerusalem",
+        "scope_key": "scope:wb-lam-3:refsys:eng-v22:lam.3.1-lam.3.66",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-lam-4-jerusalem",
+        "scope_key": "scope:wb-lam-4:refsys:eng-v22:lam.4.1-lam.4.22",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -1042,12 +1042,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-mount-zion-abd9596",
         "canonical_entity_key": "entity:pl-mount-zion-abd9596",
         "resolution_status": "resolved_existing",
@@ -1068,6 +1062,12 @@
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -1212,7 +1212,7 @@
             "verse:Lam.1.1"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-1"
+            "attestation:wb-lam-jerusalem-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -1222,7 +1222,7 @@
             "verse:Lam.1.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-1-4"
+            "attestation:wb-lam-pl-zion-af20c46-1-4"
           ],
           "blocker_question_keys": []
         },
@@ -1232,7 +1232,7 @@
             "verse:Lam.1.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-5"
+            "attestation:wb-lam-jerusalem-1-5"
           ],
           "blocker_question_keys": []
         },
@@ -1242,7 +1242,7 @@
             "verse:Lam.1.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-1-6"
+            "attestation:wb-lam-pl-zion-af20c46-1-6"
           ],
           "blocker_question_keys": []
         },
@@ -1252,7 +1252,7 @@
             "verse:Lam.1.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-7"
+            "attestation:wb-lam-jerusalem-1-7"
           ],
           "blocker_question_keys": []
         },
@@ -1262,7 +1262,7 @@
             "verse:Lam.1.8"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-8"
+            "attestation:wb-lam-jerusalem-1-8"
           ],
           "blocker_question_keys": []
         },
@@ -1272,9 +1272,9 @@
             "verse:Lam.1.17"
           ],
           "record_keys": [
-            "attestation:wb-p-jacob-1-1-17",
-            "attestation:wb-pl-jerusalem-a15257a-1-17",
-            "attestation:wb-pl-zion-af20c46-1-17"
+            "attestation:wb-lam-jerusalem-1-17",
+            "attestation:wb-lam-p-jacob-1-1-17",
+            "attestation:wb-lam-pl-zion-af20c46-1-17"
           ],
           "blocker_question_keys": []
         },
@@ -1284,7 +1284,7 @@
             "verse:Lam.1.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-18"
+            "attestation:wb-lam-jerusalem-1-18"
           ],
           "blocker_question_keys": []
         },
@@ -1294,8 +1294,8 @@
             "verse:Lam.2.1"
           ],
           "record_keys": [
-            "attestation:wb-p-jacob-1-2-1",
-            "attestation:wb-pl-zion-af20c46-2-1"
+            "attestation:wb-lam-p-jacob-1-2-1",
+            "attestation:wb-lam-pl-zion-af20c46-2-1"
           ],
           "blocker_question_keys": []
         },
@@ -1305,7 +1305,7 @@
             "verse:Lam.2.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-2"
+            "attestation:wb-lam-jerusalem-2-2"
           ],
           "blocker_question_keys": []
         },
@@ -1315,7 +1315,7 @@
             "verse:Lam.2.3"
           ],
           "record_keys": [
-            "attestation:wb-p-jacob-1-2-3"
+            "attestation:wb-lam-p-jacob-1-2-3"
           ],
           "blocker_question_keys": []
         },
@@ -1325,7 +1325,7 @@
             "verse:Lam.2.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-4"
+            "attestation:wb-lam-pl-zion-af20c46-2-4"
           ],
           "blocker_question_keys": []
         },
@@ -1335,7 +1335,7 @@
             "verse:Lam.2.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-5"
+            "attestation:wb-lam-jerusalem-2-5"
           ],
           "blocker_question_keys": []
         },
@@ -1345,7 +1345,7 @@
             "verse:Lam.2.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-6"
+            "attestation:wb-lam-pl-zion-af20c46-2-6"
           ],
           "blocker_question_keys": []
         },
@@ -1355,7 +1355,7 @@
             "verse:Lam.2.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-7"
+            "attestation:wb-lam-jerusalem-2-7"
           ],
           "blocker_question_keys": []
         },
@@ -1365,7 +1365,7 @@
             "verse:Lam.2.8"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-8"
+            "attestation:wb-lam-pl-zion-af20c46-2-8"
           ],
           "blocker_question_keys": []
         },
@@ -1375,7 +1375,7 @@
             "verse:Lam.2.9"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-9"
+            "attestation:wb-lam-pl-zion-af20c46-2-9"
           ],
           "blocker_question_keys": []
         },
@@ -1385,8 +1385,8 @@
             "verse:Lam.2.10"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-10",
-            "attestation:wb-pl-zion-af20c46-2-10"
+            "attestation:wb-lam-jerusalem-2-10",
+            "attestation:wb-lam-pl-zion-af20c46-2-10"
           ],
           "blocker_question_keys": []
         },
@@ -1396,8 +1396,8 @@
             "verse:Lam.2.13"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-13",
-            "attestation:wb-pl-zion-af20c46-2-13"
+            "attestation:wb-lam-jerusalem-2-13",
+            "attestation:wb-lam-pl-zion-af20c46-2-13"
           ],
           "blocker_question_keys": []
         },
@@ -1407,7 +1407,7 @@
             "verse:Lam.2.15"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-15"
+            "attestation:wb-lam-jerusalem-2-15"
           ],
           "blocker_question_keys": []
         },
@@ -1417,7 +1417,7 @@
             "verse:Lam.2.17"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-17"
+            "attestation:wb-lam-jerusalem-2-17"
           ],
           "blocker_question_keys": []
         },
@@ -1427,7 +1427,7 @@
             "verse:Lam.2.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-18"
+            "attestation:wb-lam-pl-zion-af20c46-2-18"
           ],
           "blocker_question_keys": []
         },
@@ -1437,7 +1437,7 @@
             "verse:Lam.3.51"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-51"
+            "attestation:wb-lam-jerusalem-3-51"
           ],
           "blocker_question_keys": []
         },
@@ -1447,7 +1447,7 @@
             "verse:Lam.4.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-4-2"
+            "attestation:wb-lam-pl-zion-af20c46-4-2"
           ],
           "blocker_question_keys": []
         },
@@ -1457,7 +1457,7 @@
             "verse:Lam.4.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-sodom-a0aa664-4-6"
+            "attestation:wb-lam-pl-sodom-a0aa664-4-6"
           ],
           "blocker_question_keys": []
         },
@@ -1467,7 +1467,7 @@
             "verse:Lam.4.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-4-11"
+            "attestation:wb-lam-pl-zion-af20c46-4-11"
           ],
           "blocker_question_keys": []
         },
@@ -1477,7 +1477,7 @@
             "verse:Lam.4.12"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-4-12"
+            "attestation:wb-lam-jerusalem-4-12"
           ],
           "blocker_question_keys": []
         },
@@ -1487,8 +1487,8 @@
             "verse:Lam.4.21"
           ],
           "record_keys": [
-            "attestation:wb-pl-edom-a2735ff-4-21",
-            "attestation:wb-pl-uz-a324c4d-4-21"
+            "attestation:wb-lam-pl-edom-a2735ff-4-21",
+            "attestation:wb-lam-pl-uz-a324c4d-4-21"
           ],
           "blocker_question_keys": []
         },
@@ -1498,8 +1498,8 @@
             "verse:Lam.4.22"
           ],
           "record_keys": [
-            "attestation:wb-pl-edom-a2735ff-4-22",
-            "attestation:wb-pl-zion-af20c46-4-22"
+            "attestation:wb-lam-pl-edom-a2735ff-4-22",
+            "attestation:wb-lam-pl-zion-af20c46-4-22"
           ],
           "blocker_question_keys": []
         },
@@ -1509,8 +1509,8 @@
             "verse:Lam.5.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-assyria-a3d1321-5-6",
-            "attestation:wb-pl-egypt-af301ca-5-6"
+            "attestation:wb-lam-pl-assyria-a3d1321-5-6",
+            "attestation:wb-lam-pl-egypt-af301ca-5-6"
           ],
           "blocker_question_keys": []
         },
@@ -1520,7 +1520,7 @@
             "verse:Lam.5.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-5-11"
+            "attestation:wb-lam-pl-zion-af20c46-5-11"
           ],
           "blocker_question_keys": []
         },
@@ -1530,7 +1530,7 @@
             "verse:Lam.5.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-mount-zion-abd9596-5-18"
+            "attestation:wb-lam-pl-mount-zion-abd9596-5-18"
           ],
           "blocker_question_keys": []
         }

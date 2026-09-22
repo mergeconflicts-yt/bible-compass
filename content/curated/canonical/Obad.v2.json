@@ -51,7 +51,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -138,15 +138,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-mount-esau-a8e843f",
         "entity_type": "place",
         "proposed_label": "Mount Esau",
@@ -226,13 +217,22 @@
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
       }
     ],
     "claims": [],
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-esau-1-1-18",
+        "attestation_key": "attestation:wb-obad-p-esau-1-1-18",
         "reference_key": "verse:Obad.1.18",
         "entity_key": "entity:p-esau-1",
         "kind": "participant",
@@ -242,7 +242,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jacob-1-1-17",
+        "attestation_key": "attestation:wb-obad-p-jacob-1-1-17",
         "reference_key": "verse:Obad.1.17",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -252,7 +252,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jacob-1-1-18",
+        "attestation_key": "attestation:wb-obad-p-jacob-1-1-18",
         "reference_key": "verse:Obad.1.18",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -262,7 +262,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-jacob-1-1-20",
+        "attestation_key": "attestation:wb-obad-p-jacob-1-1-20",
         "reference_key": "verse:Obad.1.20",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -272,7 +272,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-judah-1-1-12",
+        "attestation_key": "attestation:wb-obad-p-judah-1-1-12",
         "reference_key": "verse:Obad.1.12",
         "entity_key": "entity:p-judah-1",
         "kind": "participant",
@@ -282,7 +282,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-joseph-1-1-18",
+        "attestation_key": "attestation:wb-obad-p-joseph-1-1-18",
         "reference_key": "verse:Obad.1.18",
         "entity_key": "entity:p-joseph-1",
         "kind": "participant",
@@ -292,7 +292,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-obadiah-12-1-1",
+        "attestation_key": "attestation:wb-obad-p-obadiah-12-1-1",
         "reference_key": "verse:Obad.1.1",
         "entity_key": "entity:p-obadiah-12",
         "kind": "participant",
@@ -302,7 +302,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-canaan-a581f0c-1-20",
+        "attestation_key": "attestation:wb-obad-pl-canaan-a581f0c-1-20",
         "reference_key": "verse:Obad.1.20",
         "entity_key": "entity:pl-canaan-a581f0c",
         "kind": "location",
@@ -312,7 +312,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-1",
+        "attestation_key": "attestation:wb-obad-pl-edom-a2735ff-1-1",
         "reference_key": "verse:Obad.1.1",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -322,7 +322,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-2",
+        "attestation_key": "attestation:wb-obad-pl-edom-a2735ff-1-2",
         "reference_key": "verse:Obad.1.2",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -332,7 +332,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-6",
+        "attestation_key": "attestation:wb-obad-pl-edom-a2735ff-1-6",
         "reference_key": "verse:Obad.1.6",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -342,7 +342,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-8",
+        "attestation_key": "attestation:wb-obad-pl-edom-a2735ff-1-8",
         "reference_key": "verse:Obad.1.8",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -352,7 +352,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-1-18",
+        "attestation_key": "attestation:wb-obad-pl-edom-a2735ff-1-18",
         "reference_key": "verse:Obad.1.18",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -362,7 +362,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-1-19",
+        "attestation_key": "attestation:wb-obad-pl-gilead-1-ae73b90-1-19",
         "reference_key": "verse:Obad.1.19",
         "entity_key": "entity:pl-gilead-1-ae73b90",
         "kind": "location",
@@ -372,7 +372,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-halah-abf176f-1-20",
+        "attestation_key": "attestation:wb-obad-pl-halah-abf176f-1-20",
         "reference_key": "verse:Obad.1.20",
         "entity_key": "entity:pl-halah-abf176f",
         "kind": "location",
@@ -382,37 +382,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-11",
-        "reference_key": "verse:Obad.1.11",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-20",
-        "reference_key": "verse:Obad.1.20",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-21",
-        "reference_key": "verse:Obad.1.21",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-mount-esau-a8e843f-1-8",
+        "attestation_key": "attestation:wb-obad-pl-mount-esau-a8e843f-1-8",
         "reference_key": "verse:Obad.1.8",
         "entity_key": "entity:pl-mount-esau-a8e843f",
         "kind": "location",
@@ -422,7 +392,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-esau-a8e843f-1-9",
+        "attestation_key": "attestation:wb-obad-pl-mount-esau-a8e843f-1-9",
         "reference_key": "verse:Obad.1.9",
         "entity_key": "entity:pl-mount-esau-a8e843f",
         "kind": "location",
@@ -432,7 +402,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-esau-a8e843f-1-19",
+        "attestation_key": "attestation:wb-obad-pl-mount-esau-a8e843f-1-19",
         "reference_key": "verse:Obad.1.19",
         "entity_key": "entity:pl-mount-esau-a8e843f",
         "kind": "location",
@@ -442,7 +412,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-esau-a8e843f-1-21",
+        "attestation_key": "attestation:wb-obad-pl-mount-esau-a8e843f-1-21",
         "reference_key": "verse:Obad.1.21",
         "entity_key": "entity:pl-mount-esau-a8e843f",
         "kind": "location",
@@ -452,7 +422,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-1-17",
+        "attestation_key": "attestation:wb-obad-pl-mount-zion-abd9596-1-17",
         "reference_key": "verse:Obad.1.17",
         "entity_key": "entity:pl-mount-zion-abd9596",
         "kind": "location",
@@ -462,7 +432,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-1-21",
+        "attestation_key": "attestation:wb-obad-pl-mount-zion-abd9596-1-21",
         "reference_key": "verse:Obad.1.21",
         "entity_key": "entity:pl-mount-zion-abd9596",
         "kind": "location",
@@ -472,7 +442,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-negeb-a1cb244-1-19",
+        "attestation_key": "attestation:wb-obad-pl-negeb-a1cb244-1-19",
         "reference_key": "verse:Obad.1.19",
         "entity_key": "entity:pl-negeb-a1cb244",
         "kind": "location",
@@ -482,7 +452,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-negeb-a1cb244-1-20",
+        "attestation_key": "attestation:wb-obad-pl-negeb-a1cb244-1-20",
         "reference_key": "verse:Obad.1.20",
         "entity_key": "entity:pl-negeb-a1cb244",
         "kind": "location",
@@ -492,7 +462,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-philistia-ac71e65-1-19",
+        "attestation_key": "attestation:wb-obad-pl-philistia-ac71e65-1-19",
         "reference_key": "verse:Obad.1.19",
         "entity_key": "entity:pl-philistia-ac71e65",
         "kind": "location",
@@ -502,7 +472,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-samaria-1-a041bb3-1-19",
+        "attestation_key": "attestation:wb-obad-pl-samaria-1-a041bb3-1-19",
         "reference_key": "verse:Obad.1.19",
         "entity_key": "entity:pl-samaria-1-a041bb3",
         "kind": "location",
@@ -512,7 +482,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-sepharad-a0a98de-1-20",
+        "attestation_key": "attestation:wb-obad-pl-sepharad-a0a98de-1-20",
         "reference_key": "verse:Obad.1.20",
         "entity_key": "entity:pl-sepharad-a0a98de",
         "kind": "location",
@@ -522,7 +492,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-shephelah-af084cf-1-19",
+        "attestation_key": "attestation:wb-obad-pl-shephelah-af084cf-1-19",
         "reference_key": "verse:Obad.1.19",
         "entity_key": "entity:pl-shephelah-af084cf",
         "kind": "location",
@@ -532,7 +502,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-teman-a831506-1-9",
+        "attestation_key": "attestation:wb-obad-pl-teman-a831506-1-9",
         "reference_key": "verse:Obad.1.9",
         "entity_key": "entity:pl-teman-a831506",
         "kind": "location",
@@ -542,9 +512,39 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zarephath-a6fa2d3-1-20",
+        "attestation_key": "attestation:wb-obad-pl-zarephath-a6fa2d3-1-20",
         "reference_key": "verse:Obad.1.20",
         "entity_key": "entity:pl-zarephath-a6fa2d3",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-obad-jerusalem-1-11",
+        "reference_key": "verse:Obad.1.11",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-obad-jerusalem-1-20",
+        "reference_key": "verse:Obad.1.20",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-obad-jerusalem-1-21",
+        "reference_key": "verse:Obad.1.21",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -562,8 +562,8 @@
           "entity:p-obadiah-12"
         ],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-edom-a2735ff",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-mount-esau-a8e843f",
           "entity:pl-teman-a831506"
         ],
@@ -585,11 +585,11 @@
           "entity:p-joseph-1"
         ],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-canaan-a581f0c",
           "entity:pl-edom-a2735ff",
           "entity:pl-gilead-1-ae73b90",
           "entity:pl-halah-abf176f",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-mount-esau-a8e843f",
           "entity:pl-mount-zion-abd9596",
           "entity:pl-negeb-a1cb244",
@@ -648,17 +648,6 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-halah-abf176f",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -763,6 +752,17 @@
           }
         ],
         "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
       }
     ],
     "relevance": [
@@ -848,15 +848,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-obad-1-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-obad-1-pl-mount-esau-a8e843f",
         "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
         "entity_key": "entity:pl-mount-esau-a8e843f",
@@ -936,6 +927,15 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-obad-1-jerusalem",
+        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
+        "entity_key": "entity:jerusalem",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -994,12 +994,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-mount-esau-a8e843f",
         "canonical_entity_key": "entity:pl-mount-esau-a8e843f",
         "resolution_status": "resolved_existing",
@@ -1052,6 +1046,12 @@
         "canonical_entity_key": "entity:pl-zarephath-a6fa2d3",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
       }
     ]
   },
@@ -1081,8 +1081,8 @@
             "verse:Obad.1.1"
           ],
           "record_keys": [
-            "attestation:wb-p-obadiah-12-1-1",
-            "attestation:wb-pl-edom-a2735ff-1-1"
+            "attestation:wb-obad-p-obadiah-12-1-1",
+            "attestation:wb-obad-pl-edom-a2735ff-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -1092,7 +1092,7 @@
             "verse:Obad.1.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-edom-a2735ff-1-2"
+            "attestation:wb-obad-pl-edom-a2735ff-1-2"
           ],
           "blocker_question_keys": []
         },
@@ -1102,7 +1102,7 @@
             "verse:Obad.1.6"
           ],
           "record_keys": [
-            "attestation:wb-pl-edom-a2735ff-1-6"
+            "attestation:wb-obad-pl-edom-a2735ff-1-6"
           ],
           "blocker_question_keys": []
         },
@@ -1112,8 +1112,8 @@
             "verse:Obad.1.8"
           ],
           "record_keys": [
-            "attestation:wb-pl-edom-a2735ff-1-8",
-            "attestation:wb-pl-mount-esau-a8e843f-1-8"
+            "attestation:wb-obad-pl-edom-a2735ff-1-8",
+            "attestation:wb-obad-pl-mount-esau-a8e843f-1-8"
           ],
           "blocker_question_keys": []
         },
@@ -1123,8 +1123,8 @@
             "verse:Obad.1.9"
           ],
           "record_keys": [
-            "attestation:wb-pl-mount-esau-a8e843f-1-9",
-            "attestation:wb-pl-teman-a831506-1-9"
+            "attestation:wb-obad-pl-mount-esau-a8e843f-1-9",
+            "attestation:wb-obad-pl-teman-a831506-1-9"
           ],
           "blocker_question_keys": []
         },
@@ -1134,7 +1134,7 @@
             "verse:Obad.1.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-11"
+            "attestation:wb-obad-jerusalem-1-11"
           ],
           "blocker_question_keys": []
         },
@@ -1144,7 +1144,7 @@
             "verse:Obad.1.12"
           ],
           "record_keys": [
-            "attestation:wb-p-judah-1-1-12"
+            "attestation:wb-obad-p-judah-1-1-12"
           ],
           "blocker_question_keys": []
         },
@@ -1154,8 +1154,8 @@
             "verse:Obad.1.17"
           ],
           "record_keys": [
-            "attestation:wb-p-jacob-1-1-17",
-            "attestation:wb-pl-mount-zion-abd9596-1-17"
+            "attestation:wb-obad-p-jacob-1-1-17",
+            "attestation:wb-obad-pl-mount-zion-abd9596-1-17"
           ],
           "blocker_question_keys": []
         },
@@ -1165,10 +1165,10 @@
             "verse:Obad.1.18"
           ],
           "record_keys": [
-            "attestation:wb-p-esau-1-1-18",
-            "attestation:wb-p-jacob-1-1-18",
-            "attestation:wb-p-joseph-1-1-18",
-            "attestation:wb-pl-edom-a2735ff-1-18"
+            "attestation:wb-obad-p-esau-1-1-18",
+            "attestation:wb-obad-p-jacob-1-1-18",
+            "attestation:wb-obad-p-joseph-1-1-18",
+            "attestation:wb-obad-pl-edom-a2735ff-1-18"
           ],
           "blocker_question_keys": []
         },
@@ -1178,12 +1178,12 @@
             "verse:Obad.1.19"
           ],
           "record_keys": [
-            "attestation:wb-pl-gilead-1-ae73b90-1-19",
-            "attestation:wb-pl-mount-esau-a8e843f-1-19",
-            "attestation:wb-pl-negeb-a1cb244-1-19",
-            "attestation:wb-pl-philistia-ac71e65-1-19",
-            "attestation:wb-pl-samaria-1-a041bb3-1-19",
-            "attestation:wb-pl-shephelah-af084cf-1-19"
+            "attestation:wb-obad-pl-gilead-1-ae73b90-1-19",
+            "attestation:wb-obad-pl-mount-esau-a8e843f-1-19",
+            "attestation:wb-obad-pl-negeb-a1cb244-1-19",
+            "attestation:wb-obad-pl-philistia-ac71e65-1-19",
+            "attestation:wb-obad-pl-samaria-1-a041bb3-1-19",
+            "attestation:wb-obad-pl-shephelah-af084cf-1-19"
           ],
           "blocker_question_keys": []
         },
@@ -1193,13 +1193,13 @@
             "verse:Obad.1.20"
           ],
           "record_keys": [
-            "attestation:wb-p-jacob-1-1-20",
-            "attestation:wb-pl-canaan-a581f0c-1-20",
-            "attestation:wb-pl-halah-abf176f-1-20",
-            "attestation:wb-pl-jerusalem-a15257a-1-20",
-            "attestation:wb-pl-negeb-a1cb244-1-20",
-            "attestation:wb-pl-sepharad-a0a98de-1-20",
-            "attestation:wb-pl-zarephath-a6fa2d3-1-20"
+            "attestation:wb-obad-jerusalem-1-20",
+            "attestation:wb-obad-p-jacob-1-1-20",
+            "attestation:wb-obad-pl-canaan-a581f0c-1-20",
+            "attestation:wb-obad-pl-halah-abf176f-1-20",
+            "attestation:wb-obad-pl-negeb-a1cb244-1-20",
+            "attestation:wb-obad-pl-sepharad-a0a98de-1-20",
+            "attestation:wb-obad-pl-zarephath-a6fa2d3-1-20"
           ],
           "blocker_question_keys": []
         },
@@ -1209,9 +1209,9 @@
             "verse:Obad.1.21"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-1-21",
-            "attestation:wb-pl-mount-esau-a8e843f-1-21",
-            "attestation:wb-pl-mount-zion-abd9596-1-21"
+            "attestation:wb-obad-jerusalem-1-21",
+            "attestation:wb-obad-pl-mount-esau-a8e843f-1-21",
+            "attestation:wb-obad-pl-mount-zion-abd9596-1-21"
           ],
           "blocker_question_keys": []
         }

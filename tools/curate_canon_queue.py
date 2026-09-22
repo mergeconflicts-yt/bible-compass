@@ -45,6 +45,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import curate_whole_bible as cwb  # noqa: E402
+import locked_neh2  # noqa: E402
 
 REPO = cwb.REPO
 SCRIPTURE = cwb.SCRIPTURE
@@ -347,6 +348,9 @@ def enrich_book_data(
     persons: dict,
     places: dict,
     verse_text: dict[tuple[int, int], str],
+    registry_by_slug: dict,
+    home_by_slug: dict | None = None,
+    bridged_candidates: dict | None = None,
 ) -> dict:
     osis = book["osis"]
     verses = cwb.book_verse_index(book)
@@ -398,6 +402,39 @@ def enrich_book_data(
     # guessing; affected verses keep explicit coverage results.
     erec["mentions"], ambiguous_count = dedupe_mentions(erec["mentions"], verse_text)
 
+    # Book-scope record keys. The un-scoped forms collide across books (an
+    # entity in Gen.1.1 and Neh.1.1 produced the same key), which book-local
+    # validation could not see. Keys now carry the book OSIS.
+    attest_key_map: dict[str, str] = {}
+    for a in crec["attestations"]:
+        slug = a["entity_key"].split("entity:", 1)[1]
+        _, c, v = a["reference_key"].split(":")[1].split(".")
+        new_key = f"attestation:wb-{osis.lower()}-{slug}-{c}-{v}"
+        attest_key_map[a["attestation_key"]] = new_key
+        a["attestation_key"] = new_key
+    for m in erec["mentions"]:
+        slug = m["target"]["key"].split("entity:", 1)[1]
+        _, c, v = m["verse_key"].split(":")[1].split(".")
+        m["attestation_key"] = attest_key_map.get(m["attestation_key"], m["attestation_key"])
+        m["mention_key"] = f"mention:wb:{osis.lower()}-{slug}-{c}-{v}"
+
+    # Canon-consistent candidate content: entities bridged to a locked Neh2
+    # identity use the locked candidate's type/label in every book so the
+    # canon-scoped candidate key never conflicts.
+    if bridged_candidates:
+        for c in crec["entity_candidates"]:
+            slug = c["candidate_key"].split("candidate:wb:", 1)[-1]
+            locked_c = bridged_candidates.get(slug)
+            if not locked_c:
+                continue
+            for field in (
+                "entity_type",
+                "proposed_label",
+                "possible_existing_entity_keys",
+                "identifying_claim_keys",
+            ):
+                c[field] = locked_c[field]
+
     # 2. reconciliation: reuse existing global registry identities.
     for rec in crec.get("reconciliation_records", []):
         canonical_key = rec.get("canonical_entity_key")
@@ -427,7 +464,7 @@ def enrich_book_data(
         obj = f"entity:{rel['object']}"
         if subj not in retained_entities or obj not in retained_entities or subj == obj:
             continue
-        key = f"relationship:wb-{rel['subject']}-{cwb.slugify(rel['type'])}-{rel['object']}"
+        key = f"relationship:wb-{osis.lower()}-{rel['subject']}-{cwb.slugify(rel['type'])}-{rel['object']}"
         scope = chapter_scope.get(rel["chapter"])
         if scope is None:
             continue
@@ -567,25 +604,30 @@ def enrich_book_data(
             ctx["orientation"]["what"]["text"] = text
             ctx["orientation"]["immediate_summary"]["text"] = text
 
-    # 7. profiles: specific to this book and the entity's own attestations.
-    first_last: dict[str, tuple[int, int]] = {}
-    for a in crec["attestations"]:
-        _, c, v = a["reference_key"].split(":")[1].split(".")
-        ekey = a["entity_key"]
-        ch = int(c)
-        lo, hi = first_last.get(ekey, (ch, ch))
-        first_last[ekey] = (min(lo, ch), max(hi, ch))
+    # 7. profiles are canon-scoped, not book-scoped. The same entity appears
+    # in many book packages; identical, registry-derived text keeps those
+    # definitions consistent instead of conflicting (1388 collisions before).
     person_entity_keys = {f"entity:{s}" for s in persons}
     for prof in lrec["entity_profiles"]:
         ekey = prof["entity_key"]
-        lo, hi = first_last.get(ekey, (0, 0))
+        slug = ekey.split("entity:", 1)[1]
+        entry = registry_by_slug.get(slug, {})
+        first = entry.get("first_reference", "Scripture")
+        last = entry.get("last_reference", "Scripture")
         kind = "person" if ekey in person_entity_keys else "place"
-        if kind == "person":
-            where = f"{book['name']} {lo}" if lo == hi else f"{book['name']} {lo}\u2013{hi}"
-            prof["short_description"]["text"] = f"{prof['preferred_name']} is a person named in {where}."
-        else:
-            where = f"{book['name']} {lo}" if lo == hi else f"{book['name']} {lo}\u2013{hi}"
-            prof["short_description"]["text"] = f"{prof['preferred_name']} is a place named in {where}."
+        span = first if first == last else f"{first}\u2013{last}"
+        prof["short_description"]["text"] = (
+            f"{prof['preferred_name']} is a {kind} named in Scripture ({span})."
+        )
+    # Profiles are canon-scoped: emit each entity's profile once, in its home
+    # book (Nehemiah for locked identities), so the same profile_key never
+    # repeats with differing content.
+    if home_by_slug is not None:
+        lrec["entity_profiles"] = [
+            p
+            for p in lrec["entity_profiles"]
+            if home_by_slug.get(p["entity_key"].split("entity:", 1)[1], osis) == osis
+        ]
 
     # 8. package identity for the merged book package.
     for pkg, layer in ((canonical, "canonical"), (edition, "edition"), (locale, "locale")):
@@ -1004,20 +1046,30 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
             ch = _chapter_of_scope(c["scope_key"])
             if ch is not None:
                 ctx_by_ch[ch].add(c["context_key"])
-        # Explicit verse-level annotation coverage (attestations + mentions):
-        # verses with no applicable annotation are complete_zero, never silent.
-        verse_zero = 0
-        verse_records = 0
+        # Explicit, per-annotation-class verse coverage. complete_zero is only
+        # ever claimed for a class that was actually attempted; classes no
+        # input produces are reported as not_attempted, never as zero.
+        def class_counts(layer: str) -> tuple[int, int]:
+            zero = records = 0
+            for block in data[layer]["coverage"]:
+                for g in block["groups"]:
+                    n = len(g["reference_keys"])
+                    if g["result"] == "complete_zero":
+                        zero += n
+                    else:
+                        records += n
+            return zero, records
+
+        attest_zero, attest_records = class_counts("canonical")
+        mention_zero, mention_records = class_counts("edition")
         verse_result: dict[int, str] = {}
         for block in data["canonical"]["coverage"]:
             for g in block["groups"]:
                 for ref in g["reference_keys"]:
                     ch = _chapter_of_verse_key(ref)
                     if g["result"] == "complete_zero":
-                        verse_zero += 1
                         verse_result.setdefault(ch, "complete_zero")
                     else:
-                        verse_records += 1
                         verse_result[ch] = "complete_with_records"
         chapters = []
         for ch in book["chapters"]:
@@ -1056,25 +1108,71 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
                 "events": len(crec["events"]),
                 "contexts": len(lrec["passage_contexts"]),
                 "profiles": len(lrec["entity_profiles"]),
-                "verses_total": verse_zero + verse_records,
-                "verses_complete_zero": verse_zero,
-                "verses_complete_with_records": verse_records,
+                "coverage_by_class": {
+                    "canonical_entity_attestation": {
+                        "verses_complete_zero": attest_zero,
+                        "verses_complete_with_records": attest_records,
+                    },
+                    "translation_mention": {
+                        "verses_complete_zero": mention_zero,
+                        "verses_complete_with_records": mention_records,
+                    },
+                },
             }
         )
-        totals["verses_total"] += verse_zero + verse_records
-        totals["verses_complete_zero"] += verse_zero
-        totals["verses_complete_with_records"] += verse_records
+        for cls, (zero, records) in (
+            ("canonical_entity_attestation", (attest_zero, attest_records)),
+            ("translation_mention", (mention_zero, mention_records)),
+        ):
+            totals[f"{cls}:zero"] += zero
+            totals[f"{cls}:records"] += records
+
+    attempted = [
+        "canonical_entity_attestation",
+        "translation_mention",
+        "canonical_relationship",
+        "canonical_event",
+        "canonical_entity_relevance",
+        "passage_context_localization",
+    ]
+    not_attempted = [
+        "canonical_object",
+        "canonical_role",
+        "canonical_practice",
+        "canonical_term",
+        "canonical_theme",
+        "canonical_chronology",
+        "historical_context",
+        "localized_entity_name",
+        "map_timeline_projection",
+    ]
     return {
         "register_version": "1.0.0",
         "register_kind": "whole-canon-coverage",
         "data_classification": DATA_CLASSIFICATION,
-        "status": "DRAFT MACHINE-GENERATED — every chapter and verse carries an explicit coverage result; nothing reviewed, approved or published.",
+        "status": "DRAFT MACHINE-GENERATED — per-annotation-class coverage; classes marked not_attempted were never curated and are not claimed complete; nothing reviewed, approved or published.",
         "generated_by": "tools/curate_canon_queue.py",
         "books_total": len(books_out),
         "chapters_total": chapters_total,
-        "verses_total": totals["verses_total"],
-        "verses_complete_zero": totals["verses_complete_zero"],
-        "verses_complete_with_records": totals["verses_complete_with_records"],
+        "verses_total": 31086,
+        "annotation_class_coverage": {
+            "canonical_entity_attestation": {
+                "verses_complete_zero": totals["canonical_entity_attestation:zero"],
+                "verses_complete_with_records": totals["canonical_entity_attestation:records"],
+            },
+            "translation_mention": {
+                "verses_complete_zero": totals["translation_mention:zero"],
+                "verses_complete_with_records": totals["translation_mention:records"],
+            },
+        },
+        "attempted_annotation_classes": attempted,
+        "not_attempted_annotation_classes": not_attempted,
+        "not_attempted_note": (
+            "Objects, roles, practices, lexical terms, themes, chronology and "
+            "meaningful historical context are required by the curation spec but "
+            "no approved input or pipeline produces them yet. Verses are NOT "
+            "claimed complete for these classes."
+        ),
         "books": books_out,
     }
 
@@ -1099,9 +1197,40 @@ def main() -> int:
     knowledge_books = json.loads(KNOWLEDGE.read_text(encoding="utf-8"))["books"]
     persons, person_labels = cwb.load_persons()
     places = cwb.load_places()
-    registry_by_slug, registry_digest = load_registry()
-    registry_keys = {f"entity:{slug}" for slug in registry_by_slug}
     relationships = load_relationships()
+
+    # Owner-approved identity bridge: the locked Nehemiah 2 identities are
+    # canonical, registry entities that denote the same thing are renamed onto
+    # them, and locked-only identities are added. The registry is rebuilt from
+    # the reconciled entity set so the whole canon reuses one identity each.
+    locked = locked_neh2.load_locked()
+    persons, places, person_labels, relationships, identity_rename = locked_neh2.apply_identity(
+        persons, places, person_labels, relationships, locked
+    )
+    valid_refs = {
+        (b["osis"], c, v)
+        for b in books
+        for c, v, _ in cwb.book_verse_index(b)
+    }
+    registry = cwb.build_registry(persons, places, valid_refs)
+    registry_path = CURATED / "registry" / "entities.json"
+    registry_text = json.dumps(registry, indent=2, ensure_ascii=False) + "\n"
+    if not args.validate_only:
+        registry_path.parent.mkdir(parents=True, exist_ok=True)
+        registry_path.write_text(registry_text, encoding="utf-8")
+    registry_digest = "sha256:" + hashlib.sha256(registry_text.encode("utf-8")).hexdigest()
+    registry_by_slug = {e["slug"]: e for e in registry["entities"]}
+    registry_keys = {f"entity:{slug}" for slug in registry_by_slug}
+    home_by_slug = {}
+    for slug, entry in registry_by_slug.items():
+        first = entry.get("first_reference") or ""
+        home_by_slug[slug] = first.split(".")[0] if first else None
+    bridged_candidates = {}
+    for c in locked["canonical"]["records"]["entity_candidates"]:
+        bridged_candidates[c["candidate_key"].split(":")[-1]] = c
+    for locked_key in locked_neh2.locked_entities(locked):
+        home_by_slug[locked_key.split("entity:", 1)[1]] = "Neh"
+
     uncertain = uncertain_person_slugs()
     knowledge_digest = cwb.sha256_file(KNOWLEDGE)
 
@@ -1154,8 +1283,10 @@ def main() -> int:
             )
             verse_text = {(c, v): t for c, v, t in cwb.book_verse_index(book)}
             data = enrich_book_data(
-                data, book, knowledge, relationships, registry_keys, uncertain, persons, places, verse_text
+                data, book, knowledge, relationships, registry_keys, uncertain, persons, places, verse_text, registry_by_slug, home_by_slug, bridged_candidates
             )
+            if book["osis"] == "Neh":
+                data = locked_neh2.merge_neh(data, locked, verse_text)
             all_data[osis] = data
         else:
             # Resume: load the merged packages for downstream reports.

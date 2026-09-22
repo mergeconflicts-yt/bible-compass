@@ -188,7 +188,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -293,15 +293,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-kedar-a68d1a9",
         "entity_type": "place",
         "proposed_label": "Kedar",
@@ -381,13 +372,22 @@
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
       }
     ],
     "claims": [],
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-pharaoh-4-1-9",
+        "attestation_key": "attestation:wb-song-p-pharaoh-4-1-9",
         "reference_key": "verse:Song.1.9",
         "entity_key": "entity:p-pharaoh-4",
         "kind": "participant",
@@ -397,7 +397,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-david-1-4-4",
+        "attestation_key": "attestation:wb-song-p-david-1-4-4",
         "reference_key": "verse:Song.4.4",
         "entity_key": "entity:p-david-1",
         "kind": "participant",
@@ -407,7 +407,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-1-1",
+        "attestation_key": "attestation:wb-song-p-solomon-1-1-1",
         "reference_key": "verse:Song.1.1",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -417,7 +417,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-1-5",
+        "attestation_key": "attestation:wb-song-p-solomon-1-1-5",
         "reference_key": "verse:Song.1.5",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -427,7 +427,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-3-7",
+        "attestation_key": "attestation:wb-song-p-solomon-1-3-7",
         "reference_key": "verse:Song.3.7",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -437,7 +437,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-3-9",
+        "attestation_key": "attestation:wb-song-p-solomon-1-3-9",
         "reference_key": "verse:Song.3.9",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -447,7 +447,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-3-11",
+        "attestation_key": "attestation:wb-song-p-solomon-1-3-11",
         "reference_key": "verse:Song.3.11",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -457,7 +457,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-8-11",
+        "attestation_key": "attestation:wb-song-p-solomon-1-8-11",
         "reference_key": "verse:Song.8.11",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -467,7 +467,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-solomon-1-8-12",
+        "attestation_key": "attestation:wb-song-p-solomon-1-8-12",
         "reference_key": "verse:Song.8.12",
         "entity_key": "entity:p-solomon-1",
         "kind": "participant",
@@ -477,7 +477,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-amana-ab428de-4-8",
+        "attestation_key": "attestation:wb-song-pl-amana-ab428de-4-8",
         "reference_key": "verse:Song.4.8",
         "entity_key": "entity:pl-amana-ab428de",
         "kind": "location",
@@ -487,7 +487,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-baal-hamon-a304bb7-8-11",
+        "attestation_key": "attestation:wb-song-pl-baal-hamon-a304bb7-8-11",
         "reference_key": "verse:Song.8.11",
         "entity_key": "entity:pl-baal-hamon-a304bb7",
         "kind": "location",
@@ -497,7 +497,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-bath-rabbim-abaa030-7-4",
+        "attestation_key": "attestation:wb-song-pl-bath-rabbim-abaa030-7-4",
         "reference_key": "verse:Song.7.4",
         "entity_key": "entity:pl-bath-rabbim-abaa030",
         "kind": "location",
@@ -507,7 +507,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-bether-1-ac9fb6d-2-17",
+        "attestation_key": "attestation:wb-song-pl-bether-1-ac9fb6d-2-17",
         "reference_key": "verse:Song.2.17",
         "entity_key": "entity:pl-bether-1-ac9fb6d",
         "kind": "location",
@@ -517,7 +517,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-damascus-a69c1d4-7-4",
+        "attestation_key": "attestation:wb-song-pl-damascus-a69c1d4-7-4",
         "reference_key": "verse:Song.7.4",
         "entity_key": "entity:pl-damascus-a69c1d4",
         "kind": "location",
@@ -527,7 +527,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-engedi-a51df0e-1-14",
+        "attestation_key": "attestation:wb-song-pl-engedi-a51df0e-1-14",
         "reference_key": "verse:Song.1.14",
         "entity_key": "entity:pl-engedi-a51df0e",
         "kind": "location",
@@ -537,7 +537,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-4-1",
+        "attestation_key": "attestation:wb-song-pl-gilead-1-ae73b90-4-1",
         "reference_key": "verse:Song.4.1",
         "entity_key": "entity:pl-gilead-1-ae73b90",
         "kind": "location",
@@ -547,7 +547,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-gilead-1-ae73b90-6-5",
+        "attestation_key": "attestation:wb-song-pl-gilead-1-ae73b90-6-5",
         "reference_key": "verse:Song.6.5",
         "entity_key": "entity:pl-gilead-1-ae73b90",
         "kind": "location",
@@ -557,7 +557,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-heshbon-abf2fc1-7-4",
+        "attestation_key": "attestation:wb-song-pl-heshbon-abf2fc1-7-4",
         "reference_key": "verse:Song.7.4",
         "entity_key": "entity:pl-heshbon-abf2fc1",
         "kind": "location",
@@ -567,87 +567,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-5",
-        "reference_key": "verse:Song.1.5",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-7",
-        "reference_key": "verse:Song.2.7",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-5",
-        "reference_key": "verse:Song.3.5",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-10",
-        "reference_key": "verse:Song.3.10",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-8",
-        "reference_key": "verse:Song.5.8",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-5-16",
-        "reference_key": "verse:Song.5.16",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-6-4",
-        "reference_key": "verse:Song.6.4",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-8-4",
-        "reference_key": "verse:Song.8.4",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-kedar-a68d1a9-1-5",
+        "attestation_key": "attestation:wb-song-pl-kedar-a68d1a9-1-5",
         "reference_key": "verse:Song.1.5",
         "entity_key": "entity:pl-kedar-a68d1a9",
         "kind": "location",
@@ -657,7 +577,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-3-9",
+        "attestation_key": "attestation:wb-song-pl-lebanon-a730058-3-9",
         "reference_key": "verse:Song.3.9",
         "entity_key": "entity:pl-lebanon-a730058",
         "kind": "location",
@@ -667,7 +587,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-8",
+        "attestation_key": "attestation:wb-song-pl-lebanon-a730058-4-8",
         "reference_key": "verse:Song.4.8",
         "entity_key": "entity:pl-lebanon-a730058",
         "kind": "location",
@@ -677,7 +597,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-11",
+        "attestation_key": "attestation:wb-song-pl-lebanon-a730058-4-11",
         "reference_key": "verse:Song.4.11",
         "entity_key": "entity:pl-lebanon-a730058",
         "kind": "location",
@@ -687,7 +607,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-4-15",
+        "attestation_key": "attestation:wb-song-pl-lebanon-a730058-4-15",
         "reference_key": "verse:Song.4.15",
         "entity_key": "entity:pl-lebanon-a730058",
         "kind": "location",
@@ -697,7 +617,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-5-15",
+        "attestation_key": "attestation:wb-song-pl-lebanon-a730058-5-15",
         "reference_key": "verse:Song.5.15",
         "entity_key": "entity:pl-lebanon-a730058",
         "kind": "location",
@@ -707,7 +627,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-lebanon-a730058-7-4",
+        "attestation_key": "attestation:wb-song-pl-lebanon-a730058-7-4",
         "reference_key": "verse:Song.7.4",
         "entity_key": "entity:pl-lebanon-a730058",
         "kind": "location",
@@ -717,7 +637,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mahanaim-ae5bfe9-6-13",
+        "attestation_key": "attestation:wb-song-pl-mahanaim-ae5bfe9-6-13",
         "reference_key": "verse:Song.6.13",
         "entity_key": "entity:pl-mahanaim-ae5bfe9",
         "kind": "location",
@@ -727,7 +647,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-carmel-a3e21c6-7-5",
+        "attestation_key": "attestation:wb-song-pl-mount-carmel-a3e21c6-7-5",
         "reference_key": "verse:Song.7.5",
         "entity_key": "entity:pl-mount-carmel-a3e21c6",
         "kind": "location",
@@ -737,7 +657,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-mount-hermon-a341fe8-4-8",
+        "attestation_key": "attestation:wb-song-pl-mount-hermon-a341fe8-4-8",
         "reference_key": "verse:Song.4.8",
         "entity_key": "entity:pl-mount-hermon-a341fe8",
         "kind": "location",
@@ -747,7 +667,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-senir-ad27e17-4-8",
+        "attestation_key": "attestation:wb-song-pl-senir-ad27e17-4-8",
         "reference_key": "verse:Song.4.8",
         "entity_key": "entity:pl-senir-ad27e17",
         "kind": "location",
@@ -757,7 +677,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-sharon-1-a83fd43-2-1",
+        "attestation_key": "attestation:wb-song-pl-sharon-1-a83fd43-2-1",
         "reference_key": "verse:Song.2.1",
         "entity_key": "entity:pl-sharon-1-a83fd43",
         "kind": "location",
@@ -767,7 +687,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-tirzah-a80d317-6-4",
+        "attestation_key": "attestation:wb-song-pl-tirzah-a80d317-6-4",
         "reference_key": "verse:Song.6.4",
         "entity_key": "entity:pl-tirzah-a80d317",
         "kind": "location",
@@ -777,9 +697,89 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-11",
+        "attestation_key": "attestation:wb-song-pl-zion-af20c46-3-11",
         "reference_key": "verse:Song.3.11",
         "entity_key": "entity:pl-zion-af20c46",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-1-5",
+        "reference_key": "verse:Song.1.5",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-2-7",
+        "reference_key": "verse:Song.2.7",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-3-5",
+        "reference_key": "verse:Song.3.5",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-3-10",
+        "reference_key": "verse:Song.3.10",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-5-8",
+        "reference_key": "verse:Song.5.8",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-5-16",
+        "reference_key": "verse:Song.5.16",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-6-4",
+        "reference_key": "verse:Song.6.4",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-song-jerusalem-8-4",
+        "reference_key": "verse:Song.8.4",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -812,7 +812,7 @@
           "entity:p-solomon-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-kedar-a68d1a9"
         ],
         "scripture_accounts": [
@@ -877,7 +877,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -909,7 +909,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -927,7 +927,7 @@
           "entity:p-solomon-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-lebanon-a730058",
           "entity:pl-zion-af20c46"
         ],
@@ -967,7 +967,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -983,7 +983,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-lebanon-a730058"
         ],
         "scripture_accounts": [
@@ -1000,8 +1000,8 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-gilead-1-ae73b90",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-tirzah-a80d317"
         ],
         "scripture_accounts": [
@@ -1054,7 +1054,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a"
+          "entity:jerusalem"
         ],
         "scripture_accounts": [
           {
@@ -1174,17 +1174,6 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-kedar-a68d1a9",
         "geographic_positions": [
           {
@@ -1277,6 +1266,17 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -1412,60 +1412,6 @@
         "review_status": "draft"
       },
       {
-        "relevance_key": "relevance:wb-song-1-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-song-1:refsys:eng-v22:song.1.1-song.1.17",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-song-2-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-song-2:refsys:eng-v22:song.2.1-song.2.17",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-song-3-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-song-3:refsys:eng-v22:song.3.1-song.3.11",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-song-5-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-song-5:refsys:eng-v22:song.5.1-song.5.16",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-song-6-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-song-6:refsys:eng-v22:song.6.1-song.6.13",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-song-8-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-song-8:refsys:eng-v22:song.8.1-song.8.14",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "relevance_key": "relevance:wb-song-1-pl-kedar-a68d1a9",
         "scope_key": "scope:wb-song-1:refsys:eng-v22:song.1.1-song.1.17",
         "entity_key": "entity:pl-kedar-a68d1a9",
@@ -1572,6 +1518,60 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-1-jerusalem",
+        "scope_key": "scope:wb-song-1:refsys:eng-v22:song.1.1-song.1.17",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-2-jerusalem",
+        "scope_key": "scope:wb-song-2:refsys:eng-v22:song.2.1-song.2.17",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-3-jerusalem",
+        "scope_key": "scope:wb-song-3:refsys:eng-v22:song.3.1-song.3.11",
+        "entity_key": "entity:jerusalem",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-5-jerusalem",
+        "scope_key": "scope:wb-song-5:refsys:eng-v22:song.5.1-song.5.16",
+        "entity_key": "entity:jerusalem",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-6-jerusalem",
+        "scope_key": "scope:wb-song-6:refsys:eng-v22:song.6.1-song.6.13",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-song-8-jerusalem",
+        "scope_key": "scope:wb-song-8:refsys:eng-v22:song.8.1-song.8.14",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -1642,12 +1642,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-kedar-a68d1a9",
         "canonical_entity_key": "entity:pl-kedar-a68d1a9",
         "resolution_status": "resolved_existing",
@@ -1698,6 +1692,12 @@
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -1809,7 +1809,7 @@
             "verse:Song.1.1"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-1-1"
+            "attestation:wb-song-p-solomon-1-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -1819,9 +1819,9 @@
             "verse:Song.1.5"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-1-5",
-            "attestation:wb-pl-jerusalem-a15257a-1-5",
-            "attestation:wb-pl-kedar-a68d1a9-1-5"
+            "attestation:wb-song-jerusalem-1-5",
+            "attestation:wb-song-p-solomon-1-1-5",
+            "attestation:wb-song-pl-kedar-a68d1a9-1-5"
           ],
           "blocker_question_keys": []
         },
@@ -1831,7 +1831,7 @@
             "verse:Song.1.9"
           ],
           "record_keys": [
-            "attestation:wb-p-pharaoh-4-1-9"
+            "attestation:wb-song-p-pharaoh-4-1-9"
           ],
           "blocker_question_keys": []
         },
@@ -1841,7 +1841,7 @@
             "verse:Song.1.14"
           ],
           "record_keys": [
-            "attestation:wb-pl-engedi-a51df0e-1-14"
+            "attestation:wb-song-pl-engedi-a51df0e-1-14"
           ],
           "blocker_question_keys": []
         },
@@ -1851,7 +1851,7 @@
             "verse:Song.2.1"
           ],
           "record_keys": [
-            "attestation:wb-pl-sharon-1-a83fd43-2-1"
+            "attestation:wb-song-pl-sharon-1-a83fd43-2-1"
           ],
           "blocker_question_keys": []
         },
@@ -1861,7 +1861,7 @@
             "verse:Song.2.7"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-7"
+            "attestation:wb-song-jerusalem-2-7"
           ],
           "blocker_question_keys": []
         },
@@ -1871,7 +1871,7 @@
             "verse:Song.2.17"
           ],
           "record_keys": [
-            "attestation:wb-pl-bether-1-ac9fb6d-2-17"
+            "attestation:wb-song-pl-bether-1-ac9fb6d-2-17"
           ],
           "blocker_question_keys": []
         },
@@ -1881,7 +1881,7 @@
             "verse:Song.3.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-5"
+            "attestation:wb-song-jerusalem-3-5"
           ],
           "blocker_question_keys": []
         },
@@ -1891,7 +1891,7 @@
             "verse:Song.3.7"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-3-7"
+            "attestation:wb-song-p-solomon-1-3-7"
           ],
           "blocker_question_keys": []
         },
@@ -1901,8 +1901,8 @@
             "verse:Song.3.9"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-3-9",
-            "attestation:wb-pl-lebanon-a730058-3-9"
+            "attestation:wb-song-p-solomon-1-3-9",
+            "attestation:wb-song-pl-lebanon-a730058-3-9"
           ],
           "blocker_question_keys": []
         },
@@ -1912,7 +1912,7 @@
             "verse:Song.3.10"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-10"
+            "attestation:wb-song-jerusalem-3-10"
           ],
           "blocker_question_keys": []
         },
@@ -1922,8 +1922,8 @@
             "verse:Song.3.11"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-3-11",
-            "attestation:wb-pl-zion-af20c46-3-11"
+            "attestation:wb-song-p-solomon-1-3-11",
+            "attestation:wb-song-pl-zion-af20c46-3-11"
           ],
           "blocker_question_keys": []
         },
@@ -1933,7 +1933,7 @@
             "verse:Song.4.1"
           ],
           "record_keys": [
-            "attestation:wb-pl-gilead-1-ae73b90-4-1"
+            "attestation:wb-song-pl-gilead-1-ae73b90-4-1"
           ],
           "blocker_question_keys": []
         },
@@ -1943,7 +1943,7 @@
             "verse:Song.4.4"
           ],
           "record_keys": [
-            "attestation:wb-p-david-1-4-4"
+            "attestation:wb-song-p-david-1-4-4"
           ],
           "blocker_question_keys": []
         },
@@ -1953,10 +1953,10 @@
             "verse:Song.4.8"
           ],
           "record_keys": [
-            "attestation:wb-pl-amana-ab428de-4-8",
-            "attestation:wb-pl-lebanon-a730058-4-8",
-            "attestation:wb-pl-mount-hermon-a341fe8-4-8",
-            "attestation:wb-pl-senir-ad27e17-4-8"
+            "attestation:wb-song-pl-amana-ab428de-4-8",
+            "attestation:wb-song-pl-lebanon-a730058-4-8",
+            "attestation:wb-song-pl-mount-hermon-a341fe8-4-8",
+            "attestation:wb-song-pl-senir-ad27e17-4-8"
           ],
           "blocker_question_keys": []
         },
@@ -1966,7 +1966,7 @@
             "verse:Song.4.11"
           ],
           "record_keys": [
-            "attestation:wb-pl-lebanon-a730058-4-11"
+            "attestation:wb-song-pl-lebanon-a730058-4-11"
           ],
           "blocker_question_keys": []
         },
@@ -1976,7 +1976,7 @@
             "verse:Song.4.15"
           ],
           "record_keys": [
-            "attestation:wb-pl-lebanon-a730058-4-15"
+            "attestation:wb-song-pl-lebanon-a730058-4-15"
           ],
           "blocker_question_keys": []
         },
@@ -1986,7 +1986,7 @@
             "verse:Song.5.8"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-5-8"
+            "attestation:wb-song-jerusalem-5-8"
           ],
           "blocker_question_keys": []
         },
@@ -1996,7 +1996,7 @@
             "verse:Song.5.15"
           ],
           "record_keys": [
-            "attestation:wb-pl-lebanon-a730058-5-15"
+            "attestation:wb-song-pl-lebanon-a730058-5-15"
           ],
           "blocker_question_keys": []
         },
@@ -2006,7 +2006,7 @@
             "verse:Song.5.16"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-5-16"
+            "attestation:wb-song-jerusalem-5-16"
           ],
           "blocker_question_keys": []
         },
@@ -2016,8 +2016,8 @@
             "verse:Song.6.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-6-4",
-            "attestation:wb-pl-tirzah-a80d317-6-4"
+            "attestation:wb-song-jerusalem-6-4",
+            "attestation:wb-song-pl-tirzah-a80d317-6-4"
           ],
           "blocker_question_keys": []
         },
@@ -2027,7 +2027,7 @@
             "verse:Song.6.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-gilead-1-ae73b90-6-5"
+            "attestation:wb-song-pl-gilead-1-ae73b90-6-5"
           ],
           "blocker_question_keys": []
         },
@@ -2037,7 +2037,7 @@
             "verse:Song.6.13"
           ],
           "record_keys": [
-            "attestation:wb-pl-mahanaim-ae5bfe9-6-13"
+            "attestation:wb-song-pl-mahanaim-ae5bfe9-6-13"
           ],
           "blocker_question_keys": []
         },
@@ -2047,10 +2047,10 @@
             "verse:Song.7.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-bath-rabbim-abaa030-7-4",
-            "attestation:wb-pl-damascus-a69c1d4-7-4",
-            "attestation:wb-pl-heshbon-abf2fc1-7-4",
-            "attestation:wb-pl-lebanon-a730058-7-4"
+            "attestation:wb-song-pl-bath-rabbim-abaa030-7-4",
+            "attestation:wb-song-pl-damascus-a69c1d4-7-4",
+            "attestation:wb-song-pl-heshbon-abf2fc1-7-4",
+            "attestation:wb-song-pl-lebanon-a730058-7-4"
           ],
           "blocker_question_keys": []
         },
@@ -2060,7 +2060,7 @@
             "verse:Song.7.5"
           ],
           "record_keys": [
-            "attestation:wb-pl-mount-carmel-a3e21c6-7-5"
+            "attestation:wb-song-pl-mount-carmel-a3e21c6-7-5"
           ],
           "blocker_question_keys": []
         },
@@ -2070,7 +2070,7 @@
             "verse:Song.8.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-8-4"
+            "attestation:wb-song-jerusalem-8-4"
           ],
           "blocker_question_keys": []
         },
@@ -2080,8 +2080,8 @@
             "verse:Song.8.11"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-8-11",
-            "attestation:wb-pl-baal-hamon-a304bb7-8-11"
+            "attestation:wb-song-p-solomon-1-8-11",
+            "attestation:wb-song-pl-baal-hamon-a304bb7-8-11"
           ],
           "blocker_question_keys": []
         },
@@ -2091,7 +2091,7 @@
             "verse:Song.8.12"
           ],
           "record_keys": [
-            "attestation:wb-p-solomon-1-8-12"
+            "attestation:wb-song-p-solomon-1-8-12"
           ],
           "blocker_question_keys": []
         }

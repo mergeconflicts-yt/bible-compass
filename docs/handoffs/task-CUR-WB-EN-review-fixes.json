@@ -1,0 +1,82 @@
+{
+  "attempt_id": "task:CUR-WB-EN-review-fixes:attempt-2",
+  "task_id": "CUR-WB-EN-REVIEW-FIXES",
+  "task_title": "Remediate critical review findings on the whole-English canon curation",
+  "result": "PASS — all six review findings are resolved: cross-book key collisions and conflicting profiles are zero, canon-level validation exists and passes, coverage is per annotation class and no longer overclaims, and the locked Nehemiah 2 identities and content are bridged and preserved.",
+  "review_findings_addressed": {
+    "cross_book_key_collisions": {
+      "status": "FIXED",
+      "before": "1,084 attestation keys, 801 mention keys and 2 relationship keys reused across books because keys omitted the book.",
+      "after": "Keys carry the book OSIS. Cross-book collisions: 0 (tools/validate_canon.py)."
+    },
+    "conflicting_profiles": {
+      "status": "FIXED",
+      "before": "1,388 profile keys appeared in multiple book packages with different text.",
+      "after": "Profiles are canon-scoped and emitted once, in the entity's home book (Nehemiah for locked identities); the same profile_key never repeats. Conflicting profiles: 0; 4,284 profiles."
+    },
+    "book_local_validation": {
+      "status": "FIXED",
+      "before": "Validation was per-book, so canon-wide defects passed.",
+      "after": "tools/validate_canon.py reads all 66 packages together and fails on cross-book key reuse, conflicting canon-scoped records, identity splits and coverage gaps. It passes: 0 collisions, 0 conflicts, identity unified."
+    },
+    "coverage_overclaim": {
+      "status": "FIXED",
+      "before": "18,838 verses were 'complete_zero' with no indication that only attestations/mentions were attempted.",
+      "after": "Per-class results: canonical_entity_attestation 18,831 complete_zero / 12,255 complete_with_records; translation_mention 20,251 / 10,835. Nine classes (objects, roles, practices, terms, themes, chronology, historical context, localized names, map/timeline) are marked not_attempted and are not claimed complete."
+    },
+    "nehemiah_2_identity_split": {
+      "status": "FIXED (owner-approved bridge)",
+      "before": "0 of 31 locked Neh2 identities existed in the registry; 9 had same-name registry counterparts (Jerusalem, Susa, Beyond-the-River, Nehemiah, Artaxerxes, Sanballat, Tobiah, Geshem, the gates).",
+      "after": "The locked identity is canonical: 11 registry entities (persons/places/gates) were renamed onto the locked keys, and 20 locked-only identities (structures, polity, collectives, roles, objects, practices, deity, unnamed queen) were added to the registry. Registry now has 4,295 entities; locked entities not in registry: 0; name splits: 0. tools/locked_neh2.py holds the bridge."
+    },
+    "nehemiah_2_content_not_preserved": {
+      "status": "FIXED",
+      "before": "The whole-book Neh package regenerated Nehemiah 2 generically; profiles were 'named in Nehemiah' and the chapter context was generic.",
+      "after": "The locked Neh2 canonical/edition/locale records are merged into the whole-book Nehemiah package (tools/locked_neh2.py): 33 claims, 56 citations, 6 curated passage boundaries, curated contexts, and rich profiles (Jerusalem, Nehemiah, cupbearer, gates, ...). Locked records win on collision; scope keys are re-scoped to the whole-book scheme where the range matches."
+    },
+    "uncurated_dimensions": {
+      "status": "ACKNOWLEDGED — not fabricated",
+      "detail": "Objects, roles, practices, terms, themes, chronology and meaningful historical context remain uncurated because the allowed inputs do not support them and inventing them is forbidden. They are marked not_attempted in the coverage register and flagged by tools/validate_canon.py."
+    }
+  },
+  "files_changed": [
+    "tools/curate_canon_queue.py (book-scoped keys; canon-scoped profiles; home-book profile emission; per-class coverage)",
+    "tools/locked_neh2.py (new: identity bridge + locked Neh2 merge)",
+    "tools/validate_canon.py (new: canon-level validator)",
+    "content/curated/registry/entities.json (unified identity registry, 4,295 entities)",
+    "content/curated/canonical|edition|locale/*.v2.json (66 books regenerated; Neh carries locked content)",
+    "content/curation/canon-coverage.json (per-class coverage + not_attempted classes)",
+    "content/curation/reconciliation/*.json",
+    "content/curation/queue/bsb/** (335 job checkpoints + manifest)"
+  ],
+  "commands_executed": [
+    {
+      "command": "python3 tools/curate_canon_queue.py --force",
+      "exit_code": 0,
+      "output": "335/335 jobs valid; 66/66 book packages merged."
+    },
+    {
+      "command": "python3 tools/validate_canon.py",
+      "exit_code": 0,
+      "output": "PASS — 0 cross-book collisions, 0 conflicting profiles, identity unified (registry 4,295; locked 31; not_in_registry 0; name_splits 0)."
+    },
+    {
+      "command": "packages/content-schema: CI=1 npx jest --silent",
+      "exit_code": 0,
+      "output": "8 suites, 254 tests passed (all 66 BSB books + Neh2 + Telugu)."
+    },
+    {
+      "command": "npx prettier --check .",
+      "exit_code": 0,
+      "output": "3 known pre-existing warnings only."
+    }
+  ],
+  "known_limitations": [
+    "Historical/chronological/interpretive orientation remains a blocking open question where inputs do not support it.",
+    "Objects, roles, practices, terms, themes, chronology and historical context are uncurated and marked not_attempted.",
+    "19 source persons with explicit uncertainty markers remain unresolved candidates (distinct from the locked-identity bridge).",
+    "Everything is a draft: no independent review, approval or publication.",
+    "Telugu corpus unchanged; no importer exists for whole-Bible packages (Neh2 importer dry run only)."
+  ],
+  "stop_condition": "Stopped after the approved identity bridge and locked-content merge were implemented, the full canon regenerated, and both the canon-level validator and the Zod contract tests passed. No review, approval or publication was performed."
+}

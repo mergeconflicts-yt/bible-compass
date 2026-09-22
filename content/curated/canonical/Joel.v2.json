@@ -112,7 +112,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:b8710f0ca60639fc722ce070a5e89609673cd144f6d0fd27c5a2820c731d89da"
+      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
     }
   ],
   "records": {
@@ -184,15 +184,6 @@
         "candidate_key": "candidate:wb:pl-great-sea-aa805fb",
         "entity_type": "place",
         "proposed_label": "Great Sea",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -287,13 +278,22 @@
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
         "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "entity_type": "place",
+        "proposed_label": "Jerusalem",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
       }
     ],
     "claims": [],
     "citations": [],
     "attestations": [
       {
-        "attestation_key": "attestation:wb-p-jacob-1-3-16",
+        "attestation_key": "attestation:wb-joel-p-jacob-1-3-16",
         "reference_key": "verse:Joel.3.16",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
@@ -303,7 +303,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-judah-1-3-6",
+        "attestation_key": "attestation:wb-joel-p-judah-1-3-6",
         "reference_key": "verse:Joel.3.6",
         "entity_key": "entity:p-judah-1",
         "kind": "participant",
@@ -313,7 +313,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-judah-1-3-8",
+        "attestation_key": "attestation:wb-joel-p-judah-1-3-8",
         "reference_key": "verse:Joel.3.8",
         "entity_key": "entity:p-judah-1",
         "kind": "participant",
@@ -323,7 +323,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-judah-1-3-19",
+        "attestation_key": "attestation:wb-joel-p-judah-1-3-19",
         "reference_key": "verse:Joel.3.19",
         "entity_key": "entity:p-judah-1",
         "kind": "participant",
@@ -333,7 +333,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-joel-11-1-1",
+        "attestation_key": "attestation:wb-joel-p-joel-11-1-1",
         "reference_key": "verse:Joel.1.1",
         "entity_key": "entity:p-joel-11",
         "kind": "participant",
@@ -343,7 +343,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-p-pethuel-1-1-1",
+        "attestation_key": "attestation:wb-joel-p-pethuel-1-1-1",
         "reference_key": "verse:Joel.1.1",
         "entity_key": "entity:p-pethuel-1",
         "kind": "participant",
@@ -353,7 +353,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-eden-1-af3daeb-2-3",
+        "attestation_key": "attestation:wb-joel-pl-eden-1-af3daeb-2-3",
         "reference_key": "verse:Joel.2.3",
         "entity_key": "entity:pl-eden-1-af3daeb",
         "kind": "location",
@@ -363,7 +363,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-edom-a2735ff-3-19",
+        "attestation_key": "attestation:wb-joel-pl-edom-a2735ff-3-19",
         "reference_key": "verse:Joel.3.19",
         "entity_key": "entity:pl-edom-a2735ff",
         "kind": "location",
@@ -373,7 +373,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-egypt-af301ca-3-19",
+        "attestation_key": "attestation:wb-joel-pl-egypt-af301ca-3-19",
         "reference_key": "verse:Joel.3.19",
         "entity_key": "entity:pl-egypt-af301ca",
         "kind": "location",
@@ -383,7 +383,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-great-sea-aa805fb-2-20",
+        "attestation_key": "attestation:wb-joel-pl-great-sea-aa805fb-2-20",
         "reference_key": "verse:Joel.2.20",
         "entity_key": "entity:pl-great-sea-aa805fb",
         "kind": "location",
@@ -393,67 +393,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-32",
-        "reference_key": "verse:Joel.2.32",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-1",
-        "reference_key": "verse:Joel.3.1",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-6",
-        "reference_key": "verse:Joel.3.6",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-16",
-        "reference_key": "verse:Joel.3.16",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-17",
-        "reference_key": "verse:Joel.3.17",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-3-20",
-        "reference_key": "verse:Joel.3.20",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "kind": "location",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-pl-mount-zion-abd9596-2-32",
+        "attestation_key": "attestation:wb-joel-pl-mount-zion-abd9596-2-32",
         "reference_key": "verse:Joel.2.32",
         "entity_key": "entity:pl-mount-zion-abd9596",
         "kind": "location",
@@ -463,7 +403,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-philistia-ac71e65-3-4",
+        "attestation_key": "attestation:wb-joel-pl-philistia-ac71e65-3-4",
         "reference_key": "verse:Joel.3.4",
         "entity_key": "entity:pl-philistia-ac71e65",
         "kind": "location",
@@ -473,7 +413,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-salt-sea-abed304-2-20",
+        "attestation_key": "attestation:wb-joel-pl-salt-sea-abed304-2-20",
         "reference_key": "verse:Joel.2.20",
         "entity_key": "entity:pl-salt-sea-abed304",
         "kind": "location",
@@ -483,7 +423,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-sheba-1-a81ab85-3-8",
+        "attestation_key": "attestation:wb-joel-pl-sheba-1-a81ab85-3-8",
         "reference_key": "verse:Joel.3.8",
         "entity_key": "entity:pl-sheba-1-a81ab85",
         "kind": "location",
@@ -493,7 +433,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-sidon-a98e4d7-3-4",
+        "attestation_key": "attestation:wb-joel-pl-sidon-a98e4d7-3-4",
         "reference_key": "verse:Joel.3.4",
         "entity_key": "entity:pl-sidon-a98e4d7",
         "kind": "location",
@@ -503,7 +443,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-tyre-a160272-3-4",
+        "attestation_key": "attestation:wb-joel-pl-tyre-a160272-3-4",
         "reference_key": "verse:Joel.3.4",
         "entity_key": "entity:pl-tyre-a160272",
         "kind": "location",
@@ -513,7 +453,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-valley-of-decision-a49037e-3-14",
+        "attestation_key": "attestation:wb-joel-pl-valley-of-decision-a49037e-3-14",
         "reference_key": "verse:Joel.3.14",
         "entity_key": "entity:pl-valley-of-decision-a49037e",
         "kind": "location",
@@ -523,7 +463,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-valley-of-jehoshaphat-a324282-3-2",
+        "attestation_key": "attestation:wb-joel-pl-valley-of-jehoshaphat-a324282-3-2",
         "reference_key": "verse:Joel.3.2",
         "entity_key": "entity:pl-valley-of-jehoshaphat-a324282",
         "kind": "location",
@@ -533,7 +473,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-valley-of-jehoshaphat-a324282-3-12",
+        "attestation_key": "attestation:wb-joel-pl-valley-of-jehoshaphat-a324282-3-12",
         "reference_key": "verse:Joel.3.12",
         "entity_key": "entity:pl-valley-of-jehoshaphat-a324282",
         "kind": "location",
@@ -543,7 +483,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-valley-of-shittim-a01769f-3-18",
+        "attestation_key": "attestation:wb-joel-pl-valley-of-shittim-a01769f-3-18",
         "reference_key": "verse:Joel.3.18",
         "entity_key": "entity:pl-valley-of-shittim-a01769f",
         "kind": "location",
@@ -553,7 +493,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-1",
+        "attestation_key": "attestation:wb-joel-pl-zion-af20c46-2-1",
         "reference_key": "verse:Joel.2.1",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -563,7 +503,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-15",
+        "attestation_key": "attestation:wb-joel-pl-zion-af20c46-2-15",
         "reference_key": "verse:Joel.2.15",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -573,7 +513,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-2-23",
+        "attestation_key": "attestation:wb-joel-pl-zion-af20c46-2-23",
         "reference_key": "verse:Joel.2.23",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -583,7 +523,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-16",
+        "attestation_key": "attestation:wb-joel-pl-zion-af20c46-3-16",
         "reference_key": "verse:Joel.3.16",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -593,7 +533,7 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-17",
+        "attestation_key": "attestation:wb-joel-pl-zion-af20c46-3-17",
         "reference_key": "verse:Joel.3.17",
         "entity_key": "entity:pl-zion-af20c46",
         "kind": "location",
@@ -603,9 +543,69 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-pl-zion-af20c46-3-21",
+        "attestation_key": "attestation:wb-joel-pl-zion-af20c46-3-21",
         "reference_key": "verse:Joel.3.21",
         "entity_key": "entity:pl-zion-af20c46",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-joel-jerusalem-2-32",
+        "reference_key": "verse:Joel.2.32",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-joel-jerusalem-3-1",
+        "reference_key": "verse:Joel.3.1",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-joel-jerusalem-3-6",
+        "reference_key": "verse:Joel.3.6",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-joel-jerusalem-3-16",
+        "reference_key": "verse:Joel.3.16",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-joel-jerusalem-3-17",
+        "reference_key": "verse:Joel.3.17",
+        "entity_key": "entity:jerusalem",
+        "kind": "location",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-joel-jerusalem-3-20",
+        "reference_key": "verse:Joel.3.20",
+        "entity_key": "entity:jerusalem",
         "kind": "location",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -615,7 +615,7 @@
     ],
     "relationships": [
       {
-        "relationship_key": "relationship:wb-p-joel-11-son-p-pethuel-1",
+        "relationship_key": "relationship:wb-joel-p-joel-11-son-p-pethuel-1",
         "subject_entity_key": "entity:p-joel-11",
         "predicate_key": "relationship:son",
         "object_entity_key": "entity:p-pethuel-1",
@@ -626,7 +626,7 @@
         "review_status": "draft"
       },
       {
-        "relationship_key": "relationship:wb-p-pethuel-1-father-p-joel-11",
+        "relationship_key": "relationship:wb-joel-p-pethuel-1-father-p-joel-11",
         "subject_entity_key": "entity:p-pethuel-1",
         "predicate_key": "relationship:father",
         "object_entity_key": "entity:p-joel-11",
@@ -711,7 +711,7 @@
         "event_type": "narrative",
         "participant_entity_keys": [],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-mount-zion-abd9596"
         ],
         "scripture_accounts": [
@@ -731,7 +731,7 @@
           "entity:p-judah-1"
         ],
         "place_entity_keys": [
-          "entity:pl-jerusalem-a15257a",
+          "entity:jerusalem",
           "entity:pl-philistia-ac71e65",
           "entity:pl-sheba-1-a81ab85",
           "entity:pl-sidon-a98e4d7",
@@ -756,9 +756,9 @@
           "entity:p-judah-1"
         ],
         "place_entity_keys": [
+          "entity:jerusalem",
           "entity:pl-edom-a2735ff",
           "entity:pl-egypt-af301ca",
-          "entity:pl-jerusalem-a15257a",
           "entity:pl-valley-of-shittim-a01769f",
           "entity:pl-zion-af20c46"
         ],
@@ -811,17 +811,6 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-great-sea-aa805fb",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -937,6 +926,17 @@
           }
         ],
         "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:jerusalem",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
+            "precision": "approximate",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
       }
     ],
     "relevance": [
@@ -1008,24 +1008,6 @@
         "scope_key": "scope:wb-joel-2:refsys:eng-v22:joel.2.1-joel.2.32",
         "entity_key": "entity:pl-great-sea-aa805fb",
         "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-joel-2-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-joel-2:refsys:eng-v22:joel.2.1-joel.2.32",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-joel-3-pl-jerusalem-a15257a",
-        "scope_key": "scope:wb-joel-3:refsys:eng-v22:joel.3.1-joel.3.21",
-        "entity_key": "entity:pl-jerusalem-a15257a",
-        "importance": "central",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -1128,6 +1110,24 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-joel-2-jerusalem",
+        "scope_key": "scope:wb-joel-2:refsys:eng-v22:joel.2.1-joel.2.32",
+        "entity_key": "entity:jerusalem",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-joel-3-jerusalem",
+        "scope_key": "scope:wb-joel-3:refsys:eng-v22:joel.3.1-joel.3.21",
+        "entity_key": "entity:jerusalem",
+        "importance": "central",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
@@ -1176,12 +1176,6 @@
       {
         "candidate_key": "candidate:wb:pl-great-sea-aa805fb",
         "canonical_entity_key": "entity:pl-great-sea-aa805fb",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-jerusalem-a15257a",
-        "canonical_entity_key": "entity:pl-jerusalem-a15257a",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -1242,6 +1236,12 @@
       {
         "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:jerusalem",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
@@ -1317,8 +1317,8 @@
             "verse:Joel.1.1"
           ],
           "record_keys": [
-            "attestation:wb-p-joel-11-1-1",
-            "attestation:wb-p-pethuel-1-1-1"
+            "attestation:wb-joel-p-joel-11-1-1",
+            "attestation:wb-joel-p-pethuel-1-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -1328,7 +1328,7 @@
             "verse:Joel.2.1"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-1"
+            "attestation:wb-joel-pl-zion-af20c46-2-1"
           ],
           "blocker_question_keys": []
         },
@@ -1338,7 +1338,7 @@
             "verse:Joel.2.3"
           ],
           "record_keys": [
-            "attestation:wb-pl-eden-1-af3daeb-2-3"
+            "attestation:wb-joel-pl-eden-1-af3daeb-2-3"
           ],
           "blocker_question_keys": []
         },
@@ -1348,7 +1348,7 @@
             "verse:Joel.2.15"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-15"
+            "attestation:wb-joel-pl-zion-af20c46-2-15"
           ],
           "blocker_question_keys": []
         },
@@ -1358,8 +1358,8 @@
             "verse:Joel.2.20"
           ],
           "record_keys": [
-            "attestation:wb-pl-great-sea-aa805fb-2-20",
-            "attestation:wb-pl-salt-sea-abed304-2-20"
+            "attestation:wb-joel-pl-great-sea-aa805fb-2-20",
+            "attestation:wb-joel-pl-salt-sea-abed304-2-20"
           ],
           "blocker_question_keys": []
         },
@@ -1369,7 +1369,7 @@
             "verse:Joel.2.23"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-2-23"
+            "attestation:wb-joel-pl-zion-af20c46-2-23"
           ],
           "blocker_question_keys": []
         },
@@ -1379,8 +1379,8 @@
             "verse:Joel.2.32"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-2-32",
-            "attestation:wb-pl-mount-zion-abd9596-2-32"
+            "attestation:wb-joel-jerusalem-2-32",
+            "attestation:wb-joel-pl-mount-zion-abd9596-2-32"
           ],
           "blocker_question_keys": []
         },
@@ -1390,7 +1390,7 @@
             "verse:Joel.3.1"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-1"
+            "attestation:wb-joel-jerusalem-3-1"
           ],
           "blocker_question_keys": []
         },
@@ -1400,7 +1400,7 @@
             "verse:Joel.3.2"
           ],
           "record_keys": [
-            "attestation:wb-pl-valley-of-jehoshaphat-a324282-3-2"
+            "attestation:wb-joel-pl-valley-of-jehoshaphat-a324282-3-2"
           ],
           "blocker_question_keys": []
         },
@@ -1410,9 +1410,9 @@
             "verse:Joel.3.4"
           ],
           "record_keys": [
-            "attestation:wb-pl-philistia-ac71e65-3-4",
-            "attestation:wb-pl-sidon-a98e4d7-3-4",
-            "attestation:wb-pl-tyre-a160272-3-4"
+            "attestation:wb-joel-pl-philistia-ac71e65-3-4",
+            "attestation:wb-joel-pl-sidon-a98e4d7-3-4",
+            "attestation:wb-joel-pl-tyre-a160272-3-4"
           ],
           "blocker_question_keys": []
         },
@@ -1422,8 +1422,8 @@
             "verse:Joel.3.6"
           ],
           "record_keys": [
-            "attestation:wb-p-judah-1-3-6",
-            "attestation:wb-pl-jerusalem-a15257a-3-6"
+            "attestation:wb-joel-jerusalem-3-6",
+            "attestation:wb-joel-p-judah-1-3-6"
           ],
           "blocker_question_keys": []
         },
@@ -1433,8 +1433,8 @@
             "verse:Joel.3.8"
           ],
           "record_keys": [
-            "attestation:wb-p-judah-1-3-8",
-            "attestation:wb-pl-sheba-1-a81ab85-3-8"
+            "attestation:wb-joel-p-judah-1-3-8",
+            "attestation:wb-joel-pl-sheba-1-a81ab85-3-8"
           ],
           "blocker_question_keys": []
         },
@@ -1444,7 +1444,7 @@
             "verse:Joel.3.12"
           ],
           "record_keys": [
-            "attestation:wb-pl-valley-of-jehoshaphat-a324282-3-12"
+            "attestation:wb-joel-pl-valley-of-jehoshaphat-a324282-3-12"
           ],
           "blocker_question_keys": []
         },
@@ -1454,7 +1454,7 @@
             "verse:Joel.3.14"
           ],
           "record_keys": [
-            "attestation:wb-pl-valley-of-decision-a49037e-3-14"
+            "attestation:wb-joel-pl-valley-of-decision-a49037e-3-14"
           ],
           "blocker_question_keys": []
         },
@@ -1464,9 +1464,9 @@
             "verse:Joel.3.16"
           ],
           "record_keys": [
-            "attestation:wb-p-jacob-1-3-16",
-            "attestation:wb-pl-jerusalem-a15257a-3-16",
-            "attestation:wb-pl-zion-af20c46-3-16"
+            "attestation:wb-joel-jerusalem-3-16",
+            "attestation:wb-joel-p-jacob-1-3-16",
+            "attestation:wb-joel-pl-zion-af20c46-3-16"
           ],
           "blocker_question_keys": []
         },
@@ -1476,8 +1476,8 @@
             "verse:Joel.3.17"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-17",
-            "attestation:wb-pl-zion-af20c46-3-17"
+            "attestation:wb-joel-jerusalem-3-17",
+            "attestation:wb-joel-pl-zion-af20c46-3-17"
           ],
           "blocker_question_keys": []
         },
@@ -1487,7 +1487,7 @@
             "verse:Joel.3.18"
           ],
           "record_keys": [
-            "attestation:wb-pl-valley-of-shittim-a01769f-3-18"
+            "attestation:wb-joel-pl-valley-of-shittim-a01769f-3-18"
           ],
           "blocker_question_keys": []
         },
@@ -1497,9 +1497,9 @@
             "verse:Joel.3.19"
           ],
           "record_keys": [
-            "attestation:wb-p-judah-1-3-19",
-            "attestation:wb-pl-edom-a2735ff-3-19",
-            "attestation:wb-pl-egypt-af301ca-3-19"
+            "attestation:wb-joel-p-judah-1-3-19",
+            "attestation:wb-joel-pl-edom-a2735ff-3-19",
+            "attestation:wb-joel-pl-egypt-af301ca-3-19"
           ],
           "blocker_question_keys": []
         },
@@ -1509,7 +1509,7 @@
             "verse:Joel.3.20"
           ],
           "record_keys": [
-            "attestation:wb-pl-jerusalem-a15257a-3-20"
+            "attestation:wb-joel-jerusalem-3-20"
           ],
           "blocker_question_keys": []
         },
@@ -1519,7 +1519,7 @@
             "verse:Joel.3.21"
           ],
           "record_keys": [
-            "attestation:wb-pl-zion-af20c46-3-21"
+            "attestation:wb-joel-pl-zion-af20c46-3-21"
           ],
           "blocker_question_keys": []
         }

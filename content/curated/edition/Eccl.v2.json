@@ -287,36 +287,18 @@
     {
       "package_key": "draft:wb-bsb-eccl-canonical",
       "revision": 1,
-      "digest": "sha256:95c0d8dc769ce2791da4f9ec714644adcb31f05fb2606b42b6d7b5576706493b"
+      "digest": "sha256:993a40981ce7c0b3b66c5e6d4135f33b50c936ba20ea74d8a916c61dcdd7cdd8"
     }
   ],
   "records": {
     "mentions": [
       {
-        "mention_key": "mention:wb:p-david-1-1-1",
+        "mention_key": "mention:wb:eccl-jerusalem-1-1",
         "verse_key": "verse:Eccl.1.1",
-        "attestation_key": "attestation:wb-p-david-1-1-1",
+        "attestation_key": "attestation:wb-eccl-jerusalem-1-1",
         "target": {
           "type": "entity",
-          "key": "entity:p-david-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "David",
-          "occurrence_ordinal": 1,
-          "prefix": "Teacher, the son of ",
-          "suffix": ", king in Jerusalem:"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-1-1",
-        "verse_key": "verse:Eccl.1.1",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:pl-jerusalem-a15257a"
+          "key": "entity:jerusalem"
         },
         "mention_form": "explicit_name",
         "selector": {
@@ -329,12 +311,12 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-1-12",
+        "mention_key": "mention:wb:eccl-jerusalem-1-12",
         "verse_key": "verse:Eccl.1.12",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-12",
+        "attestation_key": "attestation:wb-eccl-jerusalem-1-12",
         "target": {
           "type": "entity",
-          "key": "entity:pl-jerusalem-a15257a"
+          "key": "entity:jerusalem"
         },
         "mention_form": "explicit_name",
         "selector": {
@@ -347,12 +329,12 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-1-16",
+        "mention_key": "mention:wb:eccl-jerusalem-1-16",
         "verse_key": "verse:Eccl.1.16",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-1-16",
+        "attestation_key": "attestation:wb-eccl-jerusalem-1-16",
         "target": {
           "type": "entity",
-          "key": "entity:pl-jerusalem-a15257a"
+          "key": "entity:jerusalem"
         },
         "mention_form": "explicit_name",
         "selector": {
@@ -365,12 +347,12 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-2-7",
+        "mention_key": "mention:wb:eccl-jerusalem-2-7",
         "verse_key": "verse:Eccl.2.7",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-7",
+        "attestation_key": "attestation:wb-eccl-jerusalem-2-7",
         "target": {
           "type": "entity",
-          "key": "entity:pl-jerusalem-a15257a"
+          "key": "entity:jerusalem"
         },
         "mention_form": "explicit_name",
         "selector": {
@@ -383,12 +365,12 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:pl-jerusalem-a15257a-2-9",
+        "mention_key": "mention:wb:eccl-jerusalem-2-9",
         "verse_key": "verse:Eccl.2.9",
-        "attestation_key": "attestation:wb-pl-jerusalem-a15257a-2-9",
+        "attestation_key": "attestation:wb-eccl-jerusalem-2-9",
         "target": {
           "type": "entity",
-          "key": "entity:pl-jerusalem-a15257a"
+          "key": "entity:jerusalem"
         },
         "mention_form": "explicit_name",
         "selector": {
@@ -396,6 +378,24 @@
           "occurrence_ordinal": 1,
           "prefix": "nd surpassed all in ",
           "suffix": " who had preceded me"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:eccl-p-david-1-1-1",
+        "verse_key": "verse:Eccl.1.1",
+        "attestation_key": "attestation:wb-eccl-p-david-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 1,
+          "prefix": "Teacher, the son of ",
+          "suffix": ", king in Jerusalem:"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -636,8 +636,8 @@
             "verse:Eccl.1.1"
           ],
           "record_keys": [
-            "mention:wb:p-david-1-1-1",
-            "mention:wb:pl-jerusalem-a15257a-1-1"
+            "mention:wb:eccl-jerusalem-1-1",
+            "mention:wb:eccl-p-david-1-1-1"
           ],
           "blocker_question_keys": []
         },
@@ -647,7 +647,7 @@
             "verse:Eccl.1.12"
           ],
           "record_keys": [
-            "mention:wb:pl-jerusalem-a15257a-1-12"
+            "mention:wb:eccl-jerusalem-1-12"
           ],
           "blocker_question_keys": []
         },
@@ -657,7 +657,7 @@
             "verse:Eccl.1.16"
           ],
           "record_keys": [
-            "mention:wb:pl-jerusalem-a15257a-1-16"
+            "mention:wb:eccl-jerusalem-1-16"
           ],
           "blocker_question_keys": []
         },
@@ -667,7 +667,7 @@
             "verse:Eccl.2.7"
           ],
           "record_keys": [
-            "mention:wb:pl-jerusalem-a15257a-2-7"
+            "mention:wb:eccl-jerusalem-2-7"
           ],
           "blocker_question_keys": []
         },
@@ -677,7 +677,7 @@
             "verse:Eccl.2.9"
           ],
           "record_keys": [
-            "mention:wb:pl-jerusalem-a15257a-2-9"
+            "mention:wb:eccl-jerusalem-2-9"
           ],
           "blocker_question_keys": []
         }
