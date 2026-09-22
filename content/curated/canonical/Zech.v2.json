@@ -277,11 +277,21 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
     "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-berechiah-6",
+        "entity_type": "person",
+        "proposed_label": "Berechiah",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
       {
         "candidate_key": "candidate:wb:p-heldai-2",
         "entity_type": "person",
@@ -2967,6 +2977,9 @@
           "scope:wb-zech-1:refsys:eng-v22:zech.1.1-zech.1.21"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -2978,6 +2991,9 @@
           "scope:wb-zech-1:refsys:eng-v22:zech.1.1-zech.1.21"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -2989,6 +3005,9 @@
           "scope:wb-zech-1:refsys:eng-v22:zech.1.1-zech.1.21"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3000,521 +3019,26 @@
           "scope:wb-zech-1:refsys:eng-v22:zech.1.1-zech.1.21"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       }
     ],
-    "events": [
-      {
-        "event_key": "event:wb-zech-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-berechiah-6",
-          "entity:p-darius-1",
-          "entity:p-iddo-5",
-          "entity:p-zechariah-13"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-1-p1:refsys:eng-v22:zech.1.1-zech.1.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-1-p2",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-berechiah-6",
-          "entity:p-darius-1",
-          "entity:p-iddo-5",
-          "entity:p-the-angel-of-the-lord-1",
-          "entity:p-zechariah-13"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-1-p2:refsys:eng-v22:zech.1.7-zech.1.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-1-p3",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-1-p3:refsys:eng-v22:zech.1.18-zech.1.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-10-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:tribe-of-joseph",
-          "entity:tribe-of-judah"
-        ],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321",
-          "entity:pl-egypt-af301ca",
-          "entity:pl-gilead-1-ae73b90",
-          "entity:pl-lebanon-a730058",
-          "entity:pl-nile-a012705"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-10-p1:refsys:eng-v22:zech.10.1-zech.10.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-11-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-bashan-aa7a40a",
-          "entity:pl-jordan-ae686c9",
-          "entity:pl-lebanon-a730058"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-11-p1:refsys:eng-v22:zech.11.1-zech.11.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-11-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-11-p2:refsys:eng-v22:zech.11.10-zech.11.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-12-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-david-1",
-          "entity:p-the-angel-of-the-lord-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-12-p1:refsys:eng-v22:zech.12.1-zech.12.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-12-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-david-1",
-          "entity:p-nathan-2",
-          "entity:tribe-of-levi"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-hadad-rimmon-a05ee76",
-          "entity:pl-megiddo-a8554e3"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-12-p2:refsys:eng-v22:zech.12.10-zech.12.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-13-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-david-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-13-p1:refsys:eng-v22:zech.13.1-zech.13.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-13-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-13-p2:refsys:eng-v22:zech.13.7-zech.13.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-14-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-azariah-3"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-arabah-a2bb5ef",
-          "entity:pl-azal-ad041dd",
-          "entity:pl-benjamin-gate-ae04aa8",
-          "entity:pl-corner-gate-a68aa8f",
-          "entity:pl-geba-3-a33cfcc",
-          "entity:pl-great-sea-aa805fb",
-          "entity:pl-mount-of-olives-ac2c4c5",
-          "entity:pl-rimmon-2-a8da370",
-          "entity:pl-salt-sea-abed304",
-          "entity:pl-tower-of-hananel-af58391"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-14-p1:refsys:eng-v22:zech.14.1-zech.14.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-14-p2",
-        "event_type": "worship",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-egypt-af301ca"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-14-p2:refsys:eng-v22:zech.14.16-zech.14.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-2-p1",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-2-p1:refsys:eng-v22:zech.2.1-zech.2.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-2-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-babylon-1-a217d18",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-2-p2:refsys:eng-v22:zech.2.6-zech.2.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-3-p1",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-joshua-4",
-          "entity:p-satan-1",
-          "entity:p-the-angel-of-the-lord-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-3-p1:refsys:eng-v22:zech.3.1-zech.3.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-4-p1",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-zerubbabel-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-4-p1:refsys:eng-v22:zech.4.1-zech.4.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-5-p1",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-5-p1:refsys:eng-v22:zech.5.1-zech.5.4",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-5-p2",
-        "event_type": "vision",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:pl-shinar-af725b1"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-5-p2:refsys:eng-v22:zech.5.5-zech.5.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-6-p1",
-        "event_type": "vision",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-6-p1:refsys:eng-v22:zech.6.1-zech.6.8",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-6-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-heldai-2",
-          "entity:p-joshua-4",
-          "entity:p-josiah-2",
-          "entity:p-tobijah-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-babylon-1-a217d18"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-6-p2:refsys:eng-v22:zech.6.9-zech.6.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-7-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-darius-1",
-          "entity:p-regemmelech-1",
-          "entity:p-sharezer-2",
-          "entity:p-zechariah-13"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-bethel-3-abcc0cf",
-          "entity:pl-shephelah-af084cf",
-          "entity:pl-south-1-a2d4170"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-7-p1:refsys:eng-v22:zech.7.1-zech.7.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-8-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:p-judah-1",
-          "entity:tribe-of-judah"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-8-p1:refsys:eng-v22:zech.8.1-zech.8.23",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-9-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-aram-a3e66cd",
-          "entity:pl-ashdod-a30c937",
-          "entity:pl-ashkelon-ac87d4c",
-          "entity:pl-damascus-a69c1d4",
-          "entity:pl-ekron-a3fc47a",
-          "entity:pl-gaza-aa8edd2",
-          "entity:pl-hadrach-a3e8d63",
-          "entity:pl-hamath-1-ac62cbc",
-          "entity:pl-philistia-ac71e65",
-          "entity:pl-sidon-a98e4d7",
-          "entity:pl-tyre-a160272"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-9-p1:refsys:eng-v22:zech.9.1-zech.9.8",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-9-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-euphrates-a62dec4",
-          "entity:pl-greece-a4492a0",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-9-p2:refsys:eng-v22:zech.9.9-zech.9.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zech-9-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zech-9-p3:refsys:eng-v22:zech.9.14-zech.9.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-azal-ad041dd",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-azal-ad041dd",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -3525,7 +3049,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-hadad-rimmon-a05ee76",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -3536,7 +3066,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-hadrach-a3e8d63",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -3547,7 +3083,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-south-1-a2d4170",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -6391,8 +5933,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:873e070cb9cc12271b07c62f2dc4c8434cc1e2373fa47cde98d46f1cfb8c9bff"
 }

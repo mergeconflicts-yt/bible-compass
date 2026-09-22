@@ -1,5 +1,7 @@
 # Product Decisions for Phase 0
 
+> **Status note (whole-Bible draft track).** PD-002's Nehemiah 2 corpus remains the only reviewed/publishable slice. A machine-generated, unreviewed *draft* whole-English track under `content/curated/` (`synthetic_fixture`) exists solely to prove the pipeline; it does not change product scope or the excluded-feature boundary.
+
 ## Purpose
 
 Resolve the product and operational choices required before the repository is initialized or production content is imported.

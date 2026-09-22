@@ -85,7 +85,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
@@ -566,112 +566,7 @@
       }
     ],
     "relationships": [],
-    "events": [
-      {
-        "event_key": "event:wb-jon-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-amittai-1",
-          "entity:p-jonah-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-jon-1-p1:refsys:eng-v22:jon.1.1-jon.1.3",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-jon-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-jonah-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-jon-1-p2:refsys:eng-v22:jon.1.4-jon.1.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-jon-1-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-jonah-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-jon-1-p3:refsys:eng-v22:jon.1.11-jon.1.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-jon-2-p1",
-        "event_type": "prayer",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-jonah-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-jon-2-p1:refsys:eng-v22:jon.2.1-jon.2.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-jon-3-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-jonah-1",
-          "entity:p-king-of-nineveh-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-jon-3-p1:refsys:eng-v22:jon.3.1-jon.3.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-jon-4-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-jonah-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-jon-4-p1:refsys:eng-v22:jon.4.1-jon.4.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [],
     "relevance": [
       {
@@ -1191,8 +1086,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:628555303eca544cbd25f586cbf8fe72f7f1386ef82ee390775408a2ddb5d314"
 }

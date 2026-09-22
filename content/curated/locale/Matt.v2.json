@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-en-matt-locale",
-  "package_revision": 1,
-  "submission_id": "submission:wb-en-matt-locale:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-en-matt-locale:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-en-matt-locale",
   "package_layer": "locale",
   "package_family": "locale-context-draft",
@@ -1275,38 +1275,12 @@
   "dependencies": [
     {
       "package_key": "draft:wb-matt-canonical",
-      "revision": 1,
-      "digest": "sha256:fb302c02bd0d4c2a248ad0ca41a3e510bde7ce5e312bb0bf1e49e8cc61807902"
+      "revision": 2,
+      "digest": "sha256:b57f2f4142463fc04f4e0b6a3e6ceebbbfa2e600ae43f66c7b9724b0c4a66d61"
     }
   ],
   "records": {
     "entity_profiles": [
-      {
-        "profile_key": "profile:en:p-ruth-1",
-        "entity_key": "entity:p-ruth-1",
-        "language_tag": "en",
-        "preferred_name": "Ruth",
-        "aliases": [],
-        "short_description": {
-          "text": "Ruth — the Moabitess (RUT 1:22).",
-          "claim_keys": []
-        },
-        "extended_description": null,
-        "review_status": "draft"
-      },
-      {
-        "profile_key": "profile:en:p-berechiah-6",
-        "entity_key": "entity:p-berechiah-6",
-        "language_tag": "en",
-        "preferred_name": "Berechiah",
-        "aliases": [],
-        "short_description": {
-          "text": "Berechiah — father of Zechariah the prophet (ZEC 1:1).",
-          "claim_keys": []
-        },
-        "extended_description": null,
-        "review_status": "draft"
-      },
       {
         "profile_key": "profile:en:p-abihud-2",
         "entity_key": "entity:p-abihud-2",
@@ -1425,6 +1399,45 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-joseph-6",
+        "entity_key": "entity:p-joseph-6",
+        "language_tag": "en",
+        "preferred_name": "Joseph",
+        "aliases": [],
+        "short_description": {
+          "text": "Joseph — son of Jacob in the lineage of the Messiah (MAT 1:16). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mary-1",
+        "entity_key": "entity:p-mary-1",
+        "language_tag": "en",
+        "preferred_name": "Mary",
+        "aliases": [],
+        "short_description": {
+          "text": "Mary — wife of Joseph, and mother of the Messiah (MAT 1:16).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-herod-1",
+        "entity_key": "entity:p-herod-1",
+        "language_tag": "en",
+        "preferred_name": "Herod",
+        "aliases": [],
+        "short_description": {
+          "text": "Herod — the king (MAT 2:1). Of the tribe of Edom.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-archelaus-1",
         "entity_key": "entity:p-archelaus-1",
         "language_tag": "en",
@@ -1432,6 +1445,595 @@
         "aliases": [],
         "short_description": {
           "text": "Archelaus — son of Herod (MAT 2:22). Of the tribe of Edom.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-john-1",
+        "entity_key": "entity:p-john-1",
+        "language_tag": "en",
+        "preferred_name": "John",
+        "aliases": [
+          "My Messenger"
+        ],
+        "short_description": {
+          "text": "John — the baptist (MAT 3:1). Of the tribe of Levi.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-simon-1",
+        "entity_key": "entity:p-simon-1",
+        "language_tag": "en",
+        "preferred_name": "Peter",
+        "aliases": [
+          "Cephas",
+          "Simeon",
+          "Simon",
+          "Simon Barjona",
+          "Simon Peter"
+        ],
+        "short_description": {
+          "text": "Peter — Peter, brother of Andrew (MAT 4:18).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-andrew-1",
+        "entity_key": "entity:p-andrew-1",
+        "language_tag": "en",
+        "preferred_name": "Andrew",
+        "aliases": [],
+        "short_description": {
+          "text": "Andrew — brother of Simon/Peter (MAT 4:18).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-james-1",
+        "entity_key": "entity:p-james-1",
+        "language_tag": "en",
+        "preferred_name": "James",
+        "aliases": [],
+        "short_description": {
+          "text": "James — son of Zebedee (MAT 4:21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zebedee-1",
+        "entity_key": "entity:p-zebedee-1",
+        "language_tag": "en",
+        "preferred_name": "Zebedee",
+        "aliases": [],
+        "short_description": {
+          "text": "Zebedee — father of James and John (MAT 4:21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-john-2",
+        "entity_key": "entity:p-john-2",
+        "language_tag": "en",
+        "preferred_name": "John",
+        "aliases": [
+          "The Elder"
+        ],
+        "short_description": {
+          "text": "John — son of Zebedee (MAT 4:21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-matthew-1",
+        "entity_key": "entity:p-matthew-1",
+        "language_tag": "en",
+        "preferred_name": "Matthew",
+        "aliases": [],
+        "short_description": {
+          "text": "Matthew — the tax collector (MAT 9:9).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-daughter-1",
+        "entity_key": "entity:p-daughter-1",
+        "language_tag": "en",
+        "preferred_name": "Daughter",
+        "aliases": [],
+        "short_description": {
+          "text": "Daughter — daughter of Abraham with an issue of blood for twelve years (MAT 9:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-philip-1",
+        "entity_key": "entity:p-philip-1",
+        "language_tag": "en",
+        "preferred_name": "Philip",
+        "aliases": [],
+        "short_description": {
+          "text": "Philip — disciple of the Messiah (MAT 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-bartholomew-1",
+        "entity_key": "entity:p-bartholomew-1",
+        "language_tag": "en",
+        "preferred_name": "Bartholomew",
+        "aliases": [
+          "Nathanael"
+        ],
+        "short_description": {
+          "text": "Bartholomew — disciple of the Messiah (MAT 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-thomas-1",
+        "entity_key": "entity:p-thomas-1",
+        "language_tag": "en",
+        "preferred_name": "Thomas",
+        "aliases": [
+          "Didymus"
+        ],
+        "short_description": {
+          "text": "Thomas — disciple of the Messiah (MAT 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-james-2",
+        "entity_key": "entity:p-james-2",
+        "language_tag": "en",
+        "preferred_name": "James",
+        "aliases": [
+          "Levi"
+        ],
+        "short_description": {
+          "text": "James — disciple of the Messiah (MAT 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-alphaeus-1",
+        "entity_key": "entity:p-alphaeus-1",
+        "language_tag": "en",
+        "preferred_name": "Alphaeus",
+        "aliases": [],
+        "short_description": {
+          "text": "Alphaeus — father of James the disciple (MAT 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-thaddaeus-1",
+        "entity_key": "entity:p-thaddaeus-1",
+        "language_tag": "en",
+        "preferred_name": "Thaddaeus",
+        "aliases": [
+          "Judas"
+        ],
+        "short_description": {
+          "text": "Thaddaeus — disciple of the Messiah (MAT 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-simon-2",
+        "entity_key": "entity:p-simon-2",
+        "language_tag": "en",
+        "preferred_name": "Simon",
+        "aliases": [],
+        "short_description": {
+          "text": "Simon — disciple of the Messiah (MAT 10:4), the zealot.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-judas-1",
+        "entity_key": "entity:p-judas-1",
+        "language_tag": "en",
+        "preferred_name": "Judas",
+        "aliases": [
+          "Judas Iscariot"
+        ],
+        "short_description": {
+          "text": "Judas — disciple of the Messiah (MAT 10:4) who betrayed Him (MAT 10:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-james-3",
+        "entity_key": "entity:p-james-3",
+        "language_tag": "en",
+        "preferred_name": "James",
+        "aliases": [],
+        "short_description": {
+          "text": "James — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-joseph-7",
+        "entity_key": "entity:p-joseph-7",
+        "language_tag": "en",
+        "preferred_name": "Joseph",
+        "aliases": [
+          "Joses"
+        ],
+        "short_description": {
+          "text": "Joseph — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-simon-3",
+        "entity_key": "entity:p-simon-3",
+        "language_tag": "en",
+        "preferred_name": "Simon",
+        "aliases": [],
+        "short_description": {
+          "text": "Simon — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-judas-2",
+        "entity_key": "entity:p-judas-2",
+        "language_tag": "en",
+        "preferred_name": "Judas",
+        "aliases": [
+          "Jude"
+        ],
+        "short_description": {
+          "text": "Judas — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-herod-2",
+        "entity_key": "entity:p-herod-2",
+        "language_tag": "en",
+        "preferred_name": "Herod",
+        "aliases": [
+          "King Herod"
+        ],
+        "short_description": {
+          "text": "Herod — the tetrarch (MAT 14:1). Of the tribe of Edom.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-herodias-1",
+        "entity_key": "entity:p-herodias-1",
+        "language_tag": "en",
+        "preferred_name": "Herodias",
+        "aliases": [],
+        "short_description": {
+          "text": "Herodias — wife of Philip (MAT 14:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-philip-2",
+        "entity_key": "entity:p-philip-2",
+        "language_tag": "en",
+        "preferred_name": "Philip",
+        "aliases": [],
+        "short_description": {
+          "text": "Philip — brother of Herod (MAT 14:3). Of the tribe of Edom.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-caesar-1",
+        "entity_key": "entity:p-caesar-1",
+        "language_tag": "en",
+        "preferred_name": "Caesar",
+        "aliases": [
+          "Tiberius Caesar"
+        ],
+        "short_description": {
+          "text": "Caesar — Caesar during Jesus' ministry (MAT 22:17).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-caiaphas-1",
+        "entity_key": "entity:p-caiaphas-1",
+        "language_tag": "en",
+        "preferred_name": "Caiaphas",
+        "aliases": [],
+        "short_description": {
+          "text": "Caiaphas — the High Priest at the time of Messiah's last Passover (MAT 26:3). Of the tribe of Levi.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-simon-4",
+        "entity_key": "entity:p-simon-4",
+        "language_tag": "en",
+        "preferred_name": "Simon",
+        "aliases": [],
+        "short_description": {
+          "text": "Simon — the leper (MAT 26:6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-pilate-1",
+        "entity_key": "entity:p-pilate-1",
+        "language_tag": "en",
+        "preferred_name": "Pilate",
+        "aliases": [
+          "Pontius Pilate"
+        ],
+        "short_description": {
+          "text": "Pilate — the governor of Judea (MAT 27:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-barabbas-1",
+        "entity_key": "entity:p-barabbas-1",
+        "language_tag": "en",
+        "preferred_name": "Barabbas",
+        "aliases": [],
+        "short_description": {
+          "text": "Barabbas — notorious prisoner (MAT 27:16) set free instead of the Messiah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-simon-5",
+        "entity_key": "entity:p-simon-5",
+        "language_tag": "en",
+        "preferred_name": "Simon",
+        "aliases": [],
+        "short_description": {
+          "text": "Simon — man of Cyrene who bore Messiah's cross (MAT 27:32).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mary-2",
+        "entity_key": "entity:p-mary-2",
+        "language_tag": "en",
+        "preferred_name": "Mary",
+        "aliases": [
+          "Mary Magdalene"
+        ],
+        "short_description": {
+          "text": "Mary — one of the women who followed Jesus from the Galilee (MAT 27:56).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-joseph-8",
+        "entity_key": "entity:p-joseph-8",
+        "language_tag": "en",
+        "preferred_name": "Joseph",
+        "aliases": [],
+        "short_description": {
+          "text": "Joseph — of Arimethea (MAT 27:57), a member of the (Sanhedrin?) Council (LUK 23:50).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:jesus-christ",
+        "entity_key": "entity:jesus-christ",
+        "language_tag": "en",
+        "preferred_name": "Jesus Christ",
+        "aliases": [
+          "Christ",
+          "Christ Jesus",
+          "Jesus",
+          "King of the Jews",
+          "Lord Jesus",
+          "Lord Jesus Christ",
+          "Nazarene",
+          "Son of David",
+          "Son of God",
+          "Son of Man"
+        ],
+        "short_description": {
+          "text": "Jesus Christ is a person named in Scripture (Matt.1.1–Rev.22.21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-akeldama-a040ba5",
+        "entity_key": "entity:pl-akeldama-a040ba5",
+        "language_tag": "en",
+        "preferred_name": "Akeldama",
+        "aliases": [],
+        "short_description": {
+          "text": "Akeldama is a place named in Scripture (Matt.27.8–Acts.1.19).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-arimathea-af3d9fc",
+        "entity_key": "entity:pl-arimathea-af3d9fc",
+        "language_tag": "en",
+        "preferred_name": "Arimathea",
+        "aliases": [],
+        "short_description": {
+          "text": "Arimathea is a place named in Scripture (Matt.27.57–John.19.38).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-bethany-1-a4f35bc",
+        "entity_key": "entity:pl-bethany-1-a4f35bc",
+        "language_tag": "en",
+        "preferred_name": "Bethany 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Bethany 1 is a place named in Scripture (Matt.21.17–John.12.1).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-bethphage-abff59d",
+        "entity_key": "entity:pl-bethphage-abff59d",
+        "language_tag": "en",
+        "preferred_name": "Bethphage",
+        "aliases": [],
+        "short_description": {
+          "text": "Bethphage is a place named in Scripture (Matt.21.1–Luke.19.29).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-bethsaida-1-a91b732",
+        "entity_key": "entity:pl-bethsaida-1-a91b732",
+        "language_tag": "en",
+        "preferred_name": "Bethsaida 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Bethsaida in Galilee.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-caesarea-philippi-ab7bf48",
+        "entity_key": "entity:pl-caesarea-philippi-ab7bf48",
+        "language_tag": "en",
+        "preferred_name": "Caesarea Philippi",
+        "aliases": [],
+        "short_description": {
+          "text": "Caesarea Philippi is a place named in Scripture (Matt.16.13–Mark.8.27).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-capernaum-af2161c",
+        "entity_key": "entity:pl-capernaum-af2161c",
+        "language_tag": "en",
+        "preferred_name": "Capernaum",
+        "aliases": [],
+        "short_description": {
+          "text": "Capernaum is a place named in Scripture (Matt.4.13–John.6.59).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-chorazin-a593a48",
+        "entity_key": "entity:pl-chorazin-a593a48",
+        "language_tag": "en",
+        "preferred_name": "Chorazin",
+        "aliases": [],
+        "short_description": {
+          "text": "Chorazin is a place named in Scripture (Matt.11.21–Luke.10.13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-cyrene-a81cdb5",
+        "entity_key": "entity:pl-cyrene-a81cdb5",
+        "language_tag": "en",
+        "preferred_name": "Cyrene",
+        "aliases": [],
+        "short_description": {
+          "text": "Cyrene is a place named in Scripture (Matt.27.32–Acts.13.1).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-decapolis-ae733a2",
+        "entity_key": "entity:pl-decapolis-ae733a2",
+        "language_tag": "en",
+        "preferred_name": "Decapolis",
+        "aliases": [],
+        "short_description": {
+          "text": "Decapolis is a place named in Scripture (Matt.4.25–Mark.7.31).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -1451,6 +2053,71 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-gennesaret-a7de69e",
+        "entity_key": "entity:pl-gennesaret-a7de69e",
+        "language_tag": "en",
+        "preferred_name": "Gennesaret",
+        "aliases": [],
+        "short_description": {
+          "text": "Gennesaret is a place named in Scripture (Matt.14.34–Luke.5.1).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-gethsemane-a42418f",
+        "entity_key": "entity:pl-gethsemane-a42418f",
+        "language_tag": "en",
+        "preferred_name": "Gethsemane",
+        "aliases": [],
+        "short_description": {
+          "text": "Traditions vary as to the exact location.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-golgotha-a631d35",
+        "entity_key": "entity:pl-golgotha-a631d35",
+        "language_tag": "en",
+        "preferred_name": "Golgotha",
+        "aliases": [],
+        "short_description": {
+          "text": "Golgotha is a place named in Scripture (Matt.27.33–John.19.17).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-jericho-2-aaf03fa",
+        "entity_key": "entity:pl-jericho-2-aaf03fa",
+        "language_tag": "en",
+        "preferred_name": "Jericho 2",
+        "aliases": [],
+        "short_description": {
+          "text": "Jericho 2 is a place named in Scripture (Matt.20.29–Luke.19.1).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-judea-1-a149f13",
+        "entity_key": "entity:pl-judea-1-a149f13",
+        "language_tag": "en",
+        "preferred_name": "Judea 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Roman province.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-magadan-ad14067",
         "entity_key": "entity:pl-magadan-ad14067",
         "language_tag": "en",
@@ -1458,6 +2125,45 @@
         "aliases": [],
         "short_description": {
           "text": "Magadan is a place named in Scripture (Matt.15.39).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-nazareth-af5884f",
+        "entity_key": "entity:pl-nazareth-af5884f",
+        "language_tag": "en",
+        "preferred_name": "Nazareth",
+        "aliases": [],
+        "short_description": {
+          "text": "Nazareth is a place named in Scripture (Matt.2.23–Acts.26.9).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-south-2-a422f1c",
+        "entity_key": "entity:pl-south-2-a422f1c",
+        "language_tag": "en",
+        "preferred_name": "South 2",
+        "aliases": [],
+        "short_description": {
+          "text": "The context is a reference to the queen of Sheba who visited Solomon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-syria-2-a890adf",
+        "entity_key": "entity:pl-syria-2-a890adf",
+        "language_tag": "en",
+        "preferred_name": "Syria 2",
+        "aliases": [],
+        "short_description": {
+          "text": "Roman province.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -18205,5 +18911,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:d16e5f6e84f144aa77aa9ec15cd4b4ae4ce66323a4676e2b0a66b719bd7bb48f"
 }

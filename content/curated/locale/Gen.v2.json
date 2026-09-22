@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-en-gen-locale",
-  "package_revision": 1,
-  "submission_id": "submission:wb-en-gen-locale:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-en-gen-locale:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-en-gen-locale",
   "package_layer": "locale",
   "package_family": "locale-context-draft",
@@ -1757,12 +1757,51 @@
   "dependencies": [
     {
       "package_key": "draft:wb-gen-canonical",
-      "revision": 1,
-      "digest": "sha256:6921341086b0a7658437505c01d3263e0b9a1bc0bcc23ea9d07f270beb17f78e"
+      "revision": 2,
+      "digest": "sha256:1794e74bc826e169822058c6df87435cbfb7093b2e18cb492efa8822cf35062a"
     }
   ],
   "records": {
     "entity_profiles": [
+      {
+        "profile_key": "profile:en:p-adam-1",
+        "entity_key": "entity:p-adam-1",
+        "language_tag": "en",
+        "preferred_name": "Adam",
+        "aliases": [],
+        "short_description": {
+          "text": "Adam — first man (1CO 15:45).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-eve-1",
+        "entity_key": "entity:p-eve-1",
+        "language_tag": "en",
+        "preferred_name": "Eve",
+        "aliases": [],
+        "short_description": {
+          "text": "Eve — first woman, created from Adam (GEN 2:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-cain-1",
+        "entity_key": "entity:p-cain-1",
+        "language_tag": "en",
+        "preferred_name": "Cain",
+        "aliases": [],
+        "short_description": {
+          "text": "Cain — first son of Adam (GEN 4:1), cursed from the ground (GEN 4:11).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
       {
         "profile_key": "profile:en:p-abel-1",
         "entity_key": "entity:p-abel-1",
@@ -1920,6 +1959,1153 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-seth-1",
+        "entity_key": "entity:p-seth-1",
+        "language_tag": "en",
+        "preferred_name": "Seth",
+        "aliases": [],
+        "short_description": {
+          "text": "Seth — son of Adam (GEN 4:25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-enosh-1",
+        "entity_key": "entity:p-enosh-1",
+        "language_tag": "en",
+        "preferred_name": "Enosh",
+        "aliases": [],
+        "short_description": {
+          "text": "Enosh — son of Seth (GEN 4:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-kenan-1",
+        "entity_key": "entity:p-kenan-1",
+        "language_tag": "en",
+        "preferred_name": "Kenan",
+        "aliases": [
+          "Cainan"
+        ],
+        "short_description": {
+          "text": "Kenan — son of Enosh (GEN 5:9).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mahalalel-1",
+        "entity_key": "entity:p-mahalalel-1",
+        "language_tag": "en",
+        "preferred_name": "Mahalalel",
+        "aliases": [],
+        "short_description": {
+          "text": "Mahalalel — son of Kenan (GEN 5:12).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jared-1",
+        "entity_key": "entity:p-jared-1",
+        "language_tag": "en",
+        "preferred_name": "Jared",
+        "aliases": [],
+        "short_description": {
+          "text": "Jared — son of Mahalael (GEN 5:12).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-enoch-2",
+        "entity_key": "entity:p-enoch-2",
+        "language_tag": "en",
+        "preferred_name": "Enoch",
+        "aliases": [],
+        "short_description": {
+          "text": "Enoch — son of Jared (GEN 5:18).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-methuselah-1",
+        "entity_key": "entity:p-methuselah-1",
+        "language_tag": "en",
+        "preferred_name": "Methuselah",
+        "aliases": [],
+        "short_description": {
+          "text": "Methuselah — son of Enoch (GEN 5:21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-lamech-2",
+        "entity_key": "entity:p-lamech-2",
+        "language_tag": "en",
+        "preferred_name": "Lamech",
+        "aliases": [],
+        "short_description": {
+          "text": "Lamech — son of Methuselah (GEN 5:25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-noah-1",
+        "entity_key": "entity:p-noah-1",
+        "language_tag": "en",
+        "preferred_name": "Noah",
+        "aliases": [],
+        "short_description": {
+          "text": "Noah — son of Lamech (GEN 5:28-29).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shem-1",
+        "entity_key": "entity:p-shem-1",
+        "language_tag": "en",
+        "preferred_name": "Shem",
+        "aliases": [],
+        "short_description": {
+          "text": "Shem — son of Noah (GEN 5:32).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ham-1",
+        "entity_key": "entity:p-ham-1",
+        "language_tag": "en",
+        "preferred_name": "Ham",
+        "aliases": [],
+        "short_description": {
+          "text": "Ham — son of Noah (GEN 5:32).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-japheth-1",
+        "entity_key": "entity:p-japheth-1",
+        "language_tag": "en",
+        "preferred_name": "Japheth",
+        "aliases": [],
+        "short_description": {
+          "text": "Japheth — son of Noah (GEN 5:32).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-canaan-1",
+        "entity_key": "entity:p-canaan-1",
+        "language_tag": "en",
+        "preferred_name": "Canaan",
+        "aliases": [],
+        "short_description": {
+          "text": "Canaan — son of Ham (GEN 9:18), cursed by Noah (GEN 9:25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-gomer-1",
+        "entity_key": "entity:p-gomer-1",
+        "language_tag": "en",
+        "preferred_name": "Gomer",
+        "aliases": [],
+        "short_description": {
+          "text": "Gomer — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-magog-1",
+        "entity_key": "entity:p-magog-1",
+        "language_tag": "en",
+        "preferred_name": "Magog",
+        "aliases": [],
+        "short_description": {
+          "text": "Magog — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-madai-1",
+        "entity_key": "entity:p-madai-1",
+        "language_tag": "en",
+        "preferred_name": "Madai",
+        "aliases": [],
+        "short_description": {
+          "text": "Madai — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-javan-1",
+        "entity_key": "entity:p-javan-1",
+        "language_tag": "en",
+        "preferred_name": "Javan",
+        "aliases": [],
+        "short_description": {
+          "text": "Javan — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tubal-1",
+        "entity_key": "entity:p-tubal-1",
+        "language_tag": "en",
+        "preferred_name": "Tubal",
+        "aliases": [],
+        "short_description": {
+          "text": "Tubal — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-meshech-1",
+        "entity_key": "entity:p-meshech-1",
+        "language_tag": "en",
+        "preferred_name": "Meshech",
+        "aliases": [],
+        "short_description": {
+          "text": "Meshech — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tiras-1",
+        "entity_key": "entity:p-tiras-1",
+        "language_tag": "en",
+        "preferred_name": "Tiras",
+        "aliases": [],
+        "short_description": {
+          "text": "Tiras — son of Japheth (GEN 10:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ashkenaz-1",
+        "entity_key": "entity:p-ashkenaz-1",
+        "language_tag": "en",
+        "preferred_name": "Ashkenaz",
+        "aliases": [],
+        "short_description": {
+          "text": "Ashkenaz — son of Gomer (GEN 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-riphath-1",
+        "entity_key": "entity:p-riphath-1",
+        "language_tag": "en",
+        "preferred_name": "Riphath",
+        "aliases": [
+          "Diphath"
+        ],
+        "short_description": {
+          "text": "Riphath — son of Gomer (GEN 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-togarmah-1",
+        "entity_key": "entity:p-togarmah-1",
+        "language_tag": "en",
+        "preferred_name": "Togarmah",
+        "aliases": [],
+        "short_description": {
+          "text": "Togarmah — son of Gomer (GEN 10:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-elishah-1",
+        "entity_key": "entity:p-elishah-1",
+        "language_tag": "en",
+        "preferred_name": "Elishah",
+        "aliases": [],
+        "short_description": {
+          "text": "Elishah — son of Javan (GEN 10:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tarshish-1",
+        "entity_key": "entity:p-tarshish-1",
+        "language_tag": "en",
+        "preferred_name": "Tarshish",
+        "aliases": [],
+        "short_description": {
+          "text": "Tarshish — son of Javan (GEN 10:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-kittim-1",
+        "entity_key": "entity:p-kittim-1",
+        "language_tag": "en",
+        "preferred_name": "Kittim",
+        "aliases": [],
+        "short_description": {
+          "text": "Kittim — son of Javan (GEN 10:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dodanim-1",
+        "entity_key": "entity:p-dodanim-1",
+        "language_tag": "en",
+        "preferred_name": "Dodanim",
+        "aliases": [
+          "Rodanim"
+        ],
+        "short_description": {
+          "text": "Dodanim — son of Javan (GEN 10:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-cush-1",
+        "entity_key": "entity:p-cush-1",
+        "language_tag": "en",
+        "preferred_name": "Cush",
+        "aliases": [],
+        "short_description": {
+          "text": "Cush — son of Ham (GEN 10:6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mizraim-1",
+        "entity_key": "entity:p-mizraim-1",
+        "language_tag": "en",
+        "preferred_name": "Mizraim",
+        "aliases": [],
+        "short_description": {
+          "text": "Mizraim — son of Ham (GEN 10:6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-put-1",
+        "entity_key": "entity:p-put-1",
+        "language_tag": "en",
+        "preferred_name": "Put",
+        "aliases": [],
+        "short_description": {
+          "text": "Put — son of Ham (GEN 10:6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-seba-1",
+        "entity_key": "entity:p-seba-1",
+        "language_tag": "en",
+        "preferred_name": "Seba",
+        "aliases": [],
+        "short_description": {
+          "text": "Seba — son of Cush (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-havilah-1",
+        "entity_key": "entity:p-havilah-1",
+        "language_tag": "en",
+        "preferred_name": "Havilah",
+        "aliases": [],
+        "short_description": {
+          "text": "Havilah — son of Cush (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sabtah-1",
+        "entity_key": "entity:p-sabtah-1",
+        "language_tag": "en",
+        "preferred_name": "Sabtah",
+        "aliases": [],
+        "short_description": {
+          "text": "Sabtah — son of Cush (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-raamah-1",
+        "entity_key": "entity:p-raamah-1",
+        "language_tag": "en",
+        "preferred_name": "Raamah",
+        "aliases": [],
+        "short_description": {
+          "text": "Raamah — son of Cush (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sabteca-1",
+        "entity_key": "entity:p-sabteca-1",
+        "language_tag": "en",
+        "preferred_name": "Sabteca",
+        "aliases": [],
+        "short_description": {
+          "text": "Sabteca — son of Cush (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sheba-1",
+        "entity_key": "entity:p-sheba-1",
+        "language_tag": "en",
+        "preferred_name": "Sheba",
+        "aliases": [],
+        "short_description": {
+          "text": "Sheba — son of Raamah (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dedan-1",
+        "entity_key": "entity:p-dedan-1",
+        "language_tag": "en",
+        "preferred_name": "Dedan",
+        "aliases": [],
+        "short_description": {
+          "text": "Dedan — son of Raamah (GEN 10:7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-nimrod-1",
+        "entity_key": "entity:p-nimrod-1",
+        "language_tag": "en",
+        "preferred_name": "Nimrod",
+        "aliases": [],
+        "short_description": {
+          "text": "Nimrod — son of Cush (GEN 10:8), a mighty hunter before the LORD (GEN 10:9).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-lud-1",
+        "entity_key": "entity:p-lud-1",
+        "language_tag": "en",
+        "preferred_name": "Lud",
+        "aliases": [],
+        "short_description": {
+          "text": "Lud — son of Mizraim (GEN 10:13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-anam-1",
+        "entity_key": "entity:p-anam-1",
+        "language_tag": "en",
+        "preferred_name": "Anam",
+        "aliases": [],
+        "short_description": {
+          "text": "Anam — son of Mizraim (GEN 10:13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-lehab-1",
+        "entity_key": "entity:p-lehab-1",
+        "language_tag": "en",
+        "preferred_name": "Lehab",
+        "aliases": [],
+        "short_description": {
+          "text": "Lehab — son of Mizraim (GEN 10:13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-naphtuh-1",
+        "entity_key": "entity:p-naphtuh-1",
+        "language_tag": "en",
+        "preferred_name": "Naphtuh",
+        "aliases": [],
+        "short_description": {
+          "text": "Naphtuh — son of Mizraim (GEN 10:13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-pathrus-1",
+        "entity_key": "entity:p-pathrus-1",
+        "language_tag": "en",
+        "preferred_name": "Pathrus",
+        "aliases": [],
+        "short_description": {
+          "text": "Pathrus — son of Mizraim (GEN 10:14).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-casluh-1",
+        "entity_key": "entity:p-casluh-1",
+        "language_tag": "en",
+        "preferred_name": "Casluh",
+        "aliases": [],
+        "short_description": {
+          "text": "Casluh — son of Mizraim-from which come the Philistines (GEN 10:14).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-caphtor-1",
+        "entity_key": "entity:p-caphtor-1",
+        "language_tag": "en",
+        "preferred_name": "Caphtor",
+        "aliases": [],
+        "short_description": {
+          "text": "Caphtor — son of Mizraim (GEN 10:14).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sidon-1",
+        "entity_key": "entity:p-sidon-1",
+        "language_tag": "en",
+        "preferred_name": "Sidon",
+        "aliases": [],
+        "short_description": {
+          "text": "Sidon — son of Canaan (GEN 10:15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-heth-1",
+        "entity_key": "entity:p-heth-1",
+        "language_tag": "en",
+        "preferred_name": "Heth",
+        "aliases": [],
+        "short_description": {
+          "text": "Heth — son of Canaan (GEN 10:15). Of the tribe of Hittite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jebus-1",
+        "entity_key": "entity:p-jebus-1",
+        "language_tag": "en",
+        "preferred_name": "Jebus",
+        "aliases": [],
+        "short_description": {
+          "text": "Jebus — son of Canaan (GEN 10:15). Of the tribe of Jebusite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-amor-1",
+        "entity_key": "entity:p-amor-1",
+        "language_tag": "en",
+        "preferred_name": "Amor",
+        "aliases": [],
+        "short_description": {
+          "text": "Amor — son of Canaan (GEN 10:15). Of the tribe of Amorite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-girgash-1",
+        "entity_key": "entity:p-girgash-1",
+        "language_tag": "en",
+        "preferred_name": "Girgash",
+        "aliases": [],
+        "short_description": {
+          "text": "Girgash — son of Canaan (GEN 10:15). Of the tribe of Girgashite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hivi-1",
+        "entity_key": "entity:p-hivi-1",
+        "language_tag": "en",
+        "preferred_name": "Hivi",
+        "aliases": [],
+        "short_description": {
+          "text": "Hivi — son of Canaan (GEN 10:15). Of the tribe of Hivites.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ark-1",
+        "entity_key": "entity:p-ark-1",
+        "language_tag": "en",
+        "preferred_name": "Ark",
+        "aliases": [],
+        "short_description": {
+          "text": "Ark — son of Canaan (GEN 10:15). Of the tribe of Arkite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sini-1",
+        "entity_key": "entity:p-sini-1",
+        "language_tag": "en",
+        "preferred_name": "Sini",
+        "aliases": [],
+        "short_description": {
+          "text": "Sini — son of Canaan (GEN 10:15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-arvad-1",
+        "entity_key": "entity:p-arvad-1",
+        "language_tag": "en",
+        "preferred_name": "Arvad",
+        "aliases": [],
+        "short_description": {
+          "text": "Arvad — son of Canaan (GEN 10:15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zemar-1",
+        "entity_key": "entity:p-zemar-1",
+        "language_tag": "en",
+        "preferred_name": "Zemar",
+        "aliases": [],
+        "short_description": {
+          "text": "Zemar — son of Canaan (GEN 10:15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hamath-1",
+        "entity_key": "entity:p-hamath-1",
+        "language_tag": "en",
+        "preferred_name": "Hamath",
+        "aliases": [],
+        "short_description": {
+          "text": "Hamath — son of Canaan (GEN 10:15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-eber-1",
+        "entity_key": "entity:p-eber-1",
+        "language_tag": "en",
+        "preferred_name": "Eber",
+        "aliases": [
+          "Heber"
+        ],
+        "short_description": {
+          "text": "Eber — descendant of Shem (GEN 10:21), son of Shelah (GEN 10:24).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-elam-1",
+        "entity_key": "entity:p-elam-1",
+        "language_tag": "en",
+        "preferred_name": "Elam",
+        "aliases": [],
+        "short_description": {
+          "text": "Elam — son of Shem (GEN 10:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-asshur-1",
+        "entity_key": "entity:p-asshur-1",
+        "language_tag": "en",
+        "preferred_name": "Asshur",
+        "aliases": [],
+        "short_description": {
+          "text": "Asshur — son of Shem (GEN 10:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-arpachshad-1",
+        "entity_key": "entity:p-arpachshad-1",
+        "language_tag": "en",
+        "preferred_name": "Arpachshad",
+        "aliases": [
+          "Arphaxad"
+        ],
+        "short_description": {
+          "text": "Arpachshad — son of Shem (GEN 10:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-lud-2",
+        "entity_key": "entity:p-lud-2",
+        "language_tag": "en",
+        "preferred_name": "Lud",
+        "aliases": [],
+        "short_description": {
+          "text": "Lud — son of Shem (GEN 10:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-aram-1",
+        "entity_key": "entity:p-aram-1",
+        "language_tag": "en",
+        "preferred_name": "Aram",
+        "aliases": [],
+        "short_description": {
+          "text": "Aram — son of Shem (GEN 10:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-uz-1",
+        "entity_key": "entity:p-uz-1",
+        "language_tag": "en",
+        "preferred_name": "Uz",
+        "aliases": [],
+        "short_description": {
+          "text": "Uz — son of Aram (GEN 10:23).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hul-1",
+        "entity_key": "entity:p-hul-1",
+        "language_tag": "en",
+        "preferred_name": "Hul",
+        "aliases": [],
+        "short_description": {
+          "text": "Hul — son of Aram (GEN 10:23).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-gether-1",
+        "entity_key": "entity:p-gether-1",
+        "language_tag": "en",
+        "preferred_name": "Gether",
+        "aliases": [],
+        "short_description": {
+          "text": "Gether — son of Aram (GEN 10:23).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mash-1",
+        "entity_key": "entity:p-mash-1",
+        "language_tag": "en",
+        "preferred_name": "Mash",
+        "aliases": [
+          "Meshech"
+        ],
+        "short_description": {
+          "text": "Mash — son of Aram (GEN 10:23).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shelah-1",
+        "entity_key": "entity:p-shelah-1",
+        "language_tag": "en",
+        "preferred_name": "Shelah",
+        "aliases": [],
+        "short_description": {
+          "text": "Shelah — son of Arpachshad (GEN 10:24, GEN 11:12).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-peleg-1",
+        "entity_key": "entity:p-peleg-1",
+        "language_tag": "en",
+        "preferred_name": "Peleg",
+        "aliases": [],
+        "short_description": {
+          "text": "Peleg — son of Eber, in his days the earth was divided (GEN 10:25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-joktan-1",
+        "entity_key": "entity:p-joktan-1",
+        "language_tag": "en",
+        "preferred_name": "Joktan",
+        "aliases": [],
+        "short_description": {
+          "text": "Joktan — son of Eber (GEN 10:25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-almodad-1",
+        "entity_key": "entity:p-almodad-1",
+        "language_tag": "en",
+        "preferred_name": "Almodad",
+        "aliases": [],
+        "short_description": {
+          "text": "Almodad — son of Joktan (GEN 10:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sheleph-1",
+        "entity_key": "entity:p-sheleph-1",
+        "language_tag": "en",
+        "preferred_name": "Sheleph",
+        "aliases": [],
+        "short_description": {
+          "text": "Sheleph — son of Joktan (GEN 10:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hazarmaveth-1",
+        "entity_key": "entity:p-hazarmaveth-1",
+        "language_tag": "en",
+        "preferred_name": "Hazarmaveth",
+        "aliases": [],
+        "short_description": {
+          "text": "Hazarmaveth — son of Joktan (GEN 10:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jerah-1",
+        "entity_key": "entity:p-jerah-1",
+        "language_tag": "en",
+        "preferred_name": "Jerah",
+        "aliases": [],
+        "short_description": {
+          "text": "Jerah — son of Joktan (GEN 10:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hadoram-1",
+        "entity_key": "entity:p-hadoram-1",
+        "language_tag": "en",
+        "preferred_name": "Hadoram",
+        "aliases": [],
+        "short_description": {
+          "text": "Hadoram — son of Joktan (GEN 10:27).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-uzal-1",
+        "entity_key": "entity:p-uzal-1",
+        "language_tag": "en",
+        "preferred_name": "Uzal",
+        "aliases": [],
+        "short_description": {
+          "text": "Uzal — son of Joktan (GEN 10:27).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-diklah-1",
+        "entity_key": "entity:p-diklah-1",
+        "language_tag": "en",
+        "preferred_name": "Diklah",
+        "aliases": [],
+        "short_description": {
+          "text": "Diklah — son of Joktan (GEN 10:27).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-obal-1",
+        "entity_key": "entity:p-obal-1",
+        "language_tag": "en",
+        "preferred_name": "Obal",
+        "aliases": [
+          "Ebal"
+        ],
+        "short_description": {
+          "text": "Obal — son of Joktan (GEN 10:28).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-abimael-1",
+        "entity_key": "entity:p-abimael-1",
+        "language_tag": "en",
+        "preferred_name": "Abimael",
+        "aliases": [],
+        "short_description": {
+          "text": "Abimael — son of Joktan (GEN 10:28).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sheba-2",
+        "entity_key": "entity:p-sheba-2",
+        "language_tag": "en",
+        "preferred_name": "Sheba",
+        "aliases": [],
+        "short_description": {
+          "text": "Sheba — son of Joktan (GEN 10:28).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ophir-1",
+        "entity_key": "entity:p-ophir-1",
+        "language_tag": "en",
+        "preferred_name": "Ophir",
+        "aliases": [],
+        "short_description": {
+          "text": "Ophir — son of Joktan (GEN 10:29).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-havilah-2",
+        "entity_key": "entity:p-havilah-2",
+        "language_tag": "en",
+        "preferred_name": "Havilah",
+        "aliases": [],
+        "short_description": {
+          "text": "Havilah — son of Joktan (GEN 10:29).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jobab-1",
+        "entity_key": "entity:p-jobab-1",
+        "language_tag": "en",
+        "preferred_name": "Jobab",
+        "aliases": [],
+        "short_description": {
+          "text": "Jobab — son of Joktan (GEN 10:29).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-reu-1",
+        "entity_key": "entity:p-reu-1",
+        "language_tag": "en",
+        "preferred_name": "Reu",
+        "aliases": [],
+        "short_description": {
+          "text": "Reu — son of Peleg (GEN 11:19).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-serug-1",
+        "entity_key": "entity:p-serug-1",
+        "language_tag": "en",
+        "preferred_name": "Serug",
+        "aliases": [],
+        "short_description": {
+          "text": "Serug — son of Reu (GEN 11:20).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-nahor-1",
+        "entity_key": "entity:p-nahor-1",
+        "language_tag": "en",
+        "preferred_name": "Nahor",
+        "aliases": [],
+        "short_description": {
+          "text": "Nahor — son of Serug (GEN 11:22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-terah-1",
+        "entity_key": "entity:p-terah-1",
+        "language_tag": "en",
+        "preferred_name": "Terah",
+        "aliases": [],
+        "short_description": {
+          "text": "Terah — son of Nahor(GEN 11:24).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-abram-1",
+        "entity_key": "entity:p-abram-1",
+        "language_tag": "en",
+        "preferred_name": "Abram",
+        "aliases": [
+          "Abraham"
+        ],
+        "short_description": {
+          "text": "Abram — son of Terah (GEN 11:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-nahor-2",
         "entity_key": "entity:p-nahor-2",
         "language_tag": "en",
@@ -1940,6 +3126,34 @@
         "aliases": [],
         "short_description": {
           "text": "Haran — son of Terah (GEN 11:26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-lot-1",
+        "entity_key": "entity:p-lot-1",
+        "language_tag": "en",
+        "preferred_name": "Lot",
+        "aliases": [],
+        "short_description": {
+          "text": "Lot — son of Haran (GEN 11:27), nephew of Abram (GEN 12:5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sarai-1",
+        "entity_key": "entity:p-sarai-1",
+        "language_tag": "en",
+        "preferred_name": "Sarai",
+        "aliases": [
+          "Sarah"
+        ],
+        "short_description": {
+          "text": "Sarai — Abram's wife (11:29).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2167,6 +3381,58 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-hagar-1",
+        "entity_key": "entity:p-hagar-1",
+        "language_tag": "en",
+        "preferred_name": "Hagar",
+        "aliases": [],
+        "short_description": {
+          "text": "Hagar — the Egyptian servant of Sarai (GEN 16:1).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-the-angel-of-the-lord-1",
+        "entity_key": "entity:p-the-angel-of-the-lord-1",
+        "language_tag": "en",
+        "preferred_name": "the angel of the LORD",
+        "aliases": [],
+        "short_description": {
+          "text": "the angel of the LORD — definite article \"the\" angel (GEN 16:7, GEN 22:11, EXO 3:2, NUM 22:22, JDG 2:1, etc.).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ishmael-1",
+        "entity_key": "entity:p-ishmael-1",
+        "language_tag": "en",
+        "preferred_name": "Ishmael",
+        "aliases": [],
+        "short_description": {
+          "text": "Ishmael — son of Abram and Hagar (GEN 16:15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-isaac-1",
+        "entity_key": "entity:p-isaac-1",
+        "language_tag": "en",
+        "preferred_name": "Isaac",
+        "aliases": [],
+        "short_description": {
+          "text": "Isaac — son of Abraham and Sarah (GEN 17:21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-wife-of-lot-1",
         "entity_key": "entity:p-wife-of-lot-1",
         "language_tag": "en",
@@ -2200,6 +3466,34 @@
         "aliases": [],
         "short_description": {
           "text": "Younger of Lot — mother of Ben-ammi (GEN 19:38).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-moab-1",
+        "entity_key": "entity:p-moab-1",
+        "language_tag": "en",
+        "preferred_name": "Moab",
+        "aliases": [],
+        "short_description": {
+          "text": "Moab — son of Lot and forebear of the Moabites (GEN 19:37). Of the tribe of Moabite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ben-ammi-1",
+        "entity_key": "entity:p-ben-ammi-1",
+        "language_tag": "en",
+        "preferred_name": "Ben-ammi",
+        "aliases": [
+          "Ammon"
+        ],
+        "short_description": {
+          "text": "Ben-ammi — son of Lot and forebear of the Ammonites (GEN 19:38). Of the tribe of Ammonite.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2466,6 +3760,123 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-keturah-1",
+        "entity_key": "entity:p-keturah-1",
+        "language_tag": "en",
+        "preferred_name": "Keturah",
+        "aliases": [],
+        "short_description": {
+          "text": "Keturah — Abraham's second wife after Sarah died (GEN 25:1).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zimran-1",
+        "entity_key": "entity:p-zimran-1",
+        "language_tag": "en",
+        "preferred_name": "Zimran",
+        "aliases": [],
+        "short_description": {
+          "text": "Zimran — son of Abraham through Keturah (GEN 25:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jokshan-1",
+        "entity_key": "entity:p-jokshan-1",
+        "language_tag": "en",
+        "preferred_name": "Jokshan",
+        "aliases": [],
+        "short_description": {
+          "text": "Jokshan — son of Abraham through Keturah (GEN 25:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-medan-1",
+        "entity_key": "entity:p-medan-1",
+        "language_tag": "en",
+        "preferred_name": "Medan",
+        "aliases": [],
+        "short_description": {
+          "text": "Medan — son of Abraham through Keturah (GEN 25:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-midian-1",
+        "entity_key": "entity:p-midian-1",
+        "language_tag": "en",
+        "preferred_name": "Midian",
+        "aliases": [],
+        "short_description": {
+          "text": "Midian — son of Abraham through Keturah (GEN 25:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ishbak-1",
+        "entity_key": "entity:p-ishbak-1",
+        "language_tag": "en",
+        "preferred_name": "Ishbak",
+        "aliases": [],
+        "short_description": {
+          "text": "Ishbak — son of Abraham through Keturah (GEN 25:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shuah-1",
+        "entity_key": "entity:p-shuah-1",
+        "language_tag": "en",
+        "preferred_name": "Shuah",
+        "aliases": [],
+        "short_description": {
+          "text": "Shuah — son of Abraham through Keturah (GEN 25:2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-sheba-3",
+        "entity_key": "entity:p-sheba-3",
+        "language_tag": "en",
+        "preferred_name": "Sheba",
+        "aliases": [],
+        "short_description": {
+          "text": "Sheba — son of Jokshan (GEN 25:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dedan-2",
+        "entity_key": "entity:p-dedan-2",
+        "language_tag": "en",
+        "preferred_name": "Dedan",
+        "aliases": [],
+        "short_description": {
+          "text": "Dedan — son of Jokshan (GEN 25:3).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-asshur-2",
         "entity_key": "entity:p-asshur-2",
         "language_tag": "en",
@@ -2505,6 +3916,258 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-ephah-1",
+        "entity_key": "entity:p-ephah-1",
+        "language_tag": "en",
+        "preferred_name": "Ephah",
+        "aliases": [],
+        "short_description": {
+          "text": "Ephah — son of Midian and grandson of Abraham through Keturah (GEN 25:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-epher-1",
+        "entity_key": "entity:p-epher-1",
+        "language_tag": "en",
+        "preferred_name": "Epher",
+        "aliases": [],
+        "short_description": {
+          "text": "Epher — son of Midian and grandson of Abraham through Keturah (GEN 25:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hanoch-1",
+        "entity_key": "entity:p-hanoch-1",
+        "language_tag": "en",
+        "preferred_name": "Hanoch",
+        "aliases": [],
+        "short_description": {
+          "text": "Hanoch — son of Midian and grandson of Abraham through Keturah (GEN 25:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-abida-1",
+        "entity_key": "entity:p-abida-1",
+        "language_tag": "en",
+        "preferred_name": "Abida",
+        "aliases": [],
+        "short_description": {
+          "text": "Abida — son of Midian and grandson of Abraham through Keturah (GEN 25:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-eldaah-1",
+        "entity_key": "entity:p-eldaah-1",
+        "language_tag": "en",
+        "preferred_name": "Eldaah",
+        "aliases": [],
+        "short_description": {
+          "text": "Eldaah — son of Midian and grandson of Abraham through Keturah (GEN 25:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-nebaioth-1",
+        "entity_key": "entity:p-nebaioth-1",
+        "language_tag": "en",
+        "preferred_name": "Nebaioth",
+        "aliases": [],
+        "short_description": {
+          "text": "Nebaioth — firstborn son of Ishmael (GEN 25:13). Of the tribe of Nebaioth.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-kedar-1",
+        "entity_key": "entity:p-kedar-1",
+        "language_tag": "en",
+        "preferred_name": "Kedar",
+        "aliases": [],
+        "short_description": {
+          "text": "Kedar — second-born son of Ishmael (GEN 25:13). Of the tribe of Kedar.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-adbeel-1",
+        "entity_key": "entity:p-adbeel-1",
+        "language_tag": "en",
+        "preferred_name": "Adbeel",
+        "aliases": [],
+        "short_description": {
+          "text": "Adbeel — third-born son of Ishmael (GEN 25:13). Of the tribe of Adbeel.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mibsam-1",
+        "entity_key": "entity:p-mibsam-1",
+        "language_tag": "en",
+        "preferred_name": "Mibsam",
+        "aliases": [],
+        "short_description": {
+          "text": "Mibsam — fourth-born son of Ishmael (GEN 25:13). Of the tribe of Mibsam.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mishma-1",
+        "entity_key": "entity:p-mishma-1",
+        "language_tag": "en",
+        "preferred_name": "Mishma",
+        "aliases": [],
+        "short_description": {
+          "text": "Mishma — fifth-born son of Ishmael (GEN 25:14). Of the tribe of Mishma.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dumah-1",
+        "entity_key": "entity:p-dumah-1",
+        "language_tag": "en",
+        "preferred_name": "Dumah",
+        "aliases": [],
+        "short_description": {
+          "text": "Dumah — sixth-born son of Ishmael (GEN 25:14). Of the tribe of Dumah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-massa-1",
+        "entity_key": "entity:p-massa-1",
+        "language_tag": "en",
+        "preferred_name": "Massa",
+        "aliases": [],
+        "short_description": {
+          "text": "Massa — seventh-born son of Ishmael (GEN 25:14). Of the tribe of Massa.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hadad-1",
+        "entity_key": "entity:p-hadad-1",
+        "language_tag": "en",
+        "preferred_name": "Hadad",
+        "aliases": [],
+        "short_description": {
+          "text": "Hadad — eighth-born son of Ishmael (GEN 25:15). Of the tribe of Hadad.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tema-1",
+        "entity_key": "entity:p-tema-1",
+        "language_tag": "en",
+        "preferred_name": "Tema",
+        "aliases": [],
+        "short_description": {
+          "text": "Tema — ninth-born son of Ishmael (GEN 25:15). Of the tribe of Tema.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jetur-1",
+        "entity_key": "entity:p-jetur-1",
+        "language_tag": "en",
+        "preferred_name": "Jetur",
+        "aliases": [],
+        "short_description": {
+          "text": "Jetur — tenth-born son of Ishmael (GEN 25:15). Of the tribe of Jetur.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-naphish-1",
+        "entity_key": "entity:p-naphish-1",
+        "language_tag": "en",
+        "preferred_name": "Naphish",
+        "aliases": [],
+        "short_description": {
+          "text": "Naphish — eleventh-born son of Ishmael (GEN 25:15). Of the tribe of Naphish.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-kedemah-1",
+        "entity_key": "entity:p-kedemah-1",
+        "language_tag": "en",
+        "preferred_name": "Kedemah",
+        "aliases": [],
+        "short_description": {
+          "text": "Kedemah — twelfth-born son of Ishmael (GEN 25:15). Of the tribe of Kedemah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-esau-1",
+        "entity_key": "entity:p-esau-1",
+        "language_tag": "en",
+        "preferred_name": "Esau",
+        "aliases": [
+          "Edom"
+        ],
+        "short_description": {
+          "text": "Esau — firstborn son of Isaac (GEN 25:25-26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jacob-1",
+        "entity_key": "entity:p-jacob-1",
+        "language_tag": "en",
+        "preferred_name": "Jacob",
+        "aliases": [
+          "Israel",
+          "Jesherun"
+        ],
+        "short_description": {
+          "text": "Jacob — second-born son of Isaac (GEN 25:25-26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-ahuzzath-1",
         "entity_key": "entity:p-ahuzzath-1",
         "language_tag": "en",
@@ -2527,6 +4190,21 @@
         ],
         "short_description": {
           "text": "Judith — daughter of Beeri the Hittite, and wife of Esau (GEN 26:34). Of the tribe of Hittite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-beeri-1",
+        "entity_key": "entity:p-beeri-1",
+        "language_tag": "en",
+        "preferred_name": "Beeri",
+        "aliases": [
+          "Anah"
+        ],
+        "short_description": {
+          "text": "Beeri — the Hittite (GEN 26:34), also called Anah (GEN 36:2). Of the tribe of Hittite.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2574,6 +4252,19 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-rachel-1",
+        "entity_key": "entity:p-rachel-1",
+        "language_tag": "en",
+        "preferred_name": "Rachel",
+        "aliases": [],
+        "short_description": {
+          "text": "Rachel — daughter of Laban (GEN 29:10) and wife of Jacob (GEN 29:28).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-leah-1",
         "entity_key": "entity:p-leah-1",
         "language_tag": "en",
@@ -2600,6 +4291,149 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-bilhah-1",
+        "entity_key": "entity:p-bilhah-1",
+        "language_tag": "en",
+        "preferred_name": "Bilhah",
+        "aliases": [],
+        "short_description": {
+          "text": "Bilhah — maid of Laban given to Rachel (GEN 29:29) and wife of Jacob (GEN 30:4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-reuben-1",
+        "entity_key": "entity:p-reuben-1",
+        "language_tag": "en",
+        "preferred_name": "Reuben",
+        "aliases": [],
+        "short_description": {
+          "text": "Reuben — firstborn son of Jacob (GEN 29:32), son of Leah. Of the tribe of Reuben.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-simeon-1",
+        "entity_key": "entity:p-simeon-1",
+        "language_tag": "en",
+        "preferred_name": "Simeon",
+        "aliases": [],
+        "short_description": {
+          "text": "Simeon — second-born son of Jacob (GEN 29:33), son of Leah. Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-levi-1",
+        "entity_key": "entity:p-levi-1",
+        "language_tag": "en",
+        "preferred_name": "Levi",
+        "aliases": [],
+        "short_description": {
+          "text": "Levi — third-born son of Jacob (GEN 29:34), son of Leah. Of the tribe of Levi.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-judah-1",
+        "entity_key": "entity:p-judah-1",
+        "language_tag": "en",
+        "preferred_name": "Judah",
+        "aliases": [],
+        "short_description": {
+          "text": "Judah — fourth-born son of Jacob (GEN 29:35), son of Leah. Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dan-1",
+        "entity_key": "entity:p-dan-1",
+        "language_tag": "en",
+        "preferred_name": "Dan",
+        "aliases": [],
+        "short_description": {
+          "text": "Dan — fifth-born son of Jacob (GEN 30:5), son of Bilhah, Rachel's handmaid. Of the tribe of Dan.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-naphtali-1",
+        "entity_key": "entity:p-naphtali-1",
+        "language_tag": "en",
+        "preferred_name": "Naphtali",
+        "aliases": [],
+        "short_description": {
+          "text": "Naphtali — sixth-born son of Jacob (GEN 30:7), son of Bilhah, Rachel's handmaid. Of the tribe of Naphtali.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-gad-1",
+        "entity_key": "entity:p-gad-1",
+        "language_tag": "en",
+        "preferred_name": "Gad",
+        "aliases": [],
+        "short_description": {
+          "text": "Gad — seventh-born son of Jacob (GEN 30:11, GEN 35:26), son of Zilpah, Leah's handmaid. Of the tribe of Gad.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-asher-1",
+        "entity_key": "entity:p-asher-1",
+        "language_tag": "en",
+        "preferred_name": "Asher",
+        "aliases": [],
+        "short_description": {
+          "text": "Asher — eighth-born son of Jacob (GEN 30:11, GEN 35:26), son of Zilpah, Leah's handmaid. Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-issachar-1",
+        "entity_key": "entity:p-issachar-1",
+        "language_tag": "en",
+        "preferred_name": "Issachar",
+        "aliases": [],
+        "short_description": {
+          "text": "Issachar — ninth-born son of Jacob (GEN 30:17), son of Leah. Of the tribe of Issachar.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zebulun-1",
+        "entity_key": "entity:p-zebulun-1",
+        "language_tag": "en",
+        "preferred_name": "Zebulun",
+        "aliases": [],
+        "short_description": {
+          "text": "Zebulun — tenth-born son of Jacob (GEN 30:19), son of Leah. Of the tribe of Zebulun.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-dinah-1",
         "entity_key": "entity:p-dinah-1",
         "language_tag": "en",
@@ -2607,6 +4441,34 @@
         "aliases": [],
         "short_description": {
           "text": "Dinah — daughter of Jacob (GEN 30:21), daughter of Leah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-joseph-1",
+        "entity_key": "entity:p-joseph-1",
+        "language_tag": "en",
+        "preferred_name": "Joseph",
+        "aliases": [
+          "Zaphenath-paneah"
+        ],
+        "short_description": {
+          "text": "Joseph — eleventh-born son of Jacob and Rachel (GEN 30:24).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hamor-1",
+        "entity_key": "entity:p-hamor-1",
+        "language_tag": "en",
+        "preferred_name": "Hamor",
+        "aliases": [],
+        "short_description": {
+          "text": "Hamor — the Hivite, father of Shechem (GEN 34:2). Of the tribe of Hivite.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2639,6 +4501,21 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-benjamin-1",
+        "entity_key": "entity:p-benjamin-1",
+        "language_tag": "en",
+        "preferred_name": "Benjamin",
+        "aliases": [
+          "Ben-oni"
+        ],
+        "short_description": {
+          "text": "Benjamin — twelfth-born son of Jacob and Rachel (GEN 35:18). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-zibeon-1",
         "entity_key": "entity:p-zibeon-1",
         "language_tag": "en",
@@ -2646,6 +4523,216 @@
         "aliases": [],
         "short_description": {
           "text": "Zibeon — the Hivite and grandfather of Oholibamah, Esau's wife (GEN 36:2). Of the tribe of Hivite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-eliphaz-1",
+        "entity_key": "entity:p-eliphaz-1",
+        "language_tag": "en",
+        "preferred_name": "Eliphaz",
+        "aliases": [],
+        "short_description": {
+          "text": "Eliphaz — son of Esau (GEN 36:4, 10, 15). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-reuel-1",
+        "entity_key": "entity:p-reuel-1",
+        "language_tag": "en",
+        "preferred_name": "Reuel",
+        "aliases": [],
+        "short_description": {
+          "text": "Reuel — son of Esau (GEN 36:4, 10, 17). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jeush-1",
+        "entity_key": "entity:p-jeush-1",
+        "language_tag": "en",
+        "preferred_name": "Jeush",
+        "aliases": [],
+        "short_description": {
+          "text": "Jeush — son of Esau (GEN 36:5) and chief of Edom (GEN 36:18). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jalam-1",
+        "entity_key": "entity:p-jalam-1",
+        "language_tag": "en",
+        "preferred_name": "Jalam",
+        "aliases": [],
+        "short_description": {
+          "text": "Jalam — son of Esau (GEN 36:5) and chief of Edom (GEN 36:18). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-korah-1",
+        "entity_key": "entity:p-korah-1",
+        "language_tag": "en",
+        "preferred_name": "Korah",
+        "aliases": [],
+        "short_description": {
+          "text": "Korah — son of Esau (GEN 36:5) and chief of Edom (GEN 36:18). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-teman-1",
+        "entity_key": "entity:p-teman-1",
+        "language_tag": "en",
+        "preferred_name": "Teman",
+        "aliases": [],
+        "short_description": {
+          "text": "Teman — son of Eliphaz (GEN 36:11) and chief of Edom (GEN 36:15, 42). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-omar-1",
+        "entity_key": "entity:p-omar-1",
+        "language_tag": "en",
+        "preferred_name": "Omar",
+        "aliases": [],
+        "short_description": {
+          "text": "Omar — son of Eliphaz (GEN 36:11) and chief of Edom (GEN 36:15). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zepho-1",
+        "entity_key": "entity:p-zepho-1",
+        "language_tag": "en",
+        "preferred_name": "Zepho",
+        "aliases": [
+          "Zephi"
+        ],
+        "short_description": {
+          "text": "Zepho — son of Eliphaz (GEN 36:11) and chief of Edom (GEN 36:15). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-gatam-1",
+        "entity_key": "entity:p-gatam-1",
+        "language_tag": "en",
+        "preferred_name": "Gatam",
+        "aliases": [],
+        "short_description": {
+          "text": "Gatam — son of Eliphaz (GEN 36:11) and chief of Edom (GEN 36:16). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-kenaz-1",
+        "entity_key": "entity:p-kenaz-1",
+        "language_tag": "en",
+        "preferred_name": "Kenaz",
+        "aliases": [],
+        "short_description": {
+          "text": "Kenaz — son of Eliphaz (GEN 36:11) and chief of Edom (GEN 36:15, 42). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-timna-1",
+        "entity_key": "entity:p-timna-1",
+        "language_tag": "en",
+        "preferred_name": "Timna",
+        "aliases": [],
+        "short_description": {
+          "text": "Timna — concubine of Esau's son Eliphaz (GEN 36:12) and sister of Lotan (GEN 36:22). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-amalek-1",
+        "entity_key": "entity:p-amalek-1",
+        "language_tag": "en",
+        "preferred_name": "Amalek",
+        "aliases": [],
+        "short_description": {
+          "text": "Amalek — son of Eliphaz (GEN 36:12) and chief of Edom (GEN 36:16). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-nahath-1",
+        "entity_key": "entity:p-nahath-1",
+        "language_tag": "en",
+        "preferred_name": "Nahath",
+        "aliases": [],
+        "short_description": {
+          "text": "Nahath — son of Reuel (GEN 36:13) and chief of Edom (GEN 36:17). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zerah-1",
+        "entity_key": "entity:p-zerah-1",
+        "language_tag": "en",
+        "preferred_name": "Zerah",
+        "aliases": [],
+        "short_description": {
+          "text": "Zerah — son of Reuel (GEN 36:13) and chief of Edom (GEN 36:17). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shammah-1",
+        "entity_key": "entity:p-shammah-1",
+        "language_tag": "en",
+        "preferred_name": "Shammah",
+        "aliases": [],
+        "short_description": {
+          "text": "Shammah — son of Reuel (GEN 36:13) and chief of Edom (GEN 36:17). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mizzah-1",
+        "entity_key": "entity:p-mizzah-1",
+        "language_tag": "en",
+        "preferred_name": "Mizzah",
+        "aliases": [],
+        "short_description": {
+          "text": "Mizzah — son of Reuel (GEN 36:13) and chief of Edom (GEN 36:17). Of the tribe of Edomite.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2665,6 +4752,218 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-seir-1",
+        "entity_key": "entity:p-seir-1",
+        "language_tag": "en",
+        "preferred_name": "Seir",
+        "aliases": [],
+        "short_description": {
+          "text": "Seir — the Horite (dwelt near Mt. Hor- GEN 36:20).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-lotan-1",
+        "entity_key": "entity:p-lotan-1",
+        "language_tag": "en",
+        "preferred_name": "Lotan",
+        "aliases": [],
+        "short_description": {
+          "text": "Lotan — son of Seir (GEN 36:20) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shobal-1",
+        "entity_key": "entity:p-shobal-1",
+        "language_tag": "en",
+        "preferred_name": "Shobal",
+        "aliases": [],
+        "short_description": {
+          "text": "Shobal — son of Seir (GEN 36:20) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zibeon-2",
+        "entity_key": "entity:p-zibeon-2",
+        "language_tag": "en",
+        "preferred_name": "Zibeon",
+        "aliases": [],
+        "short_description": {
+          "text": "Zibeon — son of Seir (GEN 36:20) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-anah-1",
+        "entity_key": "entity:p-anah-1",
+        "language_tag": "en",
+        "preferred_name": "Anah",
+        "aliases": [],
+        "short_description": {
+          "text": "Anah — son of Seir (GEN 36:20) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dishon-1",
+        "entity_key": "entity:p-dishon-1",
+        "language_tag": "en",
+        "preferred_name": "Dishon",
+        "aliases": [],
+        "short_description": {
+          "text": "Dishon — son of Seir (GEN 36:21) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ezer-1",
+        "entity_key": "entity:p-ezer-1",
+        "language_tag": "en",
+        "preferred_name": "Ezer",
+        "aliases": [],
+        "short_description": {
+          "text": "Ezer — son of Seir (GEN 36:21) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-dishan-1",
+        "entity_key": "entity:p-dishan-1",
+        "language_tag": "en",
+        "preferred_name": "Dishan",
+        "aliases": [],
+        "short_description": {
+          "text": "Dishan — son of Seir (GEN 36:21) and chief in Edom (GEN 36:29). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hori-1",
+        "entity_key": "entity:p-hori-1",
+        "language_tag": "en",
+        "preferred_name": "Hori",
+        "aliases": [],
+        "short_description": {
+          "text": "Hori — son of Lotan (GEN 36:22). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hemam-1",
+        "entity_key": "entity:p-hemam-1",
+        "language_tag": "en",
+        "preferred_name": "Hemam",
+        "aliases": [
+          "Homam"
+        ],
+        "short_description": {
+          "text": "Hemam — son of Lotan (GEN 36:22). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-alvan-1",
+        "entity_key": "entity:p-alvan-1",
+        "language_tag": "en",
+        "preferred_name": "Alvan",
+        "aliases": [
+          "Alian"
+        ],
+        "short_description": {
+          "text": "Alvan — son of Shobal (GEN 36:23). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-manahath-1",
+        "entity_key": "entity:p-manahath-1",
+        "language_tag": "en",
+        "preferred_name": "Manahath",
+        "aliases": [],
+        "short_description": {
+          "text": "Manahath — son of Shobal (GEN 36:23). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ebal-1",
+        "entity_key": "entity:p-ebal-1",
+        "language_tag": "en",
+        "preferred_name": "Ebal",
+        "aliases": [],
+        "short_description": {
+          "text": "Ebal — son of Shobal (GEN 36:23). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shepho-1",
+        "entity_key": "entity:p-shepho-1",
+        "language_tag": "en",
+        "preferred_name": "Shepho",
+        "aliases": [],
+        "short_description": {
+          "text": "Shepho — son of Shobal (GEN 36:23). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-onam-1",
+        "entity_key": "entity:p-onam-1",
+        "language_tag": "en",
+        "preferred_name": "Onam",
+        "aliases": [],
+        "short_description": {
+          "text": "Onam — son of Shobal (GEN 36:23). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-aiah-1",
+        "entity_key": "entity:p-aiah-1",
+        "language_tag": "en",
+        "preferred_name": "Aiah",
+        "aliases": [],
+        "short_description": {
+          "text": "Aiah — son of Zibeon (GEN 36:24). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-dishon-2",
         "entity_key": "entity:p-dishon-2",
         "language_tag": "en",
@@ -2678,6 +4977,443 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-hemdan-1",
+        "entity_key": "entity:p-hemdan-1",
+        "language_tag": "en",
+        "preferred_name": "Hemdan",
+        "aliases": [
+          "Hamran"
+        ],
+        "short_description": {
+          "text": "Hemdan — son of Dishon (GEN 36:26). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-eshban-1",
+        "entity_key": "entity:p-eshban-1",
+        "language_tag": "en",
+        "preferred_name": "Eshban",
+        "aliases": [],
+        "short_description": {
+          "text": "Eshban — son of Dishon (GEN 36:26). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ithran-1",
+        "entity_key": "entity:p-ithran-1",
+        "language_tag": "en",
+        "preferred_name": "Ithran",
+        "aliases": [],
+        "short_description": {
+          "text": "Ithran — son of Dishon (GEN 36:26). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-cheran-1",
+        "entity_key": "entity:p-cheran-1",
+        "language_tag": "en",
+        "preferred_name": "Cheran",
+        "aliases": [],
+        "short_description": {
+          "text": "Cheran — son of Dishon (GEN 36:26). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-bilhan-1",
+        "entity_key": "entity:p-bilhan-1",
+        "language_tag": "en",
+        "preferred_name": "Bilhan",
+        "aliases": [],
+        "short_description": {
+          "text": "Bilhan — son of Ezer (GEN 36:27). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zaavan-1",
+        "entity_key": "entity:p-zaavan-1",
+        "language_tag": "en",
+        "preferred_name": "Zaavan",
+        "aliases": [],
+        "short_description": {
+          "text": "Zaavan — son of Ezer (GEN 36:27). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-akan-1",
+        "entity_key": "entity:p-akan-1",
+        "language_tag": "en",
+        "preferred_name": "Akan",
+        "aliases": [
+          "Jaakan"
+        ],
+        "short_description": {
+          "text": "Akan — son of Ezer (GEN 36:27). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-uz-3",
+        "entity_key": "entity:p-uz-3",
+        "language_tag": "en",
+        "preferred_name": "Uz",
+        "aliases": [],
+        "short_description": {
+          "text": "Uz — son of Dishan (GEN 36:28). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-aran-1",
+        "entity_key": "entity:p-aran-1",
+        "language_tag": "en",
+        "preferred_name": "Aran",
+        "aliases": [],
+        "short_description": {
+          "text": "Aran — son of Dishan (GEN 36:28). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-bela-1",
+        "entity_key": "entity:p-bela-1",
+        "language_tag": "en",
+        "preferred_name": "Bela",
+        "aliases": [],
+        "short_description": {
+          "text": "Bela — King of Edom, his city was Dinhabah (GEN 36:32). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-beor-1",
+        "entity_key": "entity:p-beor-1",
+        "language_tag": "en",
+        "preferred_name": "Beor",
+        "aliases": [],
+        "short_description": {
+          "text": "Beor — father of Bela, King of Edom (GEN 36:32). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jobab-2",
+        "entity_key": "entity:p-jobab-2",
+        "language_tag": "en",
+        "preferred_name": "Jobab",
+        "aliases": [],
+        "short_description": {
+          "text": "Jobab — King of Edom, successor to Bela (GEN 36:33). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zerah-2",
+        "entity_key": "entity:p-zerah-2",
+        "language_tag": "en",
+        "preferred_name": "Zerah",
+        "aliases": [],
+        "short_description": {
+          "text": "Zerah — of Bozrah (GEN 36:33).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-husham-1",
+        "entity_key": "entity:p-husham-1",
+        "language_tag": "en",
+        "preferred_name": "Husham",
+        "aliases": [],
+        "short_description": {
+          "text": "Husham — King of Edom, successor to Jobab, from the land of the Temanites (GEN 36:34). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hadad-2",
+        "entity_key": "entity:p-hadad-2",
+        "language_tag": "en",
+        "preferred_name": "Hadad",
+        "aliases": [],
+        "short_description": {
+          "text": "Hadad — King of Edom, successor to Husham, his city was Avith (GEN 36:35). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-bedad-1",
+        "entity_key": "entity:p-bedad-1",
+        "language_tag": "en",
+        "preferred_name": "Bedad",
+        "aliases": [],
+        "short_description": {
+          "text": "Bedad — defeated Midian in the field of Moab (GEN 36:35, 1CH 1:46). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-samlah-1",
+        "entity_key": "entity:p-samlah-1",
+        "language_tag": "en",
+        "preferred_name": "Samlah",
+        "aliases": [],
+        "short_description": {
+          "text": "Samlah — King of Edom, successor to Hadad, from Masrekah (GEN 36:36). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shaul-1",
+        "entity_key": "entity:p-shaul-1",
+        "language_tag": "en",
+        "preferred_name": "Shaul",
+        "aliases": [],
+        "short_description": {
+          "text": "Shaul — King of Edom, successor to Samlah, from Rehoboth on the [Euphrates] river (GEN 36:37). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-baal-hanan-1",
+        "entity_key": "entity:p-baal-hanan-1",
+        "language_tag": "en",
+        "preferred_name": "Baal-hanan",
+        "aliases": [],
+        "short_description": {
+          "text": "Baal-hanan — King of Edom, successor to Shaul (GEN 36:38). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-achbor-1",
+        "entity_key": "entity:p-achbor-1",
+        "language_tag": "en",
+        "preferred_name": "Achbor",
+        "aliases": [],
+        "short_description": {
+          "text": "Achbor — father of Baal-hanan (GEN 36:38). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hadar-1",
+        "entity_key": "entity:p-hadar-1",
+        "language_tag": "en",
+        "preferred_name": "Hadar",
+        "aliases": [
+          "Hadad"
+        ],
+        "short_description": {
+          "text": "Hadar — King of Edom, successor to Baal-hanan, his city was Pau (GEN 36:39). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mehetabel-1",
+        "entity_key": "entity:p-mehetabel-1",
+        "language_tag": "en",
+        "preferred_name": "Mehetabel",
+        "aliases": [],
+        "short_description": {
+          "text": "Mehetabel — wife of King Hadar (GEN 36:39).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-matred-1",
+        "entity_key": "entity:p-matred-1",
+        "language_tag": "en",
+        "preferred_name": "Matred",
+        "aliases": [],
+        "short_description": {
+          "text": "Matred — mother of Mehetabel (GEN 36:39).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mezahab-1",
+        "entity_key": "entity:p-mezahab-1",
+        "language_tag": "en",
+        "preferred_name": "Mezahab",
+        "aliases": [],
+        "short_description": {
+          "text": "Mezahab — mother of Matred (GEN 36:39).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-timna-2",
+        "entity_key": "entity:p-timna-2",
+        "language_tag": "en",
+        "preferred_name": "Timna",
+        "aliases": [],
+        "short_description": {
+          "text": "Timna — chief of Edom (GEN 36:40). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-alvah-1",
+        "entity_key": "entity:p-alvah-1",
+        "language_tag": "en",
+        "preferred_name": "Alvah",
+        "aliases": [
+          "Aliah"
+        ],
+        "short_description": {
+          "text": "Alvah — chief of Edom (GEN 36:40). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jetheth-1",
+        "entity_key": "entity:p-jetheth-1",
+        "language_tag": "en",
+        "preferred_name": "Jetheth",
+        "aliases": [],
+        "short_description": {
+          "text": "Jetheth — chief of Edom (GEN 36:40). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-oholibamah-1",
+        "entity_key": "entity:p-oholibamah-1",
+        "language_tag": "en",
+        "preferred_name": "Oholibamah",
+        "aliases": [],
+        "short_description": {
+          "text": "Oholibamah — chief of Edom (GEN 36:41). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-elah-1",
+        "entity_key": "entity:p-elah-1",
+        "language_tag": "en",
+        "preferred_name": "Elah",
+        "aliases": [],
+        "short_description": {
+          "text": "Elah — chief of Edom (GEN 36:41). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-pinon-1",
+        "entity_key": "entity:p-pinon-1",
+        "language_tag": "en",
+        "preferred_name": "Pinon",
+        "aliases": [],
+        "short_description": {
+          "text": "Pinon — chief of Edom (GEN 36:41). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-mibzar-1",
+        "entity_key": "entity:p-mibzar-1",
+        "language_tag": "en",
+        "preferred_name": "Mibzar",
+        "aliases": [],
+        "short_description": {
+          "text": "Mibzar — chief of Edom (GEN 36:42). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-magdiel-1",
+        "entity_key": "entity:p-magdiel-1",
+        "language_tag": "en",
+        "preferred_name": "Magdiel",
+        "aliases": [],
+        "short_description": {
+          "text": "Magdiel — chief of Edom (GEN 36:43). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-iram-1",
+        "entity_key": "entity:p-iram-1",
+        "language_tag": "en",
+        "preferred_name": "Iram",
+        "aliases": [],
+        "short_description": {
+          "text": "Iram — chief of Edom (GEN 36:43). Of the tribe of Edomite.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-potiphar-1",
         "entity_key": "entity:p-potiphar-1",
         "language_tag": "en",
@@ -2685,6 +5421,19 @@
         "aliases": [],
         "short_description": {
           "text": "Potiphar — Pharaoh's officer (GEN 37:36).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-pharaoh-2",
+        "entity_key": "entity:p-pharaoh-2",
+        "language_tag": "en",
+        "preferred_name": "Pharaoh",
+        "aliases": [],
+        "short_description": {
+          "text": "Pharaoh — Pharaoh of Joseph's lifetime (GEN 37:36).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2719,6 +5468,86 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-er-1",
+        "entity_key": "entity:p-er-1",
+        "language_tag": "en",
+        "preferred_name": "Er",
+        "aliases": [],
+        "short_description": {
+          "text": "Er — firstborn son of Judah (GEN 38:3). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-onan-1",
+        "entity_key": "entity:p-onan-1",
+        "language_tag": "en",
+        "preferred_name": "Onan",
+        "aliases": [],
+        "short_description": {
+          "text": "Onan — second-born son of Judah (GEN 38:4). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shelah-2",
+        "entity_key": "entity:p-shelah-2",
+        "language_tag": "en",
+        "preferred_name": "Shelah",
+        "aliases": [],
+        "short_description": {
+          "text": "Shelah — third-born son of Judah (GEN 38:5). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tamar-1",
+        "entity_key": "entity:p-tamar-1",
+        "language_tag": "en",
+        "preferred_name": "Tamar",
+        "aliases": [],
+        "short_description": {
+          "text": "Tamar — wife of Er (GEN 38:6), and mother of Perez (GEN 38:29) and Zerah (GEN 38:30) by Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-perez-1",
+        "entity_key": "entity:p-perez-1",
+        "language_tag": "en",
+        "preferred_name": "Perez",
+        "aliases": [],
+        "short_description": {
+          "text": "Perez — son of Judah and Tamar (GEN 38:29). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zerah-3",
+        "entity_key": "entity:p-zerah-3",
+        "language_tag": "en",
+        "preferred_name": "Zerah",
+        "aliases": [
+          "Mahol"
+        ],
+        "short_description": {
+          "text": "Zerah — son of Judah and Tamar (GEN 38:30). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-asenath-1",
         "entity_key": "entity:p-asenath-1",
         "language_tag": "en",
@@ -2739,6 +5568,292 @@
         "aliases": [],
         "short_description": {
           "text": "Potiphera — priest of On [Heliopolis- NAS 1995 notes] (GEN 41:45).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-manasseh-1",
+        "entity_key": "entity:p-manasseh-1",
+        "language_tag": "en",
+        "preferred_name": "Manasseh",
+        "aliases": [],
+        "short_description": {
+          "text": "Manasseh — firstborn son of Joseph (GEN 41:51). Of the tribe of Manasseh.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ephraim-1",
+        "entity_key": "entity:p-ephraim-1",
+        "language_tag": "en",
+        "preferred_name": "Ephraim",
+        "aliases": [],
+        "short_description": {
+          "text": "Ephraim — second son of Joseph (GEN 41:52). Of the tribe of Ephraim.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hanoch-2",
+        "entity_key": "entity:p-hanoch-2",
+        "language_tag": "en",
+        "preferred_name": "Hanoch",
+        "aliases": [],
+        "short_description": {
+          "text": "Hanoch — son of Reuben (GEN 46:9). Of the tribe of Reuben.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-pallu-1",
+        "entity_key": "entity:p-pallu-1",
+        "language_tag": "en",
+        "preferred_name": "Pallu",
+        "aliases": [],
+        "short_description": {
+          "text": "Pallu — son of Reuben (GEN 46:9). Of the tribe of Reuben.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hezron-1",
+        "entity_key": "entity:p-hezron-1",
+        "language_tag": "en",
+        "preferred_name": "Hezron",
+        "aliases": [],
+        "short_description": {
+          "text": "Hezron — son of Reuben (GEN 46:9). Of the tribe of Reuben.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-carmi-1",
+        "entity_key": "entity:p-carmi-1",
+        "language_tag": "en",
+        "preferred_name": "Carmi",
+        "aliases": [],
+        "short_description": {
+          "text": "Carmi — son of Reuben (GEN 46:9). Of the tribe of Reuben.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jemuel-1",
+        "entity_key": "entity:p-jemuel-1",
+        "language_tag": "en",
+        "preferred_name": "Jemuel",
+        "aliases": [
+          "Nemuel"
+        ],
+        "short_description": {
+          "text": "Jemuel — son of Simeon (GEN 46:10). Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jamin-1",
+        "entity_key": "entity:p-jamin-1",
+        "language_tag": "en",
+        "preferred_name": "Jamin",
+        "aliases": [],
+        "short_description": {
+          "text": "Jamin — son of Simeon (GEN 46:10). Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ohad-1",
+        "entity_key": "entity:p-ohad-1",
+        "language_tag": "en",
+        "preferred_name": "Ohad",
+        "aliases": [],
+        "short_description": {
+          "text": "Ohad — son of Simeon (GEN 46:10). Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jachin-1",
+        "entity_key": "entity:p-jachin-1",
+        "language_tag": "en",
+        "preferred_name": "Jachin",
+        "aliases": [
+          "Jarib"
+        ],
+        "short_description": {
+          "text": "Jachin — son of Simeon (GEN 46:10). Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-zohar-2",
+        "entity_key": "entity:p-zohar-2",
+        "language_tag": "en",
+        "preferred_name": "Zohar",
+        "aliases": [
+          "Zerah"
+        ],
+        "short_description": {
+          "text": "Zohar — son of Simeon (GEN 46:10). Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shaul-2",
+        "entity_key": "entity:p-shaul-2",
+        "language_tag": "en",
+        "preferred_name": "Shaul",
+        "aliases": [],
+        "short_description": {
+          "text": "Shaul — son of Simeon and a Canaanite woman (GEN 46:10). Of the tribe of Simeon.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-gershon-1",
+        "entity_key": "entity:p-gershon-1",
+        "language_tag": "en",
+        "preferred_name": "Gershon",
+        "aliases": [
+          "Gershom"
+        ],
+        "short_description": {
+          "text": "Gershon — son of Levi (GEN 46:11). Of the tribe of Levi.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-kohath-1",
+        "entity_key": "entity:p-kohath-1",
+        "language_tag": "en",
+        "preferred_name": "Kohath",
+        "aliases": [],
+        "short_description": {
+          "text": "Kohath — son of Levi (GEN 46:11). Of the tribe of Levi.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-merari-1",
+        "entity_key": "entity:p-merari-1",
+        "language_tag": "en",
+        "preferred_name": "Merari",
+        "aliases": [],
+        "short_description": {
+          "text": "Merari — son of Levi (GEN 46:11). Of the tribe of Levi.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hezron-2",
+        "entity_key": "entity:p-hezron-2",
+        "language_tag": "en",
+        "preferred_name": "Hezron",
+        "aliases": [],
+        "short_description": {
+          "text": "Hezron — son of Perez and grandson of Judah (GEN 46:12). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-hamul-1",
+        "entity_key": "entity:p-hamul-1",
+        "language_tag": "en",
+        "preferred_name": "Hamul",
+        "aliases": [],
+        "short_description": {
+          "text": "Hamul — son of Perez and grandson of Judah (GEN 46:12). Of the tribe of Judah.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-tola-1",
+        "entity_key": "entity:p-tola-1",
+        "language_tag": "en",
+        "preferred_name": "Tola",
+        "aliases": [],
+        "short_description": {
+          "text": "Tola — son of Issachar (GEN 46:13). Of the tribe of Issachar.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-puvvah-1",
+        "entity_key": "entity:p-puvvah-1",
+        "language_tag": "en",
+        "preferred_name": "Puvvah",
+        "aliases": [
+          "Puah",
+          "Puvah"
+        ],
+        "short_description": {
+          "text": "Puvvah — son of Issachar (GEN 46:13). Of the tribe of Issachar.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-iob-1",
+        "entity_key": "entity:p-iob-1",
+        "language_tag": "en",
+        "preferred_name": "Iob",
+        "aliases": [
+          "Jashub"
+        ],
+        "short_description": {
+          "text": "Iob — son of Issachar (GEN 46:13). Of the tribe of Issachar.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shimron-1",
+        "entity_key": "entity:p-shimron-1",
+        "language_tag": "en",
+        "preferred_name": "Shimron",
+        "aliases": [],
+        "short_description": {
+          "text": "Shimron — son of Issachar (GEN 46:13). Of the tribe of Issachar.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2879,6 +5994,244 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-imnah-1",
+        "entity_key": "entity:p-imnah-1",
+        "language_tag": "en",
+        "preferred_name": "Imnah",
+        "aliases": [],
+        "short_description": {
+          "text": "Imnah — son of Asher (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ishvah-1",
+        "entity_key": "entity:p-ishvah-1",
+        "language_tag": "en",
+        "preferred_name": "Ishvah",
+        "aliases": [],
+        "short_description": {
+          "text": "Ishvah — son of Asher (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ishvi-1",
+        "entity_key": "entity:p-ishvi-1",
+        "language_tag": "en",
+        "preferred_name": "Ishvi",
+        "aliases": [],
+        "short_description": {
+          "text": "Ishvi — son of Asher (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-beriah-1",
+        "entity_key": "entity:p-beriah-1",
+        "language_tag": "en",
+        "preferred_name": "Beriah",
+        "aliases": [],
+        "short_description": {
+          "text": "Beriah — son of Asher (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-serah-1",
+        "entity_key": "entity:p-serah-1",
+        "language_tag": "en",
+        "preferred_name": "Serah",
+        "aliases": [],
+        "short_description": {
+          "text": "Serah — son of Asher (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-heber-1",
+        "entity_key": "entity:p-heber-1",
+        "language_tag": "en",
+        "preferred_name": "Heber",
+        "aliases": [],
+        "short_description": {
+          "text": "Heber — son of Beriah (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-malchiel-1",
+        "entity_key": "entity:p-malchiel-1",
+        "language_tag": "en",
+        "preferred_name": "Malchiel",
+        "aliases": [],
+        "short_description": {
+          "text": "Malchiel — son of Beriah (GEN 46:17). Of the tribe of Asher.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-bela-2",
+        "entity_key": "entity:p-bela-2",
+        "language_tag": "en",
+        "preferred_name": "Bela",
+        "aliases": [],
+        "short_description": {
+          "text": "Bela — son of Benjamin (GEN 46:21). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-becher-1",
+        "entity_key": "entity:p-becher-1",
+        "language_tag": "en",
+        "preferred_name": "Becher",
+        "aliases": [],
+        "short_description": {
+          "text": "Becher — son of Benjamin (GEN 46:21). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ashbel-1",
+        "entity_key": "entity:p-ashbel-1",
+        "language_tag": "en",
+        "preferred_name": "Ashbel",
+        "aliases": [
+          "Jediael"
+        ],
+        "short_description": {
+          "text": "Ashbel — son of Benjamin (GEN 46:21). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-gera-1",
+        "entity_key": "entity:p-gera-1",
+        "language_tag": "en",
+        "preferred_name": "Gera",
+        "aliases": [],
+        "short_description": {
+          "text": "Gera — (grand?)son of Benjamin (GEN 46:21), son of Bela (1CH 8:3). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-naaman-1",
+        "entity_key": "entity:p-naaman-1",
+        "language_tag": "en",
+        "preferred_name": "Naaman",
+        "aliases": [],
+        "short_description": {
+          "text": "Naaman — (grand?)son of Benjamin (GEN 46:21), son of Bela (NUM 26:40). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ehi-1",
+        "entity_key": "entity:p-ehi-1",
+        "language_tag": "en",
+        "preferred_name": "Ehi",
+        "aliases": [
+          "Aharah",
+          "Aher",
+          "Ahiram"
+        ],
+        "short_description": {
+          "text": "Ehi — son of Benjamin (GEN 46:21). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-rosh-1",
+        "entity_key": "entity:p-rosh-1",
+        "language_tag": "en",
+        "preferred_name": "Rosh",
+        "aliases": [
+          "Rapha"
+        ],
+        "short_description": {
+          "text": "Rosh — son of Benjamin (GEN 46:21). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-muppim-1",
+        "entity_key": "entity:p-muppim-1",
+        "language_tag": "en",
+        "preferred_name": "Muppim",
+        "aliases": [
+          "Shephupham",
+          "Shephuphan",
+          "Shuppim"
+        ],
+        "short_description": {
+          "text": "Muppim — (grand?)son of Benjamin (GEN 46:21), son of Bela (1CH 7:12, 8:3). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-huppim-1",
+        "entity_key": "entity:p-huppim-1",
+        "language_tag": "en",
+        "preferred_name": "Huppim",
+        "aliases": [
+          "Hupham",
+          "Huram"
+        ],
+        "short_description": {
+          "text": "Huppim — (grand?)son of Benjamin (GEN 46:21), son of Bela (1CH 7:12, 8:3). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-ard-1",
+        "entity_key": "entity:p-ard-1",
+        "language_tag": "en",
+        "preferred_name": "Ard",
+        "aliases": [
+          "Addar"
+        ],
+        "short_description": {
+          "text": "Ard — (grand?)son of Benjamin (GEN 46:21), son of Bela (NUM 26:40). Of the tribe of Benjamin.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:p-hushim-1",
         "entity_key": "entity:p-hushim-1",
         "language_tag": "en",
@@ -2894,13 +6247,82 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:p-jahzeel-1",
+        "entity_key": "entity:p-jahzeel-1",
+        "language_tag": "en",
+        "preferred_name": "Jahzeel",
+        "aliases": [
+          "Jahziel"
+        ],
+        "short_description": {
+          "text": "Jahzeel — son of Naphtali (GEN 46:24). Of the tribe of Naphtali.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-guni-1",
+        "entity_key": "entity:p-guni-1",
+        "language_tag": "en",
+        "preferred_name": "Guni",
+        "aliases": [],
+        "short_description": {
+          "text": "Guni — son of Naphtali (GEN 46:24). Of the tribe of Naphtali.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-jezer-1",
+        "entity_key": "entity:p-jezer-1",
+        "language_tag": "en",
+        "preferred_name": "Jezer",
+        "aliases": [],
+        "short_description": {
+          "text": "Jezer — son of Naphtali (GEN 46:24). Of the tribe of Naphtali.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-shillem-1",
+        "entity_key": "entity:p-shillem-1",
+        "language_tag": "en",
+        "preferred_name": "Shillem",
+        "aliases": [
+          "Shallum"
+        ],
+        "short_description": {
+          "text": "Shillem — son of Naphtali (GEN 46:24). Of the tribe of Naphtali.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:p-machir-1",
+        "entity_key": "entity:p-machir-1",
+        "language_tag": "en",
+        "preferred_name": "Machir",
+        "aliases": [],
+        "short_description": {
+          "text": "Machir — son of Manasseh (GEN 50:23). Of the tribe of Manasseh.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-abel-mizraim-a70ac98",
         "entity_key": "entity:pl-abel-mizraim-a70ac98",
         "language_tag": "en",
         "preferred_name": "Abel-mizraim",
         "aliases": [],
         "short_description": {
-          "text": "Could be either west or east of the <ancient id=\"ae686c9\">Jordan</ancient>.",
+          "text": "Could be either west or east of the Jordan.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2914,6 +6336,32 @@
         "aliases": [],
         "short_description": {
           "text": "Accad is a place named in Scripture (Gen.10.10).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-admah-a41a054",
+        "entity_key": "entity:pl-admah-a41a054",
+        "language_tag": "en",
+        "preferred_name": "Admah",
+        "aliases": [],
+        "short_description": {
+          "text": "Admah is a place named in Scripture (Gen.10.19–Hos.11.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-adullam-af82614",
+        "entity_key": "entity:pl-adullam-af82614",
+        "language_tag": "en",
+        "preferred_name": "Adullam",
+        "aliases": [],
+        "short_description": {
+          "text": "Adullam is a place named in Scripture (Gen.38.1–Mic.1.15).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2939,7 +6387,33 @@
         "preferred_name": "Allon-bacuth",
         "aliases": [],
         "short_description": {
-          "text": "Tree near <ancient id=\"a64f355\">Bethel</ancient>.",
+          "text": "Tree near Bethel.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-ammon-a6046fa",
+        "entity_key": "entity:pl-ammon-a6046fa",
+        "language_tag": "en",
+        "preferred_name": "Ammon",
+        "aliases": [],
+        "short_description": {
+          "text": "Ammon is a place named in Scripture (Gen.19.38–Zeph.2.9).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-ararat-ab89be9",
+        "entity_key": "entity:pl-ararat-ab89be9",
+        "language_tag": "en",
+        "preferred_name": "Ararat",
+        "aliases": [],
+        "short_description": {
+          "text": "Ararat is a place named in Scripture (Gen.8.4–Jer.51.27).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -2959,6 +6433,19 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-assyria-a3d1321",
+        "entity_key": "entity:pl-assyria-a3d1321",
+        "language_tag": "en",
+        "preferred_name": "Assyria",
+        "aliases": [],
+        "short_description": {
+          "text": "Assyria is a place named in Scripture (Gen.2.14–Zech.10.11).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-atad-a2f186d",
         "entity_key": "entity:pl-atad-a2f186d",
         "language_tag": "en",
@@ -2966,6 +6453,19 @@
         "aliases": [],
         "short_description": {
           "text": "Atad is a place named in Scripture (Gen.50.10–Gen.50.11).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-avith-aae8a95",
+        "entity_key": "entity:pl-avith-aae8a95",
+        "language_tag": "en",
+        "preferred_name": "Avith",
+        "aliases": [],
+        "short_description": {
+          "text": "Avith is a place named in Scripture (Gen.36.35–1Chr.1.46).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3024,6 +6524,45 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-bethel-1-a64f355",
+        "entity_key": "entity:pl-bethel-1-a64f355",
+        "language_tag": "en",
+        "preferred_name": "Bethel 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Bethel 1 is a place named in Scripture (Gen.12.8–Amos.7.13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-bethlehem-1-a112427",
+        "entity_key": "entity:pl-bethlehem-1-a112427",
+        "language_tag": "en",
+        "preferred_name": "Bethlehem 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Bethlehem 1 is a place named in Scripture (Gen.35.19–John.7.42).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-bozrah-1-a871210",
+        "entity_key": "entity:pl-bozrah-1-a871210",
+        "language_tag": "en",
+        "preferred_name": "Bozrah 1",
+        "aliases": [],
+        "short_description": {
+          "text": "In Edom.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-calah-ae1f807",
         "entity_key": "entity:pl-calah-ae1f807",
         "language_tag": "en",
@@ -3050,6 +6589,45 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-canaan-a581f0c",
+        "entity_key": "entity:pl-canaan-a581f0c",
+        "language_tag": "en",
+        "preferred_name": "Canaan",
+        "aliases": [],
+        "short_description": {
+          "text": "Canaan is a place named in Scripture (Gen.10.19–Acts.13.19).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-caphtor-a329990",
+        "entity_key": "entity:pl-caphtor-a329990",
+        "language_tag": "en",
+        "preferred_name": "Caphtor",
+        "aliases": [],
+        "short_description": {
+          "text": "Caphtor is a place named in Scripture (Gen.10.14–Amos.9.7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-chaldea-a32a4f8",
+        "entity_key": "entity:pl-chaldea-a32a4f8",
+        "language_tag": "en",
+        "preferred_name": "Chaldea",
+        "aliases": [],
+        "short_description": {
+          "text": "Chaldea is a place named in Scripture (Gen.11.28–Acts.7.4).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-chezib-ab41e6b",
         "entity_key": "entity:pl-chezib-ab41e6b",
         "language_tag": "en",
@@ -3069,7 +6647,85 @@
         "preferred_name": "Cush 2",
         "aliases": [],
         "short_description": {
-          "text": "Babylonia may refer to the <a data-source=\"s7cc8b2\" data-wikidata=\"Q243312\" href=\"https://www.wikidata.org/wiki/Q243312\">Kassites</a>.",
+          "text": "Babylonia may refer to the Kassites.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-damascus-a69c1d4",
+        "entity_key": "entity:pl-damascus-a69c1d4",
+        "language_tag": "en",
+        "preferred_name": "Damascus",
+        "aliases": [],
+        "short_description": {
+          "text": "Damascus is a place named in Scripture (Gen.14.15–Gal.1.17).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-dan-a513646",
+        "entity_key": "entity:pl-dan-a513646",
+        "language_tag": "en",
+        "preferred_name": "Dan",
+        "aliases": [],
+        "short_description": {
+          "text": "Dan is a place named in Scripture (Gen.14.14–Amos.8.14).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-dinhabah-ae28fc7",
+        "entity_key": "entity:pl-dinhabah-ae28fc7",
+        "language_tag": "en",
+        "preferred_name": "Dinhabah",
+        "aliases": [],
+        "short_description": {
+          "text": "Dinhabah is a place named in Scripture (Gen.36.32–1Chr.1.43).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-dothan-ab635e4",
+        "entity_key": "entity:pl-dothan-ab635e4",
+        "language_tag": "en",
+        "preferred_name": "Dothan",
+        "aliases": [],
+        "short_description": {
+          "text": "Dothan is a place named in Scripture (Gen.37.17–2Kgs.6.13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-east-ab0b2dd",
+        "entity_key": "entity:pl-east-ab0b2dd",
+        "language_tag": "en",
+        "preferred_name": "East",
+        "aliases": [],
+        "short_description": {
+          "text": "This isn’t necessarily depicting a specific location.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-eden-1-af3daeb",
+        "entity_key": "entity:pl-eden-1-af3daeb",
+        "language_tag": "en",
+        "preferred_name": "Eden 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Nelson’s Illustrated Bible Dictionary (2014) (Eden) alludes to Seychelles.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3083,6 +6739,45 @@
         "aliases": [],
         "short_description": {
           "text": "Eder 1 is a place named in Scripture (Gen.35.21).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-edom-a2735ff",
+        "entity_key": "entity:pl-edom-a2735ff",
+        "language_tag": "en",
+        "preferred_name": "Edom",
+        "aliases": [],
+        "short_description": {
+          "text": "Bozrah was the one-time capital.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-egypt-af301ca",
+        "entity_key": "entity:pl-egypt-af301ca",
+        "language_tag": "en",
+        "preferred_name": "Egypt",
+        "aliases": [],
+        "short_description": {
+          "text": "Egypt is a place named in Scripture (Gen.12.10–Rev.11.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-elam-a7e3a59",
+        "entity_key": "entity:pl-elam-a7e3a59",
+        "language_tag": "en",
+        "preferred_name": "Elam",
+        "aliases": [],
+        "short_description": {
+          "text": "Susa was the onetime capital.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3147,7 +6842,20 @@
         "preferred_name": "Ephrath",
         "aliases": [],
         "short_description": {
-          "text": "Possibly a region containing <ancient id=\"a112427\">Bethlehem</ancient>.",
+          "text": "Possibly a region containing Bethlehem.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-erech-a5db1a6",
+        "entity_key": "entity:pl-erech-a5db1a6",
+        "language_tag": "en",
+        "preferred_name": "Erech",
+        "aliases": [],
+        "short_description": {
+          "text": "Erech is a place named in Scripture (Gen.10.10–Ezra.4.9).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3167,6 +6875,45 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-euphrates-a62dec4",
+        "entity_key": "entity:pl-euphrates-a62dec4",
+        "language_tag": "en",
+        "preferred_name": "Euphrates",
+        "aliases": [],
+        "short_description": {
+          "text": "Euphrates is a place named in Scripture (Gen.2.14–Rev.16.12).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-gaza-aa8edd2",
+        "entity_key": "entity:pl-gaza-aa8edd2",
+        "language_tag": "en",
+        "preferred_name": "Gaza",
+        "aliases": [],
+        "short_description": {
+          "text": "Gaza is a place named in Scripture (Gen.10.19–Acts.8.26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-gerar-a3f5814",
+        "entity_key": "entity:pl-gerar-a3f5814",
+        "language_tag": "en",
+        "preferred_name": "Gerar",
+        "aliases": [],
+        "short_description": {
+          "text": "Gerar is a place named in Scripture (Gen.10.19–2Chr.14.14).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-gihon-1-a71d79b",
         "entity_key": "entity:pl-gihon-1-a71d79b",
         "language_tag": "en",
@@ -3174,6 +6921,19 @@
         "aliases": [],
         "short_description": {
           "text": "Gihon 1 is a place named in Scripture (Gen.2.13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-gilead-1-ae73b90",
+        "entity_key": "entity:pl-gilead-1-ae73b90",
+        "language_tag": "en",
+        "preferred_name": "Gilead 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Gilead 1 is a place named in Scripture (Gen.31.21–Zech.10.10).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3193,6 +6953,32 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-gomorrah-aa572e2",
+        "entity_key": "entity:pl-gomorrah-aa572e2",
+        "language_tag": "en",
+        "preferred_name": "Gomorrah",
+        "aliases": [],
+        "short_description": {
+          "text": "Gomorrah is a place named in Scripture (Gen.10.19–Jude.1.7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-goshen-1-a60f092",
+        "entity_key": "entity:pl-goshen-1-a60f092",
+        "language_tag": "en",
+        "preferred_name": "Goshen 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Goshen 1 is a place named in Scripture (Gen.45.10–Exod.9.26).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-ham-1-a7a5f29",
         "entity_key": "entity:pl-ham-1-a7a5f29",
         "language_tag": "en",
@@ -3200,6 +6986,19 @@
         "aliases": [],
         "short_description": {
           "text": "Ham 1 is a place named in Scripture (Gen.14.5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-haran-a6d9af3",
+        "entity_key": "entity:pl-haran-a6d9af3",
+        "language_tag": "en",
+        "preferred_name": "Haran",
+        "aliases": [],
+        "short_description": {
+          "text": "Haran is a place named in Scripture (Gen.11.31–Acts.7.4).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3245,6 +7044,32 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-hebron-a85151a",
+        "entity_key": "entity:pl-hebron-a85151a",
+        "language_tag": "en",
+        "preferred_name": "Hebron",
+        "aliases": [],
+        "short_description": {
+          "text": "Hebron is a place named in Scripture (Gen.13.18–Neh.11.25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-heliopolis-acd9137",
+        "entity_key": "entity:pl-heliopolis-acd9137",
+        "language_tag": "en",
+        "preferred_name": "Heliopolis",
+        "aliases": [],
+        "short_description": {
+          "text": "Heliopolis is a place named in Scripture (Gen.41.45–Ezek.30.17).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-hobah-a6779cd",
         "entity_key": "entity:pl-hobah-a6779cd",
         "language_tag": "en",
@@ -3252,6 +7077,71 @@
         "aliases": [],
         "short_description": {
           "text": "Hobah is a place named in Scripture (Gen.14.15).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-jabbok-aca7bd9",
+        "entity_key": "entity:pl-jabbok-aca7bd9",
+        "language_tag": "en",
+        "preferred_name": "Jabbok",
+        "aliases": [],
+        "short_description": {
+          "text": "Jabbok is a place named in Scripture (Gen.32.22–Judg.11.22).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-jordan-ae686c9",
+        "entity_key": "entity:pl-jordan-ae686c9",
+        "language_tag": "en",
+        "preferred_name": "Jordan",
+        "aliases": [],
+        "short_description": {
+          "text": "Jordan is a place named in Scripture (Gen.32.10–John.10.40).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-jordan-valley-aa54aa4",
+        "entity_key": "entity:pl-jordan-valley-aa54aa4",
+        "language_tag": "en",
+        "preferred_name": "Jordan Valley",
+        "aliases": [],
+        "short_description": {
+          "text": "Jordan Valley is a place named in Scripture (Gen.13.10–2Sam.18.23).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-kadesh-barnea-ac2cef0",
+        "entity_key": "entity:pl-kadesh-barnea-ac2cef0",
+        "language_tag": "en",
+        "preferred_name": "Kadesh-barnea",
+        "aliases": [],
+        "short_description": {
+          "text": "Kadesh-barnea is a place named in Scripture (Gen.14.7–Judg.11.17).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-king-s-valley-ac9f98d",
+        "entity_key": "entity:pl-king-s-valley-ac9f98d",
+        "language_tag": "en",
+        "preferred_name": "King’s Valley",
+        "aliases": [],
+        "short_description": {
+          "text": "Possibly a different nearby valley.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3297,6 +7187,19 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-mahanaim-ae5bfe9",
+        "entity_key": "entity:pl-mahanaim-ae5bfe9",
+        "language_tag": "en",
+        "preferred_name": "Mahanaim",
+        "aliases": [],
+        "short_description": {
+          "text": "Mahanaim is a place named in Scripture (Gen.32.2–Song.6.13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-mamre-aeb9e97",
         "entity_key": "entity:pl-mamre-aeb9e97",
         "language_tag": "en",
@@ -3304,6 +7207,19 @@
         "aliases": [],
         "short_description": {
           "text": "Mamre is a place named in Scripture (Gen.23.17–Gen.50.13).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-masrekah-a57e0a0",
+        "entity_key": "entity:pl-masrekah-a57e0a0",
+        "language_tag": "en",
+        "preferred_name": "Masrekah",
+        "aliases": [],
+        "short_description": {
+          "text": "Masrekah is a place named in Scripture (Gen.36.36–1Chr.1.47).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3323,6 +7239,45 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-mesopotamia-a43f60f",
+        "entity_key": "entity:pl-mesopotamia-a43f60f",
+        "language_tag": "en",
+        "preferred_name": "Mesopotamia",
+        "aliases": [],
+        "short_description": {
+          "text": "Refers to the area of Aram-naharaim rather than nearer the Persian Gulf.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-mezahab-a3498b5",
+        "entity_key": "entity:pl-mezahab-a3498b5",
+        "language_tag": "en",
+        "preferred_name": "Mezahab",
+        "aliases": [],
+        "short_description": {
+          "text": "Mezahab is a place named in Scripture (Gen.36.39–1Chr.1.50).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-midian-acc6d8e",
+        "entity_key": "entity:pl-midian-acc6d8e",
+        "language_tag": "en",
+        "preferred_name": "Midian",
+        "aliases": [],
+        "short_description": {
+          "text": "Midian is a place named in Scripture (Gen.36.35–Acts.7.29).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-mizpah-4-a694ea2",
         "entity_key": "entity:pl-mizpah-4-a694ea2",
         "language_tag": "en",
@@ -3330,6 +7285,32 @@
         "aliases": [],
         "short_description": {
           "text": "Mizpah 4 is a place named in Scripture (Gen.31.47–Gen.31.49).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-moab-1-aa0b1d6",
+        "entity_key": "entity:pl-moab-1-aa0b1d6",
+        "language_tag": "en",
+        "preferred_name": "Moab 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Moab 1 is a place named in Scripture (Gen.36.35–Zeph.2.9).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-moreh-1-a38ad9f",
+        "entity_key": "entity:pl-moreh-1-a38ad9f",
+        "language_tag": "en",
+        "preferred_name": "Moreh 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Moreh 1 is a place named in Scripture (Gen.12.6–Deut.11.30).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3349,6 +7330,19 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-mount-seir-1-ae981db",
+        "entity_key": "entity:pl-mount-seir-1-ae981db",
+        "language_tag": "en",
+        "preferred_name": "Mount Seir 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Often a synonym for Edom.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-nahor-aff43ac",
         "entity_key": "entity:pl-nahor-aff43ac",
         "language_tag": "en",
@@ -3356,6 +7350,45 @@
         "aliases": [],
         "short_description": {
           "text": "Nahor is a place named in Scripture (Gen.24.10).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-negeb-a1cb244",
+        "entity_key": "entity:pl-negeb-a1cb244",
+        "language_tag": "en",
+        "preferred_name": "Negeb",
+        "aliases": [],
+        "short_description": {
+          "text": "Negeb in the Bible refers to the northern part of the modern Negev, north of the Wikidata point.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-nile-a012705",
+        "entity_key": "entity:pl-nile-a012705",
+        "language_tag": "en",
+        "preferred_name": "Nile",
+        "aliases": [],
+        "short_description": {
+          "text": "Nile is a place named in Scripture (Gen.41.1–Acts.7.19).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-nineveh-a70fd5d",
+        "entity_key": "entity:pl-nineveh-a70fd5d",
+        "language_tag": "en",
+        "preferred_name": "Nineveh",
+        "aliases": [],
+        "short_description": {
+          "text": "Nineveh is a place named in Scripture (Gen.10.11–Jonah.4.11).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3388,6 +7421,45 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-paran-aa6b19b",
+        "entity_key": "entity:pl-paran-aa6b19b",
+        "language_tag": "en",
+        "preferred_name": "Paran",
+        "aliases": [],
+        "short_description": {
+          "text": "Paran is a place named in Scripture (Gen.21.21–1Kgs.11.18).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-pau-a880de2",
+        "entity_key": "entity:pl-pau-a880de2",
+        "language_tag": "en",
+        "preferred_name": "Pau",
+        "aliases": [],
+        "short_description": {
+          "text": "Pau is a place named in Scripture (Gen.36.39–1Chr.1.50).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-penuel-a8a9ff9",
+        "entity_key": "entity:pl-penuel-a8a9ff9",
+        "language_tag": "en",
+        "preferred_name": "Penuel",
+        "aliases": [],
+        "short_description": {
+          "text": "Penuel is a place named in Scripture (Gen.32.30–1Kgs.12.25).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-pishon-a19b076",
         "entity_key": "entity:pl-pishon-a19b076",
         "language_tag": "en",
@@ -3395,6 +7467,19 @@
         "aliases": [],
         "short_description": {
           "text": "Pishon is a place named in Scripture (Gen.2.11).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-rameses-a079b21",
+        "entity_key": "entity:pl-rameses-a079b21",
+        "language_tag": "en",
+        "preferred_name": "Rameses",
+        "aliases": [],
+        "short_description": {
+          "text": "Several sources treat Qantir and Tell el Daba as interchangeable.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3414,13 +7499,26 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-rehoboth-2-a17e154",
+        "entity_key": "entity:pl-rehoboth-2-a17e154",
+        "language_tag": "en",
+        "preferred_name": "Rehoboth 2",
+        "aliases": [],
+        "short_description": {
+          "text": "Rehoboth 2 is a place named in Scripture (Gen.36.37–1Chr.1.48).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-rehoboth-ir-a260ff1",
         "entity_key": "entity:pl-rehoboth-ir-a260ff1",
         "language_tag": "en",
         "preferred_name": "Rehoboth-Ir",
         "aliases": [],
         "short_description": {
-          "text": "Could be part of or a suburb of <ancient id=\"a70fd5d\">Nineveh</ancient> rather than a proper name.",
+          "text": "Could be part of or a suburb of Nineveh rather than a proper name.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3440,13 +7538,39 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-river-3-a3bb384",
+        "entity_key": "entity:pl-river-3-a3bb384",
+        "language_tag": "en",
+        "preferred_name": "River 3",
+        "aliases": [],
+        "short_description": {
+          "text": "The Hebrew word here for \"river\" is often used for the Euphrates.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-salem-aad7e4e",
         "entity_key": "entity:pl-salem-aad7e4e",
         "language_tag": "en",
         "preferred_name": "Salem",
         "aliases": [],
         "short_description": {
-          "text": "Salem is a place named in Scripture (Gen.14.18–Ps.76.2).",
+          "text": "Salem is a place named in Scripture (Gen.14.18–Heb.7.2).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-salt-sea-abed304",
+        "entity_key": "entity:pl-salt-sea-abed304",
+        "language_tag": "en",
+        "preferred_name": "Salt Sea",
+        "aliases": [],
+        "short_description": {
+          "text": "Salt Sea is a place named in Scripture (Gen.14.3–Zech.14.8).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3472,7 +7596,72 @@
         "preferred_name": "Shaveh-kiriathaim",
         "aliases": [],
         "short_description": {
-          "text": "Likely the plain around <ancient id=\"ad54201\">Kiriathaim</ancient>.",
+          "text": "Likely the plain around Kiriathaim.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-shechem-adf74d4",
+        "entity_key": "entity:pl-shechem-adf74d4",
+        "language_tag": "en",
+        "preferred_name": "Shechem",
+        "aliases": [],
+        "short_description": {
+          "text": "Shechem is a place named in Scripture (Gen.12.6–Acts.7.16).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-shiloh-aa4680a",
+        "entity_key": "entity:pl-shiloh-aa4680a",
+        "language_tag": "en",
+        "preferred_name": "Shiloh",
+        "aliases": [],
+        "short_description": {
+          "text": "Shiloh is a place named in Scripture (Gen.49.10–Jer.41.5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-shinar-af725b1",
+        "entity_key": "entity:pl-shinar-af725b1",
+        "language_tag": "en",
+        "preferred_name": "Shinar",
+        "aliases": [],
+        "short_description": {
+          "text": "Shinar is a place named in Scripture (Gen.10.10–Zech.5.11).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-shur-acdbce0",
+        "entity_key": "entity:pl-shur-acdbce0",
+        "language_tag": "en",
+        "preferred_name": "Shur",
+        "aliases": [],
+        "short_description": {
+          "text": "Shur is a place named in Scripture (Gen.16.7–1Sam.27.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-sidon-a98e4d7",
+        "entity_key": "entity:pl-sidon-a98e4d7",
+        "language_tag": "en",
+        "preferred_name": "Sidon",
+        "aliases": [],
+        "short_description": {
+          "text": "Sidon is a place named in Scripture (Gen.10.19–Acts.27.3).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3492,6 +7681,32 @@
         "review_status": "draft"
       },
       {
+        "profile_key": "profile:en:pl-sodom-a0aa664",
+        "entity_key": "entity:pl-sodom-a0aa664",
+        "language_tag": "en",
+        "preferred_name": "Sodom",
+        "aliases": [],
+        "short_description": {
+          "text": "Sodom is a place named in Scripture (Gen.10.19–Rev.11.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-succoth-1-a0905b5",
+        "entity_key": "entity:pl-succoth-1-a0905b5",
+        "language_tag": "en",
+        "preferred_name": "Succoth 1",
+        "aliases": [],
+        "short_description": {
+          "text": "Succoth 1 is a place named in Scripture (Gen.33.17–2Chr.4.17).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
         "profile_key": "profile:en:pl-the-lord-will-provide-a559399",
         "entity_key": "entity:pl-the-lord-will-provide-a559399",
         "language_tag": "en",
@@ -3499,6 +7714,19 @@
         "aliases": [],
         "short_description": {
           "text": "The Lord Will Provide is a place named in Scripture (Gen.22.14).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-tigris-a38ebfd",
+        "entity_key": "entity:pl-tigris-a38ebfd",
+        "language_tag": "en",
+        "preferred_name": "Tigris",
+        "aliases": [],
+        "short_description": {
+          "text": "Tigris is a place named in Scripture (Gen.2.14–Dan.10.4).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -3577,6 +7805,408 @@
         "aliases": [],
         "short_description": {
           "text": "Valley of Siddim is a place named in Scripture (Gen.14.3–Gen.14.10).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-zeboiim-abfbfb9",
+        "entity_key": "entity:pl-zeboiim-abfbfb9",
+        "language_tag": "en",
+        "preferred_name": "Zeboiim",
+        "aliases": [],
+        "short_description": {
+          "text": "Zeboiim is a place named in Scripture (Gen.10.19–Hos.11.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-zoar-aacfcda",
+        "entity_key": "entity:pl-zoar-aacfcda",
+        "language_tag": "en",
+        "preferred_name": "Zoar",
+        "aliases": [],
+        "short_description": {
+          "text": "Zoar is a place named in Scripture (Gen.13.10–Jer.48.34).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-reuben",
+        "entity_key": "entity:tribe-of-reuben",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Reuben",
+        "aliases": [
+          "Reubenite",
+          "Reubenites",
+          "children of Reuben",
+          "descendants of Reuben",
+          "half-tribe of Reuben",
+          "hand of Reuben",
+          "house of Reuben",
+          "men of Reuben",
+          "people of Reuben",
+          "sons of Reuben",
+          "staff of Reuben",
+          "staves of Reuben",
+          "stick of Reuben",
+          "sticks of Reuben",
+          "tribe of Reuben",
+          "tribes of Reuben"
+        ],
+        "short_description": {
+          "text": "Tribe of Reuben is a people named in Scripture (Gen.46.9–Rev.7.5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-simeon",
+        "entity_key": "entity:tribe-of-simeon",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Simeon",
+        "aliases": [
+          "Simeonite",
+          "Simeonites",
+          "children of Simeon",
+          "descendants of Simeon",
+          "half-tribe of Simeon",
+          "hand of Simeon",
+          "house of Simeon",
+          "men of Simeon",
+          "people of Simeon",
+          "sons of Simeon",
+          "staff of Simeon",
+          "staves of Simeon",
+          "stick of Simeon",
+          "sticks of Simeon",
+          "tribe of Simeon",
+          "tribes of Simeon"
+        ],
+        "short_description": {
+          "text": "Tribe of Simeon is a people named in Scripture (Gen.46.10–Rev.7.7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-levi",
+        "entity_key": "entity:tribe-of-levi",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Levi",
+        "aliases": [
+          "Levite",
+          "Levites",
+          "children of Levi",
+          "descendants of Levi",
+          "half-tribe of Levi",
+          "hand of Levi",
+          "house of Levi",
+          "men of Levi",
+          "people of Levi",
+          "sons of Levi",
+          "staff of Levi",
+          "staves of Levi",
+          "stick of Levi",
+          "sticks of Levi",
+          "tribe of Levi",
+          "tribes of Levi"
+        ],
+        "short_description": {
+          "text": "Tribe of Levi is a people named in Scripture (Gen.46.11–Rev.7.7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-judah",
+        "entity_key": "entity:tribe-of-judah",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Judah",
+        "aliases": [
+          "Judahite",
+          "Judahites",
+          "children of Judah",
+          "descendants of Judah",
+          "half-tribe of Judah",
+          "hand of Judah",
+          "house of Judah",
+          "men of Judah",
+          "people of Judah",
+          "sons of Judah",
+          "staff of Judah",
+          "staves of Judah",
+          "stick of Judah",
+          "sticks of Judah",
+          "tribe of Judah",
+          "tribes of Judah"
+        ],
+        "short_description": {
+          "text": "Tribe of Judah is a people named in Scripture (Gen.46.12–Rev.7.5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-naphtali",
+        "entity_key": "entity:tribe-of-naphtali",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Naphtali",
+        "aliases": [
+          "Naphtalite",
+          "Naphtalites",
+          "children of Naphtali",
+          "descendants of Naphtali",
+          "half-tribe of Naphtali",
+          "hand of Naphtali",
+          "house of Naphtali",
+          "men of Naphtali",
+          "people of Naphtali",
+          "sons of Naphtali",
+          "staff of Naphtali",
+          "staves of Naphtali",
+          "stick of Naphtali",
+          "sticks of Naphtali",
+          "tribe of Naphtali",
+          "tribes of Naphtali"
+        ],
+        "short_description": {
+          "text": "Tribe of Naphtali is a people named in Scripture (Gen.46.24–Rev.7.6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-gad",
+        "entity_key": "entity:tribe-of-gad",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Gad",
+        "aliases": [
+          "Gadite",
+          "Gadites",
+          "children of Gad",
+          "descendants of Gad",
+          "half-tribe of Gad",
+          "hand of Gad",
+          "house of Gad",
+          "men of Gad",
+          "people of Gad",
+          "sons of Gad",
+          "staff of Gad",
+          "staves of Gad",
+          "stick of Gad",
+          "sticks of Gad",
+          "tribe of Gad",
+          "tribes of Gad"
+        ],
+        "short_description": {
+          "text": "Tribe of Gad is a people named in Scripture (Gen.46.16–Rev.7.5).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-asher",
+        "entity_key": "entity:tribe-of-asher",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Asher",
+        "aliases": [
+          "Asherite",
+          "Asherites",
+          "children of Asher",
+          "descendants of Asher",
+          "half-tribe of Asher",
+          "hand of Asher",
+          "house of Asher",
+          "men of Asher",
+          "people of Asher",
+          "sons of Asher",
+          "staff of Asher",
+          "staves of Asher",
+          "stick of Asher",
+          "sticks of Asher",
+          "tribe of Asher",
+          "tribes of Asher"
+        ],
+        "short_description": {
+          "text": "Tribe of Asher is a people named in Scripture (Gen.46.17–Rev.7.6).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-issachar",
+        "entity_key": "entity:tribe-of-issachar",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Issachar",
+        "aliases": [
+          "Issacharite",
+          "Issacharites",
+          "children of Issachar",
+          "descendants of Issachar",
+          "half-tribe of Issachar",
+          "hand of Issachar",
+          "house of Issachar",
+          "men of Issachar",
+          "people of Issachar",
+          "sons of Issachar",
+          "staff of Issachar",
+          "staves of Issachar",
+          "stick of Issachar",
+          "sticks of Issachar",
+          "tribe of Issachar",
+          "tribes of Issachar"
+        ],
+        "short_description": {
+          "text": "Tribe of Issachar is a people named in Scripture (Gen.46.13–Rev.7.7).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-zebulun",
+        "entity_key": "entity:tribe-of-zebulun",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Zebulun",
+        "aliases": [
+          "Zebulunite",
+          "Zebulunites",
+          "children of Zebulun",
+          "descendants of Zebulun",
+          "half-tribe of Zebulun",
+          "hand of Zebulun",
+          "house of Zebulun",
+          "men of Zebulun",
+          "people of Zebulun",
+          "sons of Zebulun",
+          "staff of Zebulun",
+          "staves of Zebulun",
+          "stick of Zebulun",
+          "sticks of Zebulun",
+          "tribe of Zebulun",
+          "tribes of Zebulun"
+        ],
+        "short_description": {
+          "text": "Tribe of Zebulun is a people named in Scripture (Gen.46.14–Rev.7.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-joseph",
+        "entity_key": "entity:tribe-of-joseph",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Joseph",
+        "aliases": [
+          "children of Joseph",
+          "descendants of Joseph",
+          "half-tribe of Joseph",
+          "hand of Joseph",
+          "house of Joseph",
+          "men of Joseph",
+          "people of Joseph",
+          "sons of Joseph",
+          "staff of Joseph",
+          "staves of Joseph",
+          "stick of Joseph",
+          "sticks of Joseph",
+          "tribe of Joseph",
+          "tribes of Joseph"
+        ],
+        "short_description": {
+          "text": "Tribe of Joseph is a people named in Scripture (Gen.48.8–Rev.7.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:tribe-of-benjamin",
+        "entity_key": "entity:tribe-of-benjamin",
+        "language_tag": "en",
+        "preferred_name": "Tribe of Benjamin",
+        "aliases": [
+          "Benjamite",
+          "Benjamites",
+          "children of Benjamin",
+          "descendants of Benjamin",
+          "half-tribe of Benjamin",
+          "hand of Benjamin",
+          "house of Benjamin",
+          "men of Benjamin",
+          "people of Benjamin",
+          "sons of Benjamin",
+          "staff of Benjamin",
+          "staves of Benjamin",
+          "stick of Benjamin",
+          "sticks of Benjamin",
+          "tribe of Benjamin",
+          "tribes of Benjamin"
+        ],
+        "short_description": {
+          "text": "Tribe of Benjamin is a people named in Scripture (Gen.46.21–Rev.7.8).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:god",
+        "entity_key": "entity:god",
+        "language_tag": "en",
+        "preferred_name": "God",
+        "aliases": [
+          "Almighty",
+          "Father",
+          "GOD",
+          "God of Hosts",
+          "God of Israel",
+          "God of Jacob",
+          "God of heaven",
+          "Holy One",
+          "Holy One of Israel",
+          "LORD",
+          "LORD God",
+          "LORD of Hosts",
+          "Lord GOD",
+          "Lord GOD of Hosts",
+          "Maker",
+          "Most High",
+          "Redeemer",
+          "Savior"
+        ],
+        "short_description": {
+          "text": "God is named in Scripture (Gen.1.1–Rev.22.19).",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:holy-spirit",
+        "entity_key": "entity:holy-spirit",
+        "language_tag": "en",
+        "preferred_name": "Holy Spirit",
+        "aliases": [
+          "Spirit of God",
+          "Spirit of the LORD"
+        ],
+        "short_description": {
+          "text": "Holy Spirit is named in Scripture (Gen.1.2–Jude.1.20).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -26872,5 +31502,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:280da83a0006b2dff8646d84a28529d0b663dab1399c6ae073088745d99d3379"
 }

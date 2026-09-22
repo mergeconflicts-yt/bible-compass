@@ -37,6 +37,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import canon_order  # noqa: E402
+import package_revisions as pkgrev  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPTURE = REPO / "apps" / "mobile" / "assets" / "scripture"
@@ -56,7 +57,10 @@ TRANSLATIONS: dict[str, dict] = {
         "asset": "bsb",
         "lang": "en",
         "refsys": "refsys:eng-v22",
-        "edition": "edition:bsb@20260912",
+        # The edition key is immutable and carries the source-artifact digest,
+        # exactly as the importer's DB row does (finding 16): the JSON and the
+        # database must name the same edition.
+        "edition": "edition:bsb@20260912:sha-b2898c49",
         "out": "",
         "name": "Berean Standard Bible",
         "knowledge": "books",
@@ -115,6 +119,24 @@ def load_books(asset: str = "bsb") -> list[dict]:
 
 def verse_key(osis: str, chapter: int, verse: int) -> str:
     return f"verse:{osis}.{chapter}.{verse}"
+
+
+def canon_ref_key(ref: tuple[str, int, int]) -> tuple[int, int, int]:
+    """Canonical ordering key for a (osis, chapter, verse) reference.
+
+    Lexical OSIS ordering is wrong across books (e.g. Acts sorts before
+    Genesis); the ratified canon order is authoritative. A source reference
+    outside the 66-book canon sorts last rather than failing the run.
+    """
+    try:
+        index = canon_order.order_index(ref[0])
+    except ValueError:
+        index = 10**6
+    return (index, ref[1], ref[2])
+
+
+def ref_label(ref: tuple[str, int, int]) -> str:
+    return f"{ref[0]}.{ref[1]}.{ref[2]}"
 
 
 def scope_key(
@@ -207,6 +229,11 @@ def load_persons() -> tuple[dict, dict]:
                 "name": name,
                 "aliases": set(),
                 "refs": set(),
+                # Structured identity evidence: the source's own row id is
+                # kept as data, not embedded in the canonical key.
+                "external_ids": [
+                    {"source": "bibledata", "id": pid, "evidence": f"evidence:bibledata:{pid}"}
+                ],
             }
             labels[slug] = set()
 
@@ -278,6 +305,14 @@ def load_places() -> dict:
                     "aliases": set(),
                     "refs": set(),
                     "evidence": f"evidence:openbible:{slug}",
+                    "external_ids": [
+                        {
+                            "source": "openbible",
+                            "id": str(pid),
+                            "label": friendly,
+                            "evidence": f"evidence:openbible:{slug}",
+                        }
+                    ],
                 },
             )
             for ident in rec.get("identifications") or []:
@@ -465,6 +500,23 @@ def search_quote(
     return None
 
 
+def all_occurrences(
+    text: str,
+    quote: str,
+    boundary: str = "[A-Za-z0-9]",
+    require_tail: bool = True,
+) -> list[tuple[int, int]]:
+    """Every non-overlapping occurrence of an exact surface in a verse.
+
+    Used so a verse that names an entity more than once anchors every
+    occurrence, not only the first (finding 41). Boundary rules mirror
+    search_quote exactly.
+    """
+    lookahead = f"(?!{boundary})" if require_tail else ""
+    pattern = re.compile(f"(?<!{boundary})" + re.escape(quote) + lookahead)
+    return [(m.start(), m.end()) for m in pattern.finditer(text)]
+
+
 # ---------------------------------------------------------------------------
 # per-book generation
 # ---------------------------------------------------------------------------
@@ -608,7 +660,18 @@ def generate_book(
                     "geographic_positions": [
                         {
                             "evidence_item_key": entry["evidence"],
-                            "precision": "approximate",
+                            # No coordinate is available from the approved
+                            # inputs, so the blueprint records the position as
+                            # explicitly unknown rather than implying an
+                            # approximate point. Geometry/CRS/period slots
+                            # exist for when a licensed source supplies them.
+                            "precision": "unknown",
+                            "geometry": None,
+                            "crs": None,
+                            "period": None,
+                            "candidates": [],
+                            "component_license": "unknown",
+                            "certainty": "unknown",
                             "claim_keys": [],
                         }
                     ],
@@ -691,27 +754,37 @@ def generate_book(
                 )
         if not found:
             continue
-        quote, ordinal, prefix, suffix = found
-        akey = a["attestation_key"]
-        mkey = f"mention:wb:{slug}-{c}-{v}"
-        mentions.append(
-            {
-                "mention_key": mkey,
-                "verse_key": a["reference_key"],
-                "attestation_key": akey,
-                "target": {"type": "entity", "key": a["entity_key"]},
-                "mention_form": form,
-                "selector": {
-                    "exact_quote": quote,
-                    "occurrence_ordinal": ordinal,
-                    "prefix": prefix,
-                    "suffix": suffix,
-                },
-                "claim_keys": [],
-                "review_status": "draft",
-            }
+        quote = found[0]
+        # Capture EVERY occurrence of the chosen surface in the verse, not
+        # only the first (finding 41). The first keeps the historical mention
+        # key; later occurrences add an -o<ordinal> suffix so each occurrence
+        # has its own stable key and render span.
+        boundary = "[A-Za-z0-9]" if lang == "en" else "[\u0c00-\u0c7f]"
+        require_tail = lang == "en"
+        occurrences = all_occurrences(
+            text, quote, boundary=boundary, require_tail=require_tail
         )
-        verse_to_mention.setdefault(a["reference_key"], []).append(mkey)
+        akey = a["attestation_key"]
+        for idx, (start, end) in enumerate(occurrences, start=1):
+            mkey = f"mention:wb:{slug}-{c}-{v}" + ("" if idx == 1 else f"-o{idx}")
+            mentions.append(
+                {
+                    "mention_key": mkey,
+                    "verse_key": a["reference_key"],
+                    "attestation_key": akey,
+                    "target": {"type": "entity", "key": a["entity_key"]},
+                    "mention_form": form,
+                    "selector": {
+                        "exact_quote": quote,
+                        "occurrence_ordinal": idx,
+                        "prefix": text[max(0, start - 20) : start],
+                        "suffix": text[end : end + 20],
+                    },
+                    "claim_keys": [],
+                    "review_status": "draft",
+                }
+            )
+            verse_to_mention.setdefault(a["reference_key"], []).append(mkey)
     # drop mention keys whose attestation was not found
     for vk in verse_to_mention:
         verse_to_mention[vk] = list(dict.fromkeys(verse_to_mention[vk]))
@@ -1071,7 +1144,7 @@ def build_registry(
     """
     entries = []
     for slug, entry in list(persons.items()) + list(places.items()):
-        refs = sorted(r for r in entry["refs"] if r in verse_key_set)
+        refs = [r for r in entry["refs"] if r in verse_key_set]
         if not refs:
             continue
         entries.append(
@@ -1083,9 +1156,13 @@ def build_registry(
                 "language_tag": "en",
                 "identification_status": "proposed" if slug in uncertain_slugs else "established",
                 "aliases": sorted(a for a in entry.get("aliases", set()) if a and a != entry["name"]),
-                "verse_count": len(refs),
-                "first_reference": f"{refs[0][0]}.{refs[0][1]}.{refs[0][2]}",
-                "last_reference": f"{refs[-1][0]}.{refs[-1][1]}.{refs[-1][2]}",
+                # Structured external identifiers (finding 26): source IDs are
+                # retained as mappings/evidence, never inferred from the slug.
+                "external_ids": entry.get("external_ids", []),
+                # verse_count / first_reference / last_reference were persisted
+                # derived values (finding 25) and first/last were lexically
+                # sorted. They are NOT stored: consumers compute them from the
+                # attestations, which is the only correct source of truth.
             }
         )
     entries.sort(key=lambda e: e["entity_key"])
@@ -1293,6 +1370,12 @@ def main() -> int:
             # other translations. Versification alignment across reference
             # systems belongs in reference mappings, not in a copied graph.
             layers = ("canonical", "edition", "locale") if cfg["lang"] == "en" else ("edition", "locale")
+            revisions_path = out_trans / "package-revisions.json"
+            revision_register = pkgrev.load_register(revisions_path)
+            for layer in layers:
+                stem = data[layer]["package_key"].split("draft:", 1)[1]
+                pkgrev.stamp(data[layer], stem, revision_register)
+            pkgrev.write_register(revisions_path, revision_register)
             for layer in layers:
                 layer_dir = out_trans / layer
                 layer_dir.mkdir(parents=True, exist_ok=True)

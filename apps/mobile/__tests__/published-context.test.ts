@@ -109,6 +109,13 @@ function fakeRpcClient(
   error: string | null = null,
 ): { client: PublishedContentClient; calls: [string, Record<string, unknown>][] } {
   const calls: [string, Record<string, unknown>][] = [];
+  const rpc = (fn: string, args: Record<string, unknown>) => {
+    calls.push([fn, args]);
+    return {
+      then: (resolve: (value: { data: unknown; error: { message: string } | null }) => unknown) =>
+        Promise.resolve({ data, error: error ? { message: error } : null }).then(resolve),
+    };
+  };
   const client = {
     schema: () => ({
       from: () => ({
@@ -116,14 +123,9 @@ function fakeRpcClient(
           throw new Error('schema reads are not used by the bundle contract');
         },
       }),
+      rpc,
     }),
-    rpc: (fn: string, args: Record<string, unknown>) => {
-      calls.push([fn, args]);
-      return {
-        then: (resolve: (value: { data: unknown; error: { message: string } | null }) => unknown) =>
-          Promise.resolve({ data, error: error ? { message: error } : null }).then(resolve),
-      };
-    },
+    rpc,
   } as unknown as PublishedContentClient;
   return { client, calls };
 }
@@ -168,7 +170,9 @@ describe('SupabasePublishedContentRepository.fetchPublishedContextBundle', () =>
     const repo = new SupabasePublishedContentRepository(client);
     const bundle = await repo.fetchPublishedContextBundle(SCOPE);
     expect(bundle.relevance[0]?.role_in_passage).toBe('The role.');
-    expect(calls).toEqual([['published_context_bundle', { p_scope_key: SCOPE }]]);
+    expect(calls).toEqual([
+      ['published_context_bundle', { p_scope_key: SCOPE, p_locale: 'en', p_edition_key: null }],
+    ]);
   });
 
   it('throws when the backend errors or the payload is invalid', async () => {

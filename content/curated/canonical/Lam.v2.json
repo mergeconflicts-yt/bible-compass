@@ -193,7 +193,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
@@ -1053,141 +1053,7 @@
       }
     ],
     "relationships": [],
-    "events": [
-      {
-        "event_key": "event:wb-lam-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-1-p1:refsys:eng-v22:lam.1.1-lam.1.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-lam-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-2-p1:refsys:eng-v22:lam.2.1-lam.2.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-lam-3-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-3-p1:refsys:eng-v22:lam.3.1-lam.3.18",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-lam-3-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-3-p2:refsys:eng-v22:lam.3.19-lam.3.36",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-lam-3-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-3-p3:refsys:eng-v22:lam.3.37-lam.3.66",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-lam-4-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-edom-a2735ff",
-          "entity:pl-sodom-a0aa664",
-          "entity:pl-uz-a324c4d",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-4-p1:refsys:eng-v22:lam.4.1-lam.4.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-lam-5-p1",
-        "event_type": "prayer",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321",
-          "entity:pl-egypt-af301ca",
-          "entity:pl-mount-zion-abd9596",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-lam-5-p1:refsys:eng-v22:lam.5.1-lam.5.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [],
     "relevance": [
       {
@@ -2213,8 +2079,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:78031ee2074a4f5c7cb45a469904b5b71354664326aedc418577eaa4aa103212"
 }

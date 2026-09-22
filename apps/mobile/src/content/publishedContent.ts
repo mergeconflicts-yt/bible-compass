@@ -9,9 +9,17 @@
  * "no content exists".
  */
 
+import { z } from 'zod';
 import type { PublishedContextBundle } from './publishedContext';
 
 export type { PublishedContextBundle } from './publishedContext';
+
+export class PublishedContentError extends Error {
+  constructor(message: string) {
+    super(`publishedContent: ${message}`);
+    this.name = 'PublishedContentError';
+  }
+}
 
 export interface PublishedVerse {
   editionKey: string;
@@ -40,6 +48,89 @@ export interface PublishedAttestation {
   reviewState: string;
 }
 
+// --- Runtime validation of published rows --------------------------------
+//
+// The published views are RLS-filtered but a malformed or schema-drifted
+// payload must never cross the adapter boundary (finding 38). Every row is
+// parsed with a strict Zod schema before it becomes a domain object; unknown
+// fields or bad digests fail closed.
+
+const sha256 = z.string().regex(/^sha256:[0-9a-f]{64}$/);
+
+const publishedVerseRowSchema = z
+  .object({
+    edition_key: z.string().min(1),
+    refsys_key: z.string().min(1),
+    book_osis: z.string().min(1),
+    chapter: z.number().int().positive(),
+    verse_number: z.number().int().nonnegative(),
+    local_key: z.string().min(1),
+    text: z.string(),
+    text_sha256: sha256,
+  })
+  .strict();
+
+const publishedEntityRowSchema = z
+  .object({
+    key: z.string().min(1),
+    slug: z.string().min(1),
+    type: z.string().min(1),
+    identification_status: z.string().min(1),
+  })
+  .strict();
+
+const publishedAttestationRowSchema = z
+  .object({
+    entity_key: z.string().min(1),
+    scope_key: z.string().min(1),
+    reference_local_key: z.string().min(1),
+    kind: z.string().min(1),
+    explicitness: z.string().min(1),
+    review_state: z.string().min(1),
+  })
+  .strict();
+
+function parseRows<T>(schema: z.ZodType<T[]>, data: unknown): T[] {
+  const parsed = schema.safeParse(data);
+  if (!parsed.success) {
+    throw new PublishedContentError(parsed.error.issues[0]?.message ?? 'invalid published payload');
+  }
+  return parsed.data;
+}
+
+export function parsePublishedVerses(data: unknown): PublishedVerse[] {
+  return parseRows(z.array(publishedVerseRowSchema), data).map((row) => ({
+    editionKey: row.edition_key,
+    refsysKey: row.refsys_key,
+    bookOsis: row.book_osis,
+    chapter: row.chapter,
+    verse: row.verse_number,
+    localKey: row.local_key,
+    text: row.text,
+    textSha256: row.text_sha256,
+  }));
+}
+
+export function parsePublishedEntities(data: unknown): PublishedEntity[] {
+  return parseRows(z.array(publishedEntityRowSchema), data).map((row) => ({
+    key: row.key,
+    slug: row.slug,
+    type: row.type,
+    identificationStatus: row.identification_status,
+  }));
+}
+
+export function parsePublishedAttestations(data: unknown): PublishedAttestation[] {
+  return parseRows(z.array(publishedAttestationRowSchema), data).map((row) => ({
+    entityKey: row.entity_key,
+    scopeKey: row.scope_key,
+    referenceLocalKey: row.reference_local_key,
+    kind: row.kind,
+    explicitness: row.explicitness,
+    reviewState: row.review_state,
+  }));
+}
+
 export interface PublishedContentRepository {
   /** Published verses for one chapter, in verse order. */
   fetchPublishedVerses(
@@ -54,8 +145,14 @@ export interface PublishedContentRepository {
   /**
    * Complete published context bundle for one Scripture scope, already
    * validated against the strict contract. Throws on a malformed payload.
+   * `locale` and `editionKey` scope the server response to one language and
+   * translation edition; the server defaults to English.
    */
-  fetchPublishedContextBundle(scopeKey: string): Promise<PublishedContextBundle>;
+  fetchPublishedContextBundle(
+    scopeKey: string,
+    locale?: string,
+    editionKey?: string,
+  ): Promise<PublishedContextBundle>;
 }
 
 /**

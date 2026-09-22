@@ -74,12 +74,13 @@ BEGIN
 
   INSERT INTO private_staging.approval_records
     (subject_key, subject_digest, subject_revision, reviewer_id, reviewer_role, decision)
-    VALUES ('probe:read-api', 'sha256:' || repeat('e', 64), 1, 'probe', 'editorial_reviewer', 'approved')
+    VALUES ('en.bsb.neh-2@9:sha-99887766', 'sha256:' || repeat('f', 64), 9, 'probe', 'editorial_reviewer', 'approved')
     RETURNING id INTO appr;
   INSERT INTO private_staging.package_manifests
-    (key, locale, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at)
-    VALUES ('en.bsb.neh-2@9:sha-99887766', 'en', '1.0.0', 9, 'sha256:' || repeat('f', 64), '1.0.0', appr, now() - interval '1 day')
+    (key, locale, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at, rights_status)
+    VALUES ('en.bsb.neh-2@9:sha-99887766', 'en', '1.0.0', 9, 'sha256:' || repeat('f', 64), '1.0.0', appr, now() - interval '1 day', 'cleared')
     RETURNING id INTO pkg_id;
+  INSERT INTO private_staging.publication_releases (locale, package_id, is_active) VALUES ('en', pkg_id, true);
   INSERT INTO private_staging.package_members (package_id, entity_id) VALUES (pkg_id, ent_id);
   INSERT INTO private_staging.package_members (package_id, claim_id) VALUES (pkg_id, pub_claim);
 END $$;

@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-phil-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-phil-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-phil-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-phil-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -143,14 +143,14 @@
       "verse:Phil.4.23"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-phil-canonical",
       "revision": 1,
-      "digest": "sha256:e6527b092f758ee3b1ef30db43b82e2d9f452e599c55624bf642549cb68f0831"
+      "digest": "sha256:8d34ebd2d9c9dc0ea6ae1847363403bed5a3ad977900973cb700a97d898347eb"
     }
   ],
   "records": {
@@ -331,6 +331,24 @@
           "occurrence_ordinal": 1,
           "prefix": "ting in the form of ",
           "suffix": ", did not consider e"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:phil-god-2-6-o2",
+        "verse_key": "verse:Phil.2.6",
+        "attestation_key": "attestation:wb-phil-god-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "sider equality with ",
+          "suffix": " something to be gra"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -547,6 +565,24 @@
           "occurrence_ordinal": 1,
           "prefix": "imothy, servants of ",
           "suffix": " Jesus, To all the s"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:phil-jesus-christ-1-1-o2",
+        "verse_key": "verse:Phil.1.1",
+        "attestation_key": "attestation:wb-phil-jesus-christ-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "o all the saints in ",
+          "suffix": " Jesus at Philippi, "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1110,6 +1146,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:phil-jesus-christ-3-8-o2",
+        "verse_key": "verse:Phil.3.8",
+        "attestation_key": "attestation:wb-phil-jesus-christ-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "sh, that I may gain ",
+          "suffix": ""
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:phil-jesus-christ-3-9",
         "verse_key": "verse:Phil.3.9",
         "attestation_key": "attestation:wb-phil-jesus-christ-3-9",
@@ -1483,6 +1537,7 @@
           ],
           "record_keys": [
             "mention:wb:phil-jesus-christ-1-1",
+            "mention:wb:phil-jesus-christ-1-1-o2",
             "mention:wb:phil-p-saul-2-1-1",
             "mention:wb:phil-p-timothy-1-1-1",
             "mention:wb:phil-pl-philippi-a49e1d0-1-1"
@@ -1698,7 +1753,8 @@
             "verse:Phil.2.6"
           ],
           "record_keys": [
-            "mention:wb:phil-god-2-6"
+            "mention:wb:phil-god-2-6",
+            "mention:wb:phil-god-2-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1852,7 +1908,8 @@
             "verse:Phil.3.8"
           ],
           "record_keys": [
-            "mention:wb:phil-jesus-christ-3-8"
+            "mention:wb:phil-jesus-christ-3-8",
+            "mention:wb:phil-jesus-christ-3-8-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2067,5 +2124,6 @@
       "code": "ambiguous-mention-referents-dropped",
       "note": "1 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
     }
-  ]
+  ],
+  "content_digest": "sha256:f7c5063d570bf993f36e5480f680f70a7fc550419f66eb257fbe53b5f515f5ae"
 }

@@ -112,11 +112,21 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
     "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-joel-11",
+        "entity_type": "person",
+        "proposed_label": "Joel",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
       {
         "candidate_key": "candidate:wb:p-pethuel-1",
         "entity_type": "person",
@@ -762,6 +772,9 @@
           "scope:wb-joel-1:refsys:eng-v22:joel.1.1-joel.1.20"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -773,194 +786,26 @@
           "scope:wb-joel-1:refsys:eng-v22:joel.1.1-joel.1.20"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       }
     ],
-    "events": [
-      {
-        "event_key": "event:wb-joel-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-joel-11",
-          "entity:p-pethuel-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-1-p1:refsys:eng-v22:joel.1.1-joel.1.7",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-1-p2:refsys:eng-v22:joel.1.8-joel.1.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-1-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-1-p3:refsys:eng-v22:joel.1.13-joel.1.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-eden-1-af3daeb",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-2-p1:refsys:eng-v22:joel.2.1-joel.2.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-2-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-2-p2:refsys:eng-v22:joel.2.12-joel.2.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-2-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-great-sea-aa805fb",
-          "entity:pl-salt-sea-abed304",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-2-p3:refsys:eng-v22:joel.2.18-joel.2.27",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-2-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-mount-zion-abd9596"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-2-p4:refsys:eng-v22:joel.2.28-joel.2.32",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-3-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:tribe-of-judah"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-philistia-ac71e65",
-          "entity:pl-sheba-1-a81ab85",
-          "entity:pl-sidon-a98e4d7",
-          "entity:pl-tyre-a160272",
-          "entity:pl-valley-of-decision-a49037e",
-          "entity:pl-valley-of-jehoshaphat-a324282",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-3-p1:refsys:eng-v22:joel.3.1-joel.3.16",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-joel-3-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:tribe-of-judah"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-edom-a2735ff",
-          "entity:pl-egypt-af301ca",
-          "entity:pl-valley-of-shittim-a01769f",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-joel-3-p2:refsys:eng-v22:joel.3.17-joel.3.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-valley-of-decision-a49037e",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-valley-of-decision-a49037e",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -971,7 +816,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-valley-of-jehoshaphat-a324282",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -982,7 +833,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-valley-of-shittim-a01769f",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -1767,8 +1624,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:fdc5c19597f100597e5e5c967e04c968cde6b33cbd5ab448d48e7dc2dfa2318c"
 }

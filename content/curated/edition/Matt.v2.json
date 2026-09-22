@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-matt-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-matt-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-matt-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-matt-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -1269,14 +1269,14 @@
       "verse:Matt.28.20"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-matt-canonical",
-      "revision": 1,
-      "digest": "sha256:fb302c02bd0d4c2a248ad0ca41a3e510bde7ce5e312bb0bf1e49e8cc61807902"
+      "revision": 2,
+      "digest": "sha256:b57f2f4142463fc04f4e0b6a3e6ceebbbfa2e600ae43f66c7b9724b0c4a66d61"
     }
   ],
   "records": {
@@ -1421,6 +1421,60 @@
           "occurrence_ordinal": 1,
           "prefix": "trusted to Me by My ",
           "suffix": ". No one knows the S"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-11-27-o2",
+        "verse_key": "verse:Matt.11.27",
+        "attestation_key": "attestation:wb-matt-god-11-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Father",
+          "occurrence_ordinal": 2,
+          "prefix": " the Son except the ",
+          "suffix": ", and no one knows t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-11-27-o3",
+        "verse_key": "verse:Matt.11.27",
+        "attestation_key": "attestation:wb-matt-god-11-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Father",
+          "occurrence_ordinal": 3,
+          "prefix": "nd no one knows the ",
+          "suffix": " except the Son and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-12-28-o2",
+        "verse_key": "verse:Matt.12.28",
+        "attestation_key": "attestation:wb-matt-god-12-28",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "then the kingdom of ",
+          "suffix": " has come upon you."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1858,6 +1912,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-god-22-21-o2",
+        "verse_key": "verse:Matt.22.21",
+        "attestation_key": "attestation:wb-matt-god-22-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " and to God what is ",
+          "suffix": "’s.”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-god-22-29",
         "verse_key": "verse:Matt.22.29",
         "attestation_key": "attestation:wb-matt-god-22-29",
@@ -1907,6 +1979,60 @@
           "occurrence_ordinal": 1,
           "prefix": "‘I am the ",
           "suffix": " of Abraham, the God"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-22-32-o2",
+        "verse_key": "verse:Matt.22.32",
+        "attestation_key": "attestation:wb-matt-god-22-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "God of Abraham, the ",
+          "suffix": " of Isaac, and the G"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-22-32-o3",
+        "verse_key": "verse:Matt.22.32",
+        "attestation_key": "attestation:wb-matt-god-22-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "d of Isaac, and the ",
+          "suffix": " of Jacob’ ? He is n"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-22-32-o4",
+        "verse_key": "verse:Matt.22.32",
+        "attestation_key": "attestation:wb-matt-god-22-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 4,
+          "prefix": "ob’ ? He is not the ",
+          "suffix": " of the dead, but of"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2110,6 +2236,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-god-26-63-o2",
+        "verse_key": "verse:Matt.26.63",
+        "attestation_key": "attestation:wb-matt-god-26-63",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " Christ, the Son of ",
+          "suffix": ".”"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-god-27-43",
         "verse_key": "verse:Matt.27.43",
         "attestation_key": "attestation:wb-matt-god-27-43",
@@ -2128,6 +2272,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-god-27-43-o2",
+        "verse_key": "verse:Matt.27.43",
+        "attestation_key": "attestation:wb-matt-god-27-43",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " trusts in God. Let ",
+          "suffix": " deliver Him now if "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-god-27-46",
         "verse_key": "verse:Matt.27.46",
         "attestation_key": "attestation:wb-matt-god-27-46",
@@ -2141,6 +2303,24 @@
           "occurrence_ordinal": 1,
           "prefix": "?” which means, “My ",
           "suffix": ", My God, why have Y"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-27-46-o2",
+        "verse_key": "verse:Matt.27.46",
+        "attestation_key": "attestation:wb-matt-god-27-46",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " means, “My God, My ",
+          "suffix": ", why have You forsa"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2416,6 +2596,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-god-6-18-o2",
+        "verse_key": "verse:Matt.6.18",
+        "attestation_key": "attestation:wb-matt-god-6-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Father",
+          "occurrence_ordinal": 2,
+          "prefix": "is unseen. And your ",
+          "suffix": ", who sees what is d"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-god-6-24",
         "verse_key": "verse:Matt.6.24",
         "attestation_key": "attestation:wb-matt-god-6-24",
@@ -2519,6 +2717,24 @@
           "occurrence_ordinal": 1,
           "prefix": "r, and pray to your ",
           "suffix": ", who is unseen. And"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-god-6-6-o2",
+        "verse_key": "verse:Matt.6.6",
+        "attestation_key": "attestation:wb-matt-god-6-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Father",
+          "occurrence_ordinal": 2,
+          "prefix": "is unseen. And your ",
+          "suffix": ", who sees what is d"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2951,6 +3167,24 @@
           "occurrence_ordinal": 1,
           "prefix": "O ",
           "suffix": ", Jerusalem, who kil"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-jerusalem-23-37-o2",
+        "verse_key": "verse:Matt.23.37",
+        "attestation_key": "attestation:wb-matt-jerusalem-23-37",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "O Jerusalem, ",
+          "suffix": ", who kills the prop"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -3653,6 +3887,24 @@
           "occurrence_ordinal": 1,
           "prefix": "“Come,” said ",
           "suffix": ". Then Peter got dow"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-jesus-christ-14-29-o2",
+        "verse_key": "verse:Matt.14.29",
+        "attestation_key": "attestation:wb-matt-jesus-christ-14-29",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jesus",
+          "occurrence_ordinal": 2,
+          "prefix": "er, and came toward ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -5206,6 +5458,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-jesus-christ-24-30-o2",
+        "verse_key": "verse:Matt.24.30",
+        "attestation_key": "attestation:wb-matt-jesus-christ-24-30",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Son of Man",
+          "occurrence_ordinal": 2,
+          "prefix": ". They will see the ",
+          "suffix": " coming on the cloud"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-jesus-christ-24-37",
         "verse_key": "verse:Matt.24.37",
         "attestation_key": "attestation:wb-matt-jesus-christ-24-37",
@@ -5602,6 +5872,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-jesus-christ-26-50-o2",
+        "verse_key": "verse:Matt.26.50",
+        "attestation_key": "attestation:wb-matt-jesus-christ-26-50",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jesus",
+          "occurrence_ordinal": 2,
+          "prefix": "ped forward, seized ",
+          "suffix": ", and arrested Him."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-jesus-christ-26-51",
         "verse_key": "verse:Matt.26.51",
         "attestation_key": "attestation:wb-matt-jesus-christ-26-51",
@@ -5849,6 +6137,24 @@
           "occurrence_ordinal": 1,
           "prefix": "Meanwhile ",
           "suffix": " stood before the go"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-jesus-christ-27-11-o2",
+        "verse_key": "verse:Matt.27.11",
+        "attestation_key": "attestation:wb-matt-jesus-christ-27-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jesus",
+          "occurrence_ordinal": 2,
+          "prefix": "“You have said so,” ",
+          "suffix": " replied."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -6988,6 +7294,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-abijam-1-1-7-o2",
+        "verse_key": "verse:Matt.1.7",
+        "attestation_key": "attestation:wb-matt-p-abijam-1-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abijam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abijah",
+          "occurrence_ordinal": 2,
+          "prefix": "ther of Abijah, and ",
+          "suffix": " the father of Asa."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-abram-1-1-17",
         "verse_key": "verse:Matt.1.17",
         "attestation_key": "attestation:wb-matt-p-abram-1-1-17",
@@ -7042,6 +7366,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-abram-1-3-9-o2",
+        "verse_key": "verse:Matt.3.9",
+        "attestation_key": "attestation:wb-matt-p-abram-1-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-abram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Abraham",
+          "occurrence_ordinal": 2,
+          "prefix": "ise up children for ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-abram-1-8-11",
         "verse_key": "verse:Matt.8.11",
         "attestation_key": "attestation:wb-matt-p-abram-1-8-11",
@@ -7078,6 +7420,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-achim-1-1-14-o2",
+        "verse_key": "verse:Matt.1.14",
+        "attestation_key": "attestation:wb-matt-p-achim-1-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-achim-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Achim",
+          "occurrence_ordinal": 2,
+          "prefix": "ather of Achim, and ",
+          "suffix": " the father of Eliud"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-ahaz-1-1-9",
         "verse_key": "verse:Matt.1.9",
         "attestation_key": "attestation:wb-matt-p-ahaz-1-1-9",
@@ -7091,6 +7451,24 @@
           "occurrence_ordinal": 1,
           "prefix": "otham the father of ",
           "suffix": ", and Ahaz the fathe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-ahaz-1-1-9-o2",
+        "verse_key": "verse:Matt.1.9",
+        "attestation_key": "attestation:wb-matt-p-ahaz-1-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ahaz-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ahaz",
+          "occurrence_ordinal": 2,
+          "prefix": "father of Ahaz, and ",
+          "suffix": " the father of Hezek"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7132,6 +7510,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-amminadab-1-1-4-o2",
+        "verse_key": "verse:Matt.1.4",
+        "attestation_key": "attestation:wb-matt-p-amminadab-1-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amminadab-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amminadab",
+          "occurrence_ordinal": 2,
+          "prefix": "ather of Amminadab, ",
+          "suffix": " the father of Nahsh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-amon-2-1-10",
         "verse_key": "verse:Matt.1.10",
         "attestation_key": "attestation:wb-matt-p-amon-2-1-10",
@@ -7145,6 +7541,24 @@
           "occurrence_ordinal": 1,
           "prefix": "asseh the father of ",
           "suffix": ", Amon the father of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-amon-2-1-10-o2",
+        "verse_key": "verse:Matt.1.10",
+        "attestation_key": "attestation:wb-matt-p-amon-2-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-amon-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Amon",
+          "occurrence_ordinal": 2,
+          "prefix": "the father of Amon, ",
+          "suffix": " the father of Josia"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7456,6 +7870,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-boaz-1-1-5-o2",
+        "verse_key": "verse:Matt.1.5",
+        "attestation_key": "attestation:wb-matt-p-boaz-1-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-boaz-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Boaz",
+          "occurrence_ordinal": 2,
+          "prefix": "r of Boaz by Rahab, ",
+          "suffix": " the father of Obed "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-caesar-1-22-17",
         "verse_key": "verse:Matt.22.17",
         "attestation_key": "attestation:wb-matt-p-caesar-1-22-17",
@@ -7487,6 +7919,42 @@
           "occurrence_ordinal": 1,
           "prefix": "“",
           "suffix": "’s,” they answered. "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-caesar-1-22-21-o2",
+        "verse_key": "verse:Matt.22.21",
+        "attestation_key": "attestation:wb-matt-p-caesar-1-22-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-caesar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Caesar",
+          "occurrence_ordinal": 2,
+          "prefix": "told them, “Give to ",
+          "suffix": " what is Caesar’s, a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-caesar-1-22-21-o3",
+        "verse_key": "verse:Matt.22.21",
+        "attestation_key": "attestation:wb-matt-p-caesar-1-22-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-caesar-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Caesar",
+          "occurrence_ordinal": 3,
+          "prefix": "e to Caesar what is ",
+          "suffix": "’s, and to God what "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7564,6 +8032,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-david-1-1-17-o2",
+        "verse_key": "verse:Matt.1.17",
+        "attestation_key": "attestation:wb-matt-p-david-1-1-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 2,
+          "prefix": "avid, fourteen from ",
+          "suffix": " to the exile to Bab"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-david-1-1-6",
         "verse_key": "verse:Matt.1.6",
         "attestation_key": "attestation:wb-matt-p-david-1-1-6",
@@ -7577,6 +8063,24 @@
           "occurrence_ordinal": 1,
           "prefix": "Jesse the father of ",
           "suffix": " the king. Next: Dav"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-david-1-1-6-o2",
+        "verse_key": "verse:Matt.1.6",
+        "attestation_key": "attestation:wb-matt-p-david-1-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 2,
+          "prefix": "vid the king. Next: ",
+          "suffix": " was the father of S"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7654,6 +8158,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-eleazar-9-1-15-o2",
+        "verse_key": "verse:Matt.1.15",
+        "attestation_key": "attestation:wb-matt-p-eleazar-9-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-eleazar-9"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Eleazar",
+          "occurrence_ordinal": 2,
+          "prefix": " father of Eleazar, ",
+          "suffix": " the father of Matth"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-eliakim-4-1-13",
         "verse_key": "verse:Matt.1.13",
         "attestation_key": "attestation:wb-matt-p-eliakim-4-1-13",
@@ -7667,6 +8189,24 @@
           "occurrence_ordinal": 1,
           "prefix": "Abiud the father of ",
           "suffix": ", and Eliakim the fa"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-eliakim-4-1-13-o2",
+        "verse_key": "verse:Matt.1.13",
+        "attestation_key": "attestation:wb-matt-p-eliakim-4-1-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-eliakim-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Eliakim",
+          "occurrence_ordinal": 2,
+          "prefix": "her of Eliakim, and ",
+          "suffix": " the father of Azor."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -8104,6 +8644,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-herod-2-14-6-o2",
+        "verse_key": "verse:Matt.14.6",
+        "attestation_key": "attestation:wb-matt-p-herod-2-14-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-herod-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Herod",
+          "occurrence_ordinal": 2,
+          "prefix": "re them and pleased ",
+          "suffix": ""
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-herodias-1-14-3",
         "verse_key": "verse:Matt.14.3",
         "attestation_key": "attestation:wb-matt-p-herodias-1-14-3",
@@ -8194,6 +8752,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-hezron-2-1-3-o2",
+        "verse_key": "verse:Matt.1.3",
+        "attestation_key": "attestation:wb-matt-p-hezron-2-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-hezron-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Hezron",
+          "occurrence_ordinal": 2,
+          "prefix": "ther of Hezron, and ",
+          "suffix": " the father of Ram."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-isaac-1-1-2",
         "verse_key": "verse:Matt.1.2",
         "attestation_key": "attestation:wb-matt-p-isaac-1-1-2",
@@ -8207,6 +8783,24 @@
           "occurrence_ordinal": 1,
           "prefix": "m was the father of ",
           "suffix": ", Isaac the father o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-isaac-1-1-2-o2",
+        "verse_key": "verse:Matt.1.2",
+        "attestation_key": "attestation:wb-matt-p-isaac-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-isaac-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Isaac",
+          "occurrence_ordinal": 2,
+          "prefix": "he father of Isaac, ",
+          "suffix": " the father of Jacob"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -8338,6 +8932,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-jacob-1-1-2-o2",
+        "verse_key": "verse:Matt.1.2",
+        "attestation_key": "attestation:wb-matt-p-jacob-1-1-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jacob-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jacob",
+          "occurrence_ordinal": 2,
+          "prefix": "ather of Jacob, and ",
+          "suffix": " the father of Judah"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-jacob-1-8-11",
         "verse_key": "verse:Matt.8.11",
         "attestation_key": "attestation:wb-matt-p-jacob-1-8-11",
@@ -8423,6 +9035,24 @@
           "occurrence_ordinal": 1,
           "prefix": "ook with Him Peter, ",
           "suffix": ", and John the broth"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-james-1-17-1-o2",
+        "verse_key": "verse:Matt.17.1",
+        "attestation_key": "attestation:wb-matt-p-james-1-17-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-james-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "James",
+          "occurrence_ordinal": 2,
+          "prefix": "John the brother of ",
+          "suffix": ", and led them up a "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -8554,6 +9184,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-jehoram-1-1-8-o2",
+        "verse_key": "verse:Matt.1.8",
+        "attestation_key": "attestation:wb-matt-p-jehoram-1-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jehoram-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Joram",
+          "occurrence_ordinal": 2,
+          "prefix": "ather of Joram, and ",
+          "suffix": " the father of Uzzia"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-jehoshaphat-3-1-8",
         "verse_key": "verse:Matt.1.8",
         "attestation_key": "attestation:wb-matt-p-jehoshaphat-3-1-8",
@@ -8567,6 +9215,24 @@
           "occurrence_ordinal": 1,
           "prefix": "a was the father of ",
           "suffix": ", Jehoshaphat the fa"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-jehoshaphat-3-1-8-o2",
+        "verse_key": "verse:Matt.1.8",
+        "attestation_key": "attestation:wb-matt-p-jehoshaphat-3-1-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jehoshaphat-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jehoshaphat",
+          "occurrence_ordinal": 2,
+          "prefix": "her of Jehoshaphat, ",
+          "suffix": " the father of Joram"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -8788,6 +9454,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-john-1-11-7-o2",
+        "verse_key": "verse:Matt.11.7",
+        "attestation_key": "attestation:wb-matt-p-john-1-11-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "John",
+          "occurrence_ordinal": 2,
+          "prefix": "to the crowds about ",
+          "suffix": ": “What did you go o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-john-1-14-10",
         "verse_key": "verse:Matt.14.10",
         "attestation_key": "attestation:wb-matt-p-john-1-14-10",
@@ -8873,6 +9557,24 @@
           "occurrence_ordinal": 1,
           "prefix": "erod wanted to kill ",
           "suffix": ", he was afraid of t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-john-1-14-5-o2",
+        "verse_key": "verse:Matt.14.5",
+        "attestation_key": "attestation:wb-matt-p-john-1-14-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-john-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "John",
+          "occurrence_ordinal": 2,
+          "prefix": "cause they regarded ",
+          "suffix": " as a prophet."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -9202,6 +9904,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-jonah-1-12-41-o2",
+        "verse_key": "verse:Matt.12.41",
+        "attestation_key": "attestation:wb-matt-p-jonah-1-12-41",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jonah-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jonah",
+          "occurrence_ordinal": 2,
+          "prefix": "ow One greater than ",
+          "suffix": " is here."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-jonah-1-16-4",
         "verse_key": "verse:Matt.16.4",
         "attestation_key": "attestation:wb-matt-p-jonah-1-16-4",
@@ -9490,6 +10210,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-jotham-2-1-9-o2",
+        "verse_key": "verse:Matt.1.9",
+        "attestation_key": "attestation:wb-matt-p-jotham-2-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-jotham-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jotham",
+          "occurrence_ordinal": 2,
+          "prefix": "e father of Jotham, ",
+          "suffix": " the father of Ahaz,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-judah-1-1-2",
         "verse_key": "verse:Matt.1.2",
         "attestation_key": "attestation:wb-matt-p-judah-1-1-2",
@@ -9652,6 +10390,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-manasseh-3-1-10-o2",
+        "verse_key": "verse:Matt.1.10",
+        "attestation_key": "attestation:wb-matt-p-manasseh-3-1-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-manasseh-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Manasseh",
+          "occurrence_ordinal": 2,
+          "prefix": "father of Manasseh, ",
+          "suffix": " the father of Amon,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-mary-1-1-16",
         "verse_key": "verse:Matt.1.16",
         "attestation_key": "attestation:wb-matt-p-mary-1-1-16",
@@ -9778,6 +10534,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-mary-1-27-56-o2",
+        "verse_key": "verse:Matt.27.56",
+        "attestation_key": "attestation:wb-matt-p-mary-1-27-56",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mary",
+          "occurrence_ordinal": 2,
+          "prefix": "ere Mary Magdalene, ",
+          "suffix": " the mother of James"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-mary-1-27-61",
         "verse_key": "verse:Matt.27.61",
         "attestation_key": "attestation:wb-matt-p-mary-1-27-61",
@@ -9791,6 +10565,24 @@
           "occurrence_ordinal": 1,
           "prefix": "",
           "suffix": " Magdalene and the o"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-mary-1-27-61-o2",
+        "verse_key": "verse:Matt.27.61",
+        "attestation_key": "attestation:wb-matt-p-mary-1-27-61",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mary",
+          "occurrence_ordinal": 2,
+          "prefix": "alene and the other ",
+          "suffix": " were sitting there "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -9814,6 +10606,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-mary-1-28-1-o2",
+        "verse_key": "verse:Matt.28.1",
+        "attestation_key": "attestation:wb-matt-p-mary-1-28-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-mary-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mary",
+          "occurrence_ordinal": 2,
+          "prefix": "alene and the other ",
+          "suffix": " went to see the tom"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-matthan-1-1-15",
         "verse_key": "verse:Matt.1.15",
         "attestation_key": "attestation:wb-matt-p-matthan-1-1-15",
@@ -9827,6 +10637,24 @@
           "occurrence_ordinal": 1,
           "prefix": "eazar the father of ",
           "suffix": ", Matthan the father"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-matthan-1-1-15-o2",
+        "verse_key": "verse:Matt.1.15",
+        "attestation_key": "attestation:wb-matt-p-matthan-1-1-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-matthan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Matthan",
+          "occurrence_ordinal": 2,
+          "prefix": " father of Matthan, ",
+          "suffix": " the father of Jacob"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -9863,6 +10691,24 @@
           "occurrence_ordinal": 1,
           "prefix": " He saw a man named ",
           "suffix": " sitting at the tax "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-matthew-1-9-9-o2",
+        "verse_key": "verse:Matt.9.9",
+        "attestation_key": "attestation:wb-matt-p-matthew-1-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-matthew-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Matthew",
+          "occurrence_ordinal": 2,
+          "prefix": ",” He told him, and ",
+          "suffix": " got up and followed"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -10012,6 +10858,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-nahshon-1-1-4-o2",
+        "verse_key": "verse:Matt.1.4",
+        "attestation_key": "attestation:wb-matt-p-nahshon-1-1-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-nahshon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Nahshon",
+          "occurrence_ordinal": 2,
+          "prefix": "her of Nahshon, and ",
+          "suffix": " the father of Salmo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-noah-1-24-37",
         "verse_key": "verse:Matt.24.37",
         "attestation_key": "attestation:wb-matt-p-noah-1-24-37",
@@ -10066,6 +10930,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-obed-1-1-5-o2",
+        "verse_key": "verse:Matt.1.5",
+        "attestation_key": "attestation:wb-matt-p-obed-1-1-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-obed-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Obed",
+          "occurrence_ordinal": 2,
+          "prefix": "er of Obed by Ruth, ",
+          "suffix": " the father of Jesse"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-perez-1-1-3",
         "verse_key": "verse:Matt.1.3",
         "attestation_key": "attestation:wb-matt-p-perez-1-1-3",
@@ -10079,6 +10961,24 @@
           "occurrence_ordinal": 1,
           "prefix": "h was the father of ",
           "suffix": " and Zerah by Tamar,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-perez-1-1-3-o2",
+        "verse_key": "verse:Matt.1.3",
+        "attestation_key": "attestation:wb-matt-p-perez-1-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-perez-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Perez",
+          "occurrence_ordinal": 2,
+          "prefix": "and Zerah by Tamar, ",
+          "suffix": " the father of Hezro"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -10228,6 +11128,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-pilate-1-27-58-o2",
+        "verse_key": "verse:Matt.27.58",
+        "attestation_key": "attestation:wb-matt-p-pilate-1-27-58",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-pilate-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Pilate",
+          "occurrence_ordinal": 2,
+          "prefix": " body of Jesus, and ",
+          "suffix": " ordered that it be "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-pilate-1-27-62",
         "verse_key": "verse:Matt.27.62",
         "attestation_key": "attestation:wb-matt-p-pilate-1-27-62",
@@ -10372,6 +11290,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-rehoboam-1-1-7-o2",
+        "verse_key": "verse:Matt.1.7",
+        "attestation_key": "attestation:wb-matt-p-rehoboam-1-1-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-rehoboam-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Rehoboam",
+          "occurrence_ordinal": 2,
+          "prefix": "father of Rehoboam, ",
+          "suffix": " the father of Abija"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-ruth-1-1-5",
         "verse_key": "verse:Matt.1.5",
         "attestation_key": "attestation:wb-matt-p-ruth-1-1-5",
@@ -10457,6 +11393,24 @@
           "occurrence_ordinal": 1,
           "prefix": "If ",
           "suffix": " drives out Satan, h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-satan-1-12-26-o2",
+        "verse_key": "verse:Matt.12.26",
+        "attestation_key": "attestation:wb-matt-p-satan-1-12-26",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 2,
+          "prefix": "If Satan drives out ",
+          "suffix": ", he is divided agai"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -10637,6 +11591,24 @@
           "occurrence_ordinal": 1,
           "prefix": "h was the father of ",
           "suffix": ", Shealtiel the fath"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-shealtiel-1-1-12-o2",
+        "verse_key": "verse:Matt.1.12",
+        "attestation_key": "attestation:wb-matt-p-shealtiel-1-1-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-shealtiel-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Shealtiel",
+          "occurrence_ordinal": 2,
+          "prefix": "ather of Shealtiel, ",
+          "suffix": " the father of Zerub"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -11092,6 +12064,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-simon-1-8-14-o2",
+        "verse_key": "verse:Matt.8.14",
+        "attestation_key": "attestation:wb-matt-p-simon-1-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-simon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Peter",
+          "occurrence_ordinal": 2,
+          "prefix": "ter’s house, He saw ",
+          "suffix": "’s mother-in-law sic"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-simon-2-10-4",
         "verse_key": "verse:Matt.10.4",
         "attestation_key": "attestation:wb-matt-p-simon-2-10-4",
@@ -11218,6 +12208,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-solomon-1-12-42-o2",
+        "verse_key": "verse:Matt.12.42",
+        "attestation_key": "attestation:wb-matt-p-solomon-1-12-42",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-solomon-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Solomon",
+          "occurrence_ordinal": 2,
+          "prefix": "ow One greater than ",
+          "suffix": " is here."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-solomon-1-6-29",
         "verse_key": "verse:Matt.6.29",
         "attestation_key": "attestation:wb-matt-p-solomon-1-6-29",
@@ -11326,6 +12334,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:matt-p-zadok-7-1-14-o2",
+        "verse_key": "verse:Matt.1.14",
+        "attestation_key": "attestation:wb-matt-p-zadok-7-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zadok-7"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zadok",
+          "occurrence_ordinal": 2,
+          "prefix": "he father of Zadok, ",
+          "suffix": " the father of Achim"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:matt-p-zebedee-1-10-2",
         "verse_key": "verse:Matt.10.2",
         "attestation_key": "attestation:wb-matt-p-zebedee-1-10-2",
@@ -11411,6 +12437,24 @@
           "occurrence_ordinal": 1,
           "prefix": "thers, James son of ",
           "suffix": " and his brother Joh"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:matt-p-zebedee-1-4-21-o2",
+        "verse_key": "verse:Matt.4.21",
+        "attestation_key": "attestation:wb-matt-p-zebedee-1-4-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-zebedee-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Zebedee",
+          "occurrence_ordinal": 2,
+          "prefix": "t with their father ",
+          "suffix": ", mending their nets"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -12975,7 +14019,9 @@
           "record_keys": [
             "mention:wb:matt-p-abram-1-1-2",
             "mention:wb:matt-p-isaac-1-1-2",
+            "mention:wb:matt-p-isaac-1-1-2-o2",
             "mention:wb:matt-p-jacob-1-1-2",
+            "mention:wb:matt-p-jacob-1-1-2-o2",
             "mention:wb:matt-p-judah-1-1-2"
           ],
           "blocker_question_keys": []
@@ -12987,8 +14033,10 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-hezron-2-1-3",
+            "mention:wb:matt-p-hezron-2-1-3-o2",
             "mention:wb:matt-p-judah-1-1-3",
             "mention:wb:matt-p-perez-1-1-3",
+            "mention:wb:matt-p-perez-1-1-3-o2",
             "mention:wb:matt-p-ram-1-1-3",
             "mention:wb:matt-p-tamar-1-1-3",
             "mention:wb:matt-p-zerah-3-1-3"
@@ -13002,7 +14050,9 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-amminadab-1-1-4",
+            "mention:wb:matt-p-amminadab-1-1-4-o2",
             "mention:wb:matt-p-nahshon-1-1-4",
+            "mention:wb:matt-p-nahshon-1-1-4-o2",
             "mention:wb:matt-p-ram-1-1-4",
             "mention:wb:matt-p-salmon-1-1-4"
           ],
@@ -13015,8 +14065,10 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-boaz-1-1-5",
+            "mention:wb:matt-p-boaz-1-1-5-o2",
             "mention:wb:matt-p-jesse-1-1-5",
             "mention:wb:matt-p-obed-1-1-5",
+            "mention:wb:matt-p-obed-1-1-5-o2",
             "mention:wb:matt-p-rahab-1-1-5",
             "mention:wb:matt-p-ruth-1-1-5",
             "mention:wb:matt-p-salmon-1-1-5"
@@ -13030,6 +14082,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-david-1-1-6",
+            "mention:wb:matt-p-david-1-1-6-o2",
             "mention:wb:matt-p-jesse-1-1-6",
             "mention:wb:matt-p-solomon-1-1-6",
             "mention:wb:matt-p-uriah-1-1-6"
@@ -13043,8 +14096,10 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-abijam-1-1-7",
+            "mention:wb:matt-p-abijam-1-1-7-o2",
             "mention:wb:matt-p-asa-1-1-7",
             "mention:wb:matt-p-rehoboam-1-1-7",
+            "mention:wb:matt-p-rehoboam-1-1-7-o2",
             "mention:wb:matt-p-solomon-1-1-7"
           ],
           "blocker_question_keys": []
@@ -13058,7 +14113,9 @@
             "mention:wb:matt-p-asa-1-1-8",
             "mention:wb:matt-p-azariah-3-1-8",
             "mention:wb:matt-p-jehoram-1-1-8",
-            "mention:wb:matt-p-jehoshaphat-3-1-8"
+            "mention:wb:matt-p-jehoram-1-1-8-o2",
+            "mention:wb:matt-p-jehoshaphat-3-1-8",
+            "mention:wb:matt-p-jehoshaphat-3-1-8-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13069,9 +14126,11 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-ahaz-1-1-9",
+            "mention:wb:matt-p-ahaz-1-1-9-o2",
             "mention:wb:matt-p-azariah-3-1-9",
             "mention:wb:matt-p-hezekiah-1-1-9",
-            "mention:wb:matt-p-jotham-2-1-9"
+            "mention:wb:matt-p-jotham-2-1-9",
+            "mention:wb:matt-p-jotham-2-1-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13082,9 +14141,11 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-amon-2-1-10",
+            "mention:wb:matt-p-amon-2-1-10-o2",
             "mention:wb:matt-p-hezekiah-1-1-10",
             "mention:wb:matt-p-josiah-1-1-10",
-            "mention:wb:matt-p-manasseh-3-1-10"
+            "mention:wb:matt-p-manasseh-3-1-10",
+            "mention:wb:matt-p-manasseh-3-1-10-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13107,6 +14168,7 @@
           "record_keys": [
             "mention:wb:matt-p-jehoiachin-1-1-12",
             "mention:wb:matt-p-shealtiel-1-1-12",
+            "mention:wb:matt-p-shealtiel-1-1-12-o2",
             "mention:wb:matt-p-zerubbabel-2-1-12"
           ],
           "blocker_question_keys": []
@@ -13119,6 +14181,7 @@
           "record_keys": [
             "mention:wb:matt-p-azor-1-1-13",
             "mention:wb:matt-p-eliakim-4-1-13",
+            "mention:wb:matt-p-eliakim-4-1-13-o2",
             "mention:wb:matt-p-zerubbabel-2-1-13"
           ],
           "blocker_question_keys": []
@@ -13130,9 +14193,11 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-achim-1-1-14",
+            "mention:wb:matt-p-achim-1-1-14-o2",
             "mention:wb:matt-p-azor-1-1-14",
             "mention:wb:matt-p-eliud-1-1-14",
-            "mention:wb:matt-p-zadok-7-1-14"
+            "mention:wb:matt-p-zadok-7-1-14",
+            "mention:wb:matt-p-zadok-7-1-14-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13143,9 +14208,11 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-eleazar-9-1-15",
+            "mention:wb:matt-p-eleazar-9-1-15-o2",
             "mention:wb:matt-p-eliud-1-1-15",
             "mention:wb:matt-p-jacob-2-1-15",
-            "mention:wb:matt-p-matthan-1-1-15"
+            "mention:wb:matt-p-matthan-1-1-15",
+            "mention:wb:matt-p-matthan-1-1-15-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13169,7 +14236,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-abram-1-1-17",
-            "mention:wb:matt-p-david-1-1-17"
+            "mention:wb:matt-p-david-1-1-17",
+            "mention:wb:matt-p-david-1-1-17-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13477,7 +14545,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-god-3-9",
-            "mention:wb:matt-p-abram-1-3-9"
+            "mention:wb:matt-p-abram-1-3-9",
+            "mention:wb:matt-p-abram-1-3-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13691,7 +14760,8 @@
           "record_keys": [
             "mention:wb:matt-p-james-1-4-21",
             "mention:wb:matt-p-john-2-4-21",
-            "mention:wb:matt-p-zebedee-1-4-21"
+            "mention:wb:matt-p-zebedee-1-4-21",
+            "mention:wb:matt-p-zebedee-1-4-21-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13823,7 +14893,8 @@
             "verse:Matt.6.6"
           ],
           "record_keys": [
-            "mention:wb:matt-god-6-6"
+            "mention:wb:matt-god-6-6",
+            "mention:wb:matt-god-6-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13873,7 +14944,8 @@
             "verse:Matt.6.18"
           ],
           "record_keys": [
-            "mention:wb:matt-god-6-18"
+            "mention:wb:matt-god-6-18",
+            "mention:wb:matt-god-6-18-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14048,7 +15120,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-jesus-christ-8-14",
-            "mention:wb:matt-p-simon-1-8-14"
+            "mention:wb:matt-p-simon-1-8-14",
+            "mention:wb:matt-p-simon-1-8-14-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14179,7 +15252,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-jesus-christ-9-9",
-            "mention:wb:matt-p-matthew-1-9-9"
+            "mention:wb:matt-p-matthew-1-9-9",
+            "mention:wb:matt-p-matthew-1-9-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14454,7 +15528,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-jesus-christ-11-7",
-            "mention:wb:matt-p-john-1-11-7"
+            "mention:wb:matt-p-john-1-11-7",
+            "mention:wb:matt-p-john-1-11-7-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14589,7 +15664,9 @@
             "verse:Matt.11.27"
           ],
           "record_keys": [
-            "mention:wb:matt-god-11-27"
+            "mention:wb:matt-god-11-27",
+            "mention:wb:matt-god-11-27-o2",
+            "mention:wb:matt-god-11-27-o3"
           ],
           "blocker_question_keys": []
         },
@@ -14699,7 +15776,8 @@
             "verse:Matt.12.26"
           ],
           "record_keys": [
-            "mention:wb:matt-p-satan-1-12-26"
+            "mention:wb:matt-p-satan-1-12-26",
+            "mention:wb:matt-p-satan-1-12-26-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14719,6 +15797,7 @@
             "verse:Matt.12.28"
           ],
           "record_keys": [
+            "mention:wb:matt-god-12-28-o2",
             "mention:wb:matt-holy-spirit-12-28"
           ],
           "blocker_question_keys": []
@@ -14762,6 +15841,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-jonah-1-12-41",
+            "mention:wb:matt-p-jonah-1-12-41-o2",
             "mention:wb:matt-pl-nineveh-a70fd5d-12-41"
           ],
           "blocker_question_keys": []
@@ -14773,7 +15853,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-queen-of-sheba-1-12-42",
-            "mention:wb:matt-p-solomon-1-12-42"
+            "mention:wb:matt-p-solomon-1-12-42",
+            "mention:wb:matt-p-solomon-1-12-42-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14962,7 +16043,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-herod-2-14-5",
-            "mention:wb:matt-p-john-1-14-5"
+            "mention:wb:matt-p-john-1-14-5",
+            "mention:wb:matt-p-john-1-14-5-o2"
           ],
           "blocker_question_keys": []
         },
@@ -14973,6 +16055,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-p-herod-2-14-6",
+            "mention:wb:matt-p-herod-2-14-6-o2",
             "mention:wb:matt-p-herodias-1-14-6"
           ],
           "blocker_question_keys": []
@@ -15054,6 +16137,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-jesus-christ-14-29",
+            "mention:wb:matt-jesus-christ-14-29-o2",
             "mention:wb:matt-p-simon-1-14-29"
           ],
           "blocker_question_keys": []
@@ -15442,6 +16526,7 @@
           "record_keys": [
             "mention:wb:matt-jesus-christ-17-1",
             "mention:wb:matt-p-james-1-17-1",
+            "mention:wb:matt-p-james-1-17-1-o2",
             "mention:wb:matt-p-john-2-17-1",
             "mention:wb:matt-p-simon-1-17-1"
           ],
@@ -16173,7 +17258,10 @@
           ],
           "record_keys": [
             "mention:wb:matt-god-22-21",
-            "mention:wb:matt-p-caesar-1-22-21"
+            "mention:wb:matt-god-22-21-o2",
+            "mention:wb:matt-p-caesar-1-22-21",
+            "mention:wb:matt-p-caesar-1-22-21-o2",
+            "mention:wb:matt-p-caesar-1-22-21-o3"
           ],
           "blocker_question_keys": []
         },
@@ -16224,7 +17312,10 @@
             "verse:Matt.22.32"
           ],
           "record_keys": [
-            "mention:wb:matt-god-22-32"
+            "mention:wb:matt-god-22-32",
+            "mention:wb:matt-god-22-32-o2",
+            "mention:wb:matt-god-22-32-o3",
+            "mention:wb:matt-god-22-32-o4"
           ],
           "blocker_question_keys": []
         },
@@ -16348,7 +17439,8 @@
             "verse:Matt.23.37"
           ],
           "record_keys": [
-            "mention:wb:matt-jerusalem-23-37"
+            "mention:wb:matt-jerusalem-23-37",
+            "mention:wb:matt-jerusalem-23-37-o2"
           ],
           "blocker_question_keys": []
         },
@@ -16428,7 +17520,8 @@
             "verse:Matt.24.30"
           ],
           "record_keys": [
-            "mention:wb:matt-jesus-christ-24-30"
+            "mention:wb:matt-jesus-christ-24-30",
+            "mention:wb:matt-jesus-christ-24-30-o2"
           ],
           "blocker_question_keys": []
         },
@@ -16793,7 +17886,8 @@
             "verse:Matt.26.50"
           ],
           "record_keys": [
-            "mention:wb:matt-jesus-christ-26-50"
+            "mention:wb:matt-jesus-christ-26-50",
+            "mention:wb:matt-jesus-christ-26-50-o2"
           ],
           "blocker_question_keys": []
         },
@@ -16885,6 +17979,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-god-26-63",
+            "mention:wb:matt-god-26-63-o2",
             "mention:wb:matt-jesus-christ-26-63"
           ],
           "blocker_question_keys": []
@@ -16999,7 +18094,8 @@
             "verse:Matt.27.11"
           ],
           "record_keys": [
-            "mention:wb:matt-jesus-christ-27-11"
+            "mention:wb:matt-jesus-christ-27-11",
+            "mention:wb:matt-jesus-christ-27-11-o2"
           ],
           "blocker_question_keys": []
         },
@@ -17146,6 +18242,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-god-27-43",
+            "mention:wb:matt-god-27-43-o2",
             "mention:wb:matt-jesus-christ-27-43"
           ],
           "blocker_question_keys": []
@@ -17157,6 +18254,7 @@
           ],
           "record_keys": [
             "mention:wb:matt-god-27-46",
+            "mention:wb:matt-god-27-46-o2",
             "mention:wb:matt-jesus-christ-27-46"
           ],
           "blocker_question_keys": []
@@ -17220,6 +18318,7 @@
             "mention:wb:matt-p-james-3-27-56",
             "mention:wb:matt-p-joseph-7-27-56",
             "mention:wb:matt-p-mary-1-27-56",
+            "mention:wb:matt-p-mary-1-27-56-o2",
             "mention:wb:matt-p-zebedee-1-27-56"
           ],
           "blocker_question_keys": []
@@ -17243,7 +18342,8 @@
           ],
           "record_keys": [
             "mention:wb:matt-jesus-christ-27-58",
-            "mention:wb:matt-p-pilate-1-27-58"
+            "mention:wb:matt-p-pilate-1-27-58",
+            "mention:wb:matt-p-pilate-1-27-58-o2"
           ],
           "blocker_question_keys": []
         },
@@ -17263,7 +18363,8 @@
             "verse:Matt.27.61"
           ],
           "record_keys": [
-            "mention:wb:matt-p-mary-1-27-61"
+            "mention:wb:matt-p-mary-1-27-61",
+            "mention:wb:matt-p-mary-1-27-61-o2"
           ],
           "blocker_question_keys": []
         },
@@ -17293,7 +18394,8 @@
             "verse:Matt.28.1"
           ],
           "record_keys": [
-            "mention:wb:matt-p-mary-1-28-1"
+            "mention:wb:matt-p-mary-1-28-1",
+            "mention:wb:matt-p-mary-1-28-1-o2"
           ],
           "blocker_question_keys": []
         },
@@ -17373,7 +18475,8 @@
     },
     {
       "code": "ambiguous-mention-referents-dropped",
-      "note": "4 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
+      "note": "8 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
     }
-  ]
+  ],
+  "content_digest": "sha256:8c237948e2abaceff7b438937e065d2d55cb6257cbf67abf3afb20f049068622"
 }

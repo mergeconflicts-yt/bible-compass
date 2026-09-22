@@ -198,21 +198,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-hagar-1",
-        "entity_type": "person",
-        "proposed_label": "Hagar",
-        "label_language_tag": "en",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:pl-arabia-2-a0f4ea8",
         "entity_type": "place",
@@ -1319,318 +1309,20 @@
       }
     ],
     "relationships": [],
-    "events": [
-      {
-        "event_key": "event:wb-gal-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-saul-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galatia-a0f440a"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-1-p1:refsys:eng-v22:gal.1.1-gal.1.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-1-p2:refsys:eng-v22:gal.1.6-gal.1.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-1-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-james-1",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-arabia-2-a0f4ea8",
-          "entity:pl-cilicia-ad63819",
-          "entity:pl-damascus-a69c1d4",
-          "entity:pl-judea-1-a149f13",
-          "entity:pl-syria-2-a890adf"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-1-p3:refsys:eng-v22:gal.1.10-gal.1.24",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-joseph-12",
-          "entity:p-simon-1",
-          "entity:p-titus-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-2-p1:refsys:eng-v22:gal.2.1-gal.2.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-2-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-james-1",
-          "entity:p-joseph-12",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-antioch-1-ae41ab4"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-2-p2:refsys:eng-v22:gal.2.11-gal.2.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-3-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-abram-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-3-p1:refsys:eng-v22:gal.3.1-gal.3.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-3-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-abram-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-3-p2:refsys:eng-v22:gal.3.10-gal.3.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-3-p3",
-        "event_type": "law",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-abram-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-3-p3:refsys:eng-v22:gal.3.15-gal.3.25",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-3-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-abram-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-3-p4:refsys:eng-v22:gal.3.26-gal.3.29",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-4-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-4-p1:refsys:eng-v22:gal.4.1-gal.4.7",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-4-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-4-p2:refsys:eng-v22:gal.4.8-gal.4.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-4-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-abram-1",
-          "entity:p-hagar-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-arabia-2-a0f4ea8",
-          "entity:pl-mount-sinai-abfba2a"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-4-p3:refsys:eng-v22:gal.4.21-gal.4.31",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-5-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-saul-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-5-p1:refsys:eng-v22:gal.5.1-gal.5.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-5-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-5-p2:refsys:eng-v22:gal.5.16-gal.5.26",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-6-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-6-p1:refsys:eng-v22:gal.6.1-gal.6.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-gal-6-p2",
-        "event_type": "battle",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-gal-6-p2:refsys:eng-v22:gal.6.11-gal.6.18",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-arabia-2-a0f4ea8",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-arabia-2-a0f4ea8",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -2972,8 +2664,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:d6cf27b25fe5341bddcc3b433c567af185ed31d13f5ece970bb430ad07b459e9"
 }

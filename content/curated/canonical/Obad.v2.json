@@ -51,7 +51,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
@@ -472,71 +472,20 @@
       }
     ],
     "relationships": [],
-    "events": [
-      {
-        "event_key": "event:wb-obad-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-obadiah-12",
-          "entity:tribe-of-judah"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-edom-a2735ff",
-          "entity:pl-mount-esau-a8e843f",
-          "entity:pl-teman-a831506"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-obad-1-p1:refsys:eng-v22:obad.1.1-obad.1.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-obad-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:p-esau-1",
-          "entity:tribe-of-joseph"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-canaan-a581f0c",
-          "entity:pl-edom-a2735ff",
-          "entity:pl-gilead-1-ae73b90",
-          "entity:pl-halah-abf176f",
-          "entity:pl-mount-esau-a8e843f",
-          "entity:pl-mount-zion-abd9596",
-          "entity:pl-negeb-a1cb244",
-          "entity:pl-philistia-ac71e65",
-          "entity:pl-samaria-1-a041bb3",
-          "entity:pl-sepharad-a0a98de",
-          "entity:pl-shephelah-af084cf",
-          "entity:pl-zarephath-a6fa2d3"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-obad-1-p2:refsys:eng-v22:obad.1.15-obad.1.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-mount-esau-a8e843f",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-mount-esau-a8e843f",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -547,7 +496,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-sepharad-a0a98de",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -1039,8 +994,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:114be7f24d82af763de368dca76000c82d7de08021ae7bc394c02e2d06fa0f92"
 }

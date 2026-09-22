@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-mark-canonical",
-  "package_revision": 1,
-  "submission_id": "submission:wb-mark-canonical:attempt-1",
-  "attempt": 1,
+  "package_revision": 2,
+  "submission_id": "submission:wb-mark-canonical:attempt-2",
+  "attempt": 2,
   "produced_for_job_id": "job:wb-mark-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
@@ -812,15 +812,15 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
     "entity_candidates": [
       {
-        "candidate_key": "candidate:wb:p-joseph-7",
+        "candidate_key": "candidate:wb:p-legion-1",
         "entity_type": "person",
-        "proposed_label": "Joseph",
+        "proposed_label": "Legion",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -828,19 +828,9 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-simon-3",
+        "candidate_key": "candidate:wb:p-jairus-1",
         "entity_type": "person",
-        "proposed_label": "Simon",
-        "label_language_tag": "en",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-simon-4",
-        "entity_type": "person",
-        "proposed_label": "Simon",
+        "proposed_label": "Jairus",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -908,9 +898,9 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-caesarea-philippi-ab7bf48",
+        "candidate_key": "candidate:wb:pl-bethsaida-2-a9fc13a",
         "entity_type": "place",
-        "proposed_label": "Caesarea Philippi",
+        "proposed_label": "Bethsaida 2",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -928,19 +918,9 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-decapolis-ae733a2",
+        "candidate_key": "candidate:wb:pl-gerasa-ada6b64",
         "entity_type": "place",
-        "proposed_label": "Decapolis",
-        "label_language_tag": "en",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-gethsemane-a42418f",
-        "entity_type": "place",
-        "proposed_label": "Gethsemane",
+        "proposed_label": "Gerasa",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -951,6 +931,16 @@
         "candidate_key": "candidate:wb:pl-idumea-a2517a0",
         "entity_type": "place",
         "proposed_label": "Idumea",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-phoenicia-a33d53e",
+        "entity_type": "place",
+        "proposed_label": "Phoenicia",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -2496,7 +2486,7 @@
         "reference_key": "verse:Mark.15.40",
         "entity_key": "entity:p-mary-2",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -2506,7 +2496,7 @@
         "reference_key": "verse:Mark.15.47",
         "entity_key": "entity:p-mary-2",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -2516,7 +2506,7 @@
         "reference_key": "verse:Mark.16.1",
         "entity_key": "entity:p-mary-2",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -5412,6 +5402,9 @@
           "scope:wb-mark-15:refsys:eng-v22:mark.15.1-mark.15.47"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5423,6 +5416,9 @@
           "scope:wb-mark-10:refsys:eng-v22:mark.10.1-mark.10.52"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5434,6 +5430,9 @@
           "scope:wb-mark-5:refsys:eng-v22:mark.5.1-mark.5.43"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5445,6 +5444,9 @@
           "scope:wb-mark-15:refsys:eng-v22:mark.15.1-mark.15.47"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5456,6 +5458,9 @@
           "scope:wb-mark-15:refsys:eng-v22:mark.15.1-mark.15.47"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5467,6 +5472,9 @@
           "scope:wb-mark-15:refsys:eng-v22:mark.15.1-mark.15.47"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5478,6 +5486,9 @@
           "scope:wb-mark-5:refsys:eng-v22:mark.5.1-mark.5.43"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -5489,1611 +5500,26 @@
           "scope:wb-mark-10:refsys:eng-v22:mark.10.1-mark.10.52"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       }
     ],
-    "events": [
-      {
-        "event_key": "event:wb-mark-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:holy-spirit",
-          "entity:jesus-christ",
-          "entity:p-isaiah-1",
-          "entity:p-john-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-galilee-1-a9cf1e8",
-          "entity:pl-jordan-ae686c9",
-          "entity:pl-judea-1-a149f13",
-          "entity:pl-nazareth-af5884f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p1:refsys:eng-v22:mark.1.1-mark.1.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-john-1",
-          "entity:p-satan-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p2:refsys:eng-v22:mark.1.12-mark.1.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-1-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-andrew-1",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-simon-1",
-          "entity:p-zebedee-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-sea-of-galilee-a562fcc"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p3:refsys:eng-v22:mark.1.16-mark.1.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-1-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-capernaum-af2161c",
-          "entity:pl-galilee-1-a9cf1e8",
-          "entity:pl-nazareth-af5884f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p4:refsys:eng-v22:mark.1.21-mark.1.28",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-1-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-andrew-1",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p5:refsys:eng-v22:mark.1.29-mark.1.34",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-1-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p6:refsys:eng-v22:mark.1.35-mark.1.39",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-1-p7",
-        "event_type": "prayer",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-moses-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-1-p7:refsys:eng-v22:mark.1.40-mark.1.45",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-10-p1",
-        "event_type": "teaching",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-moses-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-capernaum-af2161c",
-          "entity:pl-jordan-ae686c9",
-          "entity:pl-judea-1-a149f13"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-10-p1:refsys:eng-v22:mark.10.1-mark.10.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-10-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-10-p2:refsys:eng-v22:mark.10.13-mark.10.16",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-10-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-10-p3:refsys:eng-v22:mark.10.17-mark.10.31",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-10-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-10-p4:refsys:eng-v22:mark.10.32-mark.10.34",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-10-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-zebedee-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-10-p5:refsys:eng-v22:mark.10.35-mark.10.45",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-10-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-bartimaeus-1",
-          "entity:p-timaeus-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-jericho-2-aaf03fa",
-          "entity:pl-nazareth-af5884f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-10-p6:refsys:eng-v22:mark.10.46-mark.10.52",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-11-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-david-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-bethany-1-a4f35bc",
-          "entity:pl-bethphage-abff59d",
-          "entity:pl-mount-of-olives-ac2c4c5"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-11-p1:refsys:eng-v22:mark.11.1-mark.11.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-11-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:pl-bethany-1-a4f35bc"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-11-p2:refsys:eng-v22:mark.11.12-mark.11.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-11-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-11-p3:refsys:eng-v22:mark.11.15-mark.11.19",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-11-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-11-p4:refsys:eng-v22:mark.11.20-mark.11.25",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-11-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-john-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-11-p5:refsys:eng-v22:mark.11.27-mark.11.33",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-12-p1",
-        "event_type": "teaching",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-12-p1:refsys:eng-v22:mark.12.1-mark.12.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-12-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-caesar-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-12-p2:refsys:eng-v22:mark.12.13-mark.12.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-12-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-moses-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-12-p3:refsys:eng-v22:mark.12.18-mark.12.27",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-12-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-12-p4:refsys:eng-v22:mark.12.28-mark.12.34",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-12-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:holy-spirit",
-          "entity:jesus-christ",
-          "entity:p-david-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-12-p5:refsys:eng-v22:mark.12.35-mark.12.37",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-13-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-andrew-1",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-mount-of-olives-ac2c4c5"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-13-p1:refsys:eng-v22:mark.13.1-mark.13.8",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-13-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:holy-spirit"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-13-p2:refsys:eng-v22:mark.13.9-mark.13.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-13-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-judea-1-a149f13"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-13-p3:refsys:eng-v22:mark.13.14-mark.13.23",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-13-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-13-p4:refsys:eng-v22:mark.13.24-mark.13.27",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-13-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-13-p6:refsys:eng-v22:mark.13.32-mark.13.37",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p10",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-nazareth-af5884f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p10:refsys:eng-v22:mark.14.66-mark.14.72",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-simon-4"
-        ],
-        "place_entity_keys": [
-          "entity:pl-bethany-1-a4f35bc"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p2:refsys:eng-v22:mark.14.3-mark.14.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-judas-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p3:refsys:eng-v22:mark.14.10-mark.14.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p4:refsys:eng-v22:mark.14.12-mark.14.16",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-mount-of-olives-ac2c4c5"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p5:refsys:eng-v22:mark.14.17-mark.14.26",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p6:refsys:eng-v22:mark.14.27-mark.14.31",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p7",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-gethsemane-a42418f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p7:refsys:eng-v22:mark.14.32-mark.14.42",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p8",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-judas-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p8:refsys:eng-v22:mark.14.43-mark.14.52",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-14-p9",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-14-p9:refsys:eng-v22:mark.14.53-mark.14.65",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-pilate-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p1:refsys:eng-v22:mark.15.1-mark.15.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-barabbas-1",
-          "entity:p-pilate-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p2:refsys:eng-v22:mark.15.6-mark.15.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-barabbas-1",
-          "entity:p-pilate-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p3:refsys:eng-v22:mark.15.12-mark.15.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p4:refsys:eng-v22:mark.15.16-mark.15.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-alexander-1",
-          "entity:p-rufus-1",
-          "entity:p-simon-5"
-        ],
-        "place_entity_keys": [
-          "entity:pl-cyrene-a81cdb5",
-          "entity:pl-golgotha-a631d35"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p5:refsys:eng-v22:mark.15.21-mark.15.32",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p6",
-        "event_type": "death",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-elijah-1",
-          "entity:p-james-3",
-          "entity:p-joseph-7",
-          "entity:p-mary-1",
-          "entity:p-mary-2",
-          "entity:p-salome-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p6:refsys:eng-v22:mark.15.33-mark.15.41",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-15-p7",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-joseph-7",
-          "entity:p-joseph-8",
-          "entity:p-mary-1",
-          "entity:p-mary-2",
-          "entity:p-pilate-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-arimathea-af3d9fc"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-15-p7:refsys:eng-v22:mark.15.42-mark.15.47",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-16-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-james-3",
-          "entity:p-mary-1",
-          "entity:p-mary-2",
-          "entity:p-salome-1",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8",
-          "entity:pl-nazareth-af5884f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-16-p1:refsys:eng-v22:mark.16.1-mark.16.8",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-16-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-mary-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-16-p2:refsys:eng-v22:mark.16.9-mark.16.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-16-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-16-p3:refsys:eng-v22:mark.16.12-mark.16.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-16-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-16-p5:refsys:eng-v22:mark.16.19-mark.16.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-capernaum-af2161c"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-2-p1:refsys:eng-v22:mark.2.1-mark.2.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-2-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-alphaeus-1",
-          "entity:p-james-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-2-p2:refsys:eng-v22:mark.2.13-mark.2.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-2-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-john-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-2-p3:refsys:eng-v22:mark.2.18-mark.2.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-2-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-abiathar-1",
-          "entity:p-david-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-2-p5:refsys:eng-v22:mark.2.23-mark.2.28",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-3-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-galilee-1-a9cf1e8",
-          "entity:pl-idumea-a2517a0",
-          "entity:pl-jordan-ae686c9",
-          "entity:pl-judea-1-a149f13",
-          "entity:pl-sidon-a98e4d7",
-          "entity:pl-tyre-a160272"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-3-p2:refsys:eng-v22:mark.3.7-mark.3.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-3-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-alphaeus-1",
-          "entity:p-andrew-1",
-          "entity:p-bartholomew-1",
-          "entity:p-james-1",
-          "entity:p-james-2",
-          "entity:p-john-2",
-          "entity:p-judas-1",
-          "entity:p-matthew-1",
-          "entity:p-philip-1",
-          "entity:p-simon-1",
-          "entity:p-simon-2",
-          "entity:p-thaddaeus-1",
-          "entity:p-thomas-1",
-          "entity:p-zebedee-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-3-p3:refsys:eng-v22:mark.3.13-mark.3.19",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-3-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-satan-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-3-p4:refsys:eng-v22:mark.3.20-mark.3.27",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-3-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:holy-spirit"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-3-p5:refsys:eng-v22:mark.3.28-mark.3.30",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-3-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-3-p6:refsys:eng-v22:mark.3.31-mark.3.35",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-4-p2",
-        "event_type": "teaching",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-4-p2:refsys:eng-v22:mark.4.10-mark.4.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-4-p3",
-        "event_type": "teaching",
-        "participant_entity_keys": [
-          "entity:p-satan-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-4-p3:refsys:eng-v22:mark.4.13-mark.4.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-4-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-4-p5:refsys:eng-v22:mark.4.26-mark.4.29",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-4-p6",
-        "event_type": "teaching",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-4-p6:refsys:eng-v22:mark.4.30-mark.4.34",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-4-p7",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-4-p7:refsys:eng-v22:mark.4.35-mark.4.41",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-5-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-legion-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-decapolis-ae733a2",
-          "entity:pl-gerasa-ada6b64"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-5-p1:refsys:eng-v22:mark.5.1-mark.5.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-5-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-daughter-1",
-          "entity:p-jairus-1",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-simon-1",
-          "entity:p-talitha-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-5-p2:refsys:eng-v22:mark.5.21-mark.5.43",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-6-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-james-3",
-          "entity:p-joseph-7",
-          "entity:p-judas-2",
-          "entity:p-mary-1",
-          "entity:p-simon-3"
-        ],
-        "place_entity_keys": [
-          "entity:pl-nazareth-af5884f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-6-p1:refsys:eng-v22:mark.6.1-mark.6.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-6-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:pl-gomorrah-aa572e2",
-          "entity:pl-sodom-a0aa664"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-6-p2:refsys:eng-v22:mark.6.7-mark.6.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-6-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-elijah-1",
-          "entity:p-herod-2",
-          "entity:p-herodias-1",
-          "entity:p-john-1",
-          "entity:p-philip-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-6-p3:refsys:eng-v22:mark.6.14-mark.6.29",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-6-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-6-p4:refsys:eng-v22:mark.6.30-mark.6.44",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-6-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-bethsaida-2-a9fc13a"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-6-p5:refsys:eng-v22:mark.6.45-mark.6.52",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-6-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:pl-gennesaret-a7de69e"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-6-p6:refsys:eng-v22:mark.6.53-mark.6.56",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-7-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-isaiah-1",
-          "entity:p-moses-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-7-p1:refsys:eng-v22:mark.7.1-mark.7.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-7-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8",
-          "entity:pl-phoenicia-a33d53e",
-          "entity:pl-sidon-a98e4d7",
-          "entity:pl-tyre-a160272"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-7-p3:refsys:eng-v22:mark.7.24-mark.7.30",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-7-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-decapolis-ae733a2",
-          "entity:pl-sea-of-galilee-a562fcc",
-          "entity:pl-sidon-a98e4d7",
-          "entity:pl-tyre-a160272"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-7-p4:refsys:eng-v22:mark.7.31-mark.7.37",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-8-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-dalmanutha-ae8d09d"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-8-p1:refsys:eng-v22:mark.8.1-mark.8.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-8-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-herod-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-8-p3:refsys:eng-v22:mark.8.14-mark.8.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-8-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-bethsaida-2-a9fc13a"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-8-p4:refsys:eng-v22:mark.8.22-mark.8.26",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-8-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-elijah-1",
-          "entity:p-john-1",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-caesarea-philippi-ab7bf48",
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-8-p5:refsys:eng-v22:mark.8.27-mark.8.30",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-8-p6",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-satan-1",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-8-p6:refsys:eng-v22:mark.8.31-mark.8.33",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-8-p7",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-8-p7:refsys:eng-v22:mark.8.34-mark.8.38",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-9-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:jesus-christ",
-          "entity:p-elijah-1",
-          "entity:p-james-1",
-          "entity:p-john-2",
-          "entity:p-moses-1",
-          "entity:p-simon-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-9-p1:refsys:eng-v22:mark.9.1-mark.9.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-9-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-9-p2:refsys:eng-v22:mark.9.14-mark.9.29",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-9-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ"
-        ],
-        "place_entity_keys": [
-          "entity:pl-galilee-1-a9cf1e8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-9-p3:refsys:eng-v22:mark.9.30-mark.9.32",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-9-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:jesus-christ",
-          "entity:p-john-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-capernaum-af2161c"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-9-p4:refsys:eng-v22:mark.9.33-mark.9.41",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-mark-9-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-mark-9-p5:refsys:eng-v22:mark.9.42-mark.9.48",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
-        "entity_key": "entity:pl-caesarea-philippi-ab7bf48",
+        "entity_key": "entity:pl-bethsaida-2-a9fc13a",
         "geographic_positions": [
           {
-            "evidence_item_key": "evidence:openbible:pl-caesarea-philippi-ab7bf48",
-            "precision": "approximate",
+            "evidence_item_key": "evidence:openbible:pl-bethsaida-2-a9fc13a",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -7104,29 +5530,30 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-dalmanutha-ae8d09d",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-decapolis-ae733a2",
+        "entity_key": "entity:pl-gerasa-ada6b64",
         "geographic_positions": [
           {
-            "evidence_item_key": "evidence:openbible:pl-decapolis-ae733a2",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-gethsemane-a42418f",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-gethsemane-a42418f",
-            "precision": "approximate",
+            "evidence_item_key": "evidence:openbible:pl-gerasa-ada6b64",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -7137,7 +5564,30 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-idumea-a2517a0",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-phoenicia-a33d53e",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-phoenicia-a33d53e",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -12687,12 +11137,13 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     },
     {
       "code": "ambiguous-mention-referents-dropped",
-      "note": "3 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
+      "note": "6 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
-  ]
+  ],
+  "content_digest": "sha256:57be269fbb5a390f29dee9a0feb71e08c8665d097390124bc6d70d17a69b6b3e"
 }

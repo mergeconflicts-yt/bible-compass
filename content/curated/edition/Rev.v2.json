@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-rev-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-rev-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-rev-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-rev-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -507,14 +507,14 @@
       "verse:Rev.22.21"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-rev-canonical",
       "revision": 1,
-      "digest": "sha256:8af957a3112b88bcc9b17aa25cb4a4e1447ab1a154f80f381a311139c11d2aeb"
+      "digest": "sha256:df3a0aa826edcec2407be744b402d2adf8441132d36a5435e26431f743aa974c"
     }
   ],
   "records": {
@@ -700,6 +700,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:rev-god-11-16-o2",
+        "verse_key": "verse:Rev.11.16",
+        "attestation_key": "attestation:wb-rev-god-11-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "faces and worshiped ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:rev-god-11-17",
         "verse_key": "verse:Rev.11.17",
         "attestation_key": "attestation:wb-rev-god-11-17",
@@ -749,6 +767,24 @@
           "occurrence_ordinal": 1,
           "prefix": " the kingdom of our ",
           "suffix": ", and the authority "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-god-12-10-o2",
+        "verse_key": "verse:Rev.12.10",
+        "attestation_key": "attestation:wb-rev-god-12-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "nd night before our ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -988,6 +1024,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:rev-god-15-3-o2",
+        "verse_key": "verse:Rev.15.3",
+        "attestation_key": "attestation:wb-rev-god-15-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " Your works, O Lord ",
+          "suffix": " Almighty! Just and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:rev-god-15-7",
         "verse_key": "verse:Rev.15.7",
         "attestation_key": "attestation:wb-rev-god-15-7",
@@ -1181,6 +1235,24 @@
           "occurrence_ordinal": 1,
           "prefix": "For ",
           "suffix": " has put it into the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-god-17-17-o2",
+        "verse_key": "verse:Rev.17.17",
+        "attestation_key": "attestation:wb-rev-god-17-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " until the words of ",
+          "suffix": " are fulfilled."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1600,6 +1672,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:rev-god-21-3-o2",
+        "verse_key": "verse:Rev.21.3",
+        "attestation_key": "attestation:wb-rev-god-21-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " be His people, and ",
+          "suffix": " Himself will be wit"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-god-21-3-o3",
+        "verse_key": "verse:Rev.21.3",
+        "attestation_key": "attestation:wb-rev-god-21-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": " with them as their ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:rev-god-21-7",
         "verse_key": "verse:Rev.21.7",
         "attestation_key": "attestation:wb-rev-god-21-7",
@@ -1775,6 +1883,60 @@
           "occurrence_ordinal": 1,
           "prefix": "in the temple of My ",
           "suffix": ", and he will never "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-god-3-12-o2",
+        "verse_key": "verse:Rev.3.12",
+        "attestation_key": "attestation:wb-rev-god-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "rite the name of My ",
+          "suffix": ", and the name of th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-god-3-12-o3",
+        "verse_key": "verse:Rev.3.12",
+        "attestation_key": "attestation:wb-rev-god-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "e of the city of My ",
+          "suffix": " (the new Jerusalem "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-god-3-12-o4",
+        "verse_key": "verse:Rev.3.12",
+        "attestation_key": "attestation:wb-rev-god-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 4,
+          "prefix": "t of heaven from My ",
+          "suffix": "), and My new name."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2374,6 +2536,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:rev-jesus-christ-1-9-o2",
+        "verse_key": "verse:Rev.1.9",
+        "attestation_key": "attestation:wb-rev-jesus-christ-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jesus",
+          "occurrence_ordinal": 2,
+          "prefix": " my testimony about ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:rev-jesus-christ-11-15",
         "verse_key": "verse:Rev.11.15",
         "attestation_key": "attestation:wb-rev-jesus-christ-11-15",
@@ -2477,6 +2657,24 @@
           "occurrence_ordinal": 1,
           "prefix": "on the testimony of ",
           "suffix": ". Worship God! For t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-jesus-christ-19-10-o2",
+        "verse_key": "verse:Rev.19.10",
+        "attestation_key": "attestation:wb-rev-jesus-christ-19-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jesus",
+          "occurrence_ordinal": 2,
+          "prefix": "or the testimony of ",
+          "suffix": " is the spirit of pr"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2873,6 +3071,24 @@
           "occurrence_ordinal": 1,
           "prefix": "where the throne of ",
           "suffix": " sits. Yet you have "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:rev-p-satan-1-2-13-o2",
+        "verse_key": "verse:Rev.2.13",
+        "attestation_key": "attestation:wb-rev-p-satan-1-2-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 2,
+          "prefix": "ed among you, where ",
+          "suffix": " dwells."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -4043,6 +4259,7 @@
           "record_keys": [
             "mention:wb:rev-god-1-9",
             "mention:wb:rev-jesus-christ-1-9",
+            "mention:wb:rev-jesus-christ-1-9-o2",
             "mention:wb:rev-p-john-2-1-9",
             "mention:wb:rev-pl-patmos-a8f60f3-1-9"
           ],
@@ -4141,7 +4358,8 @@
           ],
           "record_keys": [
             "mention:wb:rev-p-antipas-1-2-13",
-            "mention:wb:rev-p-satan-1-2-13"
+            "mention:wb:rev-p-satan-1-2-13",
+            "mention:wb:rev-p-satan-1-2-13-o2"
           ],
           "blocker_question_keys": []
         },
@@ -4267,6 +4485,9 @@
           ],
           "record_keys": [
             "mention:wb:rev-god-3-12",
+            "mention:wb:rev-god-3-12-o2",
+            "mention:wb:rev-god-3-12-o3",
+            "mention:wb:rev-god-3-12-o4",
             "mention:wb:rev-jerusalem-3-12"
           ],
           "blocker_question_keys": []
@@ -4627,7 +4848,8 @@
             "verse:Rev.11.16"
           ],
           "record_keys": [
-            "mention:wb:rev-god-11-16"
+            "mention:wb:rev-god-11-16",
+            "mention:wb:rev-god-11-16-o2"
           ],
           "blocker_question_keys": []
         },
@@ -4698,6 +4920,7 @@
           ],
           "record_keys": [
             "mention:wb:rev-god-12-10",
+            "mention:wb:rev-god-12-10-o2",
             "mention:wb:rev-jesus-christ-12-10"
           ],
           "blocker_question_keys": []
@@ -4812,6 +5035,7 @@
           ],
           "record_keys": [
             "mention:wb:rev-god-15-3",
+            "mention:wb:rev-god-15-3-o2",
             "mention:wb:rev-p-moses-1-15-3"
           ],
           "blocker_question_keys": []
@@ -4953,7 +5177,8 @@
             "verse:Rev.17.17"
           ],
           "record_keys": [
-            "mention:wb:rev-god-17-17"
+            "mention:wb:rev-god-17-17",
+            "mention:wb:rev-god-17-17-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5044,7 +5269,8 @@
           ],
           "record_keys": [
             "mention:wb:rev-god-19-10",
-            "mention:wb:rev-jesus-christ-19-10"
+            "mention:wb:rev-jesus-christ-19-10",
+            "mention:wb:rev-jesus-christ-19-10-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5168,7 +5394,9 @@
             "verse:Rev.21.3"
           ],
           "record_keys": [
-            "mention:wb:rev-god-21-3"
+            "mention:wb:rev-god-21-3",
+            "mention:wb:rev-god-21-3-o2",
+            "mention:wb:rev-god-21-3-o3"
           ],
           "blocker_question_keys": []
         },
@@ -5357,5 +5585,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:702f3635ecee4e1b70b565da84bf032d2641a18daa3455c9aa245d8405c0654b"
 }

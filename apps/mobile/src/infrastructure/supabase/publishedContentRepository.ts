@@ -17,6 +17,11 @@ import type {
   PublishedVerse,
 } from '@/content/publishedContent';
 import {
+  parsePublishedAttestations,
+  parsePublishedEntities,
+  parsePublishedVerses,
+} from '@/content/publishedContent';
+import {
   parsePublishedContextBundle,
   type PublishedContextBundle,
 } from '@/content/publishedContext';
@@ -36,11 +41,13 @@ interface ViewReader {
 }
 
 export interface PublishedContentClient {
-  schema(name: 'public_content'): { from(table: string): ViewReader };
-  rpc(
-    fn: string,
-    args: Record<string, unknown>,
-  ): PromiseLike<{ data: unknown; error: { message: string } | null }>;
+  schema(name: 'public_content'): {
+    from(table: string): ViewReader;
+    rpc(
+      fn: string,
+      args: Record<string, unknown>,
+    ): PromiseLike<{ data: unknown; error: { message: string } | null }>;
+  };
 }
 
 interface VerseRow {
@@ -94,16 +101,8 @@ export class SupabasePublishedContentRepository implements PublishedContentRepos
       .eq('chapter', chapter) as FilterBuilder<VerseRow>;
     if (editionKey) query = query.eq('edition_key', editionKey);
     const rows = await read(query.order('verse_number', { ascending: true }));
-    return rows.map((row) => ({
-      editionKey: row.edition_key,
-      refsysKey: row.refsys_key,
-      bookOsis: row.book_osis,
-      chapter: row.chapter,
-      verse: row.verse_number,
-      localKey: row.local_key,
-      text: row.text,
-      textSha256: row.text_sha256,
-    }));
+    // Runtime Zod validation at the boundary (finding 38).
+    return parsePublishedVerses(rows);
   }
 
   async fetchPublishedEntities(): Promise<PublishedEntity[]> {
@@ -112,18 +111,22 @@ export class SupabasePublishedContentRepository implements PublishedContentRepos
         .select('key,slug,type,identification_status')
         .order('key', { ascending: true }) as FilterBuilder<EntityRow>,
     );
-    return rows.map((row) => ({
-      key: row.key,
-      slug: row.slug,
-      type: row.type,
-      identificationStatus: row.identification_status,
-    }));
+    return parsePublishedEntities(rows);
   }
 
-  async fetchPublishedContextBundle(scopeKey: string): Promise<PublishedContextBundle> {
-    const { data, error } = await this.client.rpc('published_context_bundle', {
-      p_scope_key: scopeKey,
-    });
+  async fetchPublishedContextBundle(
+    scopeKey: string,
+    locale = 'en',
+    editionKey?: string,
+  ): Promise<PublishedContextBundle> {
+    // The RPC lives in the public_content schema, not the default schema.
+    const { data, error } = await this.client
+      .schema('public_content')
+      .rpc('published_context_bundle', {
+        p_scope_key: scopeKey,
+        p_locale: locale,
+        p_edition_key: editionKey ?? null,
+      });
     if (error) throw new Error(error.message);
     // Runtime validation: a malformed bundle never crosses this boundary.
     return parsePublishedContextBundle(data);
@@ -135,13 +138,6 @@ export class SupabasePublishedContentRepository implements PublishedContentRepos
     ) as FilterBuilder<AttestationRow>;
     if (scopeKey) query = query.eq('scope_key', scopeKey);
     const rows = await read(query.order('reference_local_key', { ascending: true }));
-    return rows.map((row) => ({
-      entityKey: row.entity_key,
-      scopeKey: row.scope_key,
-      referenceLocalKey: row.reference_local_key,
-      kind: row.kind,
-      explicitness: row.explicitness,
-      reviewState: row.review_state,
-    }));
+    return parsePublishedAttestations(rows);
   }
 }

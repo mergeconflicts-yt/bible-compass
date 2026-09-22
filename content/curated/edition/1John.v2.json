@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-1john-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-1john-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-1john-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-1john-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -145,14 +145,14 @@
       "verse:1John.5.21"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-1john-canonical",
-      "revision": 1,
-      "digest": "sha256:216450092c650ffa535f1175500b456dd8b6486de12a049eb7d4b2cb73036c35"
+      "revision": 2,
+      "digest": "sha256:fb4585d596056debff0dbddd6bd3b761ef72500dccb2d3a3cdb16af8d4568f9d"
     }
   ],
   "records": {
@@ -374,6 +374,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-2-23-o2",
+        "verse_key": "verse:1John.2.23",
+        "attestation_key": "attestation:wb-1john-god-2-23",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Father",
+          "occurrence_ordinal": 2,
+          "prefix": "ses the Son has the ",
+          "suffix": " as well."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-2-24",
         "verse_key": "verse:1John.2.24",
         "attestation_key": "attestation:wb-1john-god-2-24",
@@ -441,6 +459,24 @@
           "occurrence_ordinal": 1,
           "prefix": "his the children of ",
           "suffix": " are distinguished f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-3-10-o2",
+        "verse_key": "verse:1John.3.10",
+        "attestation_key": "attestation:wb-1john-god-3-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "teousness is not of ",
+          "suffix": ", nor is anyone who "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -518,6 +554,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-3-9-o2",
+        "verse_key": "verse:1John.3.9",
+        "attestation_key": "attestation:wb-1john-god-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "actice sin, because ",
+          "suffix": "’s seed abides in hi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-3-9-o3",
+        "verse_key": "verse:1John.3.9",
+        "attestation_key": "attestation:wb-1john-god-3-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "he has been born of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-4-1",
         "verse_key": "verse:1John.4.1",
         "attestation_key": "attestation:wb-1john-god-4-1",
@@ -590,6 +662,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-4-12-o2",
+        "verse_key": "verse:1John.4.12",
+        "attestation_key": "attestation:wb-1john-god-4-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "e love one another, ",
+          "suffix": " remains in us, and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-4-14",
         "verse_key": "verse:1John.4.14",
         "attestation_key": "attestation:wb-1john-god-4-14",
@@ -599,10 +689,10 @@
         },
         "mention_form": "explicit_name",
         "selector": {
-          "exact_quote": "Father",
+          "exact_quote": "Savior",
           "occurrence_ordinal": 1,
-          "prefix": "nd testify that the ",
-          "suffix": " has sent His Son to"
+          "prefix": "t His Son to be the ",
+          "suffix": " of the world."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -626,6 +716,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-4-15-o2",
+        "verse_key": "verse:1John.4.15",
+        "attestation_key": "attestation:wb-1john-god-4-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " is the Son of God, ",
+          "suffix": " abides in him, and "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-15-o3",
+        "verse_key": "verse:1John.4.15",
+        "attestation_key": "attestation:wb-1john-god-4-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "s in him, and he in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-4-16",
         "verse_key": "verse:1John.4.16",
         "attestation_key": "attestation:wb-1john-god-4-16",
@@ -644,6 +770,78 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-4-16-o2",
+        "verse_key": "verse:1John.4.16",
+        "attestation_key": "attestation:wb-1john-god-4-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "hat God has for us. ",
+          "suffix": " is love; whoever ab"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-16-o3",
+        "verse_key": "verse:1John.4.16",
+        "attestation_key": "attestation:wb-1john-god-4-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "s in love abides in ",
+          "suffix": ", and God in him."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-16-o4",
+        "verse_key": "verse:1John.4.16",
+        "attestation_key": "attestation:wb-1john-god-4-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 4,
+          "prefix": " abides in God, and ",
+          "suffix": " in him."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-2-o2",
+        "verse_key": "verse:1John.4.2",
+        "attestation_key": "attestation:wb-1john-god-4-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "n the flesh is from ",
+          "suffix": ","
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-4-20",
         "verse_key": "verse:1John.4.20",
         "attestation_key": "attestation:wb-1john-god-4-20",
@@ -657,6 +855,24 @@
           "occurrence_ordinal": 1,
           "prefix": "nyone says, “I love ",
           "suffix": ",” but hates his bro"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-20-o2",
+        "verse_key": "verse:1John.4.20",
+        "attestation_key": "attestation:wb-1john-god-4-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "s seen, cannot love ",
+          "suffix": ", whom he has not se"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -734,6 +950,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-4-6-o2",
+        "verse_key": "verse:1John.4.6",
+        "attestation_key": "attestation:wb-1john-god-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " God. Whoever knows ",
+          "suffix": " listens to us; whoe"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-6-o3",
+        "verse_key": "verse:1John.4.6",
+        "attestation_key": "attestation:wb-1john-god-4-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "whoever is not from ",
+          "suffix": " does not listen to "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-4-7",
         "verse_key": "verse:1John.4.7",
         "attestation_key": "attestation:wb-1john-god-4-7",
@@ -747,6 +999,42 @@
           "occurrence_ordinal": 1,
           "prefix": "use love comes from ",
           "suffix": ". Everyone who loves"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-7-o2",
+        "verse_key": "verse:1John.4.7",
+        "attestation_key": "attestation:wb-1john-god-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "es has been born of ",
+          "suffix": " and knows God."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-4-7-o3",
+        "verse_key": "verse:1John.4.7",
+        "attestation_key": "attestation:wb-1john-god-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "rn of God and knows ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -770,6 +1058,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-4-8-o2",
+        "verse_key": "verse:1John.4.8",
+        "attestation_key": "attestation:wb-1john-god-4-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "t know God, because ",
+          "suffix": " is love."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-4-9",
         "verse_key": "verse:1John.4.9",
         "attestation_key": "attestation:wb-1john-god-4-9",
@@ -788,6 +1094,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-4-9-o2",
+        "verse_key": "verse:1John.4.9",
+        "attestation_key": "attestation:wb-1john-god-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " revealed among us: ",
+          "suffix": " sent His one and on"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-5-1",
         "verse_key": "verse:1John.5.1",
         "attestation_key": "attestation:wb-1john-god-5-1",
@@ -801,6 +1125,42 @@
           "occurrence_ordinal": 1,
           "prefix": "st has been born of ",
           "suffix": ", and everyone who l"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-5-10-o2",
+        "verse_key": "verse:1John.5.10",
+        "attestation_key": "attestation:wb-1john-god-5-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "er does not believe ",
+          "suffix": " has made Him out to"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-5-10-o3",
+        "verse_key": "verse:1John.5.10",
+        "attestation_key": "attestation:wb-1john-god-5-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": " the testimony that ",
+          "suffix": " has given about His"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -842,6 +1202,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-5-18-o2",
+        "verse_key": "verse:1John.5.18",
+        "attestation_key": "attestation:wb-1john-god-5-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "One who was born of ",
+          "suffix": " protects him, and t"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-5-19",
         "verse_key": "verse:1John.5.19",
         "attestation_key": "attestation:wb-1john-god-5-19",
@@ -878,6 +1256,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-god-5-2-o2",
+        "verse_key": "verse:1John.5.2",
+        "attestation_key": "attestation:wb-1john-god-5-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "f God: when we love ",
+          "suffix": " and keep His comman"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-god-5-20",
         "verse_key": "verse:1John.5.20",
         "attestation_key": "attestation:wb-1john-god-5-20",
@@ -891,6 +1287,24 @@
           "occurrence_ordinal": 1,
           "prefix": "now that the Son of ",
           "suffix": " has come and has gi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-5-20-o2",
+        "verse_key": "verse:1John.5.20",
+        "attestation_key": "attestation:wb-1john-god-5-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "ist. He is the true ",
+          "suffix": " and eternal life."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -945,6 +1359,24 @@
           "occurrence_ordinal": 1,
           "prefix": "y, the testimony of ",
           "suffix": " is greater. For thi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-god-5-9-o2",
+        "verse_key": "verse:1John.5.9",
+        "attestation_key": "attestation:wb-1john-god-5-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " the testimony that ",
+          "suffix": " has given about His"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1274,6 +1706,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:1john-p-cain-1-3-12-o2",
+        "verse_key": "verse:1John.3.12",
+        "attestation_key": "attestation:wb-1john-p-cain-1-3-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-cain-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Cain",
+          "occurrence_ordinal": 2,
+          "prefix": "rother. And why did ",
+          "suffix": " slay him? Because h"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:1john-p-satan-1-3-8",
         "verse_key": "verse:1John.3.8",
         "attestation_key": "attestation:wb-1john-p-satan-1-3-8",
@@ -1287,6 +1737,42 @@
           "occurrence_ordinal": 1,
           "prefix": "practices sin is of ",
           "suffix": ", because the devil "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-p-satan-1-3-8-o2",
+        "verse_key": "verse:1John.3.8",
+        "attestation_key": "attestation:wb-1john-p-satan-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 2,
+          "prefix": " the devil, because ",
+          "suffix": " has been sinning fr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1john-p-satan-1-3-8-o3",
+        "verse_key": "verse:1John.3.8",
+        "attestation_key": "attestation:wb-1john-p-satan-1-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "the devil",
+          "occurrence_ordinal": 3,
+          "prefix": "estroy the works of ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1494,7 +1980,8 @@
             "verse:1John.2.23"
           ],
           "record_keys": [
-            "mention:wb:1john-god-2-23"
+            "mention:wb:1john-god-2-23",
+            "mention:wb:1john-god-2-23-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1535,7 +2022,9 @@
           ],
           "record_keys": [
             "mention:wb:1john-jesus-christ-3-8",
-            "mention:wb:1john-p-satan-1-3-8"
+            "mention:wb:1john-p-satan-1-3-8",
+            "mention:wb:1john-p-satan-1-3-8-o2",
+            "mention:wb:1john-p-satan-1-3-8-o3"
           ],
           "blocker_question_keys": []
         },
@@ -1545,7 +2034,9 @@
             "verse:1John.3.9"
           ],
           "record_keys": [
-            "mention:wb:1john-god-3-9"
+            "mention:wb:1john-god-3-9",
+            "mention:wb:1john-god-3-9-o2",
+            "mention:wb:1john-god-3-9-o3"
           ],
           "blocker_question_keys": []
         },
@@ -1555,7 +2046,8 @@
             "verse:1John.3.10"
           ],
           "record_keys": [
-            "mention:wb:1john-god-3-10"
+            "mention:wb:1john-god-3-10",
+            "mention:wb:1john-god-3-10-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1565,7 +2057,8 @@
             "verse:1John.3.12"
           ],
           "record_keys": [
-            "mention:wb:1john-p-cain-1-3-12"
+            "mention:wb:1john-p-cain-1-3-12",
+            "mention:wb:1john-p-cain-1-3-12-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1615,6 +2108,7 @@
             "verse:1John.4.2"
           ],
           "record_keys": [
+            "mention:wb:1john-god-4-2-o2",
             "mention:wb:1john-holy-spirit-4-2",
             "mention:wb:1john-jesus-christ-4-2"
           ],
@@ -1647,7 +2141,9 @@
             "verse:1John.4.6"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-6"
+            "mention:wb:1john-god-4-6",
+            "mention:wb:1john-god-4-6-o2",
+            "mention:wb:1john-god-4-6-o3"
           ],
           "blocker_question_keys": []
         },
@@ -1657,7 +2153,9 @@
             "verse:1John.4.7"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-7"
+            "mention:wb:1john-god-4-7",
+            "mention:wb:1john-god-4-7-o2",
+            "mention:wb:1john-god-4-7-o3"
           ],
           "blocker_question_keys": []
         },
@@ -1667,7 +2165,8 @@
             "verse:1John.4.8"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-8"
+            "mention:wb:1john-god-4-8",
+            "mention:wb:1john-god-4-8-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1677,7 +2176,8 @@
             "verse:1John.4.9"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-9"
+            "mention:wb:1john-god-4-9",
+            "mention:wb:1john-god-4-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1707,7 +2207,8 @@
             "verse:1John.4.12"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-12"
+            "mention:wb:1john-god-4-12",
+            "mention:wb:1john-god-4-12-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1728,6 +2229,8 @@
           ],
           "record_keys": [
             "mention:wb:1john-god-4-15",
+            "mention:wb:1john-god-4-15-o2",
+            "mention:wb:1john-god-4-15-o3",
             "mention:wb:1john-jesus-christ-4-15"
           ],
           "blocker_question_keys": []
@@ -1738,7 +2241,10 @@
             "verse:1John.4.16"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-16"
+            "mention:wb:1john-god-4-16",
+            "mention:wb:1john-god-4-16-o2",
+            "mention:wb:1john-god-4-16-o3",
+            "mention:wb:1john-god-4-16-o4"
           ],
           "blocker_question_keys": []
         },
@@ -1748,7 +2254,8 @@
             "verse:1John.4.20"
           ],
           "record_keys": [
-            "mention:wb:1john-god-4-20"
+            "mention:wb:1john-god-4-20",
+            "mention:wb:1john-god-4-20-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1779,7 +2286,8 @@
             "verse:1John.5.2"
           ],
           "record_keys": [
-            "mention:wb:1john-god-5-2"
+            "mention:wb:1john-god-5-2",
+            "mention:wb:1john-god-5-2-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1829,7 +2337,8 @@
             "verse:1John.5.9"
           ],
           "record_keys": [
-            "mention:wb:1john-god-5-9"
+            "mention:wb:1john-god-5-9",
+            "mention:wb:1john-god-5-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1839,6 +2348,8 @@
             "verse:1John.5.10"
           ],
           "record_keys": [
+            "mention:wb:1john-god-5-10-o2",
+            "mention:wb:1john-god-5-10-o3",
             "mention:wb:1john-jesus-christ-5-10"
           ],
           "blocker_question_keys": []
@@ -1879,7 +2390,8 @@
             "verse:1John.5.18"
           ],
           "record_keys": [
-            "mention:wb:1john-god-5-18"
+            "mention:wb:1john-god-5-18",
+            "mention:wb:1john-god-5-18-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1900,6 +2412,7 @@
           ],
           "record_keys": [
             "mention:wb:1john-god-5-20",
+            "mention:wb:1john-god-5-20-o2",
             "mention:wb:1john-jesus-christ-5-20"
           ],
           "blocker_question_keys": []
@@ -1921,5 +2434,6 @@
       "code": "ambiguous-mention-referents-dropped",
       "note": "2 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
     }
-  ]
+  ],
+  "content_digest": "sha256:82260562014e56d97513e058b3365e7ff606a0e623c5cb3c1e97001ed59fbf2b"
 }

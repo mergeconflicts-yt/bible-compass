@@ -80,7 +80,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
@@ -501,83 +501,20 @@
       }
     ],
     "relationships": [],
-    "events": [
-      {
-        "event_key": "event:wb-nah-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-nahum-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321",
-          "entity:pl-bashan-aa7a40a",
-          "entity:pl-elkosh-a221d82",
-          "entity:pl-lebanon-a730058",
-          "entity:pl-mount-carmel-a3e21c6",
-          "entity:pl-nineveh-a70fd5d"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-nah-1-p1:refsys:eng-v22:nah.1.1-nah.1.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-nah-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-nineveh-a70fd5d"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-nah-2-p1:refsys:eng-v22:nah.2.1-nah.2.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-nah-3-p1",
-        "event_type": "judgment",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-sennacherib-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321",
-          "entity:pl-cush-1-ac5a1ec",
-          "entity:pl-egypt-af301ca",
-          "entity:pl-libya-ac12af9",
-          "entity:pl-nile-a012705",
-          "entity:pl-nineveh-a70fd5d",
-          "entity:pl-put-ad0520f",
-          "entity:pl-thebes-a9674fc"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-nah-3-p1:refsys:eng-v22:nah.3.1-nah.3.19",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-elkosh-a221d82",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-elkosh-a221d82",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -1183,8 +1120,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:fe654e10dcd84307814fe6964d7f16e28e2b0e3e4971610187b68b06dab4b5ae"
 }

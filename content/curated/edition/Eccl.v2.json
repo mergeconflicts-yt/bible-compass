@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-eccl-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-eccl-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-eccl-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-eccl-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -280,14 +280,14 @@
       "verse:Eccl.12.14"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-eccl-canonical",
       "revision": 1,
-      "digest": "sha256:e3df15d743995f99bb0ad97677d487df69e28659de6718194511cbe424253ada"
+      "digest": "sha256:26e22a0eb078d18a01f0201454f33f67e9a2e021da933c1fdd3f76c62c27d255"
     }
   ],
   "records": {
@@ -509,6 +509,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:eccl-god-3-14-o2",
+        "verse_key": "verse:Eccl.3.14",
+        "attestation_key": "attestation:wb-eccl-god-3-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "t or taken from it. ",
+          "suffix": " does it so that the"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:eccl-god-3-15",
         "verse_key": "verse:Eccl.3.15",
         "attestation_key": "attestation:wb-eccl-god-3-15",
@@ -617,6 +635,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:eccl-god-5-19-o2",
+        "verse_key": "verse:Eccl.5.19",
+        "attestation_key": "attestation:wb-eccl-god-5-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "This is a gift from ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:eccl-god-5-2",
         "verse_key": "verse:Eccl.5.2",
         "attestation_key": "attestation:wb-eccl-god-5-2",
@@ -630,6 +666,24 @@
           "occurrence_ordinal": 1,
           "prefix": "utter a word before ",
           "suffix": ". After all, God is "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:eccl-god-5-2-o2",
+        "verse_key": "verse:Eccl.5.2",
+        "attestation_key": "attestation:wb-eccl-god-5-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "ore God. After all, ",
+          "suffix": " is in heaven and yo"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -720,6 +774,24 @@
           "occurrence_ordinal": 1,
           "prefix": "",
           "suffix": " gives a man riches,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:eccl-god-6-2-o2",
+        "verse_key": "verse:Eccl.6.2",
+        "attestation_key": "attestation:wb-eccl-god-6-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " heart desires; but ",
+          "suffix": " does not allow him "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1359,7 +1431,8 @@
             "verse:Eccl.3.14"
           ],
           "record_keys": [
-            "mention:wb:eccl-god-3-14"
+            "mention:wb:eccl-god-3-14",
+            "mention:wb:eccl-god-3-14-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1409,7 +1482,8 @@
             "verse:Eccl.5.2"
           ],
           "record_keys": [
-            "mention:wb:eccl-god-5-2"
+            "mention:wb:eccl-god-5-2",
+            "mention:wb:eccl-god-5-2-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1459,7 +1533,8 @@
             "verse:Eccl.5.19"
           ],
           "record_keys": [
-            "mention:wb:eccl-god-5-19"
+            "mention:wb:eccl-god-5-19",
+            "mention:wb:eccl-god-5-19-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1479,7 +1554,8 @@
             "verse:Eccl.6.2"
           ],
           "record_keys": [
-            "mention:wb:eccl-god-6-2"
+            "mention:wb:eccl-god-6-2",
+            "mention:wb:eccl-god-6-2-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1666,5 +1742,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:f354f640d42a643fe6165fc35b85ebf63021c532fb2f227c06c9cb15dff47e8a"
 }

@@ -46,6 +46,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import canon_order  # noqa: E402
+import relationship_ontology  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 CURATED = REPO / "content" / "curated"
@@ -58,16 +59,25 @@ BSB_ARTIFACT_SHA = (
     "sha256:b2898c49cadb50fd8763feb9e2f74a90a3817e33408a24b6cbf09e7a950dde97"
 )
 IMPORT_PACKAGE_KEY = "import:english-canon:canonical-locale-edition"
-# Revision 5: divine identities (Jesus Christ, God, Holy Spirit) with
-# anchor-graded attestations (explicit only with an edition surface, else
-# inferred), retained-phrase edition mentions, per-reference sense
-# classification, registry identification statuses, and canonical language
-# tags. Revisions 1-3 used ON CONFLICT DO NOTHING / WHERE NOT EXISTS for
-# most tables, so an upgrade left stale rows beside new ones; revision 4
-# added the owned-row resync so an upgrade converges to the clean-import
-# state, which revision 5 retains.
+# Revision 6: whole-canon draft manifest + package membership, lossless
+# witness links (all attestation claims, every relationship scope, event/
+# place claim links), real citation provenance (evidence key as locator +
+# deterministic release), edition render spans so imported mentions are
+# anchorable in the app, ownership-scoped resync (origin_package_id) so a
+# refresh never deletes another package's rows, and package-driven place
+# precision/license. Revision 5: divine identities (Jesus Christ, God, Holy
+# Spirit) with anchor-graded attestations, retained-phrase mentions,
+# per-reference sense classification, registry identification statuses and
+# canonical language tags. Revisions 1-3 used ON CONFLICT DO NOTHING / WHERE
+# NOT EXISTS for most tables, so an upgrade left stale rows beside new ones;
+# revision 4 added owned-row resync, which revision 6 narrows to explicit
+# per-row ownership.
 # A revision bump authorizes re-import over an older receipt.
-IMPORT_REVISION = 5
+IMPORT_REVISION = 6
+# The whole-English canon is one draft package; its manifest is created
+# unpublished. MANIFEST_REVISION tracks the import revision so a content bump
+# produces a new manifest key (`en.bsb.all@<rev>:sha-<digest8>`).
+MANIFEST_REVISION = IMPORT_REVISION
 PROVENANCE = "draft import from content/curated English v2 packages (unverified curation)"
 UNKNOWN_LICENSE = "unknown"
 UNKNOWN_RELEASE_ID = str(uuid.uuid5(uuid.NAMESPACE_URL, "release:unknown:bsb"))
@@ -94,6 +104,18 @@ def sha256_text(text: str) -> str:
 
 def local_uuid(stable_key: str) -> str:
     return str(uuid.uuid5(uuid.NAMESPACE_URL, stable_key))
+
+
+def _locate_mention(text: str, selector: dict) -> tuple[int, int] | None:
+    """Character span of a mention's selector in a verse, or None."""
+    quote = selector["exact_quote"]
+    pattern = re.compile(r"(?<![A-Za-z0-9])" + re.escape(quote) + r"(?![A-Za-z0-9])")
+    matches = list(pattern.finditer(text))
+    ordinal = selector["occurrence_ordinal"]
+    if ordinal < 1 or len(matches) < ordinal:
+        return None
+    match = matches[ordinal - 1]
+    return match.start(), match.end()
 
 
 def esc(value: str) -> str:
@@ -179,6 +201,14 @@ def validate(books: list[dict], registry: dict) -> dict:
             key = r.get("canonical_entity_key")
             if key is not None and key not in reg_keys:
                 errors.append(f"{osis}: reconciliation {key} not in registry")
+        # Relationship predicates are enforced against the controlled
+        # ontology: a package can never introduce a new predicate by import.
+        for rel in canonical["records"].get("relationships", []):
+            if not relationship_ontology.is_allowed(rel["predicate_key"]):
+                errors.append(
+                    f"{osis}: relationship {rel['relationship_key']} predicate "
+                    f"{rel['predicate_key']} outside the controlled ontology"
+                )
         # coverage partitions
         for label, pkg in (("canonical", canonical), ("edition", edition)):
             authoritative = set(pkg["scope"]["reference_keys"])
@@ -237,116 +267,20 @@ def validate(books: list[dict], registry: dict) -> dict:
 # SQL generation
 # ---------------------------------------------------------------------------
 
-def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
+def build_sql(books: list[dict], registry: dict, digest_hex: str) -> tuple[str, dict]:
     stmts: list[str] = []
 
     def add(sql: str) -> None:
         stmts.append(sql)
 
-    # Payload-owned key sets for the resync deletes below. Scoping deletes
-    # to these sets is what makes an upgrade converge without touching
-    # Nehemiah-2-package rows, which live under different scope keys (except
-    # the six neh-2 scopes this package reuses through the locked merge) and
-    # different entity keys.
-    payload_scope_keys: set[str] = set()
-    payload_event_keys: set[str] = set()
-    payload_place_keys: set[str] = set()
-    payload_claim_keys: set[str] = set()
-    for book in books:
-        canonical = load_json(CURATED / "canonical" / f"{book['osis']}.v2.json")
-        payload_scope_keys.update(canonical["scope"]["scope_keys"])
-        for ev in canonical["records"].get("events", []):
-            payload_event_keys.add("entity:" + ev["event_key"].split("event:", 1)[1])
-        for place in canonical["records"].get("places", []):
-            payload_place_keys.add(place["entity_key"])
-        for claim in canonical["records"].get("claims", []):
-            payload_claim_keys.add(claim["claim_key"])
-    payload_entity_keys = {e["entity_key"] for e in registry["entities"]} | payload_event_keys
-
-    def key_list(keys: set[str]) -> str:
-        return "(" + ",".join(esc(k) for k in sorted(keys)) + ")"
+    # The whole-English canon is ONE draft package. Its manifest is created
+    # unpublished and unapproved: a draft import records membership but can
+    # never be published until a matching approval exists and rights are
+    # cleared (private_staging.package_is_published + the manifest trigger).
+    manifest_key = f"en.bsb.all@{MANIFEST_REVISION}:sha-{digest_hex[:8]}"
+    manifest_digest = "sha256:" + digest_hex
 
     # --- canon / works / reference system ---------------------------------
-    add("insert into private_staging.canons (key, name) values ('canon:prot-66','Protestant 66') on conflict (key) do nothing;")
-    # Repair-safe scaffolding: this importer owns the membership rows and the
-    # unit ordinals, so a re-import with a bumped revision fixes earlier
-    # alphabetical-order data instead of silently keeping it.
-    add(
-        "delete from private_staging.canon_work_memberships "
-        "where canon_id = (select id from private_staging.canons where key='canon:prot-66');"
-    )
-    # --- revision-4 resync -------------------------------------------------
-    # Delete this package's owned rows so the inserts below restore exactly
-    # the current payload: an upgrade from an older revision converges to
-    # the clean-import state. Every statement is a no-op on a clean
-    # database. FK order is respected (dependents before the rows they
-    # reference); entity, claim, scope, unit and verse rows themselves are
-    # never deleted, only upserted. A co-installed Nehemiah-2 package keeps
-    # its rows except where both packages genuinely share rows (the BSB
-    # edition's mentions, the six merged neh-2 scopes, identically-keyed
-    # claims): the supported test topology is one package per database.
-    eng_edition = f"(select id from private_staging.translation_editions where key={esc(EDITION_KEY)})"
-    owned_scopes = (
-        "(select id from private_staging.scripture_scopes where key in "
-        f"{key_list(payload_scope_keys)})"
-    )
-    owned_revisions = (
-        "select r.id from private_staging.context_revisions r "
-        "join private_staging.context_artifacts a on a.id = r.artifact_id "
-        f"where a.scope_id in {owned_scopes}"
-    )
-    add(
-        "delete from private_staging.edition_render_spans where mention_id in "
-        f"(select id from private_staging.edition_mentions where edition_id = {eng_edition});"
-    )
-    add(f"delete from private_staging.edition_mentions where edition_id = {eng_edition};")
-    add(f"delete from private_staging.reference_entity_attestations where scope_id in {owned_scopes};")
-    add(f"delete from private_staging.scope_entity_relevance where scope_id in {owned_scopes};")
-    add(f"delete from private_staging.entity_relationship_assertions where scope_id in {owned_scopes};")
-    add(f"delete from private_staging.event_scripture_accounts where scope_id in {owned_scopes};")
-    if payload_event_keys:
-        add(
-            "delete from private_staging.event_participants where event_id in "
-            f"(select entity_id from private_staging.events where entity_id in "
-            f"(select id from private_staging.entities where key in {key_list(payload_event_keys)}));"
-        )
-        add(
-            "delete from private_staging.event_places where event_id in "
-            f"(select entity_id from private_staging.events where entity_id in "
-            f"(select id from private_staging.entities where key in {key_list(payload_event_keys)}));"
-        )
-        add(
-            "delete from private_staging.events where entity_id in "
-            f"(select id from private_staging.entities where key in {key_list(payload_event_keys)});"
-        )
-    if payload_place_keys:
-        add(
-            "delete from private_staging.place_geometries where entity_id in "
-            f"(select id from private_staging.entities where key in {key_list(payload_place_keys)});"
-        )
-    add(
-        "delete from private_staging.entity_names where language_tag = 'en' and entity_id in "
-        f"(select id from private_staging.entities where key in {key_list(payload_entity_keys)});"
-    )
-    add(
-        "delete from private_staging.entity_descriptions where locale = 'en' and entity_id in "
-        f"(select id from private_staging.entities where key in {key_list(payload_entity_keys)});"
-    )
-    if payload_claim_keys:
-        # Only this importer's unknown-release citations: a co-installed
-        # Nehemiah-2 package cites the shared claim keys from its own
-        # releases and must keep them.
-        add(
-            "delete from private_staging.claim_citations where source_release_id = "
-            f"{esc(UNKNOWN_RELEASE_ID)}::uuid and claim_id in "
-            f"(select id from private_staging.claims where key in {key_list(payload_claim_keys)});"
-        )
-    add(f"delete from private_staging.context_sections where revision_id in ({owned_revisions});")
-    add(
-        "delete from private_staging.context_revisions where artifact_id in "
-        f"(select a.id from private_staging.context_artifacts a where a.scope_id in {owned_scopes});"
-    )
-    add(f"delete from private_staging.context_artifacts where scope_id in {owned_scopes};")
 
     for i, book in enumerate(books, start=1):
         osis = book["osis"]
@@ -459,6 +393,56 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
         f"and book_id={work(osis)} and chapter={ch} and verse_number={v})"
     )
 
+    # --- whole-English draft manifest (unpublished, unapproved) -----------
+    add(
+        "insert into private_staging.package_manifests "
+        "(key, locale, translation_edition_id, scope_id, schema_version, content_version, "
+        "checksum, minimum_app_version, approval_id, published_at, rights_status) values ("
+        f"{esc(manifest_key)}, 'en', {edition_id}, null, '2.0.0', {MANIFEST_REVISION}, "
+        f"{esc(manifest_digest)}, '0.0.0', null, null, 'unknown') "
+        "on conflict (key) do update set checksum = excluded.checksum, content_version = excluded.content_version;"
+    )
+    manifest = f"(select id from private_staging.package_manifests where key={esc(manifest_key)})"
+
+    # --- ownership-scoped resync (revision-safe coexistence) --------------
+    # Delete ONLY rows this package owns (origin_package_id = this manifest).
+    # Rows first written by another package (e.g. the locked Nehemiah 2
+    # package) keep a NULL origin and are never removed, so a later English
+    # refresh cannot destroy another package's reviewed rows or break the
+    # restrictive foreign keys on their Telugu/Tamil localizations. Dependent
+    # rows are deleted before the rows they reference (on delete restrict).
+    add(f"delete from private_staging.edition_render_spans where mention_id in "
+        f"(select id from private_staging.edition_mentions where origin_package_id = {manifest});")
+    add(f"delete from private_staging.edition_mentions where origin_package_id = {manifest};")
+    add(f"delete from private_staging.reference_entity_attestation_claims where attestation_id in "
+        f"(select id from private_staging.reference_entity_attestations where origin_package_id = {manifest});")
+    add(f"delete from private_staging.reference_entity_attestations where origin_package_id = {manifest};")
+    add(f"delete from private_staging.entity_relationship_assertion_claims where assertion_id in "
+        f"(select id from private_staging.entity_relationship_assertions where origin_package_id = {manifest});")
+    add(f"delete from private_staging.entity_relationship_assertions where origin_package_id = {manifest};")
+    add(f"delete from private_staging.scope_entity_relevance where origin_package_id = {manifest};")
+    add(f"delete from private_staging.event_participant_claims where (event_id, entity_id, role) in "
+        f"(select event_id, entity_id, role from private_staging.event_participants where origin_package_id = {manifest});")
+    add(f"delete from private_staging.event_place_claims where (event_id, place_id) in "
+        f"(select event_id, place_id from private_staging.event_places where origin_package_id = {manifest});")
+    add(f"delete from private_staging.event_scripture_account_claims where (event_id, scope_id) in "
+        f"(select event_id, scope_id from private_staging.event_scripture_accounts where origin_package_id = {manifest});")
+    add(f"delete from private_staging.event_participants where origin_package_id = {manifest};")
+    add(f"delete from private_staging.event_places where origin_package_id = {manifest};")
+    add(f"delete from private_staging.event_scripture_accounts where origin_package_id = {manifest};")
+    add(f"delete from private_staging.events where origin_package_id = {manifest};")
+    add(f"delete from private_staging.place_geometries where origin_package_id = {manifest};")
+    add(f"delete from private_staging.entity_names where origin_package_id = {manifest};")
+    add(f"delete from private_staging.entity_descriptions where origin_package_id = {manifest};")
+    add(f"delete from private_staging.context_sections where revision_id in "
+        f"(select cr.id from private_staging.context_revisions cr "
+        f"join private_staging.context_artifacts ca on ca.id = cr.artifact_id "
+        f"where ca.origin_package_id = {manifest});")
+    add(f"delete from private_staging.context_revisions where artifact_id in "
+        f"(select id from private_staging.context_artifacts where origin_package_id = {manifest});")
+    add(f"delete from private_staging.context_artifacts where origin_package_id = {manifest};")
+    add(f"delete from private_staging.package_members where package_id = {manifest};")
+
     # --- entities (ONE row per canonical key; the registry is authoritative)
     # Upsert (never delete: every other table references entities): an
     # upgrade corrects a stale type/slug/status instead of keeping it. The
@@ -484,6 +468,23 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             )
     ent = lambda key: f"(select id from private_staging.entities where key={esc(key)})"
 
+    # --- structured external identifiers (finding 26) ---------------------
+    # Source row ids are retained as (source, external_id, evidence) mappings
+    # instead of being embedded in the canonical key and forgotten.
+    for e in sorted(registry["entities"], key=lambda x: x["entity_key"]):
+        for ext in e.get("external_ids", []) or []:
+            source = (ext.get("source") or "").strip()
+            external_id = (ext.get("id") or "").strip()
+            if not (source and external_id):
+                continue
+            label = ext.get("label")
+            evidence = ext.get("evidence")
+            add(
+                "insert into private_staging.entity_external_ids (entity_id, source, external_id, label, evidence_key) values ("
+                f"{ent(e['entity_key'])}, {esc(source)}, {esc(external_id)}, "
+                f"{esc(label) if label else 'null'}, {esc(evidence) if evidence else 'null'}) on conflict do nothing;"
+            )
+
     # --- entity names + English descriptions ------------------------------
     # Source identifiers (e.g. OpenBible a15257a) are never searchable
     # English names, even if one ever regresses into the registry. The
@@ -502,8 +503,8 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
                 continue
             seen_norm.add(norm)
             add(
-                "insert into private_staging.entity_names (entity_id, language_tag, form, normalized_form, kind) values ("
-                f"{ent(e['entity_key'])}, 'en', {esc(form)}, {esc(norm)}, {esc(kind)}) on conflict do nothing;"
+                "insert into private_staging.entity_names (entity_id, language_tag, form, normalized_form, kind, origin_package_id) values ("
+                f"{ent(e['entity_key'])}, 'en', {esc(form)}, {esc(norm)}, {esc(kind)}, {manifest}) on conflict do nothing;"
             )
     for book in books:
         osis = book["osis"]
@@ -512,9 +513,9 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             short = prof["short_description"]["text"]
             extended = prof.get("extended_description")
             add(
-                "insert into private_staging.entity_descriptions (entity_id, locale, revision, short_desc, extended_desc, source_locale, review_state) values ("
+                "insert into private_staging.entity_descriptions (entity_id, locale, revision, short_desc, extended_desc, source_locale, review_state, origin_package_id) values ("
                 f"{ent(prof['entity_key'])}, 'en', 1, {esc(short)}, "
-                f"{esc(extended['text']) if extended else 'null'}, 'en', 'draft') on conflict do nothing;"
+                f"{esc(extended['text']) if extended else 'null'}, 'en', 'draft', {manifest}) on conflict do nothing;"
             )
 
     # --- claims + citations ----------------------------------------------
@@ -544,12 +545,16 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             )
         claim_id = lambda key: f"(select id from private_staging.claims where key={esc(key)})"
         for citation in canonical["records"].get("citations", []):
+            # Provenance is preserved: the citation keeps its evidence-item
+            # key as locator and a deterministic release derived from it,
+            # instead of a placeholder "unknown" release and a hashed locator.
             locator = citation["evidence_item_key"]
+            release = local_uuid(locator)
             add(
                 "insert into private_staging.claim_citations (claim_id, source_release_id, source_edition_id, locator, support_kind, digest) "
-                f"select {claim_id(citation['claim_keys'][0])}, {esc(UNKNOWN_RELEASE_ID)}::uuid, {edition_id}, {esc(locator)}, {esc(citation['stance'])}, {esc(sha256_text(locator))} "
+                f"select {claim_id(citation['claim_keys'][0])}, {esc(release)}::uuid, {edition_id}, {esc(locator)}, {esc(citation['stance'])}, {esc(sha256_text(locator))} "
                 "where not exists (select 1 from private_staging.claim_citations c where "
-                f"c.claim_id={claim_id(citation['claim_keys'][0])} and c.source_release_id={esc(UNKNOWN_RELEASE_ID)}::uuid and c.locator={esc(locator)});"
+                f"c.claim_id={claim_id(citation['claim_keys'][0])} and c.source_release_id={esc(release)}::uuid and c.locator={esc(locator)});"
             )
 
     # --- book attestations (separate from mentions/localization) ----------
@@ -570,9 +575,20 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
                 continue
             cid = claim_id(a["claim_keys"][0]) if a["claim_keys"] else "null"
             add(
-                "insert into private_staging.reference_entity_attestations (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state) values ("
-                f"{ent(a['entity_key'])}, {scope_id(sc)}, {unit(f'{osis}.{ch}.{v}')}, {esc(a['kind'])}, {esc(a['textual_basis'])}, {cid}, 'draft') on conflict do nothing;"
+                "insert into private_staging.reference_entity_attestations (entity_id, scope_id, reference_unit_id, kind, explicitness, claim_id, review_state, origin_package_id) values ("
+                f"{ent(a['entity_key'])}, {scope_id(sc)}, {unit(f'{osis}.{ch}.{v}')}, {esc(a['kind'])}, {esc(a['textual_basis'])}, {cid}, 'draft', {manifest}) on conflict do nothing;"
             )
+            # Every supporting claim is preserved, not only the first: the
+            # single claim_id column keeps the first for back-compat, and the
+            # link table holds the complete set.
+            for claim_key in a["claim_keys"]:
+                add(
+                    "insert into private_staging.reference_entity_attestation_claims (attestation_id, claim_id) "
+                    "select a.id, " + claim_id(claim_key) + " from private_staging.reference_entity_attestations a where "
+                    f"a.entity_id={ent(a['entity_key'])} and a.scope_id={scope_id(sc)} "
+                    f"and a.reference_unit_id={unit(f'{osis}.{ch}.{v}')} and a.kind={esc(a['kind'])} "
+                    "on conflict do nothing;"
+                )
 
     # --- BSB edition mentions --------------------------------------------
     for book in books:
@@ -590,12 +606,30 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             ch, v = int(parts[-2]), int(parts[-1])
             text = verse_text.get((ch, v), "")
             add(
-                "insert into private_staging.edition_mentions (edition_id, verse_id, entity_id, form, quote, occurrence_ordinal, pipeline_text_sha256, review_state) "
-                f"select {edition_id}, {verse_id(osis, ch, v)}, {ent(m['target']['key'])}, {esc(m['mention_form'])}, {esc(m['selector']['exact_quote'])}, {m['selector']['occurrence_ordinal']}, {esc(sha256_text(text))}, 'draft' "
+                "insert into private_staging.edition_mentions (edition_id, verse_id, entity_id, form, quote, occurrence_ordinal, pipeline_text_sha256, review_state, origin_package_id) "
+                f"select {edition_id}, {verse_id(osis, ch, v)}, {ent(m['target']['key'])}, {esc(m['mention_form'])}, {esc(m['selector']['exact_quote'])}, {m['selector']['occurrence_ordinal']}, {esc(sha256_text(text))}, 'draft', {manifest} "
                 "where not exists (select 1 from private_staging.edition_mentions em where "
                 f"em.edition_id={edition_id} and em.verse_id={verse_id(osis, ch, v)} and em.entity_id={ent(m['target']['key'])} "
                 f"and em.quote={esc(m['selector']['exact_quote'])} and em.occurrence_ordinal={m['selector']['occurrence_ordinal']});"
             )
+            # Render span: the interactive anchor the app needs. Character
+            # offsets are derived from the exact BSB verse text and the
+            # selector, exactly as the Nehemiah 2 importer does; without this
+            # the public bundle (which inner-joins edition_render_spans)
+            # returned zero imported mention anchors.
+            match = _locate_mention(text, m["selector"])
+            if match is not None:
+                start, end = match
+                start_utf16 = len(text[:start].encode("utf-16-le")) // 2
+                end_utf16 = len(text[:end].encode("utf-16-le")) // 2
+                add(
+                    "insert into private_staging.edition_render_spans (mention_id, start_grapheme, end_grapheme, start_utf16, end_utf16) "
+                    f"select em.id, {start}, {end}, {start_utf16}, {end_utf16} "
+                    "from private_staging.edition_mentions em where "
+                    f"em.edition_id={edition_id} and em.verse_id={verse_id(osis, ch, v)} and em.entity_id={ent(m['target']['key'])} "
+                    f"and em.quote={esc(m['selector']['exact_quote'])} and em.occurrence_ordinal={m['selector']['occurrence_ordinal']} "
+                    "on conflict (mention_id) do nothing;"
+                )
 
     # --- relevance + English role copy -----------------------------------
     for book in books:
@@ -609,8 +643,8 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
         for r in canonical["records"].get("relevance", []):
             role = role_by_relevance.get(r["relevance_key"], "Named in this passage.")
             add(
-                "insert into private_staging.scope_entity_relevance (scope_id, entity_id, role_in_passage, importance, is_attested) values ("
-                f"{scope_id(r['scope_key'])}, {ent(r['entity_key'])}, {esc(role)}, {esc(r['importance'])}, {str(r['is_attested']).lower()}) on conflict do nothing;"
+                "insert into private_staging.scope_entity_relevance (scope_id, entity_id, role_in_passage, importance, is_attested, origin_package_id) values ("
+                f"{scope_id(r['scope_key'])}, {ent(r['entity_key'])}, {esc(role)}, {esc(r['importance'])}, {str(r['is_attested']).lower()}, {manifest}) on conflict do nothing;"
             )
 
     # --- relationships ----------------------------------------------------
@@ -628,14 +662,26 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
         osis = book["osis"]
         canonical = load_json(CURATED / "canonical" / f"{osis}.v2.json")
         for rel in canonical["records"].get("relationships", []):
-            sc = rel["applicable_scope_keys"][0]
-            add(
-                "insert into private_staging.entity_relationship_assertions (subject_entity_id, predicate, object_entity_id, scope_id, certainty) "
-                f"select {ent(rel['subject_entity_key'])}, {esc(rel['predicate_key'])}, {ent(rel['object_entity_key'])}, {scope_id(sc)}, 'established' "
-                "where not exists (select 1 from private_staging.entity_relationship_assertions a where "
-                f"a.subject_entity_id={ent(rel['subject_entity_key'])} and a.predicate={esc(rel['predicate_key'])} "
-                f"and a.object_entity_id={ent(rel['object_entity_key'])} and a.scope_id={scope_id(sc)});"
-            )
+            # Every applicable scope is materialised, not only the first, and
+            # the package's certainty is written through instead of a hardcoded
+            # "established". Each assertion is then linked to all its claims.
+            certainty = rel.get("certainty", "unknown")
+            for sc in rel["applicable_scope_keys"]:
+                add(
+                    "insert into private_staging.entity_relationship_assertions (subject_entity_id, predicate, object_entity_id, scope_id, certainty, origin_package_id) "
+                    f"select {ent(rel['subject_entity_key'])}, {esc(rel['predicate_key'])}, {ent(rel['object_entity_key'])}, {scope_id(sc)}, {esc(certainty)}, {manifest} "
+                    "where not exists (select 1 from private_staging.entity_relationship_assertions a where "
+                    f"a.subject_entity_id={ent(rel['subject_entity_key'])} and a.predicate={esc(rel['predicate_key'])} "
+                    f"and a.object_entity_id={ent(rel['object_entity_key'])} and a.scope_id={scope_id(sc)});"
+                )
+                for claim_key in rel.get("claim_keys", []):
+                    add(
+                        "insert into private_staging.entity_relationship_assertion_claims (assertion_id, claim_id) "
+                        "select a.id, " + claim_id(claim_key) + " from private_staging.entity_relationship_assertions a where "
+                        f"a.subject_entity_id={ent(rel['subject_entity_key'])} and a.predicate={esc(rel['predicate_key'])} "
+                        f"and a.object_entity_id={ent(rel['object_entity_key'])} and a.scope_id={scope_id(sc)} "
+                        "on conflict do nothing;"
+                    )
 
     # --- events -----------------------------------------------------------
     for book in books:
@@ -643,33 +689,56 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
         for ev in canonical["records"].get("events", []):
             ev_key = "entity:" + ev["event_key"].split("event:", 1)[1]
             add(
-                "insert into private_staging.events (entity_id, event_kind) values ("
-                f"{ent(ev_key)}, {esc(ev['event_type'])}) on conflict (entity_id) do nothing;"
+                "insert into private_staging.events (entity_id, event_kind, origin_package_id) values ("
+                f"{ent(ev_key)}, {esc(ev['event_type'])}, {manifest}) on conflict (entity_id) do nothing;"
             )
+            claim_keys = ev.get("claim_keys", [])
+            first_claim = claim_id(claim_keys[0]) if claim_keys else "null"
             for p in ev["participant_entity_keys"]:
                 add(
-                    "insert into private_staging.event_participants (event_id, entity_id, role) values ("
-                    f"{ent(ev_key)}, {ent(p)}, 'participant') on conflict do nothing;"
+                    "insert into private_staging.event_participants (event_id, entity_id, role, claim_id, origin_package_id) values ("
+                    f"{ent(ev_key)}, {ent(p)}, 'participant', {first_claim}, {manifest}) on conflict do nothing;"
                 )
+                for claim_key in claim_keys:
+                    add(
+                        "insert into private_staging.event_participant_claims (event_id, entity_id, role, claim_id) values ("
+                        f"{ent(ev_key)}, {ent(p)}, 'participant', {claim_id(claim_key)}) on conflict do nothing;"
+                    )
             for pl in ev["place_entity_keys"]:
                 add(
-                    "insert into private_staging.event_places (event_id, place_id) values ("
-                    f"{ent(ev_key)}, {ent(pl)}) on conflict do nothing;"
+                    "insert into private_staging.event_places (event_id, place_id, claim_id, origin_package_id) values ("
+                    f"{ent(ev_key)}, {ent(pl)}, {first_claim}, {manifest}) on conflict do nothing;"
                 )
+                for claim_key in claim_keys:
+                    add(
+                        "insert into private_staging.event_place_claims (event_id, place_id, claim_id) values ("
+                        f"{ent(ev_key)}, {ent(pl)}, {claim_id(claim_key)}) on conflict do nothing;"
+                    )
             for account in ev["scripture_accounts"]:
                 add(
-                    "insert into private_staging.event_scripture_accounts (event_id, scope_id, relation) values ("
-                    f"{ent(ev_key)}, {scope_id(account['scope_key'])}, {esc(account['relation'])}) on conflict do nothing;"
+                    "insert into private_staging.event_scripture_accounts (event_id, scope_id, relation, claim_id, origin_package_id) values ("
+                    f"{ent(ev_key)}, {scope_id(account['scope_key'])}, {esc(account['relation'])}, {first_claim}, {manifest}) on conflict do nothing;"
                 )
+                for claim_key in claim_keys:
+                    add(
+                        "insert into private_staging.event_scripture_account_claims (event_id, scope_id, claim_id) values ("
+                        f"{ent(ev_key)}, {scope_id(account['scope_key'])}, {claim_id(claim_key)}) on conflict do nothing;"
+                    )
 
     # --- place geometries (home places) -----------------------------------
     for book in books:
         canonical = load_json(CURATED / "canonical" / f"{book['osis']}.v2.json")
         for place in canonical["records"].get("places", []):
             for pos in place["geographic_positions"]:
+                # Precision, license and certainty come from the package
+                # blueprint (which records them explicitly), never from a
+                # hardcoded "unknown"/EPSG value here. A geometry is written
+                # only when the package actually carries coordinates.
+                crs = esc(pos["crs"]) if pos.get("crs") else "null"
+                component_license = esc(pos.get("component_license") or "unknown")
                 add(
-                    "insert into private_staging.place_geometries (entity_id, crs, precision, evidence_claim_id, component_license) values ("
-                    f"{ent(place['entity_key'])}, 'EPSG:4326', {esc(pos['precision'])}, null, {esc(UNKNOWN_LICENSE)}) on conflict (entity_id) do nothing;"
+                    "insert into private_staging.place_geometries (entity_id, crs, precision, evidence_claim_id, component_license, origin_package_id) values ("
+                    f"{ent(place['entity_key'])}, {crs}, {esc(pos['precision'])}, null, {component_license}, {manifest}) on conflict (entity_id) do nothing;"
                 )
 
     # --- passage contexts -------------------------------------------------
@@ -678,8 +747,8 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
         for ctx in locale["records"].get("passage_contexts", []):
             sid = scope_id(ctx["scope_key"])
             add(
-                "insert into private_staging.context_artifacts (scope_id) values ("
-                f"{sid}) on conflict (scope_id) do nothing;"
+                "insert into private_staging.context_artifacts (scope_id, origin_package_id) values ("
+                f"{sid}, {manifest}) on conflict (scope_id) do nothing;"
             )
             artifact = f"(select id from private_staging.context_artifacts where scope_id={sid})"
             add(
@@ -711,6 +780,33 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
                     "where not exists (select 1 from private_staging.context_sections s where "
                     f"s.revision_id={revision} and s.kind={esc(kind)});"
                 )
+
+    # --- package membership (publication gating + resync ownership) ------
+    # One membership row per entity, claim and context revision. Membership
+    # is what the public publication gates read, and what lets a later
+    # English refresh know which rows it owns (never another package's).
+    member_values: list[tuple[str, str]] = []
+    for e in registry["entities"]:
+        member_values.append(("entity_id", ent(e["entity_key"])))
+    for book in books:
+        canonical = load_json(CURATED / "canonical" / f"{book['osis']}.v2.json")
+        for ev in canonical["records"].get("events", []):
+            slug = ev["event_key"].split("event:", 1)[1]
+            member_values.append(("entity_id", ent(f"entity:{slug}")))
+        for claim in canonical["records"].get("claims", []):
+            member_values.append(("claim_id", claim_id(claim["claim_key"])))
+    for book in books:
+        locale = load_json(CURATED / "locale" / f"{book['osis']}.v2.json")
+        for ctx in locale["records"].get("passage_contexts", []):
+            artifact = f"(select id from private_staging.context_artifacts where scope_id={scope_id(ctx['scope_key'])})"
+            revision = f"(select id from private_staging.context_revisions where artifact_id={artifact} and revision=1)"
+            member_values.append(("context_revision_id", revision))
+    for column, value in member_values:
+        add(
+            "insert into private_staging.package_members (package_id, " + column + ") "
+            f"select {manifest}, {value} where not exists (select 1 from private_staging.package_members pm where "
+            f"pm.package_id = {manifest} and pm.{column} = {value});"
+        )
 
     # --- receipt ----------------------------------------------------------
     return "\n".join(stmts), {}
@@ -757,7 +853,9 @@ def main() -> int:
         print(f"validated: {jcs(counts)} payload_digest={digest}")
         return 0
 
-    body, _ = build_sql(books, registry)
+    body, _ = build_sql(books, registry, digest.split(":", 1)[1])
+    digest_hex = digest.split(":", 1)[1]
+    manifest_key = f"en.bsb.all@{MANIFEST_REVISION}:sha-{digest_hex[:8]}"
     receipt = {
         "kind": "english-canon",
         "books": counts["books"],
@@ -765,6 +863,8 @@ def main() -> int:
         "attestations": counts["attestations"],
         "mentions": counts["mentions"],
         "payload_digest": digest,
+        "manifest_key": manifest_key,
+        "manifest_published": False,
         "review_status": "draft",
         "canon_order": [b["osis"] for b in books],
     }
@@ -774,7 +874,27 @@ def main() -> int:
         "on conflict (package_key) do update set package_revision = excluded.package_revision, "
         "payload_digest = excluded.payload_digest, receipt = excluded.receipt, imported_at = now();\n"
     )
-    sql = header + body
+    # The same conflict guard the Python preflight applies is emitted inside
+    # the transaction, so an --emit-sql replay (which cannot query first) still
+    # fails closed on a conflicting or newer receipt instead of silently
+    # overwriting it (finding 33). Applied in one transaction, so the guard and
+    # the writes are atomic.
+    guard = (
+        "do $$\n"
+        "declare cur_rev integer; cur_digest text;\n"
+        "begin\n"
+        "  select package_revision, payload_digest into cur_rev, cur_digest\n"
+        "    from private_staging.curation_imports\n"
+        f"    where package_key = {esc(IMPORT_PACKAGE_KEY)};\n"
+        "  if cur_rev is not null then\n"
+        f"    if cur_rev > {IMPORT_REVISION} or (cur_rev = {IMPORT_REVISION} and cur_digest <> {esc(digest)}) then\n"
+        "      raise exception 'english-canon import guard: conflicting or newer receipt for % (stored rev %, digest %)', "
+        f"{esc(IMPORT_PACKAGE_KEY)}, cur_rev, cur_digest;\n"
+        "    end if;\n"
+        "  end if;\n"
+        "end $$;\n"
+    )
+    sql = guard + header + body
 
     if args.emit_sql:
         print(sql)

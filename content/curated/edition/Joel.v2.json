@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-joel-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-joel-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-joel-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-joel-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -105,14 +105,14 @@
       "verse:Joel.3.21"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-joel-canonical",
       "revision": 1,
-      "digest": "sha256:3281c8b86b5593500eff99d131b7d9d99c8b50da55a5e3d21401c675a236b58f"
+      "digest": "sha256:fdc5c19597f100597e5e5c967e04c968cde6b33cbd5ab448d48e7dc2dfa2318c"
     }
   ],
   "records": {
@@ -149,6 +149,24 @@
           "occurrence_ordinal": 1,
           "prefix": ", O ministers of my ",
           "suffix": ", because the grain "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:joel-god-1-13-o2",
+        "verse_key": "verse:Joel.1.13",
+        "attestation_key": "attestation:wb-joel-god-1-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "m the house of your ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -244,6 +262,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:joel-god-1-9-o2",
+        "verse_key": "verse:Joel.1.9",
+        "attestation_key": "attestation:wb-joel-god-1-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "minister before the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:joel-god-2-1",
         "verse_key": "verse:Joel.2.1",
         "attestation_key": "attestation:wb-joel-god-2-1",
@@ -275,6 +311,24 @@
           "occurrence_ordinal": 1,
           "prefix": "The ",
           "suffix": " raises His voice in"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:joel-god-2-11-o2",
+        "verse_key": "verse:Joel.2.11",
+        "attestation_key": "attestation:wb-joel-god-2-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": " For the Day of the ",
+          "suffix": " is great and very d"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -478,6 +532,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:joel-god-2-32-o2",
+        "verse_key": "verse:Joel.2.32",
+        "attestation_key": "attestation:wb-joel-god-2-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "deliverance, as the ",
+          "suffix": " has promised, among"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:joel-god-2-32-o3",
+        "verse_key": "verse:Joel.2.32",
+        "attestation_key": "attestation:wb-joel-god-2-32",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 3,
+          "prefix": "mnant called by the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:joel-god-3-11",
         "verse_key": "verse:Joel.3.11",
         "attestation_key": "attestation:wb-joel-god-3-11",
@@ -527,6 +617,24 @@
           "occurrence_ordinal": 1,
           "prefix": "The ",
           "suffix": " will roar from Zion"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:joel-god-3-16-o2",
+        "verse_key": "verse:Joel.3.16",
+        "attestation_key": "attestation:wb-joel-god-3-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "ll tremble. But the ",
+          "suffix": " will be a refuge fo"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1140,7 +1248,8 @@
             "verse:Joel.1.9"
           ],
           "record_keys": [
-            "mention:wb:joel-god-1-9"
+            "mention:wb:joel-god-1-9",
+            "mention:wb:joel-god-1-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1150,7 +1259,8 @@
             "verse:Joel.1.13"
           ],
           "record_keys": [
-            "mention:wb:joel-god-1-13"
+            "mention:wb:joel-god-1-13",
+            "mention:wb:joel-god-1-13-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1211,7 +1321,8 @@
             "verse:Joel.2.11"
           ],
           "record_keys": [
-            "mention:wb:joel-god-2-11"
+            "mention:wb:joel-god-2-11",
+            "mention:wb:joel-god-2-11-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1333,6 +1444,8 @@
           ],
           "record_keys": [
             "mention:wb:joel-god-2-32",
+            "mention:wb:joel-god-2-32-o2",
+            "mention:wb:joel-god-2-32-o3",
             "mention:wb:joel-jerusalem-2-32",
             "mention:wb:joel-pl-mount-zion-abd9596-2-32"
           ],
@@ -1429,6 +1542,7 @@
           ],
           "record_keys": [
             "mention:wb:joel-god-3-16",
+            "mention:wb:joel-god-3-16-o2",
             "mention:wb:joel-israelites-3-16",
             "mention:wb:joel-jerusalem-3-16",
             "mention:wb:joel-pl-zion-af20c46-3-16"
@@ -1503,5 +1617,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:518baa8606ef534328a85921e538da1d0ac6b0e388b8687ad4da94f297ed6338"
 }

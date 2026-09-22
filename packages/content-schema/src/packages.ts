@@ -210,11 +210,13 @@ const pkgClaimObjectSchema = z.discriminatedUnion("type", [
   // Canonical-layer prose is never untagged: a text object always carries
   // the language of its value so localized text cannot leak into the
   // shared graph unmarked. New text objects must set value_language_tag.
-  z.object({
-    type: z.literal("text"),
-    value: z.string().min(1),
-    value_language_tag: z.enum(["en", "te", "ta"]).optional(),
-  }).strict(),
+  z
+    .object({
+      type: z.literal("text"),
+      value: z.string().min(1),
+      value_language_tag: z.enum(["en", "te", "ta"]).optional(),
+    })
+    .strict(),
   z.object({ type: z.literal("number"), value: z.number() }).strict(),
   z.object({ type: z.literal("date_range"), key: z.string().min(1) }).strict(),
   z.object({ type: z.literal("geometry"), key: z.string().min(1) }).strict(),
@@ -276,6 +278,50 @@ export const pkgAttestationSchema = z
   })
   .strict();
 
+// --- Typed qualifiers (representable, uncertainty-preserving) ---
+//
+// These are the structured forms the database already models but the
+// blueprint could not carry: a relationship/event temporal window (never a
+// fabricated absolute date — start/end stay nullable with a certainty), and
+// a geographic qualifier that names either an entity or a free label.
+// Certainty is always explicit so an unknown is recorded, never implied by
+// omission.
+
+const temporalQualifierSchema = z
+  .object({
+    start: z.string().min(1).nullable(),
+    end: z.string().min(1).nullable(),
+    label: z.string().min(1).nullable(),
+    certainty: evidenceStatusSchema,
+  })
+  .strict();
+
+const placeQualifierSchema = z
+  .object({
+    entity_key: entityKeySchema.nullable(),
+    label: z.string().min(1).nullable(),
+    certainty: evidenceStatusSchema,
+  })
+  .strict();
+
+// A point geometry is either known (WGS84 coordinates) or explicitly
+// unknown (null). CRS is recorded whenever a geometry is present; a
+// candidate set may accompany a `candidates` precision instead.
+const pointGeometrySchema = z
+  .object({
+    type: z.literal("Point"),
+    coordinates: z.tuple([z.number(), z.number()]),
+  })
+  .strict();
+
+const positionCandidateSchema = z
+  .object({
+    label: z.string().min(1),
+    geometry: pointGeometrySchema.nullable(),
+    crs: z.string().min(1).nullable(),
+  })
+  .strict();
+
 export const pkgRelationshipSchema = z
   .object({
     relationship_key: relationshipKeySchema,
@@ -284,6 +330,11 @@ export const pkgRelationshipSchema = z
     object_entity_key: entityKeySchema,
     applicable_scope_keys: z.array(scopeKeySchema).min(1),
     claim_keys: z.array(claimKeySchema),
+    // Certainty is the reviewable strength of the relationship itself. When
+    // absent the importer records "unknown" rather than assuming established.
+    certainty: evidenceStatusSchema.optional(),
+    temporal_qualifier: temporalQualifierSchema.nullable().optional(),
+    place_qualifier: placeQualifierSchema.nullable().optional(),
     review_status: draftLiteral,
   })
   .strict()
@@ -301,6 +352,12 @@ export const pkgEventSchema = z
   .object({
     event_key: eventKeySchema,
     event_type: z.string().regex(/^[a-z0-9-]+$/, "Invalid event_type"),
+    // A curated historical event may carry a chronological window; a purely
+    // literary/passage-derived record carries none and must not invent one.
+    start_date: temporalQualifierSchema.nullable().optional(),
+    end_date: temporalQualifierSchema.nullable().optional(),
+    chronology_system: z.string().min(1).nullable().optional(),
+    certainty: evidenceStatusSchema.optional(),
     participant_entity_keys: z.array(entityKeySchema),
     place_entity_keys: z.array(entityKeySchema),
     scripture_accounts: z
@@ -323,6 +380,15 @@ export const pkgPlaceSchema = z
         .object({
           evidence_item_key: evidenceItemKeySchema,
           precision: precisionSchema,
+          // All optional: a position may be known only approximately or be
+          // undetermined. An unknown geometry is null with precision
+          // "unknown", never a fabricated coordinate.
+          geometry: pointGeometrySchema.nullable().optional(),
+          crs: z.string().min(1).nullable().optional(),
+          period: temporalQualifierSchema.nullable().optional(),
+          candidates: z.array(positionCandidateSchema).optional(),
+          component_license: z.string().min(1).optional(),
+          certainty: evidenceStatusSchema.optional(),
           claim_keys: z.array(claimKeySchema),
         })
         .strict(),
@@ -605,6 +671,11 @@ function packageShell<R extends z.ZodTypeAny, C extends z.ZodTypeAny>(
       data_classification: z.literal("synthetic_fixture"),
       package_key: packageKeySchema,
       package_revision: z.number().int().positive(),
+      // Deterministic digest of the package content (excluding the
+      // revision-bearing envelope fields). Optional for older packages;
+      // present lets consumers detect content changes independently of the
+      // revision counter.
+      content_digest: sha256Schema.optional(),
       submission_id: submissionKeySchema,
       attempt: z.number().int().positive(),
       produced_for_job_id: jobKeySchema,

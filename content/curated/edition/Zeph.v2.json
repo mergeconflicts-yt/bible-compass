@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-zeph-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-zeph-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-zeph-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-zeph-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -86,14 +86,14 @@
       "verse:Zeph.3.20"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-zeph-canonical",
       "revision": 1,
-      "digest": "sha256:5d6f42527a32ecacdcc78a71c6e5e46ba2132feba2970393585f44f0a26b518c"
+      "digest": "sha256:0b9a93e42806892ef99a6780ed725fd873d307f6c9cb19e7e667108eca296894"
     }
   ],
   "records": {
@@ -166,6 +166,24 @@
           "occurrence_ordinal": 1,
           "prefix": "he great Day of the ",
           "suffix": " is near— near and c"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zeph-god-1-14-o2",
+        "verse_key": "verse:Zeph.1.14",
+        "attestation_key": "attestation:wb-zeph-god-1-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "ten, the Day of the ",
+          "suffix": "! Then the cry of th"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -279,6 +297,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zeph-god-1-6-o2",
+        "verse_key": "verse:Zeph.1.6",
+        "attestation_key": "attestation:wb-zeph-god-1-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "neither seeking the ",
+          "suffix": " nor inquiring of Hi"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zeph-god-1-7",
         "verse_key": "verse:Zeph.1.7",
         "attestation_key": "attestation:wb-zeph-god-1-7",
@@ -369,6 +405,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zeph-god-2-2-o2",
+        "verse_key": "verse:Zeph.2.2",
+        "attestation_key": "attestation:wb-zeph-god-2-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "fore the Day of the ",
+          "suffix": "’s anger comes upon "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zeph-god-2-3",
         "verse_key": "verse:Zeph.2.3",
         "attestation_key": "attestation:wb-zeph-god-2-3",
@@ -382,6 +436,24 @@
           "occurrence_ordinal": 1,
           "prefix": "Seek the ",
           "suffix": ", all you humble of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zeph-god-2-3-o2",
+        "verse_key": "verse:Zeph.2.3",
+        "attestation_key": "attestation:wb-zeph-god-2-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "d on the day of the ",
+          "suffix": "’s anger."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -472,6 +544,24 @@
           "occurrence_ordinal": 1,
           "prefix": "The ",
           "suffix": " has taken away your"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zeph-god-3-15-o2",
+        "verse_key": "verse:Zeph.3.15",
+        "attestation_key": "attestation:wb-zeph-god-3-15",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": " Israel’s King, the ",
+          "suffix": ", is among you; no l"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1113,7 +1203,8 @@
             "verse:Zeph.1.6"
           ],
           "record_keys": [
-            "mention:wb:zeph-god-1-6"
+            "mention:wb:zeph-god-1-6",
+            "mention:wb:zeph-god-1-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1165,7 +1256,8 @@
             "verse:Zeph.1.14"
           ],
           "record_keys": [
-            "mention:wb:zeph-god-1-14"
+            "mention:wb:zeph-god-1-14",
+            "mention:wb:zeph-god-1-14-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1195,7 +1287,8 @@
             "verse:Zeph.2.2"
           ],
           "record_keys": [
-            "mention:wb:zeph-god-2-2"
+            "mention:wb:zeph-god-2-2",
+            "mention:wb:zeph-god-2-2-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1205,7 +1298,8 @@
             "verse:Zeph.2.3"
           ],
           "record_keys": [
-            "mention:wb:zeph-god-2-3"
+            "mention:wb:zeph-god-2-3",
+            "mention:wb:zeph-god-2-3-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1354,7 +1448,8 @@
             "verse:Zeph.3.15"
           ],
           "record_keys": [
-            "mention:wb:zeph-god-3-15"
+            "mention:wb:zeph-god-3-15",
+            "mention:wb:zeph-god-3-15-o2"
           ],
           "blocker_question_keys": []
         },
@@ -1402,5 +1497,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:ed753d8e06ac6a60f306a70fbd9cca270e73ca51afde579e30c1be917b3e955e"
 }

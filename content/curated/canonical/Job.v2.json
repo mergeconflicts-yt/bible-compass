@@ -1189,11 +1189,21 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
     "entity_candidates": [
+      {
+        "candidate_key": "candidate:wb:p-job-1",
+        "entity_type": "person",
+        "proposed_label": "Job",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
       {
         "candidate_key": "candidate:wb:p-eliphaz-2",
         "entity_type": "person",
@@ -1288,6 +1298,36 @@
         "candidate_key": "candidate:wb:pl-naamah-2-ac6b210",
         "entity_type": "place",
         "proposed_label": "Naamah 2",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-tema-acd48d6",
+        "entity_type": "place",
+        "proposed_label": "Tema",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-uz-a324c4d",
+        "entity_type": "place",
+        "proposed_label": "Uz",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-zaphon-2-a78e845",
+        "entity_type": "place",
+        "proposed_label": "Zaphon 2",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -3403,7 +3443,7 @@
         "reference_key": "verse:Job.33.4",
         "entity_key": "entity:god",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -3879,6 +3919,9 @@
           "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3890,6 +3933,9 @@
           "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3901,6 +3947,9 @@
           "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3912,6 +3961,9 @@
           "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3923,6 +3975,9 @@
           "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3934,6 +3989,9 @@
           "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3945,6 +4003,9 @@
           "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3956,6 +4017,9 @@
           "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3967,6 +4031,9 @@
           "scope:wb-job-42:refsys:eng-v22:job.42.1-job.42.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -3978,785 +4045,77 @@
           "scope:wb-job-32:refsys:eng-v22:job.32.1-job.32.22"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       }
     ],
-    "events": [
-      {
-        "event_key": "event:wb-job-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-east-ab0b2dd",
-          "entity:pl-uz-a324c4d"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-1-p1:refsys:eng-v22:job.1.1-job.1.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1",
-          "entity:p-satan-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-1-p2:refsys:eng-v22:job.1.6-job.1.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-1-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-chaldea-a32a4f8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-1-p3:refsys:eng-v22:job.1.13-job.1.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-10-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-10-p1:refsys:eng-v22:job.10.1-job.10.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-11-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-zophar-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-naamah-2-ac6b210"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-11-p1:refsys:eng-v22:job.11.1-job.11.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-12-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-12-p1:refsys:eng-v22:job.12.1-job.12.25",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-13-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-13-p1:refsys:eng-v22:job.13.1-job.13.28",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-15-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-eliphaz-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-15-p1:refsys:eng-v22:job.15.1-job.15.35",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-16-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-16-p1:refsys:eng-v22:job.16.1-job.16.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-18-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-bildad-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-18-p1:refsys:eng-v22:job.18.1-job.18.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-19-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-19-p1:refsys:eng-v22:job.19.1-job.19.29",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1",
-          "entity:p-satan-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-2-p1:refsys:eng-v22:job.2.1-job.2.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-2-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-bildad-1",
-          "entity:p-eliphaz-2",
-          "entity:p-job-1",
-          "entity:p-zophar-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-naamah-2-ac6b210"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-2-p2:refsys:eng-v22:job.2.11-job.2.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-20-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-zophar-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-naamah-2-ac6b210"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-20-p1:refsys:eng-v22:job.20.1-job.20.29",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-21-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-21-p1:refsys:eng-v22:job.21.1-job.21.34",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-22-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-eliphaz-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-ophir-a104820"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-22-p1:refsys:eng-v22:job.22.1-job.22.30",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-23-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-23-p1:refsys:eng-v22:job.23.1-job.23.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-24-p1",
-        "event_type": "judgment",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-24-p1:refsys:eng-v22:job.24.1-job.24.25",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-25-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-bildad-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-25-p1:refsys:eng-v22:job.25.1-job.25.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-26-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-zaphon-2-a78e845"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-26-p1:refsys:eng-v22:job.26.1-job.26.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-27-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-27-p1:refsys:eng-v22:job.27.1-job.27.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-27-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-27-p2:refsys:eng-v22:job.27.7-job.27.23",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-28-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-ethiopia-ab45bd3",
-          "entity:pl-ophir-a104820"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-28-p1:refsys:eng-v22:job.28.1-job.28.28",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-29-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-29-p1:refsys:eng-v22:job.29.1-job.29.25",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-3-p1",
-        "event_type": "birth",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-3-p1:refsys:eng-v22:job.3.1-job.3.26",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-31-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-adam-1",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-31-p1:refsys:eng-v22:job.31.1-job.31.40",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-32-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-barachel-1",
-          "entity:p-elihu-5",
-          "entity:p-job-1",
-          "entity:p-ram-3"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-32-p1:refsys:eng-v22:job.32.1-job.32.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-33-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:holy-spirit",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-33-p1:refsys:eng-v22:job.33.1-job.33.33",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-34-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-elihu-5",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-34-p1:refsys:eng-v22:job.34.1-job.34.37",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-35-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-elihu-5",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-35-p1:refsys:eng-v22:job.35.1-job.35.16",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-36-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-elihu-5"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-36-p1:refsys:eng-v22:job.36.1-job.36.33",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-37-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-37-p1:refsys:eng-v22:job.37.1-job.37.24",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-38-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-38-p1:refsys:eng-v22:job.38.1-job.38.41",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-4-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-eliphaz-2"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-4-p1:refsys:eng-v22:job.4.1-job.4.21",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-40-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-40-p1:refsys:eng-v22:job.40.1-job.40.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-40-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-jordan-ae686c9"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-40-p2:refsys:eng-v22:job.40.6-job.40.24",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-42-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-42-p1:refsys:eng-v22:job.42.1-job.42.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-42-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-bildad-1",
-          "entity:p-eliphaz-2",
-          "entity:p-job-1",
-          "entity:p-zophar-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-naamah-2-ac6b210"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-42-p2:refsys:eng-v22:job.42.7-job.42.9",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-42-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-jemimah-1",
-          "entity:p-job-1",
-          "entity:p-keren-happuch-1",
-          "entity:p-keziah-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-42-p3:refsys:eng-v22:job.42.10-job.42.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-5-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-5-p1:refsys:eng-v22:job.5.1-job.5.27",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-6-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-sheba-1-a81ab85",
-          "entity:pl-tema-acd48d6"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-6-p1:refsys:eng-v22:job.6.1-job.6.30",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-8-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-bildad-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-8-p1:refsys:eng-v22:job.8.1-job.8.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-job-9-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-job-1"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-job-9-p1:refsys:eng-v22:job.9.1-job.9.35",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-naamah-2-ac6b210",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-naamah-2-ac6b210",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-tema-acd48d6",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-tema-acd48d6",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-uz-a324c4d",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-uz-a324c4d",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-zaphon-2-a78e845",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-zaphon-2-a78e845",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -8775,12 +8134,13 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     },
     {
       "code": "ambiguous-mention-referents-dropped",
       "note": "1 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
-  ]
+  ],
+  "content_digest": "sha256:9458e0db6168595486fdf0ab4fe2fc1b04f33d5e6db26e0503f6f9613d5ab087"
 }

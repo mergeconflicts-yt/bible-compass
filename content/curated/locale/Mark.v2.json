@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-en-mark-locale",
-  "package_revision": 1,
-  "submission_id": "submission:wb-en-mark-locale:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-en-mark-locale:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-en-mark-locale",
   "package_layer": "locale",
   "package_family": "locale-context-draft",
@@ -811,48 +811,33 @@
   "dependencies": [
     {
       "package_key": "draft:wb-mark-canonical",
-      "revision": 1,
-      "digest": "sha256:757f1781331610876564c0e20ab20cbfbb7b97acbb6bccb4cc1cdbf4a4557c4a"
+      "revision": 2,
+      "digest": "sha256:57be269fbb5a390f29dee9a0feb71e08c8665d097390124bc6d70d17a69b6b3e"
     }
   ],
   "records": {
     "entity_profiles": [
       {
-        "profile_key": "profile:en:p-joseph-7",
-        "entity_key": "entity:p-joseph-7",
+        "profile_key": "profile:en:p-legion-1",
+        "entity_key": "entity:p-legion-1",
         "language_tag": "en",
-        "preferred_name": "Joseph",
-        "aliases": [
-          "Joses"
-        ],
+        "preferred_name": "Legion",
+        "aliases": [],
         "short_description": {
-          "text": "Joseph — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
+          "text": "Legion — the unclean spirit who afflicted the Gerasene man (MRK 5:9).",
           "claim_keys": []
         },
         "extended_description": null,
         "review_status": "draft"
       },
       {
-        "profile_key": "profile:en:p-simon-3",
-        "entity_key": "entity:p-simon-3",
+        "profile_key": "profile:en:p-jairus-1",
+        "entity_key": "entity:p-jairus-1",
         "language_tag": "en",
-        "preferred_name": "Simon",
+        "preferred_name": "Jairus",
         "aliases": [],
         "short_description": {
-          "text": "Simon — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
-          "claim_keys": []
-        },
-        "extended_description": null,
-        "review_status": "draft"
-      },
-      {
-        "profile_key": "profile:en:p-simon-4",
-        "entity_key": "entity:p-simon-4",
-        "language_tag": "en",
-        "preferred_name": "Simon",
-        "aliases": [],
-        "short_description": {
-          "text": "Simon — the leper (MAT 26:6).",
+          "text": "Jairus — synagogue official whose daughter was healed (MRK 5:22).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -937,13 +922,13 @@
         "review_status": "draft"
       },
       {
-        "profile_key": "profile:en:pl-caesarea-philippi-ab7bf48",
-        "entity_key": "entity:pl-caesarea-philippi-ab7bf48",
+        "profile_key": "profile:en:pl-bethsaida-2-a9fc13a",
+        "entity_key": "entity:pl-bethsaida-2-a9fc13a",
         "language_tag": "en",
-        "preferred_name": "Caesarea Philippi",
+        "preferred_name": "Bethsaida 2",
         "aliases": [],
         "short_description": {
-          "text": "Caesarea Philippi is a place named in Scripture (Mark.8.27–Matt.16.13).",
+          "text": "Bethsaida in Gaulanitis.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -963,26 +948,13 @@
         "review_status": "draft"
       },
       {
-        "profile_key": "profile:en:pl-decapolis-ae733a2",
-        "entity_key": "entity:pl-decapolis-ae733a2",
+        "profile_key": "profile:en:pl-gerasa-ada6b64",
+        "entity_key": "entity:pl-gerasa-ada6b64",
         "language_tag": "en",
-        "preferred_name": "Decapolis",
+        "preferred_name": "Gerasa",
         "aliases": [],
         "short_description": {
-          "text": "Decapolis is a place named in Scripture (Mark.5.20–Matt.4.25).",
-          "claim_keys": []
-        },
-        "extended_description": null,
-        "review_status": "draft"
-      },
-      {
-        "profile_key": "profile:en:pl-gethsemane-a42418f",
-        "entity_key": "entity:pl-gethsemane-a42418f",
-        "language_tag": "en",
-        "preferred_name": "Gethsemane",
-        "aliases": [],
-        "short_description": {
-          "text": "Traditions vary as to the exact location.",
+          "text": "Gerasa is a place named in Scripture (Mark.5.1–Luke.8.37).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -996,6 +968,19 @@
         "aliases": [],
         "short_description": {
           "text": "The boundaries changed over time.",
+          "claim_keys": []
+        },
+        "extended_description": null,
+        "review_status": "draft"
+      },
+      {
+        "profile_key": "profile:en:pl-phoenicia-a33d53e",
+        "entity_key": "entity:pl-phoenicia-a33d53e",
+        "language_tag": "en",
+        "preferred_name": "Phoenicia",
+        "aliases": [],
+        "short_description": {
+          "text": "Phoenicia is a place named in Scripture (Mark.7.26–Acts.21.2).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -11480,5 +11465,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:46c90337bf48dda102e483499509052850c3cfd542c9bac153dbcb30118cecc9"
 }

@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-ezra-canonical",
-  "package_revision": 1,
-  "submission_id": "submission:wb-ezra-canonical:attempt-1",
-  "attempt": 1,
+  "package_revision": 2,
+  "submission_id": "submission:wb-ezra-canonical:attempt-2",
+  "attempt": 2,
   "produced_for_job_id": "job:wb-ezra-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
@@ -345,7 +345,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
@@ -1294,6 +1294,26 @@
         "candidate_key": "candidate:wb:p-shealtiel-2",
         "entity_type": "person",
         "proposed_label": "Shealtiel",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-darius-1",
+        "entity_type": "person",
+        "proposed_label": "Darius",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:p-ahasuerus-1",
+        "entity_type": "person",
+        "proposed_label": "Ahasuerus",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -3101,16 +3121,6 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-chephirah-a2e5054",
-        "entity_type": "place",
-        "proposed_label": "Chephirah",
-        "label_language_tag": "en",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-cherub-ab3ad14",
         "entity_type": "place",
         "proposed_label": "Cherub",
@@ -3124,16 +3134,6 @@
         "candidate_key": "candidate:wb:pl-ecbatana-a212ef7",
         "entity_type": "place",
         "proposed_label": "Ecbatana",
-        "label_language_tag": "en",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-erech-a5db1a6",
-        "entity_type": "place",
-        "proposed_label": "Erech",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -3194,6 +3194,16 @@
         "candidate_key": "candidate:wb:pl-magbish-ac041e2",
         "entity_type": "place",
         "proposed_label": "Magbish",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-media-ad2fadf",
+        "entity_type": "place",
+        "proposed_label": "Media",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -6139,7 +6149,7 @@
         "reference_key": "verse:Ezra.8.16",
         "entity_key": "entity:p-elnathan-3",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -6189,7 +6199,7 @@
         "reference_key": "verse:Ezra.8.16",
         "entity_key": "entity:p-elnathan-4",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -6709,7 +6719,7 @@
         "reference_key": "verse:Ezra.10.25",
         "entity_key": "entity:p-malchijah-5",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -7729,7 +7739,7 @@
         "reference_key": "verse:Ezra.2.24",
         "entity_key": "entity:pl-azmaveth-a3d7871",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -7999,7 +8009,7 @@
         "reference_key": "verse:Ezra.5.6",
         "entity_key": "entity:pl-euphrates-a62dec4",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8009,7 +8019,7 @@
         "reference_key": "verse:Ezra.6.6",
         "entity_key": "entity:pl-euphrates-a62dec4",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8029,7 +8039,7 @@
         "reference_key": "verse:Ezra.2.20",
         "entity_key": "entity:pl-gibbar-af0ee3a",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8069,7 +8079,7 @@
         "reference_key": "verse:Ezra.2.32",
         "entity_key": "entity:pl-harim-addc3e7",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8079,7 +8089,7 @@
         "reference_key": "verse:Ezra.2.39",
         "entity_key": "entity:pl-harim-addc3e7",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8089,7 +8099,7 @@
         "reference_key": "verse:Ezra.10.31",
         "entity_key": "entity:pl-harim-addc3e7",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8179,7 +8189,7 @@
         "reference_key": "verse:Ezra.2.30",
         "entity_key": "entity:pl-magbish-ac041e2",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -8399,7 +8409,7 @@
         "reference_key": "verse:Ezra.2.35",
         "entity_key": "entity:pl-senaah-ac5ba1a",
         "kind": "location",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -9559,7 +9569,7 @@
         "reference_key": "verse:Ezra.6.21",
         "entity_key": "entity:god",
         "kind": "participant",
-        "textual_basis": "explicit",
+        "textual_basis": "strongly_implied",
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
@@ -10055,6 +10065,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10066,6 +10079,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10077,6 +10093,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10088,6 +10107,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10099,6 +10121,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10110,6 +10135,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10121,6 +10149,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10132,6 +10163,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10143,6 +10177,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10154,6 +10191,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10165,6 +10205,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10176,6 +10219,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10187,6 +10233,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10198,6 +10247,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10209,6 +10261,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10220,6 +10275,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10231,6 +10289,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10242,6 +10303,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10253,6 +10317,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10264,6 +10331,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10275,6 +10345,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10286,6 +10359,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10297,6 +10373,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10308,6 +10387,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10319,6 +10401,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10330,6 +10415,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10341,6 +10429,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10352,6 +10443,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10363,6 +10457,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10374,6 +10471,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10385,6 +10485,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10396,6 +10499,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10407,6 +10513,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10418,6 +10527,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10429,6 +10541,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10440,6 +10555,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10451,6 +10569,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10462,6 +10583,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10473,6 +10597,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10484,6 +10611,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10495,6 +10625,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10506,6 +10639,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10517,6 +10653,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10528,6 +10667,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10539,6 +10681,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10550,6 +10695,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10561,6 +10709,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10572,6 +10723,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10583,6 +10737,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10594,6 +10751,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10605,6 +10765,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10616,6 +10779,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10627,6 +10793,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10638,6 +10807,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10649,6 +10821,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10660,6 +10835,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10671,6 +10849,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10682,6 +10863,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10693,6 +10877,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10704,6 +10891,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10715,6 +10905,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10726,6 +10919,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10737,6 +10933,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10748,6 +10947,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10759,6 +10961,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10770,6 +10975,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10781,6 +10989,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10792,6 +11003,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10803,6 +11017,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10814,6 +11031,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10825,6 +11045,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10836,6 +11059,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10847,6 +11073,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10858,6 +11087,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10869,6 +11101,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10880,6 +11115,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10891,6 +11129,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10902,6 +11143,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10913,6 +11157,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10924,6 +11171,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10935,6 +11185,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10946,6 +11199,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10957,6 +11213,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10968,6 +11227,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10979,6 +11241,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -10990,6 +11255,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11001,6 +11269,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11012,6 +11283,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11023,6 +11297,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11034,6 +11311,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11045,6 +11325,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11056,6 +11339,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11067,6 +11353,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11078,6 +11367,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11089,6 +11381,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11100,6 +11395,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11111,6 +11409,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11122,6 +11423,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11133,6 +11437,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11144,6 +11451,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11155,6 +11465,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11166,6 +11479,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11177,6 +11493,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11188,6 +11507,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11199,6 +11521,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11210,6 +11535,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11221,6 +11549,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11232,6 +11563,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11243,6 +11577,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11254,6 +11591,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11265,6 +11605,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11276,6 +11619,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11287,6 +11633,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11298,6 +11647,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11309,6 +11661,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11320,6 +11675,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11331,6 +11689,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11342,6 +11703,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11353,6 +11717,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11364,6 +11731,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11375,6 +11745,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11386,6 +11759,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11397,6 +11773,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11408,6 +11787,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11419,6 +11801,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11430,6 +11815,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11441,6 +11829,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11452,6 +11843,9 @@
           "scope:wb-ezra-7:refsys:eng-v22:ezra.7.1-ezra.7.28"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11463,6 +11857,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11474,6 +11871,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11485,6 +11885,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11496,6 +11899,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11507,6 +11913,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11518,6 +11927,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11529,6 +11941,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11540,6 +11955,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11551,6 +11969,9 @@
           "scope:wb-ezra-5:refsys:eng-v22:ezra.5.1-ezra.5.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11562,6 +11983,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11573,6 +11997,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11584,6 +12011,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11595,6 +12025,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11606,6 +12039,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11617,6 +12053,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11628,6 +12067,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11639,6 +12081,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11650,6 +12095,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11661,6 +12109,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11672,6 +12123,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11683,6 +12137,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11694,6 +12151,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11705,6 +12165,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11716,6 +12179,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11727,6 +12193,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11738,6 +12207,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11749,6 +12221,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11760,6 +12235,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11771,6 +12249,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11782,6 +12263,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11793,6 +12277,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11804,6 +12291,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11815,6 +12305,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11826,6 +12319,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11837,6 +12333,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11848,6 +12347,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11859,6 +12361,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11870,6 +12375,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11881,6 +12389,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11892,6 +12403,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11903,6 +12417,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11914,6 +12431,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11925,6 +12445,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11936,6 +12459,9 @@
           "scope:wb-ezra-5:refsys:eng-v22:ezra.5.1-ezra.5.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11947,6 +12473,9 @@
           "scope:wb-ezra-5:refsys:eng-v22:ezra.5.1-ezra.5.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11958,6 +12487,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11969,6 +12501,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11980,6 +12515,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -11991,6 +12529,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12002,6 +12543,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12013,6 +12557,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12024,6 +12571,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12035,6 +12585,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12046,6 +12599,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12057,6 +12613,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12068,6 +12627,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12079,6 +12641,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12090,6 +12655,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12101,6 +12669,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12112,6 +12683,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12123,6 +12697,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12134,6 +12711,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12145,6 +12725,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12156,6 +12739,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12167,6 +12753,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12178,6 +12767,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12189,6 +12781,9 @@
           "scope:wb-ezra-5:refsys:eng-v22:ezra.5.1-ezra.5.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12200,6 +12795,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12211,6 +12809,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12222,6 +12823,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12233,6 +12837,9 @@
           "scope:wb-ezra-5:refsys:eng-v22:ezra.5.1-ezra.5.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12244,6 +12851,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12255,6 +12865,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12266,6 +12879,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12277,6 +12893,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12288,6 +12907,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12299,6 +12921,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12310,6 +12935,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12321,6 +12949,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12332,6 +12963,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12343,6 +12977,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12354,6 +12991,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12365,6 +13005,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12376,6 +13019,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12387,6 +13033,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12398,6 +13047,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12409,6 +13061,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12420,6 +13075,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12431,6 +13089,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12442,6 +13103,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12453,6 +13117,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12464,6 +13131,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12475,6 +13145,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12486,6 +13159,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12497,6 +13173,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12508,6 +13187,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12519,6 +13201,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12530,6 +13215,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12541,6 +13229,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12552,6 +13243,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12563,6 +13257,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12574,6 +13271,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12585,6 +13285,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12596,6 +13299,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12607,6 +13313,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12618,6 +13327,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12629,6 +13341,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12640,6 +13355,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12651,6 +13369,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12662,6 +13383,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12673,6 +13397,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12684,6 +13411,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12695,6 +13425,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12706,6 +13439,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12717,6 +13453,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12728,6 +13467,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12739,6 +13481,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12750,6 +13495,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12761,6 +13509,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12772,6 +13523,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12783,6 +13537,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12794,6 +13551,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12805,6 +13565,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12816,6 +13579,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12827,6 +13593,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12838,6 +13607,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12849,6 +13621,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12860,6 +13635,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12871,6 +13649,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12882,6 +13663,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12893,6 +13677,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12904,6 +13691,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12915,6 +13705,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12926,6 +13719,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12937,6 +13733,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12948,6 +13747,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12959,6 +13761,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12970,6 +13775,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12981,6 +13789,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -12992,6 +13803,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13003,6 +13817,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13014,6 +13831,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13025,6 +13845,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13036,6 +13859,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13047,6 +13873,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13058,6 +13887,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13069,6 +13901,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13080,6 +13915,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13091,6 +13929,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13102,6 +13943,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13113,6 +13957,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13124,6 +13971,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13135,6 +13985,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13146,6 +13999,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13157,6 +14013,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13168,6 +14027,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13179,6 +14041,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13190,6 +14055,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13201,6 +14069,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13212,6 +14083,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13223,6 +14097,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13234,6 +14111,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13245,6 +14125,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13256,6 +14139,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13267,6 +14153,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13278,6 +14167,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13289,6 +14181,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13300,6 +14195,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13311,6 +14209,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13322,6 +14223,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13333,6 +14237,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13344,6 +14251,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13355,6 +14265,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13366,6 +14279,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13377,6 +14293,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13388,6 +14307,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13399,6 +14321,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13410,6 +14335,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13421,6 +14349,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13432,6 +14363,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13443,6 +14377,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13454,6 +14391,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13465,6 +14405,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13476,6 +14419,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13487,6 +14433,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13498,6 +14447,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13509,6 +14461,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13520,6 +14475,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13531,6 +14489,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13542,6 +14503,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13553,6 +14517,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13564,6 +14531,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13575,6 +14545,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13586,6 +14559,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13597,6 +14573,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13608,6 +14587,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13619,6 +14601,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13630,6 +14615,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13641,6 +14629,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13652,6 +14643,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13663,6 +14657,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13674,6 +14671,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13685,6 +14685,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13696,6 +14699,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13707,6 +14713,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13718,6 +14727,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13729,6 +14741,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13740,6 +14755,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13751,6 +14769,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13762,6 +14783,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13773,6 +14797,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13784,6 +14811,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13795,6 +14825,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13806,6 +14839,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13817,6 +14853,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13828,6 +14867,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13839,6 +14881,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13850,6 +14895,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13861,6 +14909,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13872,6 +14923,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13883,6 +14937,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13894,6 +14951,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13905,6 +14965,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13916,6 +14979,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13927,6 +14993,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13938,6 +15007,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13949,6 +15021,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13960,6 +15035,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13971,6 +15049,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13982,6 +15063,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -13993,6 +15077,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14004,6 +15091,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14015,6 +15105,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14026,6 +15119,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14037,6 +15133,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14048,6 +15147,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14059,6 +15161,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14070,6 +15175,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14081,6 +15189,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14092,6 +15203,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14103,6 +15217,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14114,6 +15231,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14125,6 +15245,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14136,6 +15259,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14147,6 +15273,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14158,6 +15287,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14169,6 +15301,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14180,6 +15315,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14191,6 +15329,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14202,6 +15343,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14213,6 +15357,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14224,6 +15371,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14235,6 +15385,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14246,6 +15399,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14257,6 +15413,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14268,6 +15427,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14279,6 +15441,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14290,6 +15455,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14301,6 +15469,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14312,6 +15483,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14323,6 +15497,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14334,6 +15511,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14345,6 +15525,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14356,6 +15539,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14367,6 +15553,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14378,6 +15567,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14389,6 +15581,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14400,6 +15595,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14411,6 +15609,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14422,6 +15623,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14433,6 +15637,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14444,6 +15651,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14455,6 +15665,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14466,6 +15679,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14477,6 +15693,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14488,6 +15707,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14499,6 +15721,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14510,6 +15735,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14521,6 +15749,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14532,6 +15763,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14543,6 +15777,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14554,6 +15791,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14565,6 +15805,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14576,6 +15819,9 @@
           "scope:wb-ezra-7:refsys:eng-v22:ezra.7.1-ezra.7.28"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14587,6 +15833,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14598,6 +15847,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14609,6 +15861,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14620,6 +15875,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14631,6 +15889,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14642,6 +15903,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14653,6 +15917,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14664,6 +15931,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14675,6 +15945,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14686,6 +15959,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14697,6 +15973,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14708,6 +15987,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14719,6 +16001,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14730,6 +16015,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14741,6 +16029,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14752,6 +16043,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14763,6 +16057,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14774,6 +16071,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14785,6 +16085,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14796,6 +16099,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14807,6 +16113,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14818,6 +16127,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14829,6 +16141,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14840,6 +16155,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14851,6 +16169,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14862,6 +16183,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14873,6 +16197,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14884,6 +16211,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14895,6 +16225,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14906,6 +16239,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14917,6 +16253,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14928,6 +16267,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14939,6 +16281,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14950,6 +16295,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14961,6 +16309,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14972,6 +16323,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14983,6 +16337,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -14994,6 +16351,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15005,6 +16365,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15016,6 +16379,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15027,6 +16393,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15038,6 +16407,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15049,6 +16421,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15060,6 +16435,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15071,6 +16449,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15082,6 +16463,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15093,6 +16477,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15104,6 +16491,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15115,6 +16505,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15126,6 +16519,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15137,6 +16533,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15148,6 +16547,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15159,6 +16561,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15170,6 +16575,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15181,6 +16589,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15192,6 +16603,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15203,6 +16617,9 @@
           "scope:wb-ezra-5:refsys:eng-v22:ezra.5.1-ezra.5.17"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15214,6 +16631,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15225,6 +16645,9 @@
           "scope:wb-ezra-10:refsys:eng-v22:ezra.10.1-ezra.10.44"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15236,6 +16659,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15247,6 +16673,9 @@
           "scope:wb-ezra-8:refsys:eng-v22:ezra.8.1-ezra.8.36"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15258,6 +16687,9 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15269,6 +16701,9 @@
           "scope:wb-ezra-3:refsys:eng-v22:ezra.3.1-ezra.3.13"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -15280,994 +16715,26 @@
           "scope:wb-ezra-2:refsys:eng-v22:ezra.2.1-ezra.2.70"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       }
     ],
-    "events": [
-      {
-        "event_key": "event:wb-ezra-1-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-cyrus-1",
-          "entity:p-jeremiah-6"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-persia-ab9696f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-1-p1:refsys:eng-v22:ezra.1.1-ezra.1.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-cyrus-1",
-          "entity:p-mithredath-1",
-          "entity:p-nebuchadnezzar-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-babylonia-a8394b8",
-          "entity:pl-persia-ab9696f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-1-p2:refsys:eng-v22:ezra.1.7-ezra.1.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-10-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-elam-4",
-          "entity:p-ezra-1",
-          "entity:p-jehiel-6",
-          "entity:p-shecaniah-5"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-10-p1:refsys:eng-v22:ezra.10.1-ezra.10.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-10-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-asahel-4",
-          "entity:p-eliashib-3",
-          "entity:p-ezra-1",
-          "entity:p-jahzeiah-1",
-          "entity:p-jehohanan-1",
-          "entity:p-jonathan-9",
-          "entity:p-meshullam-9",
-          "entity:p-shabbethai-1",
-          "entity:p-tikvah-2"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-10-p2:refsys:eng-v22:ezra.10.6-ezra.10.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-10-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:p-abdi-2",
-          "entity:p-adaiah-6",
-          "entity:p-adaiah-7",
-          "entity:p-adna-1",
-          "entity:p-amariah-5",
-          "entity:p-amram-2",
-          "entity:p-athlai-1",
-          "entity:p-azarel-3",
-          "entity:p-aziza-1",
-          "entity:p-bani-4",
-          "entity:p-bani-5",
-          "entity:p-bebai-1",
-          "entity:p-bedeiah-1",
-          "entity:p-benaiah-10",
-          "entity:p-benaiah-7",
-          "entity:p-benaiah-8",
-          "entity:p-benaiah-9",
-          "entity:p-benjamin-3",
-          "entity:p-bezalel-2",
-          "entity:p-binnui-2",
-          "entity:p-binnui-3",
-          "entity:p-chelal-1",
-          "entity:p-cheluhi-1",
-          "entity:p-elam-4",
-          "entity:p-elasah-1",
-          "entity:p-eleazar-7",
-          "entity:p-eliashib-4",
-          "entity:p-eliashib-5",
-          "entity:p-eliashib-6",
-          "entity:p-eliezer-7",
-          "entity:p-eliezer-8",
-          "entity:p-elijah-3",
-          "entity:p-elijah-4",
-          "entity:p-elioenai-4",
-          "entity:p-elioenai-5",
-          "entity:p-eliphelet-6",
-          "entity:p-gedaliah-3",
-          "entity:p-hanani-3",
-          "entity:p-hananiah-5",
-          "entity:p-harim-3",
-          "entity:p-hashum-1",
-          "entity:p-immer-2",
-          "entity:p-ishmael-6",
-          "entity:p-isshijah-1",
-          "entity:p-izziah-1",
-          "entity:p-jaasu-1",
-          "entity:p-jaddai-1",
-          "entity:p-jarib-1",
-          "entity:p-jashub-1",
-          "entity:p-jehiel-7",
-          "entity:p-jehiel-8",
-          "entity:p-jehohanan-2",
-          "entity:p-jeiel-8",
-          "entity:p-jeremai-1",
-          "entity:p-jeremoth-5",
-          "entity:p-jeremoth-6",
-          "entity:p-jeremoth-7",
-          "entity:p-jeshua-3",
-          "entity:p-joel-9",
-          "entity:p-joseph-4",
-          "entity:p-jozabad-6",
-          "entity:p-jozabad-7",
-          "entity:p-jozadak-1",
-          "entity:p-judah-2",
-          "entity:p-kelaiah-1",
-          "entity:p-maadai-1",
-          "entity:p-maaseiah-6",
-          "entity:p-maaseiah-7",
-          "entity:p-maaseiah-8",
-          "entity:p-machnadebai-1",
-          "entity:p-malchijah-4",
-          "entity:p-malchijah-5",
-          "entity:p-malchijah-6",
-          "entity:p-malluch-2",
-          "entity:p-malluch-3",
-          "entity:p-manasseh-4",
-          "entity:p-manasseh-5",
-          "entity:p-mattaniah-5",
-          "entity:p-mattaniah-6",
-          "entity:p-mattaniah-7",
-          "entity:p-mattaniah-8",
-          "entity:p-mattattah-1",
-          "entity:p-mattenai-1",
-          "entity:p-mattenai-2",
-          "entity:p-mattithiah-4",
-          "entity:p-meremoth-2",
-          "entity:p-meshullam-10",
-          "entity:p-mijamin-2",
-          "entity:p-nathan-8",
-          "entity:p-nebo-1",
-          "entity:p-netanel-1",
-          "entity:p-pahath-moab-1",
-          "entity:p-parosh-1",
-          "entity:p-pashhur-1",
-          "entity:p-pethahiah-2",
-          "entity:p-ramiah-1",
-          "entity:p-shallum-10",
-          "entity:p-shallum-9",
-          "entity:p-sharai-1",
-          "entity:p-shashai-1",
-          "entity:p-sheal-1",
-          "entity:p-shelemiah-1",
-          "entity:p-shelemiah-2",
-          "entity:p-shemaiah-15",
-          "entity:p-shemaiah-16",
-          "entity:p-shemariah-3",
-          "entity:p-shemariah-4",
-          "entity:p-shimei-14",
-          "entity:p-shimei-15",
-          "entity:p-shimei-16",
-          "entity:p-shimeon-1",
-          "entity:p-telem-1",
-          "entity:p-uel-1",
-          "entity:p-uri-3",
-          "entity:p-uzziah-2",
-          "entity:p-vaniah-1",
-          "entity:p-zabad-4",
-          "entity:p-zabad-5",
-          "entity:p-zabad-6",
-          "entity:p-zabbai-1",
-          "entity:p-zattu-1",
-          "entity:p-zebadiah-9",
-          "entity:p-zebina-1",
-          "entity:p-zechariah-18"
-        ],
-        "place_entity_keys": [
-          "entity:pl-harim-addc3e7",
-          "entity:pl-nebo-3-ac51ba3"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-10-p3:refsys:eng-v22:ezra.10.18-ezra.10.44",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:nehemiah-governor",
-          "entity:p-adin-1",
-          "entity:p-adonikam-1",
-          "entity:p-akkub-2",
-          "entity:p-akkub-3",
-          "entity:p-ami-1",
-          "entity:p-arah-2",
-          "entity:p-asaph-3",
-          "entity:p-asnah-1",
-          "entity:p-ater-1",
-          "entity:p-ater-2",
-          "entity:p-azgad-1",
-          "entity:p-azmaveth-4",
-          "entity:p-baanah-3",
-          "entity:p-bakbuk-1",
-          "entity:p-bani-4",
-          "entity:p-barkos-1",
-          "entity:p-barzillai-3",
-          "entity:p-bazluth-1",
-          "entity:p-bebai-1",
-          "entity:p-besai-1",
-          "entity:p-bezai-1",
-          "entity:p-bigvai-1",
-          "entity:p-bilshan-1",
-          "entity:p-darkon-1",
-          "entity:p-delaiah-3",
-          "entity:p-elam-4",
-          "entity:p-elam-5",
-          "entity:p-gahar-1",
-          "entity:p-gazzam-1",
-          "entity:p-gibbar-1",
-          "entity:p-giddel-1",
-          "entity:p-giddel-2",
-          "entity:p-habaiah-1",
-          "entity:p-hagab-1",
-          "entity:p-hagabah-1",
-          "entity:p-hakkoz-1",
-          "entity:p-hakupha-1",
-          "entity:p-hanan-4",
-          "entity:p-harhur-1",
-          "entity:p-harim-2",
-          "entity:p-harim-3",
-          "entity:p-harsha-1",
-          "entity:p-hashum-1",
-          "entity:p-hassophereth-1",
-          "entity:p-hasupha-1",
-          "entity:p-hatipha-1",
-          "entity:p-hatita-1",
-          "entity:p-hattil-1",
-          "entity:p-hezekiah-2",
-          "entity:p-hodaviah-5",
-          "entity:p-immer-2",
-          "entity:p-jaalah-1",
-          "entity:p-jedaiah-2",
-          "entity:p-jeshua-1",
-          "entity:p-jeshua-3",
-          "entity:p-jeshua-4",
-          "entity:p-jeshua-5",
-          "entity:p-joab-3",
-          "entity:p-jorah-1",
-          "entity:p-kadmiel-1",
-          "entity:p-keros-1",
-          "entity:p-lebanah-1",
-          "entity:p-magbish-1",
-          "entity:p-mehida-1",
-          "entity:p-meunim-1",
-          "entity:p-mispar-1",
-          "entity:p-mordecai-1",
-          "entity:p-nebo-1",
-          "entity:p-nebuchadnezzar-1",
-          "entity:p-nekoda-1",
-          "entity:p-nephisim-1",
-          "entity:p-neziah-1",
-          "entity:p-padon-1",
-          "entity:p-pahath-moab-1",
-          "entity:p-parosh-1",
-          "entity:p-paseah-2",
-          "entity:p-pashhur-1",
-          "entity:p-peruda-1",
-          "entity:p-pochereth-hazzebaim-1",
-          "entity:p-reaiah-3",
-          "entity:p-reelaiah-1",
-          "entity:p-rehum-1",
-          "entity:p-rezin-2",
-          "entity:p-senaah-1",
-          "entity:p-seraiah-6",
-          "entity:p-shallum-7",
-          "entity:p-shalmai-1",
-          "entity:p-shephatiah-5",
-          "entity:p-shephatiah-6",
-          "entity:p-shobai-1",
-          "entity:p-siaha-1",
-          "entity:p-sisera-2",
-          "entity:p-solomon-1",
-          "entity:p-sotai-1",
-          "entity:p-tabbaoth-1",
-          "entity:p-talmon-1",
-          "entity:p-temah-1",
-          "entity:p-uzza-2",
-          "entity:p-zaccai-1",
-          "entity:p-zattu-1",
-          "entity:p-zerubbabel-2",
-          "entity:p-ziha-1",
-          "entity:tobiah-ammonite"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-addon-a95b373",
-          "entity:pl-ai-3-a63c70b",
-          "entity:pl-anathoth-ab34789",
-          "entity:pl-azmaveth-a3d7871",
-          "entity:pl-babylon-1-a217d18",
-          "entity:pl-babylonia-a8394b8",
-          "entity:pl-beeroth-a046454",
-          "entity:pl-bethel-1-a64f355",
-          "entity:pl-bethlehem-1-a112427",
-          "entity:pl-chephirah-a2e5054",
-          "entity:pl-cherub-ab3ad14",
-          "entity:pl-geba-1-a264254",
-          "entity:pl-gibbar-af0ee3a",
-          "entity:pl-gilead-1-ae73b90",
-          "entity:pl-hadid-a044272",
-          "entity:pl-harim-addc3e7",
-          "entity:pl-immer-ae4d198",
-          "entity:pl-jericho-1-a231f80",
-          "entity:pl-kiriath-jearim-a9bba61",
-          "entity:pl-lod-a2c5cc7",
-          "entity:pl-magbish-ac041e2",
-          "entity:pl-michmash-adea06c",
-          "entity:pl-nebo-2-accdd09",
-          "entity:pl-netophah-a9ad5ae",
-          "entity:pl-ono-ae6bfe2",
-          "entity:pl-ramah-1-a6d57ed",
-          "entity:pl-senaah-ac5ba1a",
-          "entity:pl-tel-harsha-a0c97c0",
-          "entity:pl-tel-melah-a2b5ee9"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-2-p1:refsys:eng-v22:ezra.2.1-ezra.2.67",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-2-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-2-p2:refsys:eng-v22:ezra.2.68-ezra.2.70",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-3-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:p-cyrus-1",
-          "entity:p-jeshua-3",
-          "entity:p-jozadak-1",
-          "entity:p-moses-1",
-          "entity:p-shealtiel-2",
-          "entity:p-zerubbabel-2"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-great-sea-aa805fb",
-          "entity:pl-joppa-ae023a9",
-          "entity:pl-lebanon-a730058",
-          "entity:pl-persia-ab9696f",
-          "entity:pl-sidon-a98e4d7",
-          "entity:pl-tyre-a160272"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-3-p1:refsys:eng-v22:ezra.3.1-ezra.3.7",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-3-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-asaph-3",
-          "entity:p-david-1",
-          "entity:p-hodaviah-5",
-          "entity:p-jeshua-3",
-          "entity:p-jozadak-1",
-          "entity:p-judah-1",
-          "entity:p-kadmiel-1",
-          "entity:p-shealtiel-2",
-          "entity:p-zerubbabel-2"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-3-p2:refsys:eng-v22:ezra.3.8-ezra.3.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-4-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-cyrus-1",
-          "entity:p-darius-1",
-          "entity:p-esarhaddon-1",
-          "entity:p-jeshua-3",
-          "entity:p-zerubbabel-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321",
-          "entity:pl-persia-ab9696f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-4-p1:refsys:eng-v22:ezra.4.1-ezra.4.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-4-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:artaxerxes-i",
-          "entity:p-ahasuerus-1",
-          "entity:p-bishlam-1",
-          "entity:p-mithredath-2",
-          "entity:p-osnappar-1",
-          "entity:p-rehum-2",
-          "entity:p-shimshai-1",
-          "entity:p-tabeel-1"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem",
-          "entity:pl-babylon-1-a217d18",
-          "entity:pl-elam-a7e3a59",
-          "entity:pl-erech-a5db1a6",
-          "entity:pl-persia-ab9696f",
-          "entity:pl-samaria-1-a041bb3",
-          "entity:susa"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-4-p2:refsys:eng-v22:ezra.4.6-ezra.4.16",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-4-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:artaxerxes-i",
-          "entity:god",
-          "entity:p-darius-1",
-          "entity:p-rehum-2",
-          "entity:p-shimshai-1"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem",
-          "entity:pl-persia-ab9696f",
-          "entity:pl-samaria-1-a041bb3"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-4-p3:refsys:eng-v22:ezra.4.17-ezra.4.24",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-5-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-darius-1",
-          "entity:p-haggai-1",
-          "entity:p-iddo-5",
-          "entity:p-jeshua-3",
-          "entity:p-jozadak-1",
-          "entity:p-shealtiel-2",
-          "entity:p-shethar-bozenai-1",
-          "entity:p-tattenai-1",
-          "entity:p-zechariah-13",
-          "entity:p-zerubbabel-2"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-5-p1:refsys:eng-v22:ezra.5.1-ezra.5.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-5-p2",
-        "event_type": "letter",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-cyrus-1",
-          "entity:p-darius-1",
-          "entity:p-nebuchadnezzar-1",
-          "entity:p-shethar-bozenai-1",
-          "entity:p-tattenai-1"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem",
-          "entity:pl-babylon-1-a217d18",
-          "entity:pl-babylonia-a8394b8",
-          "entity:pl-euphrates-a62dec4",
-          "entity:pl-judea-2-ab86a69"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-5-p2:refsys:eng-v22:ezra.5.6-ezra.5.17",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-6-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-cyrus-1",
-          "entity:p-darius-1",
-          "entity:p-nebuchadnezzar-1",
-          "entity:p-shethar-bozenai-1",
-          "entity:p-tattenai-1"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem",
-          "entity:pl-babylon-1-a217d18",
-          "entity:pl-babylonia-a8394b8",
-          "entity:pl-ecbatana-a212ef7",
-          "entity:pl-euphrates-a62dec4",
-          "entity:pl-media-ad2fadf"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-6-p1:refsys:eng-v22:ezra.6.1-ezra.6.12",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-6-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:artaxerxes-i",
-          "entity:god",
-          "entity:p-cyrus-1",
-          "entity:p-darius-1",
-          "entity:p-haggai-1",
-          "entity:p-iddo-5",
-          "entity:p-shethar-bozenai-1",
-          "entity:p-tattenai-1",
-          "entity:p-zechariah-13"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:pl-persia-ab9696f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-6-p2:refsys:eng-v22:ezra.6.13-ezra.6.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-6-p3",
-        "event_type": "worship",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:p-moses-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-6-p3:refsys:eng-v22:ezra.6.16-ezra.6.18",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-6-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:israelites",
-          "entity:p-darius-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-6-p4:refsys:eng-v22:ezra.6.19-ezra.6.22",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-7-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:artaxerxes-i",
-          "entity:god",
-          "entity:israelites",
-          "entity:p-aaron-1",
-          "entity:p-abishua-1",
-          "entity:p-ahitub-2",
-          "entity:p-amariah-1",
-          "entity:p-azariah-1",
-          "entity:p-azariah-7",
-          "entity:p-bukki-2",
-          "entity:p-eleazar-1",
-          "entity:p-ezra-1",
-          "entity:p-hilkiah-3",
-          "entity:p-meraioth-1",
-          "entity:p-moses-1",
-          "entity:p-phinehas-1",
-          "entity:p-seraiah-2",
-          "entity:p-shallum-6",
-          "entity:p-uzzi-1",
-          "entity:p-zadok-3",
-          "entity:p-zerahiah-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-babylon-1-a217d18",
-          "entity:pl-babylonia-a8394b8",
-          "entity:pl-persia-ab9696f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-7-p1:refsys:eng-v22:ezra.7.1-ezra.7.10",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-7-p2",
-        "event_type": "letter",
-        "participant_entity_keys": [
-          "entity:artaxerxes-i",
-          "entity:god",
-          "entity:p-ezra-1"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem",
-          "entity:pl-babylonia-a8394b8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-7-p2:refsys:eng-v22:ezra.7.11-ezra.7.26",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-7-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-7-p3:refsys:eng-v22:ezra.7.27-ezra.7.28",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-8-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:artaxerxes-i",
-          "entity:p-adin-1",
-          "entity:p-adonikam-1",
-          "entity:p-athaliah-3",
-          "entity:p-azgad-1",
-          "entity:p-bani-4",
-          "entity:p-bebai-1",
-          "entity:p-bigvai-1",
-          "entity:p-daniel-1",
-          "entity:p-david-1",
-          "entity:p-ebed-2",
-          "entity:p-elam-4",
-          "entity:p-eliehoenai-2",
-          "entity:p-eliphelet-5",
-          "entity:p-gershom-3",
-          "entity:p-hakkatan-1",
-          "entity:p-hattush-1",
-          "entity:p-ithamar-1",
-          "entity:p-jahaziel-4",
-          "entity:p-jehiel-5",
-          "entity:p-jeshaiah-3",
-          "entity:p-jeuel-2",
-          "entity:p-joab-3",
-          "entity:p-johanan-10",
-          "entity:p-jonathan-8",
-          "entity:p-josiphiah-1",
-          "entity:p-michael-8",
-          "entity:p-nathan-7",
-          "entity:p-obadiah-9",
-          "entity:p-pahath-moab-1",
-          "entity:p-parosh-1",
-          "entity:p-phinehas-1",
-          "entity:p-shecaniah-2",
-          "entity:p-shecaniah-4",
-          "entity:p-shelomith-5",
-          "entity:p-shemaiah-13",
-          "entity:p-shephatiah-5",
-          "entity:p-uthai-2",
-          "entity:p-zabbud-1",
-          "entity:p-zattu-1",
-          "entity:p-zebadiah-8",
-          "entity:p-zechariah-16",
-          "entity:p-zerahiah-2"
-        ],
-        "place_entity_keys": [
-          "entity:pl-babylonia-a8394b8"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-8-p1:refsys:eng-v22:ezra.8.1-ezra.8.14",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-8-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-ariel-2",
-          "entity:p-david-1",
-          "entity:p-eliezer-7",
-          "entity:p-elnathan-2",
-          "entity:p-elnathan-3",
-          "entity:p-elnathan-4",
-          "entity:p-hashabiah-4",
-          "entity:p-iddo-6",
-          "entity:p-jacob-1",
-          "entity:p-jarib-1",
-          "entity:p-jeshaiah-4",
-          "entity:p-joiarib-1",
-          "entity:p-levi-1",
-          "entity:p-mahli-1",
-          "entity:p-merari-1",
-          "entity:p-meshullam-8",
-          "entity:p-nathan-7",
-          "entity:p-shemaiah-14",
-          "entity:p-sherebiah-1",
-          "entity:p-zechariah-16"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-ahava-a6c3859",
-          "entity:pl-casiphia-addb84c"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-8-p2:refsys:eng-v22:ezra.8.15-ezra.8.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-8-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-ahava-a6c3859"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-8-p3:refsys:eng-v22:ezra.8.21-ezra.8.23",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-8-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-hashabiah-4",
-          "entity:p-sherebiah-1"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-ahava-a6c3859"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-8-p4:refsys:eng-v22:ezra.8.24-ezra.8.31",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-8-p5",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-binnui-1",
-          "entity:p-eleazar-6",
-          "entity:p-jeshua-3",
-          "entity:p-jozabad-5",
-          "entity:p-meremoth-1",
-          "entity:p-noadiah-1",
-          "entity:p-phinehas-1",
-          "entity:p-uriah-2"
-        ],
-        "place_entity_keys": [
-          "entity:beyond-the-river",
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-8-p5:refsys:eng-v22:ezra.8.32-ezra.8.36",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-9-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-9-p1:refsys:eng-v22:ezra.9.1-ezra.9.4",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-ezra-9-p2",
-        "event_type": "prayer",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-judea-2-ab86a69",
-          "entity:pl-persia-ab9696f"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-ezra-9-p2:refsys:eng-v22:ezra.9.5-ezra.9.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
       {
         "entity_key": "entity:pl-addon-a95b373",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-addon-a95b373",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16278,7 +16745,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-ahava-a6c3859",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16289,7 +16762,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-ai-3-a63c70b",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16300,7 +16779,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-azmaveth-a3d7871",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16311,7 +16796,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-babylonia-a8394b8",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16322,18 +16813,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-casiphia-addb84c",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-chephirah-a2e5054",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-chephirah-a2e5054",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16344,7 +16830,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-cherub-ab3ad14",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16355,18 +16847,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-ecbatana-a212ef7",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-erech-a5db1a6",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-erech-a5db1a6",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16377,7 +16864,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-gibbar-af0ee3a",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16388,7 +16881,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-hadid-a044272",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16399,7 +16898,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-harim-addc3e7",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16410,7 +16915,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-immer-ae4d198",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16421,7 +16932,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-judea-2-ab86a69",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16432,7 +16949,30 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-magbish-ac041e2",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
+      {
+        "entity_key": "entity:pl-media-ad2fadf",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-media-ad2fadf",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16443,7 +16983,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-nebo-2-accdd09",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16454,7 +17000,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-nebo-3-ac51ba3",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16465,7 +17017,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-senaah-ac5ba1a",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16476,7 +17034,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-tel-harsha-a0c97c0",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -16487,7 +17051,13 @@
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-tel-melah-a2b5ee9",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -25404,12 +25974,13 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     },
     {
       "code": "ambiguous-mention-referents-dropped",
-      "note": "13 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
+      "note": "18 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
-  ]
+  ],
+  "content_digest": "sha256:52e091769f745a02b257588f811a63798d7922de5058a3c68cbaf6bb6af0a87a"
 }

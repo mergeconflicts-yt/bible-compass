@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-eph-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-eph-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-eph-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-eph-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -198,14 +198,14 @@
       "verse:Eph.6.24"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-eph-canonical",
       "revision": 1,
-      "digest": "sha256:be32ccf330fe7b7bfa79618d71b0c5adec84b86828e0a371b3460a977abfb3ea"
+      "digest": "sha256:fdf05bff9228f1fdcddac7947e9ca7862ff4662f0951530a4d337ace24216a9c"
     }
   ],
   "records": {
@@ -296,6 +296,24 @@
           "occurrence_ordinal": 1,
           "prefix": "For we are ",
           "suffix": "’s workmanship, crea"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:eph-god-2-10-o2",
+        "verse_key": "verse:Eph.2.10",
+        "attestation_key": "attestation:wb-eph-god-2-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "o good works, which ",
+          "suffix": " prepared in advance"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -859,6 +877,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:eph-jesus-christ-1-1-o2",
+        "verse_key": "verse:Eph.1.1",
+        "attestation_key": "attestation:wb-eph-jesus-christ-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "us, the faithful in ",
+          "suffix": " Jesus:"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:eph-jesus-christ-1-10",
         "verse_key": "verse:Eph.1.10",
         "attestation_key": "attestation:wb-eph-jesus-christ-1-10",
@@ -1057,6 +1093,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:eph-jesus-christ-2-13-o2",
+        "verse_key": "verse:Eph.2.13",
+        "attestation_key": "attestation:wb-eph-jesus-christ-2-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "hrough the blood of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:eph-jesus-christ-2-20",
         "verse_key": "verse:Eph.2.20",
         "attestation_key": "attestation:wb-eph-jesus-christ-2-20",
@@ -1106,6 +1160,24 @@
           "occurrence_ordinal": 1,
           "prefix": "d raised us up with ",
           "suffix": " and seated us with "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:eph-jesus-christ-2-6-o2",
+        "verse_key": "verse:Eph.2.6",
+        "attestation_key": "attestation:wb-eph-jesus-christ-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": " heavenly realms in ",
+          "suffix": " Jesus,"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1866,6 +1938,7 @@
           "record_keys": [
             "mention:wb:eph-god-1-1",
             "mention:wb:eph-jesus-christ-1-1",
+            "mention:wb:eph-jesus-christ-1-1-o2",
             "mention:wb:eph-p-saul-2-1-1",
             "mention:wb:eph-pl-ephesus-a5feb15-1-1"
           ],
@@ -1990,7 +2063,8 @@
             "verse:Eph.2.6"
           ],
           "record_keys": [
-            "mention:wb:eph-jesus-christ-2-6"
+            "mention:wb:eph-jesus-christ-2-6",
+            "mention:wb:eph-jesus-christ-2-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2021,6 +2095,7 @@
           ],
           "record_keys": [
             "mention:wb:eph-god-2-10",
+            "mention:wb:eph-god-2-10-o2",
             "mention:wb:eph-jesus-christ-2-10"
           ],
           "blocker_question_keys": []
@@ -2042,7 +2117,8 @@
             "verse:Eph.2.13"
           ],
           "record_keys": [
-            "mention:wb:eph-jesus-christ-2-13"
+            "mention:wb:eph-jesus-christ-2-13",
+            "mention:wb:eph-jesus-christ-2-13-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2569,5 +2645,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:cafae4a7196327930ecee88b8bf4fdf9030b349201fff214afdf7865f278e821"
 }

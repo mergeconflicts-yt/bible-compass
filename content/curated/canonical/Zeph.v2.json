@@ -93,7 +93,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:4bb6468e6d3dad676dfc8c407770bb6a6f4591f0810d9f5a8b7eccaffd8a6807"
+      "digest": "sha256:322291ae008cbd74d424bc0524186206f2dbb3ae46d871fd79fef1e802af8872"
     }
   ],
   "records": {
@@ -142,6 +142,16 @@
         "candidate_key": "candidate:wb:p-hezekiah-3",
         "entity_type": "person",
         "proposed_label": "Hezekiah",
+        "label_language_tag": "en",
+        "possible_existing_entity_keys": [],
+        "identifying_claim_keys": [],
+        "resolution_status": "unresolved",
+        "review_status": "draft"
+      },
+      {
+        "candidate_key": "candidate:wb:pl-crete-a26aa94",
+        "entity_type": "place",
+        "proposed_label": "Crete",
         "label_language_tag": "en",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
@@ -833,6 +843,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -844,6 +857,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -855,6 +871,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -866,6 +885,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -877,6 +899,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -888,6 +913,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -899,6 +927,9 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       },
       {
@@ -910,217 +941,43 @@
           "scope:wb-zeph-1:refsys:eng-v22:zeph.1.1-zeph.1.18"
         ],
         "claim_keys": [],
+        "certainty": "unknown",
+        "temporal_qualifier": null,
+        "place_qualifier": null,
         "review_status": "draft"
       }
     ],
-    "events": [
-      {
-        "event_key": "event:wb-zeph-1-p1",
-        "event_type": "judgment",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-amariah-8",
-          "entity:p-amon-2",
-          "entity:p-cushi-2",
-          "entity:p-gedaliah-5",
-          "entity:p-hezekiah-3",
-          "entity:p-josiah-1",
-          "entity:p-zephaniah-3"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-1-p1:refsys:eng-v22:zeph.1.1-zeph.1.6",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-1-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-canaan-a581f0c",
-          "entity:pl-fish-gate-a6057f5",
-          "entity:pl-mortar-abcd5f2",
-          "entity:pl-second-quarter-a5ab519"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-1-p2:refsys:eng-v22:zeph.1.7-zeph.1.18",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-2-p1",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-2-p1:refsys:eng-v22:zeph.2.1-zeph.2.3",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-2-p2",
-        "event_type": "judgment",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:pl-ashdod-a30c937",
-          "entity:pl-ashkelon-ac87d4c",
-          "entity:pl-canaan-a581f0c",
-          "entity:pl-crete-a26aa94",
-          "entity:pl-ekron-a3fc47a",
-          "entity:pl-gaza-aa8edd2"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-2-p2:refsys:eng-v22:zeph.2.4-zeph.2.7",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-2-p3",
-        "event_type": "judgment",
-        "participant_entity_keys": [
-          "entity:god",
-          "entity:p-ben-ammi-1"
-        ],
-        "place_entity_keys": [
-          "entity:pl-ammon-a6046fa",
-          "entity:pl-gomorrah-aa572e2",
-          "entity:pl-moab-1-aa0b1d6",
-          "entity:pl-sodom-a0aa664"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-2-p3:refsys:eng-v22:zeph.2.8-zeph.2.11",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-2-p4",
-        "event_type": "judgment",
-        "participant_entity_keys": [],
-        "place_entity_keys": [
-          "entity:pl-assyria-a3d1321",
-          "entity:pl-nineveh-a70fd5d"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-2-p4:refsys:eng-v22:zeph.2.12-zeph.2.15",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-3-p1",
-        "event_type": "judgment",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-3-p1:refsys:eng-v22:zeph.3.1-zeph.3.5",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-3-p2",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-3-p2:refsys:eng-v22:zeph.3.6-zeph.3.8",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-3-p3",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-cush-1-ac5a1ec"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-3-p3:refsys:eng-v22:zeph.3.9-zeph.3.13",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "event_key": "event:wb-zeph-3-p4",
-        "event_type": "narrative",
-        "participant_entity_keys": [
-          "entity:god"
-        ],
-        "place_entity_keys": [
-          "entity:jerusalem",
-          "entity:pl-zion-af20c46"
-        ],
-        "scripture_accounts": [
-          {
-            "scope_key": "scope:wb-zeph-3-p4:refsys:eng-v22:zeph.3.14-zeph.3.20",
-            "relation": "reports"
-          }
-        ],
-        "claim_keys": [],
-        "review_status": "draft"
-      }
-    ],
+    "events": [],
     "places": [
+      {
+        "entity_key": "entity:pl-crete-a26aa94",
+        "geographic_positions": [
+          {
+            "evidence_item_key": "evidence:openbible:pl-crete-a26aa94",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
+            "claim_keys": []
+          }
+        ],
+        "review_status": "draft"
+      },
       {
         "entity_key": "entity:pl-mortar-abcd5f2",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-mortar-abcd5f2",
-            "precision": "approximate",
+            "precision": "unknown",
+            "geometry": null,
+            "crs": null,
+            "period": null,
+            "candidates": [],
+            "component_license": "unknown",
+            "certainty": "unknown",
             "claim_keys": []
           }
         ],
@@ -2006,8 +1863,9 @@
       "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph."
     },
     {
-      "code": "events-projected-from-headings",
-      "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim."
+      "code": "canonical-events-not-synthesised",
+      "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register."
     }
-  ]
+  ],
+  "content_digest": "sha256:0b9a93e42806892ef99a6780ed725fd873d307f6c9cb19e7e667108eca296894"
 }

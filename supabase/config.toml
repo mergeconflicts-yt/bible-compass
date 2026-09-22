@@ -4,8 +4,8 @@
 [api]
 enabled = true
 port = 54321
-schemas = ["public", "private_registry"]
-extra_search_path = ["public", "private_registry"]
+schemas = ["public", "private_registry", "public_content"]
+extra_search_path = ["public", "private_registry", "public_content"]
 max_rows = 1000
 
 [db]

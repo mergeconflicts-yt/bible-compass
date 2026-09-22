@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-gal-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-gal-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-gal-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-gal-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -191,14 +191,14 @@
       "verse:Gal.6.18"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-gal-canonical",
       "revision": 1,
-      "digest": "sha256:119be66f8a42c100ecd8d90e022d6ae774122e50c6d52b356fe04d9eb756213e"
+      "digest": "sha256:d6cf27b25fe5341bddcc3b433c567af185ed31d13f5ece970bb430ad07b459e9"
     }
   ],
   "records": {
@@ -654,6 +654,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:gal-god-4-9-o2",
+        "verse_key": "verse:Gal.4.9",
+        "attestation_key": "attestation:wb-gal-god-4-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "rather are known by ",
+          "suffix": ", how is it that you"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:gal-god-5-21",
         "verse_key": "verse:Gal.5.21",
         "attestation_key": "attestation:wb-gal-god-5-21",
@@ -960,6 +978,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:gal-jesus-christ-2-17-o2",
+        "verse_key": "verse:Gal.2.17",
+        "attestation_key": "attestation:wb-gal-jesus-christ-2-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "ers, does that make ",
+          "suffix": " a minister of sin? "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:gal-jesus-christ-2-20",
         "verse_key": "verse:Gal.2.20",
         "attestation_key": "attestation:wb-gal-jesus-christ-2-20",
@@ -973,6 +1009,24 @@
           "occurrence_ordinal": 1,
           "prefix": "been crucified with ",
           "suffix": ", and I no longer li"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:gal-jesus-christ-2-20-o2",
+        "verse_key": "verse:Gal.2.20",
+        "attestation_key": "attestation:wb-gal-jesus-christ-2-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "no longer live, but ",
+          "suffix": " lives in me. The li"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1153,6 +1207,24 @@
           "occurrence_ordinal": 1,
           "prefix": " were baptized into ",
           "suffix": " have clothed yourse"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:gal-jesus-christ-3-27-o2",
+        "verse_key": "verse:Gal.3.27",
+        "attestation_key": "attestation:wb-gal-jesus-christ-3-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:jesus-christ"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Christ",
+          "occurrence_ordinal": 2,
+          "prefix": "hed yourselves with ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2396,7 +2468,8 @@
             "verse:Gal.2.17"
           ],
           "record_keys": [
-            "mention:wb:gal-jesus-christ-2-17"
+            "mention:wb:gal-jesus-christ-2-17",
+            "mention:wb:gal-jesus-christ-2-17-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2416,7 +2489,8 @@
             "verse:Gal.2.20"
           ],
           "record_keys": [
-            "mention:wb:gal-jesus-christ-2-20"
+            "mention:wb:gal-jesus-christ-2-20",
+            "mention:wb:gal-jesus-christ-2-20-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2603,7 +2677,8 @@
             "verse:Gal.3.27"
           ],
           "record_keys": [
-            "mention:wb:gal-jesus-christ-3-27"
+            "mention:wb:gal-jesus-christ-3-27",
+            "mention:wb:gal-jesus-christ-3-27-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2674,7 +2749,8 @@
             "verse:Gal.4.9"
           ],
           "record_keys": [
-            "mention:wb:gal-god-4-9"
+            "mention:wb:gal-god-4-9",
+            "mention:wb:gal-god-4-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -2886,5 +2962,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:ffc82d030d182b90e1ecf4a6aa15498524a9ea1b1a3ee25db405ec8213c779c2"
 }

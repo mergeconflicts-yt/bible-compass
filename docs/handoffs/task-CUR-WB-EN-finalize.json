@@ -9,7 +9,7 @@
     "out_of_scope": "content/curated/tel/** (treated as non-authoritative and untouched), content publication, and the mobile UI (unchanged)."
   },
   "structure": {
-    "translation_neutral_canonical": "canonical package identities are draft:wb-<book>-canonical with null language_tag and translation_edition_key; no BSB string. Edition packages are draft:wb-bsb-<book>-edition and carry edition:bsb@20260912. Locale packages are draft:wb-en-<book>-locale with language_tag en and no edition.",
+    "translation_neutral_canonical": "canonical package identities are draft:wb-<book>-canonical with null language_tag and translation_edition_key; no BSB string. Edition packages are draft:wb-bsb-<book>-edition and carry the immutable edition key edition:bsb@20260912:sha-b2898c49 (identical to the database row). Locale packages are draft:wb-en-<book>-locale with language_tag en and no edition.",
     "consolidated_definitions": "entity candidates, place definitions and entity profiles are emitted exactly once, in the entity's home book (Nehemiah for locked Neh2 identities). Other books carry registry-backed reconciliation references only. Cross-book multi-payload count is now 0 for every record class.",
     "reconciliation": "reconciliation records reference the existing global registry (canonical_entity_key, resolution_status resolved_existing); candidate_key is optional and retained only for the locked Neh2 candidate-resolution records.",
     "registry_provenance": "creation provenance moved to content/curated/registry/entities.json: every entry carries provenance, created_from (home canonical package) and source, plus a registry-level provenance_policy.",
@@ -21,25 +21,26 @@
       "books": 66,
       "chapters": 1189,
       "verses": 31086,
-      "registry_entities": 4295,
-      "canonical_attestations": 26018,
-      "edition_mentions": 20685,
-      "relationships": 5159,
-      "events": 2336,
+      "registry_entities": 4312,
+      "canonical_attestations": 36426,
+      "edition_mentions": 33338,
+      "relationships": 5024,
+      "events": 6,
       "places": 1290,
-      "profiles": 4284,
+      "profiles": 4301,
       "cross_book_collisions": 0,
       "conflicting_profiles": 0,
-      "locked_identity_splits": 0
+      "locked_identity_splits": 0,
+      "note": "Current as of the code/model remediation (findings 16-44): entities 4312, attestations 36426, mentions 33338 (all mention occurrences captured, finding 41; +2609 over first-occurrence-only). Events dropped from 2336 to the 6 curated locked Nehemiah 2 events (heading-derived events removed); relationships 5024 after the controlled predicate ontology dropped king/lady/raper/concubinator."
     },
     "importer": {
       "tool": "tools/import-english-canon.py (--check / --emit-sql / --database-url)",
-      "proof": "entities 6631 rows = 6631 distinct keys (4295 registry + 2336 event entities); entity:jerusalem exactly 1 row; 26104 attestations, 4284 English descriptions and 20685 BSB mentions in separate tables; 31086 BSB verses across 1189 chapters and 66 works.",
-      "replay": "identical replay prints 'no-op' and changes no counts; conflicting replay exits 3 before any write.",
+      "proof": "entities 4312 registry rows; entity:jerusalem exactly 1 row; 36426 attestations, 4301 English descriptions and 33338 BSB mentions in separate tables; 31086 BSB verses across 1189 chapters and 66 works.",
+      "replay": "identical replay prints 'no-op' and changes no counts; conflicting replay exits 3 before any write; the same guard is emitted inside the transaction for --emit-sql (finding 33).",
       "transactional": "all writes run in one psql -1 transaction; the conflicting-replay check runs before any statement."
     },
-    "database_test": "supabase/tests/11_english_canon_import_test.sql — one entity row per key, Jerusalem singleton, structural separation, attestation/mention resolution, whole-canon coverage, draft-only, anon denied. Gate: tools/verify-english-canon.sh (npm run verify:english-canon).",
-    "contract_tests": "packages/content-schema: 8 suites, 254 tests passed.",
+    "database_test": "supabase/tests/11_english_canon_import_test.sql — one entity row per key, Jerusalem singleton, structural separation, attestation/mention resolution, whole-canon coverage, draft-only, anon denied. supabase/tests/12_upgrade_convergence_test.sql — ownership-scoped resync deletes owned rows, keeps NULL-origin rows, no orphan memberships, natural uniqueness. Gate: tools/verify-english-canon.sh (npm run verify:english-canon), now included in verify:all (finding 36).",
+    "contract_tests": "packages/content-schema: 8 suites, 187 tests passed (wholeBibleGenerated now validates against independent authority: skeleton, registry, ontology).",
     "repo": "root typecheck exit 0; content-schema lint exit 0; prettier back to the 3 known pre-existing warnings; verify:preview up to date; import-neh2 --check passes."
   },
   "files_changed": [

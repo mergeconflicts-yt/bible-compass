@@ -47,6 +47,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import curate_whole_bible as cwb  # noqa: E402
 import locked_neh2  # noqa: E402
 import canon_order  # noqa: E402
+import relationship_ontology  # noqa: E402
+import package_revisions as pkgrev  # noqa: E402
 
 REPO = cwb.REPO
 SCRIPTURE = cwb.SCRIPTURE
@@ -147,6 +149,12 @@ def load_relationships() -> list[dict]:
             ref = (row.get("reference_id") or "").strip()
             if not (p1 and p2 and rtype and ref):
                 continue
+            # Enforce the closed predicate ontology: an unmapped (or dropped)
+            # source type is not imported, so titles and abuse actions never
+            # become relationship predicates.
+            predicate = relationship_ontology.map_predicate(rtype)
+            if predicate is None:
+                continue
             parts = ref.split(" ")
             if len(parts) != 2 or ":" not in parts[1]:
                 continue
@@ -159,7 +167,7 @@ def load_relationships() -> list[dict]:
                 {
                     "subject": "p-" + cwb.slugify(p1),
                     "object": "p-" + cwb.slugify(p2),
-                    "predicate": "relationship:" + cwb.slugify(rtype),
+                    "predicate": predicate,
                     "type": rtype,
                     "category": (row.get("relationship_category") or "").strip(),
                     "osis": osis,
@@ -466,6 +474,24 @@ def _tribe_matchers(name: str, demonyms: tuple[str, ...]) -> tuple[re.Pattern, r
     )
     territory = re.compile(_governed(_TRIBE_TERRITORY_HEADS, name))
     return tribal, group, territory
+
+
+def enforce_anchor_integrity(crec: dict, erec: dict) -> int:
+    """Grade down explicit attestations that lack a rendered mention.
+
+    The invariant ("explicit implies an anchor") must hold in the database,
+    including for records merged in from the locked Nehemiah 2 package after
+    the main enrichment pass. A reference whose surface could not hold a
+    mention slot grades strongly_implied; the reference itself is preserved.
+    Returns the number of attestations regraded.
+    """
+    anchored = {m["attestation_key"] for m in erec["mentions"]}
+    regraded = 0
+    for a in crec["attestations"]:
+        if a["textual_basis"] == "explicit" and a["attestation_key"] not in anchored:
+            a["textual_basis"] = "strongly_implied"
+            regraded += 1
+    return regraded
 
 
 def load_verse_texts(books: list[dict]) -> dict[tuple[str, int, int], str]:
@@ -794,6 +820,13 @@ def curate_divine_identities(
         "name": "Jesus Christ",
         "aliases": jesus_aliases,
         "refs": jesus_refs,
+        "external_ids": [
+            {
+                "source": "bibledata",
+                "id": "YHVH_1",
+                "evidence": "evidence:bibledata:YHVH_1",
+            }
+        ],
     }
     person_labels["jesus-christ"] = set(jesus_aliases)
     places["god"] = {
@@ -803,6 +836,10 @@ def curate_divine_identities(
         "aliases": set(GOD_ALIASES),
         "refs": god_refs,
         "evidence": "evidence:bibledata:YHVH",
+        "external_ids": [
+            {"source": "bibledata", "id": "YHVH_1", "evidence": "evidence:bibledata:YHVH_1"},
+            {"source": "bibledata", "id": "YHVH_2", "evidence": "evidence:bibledata:YHVH_2"},
+        ],
     }
     spirit_refs: set = set()
     bound = r"(?<![A-Za-z0-9])(?:%s)(?![A-Za-z0-9])" % "|".join(
@@ -849,6 +886,38 @@ def load_person_extras() -> dict[str, dict]:
     return extras
 
 
+_PLACE_TAG_RE = re.compile(r"<[^>]+>")
+_PLACE_ENTITIES = {
+    "&amp;": "&",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&quot;": '"',
+    "&#39;": "'",
+    "&apos;": "'",
+}
+
+
+def _clean_place_comment(raw: str) -> str | None:
+    """Return reader-safe plain text, or None to keep the text quarantined.
+
+    OpenBible comments can embed markup, external links and long excerpts from
+    other works. None of that may be copied into a reader-facing profile
+    (finding 17): markup is stripped, and any residual markup/link or an
+    over-long excerpt is rejected so the caller falls back to original prose.
+    """
+    text = _PLACE_TAG_RE.sub(" ", raw)
+    for entity, char in _PLACE_ENTITIES.items():
+        text = text.replace(entity, char)
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return None
+    if re.search(r"[<>]|https?://|www\.", text, re.IGNORECASE):
+        return None
+    if len(text) > 200:
+        return None
+    return text
+
+
 def load_place_comments() -> dict[str, str]:
     comments: dict[str, str] = {}
     path = QUARANTINE / "openbible" / "ancient.jsonl"
@@ -865,7 +934,10 @@ def load_place_comments() -> dict[str, str]:
             comment = (rec.get("comment") or "").strip()
             if not (friendly and pid and comment):
                 continue
-            comments["pl-" + cwb.slugify(friendly) + "-" + cwb.slugify(pid)] = comment
+            cleaned = _clean_place_comment(comment)
+            if cleaned is None:
+                continue
+            comments["pl-" + cwb.slugify(friendly) + "-" + cwb.slugify(pid)] = cleaned
     return comments
 
 
@@ -1121,6 +1193,13 @@ def enrich_book_data(
     # surface form in each overlap cluster and drop the rest rather than
     # guessing; affected verses keep explicit coverage results.
     erec["mentions"], ambiguous_count = dedupe_mentions(erec["mentions"], verse_text)
+    # Anchor-integrity grading: an explicit attestation must be anchored by a
+    # rendered mention over the same entity and verse. A surface form that was
+    # present in the verse but lost its mention slot to a longer overlapping
+    # span is graded strongly_implied, never explicit, so the honest-grading
+    # invariant ("explicit implies an anchor") holds in the database. This is a
+    # downgrade of certainty only; the reference itself is preserved.
+    enforce_anchor_integrity(crec, erec)
 
     # Book-scope record keys. The un-scoped forms collide across books (an
     # entity in Gen.1.1 and Neh.1.1 produced the same key), which book-local
@@ -1136,7 +1215,11 @@ def enrich_book_data(
         slug = m["target"]["key"].split("entity:", 1)[1]
         _, c, v = m["verse_key"].split(":")[1].split(".")
         m["attestation_key"] = attest_key_map.get(m["attestation_key"], m["attestation_key"])
-        m["mention_key"] = f"mention:wb:{osis.lower()}-{slug}-{c}-{v}"
+        ordinal = m["selector"]["occurrence_ordinal"]
+        # Preserve the occurrence suffix so a verse that names an entity more
+        # than once keeps a unique key per occurrence (finding 41).
+        suffix = "" if ordinal <= 1 else f"-o{ordinal}"
+        m["mention_key"] = f"mention:wb:{osis.lower()}-{slug}-{c}-{v}{suffix}"
 
     # Canon-consistent candidate content: entities bridged to a locked Neh2
     # identity use the locked candidate's type/label in every book so the
@@ -1197,6 +1280,13 @@ def enrich_book_data(
                 "object_entity_key": obj,
                 "applicable_scope_keys": [],
                 "claim_keys": [],
+                # Certainty is explicit and defaults to unknown: the source
+                # relationship tables carry no certainty value, so the
+                # blueprint records that uncertainty instead of the importer
+                # silently writing "established".
+                "certainty": "unknown",
+                "temporal_qualifier": None,
+                "place_qualifier": None,
                 "review_status": "draft",
             },
         )
@@ -1204,41 +1294,16 @@ def enrich_book_data(
             rec["applicable_scope_keys"].append(scope)
     crec["relationships"] = sorted(rel_map.values(), key=lambda r: r["relationship_key"])
 
-    # 4. events from BSB section headings with attested participants.
-    entity_refs = {}
-    for slug, entry in list(persons.items()) + list(places.items()):
-        ekey = f"entity:{slug}"
-        if ekey in retained_entities:
-            entity_refs[ekey] = entry
-    events: list[dict] = []
-    for ch in book["chapters"]:
-        for i, p in enumerate(cwb.chapter_passages(ch), start=1):
-            if not p["title"]:
-                continue
-            slug = f"{osis.lower()}-{ch['n']}-p{i}"
-            scope = passage_scopes.get(slug)
-            if scope is None:
-                continue
-            participants, event_places = [], []
-            for ekey, entry in entity_refs.items():
-                for (b, c, v) in entry["refs"]:
-                    if b == osis and c == ch["n"] and p["start_verse"] <= v <= p["end_verse"]:
-                        (event_places if entry["type"] == "place" else participants).append(ekey)
-                        break
-            if not participants and not event_places:
-                continue
-            events.append(
-                {
-                    "event_key": f"event:wb-{slug}",
-                    "event_type": classify_event(p["title"]),
-                    "participant_entity_keys": sorted(set(participants)),
-                    "place_entity_keys": sorted(set(event_places)),
-                    "scripture_accounts": [{"scope_key": scope, "relation": "reports"}],
-                    "claim_keys": [],
-                    "review_status": "draft",
-                }
-            )
-    crec["events"] = sorted(events, key=lambda e: e["event_key"])
+    # 4. Historical events are NOT synthesized from BSB section headings.
+    # A publisher heading is a literary segmentation: it names arguments,
+    # laws, poems, visions, speeches and section topics, not datable
+    # historical events. Passage sections are modelled as locale passage
+    # contexts (below); canonical events are curated records only. The locked
+    # Nehemiah 2 curated events are merged later; with no curated
+    # historical-events input for the rest of the canon, generated books
+    # carry no canonical events. The coverage register therefore reports
+    # canonical_event as not_attempted, never as complete.
+    crec["events"] = []
 
     # 4b. Canon-scoped definitions are consolidated to ONE authoritative
     # payload per canonical key: the entity candidate and place definition are
@@ -1388,9 +1453,16 @@ def enrich_book_data(
     for prof in lrec["entity_profiles"]:
         ekey = prof["entity_key"]
         slug = ekey.split("entity:", 1)[1]
+        # first/last reference span is COMPUTED in canonical order from the
+        # entity's references (never persisted; never lexically sorted).
+        refs = (persons.get(slug) or places.get(slug) or {}).get("refs")
+        if refs:
+            ordered = sorted(refs, key=cwb.canon_ref_key)
+            first = cwb.ref_label(ordered[0])
+            last = cwb.ref_label(ordered[-1])
+        else:
+            first = last = "Scripture"
         entry = registry_by_slug.get(slug, {})
-        first = entry.get("first_reference", "Scripture")
-        last = entry.get("last_reference", "Scripture")
         if ekey in person_entity_keys:
             kind_word: str | None = "person"
         elif entry.get("type") == "collective":
@@ -1463,8 +1535,8 @@ def enrich_book_data(
             "note": "Passage segmentation (chapter groups split at BSB section headings) is derived from the English BSB edition's publisher headings (edition:bsb@20260912), not from an independent canonical structure. Per-translation canonical packages are not generated: the graph is translation-neutral and produced once; versification alignment across reference systems belongs in reference mappings, not in a copied graph.",
         },
         {
-            "code": "events-projected-from-headings",
-            "note": "Event records are structural projections of BSB section headings with the participants and places attested in that passage; they carry no independent historical claim.",
+            "code": "canonical-events-not-synthesised",
+            "note": "No canonical event records are derived from BSB section headings. Headings are a literary segmentation and are modelled as locale passage contexts; canonical events are curated records only (the locked Nehemiah 2 events). canonical_event is reported not_attempted in the coverage register.",
         },
     ]
     if ambiguous_count:
@@ -1963,7 +2035,6 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
         "canonical_entity_attestation",
         "translation_mention",
         "canonical_relationship",
-        "canonical_event",
         "canonical_entity_relevance",
         "passage_context_localization",
     ]
@@ -1974,6 +2045,7 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
         "canonical_term",
         "canonical_theme",
         "canonical_chronology",
+        "canonical_event",
         "historical_context",
         "localized_entity_name",
         "map_timeline_projection",
@@ -2000,12 +2072,17 @@ def coverage_register(all_data: dict, books_by_osis: dict, job_states: dict, tes
         "attempted_annotation_classes": attempted,
         "not_attempted_annotation_classes": not_attempted,
         "not_attempted_note": (
-            "Objects, roles, practices, lexical terms, themes, chronology and "
-            "meaningful historical context are required by the curation spec but "
-            "no approved input or pipeline produces them yet. Divine references "
-            "are curated from the BibleData YHWH source links (God, Jesus "
-            "Christ) and explicit BSB Spirit surfaces; verses whose only "
-            "deity surface is an unlisted epithet carry an inferred "
+            "Objects, roles, practices, lexical terms, themes, chronology, "
+            "curated historical events and meaningful historical context are "
+            "required by the curation spec but no approved input or pipeline "
+            "produces them yet. Canonical events are NOT projected from BSB "
+            "section headings: headings are a literary segmentation (arguments, "
+            "laws, poems, visions, topics), which are modelled as locale passage "
+            "contexts, not as datable events. The locked Nehemiah 2 curated "
+            "events are the only canonical events and are preserved by design. "
+            "Divine references are curated from the BibleData YHWH source links "
+            "(God, Jesus Christ) and explicit BSB Spirit surfaces; verses whose "
+            "only deity surface is an unlisted epithet carry an inferred "
             "attestation without an anchor. Verses are NOT claimed complete "
             "for the not_attempted classes."
         ),
@@ -2076,11 +2153,14 @@ def main() -> int:
     registry_keys = {f"entity:{slug}" for slug in registry_by_slug}
 
     # Home book: where the single authoritative entity/place/profile payload is
-    # emitted. Locked Nehemiah 2 identities are homed in Nehemiah.
+    # emitted, computed from the earliest reference in CANONICAL order (the
+    # registry no longer persists first_reference).
     home_by_slug: dict[str, str | None] = {}
-    for slug, entry in registry_by_slug.items():
-        first = entry.get("first_reference") or ""
-        home_by_slug[slug] = first.split(".")[0] if first else None
+    for slug, entry in list(persons.items()) + list(places.items()):
+        refs = entry.get("refs") or set()
+        home_by_slug[slug] = (
+            min(refs, key=cwb.canon_ref_key)[0] if refs else None
+        )
     locked_entity_map = locked_neh2.locked_entities(locked)
     for locked_key in locked_entity_map:
         home_by_slug[locked_key.split("entity:", 1)[1]] = "Neh"
@@ -2097,6 +2177,24 @@ def main() -> int:
     )
 
     registry_path = CURATED / "registry" / "entities.json"
+    revisions_path = QUEUE / TRANSLATION / "package-revisions.json"
+    revision_register = pkgrev.load_register(revisions_path)
+    # The registry carries a content digest and a monotonic revision like any
+    # other package, so book dependencies can bind to an exact revision.
+    registry_digest_content = pkgrev.content_digest(registry)
+    reg_prev = revision_register.get("registry:wb:entities")
+    if reg_prev is None:
+        registry_revision = 1
+    elif reg_prev.get("digest") != registry_digest_content:
+        registry_revision = int(reg_prev["revision"]) + 1
+    else:
+        registry_revision = int(reg_prev["revision"])
+    revision_register["registry:wb:entities"] = {
+        "digest": registry_digest_content,
+        "revision": registry_revision,
+    }
+    registry["content_digest"] = registry_digest_content
+    registry["registry_revision"] = registry_revision
     registry_text = json.dumps(registry, indent=2, ensure_ascii=False) + "\n"
     if not args.validate_only:
         registry_path.parent.mkdir(parents=True, exist_ok=True)
@@ -2161,6 +2259,12 @@ def main() -> int:
             )
             if book["osis"] == "Neh":
                 data = locked_neh2.merge_neh(data, locked, verse_text)
+            # The anchor invariant also covers locked records merged after the
+            # enrichment pass: re-run it so every explicit attestation in the
+            # final package has a rendered mention.
+            enforce_anchor_integrity(
+                data["canonical"]["records"], data["edition"]["records"]
+            )
             all_data[osis] = data
         else:
             # Resume: load the merged packages for downstream reports.
@@ -2209,24 +2313,40 @@ def main() -> int:
 
         state["status"] = "done" if book_ok else "failed"
         if book_ok:
-            # canonical depends on the registry; edition/locale on canonical.
+            # Dependency binding happens BEFORE stamping so content_digest
+            # covers the declared dependency. canonical -> registry;
+            # edition/locale -> the exact canonical revision observed.
             data["canonical"]["dependencies"] = [
-                {"package_key": "registry:wb:entities", "revision": 1, "digest": registry_digest}
+                {
+                    "package_key": "registry:wb:entities",
+                    "revision": registry_revision,
+                    "digest": registry_digest,
+                }
             ]
-            canonical_digest = jcs_digest(data["canonical"])
+            for layer in ("canonical", "edition", "locale"):
+                stem = data[layer]["package_key"].split("draft:", 1)[1]
+                pkgrev.stamp(data[layer], stem, revision_register)
+            canonical_digest = data["canonical"]["content_digest"]
+            canonical_revision = data["canonical"]["package_revision"]
             for layer in ("edition", "locale"):
                 data[layer]["dependencies"] = [
                     {
                         "package_key": data["canonical"]["package_key"],
-                        "revision": data["canonical"]["package_revision"],
+                        "revision": canonical_revision,
                         "digest": canonical_digest,
                     }
                 ]
+                # Re-stamp after the dependency was set so the digest covers it.
+                stem = data[layer]["package_key"].split("draft:", 1)[1]
+                pkgrev.stamp(data[layer], stem, revision_register)
             if not args.validate_only:
                 for layer in ("canonical", "edition", "locale"):
                     write_json(CURATED / layer / f"{osis}.v2.json", data[layer])
             state["package_digests"] = {
-                layer: jcs_digest(data[layer]) for layer in ("canonical", "edition", "locale")
+                layer: data[layer]["content_digest"] for layer in ("canonical", "edition", "locale")
+            }
+            state["package_revisions"] = {
+                layer: data[layer]["package_revision"] for layer in ("canonical", "edition", "locale")
             }
             state["counts"] = {
                 "chapters": len(book["chapters"]),
@@ -2289,6 +2409,7 @@ def main() -> int:
             }
         manifest["book_reports"] = full_reports
         write_json(manifest_path, manifest)
+        pkgrev.write_register(revisions_path, revision_register)
         write_json(
             RECON / "canon.json",
             reconcile_canon(full_reports, books_by_osis, full_data, registry_by_slug),
@@ -2305,7 +2426,12 @@ def main() -> int:
         "failures": failures,
         "runs": run,
     }
-    write_json(Path(args.report), report)
+    # --validate-only is a read-only mode: it must not mutate the workspace,
+    # so the run report is printed instead of written (finding 40).
+    if args.validate_only:
+        print(json.dumps(report, indent=2, ensure_ascii=False), flush=True)
+    else:
+        write_json(Path(args.report), report)
 
     if failures:
         print(f"FAILED: {len(failures)} job(s)/merge(s) failed; completed checkpoints unchanged.", flush=True)

@@ -144,6 +144,9 @@ function isSorted<T>(items: T[], by: (item: T) => string): boolean {
 export const publishedContextBundleSchema = z
   .object({
     scope_key: z.string().min(1),
+    // The locale the server resolved the bundle for (optional: older server
+    // responses and the strict tests omit it; treat absence as unknown).
+    locale: z.string().min(1).optional(),
     contexts: z.array(contextSchema),
     entities: z.array(entitySchema),
     claims: z.array(claimSchema),

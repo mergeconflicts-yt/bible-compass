@@ -29,6 +29,9 @@ CUR = REPO / "content" / "curated"
 NEH2 = REPO / "content" / "nehemiah-2"
 COVERAGE = REPO / "content" / "curation" / "canon-coverage.json"
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import relationship_ontology  # noqa: E402
+
 # (layer, records field, key field). Profiles and candidates are canon-scoped
 # records that legitimately repeat across book packages, so they may repeat
 # only when byte-identical.
@@ -85,7 +88,6 @@ ATTEMPTED_CLASSES = [
     "canonical_entity_attestation",
     "translation_mention",
     "canonical_relationship",
-    "canonical_event",
     "canonical_entity_relevance",
     "passage_context_localization",
 ]
@@ -96,6 +98,7 @@ NOT_ATTEMPTED_CLASSES = [
     "canonical_term",
     "canonical_theme",
     "canonical_chronology",
+    "canonical_event",
     "historical_context",
     "localized_entity_name",
     "map_timeline_projection",
@@ -367,6 +370,66 @@ def check_sense_spotchecks(books: list[str], report: dict, errors: list[str]) ->
     report["sense_spotchecks"] = "checked"
 
 
+def check_package_integrity(books: list[str], report: dict, errors: list[str]) -> None:
+    """Independent structural checks not derived from the package under test.
+
+    - registry no longer persists derived values (finding 25);
+    - every registry entity retains structured external identifiers (26);
+    - edition/locale dependencies bind to the canonical content digest and
+      revision (16);
+    - relationship predicates are inside the controlled ontology (24).
+    """
+    registry = json.loads((CUR / "registry" / "entities.json").read_text(encoding="utf-8"))
+    derived = [
+        e["entity_key"]
+        for e in registry["entities"]
+        if any(k in e for k in ("verse_count", "first_reference", "last_reference"))
+    ]
+    no_ext = [e["entity_key"] for e in registry["entities"] if not e.get("external_ids")]
+    bad_pred: set[str] = set()
+    bad_deps: list[str] = []
+    for book in books:
+        canonical = json.loads((CUR / "canonical" / f"{book}.v2.json").read_text(encoding="utf-8"))
+        cdigest = canonical.get("content_digest")
+        crev = canonical.get("package_revision")
+        for layer in ("edition", "locale"):
+            pkg = json.loads((CUR / layer / f"{book}.v2.json").read_text(encoding="utf-8"))
+            deps = pkg.get("dependencies", [])
+            if len(deps) != 1 or deps[0].get("package_key") != canonical["package_key"]:
+                bad_deps.append(f"{book}/{layer}")
+                continue
+            if cdigest is not None and deps[0].get("digest") != cdigest:
+                bad_deps.append(f"{book}/{layer}: digest != canonical content_digest")
+            if deps[0].get("revision") != crev:
+                bad_deps.append(f"{book}/{layer}: revision != canonical revision")
+        for rel in canonical["records"].get("relationships", []):
+            if not relationship_ontology.is_allowed(rel["predicate_key"]):
+                bad_pred.add(rel["predicate_key"])
+    report["package_integrity"] = {
+        "registry_persisted_derived_values": derived[:5],
+        "registry_entities_without_external_ids": len(no_ext),
+        "dependency_binding_errors": bad_deps[:5],
+        "predicates_outside_ontology": sorted(bad_pred),
+    }
+    if derived:
+        errors.append(
+            f"registry: {len(derived)} entries still persist derived values "
+            f"(e.g. {derived[:3]})"
+        )
+    # Some entities legitimately have no external source row (deity,
+    # collectives, tribal entities). The defect (26) is retaining NO mappings
+    # at all, so fail only when the mapping feature is entirely absent.
+    if registry["entities"] and len(no_ext) == len(registry["entities"]):
+        errors.append("registry: no entity retains a structured external identifier")
+    if bad_deps:
+        errors.append(f"dependencies: {len(bad_deps)} binding error(s) (e.g. {bad_deps[:3]})")
+    if bad_pred:
+        errors.append(
+            f"relationships: {len(bad_pred)} predicate(s) outside the controlled "
+            f"ontology (e.g. {sorted(bad_pred)[:3]})"
+        )
+
+
 def check_coverage_partitions(books: list[str], report: dict, errors: list[str]) -> None:
     for book in books:
         canonical = json.loads((CUR / "canonical" / f"{book}.v2.json").read_text(encoding="utf-8"))
@@ -441,6 +504,7 @@ def main() -> int:
     check_identities(books, report, errors)
     check_registry_references(books, report, errors)
     check_coverage_partitions(books, report, errors)
+    check_package_integrity(books, report, errors)
     check_sense_spotchecks(books, report, errors)
     check_coverage(books, report, errors)
     report["errors"] = errors

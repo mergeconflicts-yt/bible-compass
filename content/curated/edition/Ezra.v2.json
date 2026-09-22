@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-ezra-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-ezra-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-ezra-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-ezra-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -338,14 +338,14 @@
       "verse:Ezra.10.44"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-ezra-canonical",
-      "revision": 1,
-      "digest": "sha256:21814d15fa1de68cd18fca3967f9f9169d6132b42af99aaed6ecce591d0ab8b7"
+      "revision": 2,
+      "digest": "sha256:52e091769f745a02b257588f811a63798d7922de5058a3c68cbaf6bb6af0a87a"
     }
   ],
   "records": {
@@ -400,6 +400,24 @@
           "occurrence_ordinal": 1,
           "prefix": "And in the days of ",
           "suffix": " king of Persia, Bis"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-artaxerxes-i-4-7-o2",
+        "verse_key": "verse:Ezra.4.7",
+        "attestation_key": "attestation:wb-ezra-artaxerxes-i-4-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:artaxerxes-i"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Artaxerxes",
+          "occurrence_ordinal": 2,
+          "prefix": "s wrote a letter to ",
+          "suffix": ". It was written in "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -801,6 +819,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-1-1-o2",
+        "verse_key": "verse:Ezra.1.1",
+        "attestation_key": "attestation:wb-ezra-god-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "rough Jeremiah, the ",
+          "suffix": " stirred the spirit "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-1-2",
         "verse_key": "verse:Ezra.1.2",
         "attestation_key": "attestation:wb-ezra-god-1-2",
@@ -832,6 +868,42 @@
           "occurrence_ordinal": 1,
           "prefix": "His people, may his ",
           "suffix": " be with him, and ma"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-1-3-o2",
+        "verse_key": "verse:Ezra.1.3",
+        "attestation_key": "attestation:wb-ezra-god-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "se of the LORD, the ",
+          "suffix": " of Israel; He is th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-1-3-o3",
+        "verse_key": "verse:Ezra.1.3",
+        "attestation_key": "attestation:wb-ezra-god-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 3,
+          "prefix": "f Israel; He is the ",
+          "suffix": " who is in Jerusalem"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -981,6 +1053,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-10-3-o2",
+        "verse_key": "verse:Ezra.10.3",
+        "attestation_key": "attestation:wb-ezra-god-10-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " the command of our ",
+          "suffix": ". Let it be done acc"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-10-6",
         "verse_key": "verse:Ezra.10.6",
         "attestation_key": "attestation:wb-ezra-god-10-6",
@@ -1053,6 +1143,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-3-10-o2",
+        "verse_key": "verse:Ezra.3.10",
+        "attestation_key": "attestation:wb-ezra-god-3-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "tions to praise the ",
+          "suffix": ", as David king of I"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-3-11",
         "verse_key": "verse:Ezra.3.11",
         "attestation_key": "attestation:wb-ezra-god-3-11",
@@ -1071,6 +1179,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-3-11-o2",
+        "verse_key": "verse:Ezra.3.11",
+        "attestation_key": "attestation:wb-ezra-god-3-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "ut of praise to the ",
+          "suffix": ", because the founda"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-3-11-o3",
+        "verse_key": "verse:Ezra.3.11",
+        "attestation_key": "attestation:wb-ezra-god-3-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 3,
+          "prefix": "of the house of the ",
+          "suffix": " had been laid."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-3-2",
         "verse_key": "verse:Ezra.3.2",
         "attestation_key": "attestation:wb-ezra-god-3-2",
@@ -1084,6 +1228,24 @@
           "occurrence_ordinal": 1,
           "prefix": "ld the altar of the ",
           "suffix": " of Israel to sacrif"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-3-2-o2",
+        "verse_key": "verse:Ezra.3.2",
+        "attestation_key": "attestation:wb-ezra-god-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "of Moses the man of ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1125,6 +1287,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-3-5-o2",
+        "verse_key": "verse:Ezra.3.5",
+        "attestation_key": "attestation:wb-ezra-god-3-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "ings brought to the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-3-6",
         "verse_key": "verse:Ezra.3.6",
         "attestation_key": "attestation:wb-ezra-god-3-6",
@@ -1138,6 +1318,24 @@
           "occurrence_ordinal": 1,
           "prefix": "nt offerings to the ",
           "suffix": ", although the found"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-3-6-o2",
+        "verse_key": "verse:Ezra.3.6",
+        "attestation_key": "attestation:wb-ezra-god-3-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "f the temple of the ",
+          "suffix": " had not been laid."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1246,6 +1444,24 @@
           "occurrence_ordinal": 1,
           "prefix": "ing a house for our ",
           "suffix": ", since we alone mus"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-4-3-o2",
+        "verse_key": "verse:Ezra.4.3",
+        "attestation_key": "attestation:wb-ezra-god-4-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "t for the LORD, the ",
+          "suffix": " of Israel, as Cyrus"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1413,6 +1629,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-5-2-o2",
+        "verse_key": "verse:Ezra.5.2",
+        "attestation_key": "attestation:wb-ezra-god-5-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "And the prophets of ",
+          "suffix": " were with them, hel"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-5-5",
         "verse_key": "verse:Ezra.5.5",
         "attestation_key": "attestation:wb-ezra-god-5-5",
@@ -1480,6 +1714,24 @@
           "occurrence_ordinal": 1,
           "prefix": "May ",
           "suffix": ", who has caused His"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-6-12-o2",
+        "verse_key": "verse:Ezra.6.12",
+        "attestation_key": "attestation:wb-ezra-god-6-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "stroy this house of ",
+          "suffix": " in Jerusalem. I, Da"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1611,6 +1863,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-6-5-o2",
+        "verse_key": "verse:Ezra.6.5",
+        "attestation_key": "attestation:wb-ezra-god-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "ted in the house of ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-6-7",
         "verse_key": "verse:Ezra.6.7",
         "attestation_key": "attestation:wb-ezra-god-6-7",
@@ -1624,6 +1894,24 @@
           "occurrence_ordinal": 1,
           "prefix": "ork on the house of ",
           "suffix": " alone. Let the gove"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-6-7-o2",
+        "verse_key": "verse:Ezra.6.7",
+        "attestation_key": "attestation:wb-ezra-god-6-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "build this house of ",
+          "suffix": " on its original sit"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1827,6 +2115,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-7-19-o2",
+        "verse_key": "verse:Ezra.7.19",
+        "attestation_key": "attestation:wb-ezra-god-7-19",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "f the house of your ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-7-20",
         "verse_key": "verse:Ezra.7.20",
         "attestation_key": "attestation:wb-ezra-god-7-20",
@@ -1917,6 +2223,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-7-25-o2",
+        "verse_key": "verse:Ezra.7.25",
+        "attestation_key": "attestation:wb-ezra-god-7-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "ow the laws of your ",
+          "suffix": ". And you are to tea"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-7-26",
         "verse_key": "verse:Ezra.7.26",
         "attestation_key": "attestation:wb-ezra-god-7-26",
@@ -1984,6 +2308,24 @@
           "occurrence_ordinal": 1,
           "prefix": "which the LORD, the ",
           "suffix": " of Israel, had give"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-7-6-o2",
+        "verse_key": "verse:Ezra.7.6",
+        "attestation_key": "attestation:wb-ezra-god-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "and of the LORD his ",
+          "suffix": " was upon him."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2349,6 +2691,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-9-6-o2",
+        "verse_key": "verse:Ezra.9.6",
+        "attestation_key": "attestation:wb-ezra-god-9-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": " my face to You, my ",
+          "suffix": ", because our iniqui"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-9-8",
         "verse_key": "verse:Ezra.9.8",
         "attestation_key": "attestation:wb-ezra-god-9-8",
@@ -2367,6 +2727,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-god-9-8-o2",
+        "verse_key": "verse:Ezra.9.8",
+        "attestation_key": "attestation:wb-ezra-god-9-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "in our bondage, our ",
+          "suffix": " has given us new li"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-god-9-9",
         "verse_key": "verse:Ezra.9.9",
         "attestation_key": "attestation:wb-ezra-god-9-9",
@@ -2380,6 +2758,24 @@
           "occurrence_ordinal": 1,
           "prefix": " we are slaves, our ",
           "suffix": " has not forsaken us"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-god-9-9-o2",
+        "verse_key": "verse:Ezra.9.9",
+        "attestation_key": "attestation:wb-ezra-god-9-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "God",
+          "occurrence_ordinal": 2,
+          "prefix": "ld the house of our ",
+          "suffix": " and repair its ruin"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2529,6 +2925,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-jerusalem-1-3-o2",
+        "verse_key": "verse:Ezra.1.3",
+        "attestation_key": "attestation:wb-ezra-jerusalem-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "s the God who is in ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-jerusalem-1-4",
         "verse_key": "verse:Ezra.1.4",
         "attestation_key": "attestation:wb-ezra-jerusalem-1-4",
@@ -2596,6 +3010,24 @@
           "occurrence_ordinal": 1,
           "prefix": "hroughout Judah and ",
           "suffix": " that all the exiles"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-jerusalem-10-7-o2",
+        "verse_key": "verse:Ezra.10.7",
+        "attestation_key": "attestation:wb-ezra-jerusalem-10-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "es should gather at ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2686,6 +3118,24 @@
           "occurrence_ordinal": 1,
           "prefix": "the house of God in ",
           "suffix": ", Zerubbabel son of "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-jerusalem-3-8-o2",
+        "verse_key": "verse:Ezra.3.8",
+        "attestation_key": "attestation:wb-ezra-jerusalem-3-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "who had returned to ",
+          "suffix": " from the captivity,"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2974,6 +3424,24 @@
           "occurrence_ordinal": 1,
           "prefix": " from the temple in ",
           "suffix": " and carried to Baby"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-jerusalem-6-5-o2",
+        "verse_key": "verse:Ezra.6.5",
+        "attestation_key": "attestation:wb-ezra-jerusalem-6-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "ed to the temple in ",
+          "suffix": " and deposited in th"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -4041,6 +4509,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-p-barzillai-3-2-61-o2",
+        "verse_key": "verse:Ezra.2.61",
+        "attestation_key": "attestation:wb-ezra-p-barzillai-3-2-61",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-barzillai-3"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Barzillai",
+          "occurrence_ordinal": 2,
+          "prefix": "rried a daughter of ",
+          "suffix": " the Gileadite and w"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-p-bazluth-1-2-52",
         "verse_key": "verse:Ezra.2.52",
         "attestation_key": "attestation:wb-ezra-p-bazluth-1-2-52",
@@ -4108,6 +4594,24 @@
           "occurrence_ordinal": 1,
           "prefix": " the descendants of ",
           "suffix": ", Zechariah son of B"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-p-bebai-1-8-11-o2",
+        "verse_key": "verse:Ezra.8.11",
+        "attestation_key": "attestation:wb-ezra-p-bebai-1-8-11",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-bebai-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Bebai",
+          "occurrence_ordinal": 2,
+          "prefix": "i, Zechariah son of ",
+          "suffix": ", and with him 28 me"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -4486,6 +4990,24 @@
           "occurrence_ordinal": 1,
           "prefix": "n the first year of ",
           "suffix": " king of Persia, to "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-p-cyrus-1-1-1-o2",
+        "verse_key": "verse:Ezra.1.1",
+        "attestation_key": "attestation:wb-ezra-p-cyrus-1-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-cyrus-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Cyrus",
+          "occurrence_ordinal": 2,
+          "prefix": "irred the spirit of ",
+          "suffix": " king of Persia to s"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -5427,6 +5949,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-p-elnathan-2-8-16-o2",
+        "verse_key": "verse:Ezra.8.16",
+        "attestation_key": "attestation:wb-ezra-p-elnathan-2-8-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elnathan-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Elnathan",
+          "occurrence_ordinal": 2,
+          "prefix": "h, Elnathan, Jarib, ",
+          "suffix": ", Nathan, Zechariah,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-p-elnathan-2-8-16-o3",
+        "verse_key": "verse:Ezra.8.16",
+        "attestation_key": "attestation:wb-ezra-p-elnathan-2-8-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-elnathan-2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Elnathan",
+          "occurrence_ordinal": 3,
+          "prefix": "eachers Joiarib and ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-p-ezra-1-10-1",
         "verse_key": "verse:Ezra.10.1",
         "attestation_key": "attestation:wb-ezra-p-ezra-1-10-1",
@@ -5656,6 +6214,24 @@
           "occurrence_ordinal": 1,
           "prefix": "this ",
           "suffix": " came up from Babylo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-p-ezra-1-7-6-o2",
+        "verse_key": "verse:Ezra.7.6",
+        "attestation_key": "attestation:wb-ezra-p-ezra-1-7-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-ezra-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ezra",
+          "occurrence_ordinal": 2,
+          "prefix": "he king had granted ",
+          "suffix": " all his requests, f"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7708,6 +8284,24 @@
           "occurrence_ordinal": 1,
           "prefix": "sh: Ramiah, Izziah, ",
           "suffix": ", Mijamin, Eleazar, "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-p-malchijah-4-10-25-o2",
+        "verse_key": "verse:Ezra.10.25",
+        "attestation_key": "attestation:wb-ezra-p-malchijah-4-10-25",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-malchijah-4"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Malchijah",
+          "occurrence_ordinal": 2,
+          "prefix": ", Mijamin, Eleazar, ",
+          "suffix": ", and Benaiah."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -10791,6 +11385,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-pl-casiphia-addb84c-8-17-o2",
+        "verse_key": "verse:Ezra.8.17",
+        "attestation_key": "attestation:wb-ezra-pl-casiphia-addb84c-8-17",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-casiphia-addb84c"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Casiphia",
+          "occurrence_ordinal": 2,
+          "prefix": " temple servants at ",
+          "suffix": ", that they should b"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-pl-chephirah-a2e5054-2-25",
         "verse_key": "verse:Ezra.2.25",
         "attestation_key": "attestation:wb-ezra-pl-chephirah-a2e5054-2-25",
@@ -11061,6 +11673,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:ezra-pl-persia-ab9696f-1-1-o2",
+        "verse_key": "verse:Ezra.1.1",
+        "attestation_key": "attestation:wb-ezra-pl-persia-ab9696f-1-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 2,
+          "prefix": "it of Cyrus king of ",
+          "suffix": " to send a proclamat"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:ezra-pl-persia-ab9696f-1-2",
         "verse_key": "verse:Ezra.1.2",
         "attestation_key": "attestation:wb-ezra-pl-persia-ab9696f-1-2",
@@ -11164,6 +11794,24 @@
           "occurrence_ordinal": 1,
           "prefix": "gn of Cyrus king of ",
           "suffix": " and down to the rei"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-pl-persia-ab9696f-4-5-o2",
+        "verse_key": "verse:Ezra.4.5",
+        "attestation_key": "attestation:wb-ezra-pl-persia-ab9696f-4-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-persia-ab9696f"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Persia",
+          "occurrence_ordinal": 2,
+          "prefix": "n of Darius king of ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -11437,9 +12085,12 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-1-1",
+            "mention:wb:ezra-god-1-1-o2",
             "mention:wb:ezra-p-cyrus-1-1-1",
+            "mention:wb:ezra-p-cyrus-1-1-1-o2",
             "mention:wb:ezra-p-jeremiah-6-1-1",
-            "mention:wb:ezra-pl-persia-ab9696f-1-1"
+            "mention:wb:ezra-pl-persia-ab9696f-1-1",
+            "mention:wb:ezra-pl-persia-ab9696f-1-1-o2"
           ],
           "blocker_question_keys": []
         },
@@ -11463,7 +12114,10 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-1-3",
-            "mention:wb:ezra-jerusalem-1-3"
+            "mention:wb:ezra-god-1-3-o2",
+            "mention:wb:ezra-god-1-3-o3",
+            "mention:wb:ezra-jerusalem-1-3",
+            "mention:wb:ezra-jerusalem-1-3-o2"
           ],
           "blocker_question_keys": []
         },
@@ -12151,6 +12805,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-p-barzillai-3-2-61",
+            "mention:wb:ezra-p-barzillai-3-2-61-o2",
             "mention:wb:ezra-p-habaiah-1-2-61",
             "mention:wb:ezra-p-hakkoz-1-2-61"
           ],
@@ -12185,6 +12840,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-3-2",
+            "mention:wb:ezra-god-3-2-o2",
             "mention:wb:ezra-p-jeshua-3-3-2",
             "mention:wb:ezra-p-jozadak-1-3-2",
             "mention:wb:ezra-p-moses-1-3-2",
@@ -12209,7 +12865,8 @@
             "verse:Ezra.3.5"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-3-5"
+            "mention:wb:ezra-god-3-5",
+            "mention:wb:ezra-god-3-5-o2"
           ],
           "blocker_question_keys": []
         },
@@ -12219,7 +12876,8 @@
             "verse:Ezra.3.6"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-3-6"
+            "mention:wb:ezra-god-3-6",
+            "mention:wb:ezra-god-3-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -12246,6 +12904,7 @@
           "record_keys": [
             "mention:wb:ezra-god-3-8",
             "mention:wb:ezra-jerusalem-3-8",
+            "mention:wb:ezra-jerusalem-3-8-o2",
             "mention:wb:ezra-p-jeshua-3-3-8",
             "mention:wb:ezra-p-jozadak-1-3-8",
             "mention:wb:ezra-p-shealtiel-2-3-8",
@@ -12273,6 +12932,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-3-10",
+            "mention:wb:ezra-god-3-10-o2",
             "mention:wb:ezra-p-asaph-3-3-10",
             "mention:wb:ezra-p-david-1-3-10"
           ],
@@ -12284,7 +12944,9 @@
             "verse:Ezra.3.11"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-3-11"
+            "mention:wb:ezra-god-3-11",
+            "mention:wb:ezra-god-3-11-o2",
+            "mention:wb:ezra-god-3-11-o3"
           ],
           "blocker_question_keys": []
         },
@@ -12317,6 +12979,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-4-3",
+            "mention:wb:ezra-god-4-3-o2",
             "mention:wb:ezra-p-cyrus-1-4-3",
             "mention:wb:ezra-p-jeshua-3-4-3",
             "mention:wb:ezra-p-zerubbabel-2-4-3",
@@ -12332,7 +12995,8 @@
           "record_keys": [
             "mention:wb:ezra-p-cyrus-1-4-5",
             "mention:wb:ezra-p-darius-1-4-5",
-            "mention:wb:ezra-pl-persia-ab9696f-4-5"
+            "mention:wb:ezra-pl-persia-ab9696f-4-5",
+            "mention:wb:ezra-pl-persia-ab9696f-4-5-o2"
           ],
           "blocker_question_keys": []
         },
@@ -12353,6 +13017,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-artaxerxes-i-4-7",
+            "mention:wb:ezra-artaxerxes-i-4-7-o2",
             "mention:wb:ezra-p-bishlam-1-4-7",
             "mention:wb:ezra-p-mithredath-2-4-7",
             "mention:wb:ezra-p-tabeel-1-4-7",
@@ -12498,6 +13163,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-5-2",
+            "mention:wb:ezra-god-5-2-o2",
             "mention:wb:ezra-jerusalem-5-2",
             "mention:wb:ezra-p-jeshua-3-5-2",
             "mention:wb:ezra-p-jozadak-1-5-2",
@@ -12681,7 +13347,9 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-6-5",
+            "mention:wb:ezra-god-6-5-o2",
             "mention:wb:ezra-jerusalem-6-5",
+            "mention:wb:ezra-jerusalem-6-5-o2",
             "mention:wb:ezra-p-nebuchadnezzar-1-6-5"
           ],
           "blocker_question_keys": []
@@ -12704,7 +13372,8 @@
             "verse:Ezra.6.7"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-6-7"
+            "mention:wb:ezra-god-6-7",
+            "mention:wb:ezra-god-6-7-o2"
           ],
           "blocker_question_keys": []
         },
@@ -12747,6 +13416,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-6-12",
+            "mention:wb:ezra-god-6-12-o2",
             "mention:wb:ezra-jerusalem-6-12",
             "mention:wb:ezra-p-darius-1-6-12"
           ],
@@ -12918,7 +13588,9 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-7-6",
+            "mention:wb:ezra-god-7-6-o2",
             "mention:wb:ezra-p-ezra-1-7-6",
+            "mention:wb:ezra-p-ezra-1-7-6-o2",
             "mention:wb:ezra-p-moses-1-7-6"
           ],
           "blocker_question_keys": []
@@ -13062,6 +13734,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-7-19",
+            "mention:wb:ezra-god-7-19-o2",
             "mention:wb:ezra-jerusalem-7-19"
           ],
           "blocker_question_keys": []
@@ -13117,6 +13790,7 @@
           "record_keys": [
             "mention:wb:ezra-beyond-the-river-7-25",
             "mention:wb:ezra-god-7-25",
+            "mention:wb:ezra-god-7-25-o2",
             "mention:wb:ezra-p-ezra-1-7-25"
           ],
           "blocker_question_keys": []
@@ -13278,7 +13952,8 @@
             "verse:Ezra.8.11"
           ],
           "record_keys": [
-            "mention:wb:ezra-p-bebai-1-8-11"
+            "mention:wb:ezra-p-bebai-1-8-11",
+            "mention:wb:ezra-p-bebai-1-8-11-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13336,6 +14011,8 @@
             "mention:wb:ezra-p-ariel-2-8-16",
             "mention:wb:ezra-p-eliezer-7-8-16",
             "mention:wb:ezra-p-elnathan-2-8-16",
+            "mention:wb:ezra-p-elnathan-2-8-16-o2",
+            "mention:wb:ezra-p-elnathan-2-8-16-o3",
             "mention:wb:ezra-p-jarib-1-8-16",
             "mention:wb:ezra-p-joiarib-1-8-16",
             "mention:wb:ezra-p-meshullam-8-8-16",
@@ -13353,7 +14030,8 @@
           "record_keys": [
             "mention:wb:ezra-god-8-17",
             "mention:wb:ezra-p-iddo-6-8-17",
-            "mention:wb:ezra-pl-casiphia-addb84c-8-17"
+            "mention:wb:ezra-pl-casiphia-addb84c-8-17",
+            "mention:wb:ezra-pl-casiphia-addb84c-8-17-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13564,7 +14242,8 @@
             "verse:Ezra.9.6"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-9-6"
+            "mention:wb:ezra-god-9-6",
+            "mention:wb:ezra-god-9-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13574,7 +14253,8 @@
             "verse:Ezra.9.8"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-9-8"
+            "mention:wb:ezra-god-9-8",
+            "mention:wb:ezra-god-9-8-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13585,6 +14265,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-god-9-9",
+            "mention:wb:ezra-god-9-9-o2",
             "mention:wb:ezra-jerusalem-9-9",
             "mention:wb:ezra-pl-persia-ab9696f-9-9"
           ],
@@ -13650,7 +14331,8 @@
             "verse:Ezra.10.3"
           ],
           "record_keys": [
-            "mention:wb:ezra-god-10-3"
+            "mention:wb:ezra-god-10-3",
+            "mention:wb:ezra-god-10-3-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13683,7 +14365,8 @@
             "verse:Ezra.10.7"
           ],
           "record_keys": [
-            "mention:wb:ezra-jerusalem-10-7"
+            "mention:wb:ezra-jerusalem-10-7",
+            "mention:wb:ezra-jerusalem-10-7-o2"
           ],
           "blocker_question_keys": []
         },
@@ -13848,6 +14531,7 @@
             "mention:wb:ezra-p-eleazar-7-10-25",
             "mention:wb:ezra-p-izziah-1-10-25",
             "mention:wb:ezra-p-malchijah-4-10-25",
+            "mention:wb:ezra-p-malchijah-4-10-25-o2",
             "mention:wb:ezra-p-mijamin-2-10-25",
             "mention:wb:ezra-p-parosh-1-10-25",
             "mention:wb:ezra-p-ramiah-1-10-25"
@@ -14118,7 +14802,8 @@
     },
     {
       "code": "ambiguous-mention-referents-dropped",
-      "note": "13 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
+      "note": "18 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent)."
     }
-  ]
+  ],
+  "content_digest": "sha256:588dc80f8054d60d5dd104b8cdc69beb46f44f309d774a1db499d91152a91052"
 }

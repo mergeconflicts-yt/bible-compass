@@ -39,4 +39,7 @@ esac
 echo "RUN supabase/tests/11_english_canon_import_test.sql"
 psql "$DB_URL" -v ON_ERROR_STOP=1 -f supabase/tests/11_english_canon_import_test.sql || exit 1
 
+echo "RUN supabase/tests/12_upgrade_convergence_test.sql"
+psql "$DB_URL" -v ON_ERROR_STOP=1 -f supabase/tests/12_upgrade_convergence_test.sql || exit 1
+
 echo "ENGLISH-CANON-TESTS-PASS"

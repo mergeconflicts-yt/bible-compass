@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-amos-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-amos-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-amos-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-amos-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -189,14 +189,14 @@
       "verse:Amos.9.15"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-amos-canonical",
       "revision": 1,
-      "digest": "sha256:a73f89864fa221db52fa1de87e008890d8f5c34171d73eff1a67ec406d9518a9"
+      "digest": "sha256:d6710b57f2e3d969e2af265caaa82f641b2ad5554f769e37da3231700d6f5d5f"
     }
   ],
   "records": {
@@ -449,6 +449,24 @@
           "occurrence_ordinal": 1,
           "prefix": "This is what the ",
           "suffix": " says: “For three tr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:amos-god-2-4-o2",
+        "verse_key": "verse:Amos.2.4",
+        "attestation_key": "attestation:wb-amos-god-2-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "ject the Law of the ",
+          "suffix": " and fail to keep Hi"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -922,6 +940,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:amos-god-5-18-o2",
+        "verse_key": "verse:Amos.5.18",
+        "attestation_key": "attestation:wb-amos-god-5-18",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "will the Day of the ",
+          "suffix": " be for you? It will"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:amos-god-5-20",
         "verse_key": "verse:Amos.5.20",
         "attestation_key": "attestation:wb-amos-god-5-20",
@@ -1223,6 +1259,24 @@
           "occurrence_ordinal": 1,
           "prefix": "This is what the ",
           "suffix": " showed me: The Lord"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:amos-god-7-4-o2",
+        "verse_key": "verse:Amos.7.4",
+        "attestation_key": "attestation:wb-amos-god-7-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Lord GOD",
+          "occurrence_ordinal": 2,
+          "prefix": " GOD showed me: The ",
+          "suffix": " was calling for jud"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1715,6 +1769,24 @@
       },
       {
         "mention_key": "mention:wb:amos-israelites-9-7",
+        "verse_key": "verse:Amos.9.7",
+        "attestation_key": "attestation:wb-amos-israelites-9-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "collective",
+        "selector": {
+          "exact_quote": "Israel",
+          "occurrence_ordinal": 1,
+          "prefix": "o Me, O children of ",
+          "suffix": "?” declares the LORD"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:amos-israelites-9-7-o2",
         "verse_key": "verse:Amos.9.7",
         "attestation_key": "attestation:wb-amos-israelites-9-7",
         "target": {
@@ -2758,6 +2830,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:amos-pl-nile-a012705-8-8-o2",
+        "verse_key": "verse:Amos.8.8",
+        "attestation_key": "attestation:wb-amos-pl-nile-a012705-8-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-nile-a012705"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Nile",
+          "occurrence_ordinal": 2,
+          "prefix": "en subside like the ",
+          "suffix": " in Egypt."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:amos-pl-nile-a012705-9-5",
         "verse_key": "verse:Amos.9.5",
         "attestation_key": "attestation:wb-amos-pl-nile-a012705-9-5",
@@ -3195,7 +3285,8 @@
             "verse:Amos.2.4"
           ],
           "record_keys": [
-            "mention:wb:amos-god-2-4"
+            "mention:wb:amos-god-2-4",
+            "mention:wb:amos-god-2-4-o2"
           ],
           "blocker_question_keys": []
         },
@@ -3579,7 +3670,8 @@
             "verse:Amos.5.18"
           ],
           "record_keys": [
-            "mention:wb:amos-god-5-18"
+            "mention:wb:amos-god-5-18",
+            "mention:wb:amos-god-5-18-o2"
           ],
           "blocker_question_keys": []
         },
@@ -3715,7 +3807,8 @@
             "verse:Amos.7.4"
           ],
           "record_keys": [
-            "mention:wb:amos-god-7-4"
+            "mention:wb:amos-god-7-4",
+            "mention:wb:amos-god-7-4-o2"
           ],
           "blocker_question_keys": []
         },
@@ -3883,7 +3976,8 @@
           ],
           "record_keys": [
             "mention:wb:amos-pl-egypt-af301ca-8-8",
-            "mention:wb:amos-pl-nile-a012705-8-8"
+            "mention:wb:amos-pl-nile-a012705-8-8",
+            "mention:wb:amos-pl-nile-a012705-8-8-o2"
           ],
           "blocker_question_keys": []
         },
@@ -3957,6 +4051,7 @@
           "record_keys": [
             "mention:wb:amos-god-9-7",
             "mention:wb:amos-israelites-9-7",
+            "mention:wb:amos-israelites-9-7-o2",
             "mention:wb:amos-pl-caphtor-a329990-9-7",
             "mention:wb:amos-pl-egypt-af301ca-9-7"
           ],
@@ -4037,5 +4132,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:09df59c0d044ef9378fe96306f714141b265534a30a926c37e2072284c091000"
 }

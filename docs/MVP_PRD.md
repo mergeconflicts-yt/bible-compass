@@ -12,6 +12,8 @@ Readers will continue and understand Scripture better when the product removes c
 
 Nehemiah 2 is the first complete production slice. It proves the architecture and experience before contextual coverage expands.
 
+> **Status note (whole-Bible draft track).** A machine-generated *draft* whole-English curation track now exists under `content/curated/` (66 books, contract 2.0.0, `data_classification: synthetic_fixture`, `review_status: draft`). It is unreviewed and unpublished. Nehemiah 2 remains the only publishable corpus, and full-Bible contextual coverage is still excluded from the first MVP; the draft track proves the pipeline and must never be mistaken for approved content.
+
 ## Target user
 
 `OPEN OWNER DECISION`

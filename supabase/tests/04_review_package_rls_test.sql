@@ -89,8 +89,8 @@ BEGIN
   INSERT INTO private_staging.approval_records
     (subject_key, subject_digest, subject_revision, reviewer_id, reviewer_role, decision)
   VALUES (
-    'test:seed:published',
-    'sha256:' || repeat('e', 64),
+    'en.bsb.neh-2@1:sha-12ab34cd',
+    'sha256:' || repeat('f', 64),
     1,
     'synthetic-test-seed',
     'rights_reviewer',
@@ -98,7 +98,7 @@ BEGIN
   )
   RETURNING id INTO appr;
   INSERT INTO private_staging.package_manifests
-    (key, locale, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at)
+    (key, locale, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at, rights_status)
   VALUES (
     'en.bsb.neh-2@1:sha-12ab34cd',
     'en',
@@ -107,8 +107,13 @@ BEGIN
     'sha256:' || repeat('f', 64),
     '1.0.0',
     appr,
-    now() - interval '1 day'
+    now() - interval '1 day',
+    'cleared'
   );
+  -- The public gate trusts only the active release for the locale.
+  INSERT INTO private_staging.publication_releases (locale, package_id, is_active)
+  SELECT 'en', id, true FROM private_staging.package_manifests
+  WHERE key = 'en.bsb.neh-2@1:sha-12ab34cd';
   INSERT INTO private_staging.package_manifests
     (key, locale, schema_version, content_version, checksum, minimum_app_version, approval_id, published_at)
   VALUES (

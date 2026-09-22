@@ -5,9 +5,9 @@
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
   "package_key": "draft:wb-bsb-zech-edition",
-  "package_revision": 1,
-  "submission_id": "submission:wb-bsb-zech-edition:attempt-1",
-  "attempt": 1,
+  "package_revision": 4,
+  "submission_id": "submission:wb-bsb-zech-edition:attempt-4",
+  "attempt": 4,
   "produced_for_job_id": "job:wb-bsb-zech-edition",
   "package_layer": "edition",
   "package_family": "translation-mention-draft",
@@ -270,14 +270,14 @@
       "verse:Zech.14.21"
     ],
     "language_tag": "en",
-    "translation_edition_key": "edition:bsb@20260912"
+    "translation_edition_key": "edition:bsb@20260912:sha-b2898c49"
   },
   "review_status": "draft",
   "dependencies": [
     {
       "package_key": "draft:wb-zech-canonical",
       "revision": 1,
-      "digest": "sha256:ec6ae8cb403493c452fe10fa5afd626666cb49ca6913d47724438a861d926f4f"
+      "digest": "sha256:873e070cb9cc12271b07c62f2dc4c8434cc1e2373fa47cde98d46f1cfb8c9bff"
     }
   ],
   "records": {
@@ -463,6 +463,42 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-1-3-o2",
+        "verse_key": "verse:Zech.1.3",
+        "attestation_key": "attestation:wb-zech-god-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 2,
+          "prefix": "to Me, declares the ",
+          "suffix": ", and I will return "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-1-3-o3",
+        "verse_key": "verse:Zech.1.3",
+        "attestation_key": "attestation:wb-zech-god-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 3,
+          "prefix": "rn to you, says the ",
+          "suffix": ".’"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-1-4",
         "verse_key": "verse:Zech.1.4",
         "attestation_key": "attestation:wb-zech-god-1-4",
@@ -535,6 +571,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-10-1-o2",
+        "verse_key": "verse:Zech.10.1",
+        "attestation_key": "attestation:wb-zech-god-10-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": " in springtime; the ",
+          "suffix": " makes the storm clo"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-10-12",
         "verse_key": "verse:Zech.10.12",
         "attestation_key": "attestation:wb-zech-god-10-12",
@@ -548,6 +602,24 @@
           "occurrence_ordinal": 1,
           "prefix": "engthen them in the ",
           "suffix": ", and in His name th"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-10-12-o2",
+        "verse_key": "verse:Zech.10.12",
+        "attestation_key": "attestation:wb-zech-god-10-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "walk,” declares the ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -661,6 +733,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-11-13-o2",
+        "verse_key": "verse:Zech.11.13",
+        "attestation_key": "attestation:wb-zech-god-11-13",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "in the house of the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-11-15",
         "verse_key": "verse:Zech.11.15",
         "attestation_key": "attestation:wb-zech-god-11-15",
@@ -746,6 +836,24 @@
           "occurrence_ordinal": 1,
           "prefix": " of the word of the ",
           "suffix": " concerning Israel. "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-12-1-o2",
+        "verse_key": "verse:Zech.12.1",
+        "attestation_key": "attestation:wb-zech-god-12-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": ". Thus declares the ",
+          "suffix": ", who stretches out "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1039,6 +1147,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-14-20-o2",
+        "verse_key": "verse:Zech.14.20",
+        "attestation_key": "attestation:wb-zech-god-14-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "in the house of the ",
+          "suffix": " will be like the sp"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-14-21",
         "verse_key": "verse:Zech.14.21",
         "attestation_key": "attestation:wb-zech-god-14-21",
@@ -1052,6 +1178,24 @@
           "occurrence_ordinal": 1,
           "prefix": "will be holy to the ",
           "suffix": ", and all who sacrif"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-14-21-o2",
+        "verse_key": "verse:Zech.14.21",
+        "attestation_key": "attestation:wb-zech-god-14-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 2,
+          "prefix": "in the house of the ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1124,6 +1268,24 @@
           "occurrence_ordinal": 1,
           "prefix": "On that day the ",
           "suffix": " will become King ov"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-14-9-o2",
+        "verse_key": "verse:Zech.14.9",
+        "attestation_key": "attestation:wb-zech-god-14-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "r all the earth—the ",
+          "suffix": " alone, and His name"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1237,6 +1399,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-2-6-o2",
+        "verse_key": "verse:Zech.2.6",
+        "attestation_key": "attestation:wb-zech-god-2-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "aven,” declares the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-2-8",
         "verse_key": "verse:Zech.2.8",
         "attestation_key": "attestation:wb-zech-god-2-8",
@@ -1304,6 +1484,42 @@
           "occurrence_ordinal": 1,
           "prefix": "And the ",
           "suffix": " said to Satan: “The"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-3-2-o2",
+        "verse_key": "verse:Zech.3.2",
+        "attestation_key": "attestation:wb-zech-god-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "said to Satan: “The ",
+          "suffix": " rebukes you, Satan!"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-3-2-o3",
+        "verse_key": "verse:Zech.3.2",
+        "attestation_key": "attestation:wb-zech-god-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 3,
+          "prefix": " Satan! Indeed, the ",
+          "suffix": ", who has chosen Jer"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1561,6 +1777,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-7-12-o2",
+        "verse_key": "verse:Zech.7.12",
+        "attestation_key": "attestation:wb-zech-god-7-12",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 2,
+          "prefix": "anger came from the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-7-13",
         "verse_key": "verse:Zech.7.13",
         "attestation_key": "attestation:wb-zech-god-7-13",
@@ -1736,6 +1970,24 @@
           "occurrence_ordinal": 1,
           "prefix": "or this is what the ",
           "suffix": " says: “Just as I re"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-8-14-o2",
+        "verse_key": "verse:Zech.8.14",
+        "attestation_key": "attestation:wb-zech-god-8-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 2,
+          "prefix": "t relent,” says the ",
+          "suffix": ","
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1939,6 +2191,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-8-6-o2",
+        "verse_key": "verse:Zech.8.6",
+        "attestation_key": "attestation:wb-zech-god-8-6",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 2,
+          "prefix": "eyes?” declares the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-8-7",
         "verse_key": "verse:Zech.8.7",
         "attestation_key": "attestation:wb-zech-god-8-7",
@@ -1993,6 +2263,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-god-8-9-o2",
+        "verse_key": "verse:Zech.8.9",
+        "attestation_key": "attestation:wb-zech-god-8-9",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD of Hosts",
+          "occurrence_ordinal": 2,
+          "prefix": "e, the house of the ",
+          "suffix": "."
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-god-9-1",
         "verse_key": "verse:Zech.9.1",
         "attestation_key": "attestation:wb-zech-god-9-1",
@@ -2006,6 +2294,24 @@
           "occurrence_ordinal": 1,
           "prefix": " of the word of the ",
           "suffix": " against the land of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-god-9-1-o2",
+        "verse_key": "verse:Zech.9.1",
+        "attestation_key": "attestation:wb-zech-god-9-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:god"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "LORD",
+          "occurrence_ordinal": 2,
+          "prefix": "Israel are upon the ",
+          "suffix": " —"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2155,6 +2461,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-jerusalem-1-16-o2",
+        "verse_key": "verse:Zech.1.16",
+        "attestation_key": "attestation:wb-zech-jerusalem-1-16",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": " stretched out over ",
+          "suffix": ".’"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-jerusalem-1-17",
         "verse_key": "verse:Zech.1.17",
         "attestation_key": "attestation:wb-zech-jerusalem-1-17",
@@ -2240,6 +2564,24 @@
           "occurrence_ordinal": 1,
           "prefix": "Behold, I will make ",
           "suffix": " a cup of drunkennes"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-jerusalem-12-2-o2",
+        "verse_key": "verse:Zech.12.2",
+        "attestation_key": "attestation:wb-zech-jerusalem-12-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "esieged, as well as ",
+          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2384,6 +2726,24 @@
           "occurrence_ordinal": 1,
           "prefix": " to Rimmon south of ",
           "suffix": " will be turned into"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-jerusalem-14-10-o2",
+        "verse_key": "verse:Zech.14.10",
+        "attestation_key": "attestation:wb-zech-jerusalem-14-10",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": "d into a plain, but ",
+          "suffix": " will be raised up a"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2695,6 +3055,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-jerusalem-8-3-o2",
+        "verse_key": "verse:Zech.8.3",
+        "attestation_key": "attestation:wb-zech-jerusalem-8-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:jerusalem"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Jerusalem",
+          "occurrence_ordinal": 2,
+          "prefix": " in Jerusalem. Then ",
+          "suffix": " will be called the "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-jerusalem-8-4",
         "verse_key": "verse:Zech.8.4",
         "attestation_key": "attestation:wb-zech-jerusalem-8-4",
@@ -2942,6 +3320,24 @@
           "occurrence_ordinal": 1,
           "prefix": "g them will be like ",
           "suffix": ", and the house of D"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-p-david-1-12-8-o2",
+        "verse_key": "verse:Zech.12.8",
+        "attestation_key": "attestation:wb-zech-p-david-1-12-8",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-david-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "David",
+          "occurrence_ordinal": 2,
+          "prefix": "d, and the house of ",
+          "suffix": " will be like God, l"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -3230,6 +3626,24 @@
           "occurrence_ordinal": 1,
           "prefix": "nd the LORD said to ",
           "suffix": ": “The LORD rebukes "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-p-satan-1-3-2-o2",
+        "verse_key": "verse:Zech.3.2",
+        "attestation_key": "attestation:wb-zech-p-satan-1-3-2",
+        "target": {
+          "type": "entity",
+          "key": "entity:p-satan-1"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Satan",
+          "occurrence_ordinal": 2,
+          "prefix": "e LORD rebukes you, ",
+          "suffix": "! Indeed, the LORD, "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -3577,6 +3991,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-pl-ashkelon-ac87d4c-9-5-o2",
+        "verse_key": "verse:Zech.9.5",
+        "attestation_key": "attestation:wb-zech-pl-ashkelon-ac87d4c-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-ashkelon-ac87d4c"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Ashkelon",
+          "occurrence_ordinal": 2,
+          "prefix": "a king in Gaza, and ",
+          "suffix": " will be uninhabited"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-pl-assyria-a3d1321-10-10",
         "verse_key": "verse:Zech.10.10",
         "attestation_key": "attestation:wb-zech-pl-assyria-a3d1321-10-10",
@@ -3847,6 +4279,24 @@
         "review_status": "draft"
       },
       {
+        "mention_key": "mention:wb:zech-pl-gaza-aa8edd2-9-5-o2",
+        "verse_key": "verse:Zech.9.5",
+        "attestation_key": "attestation:wb-zech-pl-gaza-aa8edd2-9-5",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-gaza-aa8edd2"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Gaza",
+          "occurrence_ordinal": 2,
+          "prefix": "ase to be a king in ",
+          "suffix": ", and Ashkelon will "
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
         "mention_key": "mention:wb:zech-pl-greece-a4492a0-9-13",
         "verse_key": "verse:Zech.9.13",
         "attestation_key": "attestation:wb-zech-pl-greece-a4492a0-9-13",
@@ -3986,6 +4436,24 @@
           "occurrence_ordinal": 1,
           "prefix": "t will stand on the ",
           "suffix": ", east of Jerusalem,"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:zech-pl-mount-of-olives-ac2c4c5-14-4-o2",
+        "verse_key": "verse:Zech.14.4",
+        "attestation_key": "attestation:wb-zech-pl-mount-of-olives-ac2c4c5-14-4",
+        "target": {
+          "type": "entity",
+          "key": "entity:pl-mount-of-olives-ac2c4c5"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Mount of Olives",
+          "occurrence_ordinal": 2,
+          "prefix": " Jerusalem, and the ",
+          "suffix": " will be split in tw"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -4460,7 +4928,9 @@
             "verse:Zech.1.3"
           ],
           "record_keys": [
-            "mention:wb:zech-god-1-3"
+            "mention:wb:zech-god-1-3",
+            "mention:wb:zech-god-1-3-o2",
+            "mention:wb:zech-god-1-3-o3"
           ],
           "blocker_question_keys": []
         },
@@ -4559,7 +5029,8 @@
           ],
           "record_keys": [
             "mention:wb:zech-god-1-16",
-            "mention:wb:zech-jerusalem-1-16"
+            "mention:wb:zech-jerusalem-1-16",
+            "mention:wb:zech-jerusalem-1-16-o2"
           ],
           "blocker_question_keys": []
         },
@@ -4631,7 +5102,8 @@
             "verse:Zech.2.6"
           ],
           "record_keys": [
-            "mention:wb:zech-god-2-6"
+            "mention:wb:zech-god-2-6",
+            "mention:wb:zech-god-2-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -4726,8 +5198,11 @@
           ],
           "record_keys": [
             "mention:wb:zech-god-3-2",
+            "mention:wb:zech-god-3-2-o2",
+            "mention:wb:zech-god-3-2-o3",
             "mention:wb:zech-jerusalem-3-2",
-            "mention:wb:zech-p-satan-1-3-2"
+            "mention:wb:zech-p-satan-1-3-2",
+            "mention:wb:zech-p-satan-1-3-2-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5031,7 +5506,8 @@
             "verse:Zech.7.12"
           ],
           "record_keys": [
-            "mention:wb:zech-god-7-12"
+            "mention:wb:zech-god-7-12",
+            "mention:wb:zech-god-7-12-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5074,6 +5550,7 @@
           "record_keys": [
             "mention:wb:zech-god-8-3",
             "mention:wb:zech-jerusalem-8-3",
+            "mention:wb:zech-jerusalem-8-3-o2",
             "mention:wb:zech-pl-zion-af20c46-8-3"
           ],
           "blocker_question_keys": []
@@ -5095,7 +5572,8 @@
             "verse:Zech.8.6"
           ],
           "record_keys": [
-            "mention:wb:zech-god-8-6"
+            "mention:wb:zech-god-8-6",
+            "mention:wb:zech-god-8-6-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5126,7 +5604,8 @@
             "verse:Zech.8.9"
           ],
           "record_keys": [
-            "mention:wb:zech-god-8-9"
+            "mention:wb:zech-god-8-9",
+            "mention:wb:zech-god-8-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5157,7 +5636,8 @@
             "verse:Zech.8.14"
           ],
           "record_keys": [
-            "mention:wb:zech-god-8-14"
+            "mention:wb:zech-god-8-14",
+            "mention:wb:zech-god-8-14-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5251,6 +5731,7 @@
           ],
           "record_keys": [
             "mention:wb:zech-god-9-1",
+            "mention:wb:zech-god-9-1-o2",
             "mention:wb:zech-pl-damascus-a69c1d4-9-1",
             "mention:wb:zech-pl-hadrach-a3e8d63-9-1"
           ],
@@ -5284,8 +5765,10 @@
           ],
           "record_keys": [
             "mention:wb:zech-pl-ashkelon-ac87d4c-9-5",
+            "mention:wb:zech-pl-ashkelon-ac87d4c-9-5-o2",
             "mention:wb:zech-pl-ekron-a3fc47a-9-5",
-            "mention:wb:zech-pl-gaza-aa8edd2-9-5"
+            "mention:wb:zech-pl-gaza-aa8edd2-9-5",
+            "mention:wb:zech-pl-gaza-aa8edd2-9-5-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5379,7 +5862,8 @@
             "verse:Zech.10.1"
           ],
           "record_keys": [
-            "mention:wb:zech-god-10-1"
+            "mention:wb:zech-god-10-1",
+            "mention:wb:zech-god-10-1-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5456,7 +5940,8 @@
             "verse:Zech.10.12"
           ],
           "record_keys": [
-            "mention:wb:zech-god-10-12"
+            "mention:wb:zech-god-10-12",
+            "mention:wb:zech-god-10-12-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5536,7 +6021,8 @@
             "verse:Zech.11.13"
           ],
           "record_keys": [
-            "mention:wb:zech-god-11-13"
+            "mention:wb:zech-god-11-13",
+            "mention:wb:zech-god-11-13-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5556,7 +6042,8 @@
             "verse:Zech.12.1"
           ],
           "record_keys": [
-            "mention:wb:zech-god-12-1"
+            "mention:wb:zech-god-12-1",
+            "mention:wb:zech-god-12-1-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5566,7 +6053,8 @@
             "verse:Zech.12.2"
           ],
           "record_keys": [
-            "mention:wb:zech-jerusalem-12-2"
+            "mention:wb:zech-jerusalem-12-2",
+            "mention:wb:zech-jerusalem-12-2-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5632,6 +6120,7 @@
             "mention:wb:zech-god-12-8",
             "mention:wb:zech-jerusalem-12-8",
             "mention:wb:zech-p-david-1-12-8",
+            "mention:wb:zech-p-david-1-12-8-o2",
             "mention:wb:zech-p-the-angel-of-the-lord-1-12-8"
           ],
           "blocker_question_keys": []
@@ -5788,7 +6277,8 @@
           ],
           "record_keys": [
             "mention:wb:zech-jerusalem-14-4",
-            "mention:wb:zech-pl-mount-of-olives-ac2c4c5-14-4"
+            "mention:wb:zech-pl-mount-of-olives-ac2c4c5-14-4",
+            "mention:wb:zech-pl-mount-of-olives-ac2c4c5-14-4-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5830,7 +6320,8 @@
             "verse:Zech.14.9"
           ],
           "record_keys": [
-            "mention:wb:zech-god-14-9"
+            "mention:wb:zech-god-14-9",
+            "mention:wb:zech-god-14-9-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5841,6 +6332,7 @@
           ],
           "record_keys": [
             "mention:wb:zech-jerusalem-14-10",
+            "mention:wb:zech-jerusalem-14-10-o2",
             "mention:wb:zech-pl-benjamin-gate-ae04aa8-14-10",
             "mention:wb:zech-pl-corner-gate-a68aa8f-14-10",
             "mention:wb:zech-pl-tower-of-hananel-af58391-14-10"
@@ -5937,7 +6429,8 @@
             "verse:Zech.14.20"
           ],
           "record_keys": [
-            "mention:wb:zech-god-14-20"
+            "mention:wb:zech-god-14-20",
+            "mention:wb:zech-god-14-20-o2"
           ],
           "blocker_question_keys": []
         },
@@ -5948,6 +6441,7 @@
           ],
           "record_keys": [
             "mention:wb:zech-god-14-21",
+            "mention:wb:zech-god-14-21-o2",
             "mention:wb:zech-jerusalem-14-21"
           ],
           "blocker_question_keys": []
@@ -5965,5 +6459,6 @@
       "code": "machine-generated-draft",
       "note": "Generated by tools/curate_whole_bible.py from BSB structure plus CC BY 4.0 name/reference datasets."
     }
-  ]
+  ],
+  "content_digest": "sha256:409221d3e499422634539b64dfaec1fa324d35e5536e56f259a352ec3e05c0c0"
 }
