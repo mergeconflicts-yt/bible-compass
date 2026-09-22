@@ -1,0 +1,69 @@
+{
+  "attempt_id": "task:CUR-WB-EN-finalize:attempt-1",
+  "task_id": "CUR-WB-EN-FINALIZE",
+  "task_title": "Finalize the English canonical/locale/edition blueprint and prove the whole-English importer",
+  "result": "PASS — canonical identities are translation-neutral, canon-scoped definitions are consolidated to one payload per key, reconciliation references the global registry with creation provenance moved to the registry, canon validation covers every English record class, and the idempotent whole-English importer proves one entity row per canonical entity with separate attestations/localization/mentions and correct replay semantics.",
+  "user_visible_outcome": "The English structure is a stable blueprint: a future language or translation can be added as new locale/edition packages over the same translation-neutral canonical packages and the same global registry. The whole-English draft imports into the private staging database with one row per canonical entity (Jerusalem included) and separate tables for book attestations, English descriptions and BSB mentions.",
+  "scope": {
+    "in_scope": "English (BSB) canonical/locale/edition structure, global registry, canon validation, whole-English importer and its database test.",
+    "out_of_scope": "content/curated/tel/** (treated as non-authoritative and untouched), content publication, and the mobile UI (unchanged)."
+  },
+  "structure": {
+    "translation_neutral_canonical": "canonical package identities are draft:wb-<book>-canonical with null language_tag and translation_edition_key; no BSB string. Edition packages are draft:wb-bsb-<book>-edition and carry edition:bsb@20260912. Locale packages are draft:wb-en-<book>-locale with language_tag en and no edition.",
+    "consolidated_definitions": "entity candidates, place definitions and entity profiles are emitted exactly once, in the entity's home book (Nehemiah for locked Neh2 identities). Other books carry registry-backed reconciliation references only. Cross-book multi-payload count is now 0 for every record class.",
+    "reconciliation": "reconciliation records reference the existing global registry (canonical_entity_key, resolution_status resolved_existing); candidate_key is optional and retained only for the locked Neh2 candidate-resolution records.",
+    "registry_provenance": "creation provenance moved to content/curated/registry/entities.json: every entry carries provenance, created_from (home canonical package) and source, plus a registry-level provenance_policy.",
+    "contract": "packages/content-schema pkgReconciliationSchema.candidate_key is now optional and validateCanonicalPackage resolves entities from a registry-backed reconciliation set; backward compatible (Neh2 and all existing tests pass)."
+  },
+  "validation": {
+    "tools/validate_canon.py": "PASS — extended to every English record class (candidates, claims, citations, attestations, relationships, events, places, relevance, mentions, profiles, contexts, localizations) with key-grammar checks, identity-neutrality checks, registry-reference checks, coverage-partition checks and the identity/locked-Neh2 check.",
+    "counts": {
+      "books": 66,
+      "chapters": 1189,
+      "verses": 31086,
+      "registry_entities": 4295,
+      "canonical_attestations": 26018,
+      "edition_mentions": 20685,
+      "relationships": 5159,
+      "events": 2336,
+      "places": 1290,
+      "profiles": 4284,
+      "cross_book_collisions": 0,
+      "conflicting_profiles": 0,
+      "locked_identity_splits": 0
+    },
+    "importer": {
+      "tool": "tools/import-english-canon.py (--check / --emit-sql / --database-url)",
+      "proof": "entities 6631 rows = 6631 distinct keys (4295 registry + 2336 event entities); entity:jerusalem exactly 1 row; 26104 attestations, 4284 English descriptions and 20685 BSB mentions in separate tables; 31086 BSB verses across 1189 chapters and 66 works.",
+      "replay": "identical replay prints 'no-op' and changes no counts; conflicting replay exits 3 before any write.",
+      "transactional": "all writes run in one psql -1 transaction; the conflicting-replay check runs before any statement."
+    },
+    "database_test": "supabase/tests/11_english_canon_import_test.sql — one entity row per key, Jerusalem singleton, structural separation, attestation/mention resolution, whole-canon coverage, draft-only, anon denied. Gate: tools/verify-english-canon.sh (npm run verify:english-canon).",
+    "contract_tests": "packages/content-schema: 8 suites, 254 tests passed.",
+    "repo": "root typecheck exit 0; content-schema lint exit 0; prettier back to the 3 known pre-existing warnings; verify:preview up to date; import-neh2 --check passes."
+  },
+  "files_changed": [
+    "packages/content-schema/src/packages.ts (reconciliation candidate_key optional; registry-backed normalization)",
+    "packages/content-schema/src/validators.ts (registry-backed reconciliation resolution)",
+    "tools/curate_canon_queue.py (translation-neutral identities; consolidated definitions; registry-backed reconciliation; registry provenance)",
+    "tools/validate_canon.py (all English record classes, identity neutrality, registry references, coverage partitions)",
+    "tools/import-english-canon.py (new: idempotent whole-English importer)",
+    "tools/verify-english-canon.sh (new gate) + package.json verify:english-canon",
+    "supabase/tests/11_english_canon_import_test.sql (new)",
+    "content/curated/registry/entities.json (provenance + unified identities)",
+    "content/curated/canonical|edition|locale/*.v2.json (66 books regenerated)",
+    "content/curation/queue/bsb/**, content/curation/reconciliation/**, content/curation/canon-coverage.json"
+  ],
+  "database_changes": {
+    "migrations": "none — the importer reuses private_staging (canons, scripture_works, reference_systems/units, scripture_scopes, translation_works/editions/verses, entities, entity_names, entity_descriptions, claims, claim_citations, reference_entity_attestations, edition_mentions, scope_entity_relevance, entity_relationship_assertions, events/participants/places/accounts, place_geometries, context_artifacts/revisions/sections, curation_imports).",
+    "permissions": "unchanged — private_staging stays RLS-enabled with revoked anon/authenticated grants; the test asserts anon sees zero rows.",
+    "publication": "none — drafts only."
+  },
+  "known_limitations": [
+    "Objects, roles, practices, terms, themes, chronology and meaningful historical context remain uncurated and are marked not_attempted; no filler was added.",
+    "The whole-English importer imports the current draft classes; claims/citations/events/relationships are populated from the locked Nehemiah 2 content and the structural projections, not from new curation.",
+    "supabase/tests/08 (Neh2) asserts exact Neh2-only counts and assumes a database where only the Neh2 import ran; the English canon gate is separate (tools/verify-english-canon.sh).",
+    "Nothing is reviewed, approved or published; content/curated/tel/** is untouched and non-authoritative."
+  ],
+  "stop_condition": "Stopped after the English structure and the idempotent importer passed full-canon validation (tools/validate_canon.py PASS, contract tests 254/254, tools/verify-english-canon.sh ENGLISH-CANON-TESTS-PASS). Telugu was not curated, no content was published, and the mobile UI was not changed."
+}

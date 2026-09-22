@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-1pet-canonical",
+  "package_key": "draft:wb-1pet-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-1pet-canonical:attempt-1",
+  "submission_id": "submission:wb-1pet-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-1pet-canonical",
+  "produced_for_job_id": "job:wb-1pet-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -152,42 +152,15 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
       {
-        "candidate_key": "candidate:wb:p-noah-1",
-        "entity_type": "person",
-        "proposed_label": "Noah",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-abram-1",
-        "entity_type": "person",
-        "proposed_label": "Abram",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:p-sarai-1",
         "entity_type": "person",
         "proposed_label": "Sarai",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-simon-1",
-        "entity_type": "person",
-        "proposed_label": "Simon",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -206,15 +179,6 @@
         "candidate_key": "candidate:wb:p-silas-1",
         "entity_type": "person",
         "proposed_label": "Silas",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-asia-a197f19",
-        "entity_type": "place",
-        "proposed_label": "Asia",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -248,27 +212,9 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
-        "entity_type": "place",
-        "proposed_label": "Galatia",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-pontus-a83a43e",
         "entity_type": "place",
         "proposed_label": "Pontus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-zion-af20c46",
-        "entity_type": "place",
-        "proposed_label": "Zion",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -504,17 +450,6 @@
     ],
     "places": [
       {
-        "entity_key": "entity:pl-asia-a197f19",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-asia-a197f19",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-babylon-2-ae5ede9",
         "geographic_positions": [
           {
@@ -548,32 +483,10 @@
         "review_status": "draft"
       },
       {
-        "entity_key": "entity:pl-galatia-a0f440a",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-galatia-a0f440a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-pontus-a83a43e",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-pontus-a83a43e",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-zion-af20c46",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -702,79 +615,66 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-noah-1",
-        "canonical_entity_key": "entity:p-noah-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-abram-1",
         "canonical_entity_key": "entity:p-abram-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-sarai-1",
-        "canonical_entity_key": "entity:p-sarai-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-simon-1",
-        "canonical_entity_key": "entity:p-simon-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-john-5",
         "canonical_entity_key": "entity:p-john-5",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-silas-1",
+        "canonical_entity_key": "entity:p-noah-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-sarai-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:p-silas-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-asia-a197f19",
+        "canonical_entity_key": "entity:p-simon-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:pl-asia-a197f19",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-babylon-2-ae5ede9",
         "canonical_entity_key": "entity:pl-babylon-2-ae5ede9",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-bithynia-a5c0cb0",
         "canonical_entity_key": "entity:pl-bithynia-a5c0cb0",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-cappadocia-a33fbde",
         "canonical_entity_key": "entity:pl-cappadocia-a33fbde",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
         "canonical_entity_key": "entity:pl-galatia-a0f440a",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-pontus-a83a43e",
         "canonical_entity_key": "entity:pl-pontus-a83a43e",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
         "resolution_status": "resolved_existing",
         "review_status": "draft"

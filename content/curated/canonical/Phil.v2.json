@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-phil-canonical",
+  "package_key": "draft:wb-phil-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-phil-canonical:attempt-1",
+  "submission_id": "submission:wb-phil-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-phil-canonical",
+  "produced_for_job_id": "job:wb-phil-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -150,65 +150,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-jacob-1",
-        "entity_type": "person",
-        "proposed_label": "Jacob",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-benjamin-1",
-        "entity_type": "person",
-        "proposed_label": "Benjamin",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-saul-2",
-        "entity_type": "person",
-        "proposed_label": "Saul",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-timothy-1",
-        "entity_type": "person",
-        "proposed_label": "Timothy",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-caesar-2",
-        "entity_type": "person",
-        "proposed_label": "Caesar",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-epaphroditus-1",
-        "entity_type": "person",
-        "proposed_label": "Epaphroditus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:p-euodia-1",
         "entity_type": "person",
@@ -231,33 +177,6 @@
         "candidate_key": "candidate:wb:p-clement-1",
         "entity_type": "person",
         "proposed_label": "Clement",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
-        "entity_type": "place",
-        "proposed_label": "Macedonia",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-philippi-a49e1d0",
-        "entity_type": "place",
-        "proposed_label": "Philippi",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-thessalonica-afa9d8e",
-        "entity_type": "place",
-        "proposed_label": "Thessalonica",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -517,41 +436,7 @@
         "review_status": "draft"
       }
     ],
-    "places": [
-      {
-        "entity_key": "entity:pl-macedonia-a69e1b8",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-macedonia-a69e1b8",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-philippi-a49e1d0",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-philippi-a49e1d0",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-thessalonica-afa9d8e",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-thessalonica-afa9d8e",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      }
-    ],
+    "places": [],
     "relevance": [
       {
         "relevance_key": "relevance:wb-phil-3-p-jacob-1",
@@ -682,73 +567,61 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-jacob-1",
-        "canonical_entity_key": "entity:p-jacob-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-benjamin-1",
         "canonical_entity_key": "entity:p-benjamin-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-saul-2",
-        "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-timothy-1",
-        "canonical_entity_key": "entity:p-timothy-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-caesar-2",
         "canonical_entity_key": "entity:p-caesar-2",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-epaphroditus-1",
-        "canonical_entity_key": "entity:p-epaphroditus-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-euodia-1",
-        "canonical_entity_key": "entity:p-euodia-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-syntyche-1",
-        "canonical_entity_key": "entity:p-syntyche-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-clement-1",
         "canonical_entity_key": "entity:p-clement-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
+        "canonical_entity_key": "entity:p-epaphroditus-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-euodia-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-jacob-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-saul-2",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-syntyche-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-timothy-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:pl-macedonia-a69e1b8",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-philippi-a49e1d0",
         "canonical_entity_key": "entity:pl-philippi-a49e1d0",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-thessalonica-afa9d8e",
         "canonical_entity_key": "entity:pl-thessalonica-afa9d8e",
         "resolution_status": "resolved_existing",
         "review_status": "draft"

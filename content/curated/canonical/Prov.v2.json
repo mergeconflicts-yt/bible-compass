@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-prov-canonical",
+  "package_key": "draft:wb-prov-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-prov-canonical:attempt-1",
+  "submission_id": "submission:wb-prov-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-prov-canonical",
+  "produced_for_job_id": "job:wb-prov-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -1039,38 +1039,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-david-1",
-        "entity_type": "person",
-        "proposed_label": "David",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-solomon-1",
-        "entity_type": "person",
-        "proposed_label": "Solomon",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-hezekiah-1",
-        "entity_type": "person",
-        "proposed_label": "Hezekiah",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:p-agur-1",
         "entity_type": "person",
@@ -1111,15 +1084,6 @@
         "candidate_key": "candidate:wb:p-lemuel-1",
         "entity_type": "person",
         "proposed_label": "Lemuel",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-egypt-af301ca",
-        "entity_type": "place",
-        "proposed_label": "Egypt",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -1377,19 +1341,7 @@
         "review_status": "draft"
       }
     ],
-    "places": [
-      {
-        "entity_key": "entity:pl-egypt-af301ca",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-egypt-af301ca",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      }
-    ],
+    "places": [],
     "relevance": [
       {
         "relevance_key": "relevance:wb-prov-1-p-david-1",
@@ -1493,55 +1445,46 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-david-1",
-        "canonical_entity_key": "entity:p-david-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-solomon-1",
-        "canonical_entity_key": "entity:p-solomon-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-hezekiah-1",
-        "canonical_entity_key": "entity:p-hezekiah-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-agur-1",
         "canonical_entity_key": "entity:p-agur-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-jakeh-1",
-        "canonical_entity_key": "entity:p-jakeh-1",
+        "canonical_entity_key": "entity:p-david-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-ithiel-2",
+        "canonical_entity_key": "entity:p-hezekiah-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:p-ithiel-2",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-ucal-1",
-        "canonical_entity_key": "entity:p-ucal-1",
+        "canonical_entity_key": "entity:p-jakeh-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-lemuel-1",
         "canonical_entity_key": "entity:p-lemuel-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-egypt-af301ca",
+        "canonical_entity_key": "entity:p-solomon-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-ucal-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:pl-egypt-af301ca",
         "resolution_status": "resolved_existing",
         "review_status": "draft"

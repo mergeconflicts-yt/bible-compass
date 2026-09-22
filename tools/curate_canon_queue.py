@@ -520,6 +520,43 @@ def enrich_book_data(
             )
     crec["events"] = sorted(events, key=lambda e: e["event_key"])
 
+    # 4b. Canon-scoped definitions are consolidated to ONE authoritative
+    # payload per canonical key: the entity candidate and place definition are
+    # emitted only in the entity's home book. Every other book references the
+    # global registry through a registry-backed reconciliation record instead.
+    referenced: set[str] = set()
+    for a in crec["attestations"]:
+        referenced.add(a["entity_key"])
+    for r in crec["relationships"]:
+        referenced.add(r["subject_entity_key"])
+        referenced.add(r["object_entity_key"])
+    for e in crec["events"]:
+        referenced.update(e["participant_entity_keys"])
+        referenced.update(e["place_entity_keys"])
+    for r in crec["relevance"]:
+        referenced.add(r["entity_key"])
+    for p in crec["places"]:
+        referenced.add(p["entity_key"])
+    crec["reconciliation_records"] = [
+        {
+            "canonical_entity_key": key,
+            "resolution_status": "resolved_existing",
+            "review_status": "draft",
+        }
+        for key in sorted(referenced)
+    ]
+    if home_by_slug is not None:
+        crec["entity_candidates"] = [
+            c
+            for c in crec["entity_candidates"]
+            if home_by_slug.get(c["candidate_key"].split("candidate:wb:", 1)[-1], osis) == osis
+        ]
+        crec["places"] = [
+            p
+            for p in crec["places"]
+            if home_by_slug.get(p["entity_key"].split("entity:", 1)[1], osis) == osis
+        ]
+
     # 5. explicit, verse-level coverage for attestations and mentions.
     verse_to_attest: dict[str, list[str]] = {vk: [] for vk in all_verse_keys}
     for a in crec["attestations"]:
@@ -630,8 +667,16 @@ def enrich_book_data(
         ]
 
     # 8. package identity for the merged book package.
+    # Translation-neutral identities: the canonical package names neither a
+    # language nor an edition; the edition package carries the BSB edition;
+    # the locale package names the language only.
+    stems = {
+        "canonical": f"wb-{osis.lower()}-canonical",
+        "edition": f"wb-{TRANSLATION}-{osis.lower()}-edition",
+        "locale": f"wb-{LANG}-{osis.lower()}-locale",
+    }
     for pkg, layer in ((canonical, "canonical"), (edition, "edition"), (locale, "locale")):
-        stem = f"wb-{TRANSLATION}-{osis.lower()}-{layer}"
+        stem = stems[layer]
         pkg["package_key"] = f"draft:{stem}"
         pkg["submission_id"] = f"submission:{stem}:attempt-1"
         pkg["produced_for_job_id"] = f"job:{stem}"
@@ -870,12 +915,11 @@ def validate_book_packages(data: dict, book: dict) -> list[str]:
     partition("edition", edition["coverage"][0]["groups"])
 
     crec, lrec = canonical["records"], locale["records"]
-    reconciled = {
-        r["candidate_key"]: r["canonical_entity_key"]
+    entity_keys = {
+        r["canonical_entity_key"]
         for r in crec.get("reconciliation_records", [])
         if r.get("canonical_entity_key")
     }
-    entity_keys = set(reconciled.values())
     attestation_keys = {a["attestation_key"] for a in crec["attestations"]}
     relevance_keys = {r["relevance_key"] for r in crec["relevance"]}
 
@@ -947,8 +991,18 @@ def reconcile_book(books_by_osis: dict, osis: str, data: dict, registry_by_slug:
             reused.append(rec["canonical_entity_key"])
         elif rec["resolution_status"] == "created_new_canonical":
             created.append(rec["canonical_entity_key"])
-        else:
+        elif rec.get("candidate_key"):
             unresolved.append(rec["candidate_key"])
+    resolved_entity_keys = {
+        rec["canonical_entity_key"]
+        for rec in crec.get("reconciliation_records", [])
+        if rec.get("canonical_entity_key")
+    }
+    unresolved.extend(
+        c["candidate_key"]
+        for c in crec["entity_candidates"]
+        if f"entity:{c['candidate_key'].split('candidate:wb:', 1)[-1]}" not in resolved_entity_keys
+    )
 
     labels: dict[str, list[str]] = collections.defaultdict(list)
     for c in crec["entity_candidates"]:
@@ -1213,23 +1267,40 @@ def main() -> int:
         for c, v, _ in cwb.book_verse_index(b)
     }
     registry = cwb.build_registry(persons, places, valid_refs)
+    registry_by_slug = {e["slug"]: e for e in registry["entities"]}
+    registry_keys = {f"entity:{slug}" for slug in registry_by_slug}
+
+    # Home book: where the single authoritative entity/place/profile payload is
+    # emitted. Locked Nehemiah 2 identities are homed in Nehemiah.
+    home_by_slug: dict[str, str | None] = {}
+    for slug, entry in registry_by_slug.items():
+        first = entry.get("first_reference") or ""
+        home_by_slug[slug] = first.split(".")[0] if first else None
+    locked_entity_map = locked_neh2.locked_entities(locked)
+    for locked_key in locked_entity_map:
+        home_by_slug[locked_key.split("entity:", 1)[1]] = "Neh"
+
+    # Creation provenance lives in the registry, not in per-book reconciliation.
+    for entry in registry["entities"]:
+        home = home_by_slug.get(entry["slug"])
+        entry["provenance"] = "draft canonical identity; reused from the global registry"
+        entry["created_from"] = f"draft:wb-{home.lower()}-canonical" if home else None
+        entry["source"] = cwb.SOURCE_ATTRIBUTION
+    registry["provenance_policy"] = (
+        "Canon-scoped entity identity is defined once here; book packages carry "
+        "attestations and registry-backed reconciliation references only."
+    )
+
     registry_path = CURATED / "registry" / "entities.json"
     registry_text = json.dumps(registry, indent=2, ensure_ascii=False) + "\n"
     if not args.validate_only:
         registry_path.parent.mkdir(parents=True, exist_ok=True)
         registry_path.write_text(registry_text, encoding="utf-8")
     registry_digest = "sha256:" + hashlib.sha256(registry_text.encode("utf-8")).hexdigest()
-    registry_by_slug = {e["slug"]: e for e in registry["entities"]}
-    registry_keys = {f"entity:{slug}" for slug in registry_by_slug}
-    home_by_slug = {}
-    for slug, entry in registry_by_slug.items():
-        first = entry.get("first_reference") or ""
-        home_by_slug[slug] = first.split(".")[0] if first else None
+
     bridged_candidates = {}
     for c in locked["canonical"]["records"]["entity_candidates"]:
         bridged_candidates[c["candidate_key"].split(":")[-1]] = c
-    for locked_key in locked_neh2.locked_entities(locked):
-        home_by_slug[locked_key.split("entity:", 1)[1]] = "Neh"
 
     uncertain = uncertain_person_slugs()
     knowledge_digest = cwb.sha256_file(KNOWLEDGE)

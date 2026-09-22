@@ -327,7 +327,9 @@ def merge_neh(data: dict, locked: dict, verse_text: dict) -> dict:
         crec["entity_candidates"], locked_candidates, lambda r: r["candidate_key"]
     )
     crec["reconciliation_records"] = dedupe(
-        crec.get("reconciliation_records", []), locked_recon, lambda r: r["candidate_key"]
+        crec.get("reconciliation_records", []),
+        locked_recon,
+        lambda r: r.get("canonical_entity_key") or r.get("candidate_key"),
     )
     crec["claims"] = dedupe(crec["claims"], lc["records"]["claims"], lambda r: r["claim_key"])
     crec["citations"] = dedupe(

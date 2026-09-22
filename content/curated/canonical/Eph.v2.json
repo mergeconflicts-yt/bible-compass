@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-eph-canonical",
+  "package_key": "draft:wb-eph-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-eph-canonical:attempt-1",
+  "submission_id": "submission:wb-eph-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-eph-canonical",
+  "produced_for_job_id": "job:wb-eph-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -205,48 +205,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
-    "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-satan-1",
-        "entity_type": "person",
-        "proposed_label": "Satan",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-saul-2",
-        "entity_type": "person",
-        "proposed_label": "Saul",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-tychicus-1",
-        "entity_type": "person",
-        "proposed_label": "Tychicus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
-        "entity_type": "place",
-        "proposed_label": "Ephesus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      }
-    ],
+    "entity_candidates": [],
     "claims": [],
     "citations": [],
     "attestations": [
@@ -396,19 +359,7 @@
         "review_status": "draft"
       }
     ],
-    "places": [
-      {
-        "entity_key": "entity:pl-ephesus-a5feb15",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-ephesus-a5feb15",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      }
-    ],
+    "places": [],
     "relevance": [
       {
         "relevance_key": "relevance:wb-eph-4-p-satan-1",
@@ -467,25 +418,21 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-satan-1",
         "canonical_entity_key": "entity:p-satan-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-saul-2",
         "canonical_entity_key": "entity:p-saul-2",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-tychicus-1",
         "canonical_entity_key": "entity:p-tychicus-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
         "canonical_entity_key": "entity:pl-ephesus-a5feb15",
         "resolution_status": "resolved_existing",
         "review_status": "draft"

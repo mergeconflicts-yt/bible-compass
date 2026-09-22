@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-1cor-canonical",
+  "package_key": "draft:wb-1cor-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-1cor-canonical:attempt-1",
+  "submission_id": "submission:wb-1cor-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-1cor-canonical",
+  "produced_for_job_id": "job:wb-1cor-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -525,38 +525,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-adam-1",
-        "entity_type": "person",
-        "proposed_label": "Adam",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-moses-1",
-        "entity_type": "person",
-        "proposed_label": "Moses",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-satan-1",
-        "entity_type": "person",
-        "proposed_label": "Satan",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:p-simon-1",
         "entity_type": "person",
@@ -732,15 +705,6 @@
         "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
         "entity_type": "place",
         "proposed_label": "Macedonia",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:jerusalem",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -1616,17 +1580,6 @@
           }
         ],
         "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:jerusalem",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
       }
     ],
     "relevance": [
@@ -1966,146 +1919,122 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-adam-1",
-        "canonical_entity_key": "entity:p-adam-1",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-moses-1",
-        "canonical_entity_key": "entity:p-moses-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-satan-1",
-        "canonical_entity_key": "entity:p-satan-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-simon-1",
-        "canonical_entity_key": "entity:p-simon-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-james-1",
-        "canonical_entity_key": "entity:p-james-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-joseph-12",
-        "canonical_entity_key": "entity:p-joseph-12",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-saul-2",
-        "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-timothy-1",
-        "canonical_entity_key": "entity:p-timothy-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-aquila-1",
-        "canonical_entity_key": "entity:p-aquila-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-priscilla-1",
-        "canonical_entity_key": "entity:p-priscilla-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-crispus-1",
-        "canonical_entity_key": "entity:p-crispus-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-apollos-1",
-        "canonical_entity_key": "entity:p-apollos-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-gaius-1",
-        "canonical_entity_key": "entity:p-gaius-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-chloe-1",
-        "canonical_entity_key": "entity:p-chloe-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-stephanas-1",
-        "canonical_entity_key": "entity:p-stephanas-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-forunatus-1",
-        "canonical_entity_key": "entity:p-forunatus-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-achaicus-1",
         "canonical_entity_key": "entity:p-achaicus-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-achaia-aef4242",
+        "canonical_entity_key": "entity:p-adam-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-apollos-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-aquila-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-chloe-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-crispus-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-forunatus-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-gaius-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-james-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-joseph-12",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-moses-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-priscilla-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-satan-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-saul-2",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-simon-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-stephanas-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-timothy-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:pl-achaia-aef4242",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-asia-a197f19",
         "canonical_entity_key": "entity:pl-asia-a197f19",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-corinth-a6f437a",
         "canonical_entity_key": "entity:pl-corinth-a6f437a",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-ephesus-a5feb15",
         "canonical_entity_key": "entity:pl-ephesus-a5feb15",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-galatia-a0f440a",
         "canonical_entity_key": "entity:pl-galatia-a0f440a",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-macedonia-a69e1b8",
         "canonical_entity_key": "entity:pl-macedonia-a69e1b8",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:jerusalem",
-        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }

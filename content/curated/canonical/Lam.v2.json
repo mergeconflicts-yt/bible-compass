@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-lam-canonical",
+  "package_key": "draft:wb-lam-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-lam-canonical:attempt-1",
+  "submission_id": "submission:wb-lam-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-lam-canonical",
+  "produced_for_job_id": "job:wb-lam-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -193,93 +193,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
-    "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-jacob-1",
-        "entity_type": "person",
-        "proposed_label": "Jacob",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-assyria-a3d1321",
-        "entity_type": "place",
-        "proposed_label": "Assyria",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-edom-a2735ff",
-        "entity_type": "place",
-        "proposed_label": "Edom",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-egypt-af301ca",
-        "entity_type": "place",
-        "proposed_label": "Egypt",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-mount-zion-abd9596",
-        "entity_type": "place",
-        "proposed_label": "Mount Zion",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-sodom-a0aa664",
-        "entity_type": "place",
-        "proposed_label": "Sodom",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-uz-a324c4d",
-        "entity_type": "place",
-        "proposed_label": "Uz",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-zion-af20c46",
-        "entity_type": "place",
-        "proposed_label": "Zion",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:jerusalem",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      }
-    ],
+    "entity_candidates": [],
     "claims": [],
     "citations": [],
     "attestations": [
@@ -780,96 +698,7 @@
         "review_status": "draft"
       }
     ],
-    "places": [
-      {
-        "entity_key": "entity:pl-assyria-a3d1321",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-assyria-a3d1321",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-edom-a2735ff",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-edom-a2735ff",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-egypt-af301ca",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-egypt-af301ca",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-mount-zion-abd9596",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-mount-zion-abd9596",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-sodom-a0aa664",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-sodom-a0aa664",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-uz-a324c4d",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-uz-a324c4d",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-zion-af20c46",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-zion-af20c46",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:jerusalem",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      }
-    ],
+    "places": [],
     "relevance": [
       {
         "relevance_key": "relevance:wb-lam-1-p-jacob-1",
@@ -1018,56 +847,47 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-jacob-1",
+        "canonical_entity_key": "entity:jerusalem",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:p-jacob-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-assyria-a3d1321",
         "canonical_entity_key": "entity:pl-assyria-a3d1321",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-edom-a2735ff",
         "canonical_entity_key": "entity:pl-edom-a2735ff",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-egypt-af301ca",
         "canonical_entity_key": "entity:pl-egypt-af301ca",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-mount-zion-abd9596",
         "canonical_entity_key": "entity:pl-mount-zion-abd9596",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-sodom-a0aa664",
         "canonical_entity_key": "entity:pl-sodom-a0aa664",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-uz-a324c4d",
         "canonical_entity_key": "entity:pl-uz-a324c4d",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-zion-af20c46",
         "canonical_entity_key": "entity:pl-zion-af20c46",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:jerusalem",
-        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }

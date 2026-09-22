@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-titus-canonical",
+  "package_key": "draft:wb-titus-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-titus-canonical:attempt-1",
+  "submission_id": "submission:wb-titus-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-titus-canonical",
+  "produced_for_job_id": "job:wb-titus-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -84,47 +84,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-saul-2",
-        "entity_type": "person",
-        "proposed_label": "Saul",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-apollos-1",
-        "entity_type": "person",
-        "proposed_label": "Apollos",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-tychicus-1",
-        "entity_type": "person",
-        "proposed_label": "Tychicus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-titus-1",
-        "entity_type": "person",
-        "proposed_label": "Titus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:p-artemas-1",
         "entity_type": "person",
@@ -138,15 +102,6 @@
         "candidate_key": "candidate:wb:p-zenas-1",
         "entity_type": "person",
         "proposed_label": "Zenas",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-crete-a26aa94",
-        "entity_type": "place",
-        "proposed_label": "Crete",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -331,17 +286,6 @@
     ],
     "places": [
       {
-        "entity_key": "entity:pl-crete-a26aa94",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-crete-a26aa94",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-nicopolis-af43cde",
         "geographic_positions": [
           {
@@ -429,49 +373,41 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-saul-2",
-        "canonical_entity_key": "entity:p-saul-2",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-apollos-1",
         "canonical_entity_key": "entity:p-apollos-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-tychicus-1",
-        "canonical_entity_key": "entity:p-tychicus-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-titus-1",
-        "canonical_entity_key": "entity:p-titus-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-artemas-1",
         "canonical_entity_key": "entity:p-artemas-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-zenas-1",
+        "canonical_entity_key": "entity:p-saul-2",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-titus-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-tychicus-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:p-zenas-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-crete-a26aa94",
         "canonical_entity_key": "entity:pl-crete-a26aa94",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-nicopolis-af43cde",
         "canonical_entity_key": "entity:pl-nicopolis-af43cde",
         "resolution_status": "resolved_existing",
         "review_status": "draft"

@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-hab-canonical",
+  "package_key": "draft:wb-hab-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-hab-canonical:attempt-1",
+  "submission_id": "submission:wb-hab-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-hab-canonical",
+  "produced_for_job_id": "job:wb-hab-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -93,7 +93,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
@@ -108,54 +108,9 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
-        "entity_type": "place",
-        "proposed_label": "Chaldea",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-cushan-a567e0e",
         "entity_type": "place",
         "proposed_label": "Cushan",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-lebanon-a730058",
-        "entity_type": "place",
-        "proposed_label": "Lebanon",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-midian-acc6d8e",
-        "entity_type": "place",
-        "proposed_label": "Midian",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-mount-paran-af693b8",
-        "entity_type": "place",
-        "proposed_label": "Mount Paran",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-teman-a831506",
-        "entity_type": "place",
-        "proposed_label": "Teman",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -320,65 +275,10 @@
     ],
     "places": [
       {
-        "entity_key": "entity:pl-chaldea-a32a4f8",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-chaldea-a32a4f8",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-cushan-a567e0e",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-cushan-a567e0e",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-lebanon-a730058",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-lebanon-a730058",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-midian-acc6d8e",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-midian-acc6d8e",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-mount-paran-af693b8",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-mount-paran-af693b8",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-teman-a831506",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-teman-a831506",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -462,43 +362,36 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-habakkuk-1",
         "canonical_entity_key": "entity:p-habakkuk-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-chaldea-a32a4f8",
         "canonical_entity_key": "entity:pl-chaldea-a32a4f8",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-cushan-a567e0e",
         "canonical_entity_key": "entity:pl-cushan-a567e0e",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-lebanon-a730058",
         "canonical_entity_key": "entity:pl-lebanon-a730058",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-midian-acc6d8e",
         "canonical_entity_key": "entity:pl-midian-acc6d8e",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-mount-paran-af693b8",
         "canonical_entity_key": "entity:pl-mount-paran-af693b8",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-teman-a831506",
         "canonical_entity_key": "entity:pl-teman-a831506",
         "resolution_status": "resolved_existing",
         "review_status": "draft"

@@ -332,9 +332,13 @@ export const pkgRelevanceSchema = z
   })
   .strict();
 
+// Reconciliation is normalized to the global registry: a record references an
+// existing canonical entity key directly. candidate_key is retained only for
+// candidate-resolution packages (e.g. the locked Nehemiah 2 dataset); a
+// registry-backed record may omit it.
 export const pkgReconciliationSchema = z
   .object({
-    candidate_key: candidateKeySchema,
+    candidate_key: candidateKeySchema.optional(),
     canonical_entity_key: entityKeySchema.optional(),
     resolution_status: resolutionStatusSchema,
     review_status: draftLiteral,

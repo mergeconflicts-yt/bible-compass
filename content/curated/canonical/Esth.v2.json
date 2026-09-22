@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-esth-canonical",
+  "package_key": "draft:wb-esth-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-esth-canonical:attempt-1",
+  "submission_id": "submission:wb-esth-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-esth-canonical",
+  "produced_for_job_id": "job:wb-esth-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -224,38 +224,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-nebuchadnezzar-1",
-        "entity_type": "person",
-        "proposed_label": "Nebuchadnezzar",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-jehoiachin-1",
-        "entity_type": "person",
-        "proposed_label": "Jehoiachin",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-ahasuerus-1",
-        "entity_type": "person",
-        "proposed_label": "Ahasuerus",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:p-vashti-1",
         "entity_type": "person",
@@ -608,63 +581,9 @@
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-babylon-1-a217d18",
-        "entity_type": "place",
-        "proposed_label": "Babylon 1",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-ethiopia-ab45bd3",
-        "entity_type": "place",
-        "proposed_label": "Ethiopia",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
         "candidate_key": "candidate:wb:pl-india-a878481",
         "entity_type": "place",
         "proposed_label": "India",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-media-ad2fadf",
-        "entity_type": "place",
-        "proposed_label": "Media",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:pl-persia-ab9696f",
-        "entity_type": "place",
-        "proposed_label": "Persia",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:susa",
-        "entity_type": "place",
-        "proposed_label": "Susa",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:jerusalem",
-        "entity_type": "place",
-        "proposed_label": "Jerusalem",
         "possible_existing_entity_keys": [],
         "identifying_claim_keys": [],
         "resolution_status": "unresolved",
@@ -4183,76 +4102,10 @@
     ],
     "places": [
       {
-        "entity_key": "entity:pl-babylon-1-a217d18",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-babylon-1-a217d18",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-ethiopia-ab45bd3",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-ethiopia-ab45bd3",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
         "entity_key": "entity:pl-india-a878481",
         "geographic_positions": [
           {
             "evidence_item_key": "evidence:openbible:pl-india-a878481",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-media-ad2fadf",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-media-ad2fadf",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:pl-persia-ab9696f",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-persia-ab9696f",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:susa",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-susa-a033b84",
-            "precision": "approximate",
-            "claim_keys": []
-          }
-        ],
-        "review_status": "draft"
-      },
-      {
-        "entity_key": "entity:jerusalem",
-        "geographic_positions": [
-          {
-            "evidence_item_key": "evidence:openbible:pl-jerusalem-a15257a",
             "precision": "approximate",
             "claim_keys": []
           }
@@ -5101,296 +4954,247 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-nebuchadnezzar-1",
-        "canonical_entity_key": "entity:p-nebuchadnezzar-1",
+        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-jehoiachin-1",
-        "canonical_entity_key": "entity:p-jehoiachin-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-ahasuerus-1",
-        "canonical_entity_key": "entity:p-ahasuerus-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-vashti-1",
-        "canonical_entity_key": "entity:p-vashti-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-mehuman-1",
-        "canonical_entity_key": "entity:p-mehuman-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-biztha-1",
-        "canonical_entity_key": "entity:p-biztha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-harbona-1",
-        "canonical_entity_key": "entity:p-harbona-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-bigtha-1",
-        "canonical_entity_key": "entity:p-bigtha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-abagtha-1",
         "canonical_entity_key": "entity:p-abagtha-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-zethar-1",
-        "canonical_entity_key": "entity:p-zethar-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-carkas-1",
-        "canonical_entity_key": "entity:p-carkas-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-carshena-1",
-        "canonical_entity_key": "entity:p-carshena-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-shethar-1",
-        "canonical_entity_key": "entity:p-shethar-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-admatha-1",
-        "canonical_entity_key": "entity:p-admatha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-tarshish-3",
-        "canonical_entity_key": "entity:p-tarshish-3",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-meres-1",
-        "canonical_entity_key": "entity:p-meres-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-marsena-1",
-        "canonical_entity_key": "entity:p-marsena-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-memucan-1",
-        "canonical_entity_key": "entity:p-memucan-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-hegai-1",
-        "canonical_entity_key": "entity:p-hegai-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-mordecai-2",
-        "canonical_entity_key": "entity:p-mordecai-2",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-jair-3",
-        "canonical_entity_key": "entity:p-jair-3",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-shimei-17",
-        "canonical_entity_key": "entity:p-shimei-17",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-kish-4",
-        "canonical_entity_key": "entity:p-kish-4",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-hadassah-1",
-        "canonical_entity_key": "entity:p-hadassah-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-shaashgaz-1",
-        "canonical_entity_key": "entity:p-shaashgaz-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-abihail-5",
         "canonical_entity_key": "entity:p-abihail-5",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-bigthan-1",
-        "canonical_entity_key": "entity:p-bigthan-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-teresh-1",
-        "canonical_entity_key": "entity:p-teresh-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-haman-1",
-        "canonical_entity_key": "entity:p-haman-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-hammedatha-1",
-        "canonical_entity_key": "entity:p-hammedatha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-hathach-1",
-        "canonical_entity_key": "entity:p-hathach-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-zeresh-1",
-        "canonical_entity_key": "entity:p-zeresh-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-parshandatha-1",
-        "canonical_entity_key": "entity:p-parshandatha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-dalphon-1",
-        "canonical_entity_key": "entity:p-dalphon-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-aspatha-1",
-        "canonical_entity_key": "entity:p-aspatha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-poratha-1",
-        "canonical_entity_key": "entity:p-poratha-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-adalia-1",
         "canonical_entity_key": "entity:p-adalia-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-aridatha-1",
-        "canonical_entity_key": "entity:p-aridatha-1",
+        "canonical_entity_key": "entity:p-admatha-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-parmashta-1",
-        "canonical_entity_key": "entity:p-parmashta-1",
+        "canonical_entity_key": "entity:p-ahasuerus-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-arisai-1",
-        "canonical_entity_key": "entity:p-arisai-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-aridai-1",
         "canonical_entity_key": "entity:p-aridai-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-vaizatha-1",
+        "canonical_entity_key": "entity:p-aridatha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-arisai-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-aspatha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-bigtha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-bigthan-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-biztha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-carkas-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-carshena-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-dalphon-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-hadassah-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-haman-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-hammedatha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-harbona-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-hathach-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-hegai-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-jair-3",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-jehoiachin-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-kish-4",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-marsena-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-mehuman-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-memucan-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-meres-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-mordecai-2",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-nebuchadnezzar-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-parmashta-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-parshandatha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-poratha-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-shaashgaz-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-shethar-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-shimei-17",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-tarshish-3",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-teresh-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:p-vaizatha-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-babylon-1-a217d18",
+        "canonical_entity_key": "entity:p-vashti-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-zeresh-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-zethar-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
         "canonical_entity_key": "entity:pl-babylon-1-a217d18",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-ethiopia-ab45bd3",
         "canonical_entity_key": "entity:pl-ethiopia-ab45bd3",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-india-a878481",
         "canonical_entity_key": "entity:pl-india-a878481",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-media-ad2fadf",
         "canonical_entity_key": "entity:pl-media-ad2fadf",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:pl-persia-ab9696f",
         "canonical_entity_key": "entity:pl-persia-ab9696f",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:susa",
         "canonical_entity_key": "entity:susa",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:jerusalem",
-        "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }

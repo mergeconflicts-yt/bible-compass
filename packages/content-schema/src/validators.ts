@@ -541,25 +541,29 @@ export function validateCanonicalPackage(
   );
 
   // Reconciliation map: the ONLY trusted promotion path (CUR-01 #8).
-  // Candidate labels are display text and are never consulted here.
-  const reconciled = new Map<string, string>();
+  // Candidate labels are display text and are never consulted here. A
+  // registry-backed record (no candidate_key) resolves an existing global
+  // registry identity directly.
+  const reconciled = new Set<string>();
   for (const rec of pkg.records.reconciliation_records ?? []) {
-    const known = pkg.records.entity_candidates.some(
-      (c) => c.candidate_key === rec.candidate_key,
-    );
-    if (!known) {
-      errors.push(`reconciliation for unknown candidate ${rec.candidate_key}`);
-      continue;
+    if (rec.candidate_key !== undefined) {
+      const known = pkg.records.entity_candidates.some(
+        (c) => c.candidate_key === rec.candidate_key,
+      );
+      if (!known) {
+        errors.push(
+          `reconciliation for unknown candidate ${rec.candidate_key}`,
+        );
+        continue;
+      }
     }
     if (rec.canonical_entity_key !== undefined)
-      reconciled.set(rec.candidate_key, rec.canonical_entity_key);
+      reconciled.add(rec.canonical_entity_key);
   }
   const approved = new Set(ctx.approvedEntityKeys ?? []);
   const resolveEntity = (pointer: string, key: string): void => {
     if (approved.has(key)) return;
-    for (const canonical of reconciled.values()) {
-      if (canonical === key) return;
-    }
+    if (reconciled.has(key)) return;
     errors.push(`${pointer} -> ${key} (unresolved entity)`);
   };
 

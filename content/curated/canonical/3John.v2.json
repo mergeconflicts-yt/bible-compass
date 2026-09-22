@@ -4,11 +4,11 @@
   "vocabulary_version": "1.0.0",
   "coverage_policy_version": "1.0.0",
   "data_classification": "synthetic_fixture",
-  "package_key": "draft:wb-bsb-3john-canonical",
+  "package_key": "draft:wb-3john-canonical",
   "package_revision": 1,
-  "submission_id": "submission:wb-bsb-3john-canonical:attempt-1",
+  "submission_id": "submission:wb-3john-canonical:attempt-1",
   "attempt": 1,
-  "produced_for_job_id": "job:wb-bsb-3john-canonical",
+  "produced_for_job_id": "job:wb-3john-canonical",
   "package_layer": "canonical",
   "package_family": "canonical-context-draft",
   "scope": {
@@ -46,29 +46,11 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:7831a9fb582c4cef342965ae2dfe7c0d9ad558f92e48bdd23b5e9a0d27ec9085"
+      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
     }
   ],
   "records": {
     "entity_candidates": [
-      {
-        "candidate_key": "candidate:wb:p-john-2",
-        "entity_type": "person",
-        "proposed_label": "John",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-gaius-1",
-        "entity_type": "person",
-        "proposed_label": "Gaius",
-        "possible_existing_entity_keys": [],
-        "identifying_claim_keys": [],
-        "resolution_status": "unresolved",
-        "review_status": "draft"
-      },
       {
         "candidate_key": "candidate:wb:p-diotrephes-1",
         "entity_type": "person",
@@ -210,26 +192,22 @@
     ],
     "reconciliation_records": [
       {
-        "candidate_key": "candidate:wb:p-john-2",
-        "canonical_entity_key": "entity:p-john-2",
+        "canonical_entity_key": "entity:p-demetrius-2",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-gaius-1",
-        "canonical_entity_key": "entity:p-gaius-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "candidate_key": "candidate:wb:p-diotrephes-1",
         "canonical_entity_key": "entity:p-diotrephes-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
       {
-        "candidate_key": "candidate:wb:p-demetrius-2",
-        "canonical_entity_key": "entity:p-demetrius-2",
+        "canonical_entity_key": "entity:p-gaius-1",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
+      {
+        "canonical_entity_key": "entity:p-john-2",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       }
