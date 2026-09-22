@@ -46,6 +46,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import curate_whole_bible as cwb  # noqa: E402
 import locked_neh2  # noqa: E402
+import canon_order  # noqa: E402
 
 REPO = cwb.REPO
 SCRIPTURE = cwb.SCRIPTURE
@@ -190,6 +191,159 @@ def uncertain_person_slugs() -> set[str]:
             if UNCERTAIN_PATTERN.search(blob):
                 slugs.add("p-" + cwb.slugify(pid))
     return slugs
+
+
+# ---------------------------------------------------------------------------
+# curated identity corrections and source enrichment
+# ---------------------------------------------------------------------------
+
+# BibleData names the apostle Paul "Saul" and the apostle Peter "Simon"; the
+# canonical preferred names are the names the church knows them by.
+PREFERRED_NAME_OVERRIDES: dict[str, str] = {
+    "p-saul-2": "Paul",
+    "p-simon-1": "Peter",
+}
+
+# OpenBible identification ids (a15257a, m66c5b8, ...) are internal source
+# identifiers, not names. They must never become searchable entity_names.
+SOURCE_ID_ALIAS = re.compile(r"^[a-z0-9]{4,10}$")
+
+# A person label becomes an alias only when it reads like a proper name.
+PROPER_NAME_LABEL = re.compile(r"^[A-Z][A-Za-z'\u2019-]*(?: [A-Z][A-Za-z'\u2019-]*)?$")
+
+# In the BSB text the surface "Israel" denotes the covenant people in these
+# phrases (not the patriarch Jacob): those references belong to the canonical
+# collective entity:israelites, never to entity:p-jacob-1.
+ISRAEL_COLLECTIVE = re.compile(
+    r"\b(?:people|children|sons|house|tribes|elders|descendants|congregation|"
+    r"assembly|families|communities|God|Holy One|Redeemer|Glory|Rock|Strength|"
+    r"Shepherd|Prince|Firstborn) of Israel\b"
+    r"|\ball Israel\b"
+    r"|\bIsraelites\b"
+    r"|\b(?:house|descendants|offspring|tent) of Jacob\b"
+)
+# These phrases use "Israel" for the territory or the kingdom: no person (and
+# no collective we curate) is the referent, so the person reference is dropped.
+ISRAEL_NON_PERSON = re.compile(
+    r"\b(?:land|lands|cities|city|mountains|mountain|hills|borders|territory|"
+    r"coasts|wilderness|fields|kingdom|kings|king|days|streams|road|way) of Israel\b"
+)
+
+
+def load_verse_texts(books: list[dict]) -> dict[tuple[str, int, int], str]:
+    texts: dict[tuple[str, int, int], str] = {}
+    for book in books:
+        for c, v, t in cwb.book_verse_index(book):
+            texts[(book["osis"], c, v)] = t
+    return texts
+
+
+def redirect_collective_israel(persons: dict, places: dict, verse_texts: dict) -> dict:
+    jacob = persons.get("p-jacob-1")
+    israel = places.setdefault(
+        "israelites",
+        {
+            "slug": "israelites",
+            "type": "collective",
+            "name": "The Israelites",
+            "aliases": set(),
+            "refs": set(),
+            "evidence": "evidence:locked-neh2:israelites",
+        },
+    )
+    moved = dropped = 0
+    keep: set = set()
+    for ref in jacob["refs"] if jacob else ():
+        text = verse_texts.get(ref, "")
+        if ISRAEL_COLLECTIVE.search(text):
+            israel["refs"].add(ref)
+            moved += 1
+        elif ISRAEL_NON_PERSON.search(text):
+            dropped += 1
+        else:
+            keep.add(ref)
+    if jacob:
+        jacob["refs"] = keep
+    israel["aliases"].add("Israelites")
+    return {"moved_to_israelites": moved, "dropped_non_person": dropped}
+
+
+def drop_source_id_aliases(places: dict) -> int:
+    dropped = 0
+    for entry in places.values():
+        before = len(entry.get("aliases", set()))
+        entry["aliases"] = {
+            a for a in entry.get("aliases", set()) if not SOURCE_ID_ALIAS.match(a)
+        }
+        dropped += before - len(entry["aliases"])
+    return dropped
+
+
+def apply_preferred_names(persons: dict) -> None:
+    for slug, preferred in PREFERRED_NAME_OVERRIDES.items():
+        entry = persons.get(slug)
+        if not entry:
+            continue
+        old = entry["name"]
+        entry["name"] = preferred
+        if old and old != preferred:
+            entry["aliases"].add(old)
+
+
+def add_label_aliases(persons: dict, person_labels: dict) -> int:
+    added = 0
+    for slug, labels in person_labels.items():
+        entry = persons.get(slug)
+        if not entry:
+            continue
+        for label in labels:
+            label = (label or "").strip()
+            if (
+                label
+                and PROPER_NAME_LABEL.match(label)
+                and label != entry["name"]
+                and label not in entry["aliases"]
+            ):
+                entry["aliases"].add(label)
+                added += 1
+    return added
+
+
+def load_person_extras() -> dict[str, dict]:
+    extras: dict[str, dict] = {}
+    path = QUARANTINE / "bibledata" / "BibleData-Person.csv"
+    if not path.exists():
+        return extras
+    with path.open(encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            pid = (row.get("person_id") or "").strip()
+            if not pid:
+                continue
+            extras["p-" + cwb.slugify(pid)] = {
+                "unique_attribute": (row.get("unique_attribute") or "").strip(),
+                "tribe": (row.get("tribe") or "").strip(),
+            }
+    return extras
+
+
+def load_place_comments() -> dict[str, str]:
+    comments: dict[str, str] = {}
+    path = QUARANTINE / "openbible" / "ancient.jsonl"
+    if not path.exists():
+        return comments
+    with path.open(encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            friendly = (rec.get("friendly_id") or "").strip()
+            pid = rec.get("id")
+            comment = (rec.get("comment") or "").strip()
+            if not (friendly and pid and comment):
+                continue
+            comments["pl-" + cwb.slugify(friendly) + "-" + cwb.slugify(pid)] = comment
+    return comments
 
 
 # ---------------------------------------------------------------------------
@@ -338,6 +492,47 @@ def dedupe_mentions(
     return kept, dropped
 
 
+def _recompute_locale_coverage(locale: dict) -> None:
+    complete: list[tuple[str, str]] = []
+    blocked: list[tuple[str, str, list[str]]] = []
+    for c in locale["records"]["passage_contexts"]:
+        blockers = sorted(
+            {
+                s["open_question_key"]
+                for s in c["orientation"].values()
+                if s["open_question_key"]
+            }
+        )
+        if blockers:
+            blocked.append((c["scope_key"], c["context_key"], blockers))
+        else:
+            complete.append((c["scope_key"], c["context_key"]))
+    groups: list[dict] = []
+    if complete:
+        groups.append(
+            {
+                "result": "complete_with_records",
+                "scope_keys": [s for s, _ in complete],
+                "record_keys": [c for _, c in complete],
+                "blocker_question_keys": [],
+            }
+        )
+    if blocked:
+        groups.append(
+            {
+                "result": "blocked",
+                "scope_keys": [s for s, _, _ in blocked],
+                "record_keys": [c for _, c, _ in blocked],
+                "blocker_question_keys": sorted(
+                    {q for _, _, qs in blocked for q in qs}
+                ),
+            }
+        )
+    locale["coverage"] = [
+        {"annotation_class": "passage_context_localization", "groups": groups}
+    ]
+
+
 def enrich_book_data(
     data: dict,
     book: dict,
@@ -351,6 +546,8 @@ def enrich_book_data(
     registry_by_slug: dict,
     home_by_slug: dict | None = None,
     bridged_candidates: dict | None = None,
+    person_extras: dict | None = None,
+    place_comments: dict | None = None,
 ) -> dict:
     osis = book["osis"]
     verses = cwb.book_verse_index(book)
@@ -628,6 +825,23 @@ def enrich_book_data(
         text = " ".join(pieces)
         ctx["orientation"]["what"]["text"] = text
         ctx["orientation"]["immediate_summary"]["text"] = text
+        # 'before' is mechanically derivable and accurate: which chapter
+        # precedes this one. Filling it removes a blocking open question that
+        # was never a real evidence gap.
+        before_text = (
+            f"Opening chapter of {book['name']}."
+            if ch["n"] == 1
+            else f"Follows {book['name']} {ch['n'] - 1}."
+        )
+        before_section = ctx["orientation"]["before"]
+        if not before_section.get("text"):
+            before_section["text"] = before_text
+            qkey = before_section.get("open_question_key")
+            if qkey:
+                before_section["open_question_key"] = None
+                locale["open_questions"] = [
+                    q for q in locale["open_questions"] if q["question_key"] != qkey
+                ]
 
     for ch in book["chapters"]:
         for i, p in enumerate(cwb.chapter_passages(ch), start=1):
@@ -644,6 +858,9 @@ def enrich_book_data(
     # 7. profiles are canon-scoped, not book-scoped. The same entity appears
     # in many book packages; identical, registry-derived text keeps those
     # definitions consistent instead of conflicting (1388 collisions before).
+    # Profile text carries the source's identifying attribute for persons
+    # (e.g. "first man (1CO 15:45)") and the OpenBible description for places;
+    # only entities without either keep the span fallback.
     person_entity_keys = {f"entity:{s}" for s in persons}
     for prof in lrec["entity_profiles"]:
         ekey = prof["entity_key"]
@@ -653,9 +870,26 @@ def enrich_book_data(
         last = entry.get("last_reference", "Scripture")
         kind = "person" if ekey in person_entity_keys else "place"
         span = first if first == last else f"{first}\u2013{last}"
-        prof["short_description"]["text"] = (
-            f"{prof['preferred_name']} is a {kind} named in Scripture ({span})."
-        )
+        fallback = f"{prof['preferred_name']} is a {kind} named in Scripture ({span})."
+        if kind == "person" and person_extras is not None:
+            extra = person_extras.get(slug, {})
+            uniq = (extra.get("unique_attribute") or "").strip().rstrip("?").strip()
+            tribe = (extra.get("tribe") or "").strip()
+            if uniq:
+                text = f"{prof['preferred_name']} \u2014 {uniq}."
+                if tribe:
+                    text += f" Of the tribe of {tribe}."
+                prof["short_description"]["text"] = text
+                continue
+        elif place_comments is not None:
+            comment = (place_comments.get(slug) or "").strip()
+            if comment:
+                comment = comment[0].upper() + comment[1:]
+                prof["short_description"]["text"] = (
+                    comment if comment.endswith(".") else comment + "."
+                )
+                continue
+        prof["short_description"]["text"] = fallback
     # Profiles are canon-scoped: emit each entity's profile once, in its home
     # book (Nehemiah for locked identities), so the same profile_key never
     # repeats with differing content.
@@ -667,6 +901,10 @@ def enrich_book_data(
         ]
 
     # 8. package identity for the merged book package.
+    # Locale coverage must reflect the orientation state after enrichment
+    # (filled fields stop being blockers).
+    _recompute_locale_coverage(locale)
+
     # Translation-neutral identities: the canonical package names neither a
     # language nor an edition; the edition package carries the BSB edition;
     # the locale package names the language only.
@@ -1261,6 +1499,15 @@ def main() -> int:
     persons, places, person_labels, relationships, identity_rename = locked_neh2.apply_identity(
         persons, places, person_labels, relationships, locked
     )
+
+    # Curated identity corrections over the reconciled entity set.
+    verse_texts = load_verse_texts(books)
+    collective = redirect_collective_israel(persons, places, verse_texts)
+    source_id_aliases_dropped = drop_source_id_aliases(places)
+    apply_preferred_names(persons)
+    label_aliases_added = add_label_aliases(persons, person_labels)
+    person_extras = load_person_extras()
+    place_comments = load_place_comments()
     valid_refs = {
         (b["osis"], c, v)
         for b in books
@@ -1306,9 +1553,7 @@ def main() -> int:
     knowledge_digest = cwb.sha256_file(KNOWLEDGE)
 
     selected = set(args.books) if args.books else set(books_by_osis)
-    testament_by_osis = {
-        b["osis"]: ("OT" if i < 39 else "NT") for i, b in enumerate(books)
-    }
+    testament_by_osis = dict(canon_order.TESTAMENT_BY_OSIS)
     cfg = cwb.TRANSLATIONS[TRANSLATION]
 
     manifest_path = QUEUE / TRANSLATION / "manifest.json"
@@ -1354,7 +1599,7 @@ def main() -> int:
             )
             verse_text = {(c, v): t for c, v, t in cwb.book_verse_index(book)}
             data = enrich_book_data(
-                data, book, knowledge, relationships, registry_keys, uncertain, persons, places, verse_text, registry_by_slug, home_by_slug, bridged_candidates
+                data, book, knowledge, relationships, registry_keys, uncertain, persons, places, verse_text, registry_by_slug, home_by_slug, bridged_candidates, person_extras, place_comments
             )
             if book["osis"] == "Neh":
                 data = locked_neh2.merge_neh(data, locked, verse_text)

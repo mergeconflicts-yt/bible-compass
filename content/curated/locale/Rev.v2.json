@@ -514,7 +514,7 @@
     {
       "package_key": "draft:wb-rev-canonical",
       "revision": 1,
-      "digest": "sha256:6e1a5d9345ef893c61827bd6abfcac06cfafe16c2897b6d57f01824cc7f11cd8"
+      "digest": "sha256:1d9ff9ede1b1b34f93ac9d2f2416620b3c5deed35c8dbf25e56a71510ac710a8"
     }
   ],
   "records": {
@@ -526,7 +526,7 @@
         "preferred_name": "Antipas",
         "aliases": [],
         "short_description": {
-          "text": "Antipas is a person named in Scripture (Rev.2.13).",
+          "text": "Antipas — G-d's witness and faithful one (REV 2:13).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -539,7 +539,7 @@
         "preferred_name": "Jezebel",
         "aliases": [],
         "short_description": {
-          "text": "Jezebel is a person named in Scripture (Rev.2.20).",
+          "text": "Jezebel — teaches and leads people astray (REV 2:20).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -552,7 +552,7 @@
         "preferred_name": "Death",
         "aliases": [],
         "short_description": {
-          "text": "Death is a person named in Scripture (Rev.6.8).",
+          "text": "Death — the rider of the pale/ashen horse (REV 6:8).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -563,9 +563,11 @@
         "entity_key": "entity:p-abaddon-1",
         "language_tag": "en",
         "preferred_name": "Abaddon",
-        "aliases": [],
+        "aliases": [
+          "Apollyon"
+        ],
         "short_description": {
-          "text": "Abaddon is a person named in Scripture (Rev.9.11).",
+          "text": "Abaddon — king over the locusts of Revelation 9, the angel of the abyss (REV 9:11).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -576,14 +578,7 @@
         "entity_key": "entity:pl-armageddon-a105543",
         "language_tag": "en",
         "preferred_name": "Armageddon",
-        "aliases": [
-          "a15257a",
-          "a324282",
-          "a3e21c6",
-          "a62dec4",
-          "a8554e3",
-          "aa516c2"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Armageddon is a place named in Scripture (Rev.16.16).",
           "claim_keys": []
@@ -596,11 +591,7 @@
         "entity_key": "entity:pl-babylon-3-a3f0756",
         "language_tag": "en",
         "preferred_name": "Babylon 3",
-        "aliases": [
-          "a15257a",
-          "a217d18",
-          "afc8e7a"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Babylon 3 is a place named in Scripture (Rev.14.8–Rev.18.21).",
           "claim_keys": []
@@ -613,11 +604,9 @@
         "entity_key": "entity:pl-gog-a858723",
         "language_tag": "en",
         "preferred_name": "Gog",
-        "aliases": [
-          "ae3d487"
-        ],
+        "aliases": [],
         "short_description": {
-          "text": "Gog is a place named in Scripture (Rev.20.8).",
+          "text": "Somewhat synonymous with <ancient id=\"ae3d487\">Magog</ancient>.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -628,9 +617,7 @@
         "entity_key": "entity:pl-patmos-a8f60f3",
         "language_tag": "en",
         "preferred_name": "Patmos",
-        "aliases": [
-          "m5c4548"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Patmos is a place named in Scripture (Rev.1.9).",
           "claim_keys": []
@@ -643,9 +630,7 @@
         "entity_key": "entity:pl-pergamum-a75d2c1",
         "language_tag": "en",
         "preferred_name": "Pergamum",
-        "aliases": [
-          "m16099a"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Pergamum is a place named in Scripture (Rev.1.11–Rev.2.12).",
           "claim_keys": []
@@ -658,9 +643,7 @@
         "entity_key": "entity:pl-philadelphia-a1c7cc1",
         "language_tag": "en",
         "preferred_name": "Philadelphia",
-        "aliases": [
-          "m91dd93"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Philadelphia is a place named in Scripture (Rev.1.11–Rev.3.7).",
           "claim_keys": []
@@ -673,9 +656,7 @@
         "entity_key": "entity:pl-sardis-aab4a5f",
         "language_tag": "en",
         "preferred_name": "Sardis",
-        "aliases": [
-          "mb0ee42"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Sardis is a place named in Scripture (Rev.1.11–Rev.3.4).",
           "claim_keys": []
@@ -688,9 +669,7 @@
         "entity_key": "entity:pl-smyrna-a2e65fb",
         "language_tag": "en",
         "preferred_name": "Smyrna",
-        "aliases": [
-          "m1876bb"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Smyrna is a place named in Scripture (Rev.1.11–Rev.2.8).",
           "claim_keys": []
@@ -769,9 +748,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Revelation.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -792,12 +771,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Antipas, Balaam, Balak, Jacob, Jezebel, Satan.",
+            "text": "Present in this chapter: Antipas, Balaam, Balak, Jezebel, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Ephesus, Pergamum, Smyrna, Thyatira.",
+            "text": "Places in this chapter: Ephesus, Pergamum, Smyrna, The Israelites, Thyatira.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -812,9 +791,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -855,9 +834,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -898,9 +877,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -941,9 +920,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 4.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-5-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -984,9 +963,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 5.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-6-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1007,14 +986,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Asher, Benjamin, Gad, Issachar, Jacob, Joseph, Judah, Levi.",
+            "text": "Present in this chapter: Asher, Benjamin, Gad, Issachar, Joseph, Judah, Levi, Manasseh.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this chapter: The Israelites.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-7-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -1027,9 +1006,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 6.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-7-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1070,9 +1049,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 7.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-8-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1113,9 +1092,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 8.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-9-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1156,9 +1135,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 9.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-10-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1199,9 +1178,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 10.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-11-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1242,9 +1221,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 11.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-12-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1285,9 +1264,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 12.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-13-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1328,9 +1307,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 13.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-14-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1371,9 +1350,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 14.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-15-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1414,9 +1393,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 15.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-16-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1457,9 +1436,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 16.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-17-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1500,9 +1479,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 17.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-18-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1543,9 +1522,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 18.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-19-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1586,9 +1565,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 19.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-20-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1609,12 +1588,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Jacob.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-rev-21-who"
           },
           "where": {
-            "text": "Places in this chapter: Jerusalem.",
+            "text": "Places in this chapter: Jerusalem, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1629,9 +1608,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 20.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-21-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1672,9 +1651,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Revelation 21.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-22-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1910,12 +1889,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Antipas, Balaam, Balak, Jacob, Satan.",
+            "text": "Present in this passage: Antipas, Balaam, Balak, Satan.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Pergamum.",
+            "text": "Places in this passage: Pergamum, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -2555,14 +2534,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Asher, Benjamin, Gad, Issachar, Jacob, Joseph, Judah, Levi.",
+            "text": "Present in this passage: Asher, Benjamin, Gad, Issachar, Joseph, Judah, Levi, Manasseh.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": null,
+            "text": "Places in this passage: The Israelites.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-rev-7-p1-where"
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -4146,12 +4125,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Jacob.",
+            "text": null,
             "claim_keys": [],
-            "open_question_key": null
+            "open_question_key": "question:wb-context-en-wb-rev-21-p2-who"
           },
           "where": {
-            "text": "Places in this passage: Jerusalem.",
+            "text": "Places in this passage: Jerusalem, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -4314,36 +4293,6 @@
       }
     ],
     "relevance_localizations": [
-      {
-        "localization_key": "relevance-localization:en:wb-rev-2-p-jacob-1",
-        "relevance_key": "relevance:wb-rev-2-p-jacob-1",
-        "scope_key": "scope:wb-rev-2:refsys:eng-v22:rev.2.1-rev.2.29",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Revelation 2 at verse(s) 14.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "localization_key": "relevance-localization:en:wb-rev-7-p-jacob-1",
-        "relevance_key": "relevance:wb-rev-7-p-jacob-1",
-        "scope_key": "scope:wb-rev-7:refsys:eng-v22:rev.7.1-rev.7.17",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Revelation 7 at verse(s) 4.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "localization_key": "relevance-localization:en:wb-rev-21-p-jacob-1",
-        "relevance_key": "relevance:wb-rev-21-p-jacob-1",
-        "scope_key": "scope:wb-rev-21:refsys:eng-v22:rev.21.1-rev.21.27",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Revelation 21 at verse(s) 12.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "localization_key": "relevance-localization:en:wb-rev-7-p-reuben-1",
         "relevance_key": "relevance:wb-rev-7-p-reuben-1",
@@ -4953,6 +4902,36 @@
         "role_text": "Named in Revelation 21 at verse(s) 2, 10.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-rev-2-israelites",
+        "relevance_key": "relevance:wb-rev-2-israelites",
+        "scope_key": "scope:wb-rev-2:refsys:eng-v22:rev.2.1-rev.2.29",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Revelation 2 at verse(s) 14.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-rev-7-israelites",
+        "relevance_key": "relevance:wb-rev-7-israelites",
+        "scope_key": "scope:wb-rev-7:refsys:eng-v22:rev.7.1-rev.7.17",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Revelation 7 at verse(s) 4.",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-rev-21-israelites",
+        "relevance_key": "relevance:wb-rev-21-israelites",
+        "scope_key": "scope:wb-rev-21:refsys:eng-v22:rev.21.1-rev.21.27",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Revelation 21 at verse(s) 12.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -5143,7 +5122,6 @@
             "context:en:wb-rev-22-p3"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-rev-1-before",
             "question:wb-context-en-wb-rev-1-p1-before",
             "question:wb-context-en-wb-rev-1-p1-stakes",
             "question:wb-context-en-wb-rev-1-p1-when",
@@ -5156,7 +5134,6 @@
             "question:wb-context-en-wb-rev-1-p3-when",
             "question:wb-context-en-wb-rev-1-stakes",
             "question:wb-context-en-wb-rev-1-when",
-            "question:wb-context-en-wb-rev-10-before",
             "question:wb-context-en-wb-rev-10-p1-before",
             "question:wb-context-en-wb-rev-10-p1-stakes",
             "question:wb-context-en-wb-rev-10-p1-when",
@@ -5166,7 +5143,6 @@
             "question:wb-context-en-wb-rev-10-when",
             "question:wb-context-en-wb-rev-10-where",
             "question:wb-context-en-wb-rev-10-who",
-            "question:wb-context-en-wb-rev-11-before",
             "question:wb-context-en-wb-rev-11-p1-before",
             "question:wb-context-en-wb-rev-11-p1-stakes",
             "question:wb-context-en-wb-rev-11-p1-when",
@@ -5184,7 +5160,6 @@
             "question:wb-context-en-wb-rev-11-stakes",
             "question:wb-context-en-wb-rev-11-when",
             "question:wb-context-en-wb-rev-11-who",
-            "question:wb-context-en-wb-rev-12-before",
             "question:wb-context-en-wb-rev-12-p1-before",
             "question:wb-context-en-wb-rev-12-p1-stakes",
             "question:wb-context-en-wb-rev-12-p1-when",
@@ -5200,7 +5175,6 @@
             "question:wb-context-en-wb-rev-12-stakes",
             "question:wb-context-en-wb-rev-12-when",
             "question:wb-context-en-wb-rev-12-where",
-            "question:wb-context-en-wb-rev-13-before",
             "question:wb-context-en-wb-rev-13-p1-before",
             "question:wb-context-en-wb-rev-13-p1-stakes",
             "question:wb-context-en-wb-rev-13-p1-when",
@@ -5218,7 +5192,6 @@
             "question:wb-context-en-wb-rev-13-stakes",
             "question:wb-context-en-wb-rev-13-when",
             "question:wb-context-en-wb-rev-13-where",
-            "question:wb-context-en-wb-rev-14-before",
             "question:wb-context-en-wb-rev-14-p1-before",
             "question:wb-context-en-wb-rev-14-p1-stakes",
             "question:wb-context-en-wb-rev-14-p1-when",
@@ -5235,7 +5208,6 @@
             "question:wb-context-en-wb-rev-14-stakes",
             "question:wb-context-en-wb-rev-14-when",
             "question:wb-context-en-wb-rev-14-who",
-            "question:wb-context-en-wb-rev-15-before",
             "question:wb-context-en-wb-rev-15-p1-before",
             "question:wb-context-en-wb-rev-15-p1-stakes",
             "question:wb-context-en-wb-rev-15-p1-when",
@@ -5248,7 +5220,6 @@
             "question:wb-context-en-wb-rev-15-stakes",
             "question:wb-context-en-wb-rev-15-when",
             "question:wb-context-en-wb-rev-15-where",
-            "question:wb-context-en-wb-rev-16-before",
             "question:wb-context-en-wb-rev-16-p1-before",
             "question:wb-context-en-wb-rev-16-p1-stakes",
             "question:wb-context-en-wb-rev-16-p1-when",
@@ -5258,7 +5229,6 @@
             "question:wb-context-en-wb-rev-16-p2-who",
             "question:wb-context-en-wb-rev-16-stakes",
             "question:wb-context-en-wb-rev-16-when",
-            "question:wb-context-en-wb-rev-17-before",
             "question:wb-context-en-wb-rev-17-p1-before",
             "question:wb-context-en-wb-rev-17-p1-stakes",
             "question:wb-context-en-wb-rev-17-p1-when",
@@ -5276,7 +5246,6 @@
             "question:wb-context-en-wb-rev-17-stakes",
             "question:wb-context-en-wb-rev-17-when",
             "question:wb-context-en-wb-rev-17-who",
-            "question:wb-context-en-wb-rev-18-before",
             "question:wb-context-en-wb-rev-18-p1-before",
             "question:wb-context-en-wb-rev-18-p1-stakes",
             "question:wb-context-en-wb-rev-18-p1-when",
@@ -5292,7 +5261,6 @@
             "question:wb-context-en-wb-rev-18-stakes",
             "question:wb-context-en-wb-rev-18-when",
             "question:wb-context-en-wb-rev-18-who",
-            "question:wb-context-en-wb-rev-19-before",
             "question:wb-context-en-wb-rev-19-p1-before",
             "question:wb-context-en-wb-rev-19-p1-stakes",
             "question:wb-context-en-wb-rev-19-p1-when",
@@ -5317,7 +5285,6 @@
             "question:wb-context-en-wb-rev-19-when",
             "question:wb-context-en-wb-rev-19-where",
             "question:wb-context-en-wb-rev-19-who",
-            "question:wb-context-en-wb-rev-2-before",
             "question:wb-context-en-wb-rev-2-p1-before",
             "question:wb-context-en-wb-rev-2-p1-stakes",
             "question:wb-context-en-wb-rev-2-p1-when",
@@ -5333,7 +5300,6 @@
             "question:wb-context-en-wb-rev-2-p4-when",
             "question:wb-context-en-wb-rev-2-stakes",
             "question:wb-context-en-wb-rev-2-when",
-            "question:wb-context-en-wb-rev-20-before",
             "question:wb-context-en-wb-rev-20-p1-before",
             "question:wb-context-en-wb-rev-20-p1-stakes",
             "question:wb-context-en-wb-rev-20-p1-when",
@@ -5348,7 +5314,6 @@
             "question:wb-context-en-wb-rev-20-p3-who",
             "question:wb-context-en-wb-rev-20-stakes",
             "question:wb-context-en-wb-rev-20-when",
-            "question:wb-context-en-wb-rev-21-before",
             "question:wb-context-en-wb-rev-21-p1-before",
             "question:wb-context-en-wb-rev-21-p1-stakes",
             "question:wb-context-en-wb-rev-21-p1-when",
@@ -5356,9 +5321,10 @@
             "question:wb-context-en-wb-rev-21-p2-before",
             "question:wb-context-en-wb-rev-21-p2-stakes",
             "question:wb-context-en-wb-rev-21-p2-when",
+            "question:wb-context-en-wb-rev-21-p2-who",
             "question:wb-context-en-wb-rev-21-stakes",
             "question:wb-context-en-wb-rev-21-when",
-            "question:wb-context-en-wb-rev-22-before",
+            "question:wb-context-en-wb-rev-21-who",
             "question:wb-context-en-wb-rev-22-p1-before",
             "question:wb-context-en-wb-rev-22-p1-stakes",
             "question:wb-context-en-wb-rev-22-p1-when",
@@ -5376,7 +5342,6 @@
             "question:wb-context-en-wb-rev-22-stakes",
             "question:wb-context-en-wb-rev-22-when",
             "question:wb-context-en-wb-rev-22-where",
-            "question:wb-context-en-wb-rev-3-before",
             "question:wb-context-en-wb-rev-3-p1-before",
             "question:wb-context-en-wb-rev-3-p1-stakes",
             "question:wb-context-en-wb-rev-3-p1-when",
@@ -5390,7 +5355,6 @@
             "question:wb-context-en-wb-rev-3-p3-who",
             "question:wb-context-en-wb-rev-3-stakes",
             "question:wb-context-en-wb-rev-3-when",
-            "question:wb-context-en-wb-rev-4-before",
             "question:wb-context-en-wb-rev-4-p1-before",
             "question:wb-context-en-wb-rev-4-p1-stakes",
             "question:wb-context-en-wb-rev-4-p1-when",
@@ -5405,7 +5369,6 @@
             "question:wb-context-en-wb-rev-4-when",
             "question:wb-context-en-wb-rev-4-where",
             "question:wb-context-en-wb-rev-4-who",
-            "question:wb-context-en-wb-rev-5-before",
             "question:wb-context-en-wb-rev-5-p1-before",
             "question:wb-context-en-wb-rev-5-p1-stakes",
             "question:wb-context-en-wb-rev-5-p1-when",
@@ -5420,7 +5383,6 @@
             "question:wb-context-en-wb-rev-5-when",
             "question:wb-context-en-wb-rev-5-where",
             "question:wb-context-en-wb-rev-5-who",
-            "question:wb-context-en-wb-rev-6-before",
             "question:wb-context-en-wb-rev-6-p1-before",
             "question:wb-context-en-wb-rev-6-p1-stakes",
             "question:wb-context-en-wb-rev-6-p1-when",
@@ -5453,11 +5415,9 @@
             "question:wb-context-en-wb-rev-6-stakes",
             "question:wb-context-en-wb-rev-6-when",
             "question:wb-context-en-wb-rev-6-where",
-            "question:wb-context-en-wb-rev-7-before",
             "question:wb-context-en-wb-rev-7-p1-before",
             "question:wb-context-en-wb-rev-7-p1-stakes",
             "question:wb-context-en-wb-rev-7-p1-when",
-            "question:wb-context-en-wb-rev-7-p1-where",
             "question:wb-context-en-wb-rev-7-p2-before",
             "question:wb-context-en-wb-rev-7-p2-stakes",
             "question:wb-context-en-wb-rev-7-p2-when",
@@ -5465,8 +5425,6 @@
             "question:wb-context-en-wb-rev-7-p2-who",
             "question:wb-context-en-wb-rev-7-stakes",
             "question:wb-context-en-wb-rev-7-when",
-            "question:wb-context-en-wb-rev-7-where",
-            "question:wb-context-en-wb-rev-8-before",
             "question:wb-context-en-wb-rev-8-p1-before",
             "question:wb-context-en-wb-rev-8-p1-stakes",
             "question:wb-context-en-wb-rev-8-p1-when",
@@ -5481,7 +5439,6 @@
             "question:wb-context-en-wb-rev-8-when",
             "question:wb-context-en-wb-rev-8-where",
             "question:wb-context-en-wb-rev-8-who",
-            "question:wb-context-en-wb-rev-9-before",
             "question:wb-context-en-wb-rev-9-p1-before",
             "question:wb-context-en-wb-rev-9-p1-stakes",
             "question:wb-context-en-wb-rev-9-p1-when",
@@ -5507,14 +5464,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-1",
@@ -5531,14 +5480,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-2-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-2",
@@ -5552,14 +5493,6 @@
       "record_key": "context:en:wb-rev-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5595,14 +5528,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-4-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-4",
@@ -5635,14 +5560,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-5-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-5",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-5-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-5",
@@ -5667,14 +5584,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-6-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-6",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-6-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-6",
@@ -5683,27 +5592,11 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-7-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-7",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-7-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-rev-7",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-7-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-7",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5739,14 +5632,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-8-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-8",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-8-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-8",
@@ -5760,14 +5645,6 @@
       "record_key": "context:en:wb-rev-9",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-9-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-9",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5803,14 +5680,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-10-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-10",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-10-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-10",
@@ -5832,14 +5701,6 @@
       "record_key": "context:en:wb-rev-11",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-11-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-11",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5867,14 +5728,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-12-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-12",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-12-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-12",
@@ -5896,14 +5749,6 @@
       "record_key": "context:en:wb-rev-13",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-13-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-13",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -5931,14 +5776,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-14-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-14",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-14-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-14",
@@ -5963,14 +5800,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-15-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-15",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-15-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-15",
@@ -5984,14 +5813,6 @@
       "record_key": "context:en:wb-rev-16",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-16-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-16",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -6019,14 +5840,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-17-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-17",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-17-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-17",
@@ -6048,14 +5861,6 @@
       "record_key": "context:en:wb-rev-18",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-18-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-18",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -6091,14 +5896,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-19-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-19",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-19-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-19",
@@ -6115,14 +5912,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-rev-20-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-20",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-rev-20-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-rev-20",
@@ -6131,19 +5920,19 @@
       "blocks_publication": true
     },
     {
+      "question_key": "question:wb-context-en-wb-rev-21-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-rev-21",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
       "question_key": "question:wb-context-en-wb-rev-21-when",
       "question_type": "uncertain_date",
       "record_key": "context:en:wb-rev-21",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-21-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-21",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -6168,14 +5957,6 @@
       "record_key": "context:en:wb-rev-22",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-22-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-22",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -6848,14 +6629,6 @@
       "record_key": "context:en:wb-rev-6-p6",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-rev-7-p1-where",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-rev-7-p1",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -8152,6 +7925,14 @@
       "record_key": "context:en:wb-rev-21-p1",
       "field_path": "/records/passage_contexts/orientation/stakes",
       "question": "Stakes context is not supported by the approved inputs for this scope.",
+      "blocks_publication": true
+    },
+    {
+      "question_key": "question:wb-context-en-wb-rev-21-p2-who",
+      "question_type": "insufficient_evidence",
+      "record_key": "context:en:wb-rev-21-p2",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

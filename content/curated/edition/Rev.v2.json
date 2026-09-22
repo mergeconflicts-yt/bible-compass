@@ -514,11 +514,29 @@
     {
       "package_key": "draft:wb-rev-canonical",
       "revision": 1,
-      "digest": "sha256:6e1a5d9345ef893c61827bd6abfcac06cfafe16c2897b6d57f01824cc7f11cd8"
+      "digest": "sha256:1d9ff9ede1b1b34f93ac9d2f2416620b3c5deed35c8dbf25e56a71510ac710a8"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:rev-israelites-2-14",
+        "verse_key": "verse:Rev.2.14",
+        "attestation_key": "attestation:wb-rev-israelites-2-14",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "ng block before the ",
+          "suffix": " so they would eat f"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:rev-jerusalem-21-10",
         "verse_key": "verse:Rev.21.10",
@@ -749,42 +767,6 @@
           "occurrence_ordinal": 1,
           "prefix": ", from the tribe of ",
           "suffix": " 12,000,"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:rev-p-jacob-1-21-12",
-        "verse_key": "verse:Rev.21.12",
-        "attestation_key": "attestation:wb-rev-p-jacob-1-21-12",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "he twelve tribes of ",
-          "suffix": ", and twelve angels "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:rev-p-jacob-1-7-4",
-        "verse_key": "verse:Rev.7.4",
-        "attestation_key": "attestation:wb-rev-p-jacob-1-7-4",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "m all the tribes of ",
-          "suffix": ":"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1934,6 +1916,7 @@
             "verse:Rev.20.9",
             "verse:Rev.21.1",
             "verse:Rev.21.11",
+            "verse:Rev.21.12",
             "verse:Rev.21.13",
             "verse:Rev.21.14",
             "verse:Rev.21.15",
@@ -2043,6 +2026,7 @@
             "verse:Rev.7.17",
             "verse:Rev.7.2",
             "verse:Rev.7.3",
+            "verse:Rev.7.4",
             "verse:Rev.7.9",
             "verse:Rev.8.1",
             "verse:Rev.8.10",
@@ -2195,6 +2179,7 @@
             "verse:Rev.2.14"
           ],
           "record_keys": [
+            "mention:wb:rev-israelites-2-14",
             "mention:wb:rev-p-balaam-1-2-14",
             "mention:wb:rev-p-balak-1-2-14"
           ],
@@ -2298,16 +2283,6 @@
           ],
           "record_keys": [
             "mention:wb:rev-p-death-1-6-8"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
-            "verse:Rev.7.4"
-          ],
-          "record_keys": [
-            "mention:wb:rev-p-jacob-1-7-4"
           ],
           "blocker_question_keys": []
         },
@@ -2509,16 +2484,6 @@
           ],
           "record_keys": [
             "mention:wb:rev-jerusalem-21-10"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
-            "verse:Rev.21.12"
-          ],
-          "record_keys": [
-            "mention:wb:rev-p-jacob-1-21-12"
           ],
           "blocker_question_keys": []
         },

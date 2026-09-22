@@ -377,11 +377,29 @@
     {
       "package_key": "draft:wb-heb-canonical",
       "revision": 1,
-      "digest": "sha256:55500ddaa2380cc91189cdb41f5e922d8b0963d8669c92ce15468dba8aca583e"
+      "digest": "sha256:337cb11ea0bb902229e937568155705aa0aface358448b5362dd74503d0831fe"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:heb-israelites-11-22",
+        "verse_key": "verse:Heb.11.22",
+        "attestation_key": "attestation:wb-heb-israelites-11-22",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "t the exodus of the ",
+          "suffix": " and gave instructio"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:heb-jerusalem-12-22",
         "verse_key": "verse:Heb.12.22",
@@ -936,42 +954,6 @@
           "occurrence_ordinal": 1,
           "prefix": "s, as did Isaac and ",
           "suffix": ", who were heirs wit"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:heb-p-jacob-1-8-10",
-        "verse_key": "verse:Heb.8.10",
-        "attestation_key": "attestation:wb-heb-p-jacob-1-8-10",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "e with the house of ",
-          "suffix": " after those days, d"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:heb-p-jacob-1-8-8",
-        "verse_key": "verse:Heb.8.8",
-        "attestation_key": "attestation:wb-heb-p-jacob-1-8-8",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "t with the house of ",
-          "suffix": " and with the house "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -1974,6 +1956,7 @@
             "verse:Heb.7.7",
             "verse:Heb.7.8",
             "verse:Heb.8.1",
+            "verse:Heb.8.10",
             "verse:Heb.8.11",
             "verse:Heb.8.12",
             "verse:Heb.8.13",
@@ -2276,7 +2259,6 @@
             "verse:Heb.8.8"
           ],
           "record_keys": [
-            "mention:wb:heb-p-jacob-1-8-8",
             "mention:wb:heb-p-judah-1-8-8"
           ],
           "blocker_question_keys": []
@@ -2288,16 +2270,6 @@
           ],
           "record_keys": [
             "mention:wb:heb-pl-egypt-af301ca-8-9"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
-            "verse:Heb.8.10"
-          ],
-          "record_keys": [
-            "mention:wb:heb-p-jacob-1-8-10"
           ],
           "blocker_question_keys": []
         },
@@ -2443,6 +2415,7 @@
             "verse:Heb.11.22"
           ],
           "record_keys": [
+            "mention:wb:heb-israelites-11-22",
             "mention:wb:heb-p-joseph-1-11-22"
           ],
           "blocker_question_keys": []

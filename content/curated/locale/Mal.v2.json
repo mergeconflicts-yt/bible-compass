@@ -94,7 +94,7 @@
     {
       "package_key": "draft:wb-mal-canonical",
       "revision": 1,
-      "digest": "sha256:45abde973066cfe4a1e2a9f7dd11a6b8805840b91d25a270640fe1081a9680a7"
+      "digest": "sha256:d2ca53b5f2e96cf45b173ccb5002b8b0f8621621f6eab1cbea649a15acbe1276"
     }
   ],
   "records": {
@@ -106,7 +106,7 @@
         "preferred_name": "Malachi",
         "aliases": [],
         "short_description": {
-          "text": "Malachi is a person named in Scripture (Mal.1.1).",
+          "text": "Malachi — the prophet (MAL 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -183,9 +183,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Malachi.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -226,9 +226,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Malachi 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -249,12 +249,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Jacob, Levi.",
+            "text": "Present in this chapter: Levi.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Jerusalem.",
+            "text": "Places in this chapter: Jerusalem, The Israelites.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -269,9 +269,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Malachi 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -312,9 +312,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Malachi 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -550,14 +550,14 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Jacob.",
-            "claim_keys": [],
-            "open_question_key": null
-          },
-          "where": {
             "text": null,
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-mal-3-p2-where"
+            "open_question_key": "question:wb-context-en-wb-mal-3-p2-who"
+          },
+          "where": {
+            "text": "Places in this passage: The Israelites.",
+            "claim_keys": [],
+            "open_question_key": null
           },
           "when": {
             "text": null,
@@ -696,16 +696,6 @@
         "review_status": "draft"
       },
       {
-        "localization_key": "relevance-localization:en:wb-mal-3-p-jacob-1",
-        "relevance_key": "relevance:wb-mal-3-p-jacob-1",
-        "scope_key": "scope:wb-mal-3:refsys:eng-v22:mal.3.1-mal.3.18",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Malachi 3 at verse(s) 6.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "localization_key": "relevance-localization:en:wb-mal-2-p-levi-1",
         "relevance_key": "relevance:wb-mal-2-p-levi-1",
         "scope_key": "scope:wb-mal-2:refsys:eng-v22:mal.2.1-mal.2.17",
@@ -794,6 +784,16 @@
         "role_text": "Named in Malachi 3 at verse(s) 4.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-mal-3-israelites",
+        "relevance_key": "relevance:wb-mal-3-israelites",
+        "scope_key": "scope:wb-mal-3:refsys:eng-v22:mal.3.1-mal.3.18",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Malachi 3 at verse(s) 6.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -842,7 +842,6 @@
             "context:en:wb-mal-4-p1"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-mal-1-before",
             "question:wb-context-en-wb-mal-1-p1-before",
             "question:wb-context-en-wb-mal-1-p1-stakes",
             "question:wb-context-en-wb-mal-1-p1-when",
@@ -853,7 +852,6 @@
             "question:wb-context-en-wb-mal-1-p2-who",
             "question:wb-context-en-wb-mal-1-stakes",
             "question:wb-context-en-wb-mal-1-when",
-            "question:wb-context-en-wb-mal-2-before",
             "question:wb-context-en-wb-mal-2-p1-before",
             "question:wb-context-en-wb-mal-2-p1-stakes",
             "question:wb-context-en-wb-mal-2-p1-when",
@@ -864,14 +862,13 @@
             "question:wb-context-en-wb-mal-2-p2-who",
             "question:wb-context-en-wb-mal-2-stakes",
             "question:wb-context-en-wb-mal-2-when",
-            "question:wb-context-en-wb-mal-3-before",
             "question:wb-context-en-wb-mal-3-p1-before",
             "question:wb-context-en-wb-mal-3-p1-stakes",
             "question:wb-context-en-wb-mal-3-p1-when",
             "question:wb-context-en-wb-mal-3-p2-before",
             "question:wb-context-en-wb-mal-3-p2-stakes",
             "question:wb-context-en-wb-mal-3-p2-when",
-            "question:wb-context-en-wb-mal-3-p2-where",
+            "question:wb-context-en-wb-mal-3-p2-who",
             "question:wb-context-en-wb-mal-3-p3-before",
             "question:wb-context-en-wb-mal-3-p3-stakes",
             "question:wb-context-en-wb-mal-3-p3-when",
@@ -879,7 +876,6 @@
             "question:wb-context-en-wb-mal-3-p3-who",
             "question:wb-context-en-wb-mal-3-stakes",
             "question:wb-context-en-wb-mal-3-when",
-            "question:wb-context-en-wb-mal-4-before",
             "question:wb-context-en-wb-mal-4-p1-before",
             "question:wb-context-en-wb-mal-4-p1-stakes",
             "question:wb-context-en-wb-mal-4-p1-when",
@@ -900,14 +896,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-mal-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-mal-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-mal-1",
@@ -921,14 +909,6 @@
       "record_key": "context:en:wb-mal-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-mal-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -948,14 +928,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-mal-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-mal-3-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-mal-3",
@@ -969,14 +941,6 @@
       "record_key": "context:en:wb-mal-4",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-mal-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-mal-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1140,11 +1104,11 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-mal-3-p2-where",
+      "question_key": "question:wb-context-en-wb-mal-3-p2-who",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-mal-3-p2",
-      "field_path": "/records/passage_contexts/orientation/where",
-      "question": "Where context is not supported by the approved inputs for this scope.",
+      "field_path": "/records/passage_contexts/orientation/who",
+      "question": "Who context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

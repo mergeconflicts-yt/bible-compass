@@ -23,11 +23,12 @@ BEGIN
   SELECT payload_digest, receipt->>'review_status' INTO d, s
   FROM private_staging.curation_imports
   WHERE package_key = 'import:english-canon:canonical-locale-edition';
-  IF d !~ '^sha256:[0-9a-f]{64}$' THEN
+  IF d IS NULL OR d !~ '^sha256:[0-9a-f]{64}$' THEN
     RAISE EXCEPTION 'FAIL: receipt digest malformed: %', d;
   END IF;
-  IF s <> 'draft' THEN
-    RAISE EXCEPTION 'FAIL: receipt is not draft: %', s;
+  -- Null-safe: a missing review flag must fail, never pass.
+  IF s IS DISTINCT FROM 'draft' THEN
+    RAISE EXCEPTION 'FAIL: receipt is not draft (got %)', COALESCE(s, 'NULL');
   END IF;
 END $$;
 
@@ -140,6 +141,35 @@ BEGIN
   IF chapters <> 1189 THEN RAISE EXCEPTION 'FAIL: % chapters, expected 1189', chapters; END IF;
 END $$;
 
+-- 6b. Canon order and testament come from the ratified skeleton, never from
+-- alphabetical file order: Acts is NT and late; Nehemiah is OT and mid-canon.
+DO $$
+DECLARE
+  acts_t text;
+  neh_t text;
+  gen_order integer;
+  rev_order integer;
+  matt_order integer;
+BEGIN
+  SELECT testament INTO acts_t FROM private_staging.scripture_works WHERE osis_code = 'Acts';
+  SELECT testament INTO neh_t FROM private_staging.scripture_works WHERE osis_code = 'Neh';
+  SELECT order_index INTO gen_order FROM private_staging.canon_work_memberships m
+   JOIN private_staging.scripture_works w ON w.id = m.work_id WHERE w.osis_code = 'Gen';
+  SELECT order_index INTO rev_order FROM private_staging.canon_work_memberships m
+   JOIN private_staging.scripture_works w ON w.id = m.work_id WHERE w.osis_code = 'Rev';
+  SELECT order_index INTO matt_order FROM private_staging.canon_work_memberships m
+   JOIN private_staging.scripture_works w ON w.id = m.work_id WHERE w.osis_code = 'Matt';
+  IF acts_t IS DISTINCT FROM 'NT' THEN
+    RAISE EXCEPTION 'FAIL: Acts testament is % (alphabetical import suspected)', COALESCE(acts_t, 'NULL');
+  END IF;
+  IF neh_t IS DISTINCT FROM 'OT' THEN
+    RAISE EXCEPTION 'FAIL: Nehemiah testament is % (alphabetical import suspected)', COALESCE(neh_t, 'NULL');
+  END IF;
+  IF gen_order IS DISTINCT FROM 1 THEN RAISE EXCEPTION 'FAIL: Genesis order % <> 1', gen_order; END IF;
+  IF matt_order IS DISTINCT FROM 40 THEN RAISE EXCEPTION 'FAIL: Matthew order % <> 40', matt_order; END IF;
+  IF rev_order IS DISTINCT FROM 66 THEN RAISE EXCEPTION 'FAIL: Revelation order % <> 66', rev_order; END IF;
+END $$;
+
 -- 7. Draft-only.
 DO $$
 DECLARE
@@ -151,6 +181,34 @@ BEGIN
   IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % non-draft mentions', n; END IF;
   SELECT count(*) INTO n FROM private_staging.entity_descriptions WHERE review_state <> 'draft';
   IF n <> 0 THEN RAISE EXCEPTION 'FAIL: % non-draft descriptions', n; END IF;
+END $$;
+
+-- 7b. Open-question state is preserved, not skipped: sections without
+-- supported text carry curation_state='open_question' with their blocking
+-- question key, so the database distinguishes them from curated ones.
+DO $$
+DECLARE
+  open_sections integer;
+  unkeyed integer;
+  keyed_curated integer;
+BEGIN
+  SELECT count(*) INTO open_sections
+  FROM private_staging.context_sections WHERE curation_state = 'open_question';
+  IF open_sections < 1 THEN
+    RAISE EXCEPTION 'FAIL: no open_question context sections preserved';
+  END IF;
+  SELECT count(*) INTO unkeyed
+  FROM private_staging.context_sections
+  WHERE curation_state = 'open_question' AND open_question_key IS NULL;
+  IF unkeyed <> 0 THEN
+    RAISE EXCEPTION 'FAIL: % open_question sections lack their question key', unkeyed;
+  END IF;
+  SELECT count(*) INTO keyed_curated
+  FROM private_staging.context_sections
+  WHERE curation_state = 'curated' AND open_question_key IS NOT NULL;
+  IF keyed_curated <> 0 THEN
+    RAISE EXCEPTION 'FAIL: % curated sections carry a question key', keyed_curated;
+  END IF;
 END $$;
 
 -- 8. Anonymous clients cannot read the imported drafts.

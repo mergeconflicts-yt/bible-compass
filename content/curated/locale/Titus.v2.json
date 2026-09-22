@@ -84,7 +84,7 @@
     {
       "package_key": "draft:wb-titus-canonical",
       "revision": 1,
-      "digest": "sha256:5f4e400d3f2d97566df9b50a68f4dad1bf74aa1a9d5e4cb6e19787180667bec6"
+      "digest": "sha256:cbfd706952f616f84ae46ee8108420f81cd7cac9e66cc2b505caa6e7cb4b88a9"
     }
   ],
   "records": {
@@ -96,7 +96,7 @@
         "preferred_name": "Artemas",
         "aliases": [],
         "short_description": {
-          "text": "Artemas is a person named in Scripture (Titus.3.12).",
+          "text": "Artemas — Paul might sent him to Titus (TIT 3:12).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -109,7 +109,7 @@
         "preferred_name": "Zenas",
         "aliases": [],
         "short_description": {
-          "text": "Zenas is a person named in Scripture (Titus.3.13).",
+          "text": "Zenas — a lawyer Paul charged Titus with digiligently helping (TIT 3:13).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -120,9 +120,7 @@
         "entity_key": "entity:pl-nicopolis-af43cde",
         "language_tag": "en",
         "preferred_name": "Nicopolis",
-        "aliases": [
-          "ma7fa5c"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Nicopolis is a place named in Scripture (Titus.3.12).",
           "claim_keys": []
@@ -181,7 +179,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Saul, Titus.",
+            "text": "Present in this chapter: Paul, Titus.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -201,9 +199,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Titus.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-titus-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -244,9 +242,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Titus 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-titus-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -287,9 +285,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Titus 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-titus-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -310,7 +308,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Saul, Titus.",
+            "text": "Present in this passage: Paul, Titus.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -775,7 +773,6 @@
             "context:en:wb-titus-3-p3"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-titus-1-before",
             "question:wb-context-en-wb-titus-1-p1-before",
             "question:wb-context-en-wb-titus-1-p1-stakes",
             "question:wb-context-en-wb-titus-1-p1-when",
@@ -790,7 +787,6 @@
             "question:wb-context-en-wb-titus-1-p3-who",
             "question:wb-context-en-wb-titus-1-stakes",
             "question:wb-context-en-wb-titus-1-when",
-            "question:wb-context-en-wb-titus-2-before",
             "question:wb-context-en-wb-titus-2-p1-before",
             "question:wb-context-en-wb-titus-2-p1-stakes",
             "question:wb-context-en-wb-titus-2-p1-when",
@@ -805,7 +801,6 @@
             "question:wb-context-en-wb-titus-2-when",
             "question:wb-context-en-wb-titus-2-where",
             "question:wb-context-en-wb-titus-2-who",
-            "question:wb-context-en-wb-titus-3-before",
             "question:wb-context-en-wb-titus-3-p1-before",
             "question:wb-context-en-wb-titus-3-p1-stakes",
             "question:wb-context-en-wb-titus-3-p1-when",
@@ -833,14 +828,6 @@
       "record_key": "context:en:wb-titus-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-titus-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-titus-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -876,14 +863,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-titus-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-titus-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-titus-2-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-titus-2",
@@ -897,14 +876,6 @@
       "record_key": "context:en:wb-titus-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-titus-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-titus-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

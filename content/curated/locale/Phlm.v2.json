@@ -57,7 +57,7 @@
     {
       "package_key": "draft:wb-phlm-canonical",
       "revision": 1,
-      "digest": "sha256:f3a473d5fdbfd698c5f51b267f2a1f95bccdd2eb81317e6717363dd1ad6a9882"
+      "digest": "sha256:3eecc414d7255940b8c209d9225087fb703d9824511e2adffb7c53b1da6caf7e"
     }
   ],
   "records": {
@@ -69,7 +69,7 @@
         "preferred_name": "Philemon",
         "aliases": [],
         "short_description": {
-          "text": "Philemon is a person named in Scripture (Phlm.1.1).",
+          "text": "Philemon — Paul's fellow worker (PHM 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -82,7 +82,7 @@
         "preferred_name": "Apphia",
         "aliases": [],
         "short_description": {
-          "text": "Apphia is a person named in Scripture (Phlm.1.2).",
+          "text": "Apphia — Paul's sister in the faith (PHM 1:2).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -159,9 +159,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Philemon.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-phlm-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -182,7 +182,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Apphia, Archippus, Philemon, Saul, Timothy.",
+            "text": "Present in this passage: Apphia, Archippus, Paul, Philemon, Timothy.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -268,7 +268,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Onesimus, Saul.",
+            "text": "Present in this passage: Onesimus, Paul.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -493,7 +493,6 @@
             "context:en:wb-phlm-1-p4"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-phlm-1-before",
             "question:wb-context-en-wb-phlm-1-p1-before",
             "question:wb-context-en-wb-phlm-1-p1-stakes",
             "question:wb-context-en-wb-phlm-1-p1-when",
@@ -534,14 +533,6 @@
       "record_key": "context:en:wb-phlm-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-phlm-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-phlm-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

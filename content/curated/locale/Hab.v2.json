@@ -93,7 +93,7 @@
     {
       "package_key": "draft:wb-hab-canonical",
       "revision": 1,
-      "digest": "sha256:f17e170e2ced71243b20bc9d036d2e01510a5e91e4e2c6436af69b7c420e44b5"
+      "digest": "sha256:8dea4be8f069e48a3d22c04edf529ccdfcb59daa6a748fbf1dd88fb4551dd5f8"
     }
   ],
   "records": {
@@ -105,7 +105,7 @@
         "preferred_name": "Habakkuk",
         "aliases": [],
         "short_description": {
-          "text": "Habakkuk is a person named in Scripture (Hab.1.1–Hab.3.1).",
+          "text": "Habakkuk — the prophet (HAB 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -116,11 +116,7 @@
         "entity_key": "entity:pl-cushan-a567e0e",
         "language_tag": "en",
         "preferred_name": "Cushan",
-        "aliases": [
-          "a3c7b44",
-          "ac5a1ec",
-          "acc6d8e"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Cushan is a place named in Scripture (Hab.3.7).",
           "claim_keys": []
@@ -199,9 +195,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Habakkuk.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hab-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -242,9 +238,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Habakkuk 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hab-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -285,9 +281,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Habakkuk 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hab-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -728,7 +724,6 @@
             "context:en:wb-hab-3-p2"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-hab-1-before",
             "question:wb-context-en-wb-hab-1-p1-before",
             "question:wb-context-en-wb-hab-1-p1-stakes",
             "question:wb-context-en-wb-hab-1-p1-when",
@@ -744,7 +739,6 @@
             "question:wb-context-en-wb-hab-1-p3-who",
             "question:wb-context-en-wb-hab-1-stakes",
             "question:wb-context-en-wb-hab-1-when",
-            "question:wb-context-en-wb-hab-2-before",
             "question:wb-context-en-wb-hab-2-p1-before",
             "question:wb-context-en-wb-hab-2-p1-stakes",
             "question:wb-context-en-wb-hab-2-p1-when",
@@ -757,7 +751,6 @@
             "question:wb-context-en-wb-hab-2-stakes",
             "question:wb-context-en-wb-hab-2-when",
             "question:wb-context-en-wb-hab-2-who",
-            "question:wb-context-en-wb-hab-3-before",
             "question:wb-context-en-wb-hab-3-p1-before",
             "question:wb-context-en-wb-hab-3-p1-stakes",
             "question:wb-context-en-wb-hab-3-p1-when",
@@ -780,14 +773,6 @@
       "record_key": "context:en:wb-hab-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-hab-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hab-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -815,14 +800,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-hab-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hab-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-hab-2-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-hab-2",
@@ -836,14 +813,6 @@
       "record_key": "context:en:wb-hab-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-hab-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hab-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

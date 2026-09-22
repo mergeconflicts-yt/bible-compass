@@ -1082,11 +1082,47 @@
     {
       "package_key": "draft:wb-1chr-canonical",
       "revision": 1,
-      "digest": "sha256:89c151f0a8adf5351efb6f394506496d8cf2a5c6d72ceb735d61f0584eee7854"
+      "digest": "sha256:e9218b2d436b9f9ae893ad0a5afd54e42ebdfc5cc71980892a75bc0739754d37"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:1chr-israelites-27-1",
+        "verse_key": "verse:1Chr.27.1",
+        "attestation_key": "attestation:wb-1chr-israelites-27-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": " is the list of the ",
+          "suffix": "—the heads of famili"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:1chr-israelites-6-64",
+        "verse_key": "verse:1Chr.6.64",
+        "attestation_key": "attestation:wb-1chr-israelites-6-64",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "So the ",
+          "suffix": " gave to the Levites"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:1chr-jerusalem-11-4",
         "verse_key": "verse:1Chr.11.4",
@@ -20037,78 +20073,6 @@
           "occurrence_ordinal": 1,
           "prefix": "ch He had commanded ",
           "suffix": " to keep."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1chr-p-jacob-1-17-24",
-        "verse_key": "verse:1Chr.17.24",
-        "attestation_key": "attestation:wb-1chr-p-jacob-1-17-24",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "f Hosts, the God of ",
-          "suffix": ", is God over Israel"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1chr-p-jacob-1-2-1",
-        "verse_key": "verse:1Chr.2.1",
-        "attestation_key": "attestation:wb-1chr-p-jacob-1-2-1",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "se were the sons of ",
-          "suffix": ": Reuben, Simeon, Le"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1chr-p-jacob-1-27-16",
-        "verse_key": "verse:1Chr.27.16",
-        "attestation_key": "attestation:wb-1chr-p-jacob-1-27-16",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "ge of the tribes of ",
-          "suffix": ": Over the Reubenite"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:1chr-p-jacob-1-27-22",
-        "verse_key": "verse:1Chr.27.22",
-        "attestation_key": "attestation:wb-1chr-p-jacob-1-27-22",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "rs of the tribes of ",
-          "suffix": "."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -43771,7 +43735,6 @@
             "verse:1Chr.26.20",
             "verse:1Chr.26.23",
             "verse:1Chr.26.27",
-            "verse:1Chr.27.1",
             "verse:1Chr.27.6",
             "verse:1Chr.28.10",
             "verse:1Chr.28.12",
@@ -43813,7 +43776,6 @@
             "verse:1Chr.5.25",
             "verse:1Chr.6.48",
             "verse:1Chr.6.58",
-            "verse:1Chr.6.64",
             "verse:1Chr.6.69",
             "verse:1Chr.7.4",
             "verse:1Chr.7.9",
@@ -44511,7 +44473,6 @@
           ],
           "record_keys": [
             "mention:wb:1chr-p-issachar-1-2-1",
-            "mention:wb:1chr-p-jacob-1-2-1",
             "mention:wb:1chr-p-judah-1-2-1",
             "mention:wb:1chr-p-levi-1-2-1",
             "mention:wb:1chr-p-reuben-1-2-1",
@@ -47044,6 +47005,16 @@
             "mention:wb:1chr-p-gad-1-6-63",
             "mention:wb:1chr-p-reuben-1-6-63",
             "mention:wb:1chr-p-zebulun-1-6-63"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
+            "verse:1Chr.6.64"
+          ],
+          "record_keys": [
+            "mention:wb:1chr-israelites-6-64"
           ],
           "blocker_question_keys": []
         },
@@ -50489,8 +50460,7 @@
             "verse:1Chr.17.24"
           ],
           "record_keys": [
-            "mention:wb:1chr-p-david-1-17-24",
-            "mention:wb:1chr-p-jacob-1-17-24"
+            "mention:wb:1chr-p-david-1-17-24"
           ],
           "blocker_question_keys": []
         },
@@ -52578,6 +52548,16 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
+            "verse:1Chr.27.1"
+          ],
+          "record_keys": [
+            "mention:wb:1chr-israelites-27-1"
+          ],
+          "blocker_question_keys": []
+        },
+        {
+          "result": "complete_with_records",
+          "reference_keys": [
             "verse:1Chr.27.2"
           ],
           "record_keys": [
@@ -52718,7 +52698,6 @@
           ],
           "record_keys": [
             "mention:wb:1chr-p-eliezer-5-27-16",
-            "mention:wb:1chr-p-jacob-1-27-16",
             "mention:wb:1chr-p-maacah-8-27-16",
             "mention:wb:1chr-p-shephatiah-4-27-16",
             "mention:wb:1chr-p-zichri-7-27-16"
@@ -52797,7 +52776,6 @@
           ],
           "record_keys": [
             "mention:wb:1chr-p-azarel-2-27-22",
-            "mention:wb:1chr-p-jacob-1-27-22",
             "mention:wb:1chr-p-jeroham-5-27-22"
           ],
           "blocker_question_keys": []

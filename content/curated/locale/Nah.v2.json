@@ -80,7 +80,7 @@
     {
       "package_key": "draft:wb-nah-canonical",
       "revision": 1,
-      "digest": "sha256:18a794edf82d16c00d1bd296541c206f3744c9cbaf96ff711f6517fadb250604"
+      "digest": "sha256:17d0d2aefa6c06e1a1158837430edb2f47832fe28bbe215b644eb8c43d63fbce"
     }
   ],
   "records": {
@@ -92,7 +92,7 @@
         "preferred_name": "Nahum",
         "aliases": [],
         "short_description": {
-          "text": "Nahum is a person named in Scripture (Nah.1.1).",
+          "text": "Nahum — the Elkoshite, prophet of the book of Nahum (NAH 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -103,13 +103,7 @@
         "entity_key": "entity:pl-elkosh-a221d82",
         "language_tag": "en",
         "preferred_name": "Elkosh",
-        "aliases": [
-          "a0d1977",
-          "af2161c",
-          "m370d20",
-          "m67fb06",
-          "m7bf4f1"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Elkosh is a place named in Scripture (Nah.1.1).",
           "claim_keys": []
@@ -188,9 +182,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Nahum.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-nah-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -231,9 +225,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Nahum 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-nah-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -274,9 +268,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Nahum 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-nah-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -627,13 +621,11 @@
             "context:en:wb-nah-3-p1"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-nah-1-before",
             "question:wb-context-en-wb-nah-1-p1-before",
             "question:wb-context-en-wb-nah-1-p1-stakes",
             "question:wb-context-en-wb-nah-1-p1-when",
             "question:wb-context-en-wb-nah-1-stakes",
             "question:wb-context-en-wb-nah-1-when",
-            "question:wb-context-en-wb-nah-2-before",
             "question:wb-context-en-wb-nah-2-p1-before",
             "question:wb-context-en-wb-nah-2-p1-stakes",
             "question:wb-context-en-wb-nah-2-p1-when",
@@ -641,7 +633,6 @@
             "question:wb-context-en-wb-nah-2-stakes",
             "question:wb-context-en-wb-nah-2-when",
             "question:wb-context-en-wb-nah-2-who",
-            "question:wb-context-en-wb-nah-3-before",
             "question:wb-context-en-wb-nah-3-p1-before",
             "question:wb-context-en-wb-nah-3-p1-stakes",
             "question:wb-context-en-wb-nah-3-p1-when",
@@ -659,14 +650,6 @@
       "record_key": "context:en:wb-nah-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-nah-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-nah-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -694,14 +677,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-nah-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-nah-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-nah-2-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-nah-2",
@@ -715,14 +690,6 @@
       "record_key": "context:en:wb-nah-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-nah-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-nah-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

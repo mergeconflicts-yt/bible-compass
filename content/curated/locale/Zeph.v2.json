@@ -93,7 +93,7 @@
     {
       "package_key": "draft:wb-zeph-canonical",
       "revision": 1,
-      "digest": "sha256:f750e3a80f94409b2fb4d8b94327ec83fa361ea5c54d3b81b1e60fe0721a600b"
+      "digest": "sha256:1b6c307eff42039d7ea0227031c949e651adcee8b7890d7d7617a3fb915d0e51"
     }
   ],
   "records": {
@@ -105,7 +105,7 @@
         "preferred_name": "Zephaniah",
         "aliases": [],
         "short_description": {
-          "text": "Zephaniah is a person named in Scripture (Zeph.1.1).",
+          "text": "Zephaniah — the prophet, the son of Cushi (ZEP 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -118,7 +118,7 @@
         "preferred_name": "Cushi",
         "aliases": [],
         "short_description": {
-          "text": "Cushi is a person named in Scripture (Zeph.1.1).",
+          "text": "Cushi — father of Zephaniah the prophet (ZEP 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -131,7 +131,7 @@
         "preferred_name": "Gedaliah",
         "aliases": [],
         "short_description": {
-          "text": "Gedaliah is a person named in Scripture (Zeph.1.1).",
+          "text": "Gedaliah — grandfather of Zephaniah the prophet (ZEP 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -144,7 +144,7 @@
         "preferred_name": "Amariah",
         "aliases": [],
         "short_description": {
-          "text": "Amariah is a person named in Scripture (Zeph.1.1).",
+          "text": "Amariah — great-grandfather of Zephaniah the prophet (ZEP 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -157,7 +157,7 @@
         "preferred_name": "Hezekiah",
         "aliases": [],
         "short_description": {
-          "text": "Hezekiah is a person named in Scripture (Zeph.1.1).",
+          "text": "Hezekiah — great-great-grandfather of Zephaniah the prophet (ZEP 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -168,9 +168,7 @@
         "entity_key": "entity:pl-mortar-abcd5f2",
         "language_tag": "en",
         "preferred_name": "Mortar",
-        "aliases": [
-          "a15257a"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Mortar is a place named in Scripture (Zeph.1.11).",
           "claim_keys": []
@@ -249,9 +247,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Zephaniah.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-zeph-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -292,9 +290,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Zephaniah 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-zeph-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -335,9 +333,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Zephaniah 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-zeph-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1113,7 +1111,6 @@
             "context:en:wb-zeph-3-p4"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-zeph-1-before",
             "question:wb-context-en-wb-zeph-1-p1-before",
             "question:wb-context-en-wb-zeph-1-p1-stakes",
             "question:wb-context-en-wb-zeph-1-p1-when",
@@ -1123,7 +1120,6 @@
             "question:wb-context-en-wb-zeph-1-p2-who",
             "question:wb-context-en-wb-zeph-1-stakes",
             "question:wb-context-en-wb-zeph-1-when",
-            "question:wb-context-en-wb-zeph-2-before",
             "question:wb-context-en-wb-zeph-2-p1-before",
             "question:wb-context-en-wb-zeph-2-p1-stakes",
             "question:wb-context-en-wb-zeph-2-p1-when",
@@ -1142,7 +1138,6 @@
             "question:wb-context-en-wb-zeph-2-p4-who",
             "question:wb-context-en-wb-zeph-2-stakes",
             "question:wb-context-en-wb-zeph-2-when",
-            "question:wb-context-en-wb-zeph-3-before",
             "question:wb-context-en-wb-zeph-3-p1-before",
             "question:wb-context-en-wb-zeph-3-p1-stakes",
             "question:wb-context-en-wb-zeph-3-p1-when",
@@ -1177,14 +1172,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-zeph-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-zeph-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-zeph-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-zeph-1",
@@ -1198,14 +1185,6 @@
       "record_key": "context:en:wb-zeph-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-zeph-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-zeph-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1230,14 +1209,6 @@
       "record_key": "context:en:wb-zeph-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-zeph-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-zeph-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

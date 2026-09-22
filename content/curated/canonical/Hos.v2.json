@@ -257,7 +257,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -431,58 +431,8 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-hos-p-jacob-1-1-6",
-        "reference_key": "verse:Hos.1.6",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-hos-p-jacob-1-1-11",
         "reference_key": "verse:Hos.1.11",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-hos-p-jacob-1-3-4",
-        "reference_key": "verse:Hos.3.4",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-hos-p-jacob-1-3-5",
-        "reference_key": "verse:Hos.3.5",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-hos-p-jacob-1-4-1",
-        "reference_key": "verse:Hos.4.1",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-hos-p-jacob-1-5-1",
-        "reference_key": "verse:Hos.5.1",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
@@ -1389,6 +1339,56 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-israelites-1-6",
+        "reference_key": "verse:Hos.1.6",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-israelites-3-4",
+        "reference_key": "verse:Hos.3.4",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-israelites-3-5",
+        "reference_key": "verse:Hos.3.5",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-israelites-4-1",
+        "reference_key": "verse:Hos.4.1",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-hos-israelites-5-1",
+        "reference_key": "verse:Hos.5.1",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -1530,6 +1530,7 @@
         "event_key": "event:wb-hos-1-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
+          "entity:israelites",
           "entity:p-ahaz-1",
           "entity:p-azariah-3",
           "entity:p-beeri-2",
@@ -1732,8 +1733,8 @@
         "event_key": "event:wb-hos-3-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-david-1",
-          "entity:p-jacob-1"
+          "entity:israelites",
+          "entity:p-david-1"
         ],
         "place_entity_keys": [],
         "scripture_accounts": [
@@ -1749,7 +1750,7 @@
         "event_key": "event:wb-hos-4-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-jacob-1"
+          "entity:israelites"
         ],
         "place_entity_keys": [
           "entity:pl-beth-aven-2-a696a95",
@@ -1768,7 +1769,7 @@
         "event_key": "event:wb-hos-5-p1",
         "event_type": "judgment",
         "participant_entity_keys": [
-          "entity:p-jacob-1",
+          "entity:israelites",
           "entity:p-king-jareb-1"
         ],
         "place_entity_keys": [
@@ -1982,33 +1983,6 @@
       {
         "relevance_key": "relevance:wb-hos-1-p-jacob-1",
         "scope_key": "scope:wb-hos-1:refsys:eng-v22:hos.1.1-hos.1.11",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-hos-3-p-jacob-1",
-        "scope_key": "scope:wb-hos-3:refsys:eng-v22:hos.3.1-hos.3.5",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "supporting",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-hos-4-p-jacob-1",
-        "scope_key": "scope:wb-hos-4:refsys:eng-v22:hos.4.1-hos.4.19",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-hos-5-p-jacob-1",
-        "scope_key": "scope:wb-hos-5:refsys:eng-v22:hos.5.1-hos.5.15",
         "entity_key": "entity:p-jacob-1",
         "importance": "background",
         "is_attested": true,
@@ -2671,9 +2645,50 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-1-israelites",
+        "scope_key": "scope:wb-hos-1:refsys:eng-v22:hos.1.1-hos.1.11",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-3-israelites",
+        "scope_key": "scope:wb-hos-3:refsys:eng-v22:hos.3.1-hos.3.5",
+        "entity_key": "entity:israelites",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-4-israelites",
+        "scope_key": "scope:wb-hos-4:refsys:eng-v22:hos.4.1-hos.4.19",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-hos-5-israelites",
+        "scope_key": "scope:wb-hos-5:refsys:eng-v22:hos.5.1-hos.5.15",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:p-adam-1",
         "resolution_status": "resolved_existing",
@@ -3124,7 +3139,7 @@
             "verse:Hos.1.6"
           ],
           "record_keys": [
-            "attestation:wb-hos-p-jacob-1-1-6",
+            "attestation:wb-hos-israelites-1-6",
             "attestation:wb-hos-p-lo-ruhamah-1-1-6"
           ],
           "blocker_question_keys": []
@@ -3198,7 +3213,7 @@
             "verse:Hos.3.4"
           ],
           "record_keys": [
-            "attestation:wb-hos-p-jacob-1-3-4"
+            "attestation:wb-hos-israelites-3-4"
           ],
           "blocker_question_keys": []
         },
@@ -3208,8 +3223,8 @@
             "verse:Hos.3.5"
           ],
           "record_keys": [
-            "attestation:wb-hos-p-david-1-3-5",
-            "attestation:wb-hos-p-jacob-1-3-5"
+            "attestation:wb-hos-israelites-3-5",
+            "attestation:wb-hos-p-david-1-3-5"
           ],
           "blocker_question_keys": []
         },
@@ -3219,7 +3234,7 @@
             "verse:Hos.4.1"
           ],
           "record_keys": [
-            "attestation:wb-hos-p-jacob-1-4-1"
+            "attestation:wb-hos-israelites-4-1"
           ],
           "blocker_question_keys": []
         },
@@ -3240,7 +3255,7 @@
             "verse:Hos.5.1"
           ],
           "record_keys": [
-            "attestation:wb-hos-p-jacob-1-5-1",
+            "attestation:wb-hos-israelites-5-1",
             "attestation:wb-hos-pl-mizpah-1-a0f8af9-5-1",
             "attestation:wb-hos-pl-mount-tabor-acd63ee-5-1"
           ],

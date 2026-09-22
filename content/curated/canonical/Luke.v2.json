@@ -1354,7 +1354,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -2432,16 +2432,6 @@
         "attestation_key": "attestation:wb-luke-p-isaac-1-13-28",
         "reference_key": "verse:Luke.13.28",
         "entity_key": "entity:p-isaac-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-luke-p-jacob-1-1-33",
-        "reference_key": "verse:Luke.1.33",
-        "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -6717,6 +6707,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-luke-israelites-1-33",
+        "reference_key": "verse:Luke.1.33",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -7912,10 +7912,10 @@
         "event_key": "event:wb-luke-1-p3",
         "event_type": "birth",
         "participant_entity_keys": [
+          "entity:israelites",
           "entity:p-david-1",
           "entity:p-elizabeth-1",
           "entity:p-gabriel-1",
-          "entity:p-jacob-1",
           "entity:p-joseph-6",
           "entity:p-mary-1"
         ],
@@ -10049,7 +10049,7 @@
         "relevance_key": "relevance:wb-luke-1-p-jacob-1",
         "scope_key": "scope:wb-luke-1:refsys:eng-v22:luke.1.1-luke.1.80",
         "entity_key": "entity:p-jacob-1",
-        "importance": "supporting",
+        "importance": "background",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -12384,9 +12384,23 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-luke-1-israelites",
+        "scope_key": "scope:wb-luke-1:refsys:eng-v22:luke.1.1-luke.1.80",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -14325,7 +14339,7 @@
             "verse:Luke.1.33"
           ],
           "record_keys": [
-            "attestation:wb-luke-p-jacob-1-1-33"
+            "attestation:wb-luke-israelites-1-33"
           ],
           "blocker_question_keys": []
         },

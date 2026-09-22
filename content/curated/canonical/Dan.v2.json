@@ -429,7 +429,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -694,16 +694,6 @@
         "attestation_key": "attestation:wb-dan-p-ben-ammi-1-11-41",
         "reference_key": "verse:Dan.11.41",
         "entity_key": "entity:p-ben-ammi-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-dan-p-jacob-1-1-3",
-        "reference_key": "verse:Dan.1.3",
-        "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -3259,6 +3249,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-dan-israelites-1-3",
+        "reference_key": "verse:Dan.1.3",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -3356,11 +3356,11 @@
         "event_key": "event:wb-dan-1-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
+          "entity:israelites",
           "entity:p-ashpenaz-1",
           "entity:p-daniel-2",
           "entity:p-eliakim-2",
           "entity:p-hananiah-12",
-          "entity:p-jacob-1",
           "entity:p-judah-1",
           "entity:p-nebuchadnezzar-1"
         ],
@@ -4089,15 +4089,6 @@
         "relevance_key": "relevance:wb-dan-11-p-ben-ammi-1",
         "scope_key": "scope:wb-dan-11:refsys:eng-v22:dan.11.1-dan.11.45",
         "entity_key": "entity:p-ben-ammi-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-dan-1-p-jacob-1",
-        "scope_key": "scope:wb-dan-1:refsys:eng-v22:dan.1.1-dan.1.21",
-        "entity_key": "entity:p-jacob-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -4885,9 +4876,23 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-dan-1-israelites",
+        "scope_key": "scope:wb-dan-1:refsys:eng-v22:dan.1.1-dan.1.21",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -4960,11 +4965,6 @@
       },
       {
         "canonical_entity_key": "entity:p-hananiah-12",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-jacob-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -5355,8 +5355,8 @@
             "verse:Dan.1.3"
           ],
           "record_keys": [
+            "attestation:wb-dan-israelites-1-3",
             "attestation:wb-dan-p-ashpenaz-1-1-3",
-            "attestation:wb-dan-p-jacob-1-1-3",
             "attestation:wb-dan-pl-babylon-1-a217d18-1-3"
           ],
           "blocker_question_keys": []

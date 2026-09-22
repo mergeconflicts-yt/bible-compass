@@ -40,6 +40,9 @@ import sys
 import uuid
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import canon_order  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 CURATED = REPO / "content" / "curated"
 SCRIPTURE = REPO / "apps" / "mobile" / "assets" / "scripture" / "bsb"
@@ -51,12 +54,16 @@ BSB_ARTIFACT_SHA = (
     "sha256:b2898c49cadb50fd8763feb9e2f74a90a3817e33408a24b6cbf09e7a950dde97"
 )
 IMPORT_PACKAGE_KEY = "import:english-canon:canonical-locale-edition"
-IMPORT_REVISION = 1
+# Revision 3: canonical book order/testament repair + curated identity
+# corrections (collective Israel, Paul/Peter names) + context curation state
+# + membership delete-before-insert ordering (revision 2 deleted memberships
+# after re-inserting them, leaving the table empty).
+# A revision bump authorizes re-import over an older receipt.
+IMPORT_REVISION = 3
 PROVENANCE = "draft import from content/curated English v2 packages (unverified curation)"
 UNKNOWN_LICENSE = "unknown"
 UNKNOWN_RELEASE_ID = str(uuid.uuid5(uuid.NAMESPACE_URL, "release:unknown:bsb"))
 
-OT_ORDER = None
 SCOPE_RE = re.compile(
     r"^scope:[A-Za-z0-9-]+(?::[A-Za-z0-9-]+)*:"
     r"(?P<b>[A-Za-z1-9][A-Za-z0-9]*)\.(?P<c>\d+)\.(?P<v>\d+)-"
@@ -108,12 +115,11 @@ def load_json(path: Path) -> dict:
 
 
 def load_books() -> list[dict]:
+    """Books in authoritative canon order (never alphabetical file order)."""
     books = []
     for path in sorted(SCRIPTURE.glob("*.json")):
         books.append(json.loads(path.read_text(encoding="utf-8")))
-    order = [b["osis"] for b in books]
-    books.sort(key=lambda b: order.index(b["osis"]))
-    return books
+    return canon_order.ordered(books)
 
 
 # ---------------------------------------------------------------------------
@@ -223,13 +229,22 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
 
     # --- canon / works / reference system ---------------------------------
     add("insert into private_staging.canons (key, name) values ('canon:prot-66','Protestant 66') on conflict (key) do nothing;")
+    # Repair-safe scaffolding: this importer owns the membership rows and the
+    # unit ordinals, so a re-import with a bumped revision fixes earlier
+    # alphabetical-order data instead of silently keeping it.
+    add(
+        "delete from private_staging.canon_work_memberships "
+        "where canon_id = (select id from private_staging.canons where key='canon:prot-66');"
+    )
+
     for i, book in enumerate(books, start=1):
         osis = book["osis"]
         work_key = f"work:{osis}:prot-66"
         add(
             "insert into private_staging.scripture_works (key, osis_code, name, testament) values ("
             f"{esc(work_key)}, {esc(osis)}, {esc(book['name'])}, "
-            f"{esc('OT' if i <= 39 else 'NT')}) on conflict (key) do nothing;"
+            f"{esc(canon_order.TESTAMENT_BY_OSIS[osis])}) "
+            "on conflict (key) do update set name = excluded.name, testament = excluded.testament;"
         )
         add(
             "insert into private_staging.canon_work_memberships (canon_id, work_id, order_index) "
@@ -246,25 +261,32 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
     # --- reference units (book, chapter, verse) ---------------------------
     refsys_id = f"(select id from private_staging.reference_systems where key={esc(REFSYS)})"
     work = lambda osis: f"(select id from private_staging.scripture_works where osis_code={esc(osis)})"
+    # Move existing ordinals out of the way so the unique (refsys, ordinal)
+    # constraint cannot collide while the corrective updates land.
+    add(
+        "update private_staging.reference_units set ordinal = ordinal + 100000000 "
+        f"where reference_system_id = {refsys_id};"
+    )
+    unit_upsert = "on conflict (reference_system_id, local_key) do update set ordinal = excluded.ordinal, chapter_label = excluded.chapter_label, verse_label = excluded.verse_label, kind = excluded.kind"
     for i, book in enumerate(books, start=1):
         osis = book["osis"]
         base = i * 1_000_000
         add(
             "insert into private_staging.reference_units (reference_system_id, local_key, work_id, chapter_label, verse_label, kind, ordinal) values ("
-            f"{refsys_id}, {esc(osis.lower())}, {work(osis)}, '0', null, 'book', {base}) on conflict do nothing;"
+            f"{refsys_id}, {esc(osis.lower())}, {work(osis)}, '0', null, 'book', {base}) {unit_upsert};"
         )
         for ch in book["chapters"]:
             chapter_key = f"{osis}.{ch['n']}"
             add(
                 "insert into private_staging.reference_units (reference_system_id, local_key, work_id, chapter_label, verse_label, kind, ordinal) values ("
-                f"{refsys_id}, {esc(chapter_key.lower())}, {work(osis)}, {esc(str(ch['n']))}, null, 'chapter', {base + ch['n'] * 1000}) on conflict do nothing;"
+                f"{refsys_id}, {esc(chapter_key.lower())}, {work(osis)}, {esc(str(ch['n']))}, null, 'chapter', {base + ch['n'] * 1000}) {unit_upsert};"
             )
             for b in ch["blocks"]:
                 if b.get("t") != "v":
                     continue
                 add(
                     "insert into private_staging.reference_units (reference_system_id, local_key, work_id, chapter_label, verse_label, kind, ordinal) values ("
-                    f"{refsys_id}, {esc(f'{osis.lower()}.{ch['n']}.{b['n']}')}, {work(osis)}, {esc(str(ch['n']))}, {esc(str(b['n']))}, 'verse', {base + ch['n'] * 1000 + b['n']}) on conflict do nothing;"
+                    f"{refsys_id}, {esc(f'{osis.lower()}.{ch['n']}.{b['n']}')}, {work(osis)}, {esc(str(ch['n']))}, {esc(str(b['n']))}, 'verse', {base + ch['n'] * 1000 + b['n']}) {unit_upsert};"
                 )
 
     unit = lambda local: f"(select id from private_staging.reference_units ru where ru.reference_system_id={refsys_id} and ru.local_key={esc(local.lower())})"
@@ -297,7 +319,8 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             kind = "chapter"
         add(
             "insert into private_staging.scripture_scopes (key, reference_system_id, kind, start_unit_id, end_unit_id, display_name, certainty) values ("
-            f"{esc(sk)}, {refsys_id}, {esc(kind)}, {start}, {end}, {esc(sk.split(':', 2)[1])}, 'established') on conflict (key) do nothing;"
+            f"{esc(sk)}, {refsys_id}, {esc(kind)}, {start}, {end}, {esc(sk.split(':', 2)[1])}, 'established') "
+            "on conflict (key) do update set kind = excluded.kind;"
         )
     scope_id = lambda sk: f"(select id from private_staging.scripture_scopes where key={esc(sk)})"
 
@@ -343,9 +366,14 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
     ent = lambda key: f"(select id from private_staging.entities where key={esc(key)})"
 
     # --- entity names + English descriptions ------------------------------
+    # Source identifiers (e.g. OpenBible a15257a) are never searchable
+    # English names, even if one ever regresses into the registry.
+    source_id = re.compile(r"^[a-z0-9]{4,10}$")
     for e in sorted(registry["entities"], key=lambda x: x["entity_key"]):
         forms = [("preferred", e["preferred_name"])] + [
-            ("alias", a) for a in e.get("aliases", []) if a and a != e["preferred_name"]
+            ("alias", a)
+            for a in e.get("aliases", [])
+            if a and a != e["preferred_name"] and not source_id.fullmatch(a.strip())
         ]
         seen_norm: set[str] = set()
         for kind, form in forms:
@@ -534,17 +562,26 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
             )
             revision = f"(select id from private_staging.context_revisions where artifact_id={artifact} and revision=1)"
             for kind, section in ctx["orientation"].items():
-                if not section.get("text"):
+                text = section.get("text")
+                qkey = section.get("open_question_key")
+                if text:
+                    state, stored_text, stored_q = "curated", text, "null"
+                elif qkey:
+                    # Not curated, and not silently absent: the blocking open
+                    # question is preserved so the database can tell the two
+                    # apart.
+                    state, stored_text, stored_q = "open_question", "", esc(qkey)
+                else:
                     continue
-                keys = section.get("claim_keys", [])
+                keys = section.get("claim_keys", []) if text else []
                 claim_select = (
                     "array[]::uuid[]"
                     if not keys
                     else "array[" + ",".join(claim_id(k) for k in keys) + "]::uuid[]"
                 )
                 add(
-                    "insert into private_staging.context_sections (revision_id, kind, text, claim_ids) "
-                    f"select {revision}, {esc(kind)}, {esc(section['text'])}, {claim_select} "
+                    "insert into private_staging.context_sections (revision_id, kind, text, claim_ids, curation_state, open_question_key) "
+                    f"select {revision}, {esc(kind)}, {esc(stored_text)}, {claim_select}, {esc(state)}, {stored_q} "
                     "where not exists (select 1 from private_staging.context_sections s where "
                     f"s.revision_id={revision} and s.kind={esc(kind)});"
                 )
@@ -554,7 +591,7 @@ def build_sql(books: list[dict], registry: dict) -> tuple[str, dict]:
 
 
 def payload_digest(books: list[dict], registry: dict) -> str:
-    parts = [jcs(registry)]
+    parts = [jcs([b["osis"] for b in books]), jcs(registry)]
     for book in books:
         osis = book["osis"]
         for layer in ("canonical", "edition", "locale"):
@@ -602,12 +639,14 @@ def main() -> int:
         "attestations": counts["attestations"],
         "mentions": counts["mentions"],
         "payload_digest": digest,
-        "review_state": "draft",
+        "review_status": "draft",
+        "canon_order": [b["osis"] for b in books],
     }
     header = (
         f"insert into private_staging.curation_imports (package_key, package_revision, payload_digest, receipt) values ("
         f"{esc(IMPORT_PACKAGE_KEY)}, {IMPORT_REVISION}, {esc(digest)}, {jsonb(receipt)}) "
-        "on conflict (package_key) do nothing;\n"
+        "on conflict (package_key) do update set package_revision = excluded.package_revision, "
+        "payload_digest = excluded.payload_digest, receipt = excluded.receipt, imported_at = now();\n"
     )
     sql = header + body
 
@@ -621,13 +660,21 @@ def main() -> int:
     )
     if existing:
         current = existing.splitlines()[0]
+        stored_digest, _, stored_revision = current.partition("|")
         if current == f"{digest}|{IMPORT_REVISION}":
             print("replay: identical payload — no-op")
             return 0
-        fail(
-            f"replay: changed payload for {IMPORT_PACKAGE_KEY} (was {current.split('|')[0]})",
-            3,
-        )
+        # A bumped revision authorizes a content migration over an older
+        # receipt; anything else that changes under the same key fails closed.
+        if int(stored_revision or 0) < IMPORT_REVISION:
+            print(
+                f"replay: stored revision {stored_revision} older than {IMPORT_REVISION} — migrating"
+            )
+        else:
+            fail(
+                f"replay: conflicting payload or newer receipt for {IMPORT_PACKAGE_KEY} (was {current})",
+                3,
+            )
 
     psql(args.database_url, sql, single_transaction=True)
     print(f"imported: {jcs(counts)} payload_digest={digest}")

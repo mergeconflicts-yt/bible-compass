@@ -124,7 +124,7 @@
     {
       "package_key": "draft:wb-ruth-canonical",
       "revision": 1,
-      "digest": "sha256:42c1ed8af526b9a07c76c9ff405c9857fdafd2b805069d2c85b8f612b0fe890c"
+      "digest": "sha256:b851874be74b96db4b7ed53243248c8bfc1a0da1f5ca6a70593f7ec7225472c5"
     }
   ],
   "records": {
@@ -136,7 +136,7 @@
         "preferred_name": "Elimelech",
         "aliases": [],
         "short_description": {
-          "text": "Elimelech is a person named in Scripture (Ruth.1.2–Ruth.4.9).",
+          "text": "Elimelech — husband of Naomi (RUT 1:2). Of the tribe of Judah.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -147,9 +147,11 @@
         "entity_key": "entity:p-naomi-1",
         "language_tag": "en",
         "preferred_name": "Naomi",
-        "aliases": [],
+        "aliases": [
+          "Mara"
+        ],
         "short_description": {
-          "text": "Naomi is a person named in Scripture (Ruth.1.2–Ruth.4.17).",
+          "text": "Naomi — wife of Elimelech (RUT 1:2) and mother-in-law of Ruth (RUT 1:4).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -162,7 +164,7 @@
         "preferred_name": "Mahlon",
         "aliases": [],
         "short_description": {
-          "text": "Mahlon is a person named in Scripture (Ruth.1.2–Ruth.4.10).",
+          "text": "Mahlon — son of Elimelech (RUT 1:2) and husband of Ruth (RUT 4:10). Of the tribe of Judah.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -175,7 +177,7 @@
         "preferred_name": "Chilion",
         "aliases": [],
         "short_description": {
-          "text": "Chilion is a person named in Scripture (Ruth.1.2–Ruth.4.9).",
+          "text": "Chilion — son of Elimelech (RUT 1:2). Of the tribe of Judah.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -188,7 +190,7 @@
         "preferred_name": "Orpah",
         "aliases": [],
         "short_description": {
-          "text": "Orpah is a person named in Scripture (Ruth.1.4–Ruth.1.14).",
+          "text": "Orpah — wife of Chilion (RUT 1:4) [process of elimination based on RUT 4:10].",
           "claim_keys": []
         },
         "extended_description": null,
@@ -265,9 +267,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Ruth.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-ruth-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -308,9 +310,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Ruth 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-ruth-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -351,9 +353,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Ruth 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-ruth-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -394,9 +396,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Ruth 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-ruth-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1194,7 +1196,6 @@
             "context:en:wb-ruth-4-p3"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-ruth-1-before",
             "question:wb-context-en-wb-ruth-1-p1-before",
             "question:wb-context-en-wb-ruth-1-p1-stakes",
             "question:wb-context-en-wb-ruth-1-p1-when",
@@ -1206,13 +1207,11 @@
             "question:wb-context-en-wb-ruth-1-p3-when",
             "question:wb-context-en-wb-ruth-1-stakes",
             "question:wb-context-en-wb-ruth-1-when",
-            "question:wb-context-en-wb-ruth-2-before",
             "question:wb-context-en-wb-ruth-2-p1-before",
             "question:wb-context-en-wb-ruth-2-p1-stakes",
             "question:wb-context-en-wb-ruth-2-p1-when",
             "question:wb-context-en-wb-ruth-2-stakes",
             "question:wb-context-en-wb-ruth-2-when",
-            "question:wb-context-en-wb-ruth-3-before",
             "question:wb-context-en-wb-ruth-3-p1-before",
             "question:wb-context-en-wb-ruth-3-p1-stakes",
             "question:wb-context-en-wb-ruth-3-p1-when",
@@ -1220,7 +1219,6 @@
             "question:wb-context-en-wb-ruth-3-stakes",
             "question:wb-context-en-wb-ruth-3-when",
             "question:wb-context-en-wb-ruth-3-where",
-            "question:wb-context-en-wb-ruth-4-before",
             "question:wb-context-en-wb-ruth-4-p1-before",
             "question:wb-context-en-wb-ruth-4-p1-stakes",
             "question:wb-context-en-wb-ruth-4-p1-when",
@@ -1249,14 +1247,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-ruth-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-ruth-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-ruth-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-ruth-1",
@@ -1270,14 +1260,6 @@
       "record_key": "context:en:wb-ruth-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-ruth-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-ruth-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1305,14 +1287,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-ruth-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-ruth-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-ruth-3-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-ruth-3",
@@ -1326,14 +1300,6 @@
       "record_key": "context:en:wb-ruth-4",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-ruth-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-ruth-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

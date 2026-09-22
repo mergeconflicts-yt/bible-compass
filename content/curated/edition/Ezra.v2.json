@@ -345,7 +345,7 @@
     {
       "package_key": "draft:wb-ezra-canonical",
       "revision": 1,
-      "digest": "sha256:1aa2e3c108760e087a1635a51d96c01765fabf1fccb16e3328e85e49ae674030"
+      "digest": "sha256:0160a128c13b1d2db2b280a2f20f4e2335bfae0448b769a18c2a4e00124ed674"
     }
   ],
   "records": {
@@ -778,6 +778,60 @@
           "occurrence_ordinal": 1,
           "prefix": "rnors of the region ",
           "suffix": ", who proceeded to a"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-israelites-3-1",
+        "verse_key": "verse:Ezra.3.1",
+        "attestation_key": "attestation:wb-ezra-israelites-3-1",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": " seventh month, the ",
+          "suffix": " had settled in thei"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-israelites-6-21",
+        "verse_key": "verse:Ezra.6.21",
+        "attestation_key": "attestation:wb-ezra-israelites-6-21",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "The Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "",
+          "suffix": " who had returned fr"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "mention_key": "mention:wb:ezra-israelites-7-7",
+        "verse_key": "verse:Ezra.7.7",
+        "attestation_key": "attestation:wb-ezra-israelites-7-7",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "em with some of the ",
+          "suffix": ", including priests,"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -4827,60 +4881,6 @@
           "exact_quote": "Jaasu",
           "occurrence_ordinal": 1,
           "prefix": "niah, Mattenai, and ",
-          "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:ezra-p-jacob-1-6-16",
-        "verse_key": "verse:Ezra.6.16",
-        "attestation_key": "attestation:wb-ezra-p-jacob-1-6-16",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "Then the people of ",
-          "suffix": "—the priests, the Le"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:ezra-p-jacob-1-6-17",
-        "verse_key": "verse:Ezra.6.17",
-        "attestation_key": "attestation:wb-ezra-p-jacob-1-6-17",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "in offering for all ",
-          "suffix": " of twelve male goat"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:ezra-p-jacob-1-6-21",
-        "verse_key": "verse:Ezra.6.21",
-        "attestation_key": "attestation:wb-ezra-p-jacob-1-6-21",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "he LORD, the God of ",
           "suffix": "."
         },
         "claim_keys": [],
@@ -9785,6 +9785,8 @@
             "verse:Ezra.5.9",
             "verse:Ezra.6.10",
             "verse:Ezra.6.11",
+            "verse:Ezra.6.16",
+            "verse:Ezra.6.17",
             "verse:Ezra.6.19",
             "verse:Ezra.6.20",
             "verse:Ezra.6.4",
@@ -10558,6 +10560,7 @@
             "verse:Ezra.3.1"
           ],
           "record_keys": [
+            "mention:wb:ezra-israelites-3-1",
             "mention:wb:ezra-jerusalem-3-1"
           ],
           "blocker_question_keys": []
@@ -11067,26 +11070,6 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
-            "verse:Ezra.6.16"
-          ],
-          "record_keys": [
-            "mention:wb:ezra-p-jacob-1-6-16"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
-            "verse:Ezra.6.17"
-          ],
-          "record_keys": [
-            "mention:wb:ezra-p-jacob-1-6-17"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
             "verse:Ezra.6.18"
           ],
           "record_keys": [
@@ -11101,7 +11084,7 @@
             "verse:Ezra.6.21"
           ],
           "record_keys": [
-            "mention:wb:ezra-p-jacob-1-6-21"
+            "mention:wb:ezra-israelites-6-21"
           ],
           "blocker_question_keys": []
         },
@@ -11197,6 +11180,7 @@
           ],
           "record_keys": [
             "mention:wb:ezra-artaxerxes-i-7-7",
+            "mention:wb:ezra-israelites-7-7",
             "mention:wb:ezra-jerusalem-7-7"
           ],
           "blocker_question_keys": []

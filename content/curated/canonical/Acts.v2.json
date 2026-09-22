@@ -1168,7 +1168,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -2647,26 +2647,6 @@
       {
         "attestation_key": "attestation:wb-acts-p-jacob-1-7-15",
         "reference_key": "verse:Acts.7.15",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-acts-p-jacob-1-7-23",
-        "reference_key": "verse:Acts.7.23",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-acts-p-jacob-1-7-37",
-        "reference_key": "verse:Acts.7.37",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
@@ -12343,6 +12323,26 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-acts-israelites-7-23",
+        "reference_key": "verse:Acts.7.23",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-acts-israelites-7-37",
+        "reference_key": "verse:Acts.7.37",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -14561,7 +14561,7 @@
         "event_key": "event:wb-acts-7-p5",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-jacob-1",
+          "entity:israelites",
           "entity:p-moses-1"
         ],
         "place_entity_keys": [
@@ -14580,7 +14580,7 @@
         "event_key": "event:wb-acts-7-p6",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-jacob-1",
+          "entity:israelites",
           "entity:p-moses-1"
         ],
         "place_entity_keys": [
@@ -15651,7 +15651,7 @@
         "relevance_key": "relevance:wb-acts-7-p-jacob-1",
         "scope_key": "scope:wb-acts-7:refsys:eng-v22:acts.7.1-acts.7.60",
         "entity_key": "entity:p-jacob-1",
-        "importance": "central",
+        "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -19876,9 +19876,23 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-acts-7-israelites",
+        "scope_key": "scope:wb-acts-7:refsys:eng-v22:acts.7.1-acts.7.60",
+        "entity_key": "entity:israelites",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -22416,7 +22430,7 @@
             "verse:Acts.7.23"
           ],
           "record_keys": [
-            "attestation:wb-acts-p-jacob-1-7-23"
+            "attestation:wb-acts-israelites-7-23"
           ],
           "blocker_question_keys": []
         },
@@ -22498,7 +22512,7 @@
             "verse:Acts.7.37"
           ],
           "record_keys": [
-            "attestation:wb-acts-p-jacob-1-7-37",
+            "attestation:wb-acts-israelites-7-37",
             "attestation:wb-acts-p-moses-1-7-37"
           ],
           "blocker_question_keys": []
@@ -27322,7 +27336,7 @@
     },
     {
       "code": "ambiguous-mention-referents-dropped",
-      "note": "6 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
+      "note": "2 mention(s) dropped because a surface form in a verse was shared by two entities (ambiguous referent); the affected verses keep explicit complete_zero results."
     }
   ]
 }

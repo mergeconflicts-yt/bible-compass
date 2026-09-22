@@ -2788,7 +2788,7 @@
     {
       "package_key": "draft:wb-ps-canonical",
       "revision": 1,
-      "digest": "sha256:a912b73335b8dab49c28f8bbf7b2d75ac5121daacea35ad5fd2527ececf72f84"
+      "digest": "sha256:308c8bd3fc5b855c5e726f8ed29229c1347867bacdae013a9b5f269dde402103"
     }
   ],
   "records": {
@@ -3730,24 +3730,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:ps-p-jacob-1-103-7",
-        "verse_key": "verse:Ps.103.7",
-        "attestation_key": "attestation:wb-ps-p-jacob-1-103-7",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "ds to the people of ",
-          "suffix": "."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:ps-p-jacob-1-105-10",
         "verse_key": "verse:Ps.105.10",
         "attestation_key": "attestation:wb-ps-p-jacob-1-105-10",
@@ -3779,42 +3761,6 @@
           "occurrence_ordinal": 1,
           "prefix": " Abraham, O sons of ",
           "suffix": ", His chosen ones."
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:ps-p-jacob-1-115-12",
-        "verse_key": "verse:Ps.115.12",
-        "attestation_key": "attestation:wb-ps-p-jacob-1-115-12",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": " bless the house of ",
-          "suffix": "; He will bless the "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:ps-p-jacob-1-135-19",
-        "verse_key": "verse:Ps.135.19",
-        "attestation_key": "attestation:wb-ps-p-jacob-1-135-19",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "O house of ",
-          "suffix": ", bless the LORD; O "
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -3910,24 +3856,6 @@
         "review_status": "draft"
       },
       {
-        "mention_key": "mention:wb:ps-p-jacob-1-22-23",
-        "verse_key": "verse:Ps.22.23",
-        "attestation_key": "attestation:wb-ps-p-jacob-1-22-23",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jacob",
-          "occurrence_ordinal": 1,
-          "prefix": " All descendants of ",
-          "suffix": ", honor Him! All off"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "mention_key": "mention:wb:ps-p-jacob-1-24-6",
         "verse_key": "verse:Ps.24.6",
         "attestation_key": "attestation:wb-ps-p-jacob-1-24-6",
@@ -3977,24 +3905,6 @@
           "occurrence_ordinal": 1,
           "prefix": "people, the sons of ",
           "suffix": " and Joseph. Selah"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:ps-p-jacob-1-78-55",
-        "verse_key": "verse:Ps.78.55",
-        "attestation_key": "attestation:wb-ps-p-jacob-1-78-55",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "ttled the tribes of ",
-          "suffix": " in their tents."
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -7406,6 +7316,7 @@
             "verse:Ps.22.20",
             "verse:Ps.22.21",
             "verse:Ps.22.22",
+            "verse:Ps.22.23",
             "verse:Ps.22.24",
             "verse:Ps.22.25",
             "verse:Ps.22.26",
@@ -8369,6 +8280,7 @@
             "verse:Ps.78.52",
             "verse:Ps.78.53",
             "verse:Ps.78.54",
+            "verse:Ps.78.55",
             "verse:Ps.78.56",
             "verse:Ps.78.57",
             "verse:Ps.78.58",
@@ -8811,16 +8723,6 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
-            "verse:Ps.22.23"
-          ],
-          "record_keys": [
-            "mention:wb:ps-p-jacob-1-22-23"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
             "verse:Ps.24.6"
           ],
           "record_keys": [
@@ -9193,16 +9095,6 @@
         {
           "result": "complete_with_records",
           "reference_keys": [
-            "verse:Ps.78.55"
-          ],
-          "record_keys": [
-            "mention:wb:ps-p-jacob-1-78-55"
-          ],
-          "blocker_question_keys": []
-        },
-        {
-          "result": "complete_with_records",
-          "reference_keys": [
             "verse:Ps.78.60"
           ],
           "record_keys": [
@@ -9519,7 +9411,6 @@
             "verse:Ps.103.7"
           ],
           "record_keys": [
-            "mention:wb:ps-p-jacob-1-103-7",
             "mention:wb:ps-p-moses-1-103-7"
           ],
           "blocker_question_keys": []
@@ -9817,8 +9708,7 @@
             "verse:Ps.115.12"
           ],
           "record_keys": [
-            "mention:wb:ps-p-aaron-1-115-12",
-            "mention:wb:ps-p-jacob-1-115-12"
+            "mention:wb:ps-p-aaron-1-115-12"
           ],
           "blocker_question_keys": []
         },
@@ -10075,8 +9965,7 @@
             "verse:Ps.135.19"
           ],
           "record_keys": [
-            "mention:wb:ps-p-aaron-1-135-19",
-            "mention:wb:ps-p-jacob-1-135-19"
+            "mention:wb:ps-p-aaron-1-135-19"
           ],
           "blocker_question_keys": []
         },

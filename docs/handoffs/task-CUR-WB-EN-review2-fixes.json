@@ -1,0 +1,97 @@
+{
+  "attempt_id": "task:CUR-WB-EN-review2-fixes:attempt-1",
+  "task_id": "CUR-WB-EN-REVIEW2-FIXES",
+  "task_title": "Fix six critical review defects: order/testament, canonical identities, source-ID aliases, profile/context curation, test false-positive, open-question DB state",
+  "result": "PASS — all six defects are fixed and verified: canon order and testament are authoritative, collective Israel identity is redirected, Paul/Peter are preferred names with real aliases, source-ID aliases are gone, profiles carry source content, the receipt assertion is null-safe, and open-question state is preserved in the database.",
+  "fixes": {
+    "1_wrong_order_testament": {
+      "status": "FIXED",
+      "cause": "Books were enumerated by alphabetical filename, then the first 39 alphabetically were called OT (Acts OT, Nehemiah NT, wrong order_index and unit ordinals).",
+      "fix": "New tools/canon_order.py parses the committed books.ts skeleton for order + testament. The queue and tools/import-english-canon.py both use it. The importer repairs earlier data (works upsert, membership delete+reinsert, unit ordinal shift+upsert, scope kind upsert) under IMPORT_REVISION=3, with the digest covering canon order.",
+      "proof": "Acts=NT, Neh=OT, Gen=1, Matt=40, Rev=66 in canon_work_memberships; test 11 section 6b asserts exactly this."
+    },
+    "2_identity_errors": {
+      "status": "FIXED",
+      "collective_israel": "686 of 1,003 p-jacob-1 refs whose BSB surface reads 'people/children/house of Israel', 'all Israel', 'Israelites' (incl. Ezra 6:16) were moved to entity:israelites before registry build. Non-person territory usages ('land/kingdom of Israel') are dropped, not guessed. Ezra 6:16 now attests entity:israelites; the wrong Jacob mention no longer exists.",
+      "paul_peter": "p-saul-2 preferred name is Paul (alias Saul), p-simon-1 is Peter (aliases Simon, Cephas, Simon Peter, Simeon, Simon Barjona). Plus all proper-name person labels become aliases.",
+      "scope": "persons used as narrative subjects keep person identity; only collective/territory surfaces were redirected or dropped."
+    },
+    "3_source_id_aliases": {
+      "status": "FIXED",
+      "cause": "OpenBible internal identification ids (a15257a, m66c5b8, ...) were stored as registry aliases and imported as searchable English entity_names; 573 ids were shared across unrelated places.",
+      "fix": "Non-name aliases (all-lowercase 4-10 char source ids) are dropped at the queue boundary. Registry source-ID aliases: 3,042 -> 0.",
+      "proof": "validate_canon identity report; entity_names contain real names only."
+    },
+    "4_profiles_contexts": {
+      "status": "FIXED (within what sources support)",
+      "profiles": "Generic 'named in Scripture' profiles 4,253 -> 1,024: 2,974 persons now carry their BibleData identifying attribute (+ tribe), 286 places carry their OpenBible description, 31 locked-Neh2 profiles stay rich. Remaining generic rows are places with no source description — honest fallback.",
+      "chapter_before": "All 1,189 chapter 'before' fields are filled mechanically ('Opening chapter of X' / 'Follows X n-1') and their blocking questions retired; locale coverage was recomputed so it no longer blocks on them.",
+      "not_attempted": "objects/roles/practices/terms/themes/chronology/historical context and chapter when/stakes stay open questions — unsupported by approved inputs and not invented."
+    },
+    "5_test_false_positive": {
+      "status": "FIXED",
+      "cause": "The English receipt wrote review_state but test 11 read review_status, so a null comparison never failed.",
+      "fix": "The receipt now uses review_status (same convention as import-neh2), and every receipt/coverage assertion in test 11 is null-safe (IS DISTINCT FROM / explicit IS NULL checks)."
+    },
+    "6_open_question_state": {
+      "status": "FIXED",
+      "cause": "Skipped null-text sections were invisible in the DB.",
+      "fix": "Migration 20260916000015 adds context_sections.curation_state (curated|open_question|not_applicable) + open_question_key with a consistency check. The importer emits every field: curated rows keep text, open-question rows carry '' + the blocking key. 14,585 open_question sections preserved; curated rows carry null keys. Test 11 asserts both."
+    }
+  },
+  "commands_executed": [
+    {
+      "command": "python3 tools/curate_canon_queue.py --force",
+      "exit_code": 0,
+      "output": "335/335 jobs valid; 66 books merged; registry 4,295; Paul/Peter renamed; collective redirect 686 moved."
+    },
+    {
+      "command": "python3 tools/validate_canon.py",
+      "exit_code": 0,
+      "output": "PASS — 0 collisions, 0 conflicts, identity unified."
+    },
+    {
+      "command": "packages/content-schema: CI=1 npx jest --silent",
+      "exit_code": 0,
+      "output": "8 suites, 254 tests passed."
+    },
+    {
+      "command": "psql bible_clean: migration 20260916000015; importer (rev 3 migrate); DATABASE_URL=... sh tools/verify-english-canon.sh",
+      "exit_code": 0,
+      "output": "ENGLISH-CANON-TESTS-PASS (identical-replay no-op asserted inside the gate; test 11 covers order/testament, one-entity-row, separation, open-question state, draft-only, anon-denied)."
+    },
+    {
+      "command": "conflicting replay (tampered digest, same revision)",
+      "exit_code": 3,
+      "output": "replay: conflicting payload or newer receipt — before any write; receipt restored afterwards."
+    },
+    {
+      "command": "npm run typecheck; npx prettier --check .",
+      "exit_code": 0,
+      "output": "typecheck clean; prettier back to the 3 known pre-existing warnings."
+    }
+  ],
+  "files_changed": [
+    "tools/canon_order.py (new: authoritative order/testament from books.ts)",
+    "tools/curate_canon_queue.py (identity redirect, alias cleanup, Paul/Peter, source extras, profile/context enrichment, locale coverage recompute)",
+    "tools/import-english-canon.py (canon order, revision 3 repair, review_status receipt, curation_state sections, canon membership delete ordering)",
+    "supabase/migrations/20260916000015_context_curation_state.sql (new)",
+    "supabase/tests/11_english_canon_import_test.sql (null-safe receipt, order/testament, open-question assertions)",
+    "content/curated/** (66 books + registry regenerated)",
+    "content/curation/** (queue checkpoints, reconciliation, canon-coverage with correct testament)"
+  ],
+  "database_changes": {
+    "migrations": "20260916000015_context_curation_state (additive: two columns + checks on private_staging.context_sections; no RLS/policy changes; compatible with tools/import-neh2.py inserts).",
+    "repaired_in_place": "works testament, canon order_index, reference-unit ordinals and scope kinds on the staging database via revision-3 re-import.",
+    "publication": "none — drafts only; anon still reads zero rows."
+  },
+  "known_limitations": [
+    "P-jacob-1 keeps 317 patriarchal refs; redirect was strictly pattern-bound, so any uncovered collective phrasing stays attributed to Jacob.",
+    "Land-of-Israel territory usages are dropped from person attestation (no land entity curated); they are counted in the queue's editorial stats.",
+    "1,024 place profiles remain 'named in Scripture' span text (no source description exists).",
+    "Objects/roles/practices/terms/themes/chronology/historical context remain not_attempted by design.",
+    "supabase/tests/08 asserts exact Neh2-only counts, so it assumes a database where only the Neh2 import ran; the English canon gate is separate.",
+    "Nothing reviewed, approved or published; Telugu untouched; mobile UI unchanged."
+  ],
+  "stop_condition": "Stopped after all six defects were fixed, the full canon regenerated, canon validation and contract tests passed, migration 15 applied, the importer repaired the staging data in place, the English gate passed, and the tampered-replay exit-3 proof was re-run."
+}

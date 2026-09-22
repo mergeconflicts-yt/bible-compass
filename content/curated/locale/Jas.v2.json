@@ -155,7 +155,7 @@
     {
       "package_key": "draft:wb-jas-canonical",
       "revision": 1,
-      "digest": "sha256:fe296d2eab046eba53e59f03db73d4fb562c1a6bc53e01363881419adeb7340d"
+      "digest": "sha256:54b21dee248c288b80be7c6f3666ae46d237fcb8d36a913acb799d0221e1a909"
     }
   ],
   "records": {
@@ -167,7 +167,7 @@
         "preferred_name": "James",
         "aliases": [],
         "short_description": {
-          "text": "James is a person named in Scripture (Jas.1.1–Matt.27.56).",
+          "text": "James — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -244,9 +244,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of James.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jas-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -287,9 +287,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows James 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jas-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -330,9 +330,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows James 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jas-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -373,9 +373,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows James 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jas-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -416,9 +416,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows James 4.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jas-5-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1203,7 +1203,6 @@
             "context:en:wb-jas-5-p4"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-jas-1-before",
             "question:wb-context-en-wb-jas-1-p1-before",
             "question:wb-context-en-wb-jas-1-p1-stakes",
             "question:wb-context-en-wb-jas-1-p1-when",
@@ -1226,7 +1225,6 @@
             "question:wb-context-en-wb-jas-1-stakes",
             "question:wb-context-en-wb-jas-1-when",
             "question:wb-context-en-wb-jas-1-where",
-            "question:wb-context-en-wb-jas-2-before",
             "question:wb-context-en-wb-jas-2-p1-before",
             "question:wb-context-en-wb-jas-2-p1-stakes",
             "question:wb-context-en-wb-jas-2-p1-when",
@@ -1239,7 +1237,6 @@
             "question:wb-context-en-wb-jas-2-stakes",
             "question:wb-context-en-wb-jas-2-when",
             "question:wb-context-en-wb-jas-2-where",
-            "question:wb-context-en-wb-jas-3-before",
             "question:wb-context-en-wb-jas-3-p1-before",
             "question:wb-context-en-wb-jas-3-p1-stakes",
             "question:wb-context-en-wb-jas-3-p1-when",
@@ -1254,7 +1251,6 @@
             "question:wb-context-en-wb-jas-3-when",
             "question:wb-context-en-wb-jas-3-where",
             "question:wb-context-en-wb-jas-3-who",
-            "question:wb-context-en-wb-jas-4-before",
             "question:wb-context-en-wb-jas-4-p1-before",
             "question:wb-context-en-wb-jas-4-p1-stakes",
             "question:wb-context-en-wb-jas-4-p1-when",
@@ -1274,7 +1270,6 @@
             "question:wb-context-en-wb-jas-4-when",
             "question:wb-context-en-wb-jas-4-where",
             "question:wb-context-en-wb-jas-4-who",
-            "question:wb-context-en-wb-jas-5-before",
             "question:wb-context-en-wb-jas-5-p1-before",
             "question:wb-context-en-wb-jas-5-p1-stakes",
             "question:wb-context-en-wb-jas-5-p1-when",
@@ -1319,14 +1314,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-jas-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jas-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-jas-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-jas-1",
@@ -1348,14 +1335,6 @@
       "record_key": "context:en:wb-jas-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jas-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jas-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1391,14 +1370,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-jas-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jas-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-jas-3-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-jas-3",
@@ -1431,14 +1402,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-jas-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jas-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-jas-4-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-jas-4",
@@ -1460,14 +1423,6 @@
       "record_key": "context:en:wb-jas-5",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jas-5-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jas-5",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

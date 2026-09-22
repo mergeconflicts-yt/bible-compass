@@ -377,7 +377,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -715,26 +715,6 @@
         "review_status": "draft"
       },
       {
-        "attestation_key": "attestation:wb-heb-p-jacob-1-8-8",
-        "reference_key": "verse:Heb.8.8",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-heb-p-jacob-1-8-10",
-        "reference_key": "verse:Heb.8.10",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
         "attestation_key": "attestation:wb-heb-p-jacob-1-11-9",
         "reference_key": "verse:Heb.11.9",
         "entity_key": "entity:p-jacob-1",
@@ -757,16 +737,6 @@
       {
         "attestation_key": "attestation:wb-heb-p-jacob-1-11-21",
         "reference_key": "verse:Heb.11.21",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-heb-p-jacob-1-11-22",
-        "reference_key": "verse:Heb.11.22",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
@@ -1323,6 +1293,36 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-heb-israelites-8-8",
+        "reference_key": "verse:Heb.8.8",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-heb-israelites-8-10",
+        "reference_key": "verse:Heb.8.10",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-heb-israelites-11-22",
+        "reference_key": "verse:Heb.11.22",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -1387,6 +1387,7 @@
         "event_key": "event:wb-heb-11-p4",
         "event_type": "narrative",
         "participant_entity_keys": [
+          "entity:israelites",
           "entity:p-esau-1",
           "entity:p-isaac-1",
           "entity:p-jacob-1",
@@ -1680,7 +1681,7 @@
         "event_key": "event:wb-heb-8-p2",
         "event_type": "covenant",
         "participant_entity_keys": [
-          "entity:p-jacob-1",
+          "entity:israelites",
           "entity:p-judah-1"
         ],
         "place_entity_keys": [
@@ -1875,15 +1876,6 @@
         "scope_key": "scope:wb-heb-12:refsys:eng-v22:heb.12.1-heb.12.29",
         "entity_key": "entity:p-esau-1",
         "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-heb-8-p-jacob-1",
-        "scope_key": "scope:wb-heb-8:refsys:eng-v22:heb.8.1-heb.8.13",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "supporting",
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
@@ -2256,9 +2248,32 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-heb-8-israelites",
+        "scope_key": "scope:wb-heb-8:refsys:eng-v22:heb.8.1-heb.8.13",
+        "entity_key": "entity:israelites",
+        "importance": "supporting",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-heb-11-israelites",
+        "scope_key": "scope:wb-heb-11:refsys:eng-v22:heb.11.1-heb.11.40",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -2953,7 +2968,7 @@
             "verse:Heb.8.8"
           ],
           "record_keys": [
-            "attestation:wb-heb-p-jacob-1-8-8",
+            "attestation:wb-heb-israelites-8-8",
             "attestation:wb-heb-p-judah-1-8-8"
           ],
           "blocker_question_keys": []
@@ -2974,7 +2989,7 @@
             "verse:Heb.8.10"
           ],
           "record_keys": [
-            "attestation:wb-heb-p-jacob-1-8-10"
+            "attestation:wb-heb-israelites-8-10"
           ],
           "blocker_question_keys": []
         },
@@ -3200,7 +3215,7 @@
             "verse:Heb.11.22"
           ],
           "record_keys": [
-            "attestation:wb-heb-p-jacob-1-11-22",
+            "attestation:wb-heb-israelites-11-22",
             "attestation:wb-heb-p-joseph-1-11-22",
             "attestation:wb-heb-pl-egypt-af301ca-11-22"
           ],

@@ -51,7 +51,7 @@
     {
       "package_key": "draft:wb-obad-canonical",
       "revision": 1,
-      "digest": "sha256:582483707bcd224b1ad84c74cfa4ac22083d6154806c7ebc6f98ab690a9df3ef"
+      "digest": "sha256:769321c3dea934ff7a62d472447a7c927ffe5048992f7d1d497b7c76490e2098"
     }
   ],
   "records": {
@@ -63,7 +63,7 @@
         "preferred_name": "Obadiah",
         "aliases": [],
         "short_description": {
-          "text": "Obadiah is a person named in Scripture (Obad.1.1).",
+          "text": "Obadiah — the prophet (OBA 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -74,11 +74,9 @@
         "entity_key": "entity:pl-mount-esau-a8e843f",
         "language_tag": "en",
         "preferred_name": "Mount Esau",
-        "aliases": [
-          "ae981db"
-        ],
+        "aliases": [],
         "short_description": {
-          "text": "Mount Esau is a place named in Scripture (Obad.1.8–Obad.1.21).",
+          "text": "Also a symbolic name for <ancient id=\"a2735ff\">Edom</ancient>, per <source id=\"s8326e2\" article=\"Esau, Mount\">Lexham Bible Dictionary (2016) (Esau, Mount)</source>.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -89,14 +87,7 @@
         "entity_key": "entity:pl-sepharad-a0a98de",
         "language_tag": "en",
         "preferred_name": "Sepharad",
-        "aliases": [
-          "a3f0f69",
-          "a7aafda",
-          "aab4a5f",
-          "acf15b3",
-          "ad2fadf",
-          "m17c001"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Sepharad is a place named in Scripture (Obad.1.20).",
           "claim_keys": []
@@ -155,7 +146,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Esau, Jacob, Joseph, Judah, Obadiah.",
+            "text": "Present in this chapter: Esau, Joseph, Judah, Obadiah.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -175,9 +166,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Obadiah.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-obad-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -241,7 +232,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Esau, Jacob, Joseph.",
+            "text": "Present in this passage: Esau, Joseph.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -287,16 +278,6 @@
         "entity_key": "entity:p-esau-1",
         "language_tag": "en",
         "role_text": "Named in Obadiah 1 at verse(s) 18.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "localization_key": "relevance-localization:en:wb-obad-1-p-jacob-1",
-        "relevance_key": "relevance:wb-obad-1-p-jacob-1",
-        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Obadiah 1 at verse(s) 17, 18, 20.",
         "claim_keys": [],
         "review_status": "draft"
       },
@@ -469,6 +450,16 @@
         "role_text": "Named in Obadiah 1 at verse(s) 11, 20, 21.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-obad-1-israelites",
+        "relevance_key": "relevance:wb-obad-1-israelites",
+        "scope_key": "scope:wb-obad-1:refsys:eng-v22:obad.1.1-obad.1.21",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Obadiah 1 at verse(s) 17, 18, 20.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -499,7 +490,6 @@
             "context:en:wb-obad-1-p2"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-obad-1-before",
             "question:wb-context-en-wb-obad-1-p1-before",
             "question:wb-context-en-wb-obad-1-p1-stakes",
             "question:wb-context-en-wb-obad-1-p1-when",
@@ -520,14 +510,6 @@
       "record_key": "context:en:wb-obad-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-obad-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-obad-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

@@ -112,7 +112,7 @@
     {
       "package_key": "draft:wb-joel-canonical",
       "revision": 1,
-      "digest": "sha256:c68ee896875c7d92a2e0465fd95fb1391e8dc4446360709d5d56599ed844e0b6"
+      "digest": "sha256:ba685a28397102b9b6dfd8c9dc981c2f8e6fea3cd3e171522f085f49d113db35"
     }
   ],
   "records": {
@@ -124,7 +124,7 @@
         "preferred_name": "Pethuel",
         "aliases": [],
         "short_description": {
-          "text": "Pethuel is a person named in Scripture (Joel.1.1).",
+          "text": "Pethuel — father of Joel the prophet (JOL 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -135,9 +135,7 @@
         "entity_key": "entity:pl-valley-of-decision-a49037e",
         "language_tag": "en",
         "preferred_name": "Valley of Decision",
-        "aliases": [
-          "a324282"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Valley of Decision is a place named in Scripture (Joel.3.14).",
           "claim_keys": []
@@ -150,11 +148,9 @@
         "entity_key": "entity:pl-valley-of-jehoshaphat-a324282",
         "language_tag": "en",
         "preferred_name": "Valley of Jehoshaphat",
-        "aliases": [
-          "mc620e5"
-        ],
+        "aliases": [],
         "short_description": {
-          "text": "Valley of Jehoshaphat is a place named in Scripture (Joel.3.2–Joel.3.12).",
+          "text": "This is the traditional site in the upper Kidron Valley.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -165,13 +161,9 @@
         "entity_key": "entity:pl-valley-of-shittim-a01769f",
         "language_tag": "en",
         "preferred_name": "Valley of Shittim",
-        "aliases": [
-          "a553110",
-          "af64fb3",
-          "m87e5dd"
-        ],
+        "aliases": [],
         "short_description": {
-          "text": "Valley of Shittim is a place named in Scripture (Joel.3.18).",
+          "text": "A possibly symbolic river flowing from <ancient id=\"a15257a\">Jerusalem</ancient> to the <ancient id=\"abed304\">Salt Sea</ancient>.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -248,9 +240,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Joel.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-joel-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -291,9 +283,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Joel 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-joel-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -314,12 +306,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Jacob, Judah.",
+            "text": "Present in this chapter: Judah.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this chapter: Edom, Egypt, Jerusalem, Philistia, Sheba 1, Sidon, Tyre, Valley of Decision.",
+            "text": "Places in this chapter: Edom, Egypt, Jerusalem, Philistia, Sheba 1, Sidon, The Israelites, Tyre.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -334,9 +326,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Joel 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-joel-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -658,12 +650,12 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Jacob, Judah.",
+            "text": "Present in this passage: Judah.",
             "claim_keys": [],
             "open_question_key": null
           },
           "where": {
-            "text": "Places in this passage: Jerusalem, Philistia, Sheba 1, Sidon, Tyre, Valley of Decision, Valley of Jehoshaphat, Zion.",
+            "text": "Places in this passage: Jerusalem, Philistia, Sheba 1, Sidon, The Israelites, Tyre, Valley of Decision, Valley of Jehoshaphat.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -740,16 +732,6 @@
       }
     ],
     "relevance_localizations": [
-      {
-        "localization_key": "relevance-localization:en:wb-joel-3-p-jacob-1",
-        "relevance_key": "relevance:wb-joel-3-p-jacob-1",
-        "scope_key": "scope:wb-joel-3:refsys:eng-v22:joel.3.1-joel.3.21",
-        "entity_key": "entity:p-jacob-1",
-        "language_tag": "en",
-        "role_text": "Named in Joel 3 at verse(s) 16.",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "localization_key": "relevance-localization:en:wb-joel-3-p-judah-1",
         "relevance_key": "relevance:wb-joel-3-p-judah-1",
@@ -949,6 +931,16 @@
         "role_text": "Named in Joel 3 at verse(s) 1, 6, 16, 17, 20.",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "localization_key": "relevance-localization:en:wb-joel-3-israelites",
+        "relevance_key": "relevance:wb-joel-3-israelites",
+        "scope_key": "scope:wb-joel-3:refsys:eng-v22:joel.3.1-joel.3.21",
+        "entity_key": "entity:israelites",
+        "language_tag": "en",
+        "role_text": "Named in Joel 3 at verse(s) 16.",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ]
   },
@@ -997,7 +989,6 @@
             "context:en:wb-joel-3-p2"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-joel-1-before",
             "question:wb-context-en-wb-joel-1-p1-before",
             "question:wb-context-en-wb-joel-1-p1-stakes",
             "question:wb-context-en-wb-joel-1-p1-when",
@@ -1015,7 +1006,6 @@
             "question:wb-context-en-wb-joel-1-stakes",
             "question:wb-context-en-wb-joel-1-when",
             "question:wb-context-en-wb-joel-1-where",
-            "question:wb-context-en-wb-joel-2-before",
             "question:wb-context-en-wb-joel-2-p1-before",
             "question:wb-context-en-wb-joel-2-p1-stakes",
             "question:wb-context-en-wb-joel-2-p1-when",
@@ -1035,7 +1025,6 @@
             "question:wb-context-en-wb-joel-2-stakes",
             "question:wb-context-en-wb-joel-2-when",
             "question:wb-context-en-wb-joel-2-who",
-            "question:wb-context-en-wb-joel-3-before",
             "question:wb-context-en-wb-joel-3-p1-before",
             "question:wb-context-en-wb-joel-3-p1-stakes",
             "question:wb-context-en-wb-joel-3-p1-when",
@@ -1067,14 +1056,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-joel-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-joel-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-joel-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-joel-1",
@@ -1099,14 +1080,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-joel-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-joel-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-joel-2-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-joel-2",
@@ -1120,14 +1093,6 @@
       "record_key": "context:en:wb-joel-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-joel-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-joel-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

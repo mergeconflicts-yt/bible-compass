@@ -277,7 +277,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -439,16 +439,6 @@
         "attestation_key": "attestation:wb-zech-p-the-angel-of-the-lord-1-12-8",
         "reference_key": "verse:Zech.12.8",
         "entity_key": "entity:p-the-angel-of-the-lord-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-zech-p-jacob-1-8-13",
-        "reference_key": "verse:Zech.8.13",
-        "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
         "identification_status": "established",
@@ -1904,6 +1894,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-zech-israelites-8-13",
+        "reference_key": "verse:Zech.8.13",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -2291,7 +2291,7 @@
         "event_key": "event:wb-zech-8-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-jacob-1",
+          "entity:israelites",
           "entity:p-judah-1"
         ],
         "place_entity_keys": [
@@ -2422,15 +2422,6 @@
         "relevance_key": "relevance:wb-zech-12-p-the-angel-of-the-lord-1",
         "scope_key": "scope:wb-zech-12:refsys:eng-v22:zech.12.1-zech.12.14",
         "entity_key": "entity:p-the-angel-of-the-lord-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-zech-8-p-jacob-1",
-        "scope_key": "scope:wb-zech-8:refsys:eng-v22:zech.8.1-zech.8.23",
-        "entity_key": "entity:p-jacob-1",
         "importance": "background",
         "is_attested": true,
         "claim_keys": [],
@@ -3119,9 +3110,23 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-zech-8-israelites",
+        "scope_key": "scope:wb-zech-8:refsys:eng-v22:zech.8.1-zech.8.23",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -3154,11 +3159,6 @@
       },
       {
         "canonical_entity_key": "entity:p-iddo-5",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-jacob-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -3975,7 +3975,7 @@
             "verse:Zech.8.13"
           ],
           "record_keys": [
-            "attestation:wb-zech-p-jacob-1-8-13",
+            "attestation:wb-zech-israelites-8-13",
             "attestation:wb-zech-p-judah-1-8-13"
           ],
           "blocker_question_keys": []

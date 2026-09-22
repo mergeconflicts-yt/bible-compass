@@ -152,7 +152,7 @@
     {
       "package_key": "draft:wb-1john-canonical",
       "revision": 1,
-      "digest": "sha256:59ae7450b11dce0e4698e7ef96357987ba5eb5acc89af42df45516f9e4e0f11f"
+      "digest": "sha256:9b9850f40f363a2131670473441f981c0aa75bcf1da722dfa0ec3ec5c79be152"
     }
   ],
   "records": {
@@ -164,7 +164,7 @@
         "preferred_name": "Cain",
         "aliases": [],
         "short_description": {
-          "text": "Cain is a person named in Scripture (1John.3.12–Jude.1.11).",
+          "text": "Cain — first son of Adam (GEN 4:1), cursed from the ground (GEN 4:11).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -177,7 +177,7 @@
         "preferred_name": "Antichrist",
         "aliases": [],
         "short_description": {
-          "text": "Antichrist is a person named in Scripture (1John.2.18–2John.1.7).",
+          "text": "Antichrist — the coming one (1JN 2:18) who denies that Jesus is the Christ (1JN 2:22).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -254,9 +254,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of 1 John.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1john-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -297,9 +297,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 John 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1john-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -340,9 +340,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 John 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1john-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -383,9 +383,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 John 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1john-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -426,9 +426,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 John 4.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1john-5-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -1193,7 +1193,6 @@
             "context:en:wb-1john-5-p4"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-1john-1-before",
             "question:wb-context-en-wb-1john-1-p1-before",
             "question:wb-context-en-wb-1john-1-p1-stakes",
             "question:wb-context-en-wb-1john-1-p1-when",
@@ -1208,7 +1207,6 @@
             "question:wb-context-en-wb-1john-1-when",
             "question:wb-context-en-wb-1john-1-where",
             "question:wb-context-en-wb-1john-1-who",
-            "question:wb-context-en-wb-1john-2-before",
             "question:wb-context-en-wb-1john-2-p1-before",
             "question:wb-context-en-wb-1john-2-p1-stakes",
             "question:wb-context-en-wb-1john-2-p1-when",
@@ -1236,7 +1234,6 @@
             "question:wb-context-en-wb-1john-2-stakes",
             "question:wb-context-en-wb-1john-2-when",
             "question:wb-context-en-wb-1john-2-where",
-            "question:wb-context-en-wb-1john-3-before",
             "question:wb-context-en-wb-1john-3-p1-before",
             "question:wb-context-en-wb-1john-3-p1-stakes",
             "question:wb-context-en-wb-1john-3-p1-when",
@@ -1248,7 +1245,6 @@
             "question:wb-context-en-wb-1john-3-stakes",
             "question:wb-context-en-wb-1john-3-when",
             "question:wb-context-en-wb-1john-3-where",
-            "question:wb-context-en-wb-1john-4-before",
             "question:wb-context-en-wb-1john-4-p1-before",
             "question:wb-context-en-wb-1john-4-p1-stakes",
             "question:wb-context-en-wb-1john-4-p1-when",
@@ -1261,7 +1257,6 @@
             "question:wb-context-en-wb-1john-4-stakes",
             "question:wb-context-en-wb-1john-4-when",
             "question:wb-context-en-wb-1john-4-where",
-            "question:wb-context-en-wb-1john-5-before",
             "question:wb-context-en-wb-1john-5-p1-before",
             "question:wb-context-en-wb-1john-5-p1-stakes",
             "question:wb-context-en-wb-1john-5-p1-when",
@@ -1317,14 +1312,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1john-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1john-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1john-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-1john-1",
@@ -1346,14 +1333,6 @@
       "record_key": "context:en:wb-1john-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1john-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1john-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1381,14 +1360,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1john-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1john-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1john-3-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-1john-3",
@@ -1410,14 +1381,6 @@
       "record_key": "context:en:wb-1john-4",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1john-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1john-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1450,14 +1413,6 @@
       "record_key": "context:en:wb-1john-5",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1john-5-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1john-5",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

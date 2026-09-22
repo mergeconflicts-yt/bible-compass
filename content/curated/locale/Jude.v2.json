@@ -57,7 +57,7 @@
     {
       "package_key": "draft:wb-jude-canonical",
       "revision": 1,
-      "digest": "sha256:f1f5100fd134a0d92d31637b8ca02edd417df3514a59619717a7414704f9e6e6"
+      "digest": "sha256:5576fb3d37534d12dc51f90e8ec79b91047de81348bc0e0c1932a4e9bfc96f4a"
     }
   ],
   "records": {
@@ -67,9 +67,11 @@
         "entity_key": "entity:p-judas-2",
         "language_tag": "en",
         "preferred_name": "Judas",
-        "aliases": [],
+        "aliases": [
+          "Jude"
+        ],
         "short_description": {
-          "text": "Judas is a person named in Scripture (Jude.1.1–Matt.13.55).",
+          "text": "Judas — \"brother\" of Jesus, son of Mary (MAT 13:55). Of the tribe of Judah.",
           "claim_keys": []
         },
         "extended_description": null,
@@ -146,9 +148,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Jude.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jude-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -500,7 +502,6 @@
             "context:en:wb-jude-1-p4"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-jude-1-before",
             "question:wb-context-en-wb-jude-1-p1-before",
             "question:wb-context-en-wb-jude-1-p1-stakes",
             "question:wb-context-en-wb-jude-1-p1-when",
@@ -532,14 +533,6 @@
       "record_key": "context:en:wb-jude-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jude-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jude-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

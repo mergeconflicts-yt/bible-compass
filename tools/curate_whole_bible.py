@@ -35,6 +35,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import canon_order  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 SCRIPTURE = REPO / "apps" / "mobile" / "assets" / "scripture"
 QUARANTINE = REPO / "content" / "quarantine"
@@ -105,9 +108,9 @@ def load_books(asset: str = "bsb") -> list[dict]:
     for path in sorted((SCRIPTURE / asset).glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
         books.append(data)
-    order = [b["osis"] for b in books]
-    books.sort(key=lambda b: order.index(b["osis"]))
-    return books
+    # Canonical order from the ratified skeleton, never alphabetical file
+    # order (alphabetical order previously made Acts "OT" and Nehemiah "NT").
+    return canon_order.ordered(books)
 
 
 def verse_key(osis: str, chapter: int, verse: int) -> str:
@@ -259,8 +262,14 @@ def load_places() -> dict:
                 },
             )
             for ident in rec.get("identifications") or []:
-                if isinstance(ident, dict) and ident.get("id"):
-                    entry["aliases"].add(str(ident["id"]))
+                if not isinstance(ident, dict) or not ident.get("id"):
+                    continue
+                # Internal OpenBible identification ids (e.g. a15257a) are
+                # source identifiers, not names: never store them as
+                # searchable aliases. Only human-readable names qualify.
+                alias = str(ident["id"]).strip()
+                if alias and not re.fullmatch(r"[a-z0-9]{4,10}", alias):
+                    entry["aliases"].add(alias)
             extra = rec.get("extra")
             if extra:
                 try:

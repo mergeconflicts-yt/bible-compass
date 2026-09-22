@@ -152,7 +152,7 @@
     {
       "package_key": "draft:wb-1pet-canonical",
       "revision": 1,
-      "digest": "sha256:67b4121dd16908934c43715576c68b954c72e611c646a3e1c41c379a34a7748c"
+      "digest": "sha256:52029425ab19680cf67a92f67a9af31551f3566f537b791aadaca0062069895f"
     }
   ],
   "records": {
@@ -162,9 +162,11 @@
         "entity_key": "entity:p-sarai-1",
         "language_tag": "en",
         "preferred_name": "Sarai",
-        "aliases": [],
+        "aliases": [
+          "Sarah"
+        ],
         "short_description": {
-          "text": "Sarai is a person named in Scripture (1Pet.3.6–Rom.9.9).",
+          "text": "Sarai — Abram's wife (11:29).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -175,9 +177,11 @@
         "entity_key": "entity:p-john-5",
         "language_tag": "en",
         "preferred_name": "John",
-        "aliases": [],
+        "aliases": [
+          "Mark"
+        ],
         "short_description": {
-          "text": "John is a person named in Scripture (1Pet.5.13–Phlm.1.24).",
+          "text": "John — also called Mark (ACT 12:12) a companion of Barnabas and Saul (ACT 12:25).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -188,9 +192,11 @@
         "entity_key": "entity:p-silas-1",
         "language_tag": "en",
         "preferred_name": "Silas",
-        "aliases": [],
+        "aliases": [
+          "Silvanus"
+        ],
         "short_description": {
-          "text": "Silas is a person named in Scripture (1Pet.5.12–Acts.18.5).",
+          "text": "Silas — a leading man among the brethren (ACT 15:22).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -201,13 +207,7 @@
         "entity_key": "entity:pl-babylon-2-ae5ede9",
         "language_tag": "en",
         "preferred_name": "Babylon 2",
-        "aliases": [
-          "a15257a",
-          "a217d18",
-          "ae41ab4",
-          "afc8e7a",
-          "mab07b2"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Babylon 2 is a place named in Scripture (1Pet.5.13).",
           "claim_keys": []
@@ -220,9 +220,7 @@
         "entity_key": "entity:pl-bithynia-a5c0cb0",
         "language_tag": "en",
         "preferred_name": "Bithynia",
-        "aliases": [
-          "m29b4f7"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Bithynia is a place named in Scripture (1Pet.1.1–Acts.16.7).",
           "claim_keys": []
@@ -235,9 +233,7 @@
         "entity_key": "entity:pl-cappadocia-a33fbde",
         "language_tag": "en",
         "preferred_name": "Cappadocia",
-        "aliases": [
-          "m6e1e42"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Cappadocia is a place named in Scripture (1Pet.1.1–Acts.2.9).",
           "claim_keys": []
@@ -250,9 +246,7 @@
         "entity_key": "entity:pl-pontus-a83a43e",
         "language_tag": "en",
         "preferred_name": "Pontus",
-        "aliases": [
-          "m220f70"
-        ],
+        "aliases": [],
         "short_description": {
           "text": "Pontus is a place named in Scripture (1Pet.1.1–Acts.18.2).",
           "claim_keys": []
@@ -311,7 +305,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this chapter: Simon.",
+            "text": "Present in this chapter: Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -331,9 +325,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of 1 Peter.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1pet-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -374,9 +368,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 Peter 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1pet-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -417,9 +411,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 Peter 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1pet-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -460,9 +454,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 Peter 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1pet-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -503,9 +497,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows 1 Peter 4.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-1pet-5-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -526,7 +520,7 @@
         "language_tag": "en",
         "orientation": {
           "who": {
-            "text": "Present in this passage: Simon.",
+            "text": "Present in this passage: Peter.",
             "claim_keys": [],
             "open_question_key": null
           },
@@ -1360,7 +1354,6 @@
             "context:en:wb-1pet-5-p3"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-1pet-1-before",
             "question:wb-context-en-wb-1pet-1-p1-before",
             "question:wb-context-en-wb-1pet-1-p1-stakes",
             "question:wb-context-en-wb-1pet-1-p1-when",
@@ -1381,7 +1374,6 @@
             "question:wb-context-en-wb-1pet-1-p4-who",
             "question:wb-context-en-wb-1pet-1-stakes",
             "question:wb-context-en-wb-1pet-1-when",
-            "question:wb-context-en-wb-1pet-2-before",
             "question:wb-context-en-wb-1pet-2-p1-before",
             "question:wb-context-en-wb-1pet-2-p1-stakes",
             "question:wb-context-en-wb-1pet-2-p1-when",
@@ -1399,7 +1391,6 @@
             "question:wb-context-en-wb-1pet-2-stakes",
             "question:wb-context-en-wb-1pet-2-when",
             "question:wb-context-en-wb-1pet-2-who",
-            "question:wb-context-en-wb-1pet-3-before",
             "question:wb-context-en-wb-1pet-3-p1-before",
             "question:wb-context-en-wb-1pet-3-p1-stakes",
             "question:wb-context-en-wb-1pet-3-p1-when",
@@ -1416,7 +1407,6 @@
             "question:wb-context-en-wb-1pet-3-stakes",
             "question:wb-context-en-wb-1pet-3-when",
             "question:wb-context-en-wb-1pet-3-where",
-            "question:wb-context-en-wb-1pet-4-before",
             "question:wb-context-en-wb-1pet-4-p1-before",
             "question:wb-context-en-wb-1pet-4-p1-stakes",
             "question:wb-context-en-wb-1pet-4-p1-when",
@@ -1431,7 +1421,6 @@
             "question:wb-context-en-wb-1pet-4-when",
             "question:wb-context-en-wb-1pet-4-where",
             "question:wb-context-en-wb-1pet-4-who",
-            "question:wb-context-en-wb-1pet-5-before",
             "question:wb-context-en-wb-1pet-5-p1-before",
             "question:wb-context-en-wb-1pet-5-p1-stakes",
             "question:wb-context-en-wb-1pet-5-p1-when",
@@ -1462,14 +1451,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1pet-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1pet-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1pet-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-1pet-1",
@@ -1494,14 +1475,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1pet-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1pet-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1pet-2-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-1pet-2",
@@ -1523,14 +1496,6 @@
       "record_key": "context:en:wb-1pet-3",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1pet-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1pet-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -1566,14 +1531,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-1pet-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1pet-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-1pet-4-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-1pet-4",
@@ -1587,14 +1544,6 @@
       "record_key": "context:en:wb-1pet-5",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-1pet-5-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-1pet-5",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

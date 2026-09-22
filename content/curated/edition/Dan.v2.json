@@ -429,11 +429,29 @@
     {
       "package_key": "draft:wb-dan-canonical",
       "revision": 1,
-      "digest": "sha256:8e03c514b91e935fbf2757a64124e7fa711affa3b4323b9972f1786a66de171f"
+      "digest": "sha256:ebd9e3c34980d66954f0d84f7d4ab9a3c42177e73df64782696da8591b70a66f"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:dan-israelites-1-3",
+        "verse_key": "verse:Dan.1.3",
+        "attestation_key": "attestation:wb-dan-israelites-1-3",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "s, to bring in some ",
+          "suffix": " from the royal fami"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:dan-jerusalem-1-1",
         "verse_key": "verse:Dan.1.1",
@@ -4038,6 +4056,7 @@
             "verse:Dan.1.3"
           ],
           "record_keys": [
+            "mention:wb:dan-israelites-1-3",
             "mention:wb:dan-p-ashpenaz-1-1-3"
           ],
           "blocker_question_keys": []

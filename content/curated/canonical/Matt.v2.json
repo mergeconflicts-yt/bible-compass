@@ -1276,7 +1276,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -1524,26 +1524,6 @@
       {
         "attestation_key": "attestation:wb-matt-p-jacob-1-10-6",
         "reference_key": "verse:Matt.10.6",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-matt-p-jacob-1-15-24",
-        "reference_key": "verse:Matt.15.24",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "attestation_key": "attestation:wb-matt-p-jacob-1-27-9",
-        "reference_key": "verse:Matt.27.9",
         "entity_key": "entity:p-jacob-1",
         "kind": "participant",
         "textual_basis": "explicit",
@@ -5200,6 +5180,26 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-matt-israelites-15-24",
+        "reference_key": "verse:Matt.15.24",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-matt-israelites-27-9",
+        "reference_key": "verse:Matt.27.9",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [
@@ -6132,7 +6132,7 @@
         "event_key": "event:wb-matt-15-p3",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-jacob-1"
+          "entity:israelites"
         ],
         "place_entity_keys": [
           "entity:pl-canaan-a581f0c",
@@ -6890,7 +6890,7 @@
         "event_key": "event:wb-matt-27-p2",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-jacob-1",
+          "entity:israelites",
           "entity:p-jeremiah-6",
           "entity:p-judas-1"
         ],
@@ -7454,24 +7454,6 @@
       {
         "relevance_key": "relevance:wb-matt-10-p-jacob-1",
         "scope_key": "scope:wb-matt-10:refsys:eng-v22:matt.10.1-matt.10.42",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-matt-15-p-jacob-1",
-        "scope_key": "scope:wb-matt-15:refsys:eng-v22:matt.15.1-matt.15.39",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "relevance_key": "relevance:wb-matt-27-p-jacob-1",
-        "scope_key": "scope:wb-matt-27:refsys:eng-v22:matt.27.1-matt.27.66",
         "entity_key": "entity:p-jacob-1",
         "importance": "background",
         "is_attested": true,
@@ -9502,9 +9484,32 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-matt-15-israelites",
+        "scope_key": "scope:wb-matt-15:refsys:eng-v22:matt.15.1-matt.15.39",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-matt-27-israelites",
+        "scope_key": "scope:wb-matt-27:refsys:eng-v22:matt.27.1-matt.27.66",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:jerusalem",
         "resolution_status": "resolved_existing",
@@ -12368,7 +12373,7 @@
             "verse:Matt.15.24"
           ],
           "record_keys": [
-            "attestation:wb-matt-p-jacob-1-15-24"
+            "attestation:wb-matt-israelites-15-24"
           ],
           "blocker_question_keys": []
         },
@@ -13148,7 +13153,7 @@
             "verse:Matt.27.9"
           ],
           "record_keys": [
-            "attestation:wb-matt-p-jacob-1-27-9",
+            "attestation:wb-matt-israelites-27-9",
             "attestation:wb-matt-p-jeremiah-6-27-9"
           ],
           "blocker_question_keys": []

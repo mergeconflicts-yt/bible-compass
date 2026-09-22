@@ -72,7 +72,7 @@
     {
       "package_key": "draft:wb-hag-canonical",
       "revision": 1,
-      "digest": "sha256:0feb81796f38cff70477a062eb8223808c35803534dafe1eb713b719fed8feca"
+      "digest": "sha256:ce1904d18e373f17d19ed620ebdde0235f0faddfeb9366852eb7aa7d4683e63a"
     }
   ],
   "records": {
@@ -82,9 +82,11 @@
         "entity_key": "entity:p-joshua-4",
         "language_tag": "en",
         "preferred_name": "Joshua",
-        "aliases": [],
+        "aliases": [
+          "Branch"
+        ],
         "short_description": {
-          "text": "Joshua is a person named in Scripture (Hag.1.1–Zech.6.12).",
+          "text": "Joshua — high priest of Haggai's time (HAG 1:1).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -161,9 +163,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Haggai.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -204,9 +206,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Haggai 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-hag-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -585,7 +587,6 @@
             "context:en:wb-hag-2-p3"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-hag-1-before",
             "question:wb-context-en-wb-hag-1-p1-before",
             "question:wb-context-en-wb-hag-1-p1-stakes",
             "question:wb-context-en-wb-hag-1-p1-when",
@@ -597,7 +598,6 @@
             "question:wb-context-en-wb-hag-1-stakes",
             "question:wb-context-en-wb-hag-1-when",
             "question:wb-context-en-wb-hag-1-where",
-            "question:wb-context-en-wb-hag-2-before",
             "question:wb-context-en-wb-hag-2-p1-before",
             "question:wb-context-en-wb-hag-2-p1-stakes",
             "question:wb-context-en-wb-hag-2-p1-when",
@@ -634,14 +634,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-hag-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-hag-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-hag-1",
@@ -655,14 +647,6 @@
       "record_key": "context:en:wb-hag-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-hag-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-hag-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

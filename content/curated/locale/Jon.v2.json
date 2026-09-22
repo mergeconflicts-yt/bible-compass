@@ -85,7 +85,7 @@
     {
       "package_key": "draft:wb-jon-canonical",
       "revision": 1,
-      "digest": "sha256:98a029904a4e996d173aa6f743c28413646387f593d9470b7d8f1a4b12e48d5e"
+      "digest": "sha256:faac73585f388bdf4ff2231f0168dee8abb96d4d3509e53db98239d484ceba40"
     }
   ],
   "records": {
@@ -97,7 +97,7 @@
         "preferred_name": "King of Nineveh",
         "aliases": [],
         "short_description": {
-          "text": "King of Nineveh is a person named in Scripture (Jon.3.6).",
+          "text": "King of Nineveh — the king of Jonah's account (JON 3:6).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -174,9 +174,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of Jonah.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jon-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -217,9 +217,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Jonah 1.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jon-2-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -260,9 +260,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Jonah 2.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jon-3-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -303,9 +303,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Follows Jonah 3.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-jon-4-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -683,7 +683,6 @@
             "context:en:wb-jon-4-p1"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-jon-1-before",
             "question:wb-context-en-wb-jon-1-p1-before",
             "question:wb-context-en-wb-jon-1-p1-stakes",
             "question:wb-context-en-wb-jon-1-p1-when",
@@ -699,7 +698,6 @@
             "question:wb-context-en-wb-jon-1-stakes",
             "question:wb-context-en-wb-jon-1-when",
             "question:wb-context-en-wb-jon-1-where",
-            "question:wb-context-en-wb-jon-2-before",
             "question:wb-context-en-wb-jon-2-p1-before",
             "question:wb-context-en-wb-jon-2-p1-stakes",
             "question:wb-context-en-wb-jon-2-p1-when",
@@ -707,7 +705,6 @@
             "question:wb-context-en-wb-jon-2-stakes",
             "question:wb-context-en-wb-jon-2-when",
             "question:wb-context-en-wb-jon-2-where",
-            "question:wb-context-en-wb-jon-3-before",
             "question:wb-context-en-wb-jon-3-p1-before",
             "question:wb-context-en-wb-jon-3-p1-stakes",
             "question:wb-context-en-wb-jon-3-p1-when",
@@ -715,7 +712,6 @@
             "question:wb-context-en-wb-jon-3-stakes",
             "question:wb-context-en-wb-jon-3-when",
             "question:wb-context-en-wb-jon-3-where",
-            "question:wb-context-en-wb-jon-4-before",
             "question:wb-context-en-wb-jon-4-p1-before",
             "question:wb-context-en-wb-jon-4-p1-stakes",
             "question:wb-context-en-wb-jon-4-p1-when",
@@ -746,14 +742,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-jon-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jon-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-jon-1-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-jon-1",
@@ -775,14 +763,6 @@
       "record_key": "context:en:wb-jon-2",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jon-2-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jon-2",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {
@@ -810,14 +790,6 @@
       "blocks_publication": true
     },
     {
-      "question_key": "question:wb-context-en-wb-jon-3-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jon-3",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
       "question_key": "question:wb-context-en-wb-jon-3-stakes",
       "question_type": "insufficient_evidence",
       "record_key": "context:en:wb-jon-3",
@@ -839,14 +811,6 @@
       "record_key": "context:en:wb-jon-4",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-jon-4-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-jon-4",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

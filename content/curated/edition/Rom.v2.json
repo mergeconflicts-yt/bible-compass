@@ -522,11 +522,29 @@
     {
       "package_key": "draft:wb-rom-canonical",
       "revision": 1,
-      "digest": "sha256:dcd73ace5e084468e81f3da02b684c6844741d5c5e5128cfc42c782f11b38ee0"
+      "digest": "sha256:fcbc14ca665c02b549a5b598fc8fea3236e913063b15f7fbb7a7a40c9a7ff3fe"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:rom-israelites-9-27",
+        "verse_key": "verse:Rom.9.27",
+        "attestation_key": "attestation:wb-rom-israelites-9-27",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "h the number of the ",
+          "suffix": " is like the sand of"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:rom-jerusalem-15-19",
         "verse_key": "verse:Rom.15.19",
@@ -1189,24 +1207,6 @@
           "occurrence_ordinal": 1,
           "prefix": "So it is written: “",
           "suffix": " I loved, but Esau I"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:rom-p-jacob-1-9-27",
-        "verse_key": "verse:Rom.9.27",
-        "attestation_key": "attestation:wb-rom-p-jacob-1-9-27",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Israel",
-          "occurrence_ordinal": 1,
-          "prefix": "ries out concerning ",
-          "suffix": ": “Though the number"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -2621,8 +2621,8 @@
             "verse:Rom.9.27"
           ],
           "record_keys": [
-            "mention:wb:rom-p-isaiah-1-9-27",
-            "mention:wb:rom-p-jacob-1-9-27"
+            "mention:wb:rom-israelites-9-27",
+            "mention:wb:rom-p-isaiah-1-9-27"
           ],
           "blocker_question_keys": []
         },

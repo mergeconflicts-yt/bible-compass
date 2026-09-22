@@ -51,11 +51,29 @@
     {
       "package_key": "draft:wb-obad-canonical",
       "revision": 1,
-      "digest": "sha256:582483707bcd224b1ad84c74cfa4ac22083d6154806c7ebc6f98ab690a9df3ef"
+      "digest": "sha256:769321c3dea934ff7a62d472447a7c927ffe5048992f7d1d497b7c76490e2098"
     }
   ],
   "records": {
     "mentions": [
+      {
+        "mention_key": "mention:wb:obad-israelites-1-20",
+        "verse_key": "verse:Obad.1.20",
+        "attestation_key": "attestation:wb-obad-israelites-1-20",
+        "target": {
+          "type": "entity",
+          "key": "entity:israelites"
+        },
+        "mention_form": "explicit_name",
+        "selector": {
+          "exact_quote": "Israelites",
+          "occurrence_ordinal": 1,
+          "prefix": "of this host of the ",
+          "suffix": " will possess the la"
+        },
+        "claim_keys": [],
+        "review_status": "draft"
+      },
       {
         "mention_key": "mention:wb:obad-jerusalem-1-11",
         "verse_key": "verse:Obad.1.11",
@@ -106,42 +124,6 @@
           "occurrence_ordinal": 1,
           "prefix": "e; but the house of ",
           "suffix": " will be stubble— Ja"
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:obad-p-jacob-1-1-17",
-        "verse_key": "verse:Obad.1.17",
-        "attestation_key": "attestation:wb-obad-p-jacob-1-1-17",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jacob",
-          "occurrence_ordinal": 1,
-          "prefix": "y, and the house of ",
-          "suffix": " will reclaim their "
-        },
-        "claim_keys": [],
-        "review_status": "draft"
-      },
-      {
-        "mention_key": "mention:wb:obad-p-jacob-1-1-18",
-        "verse_key": "verse:Obad.1.18",
-        "attestation_key": "attestation:wb-obad-p-jacob-1-1-18",
-        "target": {
-          "type": "entity",
-          "key": "entity:p-jacob-1"
-        },
-        "mention_form": "explicit_name",
-        "selector": {
-          "exact_quote": "Jacob",
-          "occurrence_ordinal": 1,
-          "prefix": "Then the house of ",
-          "suffix": " will be a blazing f"
         },
         "claim_keys": [],
         "review_status": "draft"
@@ -408,7 +390,6 @@
             "verse:Obad.1.17"
           ],
           "record_keys": [
-            "mention:wb:obad-p-jacob-1-1-17",
             "mention:wb:obad-pl-mount-zion-abd9596-1-17"
           ],
           "blocker_question_keys": []
@@ -420,7 +401,6 @@
           ],
           "record_keys": [
             "mention:wb:obad-p-esau-1-1-18",
-            "mention:wb:obad-p-jacob-1-1-18",
             "mention:wb:obad-p-joseph-1-1-18"
           ],
           "blocker_question_keys": []
@@ -431,6 +411,7 @@
             "verse:Obad.1.20"
           ],
           "record_keys": [
+            "mention:wb:obad-israelites-1-20",
             "mention:wb:obad-jerusalem-1-20",
             "mention:wb:obad-pl-sepharad-a0a98de-1-20",
             "mention:wb:obad-pl-zarephath-a6fa2d3-1-20"

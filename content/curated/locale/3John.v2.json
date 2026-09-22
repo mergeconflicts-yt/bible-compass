@@ -46,7 +46,7 @@
     {
       "package_key": "draft:wb-3john-canonical",
       "revision": 1,
-      "digest": "sha256:c9299ca0ae3b92578fa3f9197e0cc369f440e738d85ea76f21131e3545c921ec"
+      "digest": "sha256:adfecbda834f82523a11d58c1f87782a03789261c1d82c0b1ff65642b331d061"
     }
   ],
   "records": {
@@ -58,7 +58,7 @@
         "preferred_name": "Diotrephes",
         "aliases": [],
         "short_description": {
-          "text": "Diotrephes is a person named in Scripture (3John.1.9).",
+          "text": "Diotrephes — loves to be first in the church but does not accept what John says (3JN 1:9).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -71,7 +71,7 @@
         "preferred_name": "Demetrius",
         "aliases": [],
         "short_description": {
-          "text": "Demetrius is a person named in Scripture (3John.1.12).",
+          "text": "Demetrius — has received (good) testimony from everyone (3JN 1:12).",
           "claim_keys": []
         },
         "extended_description": null,
@@ -148,9 +148,9 @@
             "open_question_key": null
           },
           "before": {
-            "text": null,
+            "text": "Opening chapter of 3 John.",
             "claim_keys": [],
-            "open_question_key": "question:wb-context-en-wb-3john-1-before"
+            "open_question_key": null
           },
           "stakes": {
             "text": null,
@@ -412,7 +412,6 @@
             "context:en:wb-3john-1-p4"
           ],
           "blocker_question_keys": [
-            "question:wb-context-en-wb-3john-1-before",
             "question:wb-context-en-wb-3john-1-p1-before",
             "question:wb-context-en-wb-3john-1-p1-stakes",
             "question:wb-context-en-wb-3john-1-p1-when",
@@ -454,14 +453,6 @@
       "record_key": "context:en:wb-3john-1",
       "field_path": "/records/passage_contexts/orientation/when",
       "question": "When context is not supported by the approved inputs for this scope.",
-      "blocks_publication": true
-    },
-    {
-      "question_key": "question:wb-context-en-wb-3john-1-before",
-      "question_type": "insufficient_evidence",
-      "record_key": "context:en:wb-3john-1",
-      "field_path": "/records/passage_contexts/orientation/before",
-      "question": "Before context is not supported by the approved inputs for this scope.",
       "blocks_publication": true
     },
     {

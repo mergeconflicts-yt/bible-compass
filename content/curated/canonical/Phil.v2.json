@@ -150,7 +150,7 @@
     {
       "package_key": "registry:wb:entities",
       "revision": 1,
-      "digest": "sha256:8d145ac261a91e8ae83fda2b57ed3e127b2d03ceeb1d648d09a843f60b967acc"
+      "digest": "sha256:877c2a1e99390807235f88bd0176f61524cb78a2aee38c6bdc5a140601666e0b"
     }
   ],
   "records": {
@@ -186,16 +186,6 @@
     "claims": [],
     "citations": [],
     "attestations": [
-      {
-        "attestation_key": "attestation:wb-phil-p-jacob-1-3-5",
-        "reference_key": "verse:Phil.3.5",
-        "entity_key": "entity:p-jacob-1",
-        "kind": "participant",
-        "textual_basis": "explicit",
-        "identification_status": "established",
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "attestation_key": "attestation:wb-phil-p-benjamin-1-3-5",
         "reference_key": "verse:Phil.3.5",
@@ -325,6 +315,16 @@
         "identification_status": "established",
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "attestation_key": "attestation:wb-phil-israelites-3-5",
+        "reference_key": "verse:Phil.3.5",
+        "entity_key": "entity:israelites",
+        "kind": "participant",
+        "textual_basis": "explicit",
+        "identification_status": "established",
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "relationships": [],
@@ -369,8 +369,8 @@
         "event_key": "event:wb-phil-3-p1",
         "event_type": "narrative",
         "participant_entity_keys": [
-          "entity:p-benjamin-1",
-          "entity:p-jacob-1"
+          "entity:israelites",
+          "entity:p-benjamin-1"
         ],
         "place_entity_keys": [],
         "scripture_accounts": [
@@ -438,15 +438,6 @@
     ],
     "places": [],
     "relevance": [
-      {
-        "relevance_key": "relevance:wb-phil-3-p-jacob-1",
-        "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
-        "entity_key": "entity:p-jacob-1",
-        "importance": "background",
-        "is_attested": true,
-        "claim_keys": [],
-        "review_status": "draft"
-      },
       {
         "relevance_key": "relevance:wb-phil-3-p-benjamin-1",
         "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
@@ -563,9 +554,23 @@
         "is_attested": true,
         "claim_keys": [],
         "review_status": "draft"
+      },
+      {
+        "relevance_key": "relevance:wb-phil-3-israelites",
+        "scope_key": "scope:wb-phil-3:refsys:eng-v22:phil.3.1-phil.3.21",
+        "entity_key": "entity:israelites",
+        "importance": "background",
+        "is_attested": true,
+        "claim_keys": [],
+        "review_status": "draft"
       }
     ],
     "reconciliation_records": [
+      {
+        "canonical_entity_key": "entity:israelites",
+        "resolution_status": "resolved_existing",
+        "review_status": "draft"
+      },
       {
         "canonical_entity_key": "entity:p-benjamin-1",
         "resolution_status": "resolved_existing",
@@ -588,11 +593,6 @@
       },
       {
         "canonical_entity_key": "entity:p-euodia-1",
-        "resolution_status": "resolved_existing",
-        "review_status": "draft"
-      },
-      {
-        "canonical_entity_key": "entity:p-jacob-1",
         "resolution_status": "resolved_existing",
         "review_status": "draft"
       },
@@ -771,8 +771,8 @@
             "verse:Phil.3.5"
           ],
           "record_keys": [
-            "attestation:wb-phil-p-benjamin-1-3-5",
-            "attestation:wb-phil-p-jacob-1-3-5"
+            "attestation:wb-phil-israelites-3-5",
+            "attestation:wb-phil-p-benjamin-1-3-5"
           ],
           "blocker_question_keys": []
         },
